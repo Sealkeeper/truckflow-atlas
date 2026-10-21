@@ -1,0 +1,107 @@
+{
+  "sample_id": "south_2600",
+  "camera": "south",
+  "time": 2600,
+  "image": "assets/frames/south_2600.jpg",
+  "model": "aibox",
+  "model_id": "glm-5.3-flash",
+  "returned_model": "glm-5.3-flash",
+  "prompt_version": "count_v2",
+  "predicted_count": 4,
+  "counts": {
+    "total": 4,
+    "large": 3,
+    "medium": 0,
+    "small": 1,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.455,
+        0.2,
+        0.05,
+        0.16
+      ],
+      "type": "large",
+      "reason": "通道远端中央，红色车头+货厢清晰可见，与后方白色货车有明显间隙",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.395,
+        0.21,
+        0.055,
+        0.21
+      ],
+      "type": "small",
+      "reason": "通道左侧一列，白色厢体完整可见，与红色重卡朝向一致但为独立车体",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v3",
+      "box": [
+        0.465,
+        0.36,
+        0.07,
+        0.31
+      ],
+      "type": "large",
+      "reason": "画面中部通道正中，红色车头与红色货厢连为一体，是画面中最醒目的货车",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v4",
+      "box": [
+        0.485,
+        0.79,
+        0.115,
+        0.21
+      ],
+      "type": "large",
+      "reason": "画面底部中央，红色厢体被画面下缘截断，看不到车头，按独立货厢计",
+      "visible": "trailer_only",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 17956,
+  "total_latency_ms": 80147,
+  "total_attempts": 2,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"scan_order\": \"先沿中央主通道由远(画面上方)到近(画面下方)逐个辨认货车，再扫视左右两侧展位通道，确认无其他货车。\",\n  \"counts\": {\"total\": 4, \"large\": 3, \"medium\": 0, \"small\": 1, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.455, 0.20, 0.505, 0.36],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重卡，车头朝向镜头(向下)，货厢与车头连为一体，位于通道最远端\",\n      \"distinct_from_previous\": \"画面中第一辆，无前车可比\",\n      \"evidence\": \"通道远端中央，红色车头+货厢清晰可见，与后方白色货车有明显间隙\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.395, 0.21, 0.45, 0.42],\n      \"size\": \"small\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色厢式货车，白色货厢带文字，车头朝下(向镜头)，位于红色重卡左后方\",\n      \"distinct_from_previous\": \"颜色不同(白vs红)，位置在左侧且两车之间有明显间隙，各自独立停放\",\n      \"evidence\": \"通道左侧一列，白色厢体完整可见，与红色重卡朝向一致但为独立车体\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 3,\n      \"bbox\": [0.465, 0.36, 0.535, 0.67],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色大型货车，红色高栏/货厢，车头朝向镜头，车牌区域可见，占据通道中央\",\n      \"distinct_from_previous\": \"与第2辆白色货车颜色、尺寸均不同，且位于其右下方，间隙明显\",\n      \"evidence\": \"画面中部通道正中，红色车头与红色货厢连为一体，是画面中最醒目的货车\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 4,\n      \"bbox\": [0.485, 0.79, 0.60, 1.0],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色集装箱/货厢，仅见厢体顶部与侧面，延伸出画面下缘，牵引车头不可见\",\n      \"distinct_from_previous\": \"与第3辆红色货车之间有大段通道和人员活动区域，明显分离，非同一辆\",\n      \"evidence\": \"画面底部中央，红色厢体被画面下缘截断，看不到车头，按独立货厢计\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"现场为撤展期，通道内散落包装垃圾并有多名工人/安保走动，均不计入。左右两侧为展位搭建结构(海尔、长虹、A.O.史密斯等)，未发现其他货车。第4辆仅见红色货厢，车头可能被画面下缘截断或被遮挡，标为 trailer_only。远端两辆(红、白)距离较近但颜色与位置可明确区分。\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:52:16.799773+00:00",
+      "status": 504,
+      "latency_ms": 61190,
+      "ok": false,
+      "error": "HTTP 504: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "attempt": 2,
+      "time": "2026-10-21T09:52:35.756543+00:00",
+      "status": 200,
+      "latency_ms": 17956,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2178,
+    "total_tokens": 3090,
+    "completion_tokens": 912,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176,
+      "image_tokens": 1610
+    },
+    "reasoning_tokens": 103
+  }
+}

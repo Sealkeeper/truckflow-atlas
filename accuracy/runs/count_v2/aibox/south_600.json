@@ -1,0 +1,112 @@
+{
+  "sample_id": "south_600",
+  "camera": "south",
+  "time": 600,
+  "image": "assets/frames/south_600.jpg",
+  "model": "aibox",
+  "model_id": "glm-5.3-flash",
+  "returned_model": "glm-5.3-flash",
+  "prompt_version": "count_v2",
+  "predicted_count": 5,
+  "counts": {
+    "total": 5,
+    "large": 5,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.45,
+        0.12,
+        0.06,
+        0.14
+      ],
+      "type": "large",
+      "reason": "通道最上端可见红色卡车车头及部分货厢，与后方车辆有明显间隙",
+      "visible": "partial_top",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.41,
+        0.24,
+        0.06,
+        0.12
+      ],
+      "type": "large",
+      "reason": "通道左侧独立停放，红色牵引车头与蓝色货厢连为一体",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v3",
+      "box": [
+        0.45,
+        0.37,
+        0.06,
+        0.11
+      ],
+      "type": "large",
+      "reason": "通道中央独立红色卡车，前后均有空隙",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v4",
+      "box": [
+        0.46,
+        0.47,
+        0.09,
+        0.19
+      ],
+      "type": "large",
+      "reason": "通道中央白色长货厢车，占据画面中段",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v5",
+      "box": [
+        0.46,
+        0.65,
+        0.1,
+        0.26
+      ],
+      "type": "large",
+      "reason": "画面最近处通道右侧的白色东风卡车，车头、货厢完整可见",
+      "visible": "full",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 47687,
+  "total_latency_ms": 47687,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"scan_order\": \"沿中央通道由远(画面顶部)到近(画面底部)逐车扫描，再检查左右两侧展位区，确认无其他货车。\",\n  \"counts\": {\"total\": 5, \"large\": 5, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.45, 0.12, 0.51, 0.26],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重卡车头，位于通道最远端，车尾朝向镜头方向\",\n      \"distinct_from_previous\": \"第一辆\",\n      \"evidence\": \"通道最上端可见红色卡车车头及部分货厢，与后方车辆有明显间隙\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.41, 0.24, 0.47, 0.36],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头配蓝色帆布货厢，车头朝向镜头（向下）\",\n      \"distinct_from_previous\": \"与第1辆朝向相反（车头朝下），且位置、颜色配置不同，中间有明显间隙\",\n      \"evidence\": \"通道左侧独立停放，红色牵引车头与蓝色货厢连为一体\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 3,\n      \"bbox\": [0.45, 0.37, 0.51, 0.48],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，货厢/挂车结构，车头朝向镜头\",\n      \"distinct_from_previous\": \"与第2辆之间有明显地面间隙，且第2辆为蓝色货厢，本辆为红色车体\",\n      \"evidence\": \"通道中央独立红色卡车，前后均有空隙\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 4,\n      \"bbox\": [0.46, 0.47, 0.55, 0.66],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色长货厢（集装箱式），厢体纹理可见，车头被货厢遮挡或朝下\",\n      \"distinct_from_previous\": \"白色货厢与第3辆红色车体颜色完全不同，且有独立间隙\",\n      \"evidence\": \"通道中央白色长货厢车，占据画面中段\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 5,\n      \"bbox\": [0.46, 0.65, 0.56, 0.91],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色东风商用车卡车头，上方连白色货厢，车头朝向镜头（向下），车牌可见\",\n      \"distinct_from_previous\": \"与第4辆之间有明显间隙，本辆可见独立车头及'东风商用车'字样，为完整牵引车+货厢\",\n      \"evidence\": \"画面最近处通道右侧的白色东风卡车，车头、货厢完整可见\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展馆撤展期，中央通道两侧为展位桁架。通道内共5辆货车纵向排列，均沿通道停放。第1辆最远端部分被门框/横梁遮挡。左右两侧展位区未见其他货车；画面中的叉车、手推车、工人员均未计入。\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:48:15.591804+00:00",
+      "status": 200,
+      "latency_ms": 47687,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2178,
+    "total_tokens": 3204,
+    "completion_tokens": 1026,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "image_tokens": 1610
+    },
+    "reasoning_tokens": 158
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "sample_id": "south_5",
+  "camera": "south",
+  "time": 5,
+  "image": "assets/frames/south_5.jpg",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "returned_model": "doubao-seed-2-0-mini-260428",
+  "prompt_version": "count_v2",
+  "predicted_count": 3,
+  "counts": {
+    "total": 3,
+    "large": 3,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.43,
+        0.14,
+        0.08,
+        0.13
+      ],
+      "type": "large",
+      "reason": "画面中间通道最上方的独立红色货车，可见完整车头与部分货厢，为独立车体",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.45,
+        0.26,
+        0.07,
+        0.2
+      ],
+      "type": "large",
+      "reason": "中间通道中部的红色货车，可见完整车头，与上一辆无连接，为独立车辆",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v3",
+      "box": [
+        0.47,
+        0.58,
+        0.1,
+        0.4
+      ],
+      "type": "large",
+      "reason": "中间通道最下方的红色货厢，无连接的牵引车头，与上一辆货车分离，为独立车体",
+      "visible": "trailer_only",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 19948,
+  "total_latency_ms": 19948,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"scan_order\": \"先沿画面中间纵向通道从远（画面顶部）到近（画面底部）依次扫描，再扫描画面左右边缘区域，左右边缘未发现符合计数标准的货车\",\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.43, 0.14, 0.51, 0.27],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车身，车头朝向画面下方，位于通道最远端，Haier展位左侧\",\n      \"distinct_from_previous\": \"无（为扫描到的第一辆货车）\",\n      \"evidence\": \"画面中间通道最上方的独立红色货车，可见完整车头与部分货厢，为独立车体\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.45, 0.26, 0.52, 0.46],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车身，车头朝向画面下方，位于第一辆货车正下方\",\n      \"distinct_from_previous\": \"与上一辆（sequence1的红色货车）存在明显纵向间隔，未连接，为独立停放的车体\",\n      \"evidence\": \"中间通道中部的红色货车，可见完整车头，与上一辆无连接，为独立车辆\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 3,\n      \"bbox\": [0.47, 0.58, 0.57, 0.98],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货厢，尾门可见，带有“一汽青岛”字样，无可见牵引车头，位于第二辆货车正下方\",\n      \"distinct_from_previous\": \"与上一辆（sequence2的红色货车）存在明显纵向间隙，无可见牵引车头，为独立货厢，非同一辆车的组成部分\",\n      \"evidence\": \"中间通道最下方的红色货厢，无连接的牵引车头，与上一辆货车分离，为独立车体\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"中间纵向通道共可见3辆独立货车，均为大型重卡，最下方车辆为无牵引车头的单独货厢，左右边缘未发现符合计数标准的货车，所有车辆均清晰可见，无识别歧义\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:54:24.723009+00:00",
+      "status": 200,
+      "latency_ms": 19948,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2219,
+    "prompt_tokens": 1884,
+    "total_tokens": 4103,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1566
+    }
+  }
+}

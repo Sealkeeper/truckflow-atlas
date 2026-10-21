@@ -1,0 +1,73 @@
+{
+  "sample_id": "north_2600",
+  "camera": "north",
+  "time": 2600,
+  "image": "assets/frames/north_2600.jpg",
+  "model": "aibox",
+  "model_id": "glm-5.3-flash",
+  "returned_model": "glm-5.3-flash",
+  "prompt_version": "count_v2",
+  "predicted_count": 2,
+  "counts": {
+    "total": 2,
+    "large": 2,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.4,
+        0.38,
+        0.1,
+        0.32
+      ],
+      "type": "large",
+      "reason": "位于画面中部主通道，红色集装箱式货厢完整可见，尾门与车牌清晰",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.34,
+        0.85,
+        0.14,
+        0.15
+      ],
+      "type": "large",
+      "reason": "画面底部边缘，红色车体被画面下边界截断，仅上部可见",
+      "visible": "partial_top",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 15659,
+  "total_latency_ms": 15659,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"scan_order\": \"先沿中央主通道由远及近扫描，再扫画面左右边缘及底部。\",\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.40, 0.38, 0.50, 0.70],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色长货厢，尾部朝向镜头，尾门可见黄色车牌（粤A77378附近字样）及反光标识，停在通道中央\",\n      \"distinct_from_previous\": \"画面中第一辆可见货车\",\n      \"evidence\": \"位于画面中部主通道，红色集装箱式货厢完整可见，尾门与车牌清晰\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.34, 0.85, 0.48, 1.0],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"画面底部红色货车，仅见货厢/车顶部分，与第1辆之间有明显间隙且朝向不同\",\n      \"distinct_from_previous\": \"与第1辆红色货厢之间有大量地面和行人间隔，位置更近、朝向不同，非同一辆\",\n      \"evidence\": \"画面底部边缘，红色车体被画面下边界截断，仅上部可见\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"撤展现场，通道内散落杂物并有大量工人和手推车（不计入）。第2辆车被画面底边截断，仅见车顶/货厢上部。远端通道未见其他明确货车。\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:46:26.748543+00:00",
+      "status": 200,
+      "latency_ms": 15659,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2178,
+    "total_tokens": 2627,
+    "completion_tokens": 449,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "image_tokens": 1610
+    },
+    "reasoning_tokens": 18
+  }
+}

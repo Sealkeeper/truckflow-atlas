@@ -1,0 +1,73 @@
+{
+  "sample_id": "north_1500",
+  "camera": "north",
+  "time": 1500,
+  "image": "assets/frames/north_1500.jpg",
+  "model": "aibox",
+  "model_id": "glm-5.3-flash",
+  "returned_model": "glm-5.3-flash",
+  "prompt_version": "count_v2",
+  "predicted_count": 2,
+  "counts": {
+    "total": 2,
+    "large": 2,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.4,
+        0.36,
+        0.1,
+        0.27
+      ],
+      "type": "large",
+      "reason": "位于画面中部主通道左侧，红色长货厢独立停放于展位之间，与下方白色货厢之间有明显间隙",
+      "visible": "trailer_only",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.34,
+        0.62,
+        0.15,
+        0.37
+      ],
+      "type": "large",
+      "reason": "位于画面中下部主通道，白色长货厢从画面中部延伸至底边，与红色货厢分离且朝向一致但独立",
+      "visible": "trailer_only",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 18447,
+  "total_latency_ms": 18448,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"scan_order\": \"先沿中央主通道由远(画面上方)到近(画面下方)扫描，再扫左右边缘；每见独立车体判断与上一辆是否同一辆。\",\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.40, 0.36, 0.50, 0.63],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色集装箱式货厢，尾门朝向镜头(朝下/朝近端)，厢体可见编号字符，未见牵引车头\",\n      \"distinct_from_previous\": \"画面中第一辆可见货车\",\n      \"evidence\": \"位于画面中部主通道左侧，红色长货厢独立停放于展位之间，与下方白色货厢之间有明显间隙\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.34, 0.62, 0.49, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹板货厢，尾门朝向镜头，厢体有污渍纹理，未见牵引车头\",\n      \"distinct_from_previous\": \"与上一辆红色货厢颜色不同、之间有明显地面间隙、各自独立停放，非同一辆车\",\n      \"evidence\": \"位于画面中下部主通道，白色长货厢从画面中部延伸至底边，与红色货厢分离且朝向一致但独立\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"通道远端人群密集处可能有被遮挡车辆但无法确认，不计入；两辆货厢均未见牵引车头，按 trailer_only 计；画面左右边缘展位间未见其他货车。\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:45:44.871114+00:00",
+      "status": 200,
+      "latency_ms": 18447,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2178,
+    "total_tokens": 2658,
+    "completion_tokens": 480,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "image_tokens": 1610
+    },
+    "reasoning_tokens": 22
+  }
+}

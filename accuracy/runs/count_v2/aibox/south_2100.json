@@ -1,0 +1,99 @@
+{
+  "sample_id": "south_2100",
+  "camera": "south",
+  "time": 2100,
+  "image": "assets/frames/south_2100.jpg",
+  "model": "aibox",
+  "model_id": "glm-5.3-flash",
+  "returned_model": "glm-5.3-flash",
+  "prompt_version": "count_v2",
+  "predicted_count": 4,
+  "counts": {
+    "total": 4,
+    "large": 4,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.42,
+        0.13,
+        0.05,
+        0.1
+      ],
+      "type": "large",
+      "reason": "通道远端上方可见红色车头及少量货厢轮廓，与后方红色集装箱车之间有间隙",
+      "visible": "partial_top",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.4,
+        0.22,
+        0.07,
+        0.2
+      ],
+      "type": "large",
+      "reason": "通道左侧偏中位置，车头与货厢连为一体，完整可见",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v3",
+      "box": [
+        0.46,
+        0.28,
+        0.07,
+        0.18
+      ],
+      "type": "large",
+      "reason": "通道右侧，红色车头与货厢相连，与左侧集装箱车明显为两辆车",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v4",
+      "box": [
+        0.46,
+        0.46,
+        0.09,
+        0.42
+      ],
+      "type": "large",
+      "reason": "通道中下部，白色长货厢贯穿画面，车头带车牌，完整可见",
+      "visible": "full",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 54185,
+  "total_latency_ms": 54186,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"scan_order\": \"沿中央通道由远(画面上方)到近(画面下方)逐车扫描，再检查左右两侧展位间区域；每见一车体判断与上一辆是否同一辆。\",\n  \"counts\": {\"total\": 4, \"large\": 4, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.42, 0.13, 0.47, 0.23],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"远端红色卡车车头，朝向镜头，位于通道最深处，被上方桁架部分遮挡\",\n      \"distinct_from_previous\": \"画面中第一辆可见货车\",\n      \"evidence\": \"通道远端上方可见红色车头及少量货厢轮廓，与后方红色集装箱车之间有间隙\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.40, 0.22, 0.47, 0.42],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重卡车头+棕色/锈色集装箱货厢，车头朝向镜头，货厢上有文字\",\n      \"distinct_from_previous\": \"其棕色货厢与第1辆红色车体之间有明显间隙，且第1辆在其更远端，非同一辆\",\n      \"evidence\": \"通道左侧偏中位置，车头与货厢连为一体，完整可见\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 3,\n      \"bbox\": [0.46, 0.28, 0.53, 0.46],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重卡车头+深色高栏/货厢，位于第2辆右侧稍近处，朝向镜头\",\n      \"distinct_from_previous\": \"与第2辆并排停放、朝向一致但车体独立，两车之间有清晰间隙，各自车头可辨\",\n      \"evidence\": \"通道右侧，红色车头与货厢相连，与左侧集装箱车明显为两辆车\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 4,\n      \"bbox\": [0.46, 0.46, 0.55, 0.88],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色东风厢式货车，白色长货厢+白色车头，车头朝向镜头下方，可见'东风商用车'字样及车牌\",\n      \"distinct_from_previous\": \"白色车体与第3辆红色车体颜色完全不同，且位于其近端，有明显间隙\",\n      \"evidence\": \"通道中下部，白色长货厢贯穿画面，车头带车牌，完整可见\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展馆撤展现场，中央通道内4辆货车依次停放；画面底部有叉车、纸箱和工人，均不计入；左右两侧为展位桁架结构，未发现其他货车；远端第1辆被桁架和距离影响，识别置信度略低。\",\n  \"uncertain_reasons\": [\"远端第1辆红色车体较小且被桁架部分遮挡，货厢形态不完全清晰\"]\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:51:53.996369+00:00",
+      "status": 200,
+      "latency_ms": 54185,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2178,
+    "total_tokens": 3138,
+    "completion_tokens": 960,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "image_tokens": 1610
+    },
+    "reasoning_tokens": 156
+  }
+}

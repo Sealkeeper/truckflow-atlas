@@ -1,0 +1,99 @@
+{
+  "sample_id": "north_5",
+  "camera": "north",
+  "time": 5,
+  "image": "assets/frames/north_5.jpg",
+  "model": "aibox",
+  "model_id": "glm-5.3-flash",
+  "returned_model": "glm-5.3-flash",
+  "prompt_version": "count_v2",
+  "predicted_count": 4,
+  "counts": {
+    "total": 4,
+    "large": 3,
+    "medium": 0,
+    "small": 0,
+    "unknown": 1
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.5,
+        0.1,
+        0.05,
+        0.16
+      ],
+      "type": "large",
+      "reason": "通道尽头可见红色货车尾部及尾灯，正在装卸，为独立车体",
+      "visible": "partial_top",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.455,
+        0.09,
+        0.05,
+        0.14
+      ],
+      "type": "large",
+      "reason": "远端左侧独立停放的深色厢式货车",
+      "visible": "partial_top",
+      "uncertain": false
+    },
+    {
+      "id": "v3",
+      "box": [
+        0.435,
+        0.25,
+        0.065,
+        0.11
+      ],
+      "type": "unknown",
+      "reason": "通道中段左侧停放的蓝色集装箱，独立停放，按规则计为一辆（trailer_only）",
+      "visible": "trailer_only",
+      "uncertain": true
+    },
+    {
+      "id": "v4",
+      "box": [
+        0.395,
+        0.5,
+        0.105,
+        0.4
+      ],
+      "type": "large",
+      "reason": "近端通道中央完整可见的红色栏板货车，车牌清晰",
+      "visible": "full",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 51839,
+  "total_latency_ms": 51839,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"scan_order\": \"先沿中央通道由远及近扫描：远端红色货车→远端深色集装箱货车→中段蓝色集装箱货厢→近处红色栏板货车；再扫左右边缘，两侧均为展位桁架，无车辆。\",\n  \"counts\": {\"total\": 4, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 1},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.50, 0.10, 0.55, 0.26],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货厢/车体，车尾朝向镜头，位于通道最远端，旁边有装卸人员\",\n      \"distinct_from_previous\": \"首辆\",\n      \"evidence\": \"通道尽头可见红色货车尾部及尾灯，正在装卸，为独立车体\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.455, 0.09, 0.505, 0.23],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"深色/黑色集装箱式货厢，位于红色货车左侧，与红车间有明显间隙\",\n      \"distinct_from_previous\": \"与第1辆颜色不同（深色vs红色）、位置并列、间隙明显，非同一辆\",\n      \"evidence\": \"远端左侧独立停放的深色厢式货车\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 3,\n      \"bbox\": [0.435, 0.25, 0.50, 0.36],\n      \"size\": \"unknown\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色集装箱货厢，顶部可见，未见牵引车头，与前后车辆均有间隙\",\n      \"distinct_from_previous\": \"位于第2辆前方更近处，蓝色箱体与深色车体颜色、位置均不同，中间有通道间隔\",\n      \"evidence\": \"通道中段左侧停放的蓝色集装箱，独立停放，按规则计为一辆（trailer_only）\",\n      \"uncertain\": true\n    },\n    {\n      \"sequence\": 4,\n      \"bbox\": [0.395, 0.50, 0.50, 0.90],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色栏板货车，空载货厢，尾门可见车牌'粤L66002'，车头朝向画面下方（近端）\",\n      \"distinct_from_previous\": \"与第3辆颜色不同（红色vs蓝色）、位置更近、朝向不同、有明显间隙\",\n      \"evidence\": \"近端通道中央完整可见的红色栏板货车，车牌清晰\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展馆撤展期，通道两侧为展位桁架，左右边缘无车辆。远端两辆货车（红、深色）距离近且部分被桁架遮挡，但可辨为两辆独立车体。蓝色集装箱未见车头，按trailer_only计。近处红色货车车牌L66002清晰，无重复计数风险。\",\n  \"uncertain_reasons\": [\"第3辆蓝色集装箱未见牵引车头，无法确认是否与相邻车辆连接，按独立货厢计入\"]\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:44:40.982508+00:00",
+      "status": 200,
+      "latency_ms": 51839,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2178,
+    "total_tokens": 3102,
+    "completion_tokens": 924,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "image_tokens": 1610
+    },
+    "reasoning_tokens": 121
+  }
+}

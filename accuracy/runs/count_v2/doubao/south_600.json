@@ -1,0 +1,100 @@
+{
+  "sample_id": "south_600",
+  "camera": "south",
+  "time": 600,
+  "image": "assets/frames/south_600.jpg",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "returned_model": "doubao-seed-2-0-mini-260428",
+  "prompt_version": "count_v2",
+  "predicted_count": 4,
+  "counts": {
+    "total": 4,
+    "large": 3,
+    "medium": 1,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.45,
+        0.12,
+        0.045,
+        0.145
+      ],
+      "type": "large",
+      "reason": "位于画面上方中间通道最远处，为独立红色货车，符合计数要求",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.41,
+        0.245,
+        0.049,
+        0.113
+      ],
+      "type": "medium",
+      "reason": "位于中间通道，在第一辆前方，独立可见，无连接关系",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v3",
+      "box": [
+        0.455,
+        0.285,
+        0.064,
+        0.19
+      ],
+      "type": "large",
+      "reason": "位于中间通道，在第二辆前方，货厢与车头为同一辆车，独立可见",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v4",
+      "box": [
+        0.465,
+        0.465,
+        0.094,
+        0.415
+      ],
+      "type": "large",
+      "reason": "位于中间通道最下方，独立可见，车头与货厢为同一辆车",
+      "visible": "full",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 26470,
+  "total_latency_ms": 26470,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"scan_order\": \"按由远到近扫描中间通道，从画面上方（远端）至画面下方（近端），依次识别独立货车，未发现画面左右边缘的独立货车。\",\n  \"counts\": {\"total\": 4, \"large\": 3, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.45, 0.12, 0.495, 0.265],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，位于通道最远端，朝向画面下方\",\n      \"distinct_from_previous\": \"当前为第一辆，无之前的车辆\",\n      \"evidence\": \"位于画面上方中间通道最远处，为独立红色货车，符合计数要求\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.41, 0.245, 0.459, 0.358],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，位于第一辆前方，朝向画面下方，与第一辆有明显间隙\",\n      \"distinct_from_previous\": \"与上一辆（sequence1）不是同一辆，二者为独立车体，中间有间隙\",\n      \"evidence\": \"位于中间通道，在第一辆前方，独立可见，无连接关系\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 3,\n      \"bbox\": [0.455, 0.285, 0.519, 0.475],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头搭配灰色封闭货厢，位于第二辆前方，朝向画面下方，与第二辆有间隙\",\n      \"distinct_from_previous\": \"与上一辆（sequence2）不是同一辆，二者为独立车体，中间有间隙\",\n      \"evidence\": \"位于中间通道，在第二辆前方，货厢与车头为同一辆车，独立可见\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 4,\n      \"bbox\": [0.465, 0.465, 0.559, 0.88],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色东风商用车头搭配白色封闭货厢，位于第三辆前方，朝向画面下方，与第三辆有间隙\",\n      \"distinct_from_previous\": \"与上一辆（sequence3）不是同一辆，二者为独立车体，中间有间隙\",\n      \"evidence\": \"位于中间通道最下方，独立可见，车头与货厢为同一辆车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"中间通道共4辆独立货车，均清晰可见，无完全遮挡情况，左右边缘未发现符合要求的独立货车。\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:54:48.324687+00:00",
+      "status": 200,
+      "latency_ms": 26470,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2531,
+    "prompt_tokens": 1884,
+    "total_tokens": 4415,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1765
+    }
+  }
+}

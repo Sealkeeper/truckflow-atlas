@@ -1,0 +1,100 @@
+{
+  "sample_id": "south_2600",
+  "camera": "south",
+  "time": 2600,
+  "image": "assets/frames/south_2600.jpg",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "returned_model": "doubao-seed-2-0-mini-260428",
+  "prompt_version": "count_v2",
+  "predicted_count": 4,
+  "counts": {
+    "total": 4,
+    "large": 4,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.44,
+        0.2,
+        0.07,
+        0.13
+      ],
+      "type": "large",
+      "reason": "画面上方通道最深处可见的完整红色货车，独立停放",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.39,
+        0.22,
+        0.07,
+        0.19
+      ],
+      "type": "large",
+      "reason": "通道中红色货车前方的完整白色厢式货车，车身独立",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v3",
+      "box": [
+        0.47,
+        0.36,
+        0.08,
+        0.31
+      ],
+      "type": "large",
+      "reason": "通道中白色厢式货车前方的完整红色半挂货车，清晰可见",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v4",
+      "box": [
+        0.49,
+        0.8,
+        0.12,
+        0.199
+      ],
+      "type": "large",
+      "reason": "画面底部可见的单独红色货厢，无连接车头，独立停放",
+      "visible": "trailer_only",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 16357,
+  "total_latency_ms": 16357,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"scan_order\": \"先扫描中间通道，由远到近（从上到下），再扫描画面左右边缘，未发现其他货车\",\n  \"counts\": {\"total\": 4, \"large\": 4, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.44, 0.20, 0.51, 0.33],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，红色货厢，朝向镜头，位于通道最远端，Haier标识区域后方\",\n      \"distinct_from_previous\": \"无（第一辆）\",\n      \"evidence\": \"画面上方通道最深处可见的完整红色货车，独立停放\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.39, 0.22, 0.46, 0.41],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色厢式货车，车头朝镜头，位于第一辆红色货车前方\",\n      \"distinct_from_previous\": \"与上一辆是独立车辆，中间有明显通道间隔\",\n      \"evidence\": \"通道中红色货车前方的完整白色厢式货车，车身独立\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 3,\n      \"bbox\": [0.47, 0.36, 0.55, 0.67],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色半挂货车，车头朝镜头，位于白色厢式货车前方\",\n      \"distinct_from_previous\": \"与上一辆是独立车辆，无连接结构，车身独立\",\n      \"evidence\": \"通道中白色厢式货车前方的完整红色半挂货车，清晰可见\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 4,\n      \"bbox\": [0.49, 0.80, 0.61, 0.999],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货厢，无牵引车头，位于画面最下方\",\n      \"distinct_from_previous\": \"与上一辆是独立车辆，无牵引车头，货厢独立停放，与前方红色半挂货厢有明显间隙\",\n      \"evidence\": \"画面底部可见的单独红色货厢，无连接车头，独立停放\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"所有可见货车均在中间通道，左右边缘无其他货车，车辆均清晰可见，无遮挡或歧义\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:55:26.234008+00:00",
+      "status": 200,
+      "latency_ms": 16357,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1720,
+    "prompt_tokens": 1884,
+    "total_tokens": 3604,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1010
+    }
+  }
+}

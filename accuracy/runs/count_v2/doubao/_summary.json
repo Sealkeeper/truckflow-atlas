@@ -1,0 +1,20 @@
+{
+  "model": "doubao",
+  "prompt_version": "count_v2",
+  "samples_expected": 20,
+  "samples_recorded": 20,
+  "successful_samples": 20,
+  "failed_samples": 0,
+  "success_rate": 1.0,
+  "total_http_attempts": 20,
+  "http_status_counts": {
+    "200": 20
+  },
+  "http_503_responses": 0,
+  "http_503_rate_of_attempts": 0.0,
+  "retried_samples": 0,
+  "average_latency_ms_successful": 20962.9,
+  "average_attempt_latency_ms": 20962.9,
+  "failures": [],
+  "generated_at": "2026-10-21T09:58:01.749994+00:00"
+}

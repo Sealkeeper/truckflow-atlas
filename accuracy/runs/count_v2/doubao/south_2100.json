@@ -1,0 +1,100 @@
+{
+  "sample_id": "south_2100",
+  "camera": "south",
+  "time": 2100,
+  "image": "assets/frames/south_2100.jpg",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "returned_model": "doubao-seed-2-0-mini-260428",
+  "prompt_version": "count_v2",
+  "predicted_count": 4,
+  "counts": {
+    "total": 4,
+    "large": 4,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.405,
+        0.15,
+        0.07,
+        0.125
+      ],
+      "type": "large",
+      "reason": "画面上方中间通道最远处，独立红色货车，符合大型货车特征",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.403,
+        0.215,
+        0.062,
+        0.2
+      ],
+      "type": "large",
+      "reason": "中间通道第一辆前方，与第一辆有明显距离，非同一车辆",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v3",
+      "box": [
+        0.455,
+        0.285,
+        0.06,
+        0.23
+      ],
+      "type": "large",
+      "reason": "中间通道第二辆前方，与第二辆有明显距离，非同一车辆",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v4",
+      "box": [
+        0.465,
+        0.465,
+        0.09,
+        0.41
+      ],
+      "type": "large",
+      "reason": "中间通道第三辆前方，与第三辆有明显距离，非同一车辆",
+      "visible": "full",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 17416,
+  "total_latency_ms": 17416,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"scan_order\": \"沿画面中间通道从远端（画面上方）向近端（画面下方）扫描，确认每辆独立货车，再检查画面左右边缘，未发现额外货车\",\n  \"counts\": {\"total\": 4, \"large\": 4, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.405, 0.15, 0.475, 0.275],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车体，位于通道最远端，朝向镜头，车头及部分货厢可见\",\n      \"distinct_from_previous\": \"无（第一辆）\",\n      \"evidence\": \"画面上方中间通道最远处，独立红色货车，符合大型货车特征\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.403, 0.215, 0.465, 0.415],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，棕色货厢，位于第一辆前方，朝向镜头，车头完整\",\n      \"distinct_from_previous\": \"与第一辆位置更近，货厢颜色不同，为独立车辆\",\n      \"evidence\": \"中间通道第一辆前方，与第一辆有明显距离，非同一车辆\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 3,\n      \"bbox\": [0.455, 0.285, 0.515, 0.515],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，灰色货厢，位于第二辆前方，朝向镜头\",\n      \"distinct_from_previous\": \"与第二辆位置更近，货厢颜色不同，为独立车辆\",\n      \"evidence\": \"中间通道第二辆前方，与第二辆有明显距离，非同一车辆\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 4,\n      \"bbox\": [0.465, 0.465, 0.555, 0.875],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色东风商用车，白色货厢，车头有“东风商用车”字样，位于第三辆前方\",\n      \"distinct_from_previous\": \"与第三辆位置更近，车头及货厢颜色不同，为独立车辆\",\n      \"evidence\": \"中间通道第三辆前方，与第三辆有明显距离，非同一车辆\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"所有车辆均在中间通道，无遮挡导致的歧义，左右边缘无符合条件的货车，均为完整可见的大型货车\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:55:09.866560+00:00",
+      "status": 200,
+      "latency_ms": 17416,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1899,
+    "prompt_tokens": 1884,
+    "total_tokens": 3783,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1157
+    }
+  }
+}

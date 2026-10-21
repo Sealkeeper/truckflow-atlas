@@ -1,0 +1,73 @@
+{
+  "sample_id": "north_2100",
+  "camera": "north",
+  "time": 2100,
+  "image": "assets/frames/north_2100.jpg",
+  "model": "aibox",
+  "model_id": "glm-5.3-flash",
+  "returned_model": "glm-5.3-flash",
+  "prompt_version": "count_v2",
+  "predicted_count": 2,
+  "counts": {
+    "total": 2,
+    "large": 2,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.43,
+        0.24,
+        0.08,
+        0.21
+      ],
+      "type": "large",
+      "reason": "位于画面中上部主通道，红色车体完整可见，与下方白色货厢有明显间隔且朝向不同",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.35,
+        0.61,
+        0.14,
+        0.39
+      ],
+      "type": "large",
+      "reason": "画面中下部中央通道，白色长货厢从画面下缘延伸至中部，仅见货厢部分，未见牵引车头",
+      "visible": "partial_top",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 19707,
+  "total_latency_ms": 19707,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"scan_order\": \"先沿中央主通道由远(画面上方)到近(画面下方)扫描，再检查左右两侧展位间区域，排除叉车与手推车。\",\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.43, 0.24, 0.51, 0.45],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色栏板/厢式货车，车尾朝向镜头(朝南)，停在通道中段，周围有作业人员\",\n      \"distinct_from_previous\": \"画面中第一辆可见货车\",\n      \"evidence\": \"位于画面中上部主通道，红色车体完整可见，与下方白色货厢有明显间隔且朝向不同\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.35, 0.61, 0.49, 1.0],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹面集装箱式货厢，纵向沿通道停放，车头在画面外/被遮挡，厢体下缘可见深色车架\",\n      \"distinct_from_previous\": \"与红色货车之间有约数米空隙，颜色(白色vs红色)、朝向、停放位置均不同，非同一辆\",\n      \"evidence\": \"画面中下部中央通道，白色长货厢从画面下缘延伸至中部，仅见货厢部分，未见牵引车头\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中还有一辆红色叉车(约[0.47,0.57,0.53,0.68])和远处手推车/人物，均不计入。远端展馆门口处有小型车辆轮廓但无法确认为货车，未计入。白色货厢可能为挂车或卡车货厢，车头不可见，按trailer_only口径本应标记，但考虑其与红色货车明显独立，仍计为一辆；此处visible按partial_top记录。\",\n  \"uncertain_reasons\": [\"白色货厢的牵引车头完全不可见，无法确认是整车还是单独挂车\", \"远端门口处小轮廓物体无法确认车型\"]\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:46:11.082886+00:00",
+      "status": 200,
+      "latency_ms": 19707,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2178,
+    "total_tokens": 2814,
+    "completion_tokens": 636,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "image_tokens": 1610
+    },
+    "reasoning_tokens": 81
+  }
+}

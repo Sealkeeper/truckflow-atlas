@@ -1,0 +1,73 @@
+{
+  "sample_id": "north_1800",
+  "camera": "north",
+  "time": 1800,
+  "image": "assets/frames/north_1800.jpg",
+  "model": "aibox",
+  "model_id": "glm-5.3-flash",
+  "returned_model": "glm-5.3-flash",
+  "prompt_version": "count_v2",
+  "predicted_count": 2,
+  "counts": {
+    "total": 2,
+    "large": 2,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.44,
+        0.24,
+        0.07,
+        0.21
+      ],
+      "type": "large",
+      "reason": "位于画面中部通道，红色货厢完整可见，前端隐约可见车头，与近处白色货车相距很远且朝向不同",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.35,
+        0.62,
+        0.14,
+        0.38
+      ],
+      "type": "large",
+      "reason": "画面下方中央，白色长货厢占据通道近端，与红色货车显然不是同一辆",
+      "visible": "partial_top",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 26127,
+  "total_latency_ms": 26128,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"scan_order\": \"先沿中央主通道由远及近扫描：远端通道尽头人群处未见明确货车；中景发现红色货厢卡车；近景下方发现白色集装箱货车。再扫左右边缘：左侧为展台结构，右侧为展台桁架，均无独立货车。\",\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.44, 0.24, 0.51, 0.45],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色长货厢/集装箱式货车，车头朝向画面上方（远端），停在通道中央偏左，货厢带竖向棱纹\",\n      \"distinct_from_previous\": \"首辆\",\n      \"evidence\": \"位于画面中部通道，红色货厢完整可见，前端隐约可见车头，与近处白色货车相距很远且朝向不同\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.35, 0.62, 0.49, 1.0],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色集装箱货厢，箱体带波纹，尾部朝向镜头方向，下缘被画面底部裁切，可见部分车牌区域\",\n      \"distinct_from_previous\": \"颜色不同（白色 vs 红色）、位置更近、朝向相反（尾对镜头 vs 车头朝远端），两车之间有明显通道间隔\",\n      \"evidence\": \"画面下方中央，白色长货厢占据通道近端，与红色货车显然不是同一辆\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"现场为撤展期，通道内有叉车、手推车、行人，均不计入。红色货车远端车头部分被人群和距离影响，但货厢与车体连续可辨。白色货车底部被画面边缘裁切，属 partial。两车之间无连接关系，确认为两辆独立车体。\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:46:11.005342+00:00",
+      "status": 200,
+      "latency_ms": 26127,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2178,
+    "total_tokens": 2714,
+    "completion_tokens": 536,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "image_tokens": 1610
+    },
+    "reasoning_tokens": 16
+  }
+}

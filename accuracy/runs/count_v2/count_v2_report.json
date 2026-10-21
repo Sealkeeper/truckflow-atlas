@@ -1,0 +1,2276 @@
+{
+  "gold": "data\\gold\\camera_counts_v0.json",
+  "gold_status": "manual-development-set",
+  "sample_count": 20,
+  "models": {
+    "aibox_count_v2": {
+      "label": "aibox_count_v2",
+      "prompt_versions": [
+        "count_v2"
+      ],
+      "samples_expected": 20,
+      "successful_samples": 20,
+      "failed_samples": 0,
+      "success_rate": 1.0,
+      "exact_matches": 10,
+      "exact_rate_of_successful": 0.5,
+      "exact_rate_of_all_samples": 0.5,
+      "mae_successful": 0.5,
+      "undercount_samples": [
+        {
+          "sample_id": "north_600",
+          "camera": "north",
+          "time": 600,
+          "gold": 4,
+          "predicted": 3,
+          "error": -1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 3,
+          "prompt_version": "count_v2",
+          "latency_ms": 45418,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        }
+      ],
+      "overcount_samples": [
+        {
+          "sample_id": "north_5",
+          "camera": "north",
+          "time": 5,
+          "gold": 3,
+          "predicted": 4,
+          "error": 1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "count_v2",
+          "latency_ms": 51839,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate"
+          ]
+        },
+        {
+          "sample_id": "north_300",
+          "camera": "north",
+          "time": 300,
+          "gold": 3,
+          "predicted": 4,
+          "error": 1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "count_v2",
+          "latency_ms": 51834,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate"
+          ]
+        },
+        {
+          "sample_id": "north_2400",
+          "camera": "north",
+          "time": 2400,
+          "gold": 3,
+          "predicted": 4,
+          "error": 1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "count_v2",
+          "latency_ms": 22824,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge",
+            "overlapping_boxes"
+          ]
+        },
+        {
+          "sample_id": "south_5",
+          "camera": "south",
+          "time": 5,
+          "gold": 3,
+          "predicted": 4,
+          "error": 1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "count_v2",
+          "latency_ms": 61138,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        },
+        {
+          "sample_id": "south_300",
+          "camera": "south",
+          "time": 300,
+          "gold": 4,
+          "predicted": 5,
+          "error": 1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 5,
+          "prompt_version": "count_v2",
+          "latency_ms": 55729,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "overlapping_boxes"
+          ]
+        },
+        {
+          "sample_id": "south_1500",
+          "camera": "south",
+          "time": 1500,
+          "gold": 5,
+          "predicted": 6,
+          "error": 1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 6,
+          "prompt_version": "count_v2",
+          "latency_ms": 50488,
+          "attempts": 2,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge",
+            "overlapping_boxes"
+          ]
+        },
+        {
+          "sample_id": "south_1800",
+          "camera": "south",
+          "time": 1800,
+          "gold": 4,
+          "predicted": 5,
+          "error": 1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 5,
+          "prompt_version": "count_v2",
+          "latency_ms": 25459,
+          "attempts": 2,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "overlapping_boxes"
+          ]
+        },
+        {
+          "sample_id": "south_2400",
+          "camera": "south",
+          "time": 2400,
+          "gold": 3,
+          "predicted": 4,
+          "error": 1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "count_v2",
+          "latency_ms": 15201,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "thin_box"
+          ]
+        },
+        {
+          "sample_id": "south_2600",
+          "camera": "south",
+          "time": 2600,
+          "gold": 3,
+          "predicted": 4,
+          "error": 1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "count_v2",
+          "latency_ms": 17956,
+          "attempts": 2,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        }
+      ],
+      "failures": [],
+      "by_camera": {
+        "north": {
+          "successful": 10,
+          "exact": 6,
+          "absolute_error_sum": 4,
+          "exact_rate": 0.6,
+          "mae": 0.4
+        },
+        "south": {
+          "successful": 10,
+          "exact": 4,
+          "absolute_error_sum": 6,
+          "exact_rate": 0.4,
+          "mae": 0.6
+        }
+      },
+      "rows": [
+        {
+          "sample_id": "north_5",
+          "camera": "north",
+          "time": 5,
+          "gold": 3,
+          "predicted": 4,
+          "error": 1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "count_v2",
+          "latency_ms": 51839,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate"
+          ]
+        },
+        {
+          "sample_id": "north_300",
+          "camera": "north",
+          "time": 300,
+          "gold": 3,
+          "predicted": 4,
+          "error": 1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "count_v2",
+          "latency_ms": 51834,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate"
+          ]
+        },
+        {
+          "sample_id": "north_600",
+          "camera": "north",
+          "time": 600,
+          "gold": 4,
+          "predicted": 3,
+          "error": -1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 3,
+          "prompt_version": "count_v2",
+          "latency_ms": 45418,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        },
+        {
+          "sample_id": "north_900",
+          "camera": "north",
+          "time": 900,
+          "gold": 3,
+          "predicted": 3,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 3,
+          "prompt_version": "count_v2",
+          "latency_ms": 45400,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate"
+          ]
+        },
+        {
+          "sample_id": "north_1200",
+          "camera": "north",
+          "time": 1200,
+          "gold": 3,
+          "predicted": 3,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 3,
+          "prompt_version": "count_v2",
+          "latency_ms": 24956,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate"
+          ]
+        },
+        {
+          "sample_id": "north_1500",
+          "camera": "north",
+          "time": 1500,
+          "gold": 2,
+          "predicted": 2,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 2,
+          "prompt_version": "count_v2",
+          "latency_ms": 18447,
+          "attempts": 1,
+          "geometric_risks": [
+            "frame_edge",
+            "no_far_detection"
+          ]
+        },
+        {
+          "sample_id": "north_1800",
+          "camera": "north",
+          "time": 1800,
+          "gold": 2,
+          "predicted": 2,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 2,
+          "prompt_version": "count_v2",
+          "latency_ms": 26127,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge",
+            "no_far_detection"
+          ]
+        },
+        {
+          "sample_id": "north_2100",
+          "camera": "north",
+          "time": 2100,
+          "gold": 2,
+          "predicted": 2,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 2,
+          "prompt_version": "count_v2",
+          "latency_ms": 19707,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge",
+            "no_far_detection"
+          ]
+        },
+        {
+          "sample_id": "north_2400",
+          "camera": "north",
+          "time": 2400,
+          "gold": 3,
+          "predicted": 4,
+          "error": 1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "count_v2",
+          "latency_ms": 22824,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge",
+            "overlapping_boxes"
+          ]
+        },
+        {
+          "sample_id": "north_2600",
+          "camera": "north",
+          "time": 2600,
+          "gold": 2,
+          "predicted": 2,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 2,
+          "prompt_version": "count_v2",
+          "latency_ms": 15659,
+          "attempts": 1,
+          "geometric_risks": [
+            "frame_edge",
+            "no_far_detection"
+          ]
+        },
+        {
+          "sample_id": "south_5",
+          "camera": "south",
+          "time": 5,
+          "gold": 3,
+          "predicted": 4,
+          "error": 1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "count_v2",
+          "latency_ms": 61138,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        },
+        {
+          "sample_id": "south_300",
+          "camera": "south",
+          "time": 300,
+          "gold": 4,
+          "predicted": 5,
+          "error": 1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 5,
+          "prompt_version": "count_v2",
+          "latency_ms": 55729,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "overlapping_boxes"
+          ]
+        },
+        {
+          "sample_id": "south_600",
+          "camera": "south",
+          "time": 600,
+          "gold": 5,
+          "predicted": 5,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 5,
+          "prompt_version": "count_v2",
+          "latency_ms": 47687,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate"
+          ]
+        },
+        {
+          "sample_id": "south_900",
+          "camera": "south",
+          "time": 900,
+          "gold": 5,
+          "predicted": 5,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 5,
+          "prompt_version": "count_v2",
+          "latency_ms": 60407,
+          "attempts": 2,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        },
+        {
+          "sample_id": "south_1200",
+          "camera": "south",
+          "time": 1200,
+          "gold": 5,
+          "predicted": 5,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 5,
+          "prompt_version": "count_v2",
+          "latency_ms": 51385,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        },
+        {
+          "sample_id": "south_1500",
+          "camera": "south",
+          "time": 1500,
+          "gold": 5,
+          "predicted": 6,
+          "error": 1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 6,
+          "prompt_version": "count_v2",
+          "latency_ms": 50488,
+          "attempts": 2,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge",
+            "overlapping_boxes"
+          ]
+        },
+        {
+          "sample_id": "south_1800",
+          "camera": "south",
+          "time": 1800,
+          "gold": 4,
+          "predicted": 5,
+          "error": 1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 5,
+          "prompt_version": "count_v2",
+          "latency_ms": 25459,
+          "attempts": 2,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "overlapping_boxes"
+          ]
+        },
+        {
+          "sample_id": "south_2100",
+          "camera": "south",
+          "time": 2100,
+          "gold": 4,
+          "predicted": 4,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "count_v2",
+          "latency_ms": 54185,
+          "attempts": 1,
+          "geometric_risks": [
+            "extreme_aspect",
+            "far_scene_candidate"
+          ]
+        },
+        {
+          "sample_id": "south_2400",
+          "camera": "south",
+          "time": 2400,
+          "gold": 3,
+          "predicted": 4,
+          "error": 1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "count_v2",
+          "latency_ms": 15201,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "thin_box"
+          ]
+        },
+        {
+          "sample_id": "south_2600",
+          "camera": "south",
+          "time": 2600,
+          "gold": 3,
+          "predicted": 4,
+          "error": 1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "count_v2",
+          "latency_ms": 17956,
+          "attempts": 2,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        }
+      ]
+    },
+    "doubao_count_v2": {
+      "label": "doubao_count_v2",
+      "prompt_versions": [
+        "count_v2"
+      ],
+      "samples_expected": 20,
+      "successful_samples": 20,
+      "failed_samples": 0,
+      "success_rate": 1.0,
+      "exact_matches": 15,
+      "exact_rate_of_successful": 0.75,
+      "exact_rate_of_all_samples": 0.75,
+      "mae_successful": 0.25,
+      "undercount_samples": [
+        {
+          "sample_id": "north_300",
+          "camera": "north",
+          "time": 300,
+          "gold": 3,
+          "predicted": 2,
+          "error": -1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 2,
+          "prompt_version": "count_v2",
+          "latency_ms": 18592,
+          "attempts": 1,
+          "geometric_risks": [
+            "extreme_aspect",
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        },
+        {
+          "sample_id": "north_600",
+          "camera": "north",
+          "time": 600,
+          "gold": 4,
+          "predicted": 3,
+          "error": -1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 3,
+          "prompt_version": "count_v2",
+          "latency_ms": 23096,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        },
+        {
+          "sample_id": "south_600",
+          "camera": "south",
+          "time": 600,
+          "gold": 5,
+          "predicted": 4,
+          "error": -1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "count_v2",
+          "latency_ms": 26470,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate"
+          ]
+        }
+      ],
+      "overcount_samples": [
+        {
+          "sample_id": "south_1500",
+          "camera": "south",
+          "time": 1500,
+          "gold": 5,
+          "predicted": 6,
+          "error": 1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 6,
+          "prompt_version": "count_v2",
+          "latency_ms": 44894,
+          "attempts": 1,
+          "geometric_risks": [
+            "extreme_aspect",
+            "far_scene_candidate",
+            "frame_edge",
+            "overlapping_boxes"
+          ]
+        },
+        {
+          "sample_id": "south_2600",
+          "camera": "south",
+          "time": 2600,
+          "gold": 3,
+          "predicted": 4,
+          "error": 1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "count_v2",
+          "latency_ms": 16357,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        }
+      ],
+      "failures": [],
+      "by_camera": {
+        "north": {
+          "successful": 10,
+          "exact": 8,
+          "absolute_error_sum": 2,
+          "exact_rate": 0.8,
+          "mae": 0.2
+        },
+        "south": {
+          "successful": 10,
+          "exact": 7,
+          "absolute_error_sum": 3,
+          "exact_rate": 0.7,
+          "mae": 0.3
+        }
+      },
+      "rows": [
+        {
+          "sample_id": "north_5",
+          "camera": "north",
+          "time": 5,
+          "gold": 3,
+          "predicted": 3,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 3,
+          "prompt_version": "count_v2",
+          "latency_ms": 15087,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate"
+          ]
+        },
+        {
+          "sample_id": "north_300",
+          "camera": "north",
+          "time": 300,
+          "gold": 3,
+          "predicted": 2,
+          "error": -1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 2,
+          "prompt_version": "count_v2",
+          "latency_ms": 18592,
+          "attempts": 1,
+          "geometric_risks": [
+            "extreme_aspect",
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        },
+        {
+          "sample_id": "north_600",
+          "camera": "north",
+          "time": 600,
+          "gold": 4,
+          "predicted": 3,
+          "error": -1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 3,
+          "prompt_version": "count_v2",
+          "latency_ms": 23096,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        },
+        {
+          "sample_id": "north_900",
+          "camera": "north",
+          "time": 900,
+          "gold": 3,
+          "predicted": 3,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 3,
+          "prompt_version": "count_v2",
+          "latency_ms": 17338,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        },
+        {
+          "sample_id": "north_1200",
+          "camera": "north",
+          "time": 1200,
+          "gold": 3,
+          "predicted": 3,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 3,
+          "prompt_version": "count_v2",
+          "latency_ms": 21388,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        },
+        {
+          "sample_id": "north_1500",
+          "camera": "north",
+          "time": 1500,
+          "gold": 2,
+          "predicted": 2,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 2,
+          "prompt_version": "count_v2",
+          "latency_ms": 17417,
+          "attempts": 1,
+          "geometric_risks": [
+            "frame_edge",
+            "no_far_detection"
+          ]
+        },
+        {
+          "sample_id": "north_1800",
+          "camera": "north",
+          "time": 1800,
+          "gold": 2,
+          "predicted": 2,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 2,
+          "prompt_version": "count_v2",
+          "latency_ms": 18631,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "no_far_detection"
+          ]
+        },
+        {
+          "sample_id": "north_2100",
+          "camera": "north",
+          "time": 2100,
+          "gold": 2,
+          "predicted": 2,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 2,
+          "prompt_version": "count_v2",
+          "latency_ms": 19406,
+          "attempts": 1,
+          "geometric_risks": [
+            "no_far_detection"
+          ]
+        },
+        {
+          "sample_id": "north_2400",
+          "camera": "north",
+          "time": 2400,
+          "gold": 3,
+          "predicted": 3,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 3,
+          "prompt_version": "count_v2",
+          "latency_ms": 17018,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        },
+        {
+          "sample_id": "north_2600",
+          "camera": "north",
+          "time": 2600,
+          "gold": 2,
+          "predicted": 2,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 2,
+          "prompt_version": "count_v2",
+          "latency_ms": 23588,
+          "attempts": 1,
+          "geometric_risks": [
+            "frame_edge",
+            "no_far_detection"
+          ]
+        },
+        {
+          "sample_id": "south_5",
+          "camera": "south",
+          "time": 5,
+          "gold": 3,
+          "predicted": 3,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 3,
+          "prompt_version": "count_v2",
+          "latency_ms": 19948,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate"
+          ]
+        },
+        {
+          "sample_id": "south_300",
+          "camera": "south",
+          "time": 300,
+          "gold": 4,
+          "predicted": 4,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "count_v2",
+          "latency_ms": 24714,
+          "attempts": 1,
+          "geometric_risks": [
+            "extreme_aspect",
+            "far_scene_candidate",
+            "overlapping_boxes"
+          ]
+        },
+        {
+          "sample_id": "south_600",
+          "camera": "south",
+          "time": 600,
+          "gold": 5,
+          "predicted": 4,
+          "error": -1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "count_v2",
+          "latency_ms": 26470,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate"
+          ]
+        },
+        {
+          "sample_id": "south_900",
+          "camera": "south",
+          "time": 900,
+          "gold": 5,
+          "predicted": 5,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 5,
+          "prompt_version": "count_v2",
+          "latency_ms": 18637,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        },
+        {
+          "sample_id": "south_1200",
+          "camera": "south",
+          "time": 1200,
+          "gold": 5,
+          "predicted": 5,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 5,
+          "prompt_version": "count_v2",
+          "latency_ms": 21076,
+          "attempts": 1,
+          "geometric_risks": [
+            "extreme_aspect",
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        },
+        {
+          "sample_id": "south_1500",
+          "camera": "south",
+          "time": 1500,
+          "gold": 5,
+          "predicted": 6,
+          "error": 1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 6,
+          "prompt_version": "count_v2",
+          "latency_ms": 44894,
+          "attempts": 1,
+          "geometric_risks": [
+            "extreme_aspect",
+            "far_scene_candidate",
+            "frame_edge",
+            "overlapping_boxes"
+          ]
+        },
+        {
+          "sample_id": "south_1800",
+          "camera": "south",
+          "time": 1800,
+          "gold": 4,
+          "predicted": 4,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "count_v2",
+          "latency_ms": 20333,
+          "attempts": 1,
+          "geometric_risks": [
+            "extreme_aspect",
+            "far_scene_candidate"
+          ]
+        },
+        {
+          "sample_id": "south_2100",
+          "camera": "south",
+          "time": 2100,
+          "gold": 4,
+          "predicted": 4,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "count_v2",
+          "latency_ms": 17416,
+          "attempts": 1,
+          "geometric_risks": [
+            "extreme_aspect",
+            "far_scene_candidate",
+            "overlapping_boxes"
+          ]
+        },
+        {
+          "sample_id": "south_2400",
+          "camera": "south",
+          "time": 2400,
+          "gold": 3,
+          "predicted": 3,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 3,
+          "prompt_version": "count_v2",
+          "latency_ms": 17852,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate"
+          ]
+        },
+        {
+          "sample_id": "south_2600",
+          "camera": "south",
+          "time": 2600,
+          "gold": 3,
+          "predicted": 4,
+          "error": 1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "count_v2",
+          "latency_ms": 16357,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        }
+      ]
+    },
+    "doubao_baseline_v1": {
+      "label": "doubao_baseline_v1",
+      "prompt_versions": [
+        "truck-count-v1"
+      ],
+      "samples_expected": 20,
+      "successful_samples": 20,
+      "failed_samples": 0,
+      "success_rate": 1.0,
+      "exact_matches": 16,
+      "exact_rate_of_successful": 0.8,
+      "exact_rate_of_all_samples": 0.8,
+      "mae_successful": 0.25,
+      "undercount_samples": [
+        {
+          "sample_id": "north_300",
+          "camera": "north",
+          "time": 300,
+          "gold": 3,
+          "predicted": 2,
+          "error": -1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 2,
+          "prompt_version": "truck-count-v1",
+          "latency_ms": 12010,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        },
+        {
+          "sample_id": "north_600",
+          "camera": "north",
+          "time": 600,
+          "gold": 4,
+          "predicted": 2,
+          "error": -2,
+          "abs_error": 2,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 2,
+          "prompt_version": "truck-count-v1",
+          "latency_ms": 11620,
+          "attempts": 1,
+          "geometric_risks": [
+            "frame_edge",
+            "no_far_detection"
+          ]
+        },
+        {
+          "sample_id": "south_600",
+          "camera": "south",
+          "time": 600,
+          "gold": 5,
+          "predicted": 4,
+          "error": -1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "truck-count-v1",
+          "latency_ms": 17250,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate"
+          ]
+        }
+      ],
+      "overcount_samples": [
+        {
+          "sample_id": "south_2600",
+          "camera": "south",
+          "time": 2600,
+          "gold": 3,
+          "predicted": 4,
+          "error": 1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "truck-count-v1",
+          "latency_ms": 14874,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge",
+            "thin_box"
+          ]
+        }
+      ],
+      "failures": [],
+      "by_camera": {
+        "north": {
+          "successful": 10,
+          "exact": 8,
+          "absolute_error_sum": 3,
+          "exact_rate": 0.8,
+          "mae": 0.3
+        },
+        "south": {
+          "successful": 10,
+          "exact": 8,
+          "absolute_error_sum": 2,
+          "exact_rate": 0.8,
+          "mae": 0.2
+        }
+      },
+      "rows": [
+        {
+          "sample_id": "north_5",
+          "camera": "north",
+          "time": 5,
+          "gold": 3,
+          "predicted": 3,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 3,
+          "prompt_version": "truck-count-v1",
+          "latency_ms": 34120,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate"
+          ]
+        },
+        {
+          "sample_id": "north_300",
+          "camera": "north",
+          "time": 300,
+          "gold": 3,
+          "predicted": 2,
+          "error": -1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 2,
+          "prompt_version": "truck-count-v1",
+          "latency_ms": 12010,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        },
+        {
+          "sample_id": "north_600",
+          "camera": "north",
+          "time": 600,
+          "gold": 4,
+          "predicted": 2,
+          "error": -2,
+          "abs_error": 2,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 2,
+          "prompt_version": "truck-count-v1",
+          "latency_ms": 11620,
+          "attempts": 1,
+          "geometric_risks": [
+            "frame_edge",
+            "no_far_detection"
+          ]
+        },
+        {
+          "sample_id": "north_900",
+          "camera": "north",
+          "time": 900,
+          "gold": 3,
+          "predicted": 3,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 3,
+          "prompt_version": "truck-count-v1",
+          "latency_ms": 14870,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        },
+        {
+          "sample_id": "north_1200",
+          "camera": "north",
+          "time": 1200,
+          "gold": 3,
+          "predicted": 3,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 3,
+          "prompt_version": "truck-count-v1",
+          "latency_ms": 13190,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        },
+        {
+          "sample_id": "north_1500",
+          "camera": "north",
+          "time": 1500,
+          "gold": 2,
+          "predicted": 2,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 2,
+          "prompt_version": "truck-count-v1",
+          "latency_ms": 9910,
+          "attempts": 1,
+          "geometric_risks": [
+            "no_far_detection"
+          ]
+        },
+        {
+          "sample_id": "north_1800",
+          "camera": "north",
+          "time": 1800,
+          "gold": 2,
+          "predicted": 2,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 2,
+          "prompt_version": "truck-count-v1",
+          "latency_ms": 11000,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge",
+            "no_far_detection"
+          ]
+        },
+        {
+          "sample_id": "north_2100",
+          "camera": "north",
+          "time": 2100,
+          "gold": 2,
+          "predicted": 2,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 2,
+          "prompt_version": "truck-count-v1",
+          "latency_ms": 14720,
+          "attempts": 1,
+          "geometric_risks": [
+            "frame_edge",
+            "no_far_detection"
+          ]
+        },
+        {
+          "sample_id": "north_2400",
+          "camera": "north",
+          "time": 2400,
+          "gold": 3,
+          "predicted": 3,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 3,
+          "prompt_version": "truck-count-v1",
+          "latency_ms": 17410,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        },
+        {
+          "sample_id": "north_2600",
+          "camera": "north",
+          "time": 2600,
+          "gold": 2,
+          "predicted": 2,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 2,
+          "prompt_version": "truck-count-v1",
+          "latency_ms": 11670,
+          "attempts": 1,
+          "geometric_risks": [
+            "frame_edge",
+            "no_far_detection"
+          ]
+        },
+        {
+          "sample_id": "south_5",
+          "camera": "south",
+          "time": 5,
+          "gold": 3,
+          "predicted": 3,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 3,
+          "prompt_version": "truck-count-v1",
+          "latency_ms": 21910,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge",
+            "thin_box"
+          ]
+        },
+        {
+          "sample_id": "south_300",
+          "camera": "south",
+          "time": 300,
+          "gold": 4,
+          "predicted": 4,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "truck-count-v1",
+          "latency_ms": 35720,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate"
+          ]
+        },
+        {
+          "sample_id": "south_600",
+          "camera": "south",
+          "time": 600,
+          "gold": 5,
+          "predicted": 4,
+          "error": -1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "truck-count-v1",
+          "latency_ms": 17250,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate"
+          ]
+        },
+        {
+          "sample_id": "south_900",
+          "camera": "south",
+          "time": 900,
+          "gold": 5,
+          "predicted": 5,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 5,
+          "prompt_version": "truck-count-v1",
+          "latency_ms": 17900,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        },
+        {
+          "sample_id": "south_1200",
+          "camera": "south",
+          "time": 1200,
+          "gold": 5,
+          "predicted": 5,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 5,
+          "prompt_version": "truck-count-v1",
+          "latency_ms": 25040,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        },
+        {
+          "sample_id": "south_1500",
+          "camera": "south",
+          "time": 1500,
+          "gold": 5,
+          "predicted": 5,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 5,
+          "prompt_version": "truck-count-v1",
+          "latency_ms": 19890,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge"
+          ]
+        },
+        {
+          "sample_id": "south_1800",
+          "camera": "south",
+          "time": 1800,
+          "gold": 4,
+          "predicted": 4,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "truck-count-v1",
+          "latency_ms": 13700,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate"
+          ]
+        },
+        {
+          "sample_id": "south_2100",
+          "camera": "south",
+          "time": 2100,
+          "gold": 4,
+          "predicted": 4,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "truck-count-v1",
+          "latency_ms": 14960,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate"
+          ]
+        },
+        {
+          "sample_id": "south_2400",
+          "camera": "south",
+          "time": 2400,
+          "gold": 3,
+          "predicted": 3,
+          "error": 0,
+          "abs_error": 0,
+          "exact": true,
+          "status": "ok",
+          "vehicle_box_count": 3,
+          "prompt_version": "truck-count-v1",
+          "latency_ms": 12832,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate"
+          ]
+        },
+        {
+          "sample_id": "south_2600",
+          "camera": "south",
+          "time": 2600,
+          "gold": 3,
+          "predicted": 4,
+          "error": 1,
+          "abs_error": 1,
+          "exact": false,
+          "status": "ok",
+          "vehicle_box_count": 4,
+          "prompt_version": "truck-count-v1",
+          "latency_ms": 14874,
+          "attempts": 1,
+          "geometric_risks": [
+            "far_scene_candidate",
+            "frame_edge",
+            "thin_box"
+          ]
+        }
+      ]
+    }
+  },
+  "comparison": {
+    "left": "doubao_count_v2",
+    "right": "aibox_count_v2",
+    "right_better_samples": [
+      {
+        "sample_id": "south_600",
+        "gold": 5,
+        "doubao_count_v2": 4,
+        "aibox_count_v2": 5,
+        "left_abs_error": 1,
+        "right_abs_error": 0
+      }
+    ],
+    "right_worse_samples": [
+      {
+        "sample_id": "north_5",
+        "gold": 3,
+        "doubao_count_v2": 3,
+        "aibox_count_v2": 4,
+        "left_abs_error": 0,
+        "right_abs_error": 1
+      },
+      {
+        "sample_id": "north_2400",
+        "gold": 3,
+        "doubao_count_v2": 3,
+        "aibox_count_v2": 4,
+        "left_abs_error": 0,
+        "right_abs_error": 1
+      },
+      {
+        "sample_id": "south_5",
+        "gold": 3,
+        "doubao_count_v2": 3,
+        "aibox_count_v2": 4,
+        "left_abs_error": 0,
+        "right_abs_error": 1
+      },
+      {
+        "sample_id": "south_300",
+        "gold": 4,
+        "doubao_count_v2": 4,
+        "aibox_count_v2": 5,
+        "left_abs_error": 0,
+        "right_abs_error": 1
+      },
+      {
+        "sample_id": "south_1800",
+        "gold": 4,
+        "doubao_count_v2": 4,
+        "aibox_count_v2": 5,
+        "left_abs_error": 0,
+        "right_abs_error": 1
+      },
+      {
+        "sample_id": "south_2400",
+        "gold": 3,
+        "doubao_count_v2": 3,
+        "aibox_count_v2": 4,
+        "left_abs_error": 0,
+        "right_abs_error": 1
+      }
+    ],
+    "tie_samples": [
+      {
+        "sample_id": "north_300",
+        "gold": 3,
+        "doubao_count_v2": 2,
+        "aibox_count_v2": 4,
+        "left_abs_error": 1,
+        "right_abs_error": 1
+      },
+      {
+        "sample_id": "north_600",
+        "gold": 4,
+        "doubao_count_v2": 3,
+        "aibox_count_v2": 3,
+        "left_abs_error": 1,
+        "right_abs_error": 1
+      },
+      {
+        "sample_id": "north_900",
+        "gold": 3,
+        "doubao_count_v2": 3,
+        "aibox_count_v2": 3,
+        "left_abs_error": 0,
+        "right_abs_error": 0
+      },
+      {
+        "sample_id": "north_1200",
+        "gold": 3,
+        "doubao_count_v2": 3,
+        "aibox_count_v2": 3,
+        "left_abs_error": 0,
+        "right_abs_error": 0
+      },
+      {
+        "sample_id": "north_1500",
+        "gold": 2,
+        "doubao_count_v2": 2,
+        "aibox_count_v2": 2,
+        "left_abs_error": 0,
+        "right_abs_error": 0
+      },
+      {
+        "sample_id": "north_1800",
+        "gold": 2,
+        "doubao_count_v2": 2,
+        "aibox_count_v2": 2,
+        "left_abs_error": 0,
+        "right_abs_error": 0
+      },
+      {
+        "sample_id": "north_2100",
+        "gold": 2,
+        "doubao_count_v2": 2,
+        "aibox_count_v2": 2,
+        "left_abs_error": 0,
+        "right_abs_error": 0
+      },
+      {
+        "sample_id": "north_2600",
+        "gold": 2,
+        "doubao_count_v2": 2,
+        "aibox_count_v2": 2,
+        "left_abs_error": 0,
+        "right_abs_error": 0
+      },
+      {
+        "sample_id": "south_900",
+        "gold": 5,
+        "doubao_count_v2": 5,
+        "aibox_count_v2": 5,
+        "left_abs_error": 0,
+        "right_abs_error": 0
+      },
+      {
+        "sample_id": "south_1200",
+        "gold": 5,
+        "doubao_count_v2": 5,
+        "aibox_count_v2": 5,
+        "left_abs_error": 0,
+        "right_abs_error": 0
+      },
+      {
+        "sample_id": "south_1500",
+        "gold": 5,
+        "doubao_count_v2": 6,
+        "aibox_count_v2": 6,
+        "left_abs_error": 1,
+        "right_abs_error": 1
+      },
+      {
+        "sample_id": "south_2100",
+        "gold": 4,
+        "doubao_count_v2": 4,
+        "aibox_count_v2": 4,
+        "left_abs_error": 0,
+        "right_abs_error": 0
+      },
+      {
+        "sample_id": "south_2600",
+        "gold": 3,
+        "doubao_count_v2": 4,
+        "aibox_count_v2": 4,
+        "left_abs_error": 1,
+        "right_abs_error": 1
+      }
+    ],
+    "right_better_count": 1,
+    "right_worse_count": 6,
+    "exact_rate_delta_right_minus_left": -0.25,
+    "mae_delta_right_minus_left": 0.25,
+    "right_systematically_better": false
+  },
+  "cascade": {
+    "rule": "Use Doubao as primary. Trigger Aibox review when Doubao fails, its boxes show geometric/distant/edge/overlap risk, or its count differs from the Aibox second opinion. On trigger, use Aibox count; fall back to Doubao if Aibox fails.",
+    "triggered_samples": [
+      {
+        "sample_id": "north_5",
+        "reasons": [
+          "far_scene_candidate",
+          "model_disagreement"
+        ],
+        "base_count": 3,
+        "review_count": 4,
+        "gold": 3
+      },
+      {
+        "sample_id": "north_300",
+        "reasons": [
+          "extreme_aspect",
+          "far_scene_candidate",
+          "frame_edge",
+          "model_disagreement"
+        ],
+        "base_count": 2,
+        "review_count": 4,
+        "gold": 3
+      },
+      {
+        "sample_id": "north_600",
+        "reasons": [
+          "far_scene_candidate",
+          "frame_edge"
+        ],
+        "base_count": 3,
+        "review_count": 3,
+        "gold": 4
+      },
+      {
+        "sample_id": "north_900",
+        "reasons": [
+          "far_scene_candidate",
+          "frame_edge"
+        ],
+        "base_count": 3,
+        "review_count": 3,
+        "gold": 3
+      },
+      {
+        "sample_id": "north_1200",
+        "reasons": [
+          "far_scene_candidate",
+          "frame_edge"
+        ],
+        "base_count": 3,
+        "review_count": 3,
+        "gold": 3
+      },
+      {
+        "sample_id": "north_1500",
+        "reasons": [
+          "frame_edge",
+          "no_far_detection"
+        ],
+        "base_count": 2,
+        "review_count": 2,
+        "gold": 2
+      },
+      {
+        "sample_id": "north_1800",
+        "reasons": [
+          "far_scene_candidate",
+          "no_far_detection"
+        ],
+        "base_count": 2,
+        "review_count": 2,
+        "gold": 2
+      },
+      {
+        "sample_id": "north_2100",
+        "reasons": [
+          "no_far_detection"
+        ],
+        "base_count": 2,
+        "review_count": 2,
+        "gold": 2
+      },
+      {
+        "sample_id": "north_2400",
+        "reasons": [
+          "far_scene_candidate",
+          "frame_edge",
+          "model_disagreement"
+        ],
+        "base_count": 3,
+        "review_count": 4,
+        "gold": 3
+      },
+      {
+        "sample_id": "north_2600",
+        "reasons": [
+          "frame_edge",
+          "no_far_detection"
+        ],
+        "base_count": 2,
+        "review_count": 2,
+        "gold": 2
+      },
+      {
+        "sample_id": "south_5",
+        "reasons": [
+          "far_scene_candidate",
+          "model_disagreement"
+        ],
+        "base_count": 3,
+        "review_count": 4,
+        "gold": 3
+      },
+      {
+        "sample_id": "south_300",
+        "reasons": [
+          "extreme_aspect",
+          "far_scene_candidate",
+          "overlapping_boxes",
+          "model_disagreement"
+        ],
+        "base_count": 4,
+        "review_count": 5,
+        "gold": 4
+      },
+      {
+        "sample_id": "south_600",
+        "reasons": [
+          "far_scene_candidate",
+          "model_disagreement"
+        ],
+        "base_count": 4,
+        "review_count": 5,
+        "gold": 5
+      },
+      {
+        "sample_id": "south_900",
+        "reasons": [
+          "far_scene_candidate",
+          "frame_edge"
+        ],
+        "base_count": 5,
+        "review_count": 5,
+        "gold": 5
+      },
+      {
+        "sample_id": "south_1200",
+        "reasons": [
+          "extreme_aspect",
+          "far_scene_candidate",
+          "frame_edge"
+        ],
+        "base_count": 5,
+        "review_count": 5,
+        "gold": 5
+      },
+      {
+        "sample_id": "south_1500",
+        "reasons": [
+          "extreme_aspect",
+          "far_scene_candidate",
+          "frame_edge",
+          "overlapping_boxes"
+        ],
+        "base_count": 6,
+        "review_count": 6,
+        "gold": 5
+      },
+      {
+        "sample_id": "south_1800",
+        "reasons": [
+          "extreme_aspect",
+          "far_scene_candidate",
+          "model_disagreement"
+        ],
+        "base_count": 4,
+        "review_count": 5,
+        "gold": 4
+      },
+      {
+        "sample_id": "south_2100",
+        "reasons": [
+          "extreme_aspect",
+          "far_scene_candidate",
+          "overlapping_boxes"
+        ],
+        "base_count": 4,
+        "review_count": 4,
+        "gold": 4
+      },
+      {
+        "sample_id": "south_2400",
+        "reasons": [
+          "far_scene_candidate",
+          "model_disagreement"
+        ],
+        "base_count": 3,
+        "review_count": 4,
+        "gold": 3
+      },
+      {
+        "sample_id": "south_2600",
+        "reasons": [
+          "far_scene_candidate",
+          "frame_edge"
+        ],
+        "base_count": 4,
+        "review_count": 4,
+        "gold": 3
+      }
+    ],
+    "trigger_count": 20,
+    "trigger_rate": 1.0,
+    "base_wrong_samples": 5,
+    "base_wrong_caught_by_trigger": 5,
+    "successful_samples": 20,
+    "exact_matches": 10,
+    "exact_rate_of_successful": 0.5,
+    "exact_rate_of_all_samples": 0.5,
+    "mae_successful": 0.5,
+    "rows": [
+      {
+        "sample_id": "north_5",
+        "gold": 3,
+        "base": 3,
+        "review": 4,
+        "triggered": true,
+        "result": 4,
+        "error": 1,
+        "exact": false
+      },
+      {
+        "sample_id": "north_300",
+        "gold": 3,
+        "base": 2,
+        "review": 4,
+        "triggered": true,
+        "result": 4,
+        "error": 1,
+        "exact": false
+      },
+      {
+        "sample_id": "north_600",
+        "gold": 4,
+        "base": 3,
+        "review": 3,
+        "triggered": true,
+        "result": 3,
+        "error": -1,
+        "exact": false
+      },
+      {
+        "sample_id": "north_900",
+        "gold": 3,
+        "base": 3,
+        "review": 3,
+        "triggered": true,
+        "result": 3,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "north_1200",
+        "gold": 3,
+        "base": 3,
+        "review": 3,
+        "triggered": true,
+        "result": 3,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "north_1500",
+        "gold": 2,
+        "base": 2,
+        "review": 2,
+        "triggered": true,
+        "result": 2,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "north_1800",
+        "gold": 2,
+        "base": 2,
+        "review": 2,
+        "triggered": true,
+        "result": 2,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "north_2100",
+        "gold": 2,
+        "base": 2,
+        "review": 2,
+        "triggered": true,
+        "result": 2,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "north_2400",
+        "gold": 3,
+        "base": 3,
+        "review": 4,
+        "triggered": true,
+        "result": 4,
+        "error": 1,
+        "exact": false
+      },
+      {
+        "sample_id": "north_2600",
+        "gold": 2,
+        "base": 2,
+        "review": 2,
+        "triggered": true,
+        "result": 2,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "south_5",
+        "gold": 3,
+        "base": 3,
+        "review": 4,
+        "triggered": true,
+        "result": 4,
+        "error": 1,
+        "exact": false
+      },
+      {
+        "sample_id": "south_300",
+        "gold": 4,
+        "base": 4,
+        "review": 5,
+        "triggered": true,
+        "result": 5,
+        "error": 1,
+        "exact": false
+      },
+      {
+        "sample_id": "south_600",
+        "gold": 5,
+        "base": 4,
+        "review": 5,
+        "triggered": true,
+        "result": 5,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "south_900",
+        "gold": 5,
+        "base": 5,
+        "review": 5,
+        "triggered": true,
+        "result": 5,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "south_1200",
+        "gold": 5,
+        "base": 5,
+        "review": 5,
+        "triggered": true,
+        "result": 5,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "south_1500",
+        "gold": 5,
+        "base": 6,
+        "review": 6,
+        "triggered": true,
+        "result": 6,
+        "error": 1,
+        "exact": false
+      },
+      {
+        "sample_id": "south_1800",
+        "gold": 4,
+        "base": 4,
+        "review": 5,
+        "triggered": true,
+        "result": 5,
+        "error": 1,
+        "exact": false
+      },
+      {
+        "sample_id": "south_2100",
+        "gold": 4,
+        "base": 4,
+        "review": 4,
+        "triggered": true,
+        "result": 4,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "south_2400",
+        "gold": 3,
+        "base": 3,
+        "review": 4,
+        "triggered": true,
+        "result": 4,
+        "error": 1,
+        "exact": false
+      },
+      {
+        "sample_id": "south_2600",
+        "gold": 3,
+        "base": 4,
+        "review": 4,
+        "triggered": true,
+        "result": 4,
+        "error": 1,
+        "exact": false
+      }
+    ]
+  },
+  "assessment": {
+    "sample_count": 20,
+    "aibox_503_rate_of_http_attempts": 0.0,
+    "aibox_failed_samples": 0,
+    "aibox_failure_rate": 0.0,
+    "aibox_systematically_better": false,
+    "worth_review_channel": false,
+    "failure_rate_acceptable_5pct": true,
+    "aibox_worse_samples": [
+      {
+        "sample_id": "north_5",
+        "gold": 3,
+        "doubao_count_v2": 3,
+        "aibox_count_v2": 4,
+        "left_abs_error": 0,
+        "right_abs_error": 1
+      },
+      {
+        "sample_id": "north_2400",
+        "gold": 3,
+        "doubao_count_v2": 3,
+        "aibox_count_v2": 4,
+        "left_abs_error": 0,
+        "right_abs_error": 1
+      },
+      {
+        "sample_id": "south_5",
+        "gold": 3,
+        "doubao_count_v2": 3,
+        "aibox_count_v2": 4,
+        "left_abs_error": 0,
+        "right_abs_error": 1
+      },
+      {
+        "sample_id": "south_300",
+        "gold": 4,
+        "doubao_count_v2": 4,
+        "aibox_count_v2": 5,
+        "left_abs_error": 0,
+        "right_abs_error": 1
+      },
+      {
+        "sample_id": "south_1800",
+        "gold": 4,
+        "doubao_count_v2": 4,
+        "aibox_count_v2": 5,
+        "left_abs_error": 0,
+        "right_abs_error": 1
+      },
+      {
+        "sample_id": "south_2400",
+        "gold": 3,
+        "doubao_count_v2": 3,
+        "aibox_count_v2": 4,
+        "left_abs_error": 0,
+        "right_abs_error": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "sample_id": "south_1200",
+  "camera": "south",
+  "time": 1200,
+  "image": "assets/frames/south_1200.jpg",
+  "model": "aibox",
+  "model_id": "glm-5.3-flash",
+  "returned_model": "glm-5.3-flash",
+  "prompt_version": "count_v2",
+  "predicted_count": 5,
+  "counts": {
+    "total": 5,
+    "large": 5,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.44,
+        0.12,
+        0.06,
+        0.11
+      ],
+      "type": "large",
+      "reason": "通道远端尽头处红色卡车车头，与后方车辆有明显间距",
+      "visible": "partial_top",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.41,
+        0.24,
+        0.06,
+        0.1
+      ],
+      "type": "large",
+      "reason": "通道左侧偏中位置，红色车头加蓝色篷布货厢完整可见",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v3",
+      "box": [
+        0.44,
+        0.28,
+        0.09,
+        0.18
+      ],
+      "type": "large",
+      "reason": "通道中央，红色车头与其正上方的灰色长货厢连成一线，判定为同一辆半挂车",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v4",
+      "box": [
+        0.46,
+        0.46,
+        0.1,
+        0.42
+      ],
+      "type": "large",
+      "reason": "通道中下部，白色货厢与东风车头上下相连，为同一辆完整货车",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v5",
+      "box": [
+        0.49,
+        0.85,
+        0.14,
+        0.15
+      ],
+      "type": "large",
+      "reason": "画面底边中央偏右，红色车头被画面下边缘截断，仍可确认为独立货车",
+      "visible": "partial_top",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 51385,
+  "total_latency_ms": 51385,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"scan_order\": \"沿中央通道由远(画面上方)到近(画面下方)逐车扫描，再检查画面左右边缘；左右边缘均为展位桁架，无独立货车。\",\n  \"counts\": {\"total\": 5, \"large\": 5, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.44, 0.12, 0.50, 0.23],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重卡车头，位于通道最远端，朝向镜头，车尾被远处通道遮挡\",\n      \"distinct_from_previous\": \"画面中第一辆可见货车\",\n      \"evidence\": \"通道远端尽头处红色卡车车头，与后方车辆有明显间距\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.41, 0.24, 0.47, 0.34],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色卡车，货厢上盖蓝色篷布，可见车牌，朝向镜头\",\n      \"distinct_from_previous\": \"与第1辆之间有明显空隙，且本车带蓝色篷布货厢，为独立车体\",\n      \"evidence\": \"通道左侧偏中位置，红色车头加蓝色篷布货厢完整可见\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 3,\n      \"bbox\": [0.44, 0.28, 0.53, 0.46],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色卡车头朝向镜头，后方连接长条灰色集装箱式货厢，货厢延伸至画面上方\",\n      \"distinct_from_previous\": \"与第2辆朝向和涂装不同，货厢为灰色长箱而非蓝色篷布，且两者之间有间隙\",\n      \"evidence\": \"通道中央，红色车头与其正上方的灰色长货厢连成一线，判定为同一辆半挂车\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 4,\n      \"bbox\": [0.46, 0.46, 0.56, 0.88],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色厢式货车，白色高货厢，车头印有'东风商用车'字样，朝向镜头\",\n      \"distinct_from_previous\": \"白色涂装、厢式结构，与第3辆红色车头灰色货厢明显不同，且有独立间隙\",\n      \"evidence\": \"通道中下部，白色货厢与东风车头上下相连，为同一辆完整货车\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 5,\n      \"bbox\": [0.49, 0.85, 0.63, 1.0],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色卡车车头，位于画面最底部，仅露出车头及部分货厢前部，朝向镜头\",\n      \"distinct_from_previous\": \"位于第4辆白色货车下方(更近处)，涂装红色，为独立车体\",\n      \"evidence\": \"画面底边中央偏右，红色车头被画面下边缘截断，仍可确认为独立货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"现场为展馆撤展期，通道两侧堆满展位桁架和材料，有多名工人和叉车作业(不计入)。第3辆的灰色长货厢上端与第1、2辆距离较近，但颜色和连接关系可区分。第5辆被画面底边截断，仅见车头。左右边缘未见独立货车。\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:49:06.985047+00:00",
+      "status": 200,
+      "latency_ms": 51385,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2178,
+    "total_tokens": 3479,
+    "completion_tokens": 1301,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "image_tokens": 1610
+    },
+    "reasoning_tokens": 373
+  }
+}

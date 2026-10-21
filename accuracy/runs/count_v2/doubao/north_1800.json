@@ -1,0 +1,74 @@
+{
+  "sample_id": "north_1800",
+  "camera": "north",
+  "time": 1800,
+  "image": "assets/frames/north_1800.jpg",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "returned_model": "doubao-seed-2-0-mini-260428",
+  "prompt_version": "count_v2",
+  "predicted_count": 2,
+  "counts": {
+    "total": 2,
+    "large": 2,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.41,
+        0.24,
+        0.11,
+        0.21
+      ],
+      "type": "large",
+      "reason": "位于中间通道远端，为独立红色货车，无与其他车辆连接，可见度高",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.34,
+        0.6,
+        0.14,
+        0.38
+      ],
+      "type": "large",
+      "reason": "位于中间通道近端，为独立白色厢式货车，与红色货车无连接，可见货厢主体",
+      "visible": "partial_side",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 18631,
+  "total_latency_ms": 18631,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"scan_order\": \"先扫描中间通道，按由远到近（画面上方到下方）顺序，再扫描画面左右边缘，未发现其他货车\",\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.41, 0.24, 0.52, 0.45],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色金属货厢，尾门带黄色反光标识，位于通道远端\",\n      \"distinct_from_previous\": \"无，为序列中第一辆独立货车\",\n      \"evidence\": \"位于中间通道远端，为独立红色货车，无与其他车辆连接，可见度高\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.34, 0.60, 0.48, 0.98],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹状厢式货厢，位于通道近端，车头部分被遮挡\",\n      \"distinct_from_previous\": \"与前一辆（红色货车）为独立车辆，两者之间有明显通道间隔，货厢朝向、颜色不同，无连接关系\",\n      \"evidence\": \"位于中间通道近端，为独立白色厢式货车，与红色货车无连接，可见货厢主体\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面仅中间通道可见2辆独立货车，左右边缘及其他区域无符合要求的货车，无遮挡导致的歧义车辆\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:53:58.247234+00:00",
+      "status": 200,
+      "latency_ms": 18631,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1931,
+    "prompt_tokens": 1884,
+    "total_tokens": 3815,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1486
+    }
+  }
+}

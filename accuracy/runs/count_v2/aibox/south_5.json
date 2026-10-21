@@ -1,0 +1,99 @@
+{
+  "sample_id": "south_5",
+  "camera": "south",
+  "time": 5,
+  "image": "assets/frames/south_5.jpg",
+  "model": "aibox",
+  "model_id": "glm-5.3-flash",
+  "returned_model": "glm-5.3-flash",
+  "prompt_version": "count_v2",
+  "predicted_count": 4,
+  "counts": {
+    "total": 4,
+    "large": 4,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.46,
+        0.13,
+        0.06,
+        0.15
+      ],
+      "type": "large",
+      "reason": "通道远端上方可见红色货车局部，与下方红色车头之间有明显距离和间隙",
+      "visible": "partial_top",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.45,
+        0.28,
+        0.08,
+        0.19
+      ],
+      "type": "large",
+      "reason": "通道中部偏上，红色牵引车头清晰可见，属独立整车",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v3",
+      "box": [
+        0.46,
+        0.6,
+        0.11,
+        0.3
+      ],
+      "type": "large",
+      "reason": "通道中下部独立停放的红色货厢，与上方车辆无连接",
+      "visible": "trailer_only",
+      "uncertain": false
+    },
+    {
+      "id": "v4",
+      "box": [
+        0.47,
+        0.86,
+        0.1,
+        0.14
+      ],
+      "type": "large",
+      "reason": "画面最底部红色卡车车头，与上方货厢之间有间隙，非同一辆",
+      "visible": "partial_top",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 61138,
+  "total_latency_ms": 61138,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"scan_order\": \"沿中央主通道由远(画面上方)到近(画面下方)扫描，再检查左右边缘区域\",\n  \"counts\": {\"total\": 4, \"large\": 4, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.46, 0.13, 0.52, 0.28],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"远端红色货厢/车体，位于通道最深处，仅见局部\",\n      \"distinct_from_previous\": \"画面中第一辆\",\n      \"evidence\": \"通道远端上方可见红色货车局部，与下方红色车头之间有明显距离和间隙\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.45, 0.28, 0.53, 0.47],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重卡车头朝向镜头，后接长货厢，车头与货厢连为一体\",\n      \"distinct_from_previous\": \"与第1辆之间有明显空隙，第1辆在其更远处且仅见局部\",\n      \"evidence\": \"通道中部偏上，红色牵引车头清晰可见，属独立整车\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 3,\n      \"bbox\": [0.46, 0.60, 0.57, 0.90],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色高栏板货厢，尾门朝向镜头，未见牵引车头\",\n      \"distinct_from_previous\": \"与第2辆之间有较大空隙，且第2辆车头朝向相反方向\",\n      \"evidence\": \"通道中下部独立停放的红色货厢，与上方车辆无连接\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 4,\n      \"bbox\": [0.47, 0.86, 0.57, 1.0],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"画面底部红色车头，可见'一汽解放'风格涂装，朝向镜头\",\n      \"distinct_from_previous\": \"位于第3辆货厢正前方近处，车头朝向与货厢尾门相对，是独立车体\",\n      \"evidence\": \"画面最底部红色卡车车头，与上方货厢之间有间隙，非同一辆\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"撤展现场，通道内散落杂物并有施工人员；第3辆货厢与第4辆车头可能存在连接关系（车头可能属于该货厢的牵引车，正对尾门停放），若为同一列车则总数应为3辆；远端第1辆较小且部分被桁架遮挡\",\n  \"uncertain_reasons\": [\"第3辆货厢与第4辆车头是否为同一列车存在歧义\"]\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:47:27.896829+00:00",
+      "status": 200,
+      "latency_ms": 61138,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2178,
+    "total_tokens": 2915,
+    "completion_tokens": 737,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "image_tokens": 1610
+    },
+    "reasoning_tokens": 1
+  }
+}

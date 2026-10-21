@@ -1,0 +1,74 @@
+{
+  "sample_id": "north_2100",
+  "camera": "north",
+  "time": 2100,
+  "image": "assets/frames/north_2100.jpg",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "returned_model": "doubao-seed-2-0-mini-260428",
+  "prompt_version": "count_v2",
+  "predicted_count": 2,
+  "counts": {
+    "total": 2,
+    "large": 2,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.42,
+        0.25,
+        0.08,
+        0.23
+      ],
+      "type": "large",
+      "reason": "位于中间通道上部，为独立重卡车体，符合货车定义",
+      "visible": "partial_side",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.34,
+        0.62,
+        0.14,
+        0.36
+      ],
+      "type": "large",
+      "reason": "位于中间通道下部，与红色货车有明显距离，无连接，为独立挂车",
+      "visible": "trailer_only",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 19406,
+  "total_latency_ms": 19406,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"scan_order\": \"先沿画面中间通道由远（画面顶部）向近（画面底部）扫描，依次识别独立货车，之后扫描画面左右边缘，未发现其他符合条件的货车\",\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.42, 0.25, 0.5, 0.48],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色封闭货厢，尾门朝向镜头，位于中间通道上部\",\n      \"distinct_from_previous\": \"无前置车辆\",\n      \"evidence\": \"位于中间通道上部，为独立重卡车体，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.34, 0.62, 0.48, 0.98],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹状厢式货厢，无可见牵引车头，位于中间通道下部，侧面朝向镜头\",\n      \"distinct_from_previous\": \"与上一辆红色货车为独立车体，两者无连接关系，位置、货厢特征不同\",\n      \"evidence\": \"位于中间通道下部，与红色货车有明显距离，无连接，为独立挂车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"中间通道可见两辆独立货车，左右边缘无符合要求的货车，叉车、人物、展位设施不计入统计\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:54:06.632660+00:00",
+      "status": 200,
+      "latency_ms": 19406,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2023,
+    "prompt_tokens": 1884,
+    "total_tokens": 3907,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1590
+    }
+  }
+}

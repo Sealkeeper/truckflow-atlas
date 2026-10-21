@@ -1,0 +1,113 @@
+{
+  "sample_id": "south_900",
+  "camera": "south",
+  "time": 900,
+  "image": "assets/frames/south_900.jpg",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "returned_model": "doubao-seed-2-0-mini-260428",
+  "prompt_version": "count_v2",
+  "predicted_count": 5,
+  "counts": {
+    "total": 5,
+    "large": 2,
+    "medium": 3,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.42,
+        0.13,
+        0.08,
+        0.14
+      ],
+      "type": "medium",
+      "reason": "Located at the far end of the central channel, clearly visible as an independent truck",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.4,
+        0.24,
+        0.06,
+        0.11
+      ],
+      "type": "medium",
+      "reason": "Positioned below the first truck, distinct red front, separate from upper truck",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v3",
+      "box": [
+        0.45,
+        0.3,
+        0.07,
+        0.16
+      ],
+      "type": "medium",
+      "reason": "Gray cargo roof distinguishes it from the red second truck, positioned lower in the channel",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v4",
+      "box": [
+        0.46,
+        0.47,
+        0.09,
+        0.39
+      ],
+      "type": "large",
+      "reason": "Large cab and full trailer, distinct from the smaller red trucks above, positioned lower in the channel",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v5",
+      "box": [
+        0.49,
+        0.84,
+        0.11,
+        0.15
+      ],
+      "type": "large",
+      "reason": "Trailer only, no visible cab, distinct from the white truck above it, positioned at the bottom of the channel",
+      "visible": "trailer_only",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 18637,
+  "total_latency_ms": 18638,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"scan_order\": \"Scan the central vertical channel from far (top of image) to near (bottom of image); no additional trucks found on left/right edges.\",\n  \"counts\": {\"total\": 5, \"large\": 2, \"medium\": 3, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.42, 0.13, 0.50, 0.27],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red truck, front view, located at the top of the central channel\",\n      \"distinct_from_previous\": \"First vehicle, no prior to compare\",\n      \"evidence\": \"Located at the far end of the central channel, clearly visible as an independent truck\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.40, 0.24, 0.46, 0.35],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red truck, front view, below the first vehicle in the central channel\",\n      \"distinct_from_previous\": \"Separate independent vehicle, with a clear gap from the first truck, no connection\",\n      \"evidence\": \"Positioned below the first truck, distinct red front, separate from upper truck\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 3,\n      \"bbox\": [0.45, 0.30, 0.52, 0.46],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red truck with gray cargo roof, front view, below the second vehicle\",\n      \"distinct_from_previous\": \"Separate independent vehicle, clear gap from the second truck, different cargo appearance\",\n      \"evidence\": \"Gray cargo roof distinguishes it from the red second truck, positioned lower in the channel\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 4,\n      \"bbox\": [0.46, 0.47, 0.55, 0.86],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White Dongfeng truck with white trailer, front view, below the third vehicle\",\n      \"distinct_from_previous\": \"Separate independent vehicle, clear gap from the third truck, white color different from red trucks above\",\n      \"evidence\": \"Large cab and full trailer, distinct from the smaller red trucks above, positioned lower in the channel\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 5,\n      \"bbox\": [0.49, 0.84, 0.60, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red empty trailer, located at the bottom right of the central channel\",\n      \"distinct_from_previous\": \"Separate independent trailer, clear gap from the white truck above, no connection to the white truck\",\n      \"evidence\": \"Trailer only, no visible cab, distinct from the white truck above it, positioned at the bottom of the channel\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All trucks are in the central channel, no significant occlusion affecting vehicle identity; all vehicles are clearly distinguishable as independent units.\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:54:43.368002+00:00",
+      "status": 200,
+      "latency_ms": 18637,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2017,
+    "prompt_tokens": 1884,
+    "total_tokens": 3901,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1143
+    }
+  }
+}

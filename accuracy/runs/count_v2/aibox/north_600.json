@@ -1,0 +1,86 @@
+{
+  "sample_id": "north_600",
+  "camera": "north",
+  "time": 600,
+  "image": "assets/frames/north_600.jpg",
+  "model": "aibox",
+  "model_id": "glm-5.3-flash",
+  "returned_model": "glm-5.3-flash",
+  "prompt_version": "count_v2",
+  "predicted_count": 3,
+  "counts": {
+    "total": 3,
+    "large": 3,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.44,
+        0.14,
+        0.07,
+        0.17
+      ],
+      "type": "large",
+      "reason": "通道远端独立停放的蓝色集装箱货车，与后方红色卡车之间有明显间隙",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.48,
+        0.3,
+        0.09,
+        0.3
+      ],
+      "type": "large",
+      "reason": "通道中部红色重卡，尾灯亮红光，尾门朝向镜头，与远端蓝色货车明显分离",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v3",
+      "box": [
+        0.34,
+        0.6,
+        0.15,
+        0.39
+      ],
+      "type": "large",
+      "reason": "画面左下方独立停放的长货厢，厢体延伸出画面下缘，与红色卡车明显不是同一辆",
+      "visible": "trailer_only",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 45418,
+  "total_latency_ms": 45418,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"scan_order\": \"先沿中央主通道由远及近扫描：远端蓝色集装箱货车→中部红色重卡→近处白色长货厢；再扫左右边缘，左侧为展位结构无车辆，右侧为桁架展位无车辆；叉车不计入。\",\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.44, 0.14, 0.51, 0.31],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"深蓝色集装箱式货厢，位于通道最远端，朝向画面深处，车头在远端隐约可见\",\n      \"distinct_from_previous\": \"第一辆，无前车\",\n      \"evidence\": \"通道远端独立停放的蓝色集装箱货车，与后方红色卡车之间有明显间隙\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.48, 0.30, 0.57, 0.60],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货厢重卡，尾部朝向镜头，尾灯亮起，可见红色尾门与车牌区域\",\n      \"distinct_from_previous\": \"颜色不同（红vs蓝），位置更近，两车之间有明显间隙且各自独立停放\",\n      \"evidence\": \"通道中部红色重卡，尾灯亮红光，尾门朝向镜头，与远端蓝色货车明显分离\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 3,\n      \"bbox\": [0.34, 0.60, 0.49, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色长货厢，侧面可见波纹厢板纹理和编号字符，纵向停放，看不到牵引车头\",\n      \"distinct_from_previous\": \"颜色不同（白vs红），朝向不同（纵向vs正对镜头），位于红色卡车左前方，无连接关系可见\",\n      \"evidence\": \"画面左下方独立停放的长货厢，厢体延伸出画面下缘，与红色卡车明显不是同一辆\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为撤换展现场，通道内还有一辆蓝色叉车（约[0.53,0.78,0.60,0.95]），按口径不计入；远端蓝色货车较小且部分被桁架遮挡但可确认为独立货车；白色货厢下端被画面边缘截断；左右边缘均为展位桁架与展品，无其他货车。\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:45:26.412915+00:00",
+      "status": 200,
+      "latency_ms": 45418,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2178,
+    "total_tokens": 2915,
+    "completion_tokens": 737,
+    "prompt_tokens_details": {
+      "cached_tokens": 1600,
+      "image_tokens": 1610
+    },
+    "reasoning_tokens": 79
+  }
+}

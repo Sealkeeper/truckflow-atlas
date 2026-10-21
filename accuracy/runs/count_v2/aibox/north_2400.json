@@ -1,0 +1,99 @@
+{
+  "sample_id": "north_2400",
+  "camera": "north",
+  "time": 2400,
+  "image": "assets/frames/north_2400.jpg",
+  "model": "aibox",
+  "model_id": "glm-5.3-flash",
+  "returned_model": "glm-5.3-flash",
+  "prompt_version": "count_v2",
+  "predicted_count": 4,
+  "counts": {
+    "total": 4,
+    "large": 4,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.46,
+        0.09,
+        0.08,
+        0.1
+      ],
+      "type": "large",
+      "reason": "通道最远端红色货车尾部，与第2辆红色货车之间有明显间隙",
+      "visible": "partial_top",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.44,
+        0.15,
+        0.09,
+        0.31
+      ],
+      "type": "large",
+      "reason": "主通道中段停放的红色长货厢货车，占据通道左侧",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v3",
+      "box": [
+        0.42,
+        0.62,
+        0.11,
+        0.38
+      ],
+      "type": "large",
+      "reason": "画面中下部白色长货厢，独立停放",
+      "visible": "partial_top",
+      "uncertain": false
+    },
+    {
+      "id": "v4",
+      "box": [
+        0.41,
+        0.93,
+        0.14,
+        0.07
+      ],
+      "type": "large",
+      "reason": "画面下缘中央红色货车顶部，被画幅截断但可确认为独立货车",
+      "visible": "partial_top",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 22824,
+  "total_latency_ms": 22825,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"scan_order\": \"先沿中央主通道由远(画面上方)到近(画面下方)扫描，再检查左右边缘展位间区域。\",\n  \"counts\": {\"total\": 4, \"large\": 4, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.46, 0.09, 0.54, 0.19],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"远端通道尽头红色货厢，仅见尾部，朝向画面深处\",\n      \"distinct_from_previous\": \"画面中第一辆\",\n      \"evidence\": \"通道最远端红色货车尾部，与第2辆红色货车之间有明显间隙\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.44, 0.15, 0.53, 0.46],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色集装箱式货厢，白色车头朝向远处(车尾朝镜头)，可见尾部号牌区域\",\n      \"distinct_from_previous\": \"与第1辆之间有清晰地面间隙，两车尾门分别可辨，非同一辆\",\n      \"evidence\": \"主通道中段停放的红色长货厢货车，占据通道左侧\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 3,\n      \"bbox\": [0.42, 0.62, 0.53, 1.0],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色/浅灰波纹板长货厢，纵向沿通道停放，车头不可见(被画幅下缘截断或朝下)\",\n      \"distinct_from_previous\": \"与第2辆红色货车之间有大段空地，颜色、货厢纹理完全不同\",\n      \"evidence\": \"画面中下部白色长货厢，独立停放\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 4,\n      \"bbox\": [0.41, 0.93, 0.55, 1.0],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"画面最底部红色货厢顶部，仅露出局部\",\n      \"distinct_from_previous\": \"与第3辆白色货厢颜色不同，且两者之间可见分界，非同一辆\",\n      \"evidence\": \"画面下缘中央红色货车顶部，被画幅截断但可确认为独立货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"撤展期通道内散落包装垃圾，多名工人穿行；第1辆与第2辆均为红色货厢且前后相近，已按间隙和独立尾门判定为两辆；第4辆仅露出顶部，存在与第3辆相邻但颜色不同、可区分。\",\n  \"uncertain_reasons\": [\"第1辆远端车辆较小，细节辨认有限\", \"第4辆被画幅下缘截断，仅见货厢顶部\"]\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:46:33.836574+00:00",
+      "status": 200,
+      "latency_ms": 22824,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2178,
+    "total_tokens": 3039,
+    "completion_tokens": 861,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "image_tokens": 1610
+    },
+    "reasoning_tokens": 120
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "sample_id": "north_300",
+  "camera": "north",
+  "time": 300,
+  "image": "assets/frames/north_300.jpg",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "returned_model": "doubao-seed-2-0-mini-260428",
+  "prompt_version": "count_v2",
+  "predicted_count": 2,
+  "counts": {
+    "total": 2,
+    "large": 2,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.44,
+        0.16,
+        0.06,
+        0.3
+      ],
+      "type": "large",
+      "reason": "位于画面中间通道远端，横向停放，蓝色货厢，可确认是独立货车车体，无连接其他车辆",
+      "visible": "partial_side",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.35,
+        0.57,
+        0.15,
+        0.42
+      ],
+      "type": "large",
+      "reason": "位于画面中间通道近端，纵向停放，白色波纹货厢，无可见牵引车头，与远端车辆无连接，为独立挂车",
+      "visible": "trailer_only",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 18592,
+  "total_latency_ms": 18592,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"scan_order\": \"由远到近扫描中间纵向通道，先识别通道远端（画面上方）的独立货车，再识别通道近端（画面下方）的独立货车，未发现画面左右边缘的独立货车\",\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.44, 0.16, 0.50, 0.46],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色货厢，横向停放于中间通道，无连接其他车辆，朝向与通道垂直\",\n      \"distinct_from_previous\": \"无，为扫描到的第一辆独立货车\",\n      \"evidence\": \"位于画面中间通道远端，横向停放，蓝色货厢，可确认是独立货车车体，无连接其他车辆\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.35, 0.57, 0.50, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹货厢，纵向停放于中间通道，无可见牵引车头，尾部有标识\",\n      \"distinct_from_previous\": \"与上一辆（远端蓝色货厢车）之间有明显通道间隔，货厢颜色、纹理不同，无连接关系，为独立车体\",\n      \"evidence\": \"位于画面中间通道近端，纵向停放，白色波纹货厢，无可见牵引车头，与远端车辆无连接，为独立挂车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中仅中间通道可见2辆独立货车，左右边缘无符合要求的货车，远端车辆为横向停放，近端为纵向停放的挂车，均无遮挡导致的歧义\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:53:25.817228+00:00",
+      "status": 200,
+      "latency_ms": 18592,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1910,
+    "prompt_tokens": 1884,
+    "total_tokens": 3794,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1418
+    }
+  }
+}

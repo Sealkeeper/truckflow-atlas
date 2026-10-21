@@ -1,0 +1,133 @@
+{
+  "sample_id": "south_1500",
+  "camera": "south",
+  "time": 1500,
+  "image": "assets/frames/south_1500.jpg",
+  "model": "aibox",
+  "model_id": "glm-5.3-flash",
+  "returned_model": "glm-5.3-flash",
+  "prompt_version": "count_v2",
+  "predicted_count": 6,
+  "counts": {
+    "total": 6,
+    "large": 6,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.455,
+        0.13,
+        0.05,
+        0.115
+      ],
+      "type": "large",
+      "reason": "通道最上端红色卡车，轮廓完整，与后方蓝色车辆有明显间隙",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.415,
+        0.215,
+        0.06,
+        0.085
+      ],
+      "type": "large",
+      "reason": "红色车下方偏左的蓝色货车，独立停放",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v3",
+      "box": [
+        0.405,
+        0.27,
+        0.06,
+        0.105
+      ],
+      "type": "large",
+      "reason": "通道左侧第二辆红色卡车，与蓝色车间距清晰",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v4",
+      "box": [
+        0.445,
+        0.28,
+        0.08,
+        0.18
+      ],
+      "type": "large",
+      "reason": "通道右侧红色车头带长挂车，整体外接框包含车头与货厢",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v5",
+      "box": [
+        0.455,
+        0.455,
+        0.1,
+        0.405
+      ],
+      "type": "large",
+      "reason": "通道中央大型白色厢货，厢体与车头相连，按口径计为一辆",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v6",
+      "box": [
+        0.485,
+        0.85,
+        0.115,
+        0.15
+      ],
+      "type": "large",
+      "reason": "画面最底端红色货车，被画面下边缘截断，仍可确认为独立货车",
+      "visible": "partial_top",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 50488,
+  "total_latency_ms": 112809,
+  "total_attempts": 2,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"scan_order\": \"先沿中央通道由远(画面上方)到近(画面下方)逐车扫描，再检查左右两侧展位区，确认两侧无独立停放货车。\",\n  \"counts\": {\"total\": 6, \"large\": 6, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.455, 0.13, 0.505, 0.245],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重卡车头朝向镜头(朝南/朝近端)，位于通道最远端，车头与货厢连为一体\",\n      \"distinct_from_previous\": \"画面中第一辆\",\n      \"evidence\": \"通道最上端红色卡车，轮廓完整，与后方蓝色车辆有明显间隙\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.415, 0.215, 0.475, 0.30],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色货厢/车体，位于通道左侧，与第1辆红色车有间隙且颜色不同\",\n      \"distinct_from_previous\": \"颜色为蓝色且位置偏左，与红色车之间有独立间隙\",\n      \"evidence\": \"红色车下方偏左的蓝色货车，独立停放\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 3,\n      \"bbox\": [0.405, 0.27, 0.465, 0.375],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色卡车，车头朝向近端，位于蓝色车下方，车身可见红色涂装\",\n      \"distinct_from_previous\": \"颜色为红色，与蓝色车有明显间隙，朝向一致但为独立车体\",\n      \"evidence\": \"通道左侧第二辆红色卡车，与蓝色车间距清晰\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 4,\n      \"bbox\": [0.445, 0.28, 0.525, 0.46],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色牵引车头连接长货厢/挂车，车头朝近端，货厢为深色栅栏式\",\n      \"distinct_from_previous\": \"位于第3辆右侧，车头与货厢相连属同一辆，但与第3辆之间有通道间隔\",\n      \"evidence\": \"通道右侧红色车头带长挂车，整体外接框包含车头与货厢\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 5,\n      \"bbox\": [0.455, 0.455, 0.555, 0.86],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色厢式货车，厢体印有'东风商用车'字样，下方可见白色卡车头，车头与货厢为同一辆车\",\n      \"distinct_from_previous\": \"白色厢体与第4辆红色挂车之间有明显间隙，涂装完全不同\",\n      \"evidence\": \"通道中央大型白色厢货，厢体与车头相连，按口径计为一辆\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 6,\n      \"bbox\": [0.485, 0.85, 0.60, 1.0],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货车，画面底部仅见货厢上部/车顶，朝向近端驶离或停放\",\n      \"distinct_from_previous\": \"位于白色东风车下方，有独立间隙，颜色为红色\",\n      \"evidence\": \"画面最底端红色货车，被画面下边缘截断，仍可确认为独立货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展馆撤展期俯视通道，中央通道内货车列队停放；第6辆被画面底边截断仅见局部。左右两侧均为展位搭建结构，未发现独立停放的货车或单独挂车。远处通道有行人、叉车类设备，均不计入。\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:50:08.310783+00:00",
+      "status": 504,
+      "latency_ms": 61319,
+      "ok": false,
+      "error": "HTTP 504: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "attempt": 2,
+      "time": "2026-10-21T09:50:59.800803+00:00",
+      "status": 200,
+      "latency_ms": 50488,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2178,
+    "total_tokens": 3453,
+    "completion_tokens": 1275,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176,
+      "image_tokens": 1610
+    },
+    "reasoning_tokens": 235
+  }
+}

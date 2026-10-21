@@ -1,0 +1,87 @@
+{
+  "sample_id": "north_5",
+  "camera": "north",
+  "time": 5,
+  "image": "assets/frames/north_5.jpg",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "returned_model": "doubao-seed-2-0-mini-260428",
+  "prompt_version": "count_v2",
+  "predicted_count": 3,
+  "counts": {
+    "total": 3,
+    "large": 2,
+    "medium": 1,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.485,
+        0.105,
+        0.06,
+        0.15
+      ],
+      "type": "large",
+      "reason": "画面上方中间通道尽头，独立可见的红色货车，无相邻车辆混淆",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.435,
+        0.255,
+        0.07,
+        0.2
+      ],
+      "type": "medium",
+      "reason": "中间通道，第一辆货车前方，蓝色货厢的独立车辆，可见部分车体",
+      "visible": "partial_side",
+      "uncertain": false
+    },
+    {
+      "id": "v3",
+      "box": [
+        0.385,
+        0.495,
+        0.11,
+        0.41
+      ],
+      "type": "large",
+      "reason": "中间通道最前方，红色大货车，尾门清晰可见，独立车体",
+      "visible": "full",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 15087,
+  "total_latency_ms": 15087,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"scan_order\": \"先沿中间通道由远及近扫描，再扫描画面左右边缘区域\",\n  \"counts\": {\"total\": 3, \"large\": 2, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.485, 0.105, 0.545, 0.255],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车体，位于通道最远端，车头朝向镜头，可见完整独立车体\",\n      \"distinct_from_previous\": \"无（为第一辆）\",\n      \"evidence\": \"画面上方中间通道尽头，独立可见的红色货车，无相邻车辆混淆\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.435, 0.255, 0.505, 0.455],\n      \"size\": \"medium\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色货厢，位于第一辆货车前方，与第一辆有明显间隙，独立停放\",\n      \"distinct_from_previous\": \"与上一辆（第一辆）有明显间隙，车体朝向不同，为独立车辆\",\n      \"evidence\": \"中间通道，第一辆货车前方，蓝色货厢的独立车辆，可见部分车体\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 3,\n      \"bbox\": [0.385, 0.495, 0.495, 0.905],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货厢，尾门可见，车牌为L66002，位于第二辆货车前方，朝向镜头，完整可见\",\n      \"distinct_from_previous\": \"与上一辆（第二辆）有明显间隙，车体为红色尾门结构，与蓝色货厢车不同，为独立车辆\",\n      \"evidence\": \"中间通道最前方，红色大货车，尾门清晰可见，独立车体\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"所有货车均位于中间通道，无左右边缘的货车，车辆均清晰可见，无遮挡导致的歧义\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:53:22.262293+00:00",
+      "status": 200,
+      "latency_ms": 15087,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1497,
+    "prompt_tokens": 1884,
+    "total_tokens": 3381,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 898
+    }
+  }
+}

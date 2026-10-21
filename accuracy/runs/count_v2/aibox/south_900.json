@@ -1,0 +1,120 @@
+{
+  "sample_id": "south_900",
+  "camera": "south",
+  "time": 900,
+  "image": "assets/frames/south_900.jpg",
+  "model": "aibox",
+  "model_id": "glm-5.3-flash",
+  "returned_model": "glm-5.3-flash",
+  "prompt_version": "count_v2",
+  "predicted_count": 5,
+  "counts": {
+    "total": 5,
+    "large": 5,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.45,
+        0.12,
+        0.05,
+        0.15
+      ],
+      "type": "large",
+      "reason": "通道远端顶部，红色车体清晰可辨，与后方展位结构分离",
+      "visible": "partial_top",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.41,
+        0.24,
+        0.065,
+        0.13
+      ],
+      "type": "large",
+      "reason": "通道中上段偏左，红色车头与蓝色篷布货厢连为一体",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v3",
+      "box": [
+        0.455,
+        0.28,
+        0.08,
+        0.19
+      ],
+      "type": "large",
+      "reason": "通道中央，灰色集装箱与下方红色牵引车头连续衔接，判定为同一辆半挂车",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v4",
+      "box": [
+        0.455,
+        0.45,
+        0.105,
+        0.43
+      ],
+      "type": "large",
+      "reason": "通道中下段，白色货厢与东风驾驶室完整可见，是画面中最清晰的一辆",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v5",
+      "box": [
+        0.485,
+        0.85,
+        0.145,
+        0.15
+      ],
+      "type": "large",
+      "reason": "画面底边中央偏右，红色货厢结构清晰，与白色货车之间有间隙",
+      "visible": "partial_top",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 60407,
+  "total_latency_ms": 122451,
+  "total_attempts": 2,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"scan_order\": \"沿中央通道由远(画面上方)到近(画面下方)逐车扫描，再检查画面左右边缘；左右边缘均为展位结构，无货车。\",\n  \"counts\": {\"total\": 5, \"large\": 5, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.45, 0.12, 0.50, 0.27],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"远端红色货车，红色驾驶室朝向镜头，载红色货厢，位于通道最深处\",\n      \"distinct_from_previous\": \"画面中第一辆可见货车\",\n      \"evidence\": \"通道远端顶部，红色车体清晰可辨，与后方展位结构分离\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.41, 0.24, 0.475, 0.37],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重卡驾驶室，货厢盖蓝色篷布，朝向镜头偏左，位于第1辆左前方\",\n      \"distinct_from_previous\": \"与第1辆之间有明显间隙，朝向和车体颜色细节不同，为独立车辆\",\n      \"evidence\": \"通道中上段偏左，红色车头与蓝色篷布货厢连为一体\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 3,\n      \"bbox\": [0.455, 0.28, 0.535, 0.47],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"灰色长集装箱货厢，其正下方紧接红色牵引车头，车头与货厢相连\",\n      \"distinct_from_previous\": \"与第2辆之间有横向间隙且朝向不同；红色车头与灰色货厢之间无间隙，按口径算一辆\",\n      \"evidence\": \"通道中央，灰色集装箱与下方红色牵引车头连续衔接，判定为同一辆半挂车\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 4,\n      \"bbox\": [0.455, 0.45, 0.56, 0.88],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色厢式货车，驾驶室正面印有'东风商用车'字样及'KULIUK'字样，白色长货厢，车头朝向镜头(近端)\",\n      \"distinct_from_previous\": \"与第3辆之间有明显间隙，车身为白色且驾驶室品牌标识不同\",\n      \"evidence\": \"通道中下段，白色货厢与东风驾驶室完整可见，是画面中最清晰的一辆\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 5,\n      \"bbox\": [0.485, 0.85, 0.63, 1.0],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"画面最底部红色货车，仅见红色货厢顶部/上沿，被画面下边缘截断\",\n      \"distinct_from_previous\": \"位于白色东风货车右后侧，颜色为红色且车体独立，非同一辆\",\n      \"evidence\": \"画面底边中央偏右，红色货厢结构清晰，与白色货车之间有间隙\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展馆撤展期，中央通道停放多辆货车；第3辆的红色牵引车头与灰色集装箱货厢之间无可见间隙，按同一辆计。第5辆被画面下边缘截断，仅见局部。左右边缘均为展位桁架与展台，未发现其他货车。通道上的两名行人和远端小型车辆不计入。\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:48:30.623556+00:00",
+      "status": 504,
+      "latency_ms": 61042,
+      "ok": false,
+      "error": "HTTP 504: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "attempt": 2,
+      "time": "2026-10-21T09:49:32.031287+00:00",
+      "status": 200,
+      "latency_ms": 60407,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2178,
+    "total_tokens": 3679,
+    "completion_tokens": 1501,
+    "prompt_tokens_details": {
+      "cached_tokens": 1600,
+      "image_tokens": 1610
+    },
+    "reasoning_tokens": 562
+  }
+}

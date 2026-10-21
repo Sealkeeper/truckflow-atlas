@@ -1,0 +1,87 @@
+{
+  "sample_id": "south_2400",
+  "camera": "south",
+  "time": 2400,
+  "image": "assets/frames/south_2400.jpg",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "returned_model": "doubao-seed-2-0-mini-260428",
+  "prompt_version": "count_v2",
+  "predicted_count": 3,
+  "counts": {
+    "total": 3,
+    "large": 3,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.44,
+        0.2,
+        0.05,
+        0.12
+      ],
+      "type": "large",
+      "reason": "位于中间通道最上方（最远位置），可见完整车头及部分货厢，为独立货车",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.39,
+        0.2,
+        0.06,
+        0.21
+      ],
+      "type": "large",
+      "reason": "位于中间通道，在第一辆红色货车前方，完整可见，与前车无连接，为独立车辆",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v3",
+      "box": [
+        0.42,
+        0.46,
+        0.12,
+        0.43
+      ],
+      "type": "large",
+      "reason": "位于中间通道最前方（最近位置），完整可见，与白色货车无连接，为独立半挂车辆",
+      "visible": "full",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 17852,
+  "total_latency_ms": 17852,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"scan_order\": \"先扫描画面中间通道，按由远到近（从画面顶部向底部）的顺序识别货车，之后扫描画面左右边缘，未发现其他符合要求的货车\",\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.44, 0.20, 0.49, 0.32],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，后方带货厢，朝向画面下方，位于通道最远端\",\n      \"distinct_from_previous\": \"无（首辆车辆）\",\n      \"evidence\": \"位于中间通道最上方（最远位置），可见完整车头及部分货厢，为独立货车\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.39, 0.20, 0.45, 0.41],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色厢式货车，车头方正，白色封闭货厢，朝向画面下方，位于第一辆货车前方\",\n      \"distinct_from_previous\": \"与上一辆红色货车不同，颜色为白色，车型为厢式，位置更靠近画面下方，无连接关系\",\n      \"evidence\": \"位于中间通道，在第一辆红色货车前方，完整可见，与前车无连接，为独立车辆\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 3,\n      \"bbox\": [0.42, 0.46, 0.54, 0.89],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色半挂货车，车头有“中国重汽”字样，灰色长货厢，车头门打开，朝向画面下方，位于通道最下方\",\n      \"distinct_from_previous\": \"与上一辆白色厢式货车不同，颜色为红色，车型为半挂，货厢为灰色，位置更靠近画面底部，无连接关系\",\n      \"evidence\": \"位于中间通道最前方（最近位置），完整可见，与白色货车无连接，为独立半挂车辆\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"中间通道共3辆独立货车，左右边缘无符合要求的货车，所有车辆均完整可见，无遮挡导致的歧义\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:55:26.530459+00:00",
+      "status": 200,
+      "latency_ms": 17852,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1868,
+    "prompt_tokens": 1884,
+    "total_tokens": 3752,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1224
+    }
+  }
+}

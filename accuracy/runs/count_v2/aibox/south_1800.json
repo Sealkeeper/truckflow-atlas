@@ -1,0 +1,120 @@
+{
+  "sample_id": "south_1800",
+  "camera": "south",
+  "time": 1800,
+  "image": "assets/frames/south_1800.jpg",
+  "model": "aibox",
+  "model_id": "glm-5.3-flash",
+  "returned_model": "glm-5.3-flash",
+  "prompt_version": "count_v2",
+  "predicted_count": 5,
+  "counts": {
+    "total": 5,
+    "large": 5,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.44,
+        0.12,
+        0.07,
+        0.11
+      ],
+      "type": "large",
+      "reason": "通道最远端红色车体，与后方车辆有明显间距",
+      "visible": "partial_top",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.41,
+        0.24,
+        0.06,
+        0.11
+      ],
+      "type": "large",
+      "reason": "通道左半侧独立停放的红色卡车",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v3",
+      "box": [
+        0.46,
+        0.28,
+        0.07,
+        0.16
+      ],
+      "type": "large",
+      "reason": "通道右侧独立长厢体，厢门/纹理与红车分离",
+      "visible": "trailer_only",
+      "uncertain": false
+    },
+    {
+      "id": "v4",
+      "box": [
+        0.45,
+        0.38,
+        0.06,
+        0.1
+      ],
+      "type": "large",
+      "reason": "通道中央偏左的独立红色卡车",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v5",
+      "box": [
+        0.45,
+        0.47,
+        0.1,
+        0.42
+      ],
+      "type": "large",
+      "reason": "画面最近处的大型白色厢式货车，货厢与车头连为一体",
+      "visible": "full",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 25459,
+  "total_latency_ms": 88350,
+  "total_attempts": 2,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"scan_order\": \"沿中央通道由远(画面顶部)到近(画面底部)逐车扫描，再检查左右两侧展位间区域；每处车体独立判断是否与上一辆为同一辆。\",\n  \"counts\": {\"total\": 5, \"large\": 5, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.44, 0.12, 0.51, 0.23],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"远端通道中央红色重卡车头，朝向镜头，上部被画面边缘截断\",\n      \"distinct_from_previous\": \"画面中第一辆可见货车\",\n      \"evidence\": \"通道最远端红色车体，与后方车辆有明显间距\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.41, 0.24, 0.47, 0.35],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重卡车头朝向镜头，可见风挡与格栅，位于通道左侧\",\n      \"distinct_from_previous\": \"与第1辆之间有明显空隙，位置更近且偏左，车头细节独立可辨\",\n      \"evidence\": \"通道左半侧独立停放的红色卡车\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 3,\n      \"bbox\": [0.46, 0.28, 0.53, 0.44],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"深灰色长货厢/集装箱，竖条纹厢体，看不到牵引车头，与旁边红色卡车并排\",\n      \"distinct_from_previous\": \"与第2辆红色卡车横向并排、朝向和厢体独立，无连接关系可见\",\n      \"evidence\": \"通道右侧独立长厢体，厢门/纹理与红车分离\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 4,\n      \"bbox\": [0.45, 0.38, 0.51, 0.48],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重卡车头朝向镜头，位于通道中央，车头灯和格栅清晰\",\n      \"distinct_from_previous\": \"与第3辆灰色货厢之间有间隙且非同一车体，红色车头独立可辨\",\n      \"evidence\": \"通道中央偏左的独立红色卡车\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 5,\n      \"bbox\": [0.45, 0.47, 0.55, 0.89],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色长货厢连接白色'东风商用车'卡车头，朝向镜头，车头品牌字样与车牌可见\",\n      \"distinct_from_previous\": \"与第4辆红色卡车颜色、位置完全不同；白色货厢与下方白色车头连续连接，属同一辆车\",\n      \"evidence\": \"画面最近处的大型白色厢式货车，货厢与车头连为一体\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展馆撤展期俯视通道，中央通道有多辆排队货车；第3项为无车头可见的独立货厢，按 trailer_only 计。第5项白色货厢与白色东风车头判断为同一辆车，未拆分。左右展位间未发现其他货车；叉车、手推车、人员均未计入。\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:50:33.933028+00:00",
+      "status": 504,
+      "latency_ms": 61890,
+      "ok": false,
+      "error": "HTTP 504: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "attempt": 2,
+      "time": "2026-10-21T09:51:00.392809+00:00",
+      "status": 200,
+      "latency_ms": 25459,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2178,
+    "total_tokens": 3536,
+    "completion_tokens": 1358,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176,
+      "image_tokens": 1610
+    },
+    "reasoning_tokens": 474
+  }
+}
