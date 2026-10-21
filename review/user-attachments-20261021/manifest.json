@@ -1,0 +1,101 @@
+{
+  "schema": "truckflow-user-annotations-v1",
+  "source": {
+    "page": "http://127.0.0.1:4178/",
+    "collected_at": "2026-10-21T20:40:00+08:00",
+    "method": "browser DOM data URL of user-uploaded review attachments; no other directories scanned",
+    "uploaded_by": "user",
+    "note": "Red boxes are drawn by the user around each counted vehicle. Images are stored as PNG, extracted losslessly from the page."
+  },
+  "records": [
+    {
+      "time": "00:05",
+      "camera": "north",
+      "file": "0005_1.png",
+      "marked_vehicle_count": 5,
+      "sha256": "964944f86bd1a00112fd66db5ee7def1984236a27026a9deaf054643aee8e7e1",
+      "width": 378,
+      "height": 723,
+      "note": "four distinct cargo bodies in the far队列 plus one red truck in the foreground"
+    },
+    {
+      "time": "00:05",
+      "camera": "south",
+      "file": "0005_2.png",
+      "marked_vehicle_count": 3,
+      "sha256": "008f90c6bd0aa8dfd17d1466f235a98e12df499978639c7ce7ec52583f874701",
+      "width": 411,
+      "height": 818
+    },
+    {
+      "time": "05:00",
+      "camera": "south",
+      "file": "0500_1.png",
+      "marked_vehicle_count": 4,
+      "sha256": "0123d0b46d89728c0a16e03afd89bab0b147bd7b1fd517dcb378b4fbce5b58fa",
+      "width": 402,
+      "height": 720
+    },
+    {
+      "time": "10:00",
+      "camera": "south",
+      "file": "1000_1.png",
+      "marked_vehicle_count": 4,
+      "sha256": "ef7e66994b78a5652cec835ea40b786f03505f1e057f69644f6320a6262e12af",
+      "width": 246,
+      "height": 510
+    },
+    {
+      "time": "10:00",
+      "camera": "north",
+      "file": "1000_2.png",
+      "marked_vehicle_count": 4,
+      "sha256": "8ab9c6c4c305b18f9b1db6ab53637088b1bb7cebaa539057f083fae0070a2817",
+      "width": 258,
+      "height": 510,
+      "note": "two separate blue-roof cargo bodies at the far end, one red body, one white body; this is the north_600 undercount evidence"
+    },
+    {
+      "time": "15:00",
+      "camera": "south",
+      "file": "1500_1.png",
+      "marked_vehicle_count": 5,
+      "sha256": "5c4e76d57bbc598714505a52a4034d33bee1bfb96dfe7cdc8c2950002ea9572d",
+      "width": 258,
+      "height": 519
+    },
+    {
+      "time": "20:00",
+      "camera": "south",
+      "file": "2000_1.png",
+      "marked_vehicle_count": 5,
+      "sha256": "ec71a7a7be6001cb5e540753b2074e54f632b747d4a9091b8ae296b1ff90c19f",
+      "width": 261,
+      "height": 513
+    },
+    {
+      "time": "43:20",
+      "camera": "south",
+      "file": "4320_1.png",
+      "marked_vehicle_count": 4,
+      "sha256": "dbc014927dab85a79079d91a521f2e4e544620c676d224cecd2a9d983e69d578",
+      "width": 350,
+      "height": 708
+    },
+    {
+      "time": "43:20",
+      "camera": "north",
+      "file": "4320_2.png",
+      "marked_vehicle_count": 2,
+      "sha256": "8c9e14792b4aeb49d1013d753d975b87e7ff28e446a13c57f1cfefc083079c0b",
+      "width": 204,
+      "height": 369
+    }
+  ],
+  "coverage": {
+    "annotated_samples": 9,
+    "annotated_times": 6,
+    "unmarked_times": ["25:00", "30:00", "35:00", "40:00"],
+    "note": "All marked counts agree with the user's saved camera_counts in user-final-review-v2-2026-10-21.json."
+  }
+}
