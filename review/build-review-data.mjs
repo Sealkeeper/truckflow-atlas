@@ -21,6 +21,7 @@ const samples = gold.samples.map((sample) => {
     };
   });
   const clip = `clips/${key}.mp4`;
+  const crop = `crops/${key}.jpg`;
   return {
     key,
     camera: sample.camera,
@@ -32,6 +33,9 @@ const samples = gold.samples.map((sample) => {
       small: sample.small
     },
     reviewFlag: Boolean(sample.review),
+    original: `assets/frames/${key}.jpg`,
+    crop,
+    cropExists: fs.existsSync(path.join(here, crop)),
     frames,
     clip: fs.existsSync(path.join(here, clip)) ? clip : null,
     clipStart: Math.max(0, sample.time - 15)
