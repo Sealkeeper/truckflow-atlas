@@ -1,0 +1,132 @@
+{
+  "model": "aibox-glm-5.3-flash",
+  "model_id": "glm-5.3-flash",
+  "attempts": 1,
+  "latency_s": 6.77,
+  "usage": {
+    "prompt_tokens": 1459,
+    "total_tokens": 1894,
+    "completion_tokens": 435,
+    "prompt_tokens_details": {
+      "cached_tokens": 1408,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": {
+        "image": 1011
+      }
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "{\n  \"counts\": {\n    \"total\": 3,\n    \"large\": 2,\n    \"medium\": 0,\n    \"small\": 1,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [\n        0.18,\n        0.62,\n        0.52,\n        0.99\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹顶长货厢，底部可见部分深色车身，朝向画面下方\",\n      \"evidence\": \"画面下方偏左占据大面积的白色长货厢，符合半挂/重卡特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.4,\n        0.25,\n        0.55,\n        0.45\n      ],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色长货厢，尾部有反光条，朝向画面上方\",\n      \"evidence\": \"画面中央通道内清晰可见的红色长货厢半挂车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.46,\n        0.56,\n        0.62,\n        0.69\n      ],\n      \"size\": \"small\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车身，带有货叉和门架，操作员在驾驶位\",\n      \"evidence\": \"画面中下方偏右正在作业的红色叉车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展会撤换展现场，通道内人员密集。下方白色长货厢仅可见顶部，无法确认车头是否在画面内；中央红色货车完整可见；右侧红色叉车正在搬运货物。未发现其他明显货车。\",\n  \"uncertain_reasons\": []\n}",
+  "reasoning_text": null,
+  "raw_body": {
+    "id": "chatcmpl-8d0ebcbc63ae7838",
+    "object": "chat.completion",
+    "created": 1792586175,
+    "model": "deepseek-v4.1-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"counts\": {\n    \"total\": 3,\n    \"large\": 2,\n    \"medium\": 0,\n    \"small\": 1,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [\n        0.18,\n        0.62,\n        0.52,\n        0.99\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹顶长货厢，底部可见部分深色车身，朝向画面下方\",\n      \"evidence\": \"画面下方偏左占据大面积的白色长货厢，符合半挂/重卡特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.4,\n        0.25,\n        0.55,\n        0.45\n      ],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色长货厢，尾部有反光条，朝向画面上方\",\n      \"evidence\": \"画面中央通道内清晰可见的红色长货厢半挂车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.46,\n        0.56,\n        0.62,\n        0.69\n      ],\n      \"size\": \"small\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车身，带有货叉和门架，操作员在驾驶位\",\n      \"evidence\": \"画面中下方偏右正在作业的红色叉车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展会撤换展现场，通道内人员密集。下方白色长货厢仅可见顶部，无法确认车头是否在画面内；中央红色货车完整可见；右侧红色叉车正在搬运货物。未发现其他明显货车。\",\n  \"uncertain_reasons\": []\n}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "reasoning": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null,
+        "routed_experts": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev20904+g179dd0fa9-tp8-ep-4471a5ba",
+    "usage": {
+      "prompt_tokens": 1459,
+      "total_tokens": 1894,
+      "completion_tokens": 435,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": {
+          "image": 1011
+        }
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 2,
+      "medium": 0,
+      "small": 1,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.18,
+          0.62,
+          0.52,
+          0.99
+        ],
+        "size": "large",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "白色波纹顶长货厢，底部可见部分深色车身，朝向画面下方",
+        "evidence": "画面下方偏左占据大面积的白色长货厢，符合半挂/重卡特征",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.4,
+          0.25,
+          0.55,
+          0.45
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色长货厢，尾部有反光条，朝向画面上方",
+        "evidence": "画面中央通道内清晰可见的红色长货厢半挂车",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.46,
+          0.56,
+          0.62,
+          0.69
+        ],
+        "size": "small",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色车身，带有货叉和门架，操作员在驾驶位",
+        "evidence": "画面中下方偏右正在作业的红色叉车",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面为展会撤换展现场，通道内人员密集。下方白色长货厢仅可见顶部，无法确认车头是否在画面内；中央红色货车完整可见；右侧红色叉车正在搬运货物。未发现其他明显货车。",
+    "uncertain_reasons": []
+  },
+  "sample_id": "north_2100",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\north_2100_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:36:19+0800"
+}

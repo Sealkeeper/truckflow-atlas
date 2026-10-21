@@ -1,0 +1,146 @@
+{
+  "model": "aibox-glm-5.3-flash",
+  "model_id": "glm-5.3-flash",
+  "attempts": 1,
+  "latency_s": 3.26,
+  "usage": {
+    "prompt_tokens": 1459,
+    "total_tokens": 2000,
+    "completion_tokens": 541,
+    "prompt_tokens_details": {
+      "cached_tokens": 1408,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": {
+        "image": 1011
+      }
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "```json\n{\n  \"counts\": {\n    \"total\": 4,\n    \"large\": 4,\n    \"medium\": 0,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [0.45, 0.45, 0.68, 0.88],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色车头，带有'东风商用车'字样，连接白色长货厢，朝向画面下方\",\n      \"evidence\": \"位于画面中下方，是画面中最完整、最显眼的半挂货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.28, 0.59, 0.46],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，连接灰色/银色长货厢，朝向画面下方\",\n      \"evidence\": \"位于白色东风货车正后方，车头和部分货厢清晰可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.35, 0.24, 0.45, 0.36],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，连接红色货厢，朝向画面下方\",\n      \"evidence\": \"位于第二辆红色货车后方，车头特征明显\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.12, 0.52, 0.24],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，连接红色货厢，朝向画面下方\",\n      \"evidence\": \"位于通道最远端，被前方车辆部分遮挡，但能辨认出是货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展会撤换展现场，通道中央停放着多辆排队等候的货车。最前方是一辆白色东风半挂车，其后依次跟着三辆红色车头的货车。画面边缘有大量展位框架和人员，底部有叉车作业，均未计入。\",\n  \"uncertain_reasons\": []\n}\n```",
+  "reasoning_text": null,
+  "raw_body": {
+    "id": "chatcmpl-9f9410da659164a6",
+    "object": "chat.completion",
+    "created": 1792586181,
+    "model": "deepseek-v4.1-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"counts\": {\n    \"total\": 4,\n    \"large\": 4,\n    \"medium\": 0,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [0.45, 0.45, 0.68, 0.88],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色车头，带有'东风商用车'字样，连接白色长货厢，朝向画面下方\",\n      \"evidence\": \"位于画面中下方，是画面中最完整、最显眼的半挂货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.28, 0.59, 0.46],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，连接灰色/银色长货厢，朝向画面下方\",\n      \"evidence\": \"位于白色东风货车正后方，车头和部分货厢清晰可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.35, 0.24, 0.45, 0.36],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，连接红色货厢，朝向画面下方\",\n      \"evidence\": \"位于第二辆红色货车后方，车头特征明显\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.12, 0.52, 0.24],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，连接红色货厢，朝向画面下方\",\n      \"evidence\": \"位于通道最远端，被前方车辆部分遮挡，但能辨认出是货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展会撤换展现场，通道中央停放着多辆排队等候的货车。最前方是一辆白色东风半挂车，其后依次跟着三辆红色车头的货车。画面边缘有大量展位框架和人员，底部有叉车作业，均未计入。\",\n  \"uncertain_reasons\": []\n}\n```",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "reasoning": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null,
+        "routed_experts": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev20904+g179dd0fa9-tp8-ep-4471a5ba",
+    "usage": {
+      "prompt_tokens": 1459,
+      "total_tokens": 2000,
+      "completion_tokens": 541,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": {
+          "image": 1011
+        }
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 4,
+      "large": 4,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.45,
+          0.45,
+          0.68,
+          0.88
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "白色车头，带有'东风商用车'字样，连接白色长货厢，朝向画面下方",
+        "evidence": "位于画面中下方，是画面中最完整、最显眼的半挂货车",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.45,
+          0.28,
+          0.59,
+          0.46
+        ],
+        "size": "large",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "红色车头，连接灰色/银色长货厢，朝向画面下方",
+        "evidence": "位于白色东风货车正后方，车头和部分货厢清晰可见",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.35,
+          0.24,
+          0.45,
+          0.36
+        ],
+        "size": "large",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "红色车头，连接红色货厢，朝向画面下方",
+        "evidence": "位于第二辆红色货车后方，车头特征明显",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.44,
+          0.12,
+          0.52,
+          0.24
+        ],
+        "size": "large",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "红色车头，连接红色货厢，朝向画面下方",
+        "evidence": "位于通道最远端，被前方车辆部分遮挡，但能辨认出是货车",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面为展会撤换展现场，通道中央停放着多辆排队等候的货车。最前方是一辆白色东风半挂车，其后依次跟着三辆红色车头的货车。画面边缘有大量展位框架和人员，底部有叉车作业，均未计入。",
+    "uncertain_reasons": []
+  },
+  "sample_id": "south_1800",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\south_1800_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:36:24+0800"
+}

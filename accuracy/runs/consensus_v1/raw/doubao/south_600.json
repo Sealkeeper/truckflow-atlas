@@ -1,0 +1,124 @@
+{
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "attempts": 1,
+  "latency_s": 13.31,
+  "usage": {
+    "completion_tokens": 1493,
+    "prompt_tokens": 1776,
+    "total_tokens": 3269,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 968
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 2, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.46, 0.47, 0.71, 0.89],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White cab with '东风商用车' text, front-facing heavy-duty truck\",\n      \"evidence\": \"Fully visible at the bottom center of the image, clearly a large truck\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.28, 0.59, 0.51],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab with gray enclosed trailer, positioned above the white truck\",\n      \"evidence\": \"Fully visible in the middle of the central aisle, large truck with trailer\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.33, 0.25, 0.45, 0.36],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab with blue cover on top, left side of the middle aisle\",\n      \"evidence\": \"Fully visible, medium-sized truck\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.43, 0.12, 0.54, 0.26],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, further back in the central aisle\",\n      \"evidence\": \"Fully visible at the top of the central aisle, medium-sized truck\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All trucks are located in the central aisle of the exhibition hall; forklift and personnel are excluded per rules\",\n  \"uncertain_reasons\": []\n}",
+  "reasoning_text": "Okay, let's count the visible trucks in this image. First, look at each one:\n\n1. The white Dongfeng truck at the bottom: that's a large truck, full visible.\n2. The red truck behind it (middle, red cab, gray trailer): large, full visible.\n3. The red truck further up (middle, red cab, blue on top): medium? Wait, no, let's see. Then the topmost red truck, another one. Wait wait, let's list them one by one:\n\nFirst, bottom: white Dongfeng (东风商用车) – that's 1, large, full visible.\nSecond: red truck with gray trailer (the one above the white one) – that's 2, large, full visible.\nThird: red truck (cab only, no trailer? Wait no, wait the one above that, red cab, looks like a medium truck, full visible.\nFourth: the topmost red truck, further back, another one, full visible. Wait wait, let's check again. Let's count:\n\nWait the image has four trucks? Wait no, let's see:\n1. White truck (bottom, front) – large, full.\n2. Red truck with gray container (middle, above white) – large, full.\n3. Red truck (cab, above that, middle left) – medium, full.\n4. Red truck (top, further back) – medium, full. Wait wait is that four? Wait wait, let's confirm each is a truck, not other things. The forklift is not counted, right, the rules say forklift不计入. So yes, four trucks? Wait wait wait, let's check again:\n\nWait the first one: [0.47, 0.46, 0.7, 0.89] – white Dongfeng, large, full.\nSecond: [0.45, 0.29, 0.59, 0.52] – red cab, gray trailer, large, full.\nThird: [0.34, 0.25, 0.45, 0.37] – red cab, blue on top, medium, full.\nFourth: [0.44, 0.13, 0.54, 0.27] – red truck, top, medium, full. That's four total. So counts: total=4, large=2, medium=2, small=0, unknown=0.\n\nWait wait, is the fourth one a truck? Yes, it's a red truck, cab and part, visible. Let's confirm each:\n\nNow, for each vehicle entry:\n\nFirst vehicle: bbox [0.46, 0.47, 0.71, 0.89], size large, visible full, is_truck true, identity clues: white cab with \"东风商用车\" text, front facing, large truck. Evidence: clearly a heavy-duty truck, fully visible in lower center. Uncertain false.\n\nSecond: bbox [0.44, 0.28, 0.59, 0.51], size large, visible full, is_truck true, identity clues: red cab, gray enclosed trailer, middle of the image. Evidence: large truck with trailer, fully visible. Uncertain false.\n\nThird: bbox [0.33, 0.25, 0.45, 0.36], size medium, visible full, is_truck true, identity clues: red cab, blue cover on top, middle left. Evidence: medium truck, fully visible. Uncertain false.\n\nFourth: bbox [0.43, 0.12, 0.54, 0.26], size medium, visible full, is_truck true, identity clues: red cab, further back in the aisle. Evidence: medium truck, fully visible. Uncertain false.\n\nScene notes: All trucks are in the central aisle, no major occlusion except the forklift which is not counted. Uncertain reasons: none.\n\nWait wait, is that correct? Let's make sure we didn't count any non-trucks. The forklift is excluded, yes. The people are excluded, the structures are not. So total 4, large=2, medium=2, small=0. That makes sense.\n\nNow structure the JSON properly. Let's write it as per the required format.",
+  "raw_body": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "{\n  \"counts\": {\"total\": 4, \"large\": 2, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.46, 0.47, 0.71, 0.89],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White cab with '东风商用车' text, front-facing heavy-duty truck\",\n      \"evidence\": \"Fully visible at the bottom center of the image, clearly a large truck\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.28, 0.59, 0.51],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab with gray enclosed trailer, positioned above the white truck\",\n      \"evidence\": \"Fully visible in the middle of the central aisle, large truck with trailer\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.33, 0.25, 0.45, 0.36],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab with blue cover on top, left side of the middle aisle\",\n      \"evidence\": \"Fully visible, medium-sized truck\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.43, 0.12, 0.54, 0.26],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, further back in the central aisle\",\n      \"evidence\": \"Fully visible at the top of the central aisle, medium-sized truck\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All trucks are located in the central aisle of the exhibition hall; forklift and personnel are excluded per rules\",\n  \"uncertain_reasons\": []\n}",
+          "reasoning_content": "Okay, let's count the visible trucks in this image. First, look at each one:\n\n1. The white Dongfeng truck at the bottom: that's a large truck, full visible.\n2. The red truck behind it (middle, red cab, gray trailer): large, full visible.\n3. The red truck further up (middle, red cab, blue on top): medium? Wait, no, let's see. Then the topmost red truck, another one. Wait wait, let's list them one by one:\n\nFirst, bottom: white Dongfeng (东风商用车) – that's 1, large, full visible.\nSecond: red truck with gray trailer (the one above the white one) – that's 2, large, full visible.\nThird: red truck (cab only, no trailer? Wait no, wait the one above that, red cab, looks like a medium truck, full visible.\nFourth: the topmost red truck, further back, another one, full visible. Wait wait, let's check again. Let's count:\n\nWait the image has four trucks? Wait no, let's see:\n1. White truck (bottom, front) – large, full.\n2. Red truck with gray container (middle, above white) – large, full.\n3. Red truck (cab, above that, middle left) – medium, full.\n4. Red truck (top, further back) – medium, full. Wait wait is that four? Wait wait, let's confirm each is a truck, not other things. The forklift is not counted, right, the rules say forklift不计入. So yes, four trucks? Wait wait wait, let's check again:\n\nWait the first one: [0.47, 0.46, 0.7, 0.89] – white Dongfeng, large, full.\nSecond: [0.45, 0.29, 0.59, 0.52] – red cab, gray trailer, large, full.\nThird: [0.34, 0.25, 0.45, 0.37] – red cab, blue on top, medium, full.\nFourth: [0.44, 0.13, 0.54, 0.27] – red truck, top, medium, full. That's four total. So counts: total=4, large=2, medium=2, small=0, unknown=0.\n\nWait wait, is the fourth one a truck? Yes, it's a red truck, cab and part, visible. Let's confirm each:\n\nNow, for each vehicle entry:\n\nFirst vehicle: bbox [0.46, 0.47, 0.71, 0.89], size large, visible full, is_truck true, identity clues: white cab with \"东风商用车\" text, front facing, large truck. Evidence: clearly a heavy-duty truck, fully visible in lower center. Uncertain false.\n\nSecond: bbox [0.44, 0.28, 0.59, 0.51], size large, visible full, is_truck true, identity clues: red cab, gray enclosed trailer, middle of the image. Evidence: large truck with trailer, fully visible. Uncertain false.\n\nThird: bbox [0.33, 0.25, 0.45, 0.36], size medium, visible full, is_truck true, identity clues: red cab, blue cover on top, middle left. Evidence: medium truck, fully visible. Uncertain false.\n\nFourth: bbox [0.43, 0.12, 0.54, 0.26], size medium, visible full, is_truck true, identity clues: red cab, further back in the aisle. Evidence: medium truck, fully visible. Uncertain false.\n\nScene notes: All trucks are in the central aisle, no major occlusion except the forklift which is not counted. Uncertain reasons: none.\n\nWait wait, is that correct? Let's make sure we didn't count any non-trucks. The forklift is excluded, yes. The people are excluded, the structures are not. So total 4, large=2, medium=2, small=0. That makes sense.\n\nNow structure the JSON properly. Let's write it as per the required format.",
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1792586154,
+    "id": "02179258614157238b4ca612c111379c83d27b4a8b1bb379dd4a9",
+    "model": "doubao-seed-2-0-mini-260428",
+    "service_tier": "default",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 1493,
+      "prompt_tokens": 1776,
+      "total_tokens": 3269,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 968
+      }
+    }
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 4,
+      "large": 2,
+      "medium": 2,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.46,
+          0.47,
+          0.71,
+          0.89
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "White cab with '东风商用车' text, front-facing heavy-duty truck",
+        "evidence": "Fully visible at the bottom center of the image, clearly a large truck",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.44,
+          0.28,
+          0.59,
+          0.51
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red cab with gray enclosed trailer, positioned above the white truck",
+        "evidence": "Fully visible in the middle of the central aisle, large truck with trailer",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.33,
+          0.25,
+          0.45,
+          0.36
+        ],
+        "size": "medium",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red cab with blue cover on top, left side of the middle aisle",
+        "evidence": "Fully visible, medium-sized truck",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.43,
+          0.12,
+          0.54,
+          0.26
+        ],
+        "size": "medium",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red cab, further back in the central aisle",
+        "evidence": "Fully visible at the top of the central aisle, medium-sized truck",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "All trucks are located in the central aisle of the exhibition hall; forklift and personnel are excluded per rules",
+    "uncertain_reasons": []
+  },
+  "sample_id": "south_600",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\south_600_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:35:55+0800"
+}

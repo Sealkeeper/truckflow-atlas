@@ -1,0 +1,118 @@
+{
+  "model": "aibox-deepseek-v4.1-flash",
+  "model_id": "deepseek-v4.1-flash",
+  "attempts": 1,
+  "latency_s": 4.28,
+  "usage": {
+    "prompt_tokens": 1459,
+    "total_tokens": 1837,
+    "completion_tokens": 378,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": {
+        "image": 1011
+      }
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "```json\n{\n  \"counts\": {\n    \"total\": 2,\n    \"large\": 2,\n    \"medium\": 0,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [\n        0.18,\n        0.61,\n        0.51,\n        0.99\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹顶长货厢，底部可见部分编号，朝向画面下方\",\n      \"evidence\": \"画面下方偏左占据大面积的白色长货厢，仅可见顶部及部分侧面，符合大型半挂/重卡货厢特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.4,\n        0.25,\n        0.55,\n        0.45\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色波纹侧板货厢，尾部朝向画面下方，位于通道中央\",\n      \"evidence\": \"画面中央通道内清晰可见的红色大型货厢，仅见货厢部分，未见明显车头，按独立挂车/货厢计入\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展会撤换展现场，通道内人员、叉车及杂物较多。画面下方白色长货厢仅露出顶部，中央红色货厢仅见侧面及尾部，均未见完整车头，但根据外形可确定为大型货车货厢。未发现其他清晰可辨的货车。\",\n  \"uncertain_reasons\": []\n}\n```",
+  "reasoning_text": null,
+  "raw_body": {
+    "id": "chatcmpl-8ed7f302fe718718",
+    "object": "chat.completion",
+    "created": 1792586156,
+    "model": "deepseek-v4.1-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"counts\": {\n    \"total\": 2,\n    \"large\": 2,\n    \"medium\": 0,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [\n        0.18,\n        0.61,\n        0.51,\n        0.99\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹顶长货厢，底部可见部分编号，朝向画面下方\",\n      \"evidence\": \"画面下方偏左占据大面积的白色长货厢，仅可见顶部及部分侧面，符合大型半挂/重卡货厢特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.4,\n        0.25,\n        0.55,\n        0.45\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色波纹侧板货厢，尾部朝向画面下方，位于通道中央\",\n      \"evidence\": \"画面中央通道内清晰可见的红色大型货厢，仅见货厢部分，未见明显车头，按独立挂车/货厢计入\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展会撤换展现场，通道内人员、叉车及杂物较多。画面下方白色长货厢仅露出顶部，中央红色货厢仅见侧面及尾部，均未见完整车头，但根据外形可确定为大型货车货厢。未发现其他清晰可辨的货车。\",\n  \"uncertain_reasons\": []\n}\n```",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "reasoning": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null,
+        "routed_experts": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev20904+g179dd0fa9-tp8-ep-4471a5ba",
+    "usage": {
+      "prompt_tokens": 1459,
+      "total_tokens": 1837,
+      "completion_tokens": 378,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": {
+          "image": 1011
+        }
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 2,
+      "large": 2,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.18,
+          0.61,
+          0.51,
+          0.99
+        ],
+        "size": "large",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "白色波纹顶长货厢，底部可见部分编号，朝向画面下方",
+        "evidence": "画面下方偏左占据大面积的白色长货厢，仅可见顶部及部分侧面，符合大型半挂/重卡货厢特征",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.4,
+          0.25,
+          0.55,
+          0.45
+        ],
+        "size": "large",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "红色波纹侧板货厢，尾部朝向画面下方，位于通道中央",
+        "evidence": "画面中央通道内清晰可见的红色大型货厢，仅见货厢部分，未见明显车头，按独立挂车/货厢计入",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面为展会撤换展现场，通道内人员、叉车及杂物较多。画面下方白色长货厢仅露出顶部，中央红色货厢仅见侧面及尾部，均未见完整车头，但根据外形可确定为大型货车货厢。未发现其他清晰可辨的货车。",
+    "uncertain_reasons": []
+  },
+  "sample_id": "north_2100",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\north_2100_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:35:59+0800"
+}

@@ -1,0 +1,138 @@
+{
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "attempts": 2,
+  "latency_s": 24.28,
+  "usage": {
+    "completion_tokens": 2473,
+    "prompt_tokens": 1776,
+    "total_tokens": 4249,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1826
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "{\n  \"counts\": {\"total\": 5, \"large\": 3, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.47, 0.47, 0.68, 0.88],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色车头印有“东风商用车”字样，白色厢式货厢，朝向画面下方\",\n      \"evidence\": \"画面中下方可见完整的重型厢式货车，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.29, 0.59, 0.50],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，灰色长半挂货厢，朝向画面下方\",\n      \"evidence\": \"画面中间可见完整的半挂货车，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.35, 0.25, 0.45, 0.37],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色中型卡车，朝向画面下方\",\n      \"evidence\": \"画面左侧中间可见完整的中型货车，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.13, 0.53, 0.26],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色中型卡车，位于画面最上方通道，朝向画面下方\",\n      \"evidence\": \"画面顶部可见完整的中型货车，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.52, 0.87, 0.78, 0.999],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色空挂车，单独可见，无对应车头，位于画面最底部\",\n      \"evidence\": \"画面底部可见单独的挂车，符合计数口径中单独挂车算货车的要求\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"所有可见货车均位于通道内，无完全遮挡的车辆，底部为单独可见的挂车，符合计数规则\",\n  \"uncertain_reasons\": []\n}",
+  "reasoning_text": "\n我现在要处理用户的请求，清点图里的货车，首先得仔细看每一辆符合要求的。首先看图片里的货车：\n1. 最前面的白色东风商用车，是完整的，大型重卡，full可见。\n2. 它后面的红色半挂，车头红色，货厢灰色，是large，full？\n3. 再后面的红色中型货车（车头部分，完整的？），medium，full。\n4. 再后面的红色货车（更远处的，车头），medium？\n5. 最底部的红色挂车，单独的，trailer_only，large？\n等下，数清楚：\n第一辆：白色东风，bbox大概[0.47, 470/1000, 0.68, 880/1000]，size large，visible full，is_truck true，identity是白色车头写东风商用车，货厢白色。\n第二辆：红色半挂（中间的红色车头+灰色货厢），bbox[0.45, 290/1000, 0.59, 500/1000]，size large，visible full，is_truck true，identity红色车头，灰色长货厢。\n第三辆：红色中型货车（中间偏左的，在第二辆后面），bbox[0.35, 250/1000, 0.45, 370/1000]，size medium，visible full，is_truck true，identity红色车头，中型尺寸。\n第四辆：最远处的红色货车（第三辆后面的），bbox[0.45, 130/1000, 0.53, 260/1000]，size medium，visible full，is_truck true，identity红色车头，远处的。\n第五辆：底部的红色挂车，单独的，bbox[0.52, 870/1000, 0.78, 999/1000]，size large，visible trailer_only，is_truck true，identity红色空挂车，在画面最下方。\n现在数total是5，large的话：第一、第二、第五，共3；medium是第三、第四，共2；small是0，unknown是0。\n然后scene_notes：画面中所有可见货车均在通道内，无完全遮挡的，底部挂车为单独可见的货厢，符合计数要求。\nuncertain_reasons是空的，因为都确定。\n现在要把这些整理成严格的JSON格式，注意每个字段的正确性，bbox是归一化的，比如x0,y0,x1,y1，要对应每辆车的位置。\n等下再核对每一辆：\n1. 白色东风：位置在下方，从x0≈0.47，y0≈0.47（因为图的高度，顶部是0，底部是1），x1≈0.68，y1≈0.88，对，size large，visible full，is_truck true，identity是白色车头，印有“东风商用车”字样，货厢白色厢式。\n2. 红色半挂（中间的，在白色车后面）：x0≈0.45，y0≈0.29，x1≈0.59，y1≈0.50，size large，visible full，identity红色车头，灰色长货厢，半挂结构。\n3. 红色中型货车（在红色半挂后面）：x0≈0.35，y0≈0.25，x1≈0.45，y1≈0.37，size medium，visible full，identity红色车头，中型卡车，货厢部分可见。\n4. 最远处的红色货车（在第三辆后面）：x0≈0.45，y0≈0.13，x1≈0.53，y1≈0.26，size medium，visible full，identity红色车头，远处的卡车。\n5. 底部红色挂车：x0≈0.52，y0≈0.87，x1≈0.78，y1≈0.999，size large，visible trailer_only，identity红色空挂车，单独可见，无对应车头。\n对，这五辆，没错。现在把这些写成JSON，注意所有字段都正确，没有额外内容，严格JSON格式，不要有换行问题？不，JSON可以有换行，只要结构对。\n现在检查计数：total=5，large=3（1,2,5），medium=2（3,4），small=0，unknown=0。\n然后每个vehicle的字段：\n比如第一个vehicle：\n{\n  \"bbox\": [0.47, 0.47, 0.68, 0.88],\n  \"size\": \"large\",\n  \"visible\": \"full\",\n  \"is_truck\": true,\n  \"identity_clues\": \"白色车头印有“东风商用车”字样，白色厢式货厢，朝向画面下方\",\n  \"evidence\": \"画面中下方可见完整的重型卡车，符合货车定义\",\n  \"uncertain\": false\n}\n第二个：\n{\n  \"bbox\": [0.45, 0.29, 0.59, 0.50],\n  \"size\": \"large\",\n  \"visible\": \"full\",\n  \"is_truck\": true,\n  \"identity_clues\": \"红色车头，灰色长半挂货厢，朝向画面下方\",\n  \"evidence\": \"画面中间可见完整的半挂货车，符合货车定义\",\n  \"uncertain\": false\n}\n第三个：\n{\n  \"bbox\": [0.35, 0.25, 0.45, 0.37],\n  \"size\": \"medium\",\n  \"visible\": \"full\",\n  \"is_truck\": true,\n  \"identity_clues\": \"红色中型卡车，朝向画面下方\",\n  \"evidence\": \"画面左侧中间可见完整的中型货车，符合货车定义\",\n  \"uncertain\": false\n}\n第四个：\n{\n  \"bbox\": [0.45, 0.13, 0.53, 0.26],\n  \"size\": \"medium\",\n  \"visible\": \"full\",\n  \"is_truck\": true,\n  \"identity_clues\": \"红色中型卡车，位于画面最上方通道，朝向画面下方\",\n  \"evidence\": \"画面顶部可见完整的中型货车，符合货车定义\",\n  \"uncertain\": false\n}\n第五个：\n{\n  \"bbox\": [0.52, 0.87, 0.78, 0.999],\n  \"size\": \"large\",\n  \"visible\": \"trailer_only\",\n  \"is_truck\": true,\n  \"identity_clues\": \"红色空挂车，单独可见，无对应车头，位于画面最底部\",\n  \"evidence\": \"画面底部可见单独的挂车，符合计数口径中单独挂车算货车的要求\",\n  \"uncertain\": false\n}\n然后scene_notes：\"画面中所有可见货车均位于通道内，无完全遮挡的车辆，底部为单独可见的挂车，符合计数规则\"\nuncertain_reasons：[]\n现在把这些整合成正确的JSON，注意所有引号都是双引号，数组正确，没有多余的逗号。\n等下，有没有漏？或者多算？比如那辆底部的挂车，是单独的，所以算，没错。那四辆带车头的，加一辆单独挂车，共5，对。\n再检查计数口径：1. 货车包括这些，是的；2. 单独挂车算，是的；3. 排除了人物、叉车等，是的；4. 都是可见的，没有画面外的；5. 都确定，所以uncertain是false；6. size分类正确，large是重卡半挂，medium是中卡，没错。\n好的，现在输出正确的JSON。",
+  "raw_body": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "{\n  \"counts\": {\"total\": 5, \"large\": 3, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.47, 0.47, 0.68, 0.88],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色车头印有“东风商用车”字样，白色厢式货厢，朝向画面下方\",\n      \"evidence\": \"画面中下方可见完整的重型厢式货车，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.29, 0.59, 0.50],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，灰色长半挂货厢，朝向画面下方\",\n      \"evidence\": \"画面中间可见完整的半挂货车，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.35, 0.25, 0.45, 0.37],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色中型卡车，朝向画面下方\",\n      \"evidence\": \"画面左侧中间可见完整的中型货车，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.13, 0.53, 0.26],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色中型卡车，位于画面最上方通道，朝向画面下方\",\n      \"evidence\": \"画面顶部可见完整的中型货车，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.52, 0.87, 0.78, 0.999],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色空挂车，单独可见，无对应车头，位于画面最底部\",\n      \"evidence\": \"画面底部可见单独的挂车，符合计数口径中单独挂车算货车的要求\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"所有可见货车均位于通道内，无完全遮挡的车辆，底部为单独可见的挂车，符合计数规则\",\n  \"uncertain_reasons\": []\n}",
+          "reasoning_content": "\n我现在要处理用户的请求，清点图里的货车，首先得仔细看每一辆符合要求的。首先看图片里的货车：\n1. 最前面的白色东风商用车，是完整的，大型重卡，full可见。\n2. 它后面的红色半挂，车头红色，货厢灰色，是large，full？\n3. 再后面的红色中型货车（车头部分，完整的？），medium，full。\n4. 再后面的红色货车（更远处的，车头），medium？\n5. 最底部的红色挂车，单独的，trailer_only，large？\n等下，数清楚：\n第一辆：白色东风，bbox大概[0.47, 470/1000, 0.68, 880/1000]，size large，visible full，is_truck true，identity是白色车头写东风商用车，货厢白色。\n第二辆：红色半挂（中间的红色车头+灰色货厢），bbox[0.45, 290/1000, 0.59, 500/1000]，size large，visible full，is_truck true，identity红色车头，灰色长货厢。\n第三辆：红色中型货车（中间偏左的，在第二辆后面），bbox[0.35, 250/1000, 0.45, 370/1000]，size medium，visible full，is_truck true，identity红色车头，中型尺寸。\n第四辆：最远处的红色货车（第三辆后面的），bbox[0.45, 130/1000, 0.53, 260/1000]，size medium，visible full，is_truck true，identity红色车头，远处的。\n第五辆：底部的红色挂车，单独的，bbox[0.52, 870/1000, 0.78, 999/1000]，size large，visible trailer_only，is_truck true，identity红色空挂车，在画面最下方。\n现在数total是5，large的话：第一、第二、第五，共3；medium是第三、第四，共2；small是0，unknown是0。\n然后scene_notes：画面中所有可见货车均在通道内，无完全遮挡的，底部挂车为单独可见的货厢，符合计数要求。\nuncertain_reasons是空的，因为都确定。\n现在要把这些整理成严格的JSON格式，注意每个字段的正确性，bbox是归一化的，比如x0,y0,x1,y1，要对应每辆车的位置。\n等下再核对每一辆：\n1. 白色东风：位置在下方，从x0≈0.47，y0≈0.47（因为图的高度，顶部是0，底部是1），x1≈0.68，y1≈0.88，对，size large，visible full，is_truck true，identity是白色车头，印有“东风商用车”字样，货厢白色厢式。\n2. 红色半挂（中间的，在白色车后面）：x0≈0.45，y0≈0.29，x1≈0.59，y1≈0.50，size large，visible full，identity红色车头，灰色长货厢，半挂结构。\n3. 红色中型货车（在红色半挂后面）：x0≈0.35，y0≈0.25，x1≈0.45，y1≈0.37，size medium，visible full，identity红色车头，中型卡车，货厢部分可见。\n4. 最远处的红色货车（在第三辆后面）：x0≈0.45，y0≈0.13，x1≈0.53，y1≈0.26，size medium，visible full，identity红色车头，远处的卡车。\n5. 底部红色挂车：x0≈0.52，y0≈0.87，x1≈0.78，y1≈0.999，size large，visible trailer_only，identity红色空挂车，单独可见，无对应车头。\n对，这五辆，没错。现在把这些写成JSON，注意所有字段都正确，没有额外内容，严格JSON格式，不要有换行问题？不，JSON可以有换行，只要结构对。\n现在检查计数：total=5，large=3（1,2,5），medium=2（3,4），small=0，unknown=0。\n然后每个vehicle的字段：\n比如第一个vehicle：\n{\n  \"bbox\": [0.47, 0.47, 0.68, 0.88],\n  \"size\": \"large\",\n  \"visible\": \"full\",\n  \"is_truck\": true,\n  \"identity_clues\": \"白色车头印有“东风商用车”字样，白色厢式货厢，朝向画面下方\",\n  \"evidence\": \"画面中下方可见完整的重型卡车，符合货车定义\",\n  \"uncertain\": false\n}\n第二个：\n{\n  \"bbox\": [0.45, 0.29, 0.59, 0.50],\n  \"size\": \"large\",\n  \"visible\": \"full\",\n  \"is_truck\": true,\n  \"identity_clues\": \"红色车头，灰色长半挂货厢，朝向画面下方\",\n  \"evidence\": \"画面中间可见完整的半挂货车，符合货车定义\",\n  \"uncertain\": false\n}\n第三个：\n{\n  \"bbox\": [0.35, 0.25, 0.45, 0.37],\n  \"size\": \"medium\",\n  \"visible\": \"full\",\n  \"is_truck\": true,\n  \"identity_clues\": \"红色中型卡车，朝向画面下方\",\n  \"evidence\": \"画面左侧中间可见完整的中型货车，符合货车定义\",\n  \"uncertain\": false\n}\n第四个：\n{\n  \"bbox\": [0.45, 0.13, 0.53, 0.26],\n  \"size\": \"medium\",\n  \"visible\": \"full\",\n  \"is_truck\": true,\n  \"identity_clues\": \"红色中型卡车，位于画面最上方通道，朝向画面下方\",\n  \"evidence\": \"画面顶部可见完整的中型货车，符合货车定义\",\n  \"uncertain\": false\n}\n第五个：\n{\n  \"bbox\": [0.52, 0.87, 0.78, 0.999],\n  \"size\": \"large\",\n  \"visible\": \"trailer_only\",\n  \"is_truck\": true,\n  \"identity_clues\": \"红色空挂车，单独可见，无对应车头，位于画面最底部\",\n  \"evidence\": \"画面底部可见单独的挂车，符合计数口径中单独挂车算货车的要求\",\n  \"uncertain\": false\n}\n然后scene_notes：\"画面中所有可见货车均位于通道内，无完全遮挡的车辆，底部为单独可见的挂车，符合计数规则\"\nuncertain_reasons：[]\n现在把这些整合成正确的JSON，注意所有引号都是双引号，数组正确，没有多余的逗号。\n等下，有没有漏？或者多算？比如那辆底部的挂车，是单独的，所以算，没错。那四辆带车头的，加一辆单独挂车，共5，对。\n再检查计数口径：1. 货车包括这些，是的；2. 单独挂车算，是的；3. 排除了人物、叉车等，是的；4. 都是可见的，没有画面外的；5. 都确定，所以uncertain是false；6. size分类正确，large是重卡半挂，medium是中卡，没错。\n好的，现在输出正确的JSON。",
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1792586141,
+    "id": "021792586123302b8b2db5ad8d9605f3baecb70a2647fd87c20de",
+    "model": "doubao-seed-2-0-mini-260428",
+    "service_tier": "default",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 2473,
+      "prompt_tokens": 1776,
+      "total_tokens": 4249,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1826
+      }
+    }
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 5,
+      "large": 3,
+      "medium": 2,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.47,
+          0.47,
+          0.68,
+          0.88
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "白色车头印有“东风商用车”字样，白色厢式货厢，朝向画面下方",
+        "evidence": "画面中下方可见完整的重型厢式货车，符合货车定义",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.45,
+          0.29,
+          0.59,
+          0.5
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色车头，灰色长半挂货厢，朝向画面下方",
+        "evidence": "画面中间可见完整的半挂货车，符合货车定义",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.35,
+          0.25,
+          0.45,
+          0.37
+        ],
+        "size": "medium",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色中型卡车，朝向画面下方",
+        "evidence": "画面左侧中间可见完整的中型货车，符合货车定义",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.45,
+          0.13,
+          0.53,
+          0.26
+        ],
+        "size": "medium",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色中型卡车，位于画面最上方通道，朝向画面下方",
+        "evidence": "画面顶部可见完整的中型货车，符合货车定义",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.52,
+          0.87,
+          0.78,
+          0.999
+        ],
+        "size": "large",
+        "visible": "trailer_only",
+        "is_truck": true,
+        "identity_clues": "红色空挂车，单独可见，无对应车头，位于画面最底部",
+        "evidence": "画面底部可见单独的挂车，符合计数口径中单独挂车算货车的要求",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "所有可见货车均位于通道内，无完全遮挡的车辆，底部为单独可见的挂车，符合计数规则",
+    "uncertain_reasons": []
+  },
+  "sample_id": "south_1200",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\south_1200_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:35:41+0800"
+}

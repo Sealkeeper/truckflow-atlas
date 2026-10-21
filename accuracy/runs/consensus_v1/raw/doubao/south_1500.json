@@ -1,0 +1,138 @@
+{
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "attempts": 1,
+  "latency_s": 17.72,
+  "usage": {
+    "completion_tokens": 1938,
+    "prompt_tokens": 1776,
+    "total_tokens": 3714,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1255
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "{\n  \"counts\": {\"total\": 5, \"large\": 4, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.46, 0.45, 0.71, 0.89],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色东风商用车，车头朝向画面下方，车头有“东风商用车”字样，完整厢式货车\",\n      \"evidence\": \"画面中间偏下位置，完整可见的厢式货车，车身白色，车头标识清晰\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.28, 0.59, 0.52],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色半挂车头，灰色长货厢，朝向画面下方，半挂结构明显\",\n      \"evidence\": \"位于白色东风商用车后方，完整可见的半挂货车，车头红色，货厢灰色\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.35, 0.21, 0.45, 0.36],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色中型货车，货厢顶部有蓝色覆盖物，朝向画面下方\",\n      \"evidence\": \"位于半挂货车后方，完整可见的中型货车，车身红色，货厢有蓝色覆盖\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.43, 0.11, 0.55, 0.24],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色大型货车，朝向画面下方，位于画面最上方通道\",\n      \"evidence\": \"画面最上方通道内，完整可见的红色大型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.51, 0.84, 0.79, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色单独挂车，无连接车头，位于画面最底部\",\n      \"evidence\": \"画面最底部，未连接车头的单独挂车，属于货车挂车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面内共可见5辆货车，其中1辆为单独挂车，其余为完整货车，无完全遮挡或无法确定的车辆\",\n  \"uncertain_reasons\": []\n}",
+  "reasoning_text": "\n我现在要处理用户的请求，就是清点图片里的货车，按照要求输出JSON。首先，先数清楚可见的货车：\n\n首先看图片里的车：\n1. 最前面的白色东风商用车，是完整的，大型（large），full可见，车头货厢都有，identity是白色东风商用车，车头朝下方。\n2. 它后面的红色车头+灰色货厢的半挂，大型，full可见，红色车头，灰色货厢，朝下方。\n3. 再后面的红色中型货车（中卡），完整的，medium，full可见，红色车头，货厢在上面，朝下方。\n4. 再后面的最远处的红色货车，大型？不对，看最远处的那个红色车头，是大型的，full可见，朝下方。\n5. 还有最底部的那个红色货厢，单独的挂车，trailer_only，是单独的，不是和前面车头一起的，所以算一辆，size是large？因为是挂车，大型，visible是trailer_only。\n\n等下，仔细数：\n1. 白色东风：[0.47, 0.46, 0.7, 0.88]，large，full，is_truck，identity：白色东风商用车，车头向下，完整。\n2. 红车头灰货厢半挂：[0.45, 0.29, 0.59, 0.51]，large，full，identity：红色车头，灰色长货厢，半挂，向下。\n3. 红色中卡：[0.36, 225, 0.45, 360？不对，归一化坐标，看位置，中间偏左的红色货车，[0.35, 0.22, 0.45, 0.37]，medium，full，红色，中卡，向下。\n4. 最远处的红色货车：[0.44, 125, 0.54, 250？归一化的话，[0.43, 0.12, 0.55, 0.25]，large，full，红色，大型，向下。\n5. 最底部的红色挂车：[0.52, 0.85, 0.78, 0.99]，trailer_only，large，因为是挂车，单独的，所以算一辆。\n\n现在数总数是5？等下再确认：\n1. 白色东风（1）\n2. 红车头灰货厢半挂（2）\n3. 中间红色中卡（3）\n4. 最远处红色货车（4）\n5. 底部红色单独挂车（5）\n\n对，这五辆。然后size：\n1. large\n2. large\n3. medium\n4. large\n5. large\n所以large是4，medium是1，small是0，total是5，unknown是0。\n\n然后每个的bbox要归一化，比如：\n第一辆白色东风：x0大概0.46，y00.45，x10.71，y10.89 → [0.46, 0.45, 0.71, 0.89]，size large，visible full，is_truck true，identity：白色东风商用车，车头朝向画面下方，完整可见。evidence：画面中间偏下位置，完整的厢式货车，车头有“东风商用车”字样。uncertain false。\n\n第二辆红车头灰货厢：x00.44，y00.28，x10.59，y10.52 → [0.44,0.28,0.59,0.52]，size large，visible full，identity：红色半挂车头，灰色长货厢，朝向画面下方。evidence：在白色东风后方，完整的半挂货车。uncertain false。\n\n第三辆中间红色中卡：x00.35，y00.21，x10.45，y10.36 → [0.35,0.21,0.45,0.36]，size medium，visible full，identity：红色中型货车，货厢顶部有蓝色覆盖物，朝向画面下方。evidence：在半挂货车后方，完整的中型货车。uncertain false。\n\n第四辆最远处红色货车：x00.43，y00.11，x10.55，y10.24 → [0.43,0.11,0.55,0.24]，size large，visible full，identity：红色大型货车，朝向画面下方，在最远处通道。evidence：画面最上方通道的红色货车，完整可见。uncertain false。\n\n第五辆底部红色挂车：x00.51，y00.84，x10.79，y10.99 → [0.51,0.84,0.79,0.99]，size large，visible trailer_only，identity：红色单独挂车，无连接车头，在画面最底部。evidence：画面最底部的单独挂车，未连接车头，属于货车挂车。uncertain false。\n\n然后scene_notes：画面中可见5辆货车，其中1辆为单独挂车，其余为完整货车，无被完全遮挡的货车，所有可见车辆均符合计数要求。uncertain_reasons为空。\n\n现在整理成严格的JSON格式，注意所有字段正确，没有额外内容。",
+  "raw_body": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "{\n  \"counts\": {\"total\": 5, \"large\": 4, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.46, 0.45, 0.71, 0.89],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色东风商用车，车头朝向画面下方，车头有“东风商用车”字样，完整厢式货车\",\n      \"evidence\": \"画面中间偏下位置，完整可见的厢式货车，车身白色，车头标识清晰\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.28, 0.59, 0.52],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色半挂车头，灰色长货厢，朝向画面下方，半挂结构明显\",\n      \"evidence\": \"位于白色东风商用车后方，完整可见的半挂货车，车头红色，货厢灰色\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.35, 0.21, 0.45, 0.36],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色中型货车，货厢顶部有蓝色覆盖物，朝向画面下方\",\n      \"evidence\": \"位于半挂货车后方，完整可见的中型货车，车身红色，货厢有蓝色覆盖\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.43, 0.11, 0.55, 0.24],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色大型货车，朝向画面下方，位于画面最上方通道\",\n      \"evidence\": \"画面最上方通道内，完整可见的红色大型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.51, 0.84, 0.79, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色单独挂车，无连接车头，位于画面最底部\",\n      \"evidence\": \"画面最底部，未连接车头的单独挂车，属于货车挂车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面内共可见5辆货车，其中1辆为单独挂车，其余为完整货车，无完全遮挡或无法确定的车辆\",\n  \"uncertain_reasons\": []\n}",
+          "reasoning_content": "\n我现在要处理用户的请求，就是清点图片里的货车，按照要求输出JSON。首先，先数清楚可见的货车：\n\n首先看图片里的车：\n1. 最前面的白色东风商用车，是完整的，大型（large），full可见，车头货厢都有，identity是白色东风商用车，车头朝下方。\n2. 它后面的红色车头+灰色货厢的半挂，大型，full可见，红色车头，灰色货厢，朝下方。\n3. 再后面的红色中型货车（中卡），完整的，medium，full可见，红色车头，货厢在上面，朝下方。\n4. 再后面的最远处的红色货车，大型？不对，看最远处的那个红色车头，是大型的，full可见，朝下方。\n5. 还有最底部的那个红色货厢，单独的挂车，trailer_only，是单独的，不是和前面车头一起的，所以算一辆，size是large？因为是挂车，大型，visible是trailer_only。\n\n等下，仔细数：\n1. 白色东风：[0.47, 0.46, 0.7, 0.88]，large，full，is_truck，identity：白色东风商用车，车头向下，完整。\n2. 红车头灰货厢半挂：[0.45, 0.29, 0.59, 0.51]，large，full，identity：红色车头，灰色长货厢，半挂，向下。\n3. 红色中卡：[0.36, 225, 0.45, 360？不对，归一化坐标，看位置，中间偏左的红色货车，[0.35, 0.22, 0.45, 0.37]，medium，full，红色，中卡，向下。\n4. 最远处的红色货车：[0.44, 125, 0.54, 250？归一化的话，[0.43, 0.12, 0.55, 0.25]，large，full，红色，大型，向下。\n5. 最底部的红色挂车：[0.52, 0.85, 0.78, 0.99]，trailer_only，large，因为是挂车，单独的，所以算一辆。\n\n现在数总数是5？等下再确认：\n1. 白色东风（1）\n2. 红车头灰货厢半挂（2）\n3. 中间红色中卡（3）\n4. 最远处红色货车（4）\n5. 底部红色单独挂车（5）\n\n对，这五辆。然后size：\n1. large\n2. large\n3. medium\n4. large\n5. large\n所以large是4，medium是1，small是0，total是5，unknown是0。\n\n然后每个的bbox要归一化，比如：\n第一辆白色东风：x0大概0.46，y00.45，x10.71，y10.89 → [0.46, 0.45, 0.71, 0.89]，size large，visible full，is_truck true，identity：白色东风商用车，车头朝向画面下方，完整可见。evidence：画面中间偏下位置，完整的厢式货车，车头有“东风商用车”字样。uncertain false。\n\n第二辆红车头灰货厢：x00.44，y00.28，x10.59，y10.52 → [0.44,0.28,0.59,0.52]，size large，visible full，identity：红色半挂车头，灰色长货厢，朝向画面下方。evidence：在白色东风后方，完整的半挂货车。uncertain false。\n\n第三辆中间红色中卡：x00.35，y00.21，x10.45，y10.36 → [0.35,0.21,0.45,0.36]，size medium，visible full，identity：红色中型货车，货厢顶部有蓝色覆盖物，朝向画面下方。evidence：在半挂货车后方，完整的中型货车。uncertain false。\n\n第四辆最远处红色货车：x00.43，y00.11，x10.55，y10.24 → [0.43,0.11,0.55,0.24]，size large，visible full，identity：红色大型货车，朝向画面下方，在最远处通道。evidence：画面最上方通道的红色货车，完整可见。uncertain false。\n\n第五辆底部红色挂车：x00.51，y00.84，x10.79，y10.99 → [0.51,0.84,0.79,0.99]，size large，visible trailer_only，identity：红色单独挂车，无连接车头，在画面最底部。evidence：画面最底部的单独挂车，未连接车头，属于货车挂车。uncertain false。\n\n然后scene_notes：画面中可见5辆货车，其中1辆为单独挂车，其余为完整货车，无被完全遮挡的货车，所有可见车辆均符合计数要求。uncertain_reasons为空。\n\n现在整理成严格的JSON格式，注意所有字段正确，没有额外内容。",
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1792586135,
+    "id": "0217925861175775c53bb980d0b91addac92a88f9eb9598b63ab7",
+    "model": "doubao-seed-2-0-mini-260428",
+    "service_tier": "default",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 1938,
+      "prompt_tokens": 1776,
+      "total_tokens": 3714,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1255
+      }
+    }
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 5,
+      "large": 4,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.46,
+          0.45,
+          0.71,
+          0.89
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "白色东风商用车，车头朝向画面下方，车头有“东风商用车”字样，完整厢式货车",
+        "evidence": "画面中间偏下位置，完整可见的厢式货车，车身白色，车头标识清晰",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.44,
+          0.28,
+          0.59,
+          0.52
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色半挂车头，灰色长货厢，朝向画面下方，半挂结构明显",
+        "evidence": "位于白色东风商用车后方，完整可见的半挂货车，车头红色，货厢灰色",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.35,
+          0.21,
+          0.45,
+          0.36
+        ],
+        "size": "medium",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色中型货车，货厢顶部有蓝色覆盖物，朝向画面下方",
+        "evidence": "位于半挂货车后方，完整可见的中型货车，车身红色，货厢有蓝色覆盖",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.43,
+          0.11,
+          0.55,
+          0.24
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色大型货车，朝向画面下方，位于画面最上方通道",
+        "evidence": "画面最上方通道内，完整可见的红色大型货车",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.51,
+          0.84,
+          0.79,
+          0.99
+        ],
+        "size": "large",
+        "visible": "trailer_only",
+        "is_truck": true,
+        "identity_clues": "红色单独挂车，无连接车头，位于画面最底部",
+        "evidence": "画面最底部，未连接车头的单独挂车，属于货车挂车",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面内共可见5辆货车，其中1辆为单独挂车，其余为完整货车，无完全遮挡或无法确定的车辆",
+    "uncertain_reasons": []
+  },
+  "sample_id": "south_1500",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\south_1500_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:35:35+0800"
+}

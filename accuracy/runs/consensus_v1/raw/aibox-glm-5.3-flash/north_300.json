@@ -1,0 +1,146 @@
+{
+  "model": "aibox-glm-5.3-flash",
+  "model_id": "glm-5.3-flash",
+  "attempts": 1,
+  "latency_s": 7.32,
+  "usage": {
+    "prompt_tokens": 1459,
+    "total_tokens": 2022,
+    "completion_tokens": 563,
+    "prompt_tokens_details": {
+      "cached_tokens": 1408,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": {
+        "image": 1011
+      }
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "{\n  \"counts\": {\n    \"total\": 4,\n    \"large\": 4,\n    \"medium\": 0,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [\n        0.19,\n        0.58,\n        0.53,\n        0.99\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹顶长货厢，深色底架，朝向画面下方\",\n      \"evidence\": \"画面下方中央偏左，占据通道左侧的大型白色长货厢，仅见顶部及部分侧面\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.4,\n        0.25,\n        0.53,\n        0.48\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色波纹顶货厢，深色底架，朝向画面下方\",\n      \"evidence\": \"画面中上部偏左，位于白色货厢后方，可见蓝色长货厢及部分车体\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.43,\n        0.16,\n        0.53,\n        0.25\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"深色货厢，侧面有白色标识，朝向画面下方\",\n      \"evidence\": \"画面中上部，位于蓝色货厢后方，可见深色长货厢局部\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.8,\n        0.44,\n        0.99,\n        0.53\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色车头/驾驶室，深色底盘，侧面有红色标识，朝向画面左侧\",\n      \"evidence\": \"画面右侧中部，被右侧结构部分遮挡，可见白色车头及部分车身\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展会撤换展通道，两侧有大型展台结构。可见多辆大型货车停靠或行驶在通道内。部分车辆被展台结构或相邻车辆遮挡，仅露出局部。通道内散落杂物，有人员走动。\",\n  \"uncertain_reasons\": []\n}",
+  "reasoning_text": null,
+  "raw_body": {
+    "id": "chatcmpl-96c6d453450c5944",
+    "object": "chat.completion",
+    "created": 1792586091,
+    "model": "deepseek-v4.1-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"counts\": {\n    \"total\": 4,\n    \"large\": 4,\n    \"medium\": 0,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [\n        0.19,\n        0.58,\n        0.53,\n        0.99\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹顶长货厢，深色底架，朝向画面下方\",\n      \"evidence\": \"画面下方中央偏左，占据通道左侧的大型白色长货厢，仅见顶部及部分侧面\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.4,\n        0.25,\n        0.53,\n        0.48\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色波纹顶货厢，深色底架，朝向画面下方\",\n      \"evidence\": \"画面中上部偏左，位于白色货厢后方，可见蓝色长货厢及部分车体\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.43,\n        0.16,\n        0.53,\n        0.25\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"深色货厢，侧面有白色标识，朝向画面下方\",\n      \"evidence\": \"画面中上部，位于蓝色货厢后方，可见深色长货厢局部\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.8,\n        0.44,\n        0.99,\n        0.53\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色车头/驾驶室，深色底盘，侧面有红色标识，朝向画面左侧\",\n      \"evidence\": \"画面右侧中部，被右侧结构部分遮挡，可见白色车头及部分车身\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展会撤换展通道，两侧有大型展台结构。可见多辆大型货车停靠或行驶在通道内。部分车辆被展台结构或相邻车辆遮挡，仅露出局部。通道内散落杂物，有人员走动。\",\n  \"uncertain_reasons\": []\n}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "reasoning": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null,
+        "routed_experts": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev20904+g179dd0fa9-tp8-ep-4471a5ba",
+    "usage": {
+      "prompt_tokens": 1459,
+      "total_tokens": 2022,
+      "completion_tokens": 563,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": {
+          "image": 1011
+        }
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 4,
+      "large": 4,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.19,
+          0.58,
+          0.53,
+          0.99
+        ],
+        "size": "large",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "白色波纹顶长货厢，深色底架，朝向画面下方",
+        "evidence": "画面下方中央偏左，占据通道左侧的大型白色长货厢，仅见顶部及部分侧面",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.4,
+          0.25,
+          0.53,
+          0.48
+        ],
+        "size": "large",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "蓝色波纹顶货厢，深色底架，朝向画面下方",
+        "evidence": "画面中上部偏左，位于白色货厢后方，可见蓝色长货厢及部分车体",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.43,
+          0.16,
+          0.53,
+          0.25
+        ],
+        "size": "large",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "深色货厢，侧面有白色标识，朝向画面下方",
+        "evidence": "画面中上部，位于蓝色货厢后方，可见深色长货厢局部",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.8,
+          0.44,
+          0.99,
+          0.53
+        ],
+        "size": "large",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "白色车头/驾驶室，深色底盘，侧面有红色标识，朝向画面左侧",
+        "evidence": "画面右侧中部，被右侧结构部分遮挡，可见白色车头及部分车身",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面为展会撤换展通道，两侧有大型展台结构。可见多辆大型货车停靠或行驶在通道内。部分车辆被展台结构或相邻车辆遮挡，仅露出局部。通道内散落杂物，有人员走动。",
+    "uncertain_reasons": []
+  },
+  "sample_id": "north_300",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\north_300_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:34:56+0800"
+}

@@ -1,0 +1,124 @@
+{
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "attempts": 1,
+  "latency_s": 12.3,
+  "usage": {
+    "completion_tokens": 1386,
+    "prompt_tokens": 1776,
+    "total_tokens": 3162,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 835
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 4, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.31, 0.20, 0.44, 0.41],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色厢式货车，车头朝向镜头，货厢为白色，位于画面中上部左侧通道\",\n      \"evidence\": \"画面中上部左侧，完整可见的厢式货运车辆，符合重型厢式货车特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.21, 0.55, 0.33],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货运车头，朝向镜头，位于白色厢式货车后方\",\n      \"evidence\": \"画面中上部中间，完整可见的重型货运车头\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.47, 0.36, 0.64, 0.68],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色半挂牵引车，带长货厢，朝向镜头，位于画面中间偏下位置\",\n      \"evidence\": \"画面中间偏下，完整可见的重型半挂货运车辆\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.51, 0.80, 0.81, 1.0],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"单独的红色长货厢，位于画面最下方，无对应车头在画面内\",\n      \"evidence\": \"画面最下方，单独可见的重型货厢，符合挂车特征\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"所有可见货车均清晰判定，无被完全遮挡或无法确定的车辆，无重复计数\",\n  \"uncertain_reasons\": []\n}",
+  "reasoning_text": "\n我现在要处理用户的请求，就是清点这张图里的可见货车，按照要求输出严格的JSON。首先，先数清楚图里的货车：\n\n首先看画面里的：\n1. 白色厢式货车，在上方偏左，车头和货厢都完整，是large？不对，看尺寸，白色的那个是厢式货车，然后中间偏下的红色半挂牵引车（带货厢），然后上方中间的红色货车（车头），还有最下方的红色货厢（单独的挂车？）。等下，仔细数：\n第一辆：白色厢式货车，位置大概x0.32,y0.21到x0.43,0.41，完整可见，是large，visible是full，identity是白色厢式，车头朝向下（朝向镜头方向？不对，车头是对着我们的，白色的那个，货厢在后面。\n第二辆：红色货车（车头），在白色的后面，位置x0.45,y0.21到x0.54,0.33，完整，large，full，红色车头，朝向我们。\n第三辆：红色半挂货车（带货厢），中间偏下，x0.48,y0.37到x0.63,0.68，完整，large，full，红色，车头朝我们，货厢是长的。\n第四辆：单独的红色货厢，在最下方，x0.52,y0.80到x0.80,1.0，这个是单独的挂车，不是和旁边车头一起的，所以算一辆，visible是trailer_only，size是large，因为是长货厢。\n\n等下，有没有错？再看：\n1. 白色厢式货车：是，完整，large，count加1。\n2. 红色车头货车（在白色后面）：完整，large，count加1。\n3. 红色半挂（中间）：完整，large，count加1。\n4. 最下方的红色货厢：单独的，所以算一辆，large，count加1。\n总共4辆？\n\n然后检查每个的属性：\n第一辆：bbox [0.31, 0.20, 0.44, 0.41]，size large，visible full，is_truck true，identity 白色厢式货车，车头朝向镜头，货厢白色，evidence 画面中上部，左侧通道，完整可见的厢式货车，uncertain false。\n第二辆：bbox [0.44,0.21,0.55,0.33]，size large，visible full，is_truck true，identity 红色货运车头，朝向镜头，在白色货车后方，evidence 画面中上部中间，完整可见，uncertain false。\n第三辆：bbox [0.47,0.36,0.64,0.68]，size large，visible full，is_truck true，identity 红色半挂牵引车带长货厢，朝向镜头，evidence 画面中间偏下，完整可见，uncertain false。\n第四辆：bbox [0.51,0.80,0.81,1.0]，size large，visible trailer_only，is_truck true，identity 红色单独货厢，无对应车头在画面内，evidence 画面最下方，单独的长货厢，uncertain false。\n\n然后counts：total=4，large=4，medium=0，small=0，unknown=0。\nscene_notes：画面中无被完全遮挡的货车，所有可见货车均清晰判定，无歧义。\nuncertain_reasons：空数组。\n\n现在整理成严格的JSON，不能有多余，要符合格式。",
+  "raw_body": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "{\n  \"counts\": {\"total\": 4, \"large\": 4, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.31, 0.20, 0.44, 0.41],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色厢式货车，车头朝向镜头，货厢为白色，位于画面中上部左侧通道\",\n      \"evidence\": \"画面中上部左侧，完整可见的厢式货运车辆，符合重型厢式货车特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.21, 0.55, 0.33],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货运车头，朝向镜头，位于白色厢式货车后方\",\n      \"evidence\": \"画面中上部中间，完整可见的重型货运车头\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.47, 0.36, 0.64, 0.68],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色半挂牵引车，带长货厢，朝向镜头，位于画面中间偏下位置\",\n      \"evidence\": \"画面中间偏下，完整可见的重型半挂货运车辆\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.51, 0.80, 0.81, 1.0],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"单独的红色长货厢，位于画面最下方，无对应车头在画面内\",\n      \"evidence\": \"画面最下方，单独可见的重型货厢，符合挂车特征\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"所有可见货车均清晰判定，无被完全遮挡或无法确定的车辆，无重复计数\",\n  \"uncertain_reasons\": []\n}",
+          "reasoning_content": "\n我现在要处理用户的请求，就是清点这张图里的可见货车，按照要求输出严格的JSON。首先，先数清楚图里的货车：\n\n首先看画面里的：\n1. 白色厢式货车，在上方偏左，车头和货厢都完整，是large？不对，看尺寸，白色的那个是厢式货车，然后中间偏下的红色半挂牵引车（带货厢），然后上方中间的红色货车（车头），还有最下方的红色货厢（单独的挂车？）。等下，仔细数：\n第一辆：白色厢式货车，位置大概x0.32,y0.21到x0.43,0.41，完整可见，是large，visible是full，identity是白色厢式，车头朝向下（朝向镜头方向？不对，车头是对着我们的，白色的那个，货厢在后面。\n第二辆：红色货车（车头），在白色的后面，位置x0.45,y0.21到x0.54,0.33，完整，large，full，红色车头，朝向我们。\n第三辆：红色半挂货车（带货厢），中间偏下，x0.48,y0.37到x0.63,0.68，完整，large，full，红色，车头朝我们，货厢是长的。\n第四辆：单独的红色货厢，在最下方，x0.52,y0.80到x0.80,1.0，这个是单独的挂车，不是和旁边车头一起的，所以算一辆，visible是trailer_only，size是large，因为是长货厢。\n\n等下，有没有错？再看：\n1. 白色厢式货车：是，完整，large，count加1。\n2. 红色车头货车（在白色后面）：完整，large，count加1。\n3. 红色半挂（中间）：完整，large，count加1。\n4. 最下方的红色货厢：单独的，所以算一辆，large，count加1。\n总共4辆？\n\n然后检查每个的属性：\n第一辆：bbox [0.31, 0.20, 0.44, 0.41]，size large，visible full，is_truck true，identity 白色厢式货车，车头朝向镜头，货厢白色，evidence 画面中上部，左侧通道，完整可见的厢式货车，uncertain false。\n第二辆：bbox [0.44,0.21,0.55,0.33]，size large，visible full，is_truck true，identity 红色货运车头，朝向镜头，在白色货车后方，evidence 画面中上部中间，完整可见，uncertain false。\n第三辆：bbox [0.47,0.36,0.64,0.68]，size large，visible full，is_truck true，identity 红色半挂牵引车带长货厢，朝向镜头，evidence 画面中间偏下，完整可见，uncertain false。\n第四辆：bbox [0.51,0.80,0.81,1.0]，size large，visible trailer_only，is_truck true，identity 红色单独货厢，无对应车头在画面内，evidence 画面最下方，单独的长货厢，uncertain false。\n\n然后counts：total=4，large=4，medium=0，small=0，unknown=0。\nscene_notes：画面中无被完全遮挡的货车，所有可见货车均清晰判定，无歧义。\nuncertain_reasons：空数组。\n\n现在整理成严格的JSON，不能有多余，要符合格式。",
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1792586150,
+    "id": "0217925861379379180a659d9e591342a6e4188502fc830f11fe2",
+    "model": "doubao-seed-2-0-mini-260428",
+    "service_tier": "default",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 1386,
+      "prompt_tokens": 1776,
+      "total_tokens": 3162,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 835
+      }
+    }
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 4,
+      "large": 4,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.31,
+          0.2,
+          0.44,
+          0.41
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "白色厢式货车，车头朝向镜头，货厢为白色，位于画面中上部左侧通道",
+        "evidence": "画面中上部左侧，完整可见的厢式货运车辆，符合重型厢式货车特征",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.44,
+          0.21,
+          0.55,
+          0.33
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色货运车头，朝向镜头，位于白色厢式货车后方",
+        "evidence": "画面中上部中间，完整可见的重型货运车头",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.47,
+          0.36,
+          0.64,
+          0.68
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色半挂牵引车，带长货厢，朝向镜头，位于画面中间偏下位置",
+        "evidence": "画面中间偏下，完整可见的重型半挂货运车辆",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.51,
+          0.8,
+          0.81,
+          1.0
+        ],
+        "size": "large",
+        "visible": "trailer_only",
+        "is_truck": true,
+        "identity_clues": "单独的红色长货厢，位于画面最下方，无对应车头在画面内",
+        "evidence": "画面最下方，单独可见的重型货厢，符合挂车特征",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "所有可见货车均清晰判定，无被完全遮挡或无法确定的车辆，无重复计数",
+    "uncertain_reasons": []
+  },
+  "sample_id": "south_2600",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\south_2600_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:35:50+0800"
+}

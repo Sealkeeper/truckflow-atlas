@@ -1,0 +1,78 @@
+{
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "attempts": 1,
+  "ok": true,
+  "latency_s": 17.07,
+  "usage": {
+    "completion_tokens": 1721,
+    "prompt_tokens": 1776,
+    "total_tokens": 3497,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1282
+    }
+  },
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 1,
+      "medium": 2,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.17,
+          0.57,
+          0.55,
+          0.99
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "White corrugated container, rear door with faint markings, positioned at the bottom of the central aisle",
+        "evidence": "Enclosed cargo truck fully visible from top of cargo to rear door, no major occlusion",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.37,
+          0.24,
+          0.56,
+          0.47
+        ],
+        "size": "medium",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Blue flat roof, dark side panels, located in the middle of the central aisle",
+        "evidence": "Distinct truck shape with visible roof and side walls, no full occlusion",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.42,
+          0.16,
+          0.55,
+          0.25
+        ],
+        "size": "medium",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "Dark rectangular body, located at the far end of the central aisle",
+        "evidence": "Upper portion of the truck is clearly visible, lower part is obscured by distance and background",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "All trucks are located in the central aisle of the exhibition hall, no vehicles are fully hidden or ambiguous in identity",
+    "uncertain_reasons": []
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 1, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.17, 0.57, 0.55, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White corrugated container, rear door with faint markings, positioned at the bottom of the central aisle\",\n      \"evidence\": \"Enclosed cargo truck fully visible from top of cargo to rear door, no major occlusion\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.37, 0.24, 0.56, 0.47],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Blue flat roof, dark side panels, located in the middle of the central aisle\",\n      \"evidence\": \"Distinct truck shape with visible roof and side walls, no full occlusion\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.42, 0.16, 0.55, 0.25],\n      \"size\": \"medium\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Dark rectangular body, located at the far end of the central aisle\",\n      \"evidence\": \"Upper portion of the truck is clearly visible, lower part is obscured by distance and background\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All trucks are located in the central aisle of the exhibition hall, no vehicles are fully hidden or ambiguous in identity\",\n  \"uncertain_reasons\": []\n}",
+  "sample_id": "north_300",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\north_300_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:29:18+0800"
+}

@@ -1,0 +1,5974 @@
+{
+  "schema": "truckflow-consensus-evaluation-v1",
+  "created_at": "2026-10-21T20:47:53+08:00",
+  "truth_file": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\reviewed\\user-final-review-v2-2026-10-21.json",
+  "truth_samples": 20,
+  "truth": {
+    "north_5": 5,
+    "south_5": 3,
+    "north_300": 3,
+    "south_300": 4,
+    "north_600": 4,
+    "south_600": 4,
+    "north_900": 3,
+    "south_900": 5,
+    "north_1200": 3,
+    "south_1200": 5,
+    "north_1500": 2,
+    "south_1500": 5,
+    "north_1800": 2,
+    "south_1800": 4,
+    "north_2100": 2,
+    "south_2100": 3,
+    "north_2400": 3,
+    "south_2400": 3,
+    "north_2600": 2,
+    "south_2600": 4
+  },
+  "models": [
+    "doubao",
+    "aibox-deepseek-v4.1-flash",
+    "aibox-glm-5.3-flash"
+  ],
+  "fourth_vote": "zhipu",
+  "per_model": {
+    "doubao": {
+      "N": 20,
+      "success": 20,
+      "failed": 0,
+      "exact": 16,
+      "exact_rate": 80.0,
+      "mae": 0.2,
+      "under": 2,
+      "over": 2,
+      "failed_samples": [],
+      "rows": [
+        {
+          "sample": "north_1200",
+          "gold": 3,
+          "pred": 3,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 14.05
+        },
+        {
+          "sample": "north_1500",
+          "gold": 2,
+          "pred": 2,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 19.47
+        },
+        {
+          "sample": "north_1800",
+          "gold": 2,
+          "pred": 2,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 13.76
+        },
+        {
+          "sample": "north_2100",
+          "gold": 2,
+          "pred": 2,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 11.31
+        },
+        {
+          "sample": "north_2400",
+          "gold": 3,
+          "pred": 3,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 12.1
+        },
+        {
+          "sample": "north_2600",
+          "gold": 2,
+          "pred": 2,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 13.67
+        },
+        {
+          "sample": "north_300",
+          "gold": 3,
+          "pred": 3,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 17.07
+        },
+        {
+          "sample": "north_5",
+          "gold": 5,
+          "pred": 4,
+          "error": -1,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 18.64
+        },
+        {
+          "sample": "north_600",
+          "gold": 4,
+          "pred": 3,
+          "error": -1,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 23.55
+        },
+        {
+          "sample": "north_900",
+          "gold": 3,
+          "pred": 3,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 20.72
+        },
+        {
+          "sample": "south_1200",
+          "gold": 5,
+          "pred": 5,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 24.28
+        },
+        {
+          "sample": "south_1500",
+          "gold": 5,
+          "pred": 5,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 17.72
+        },
+        {
+          "sample": "south_1800",
+          "gold": 4,
+          "pred": 5,
+          "error": 1,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 17.75
+        },
+        {
+          "sample": "south_2100",
+          "gold": 3,
+          "pred": 4,
+          "error": 1,
+          "ok": true,
+          "uncertain": true,
+          "latency_s": 15.37
+        },
+        {
+          "sample": "south_2400",
+          "gold": 3,
+          "pred": 3,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 10.3
+        },
+        {
+          "sample": "south_2600",
+          "gold": 4,
+          "pred": 4,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 12.3
+        },
+        {
+          "sample": "south_300",
+          "gold": 4,
+          "pred": 4,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 22.68
+        },
+        {
+          "sample": "south_5",
+          "gold": 3,
+          "pred": 3,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 13.46
+        },
+        {
+          "sample": "south_600",
+          "gold": 4,
+          "pred": 4,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 13.31
+        },
+        {
+          "sample": "south_900",
+          "gold": 5,
+          "pred": 5,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 20.11
+        }
+      ],
+      "cost": {
+        "calls": 20,
+        "success": 20,
+        "failed": 0,
+        "mean_latency_s_all_calls": 16.58,
+        "median_latency_s_all_calls": 16.22,
+        "mean_latency_s_success": 16.58,
+        "serial_equivalent_s": 331.62,
+        "total_tokens": 69949,
+        "prompt_tokens": 35520,
+        "completion_tokens": 34429,
+        "reasoning_tokens": 24697,
+        "usage_calls": 20,
+        "total_count_vehicle_mismatches": 0
+      },
+      "model_id": "ep-20260828174616-dthpx",
+      "coverage_2frames": {
+        "covered": 4,
+        "marked": 9,
+        "recall": 44.4,
+        "scope": "north_600 + north_5 only; diagnostic, not 20-frame accuracy"
+      }
+    },
+    "aibox-deepseek-v4.1-flash": {
+      "N": 20,
+      "success": 20,
+      "failed": 0,
+      "exact": 14,
+      "exact_rate": 70.0,
+      "mae": 0.3,
+      "under": 2,
+      "over": 4,
+      "failed_samples": [],
+      "rows": [
+        {
+          "sample": "north_1200",
+          "gold": 3,
+          "pred": 3,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 6.3
+        },
+        {
+          "sample": "north_1500",
+          "gold": 2,
+          "pred": 2,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 7.17
+        },
+        {
+          "sample": "north_1800",
+          "gold": 2,
+          "pred": 3,
+          "error": 1,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 4.9
+        },
+        {
+          "sample": "north_2100",
+          "gold": 2,
+          "pred": 2,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 4.28
+        },
+        {
+          "sample": "north_2400",
+          "gold": 3,
+          "pred": 3,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 4.22
+        },
+        {
+          "sample": "north_2600",
+          "gold": 2,
+          "pred": 3,
+          "error": 1,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 2.74
+        },
+        {
+          "sample": "north_300",
+          "gold": 3,
+          "pred": 3,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 6.37
+        },
+        {
+          "sample": "north_5",
+          "gold": 5,
+          "pred": 4,
+          "error": -1,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 7.24
+        },
+        {
+          "sample": "north_600",
+          "gold": 4,
+          "pred": 3,
+          "error": -1,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 6.73
+        },
+        {
+          "sample": "north_900",
+          "gold": 3,
+          "pred": 3,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 6.52
+        },
+        {
+          "sample": "south_1200",
+          "gold": 5,
+          "pred": 5,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 6.06
+        },
+        {
+          "sample": "south_1500",
+          "gold": 5,
+          "pred": 5,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 4.58
+        },
+        {
+          "sample": "south_1800",
+          "gold": 4,
+          "pred": 4,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 6.55
+        },
+        {
+          "sample": "south_2100",
+          "gold": 3,
+          "pred": 4,
+          "error": 1,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 6.69
+        },
+        {
+          "sample": "south_2400",
+          "gold": 3,
+          "pred": 3,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 5.8
+        },
+        {
+          "sample": "south_2600",
+          "gold": 4,
+          "pred": 4,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 5.84
+        },
+        {
+          "sample": "south_300",
+          "gold": 4,
+          "pred": 4,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 5.89
+        },
+        {
+          "sample": "south_5",
+          "gold": 3,
+          "pred": 3,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 5.6
+        },
+        {
+          "sample": "south_600",
+          "gold": 4,
+          "pred": 5,
+          "error": 1,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 3.44
+        },
+        {
+          "sample": "south_900",
+          "gold": 5,
+          "pred": 5,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 3.88
+        }
+      ],
+      "cost": {
+        "calls": 20,
+        "success": 20,
+        "failed": 0,
+        "mean_latency_s_all_calls": 5.54,
+        "median_latency_s_all_calls": 5.87,
+        "mean_latency_s_success": 5.54,
+        "serial_equivalent_s": 110.8,
+        "total_tokens": 38880,
+        "prompt_tokens": 29180,
+        "completion_tokens": 9700,
+        "reasoning_tokens": 0,
+        "usage_calls": 20,
+        "total_count_vehicle_mismatches": 0
+      },
+      "model_id": "deepseek-v4.1-flash",
+      "coverage_2frames": {
+        "covered": 6,
+        "marked": 9,
+        "recall": 66.7,
+        "scope": "north_600 + north_5 only; diagnostic, not 20-frame accuracy"
+      }
+    },
+    "aibox-glm-5.3-flash": {
+      "N": 20,
+      "success": 20,
+      "failed": 0,
+      "exact": 13,
+      "exact_rate": 65.0,
+      "mae": 0.35,
+      "under": 1,
+      "over": 6,
+      "failed_samples": [],
+      "rows": [
+        {
+          "sample": "north_1200",
+          "gold": 3,
+          "pred": 3,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 2.92
+        },
+        {
+          "sample": "north_1500",
+          "gold": 2,
+          "pred": 2,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 2.53
+        },
+        {
+          "sample": "north_1800",
+          "gold": 2,
+          "pred": 3,
+          "error": 1,
+          "ok": true,
+          "uncertain": true,
+          "latency_s": 3.65
+        },
+        {
+          "sample": "north_2100",
+          "gold": 2,
+          "pred": 3,
+          "error": 1,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 6.77
+        },
+        {
+          "sample": "north_2400",
+          "gold": 3,
+          "pred": 3,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 5.56
+        },
+        {
+          "sample": "north_2600",
+          "gold": 2,
+          "pred": 3,
+          "error": 1,
+          "ok": true,
+          "uncertain": true,
+          "latency_s": 7.54
+        },
+        {
+          "sample": "north_300",
+          "gold": 3,
+          "pred": 4,
+          "error": 1,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 7.32
+        },
+        {
+          "sample": "north_5",
+          "gold": 5,
+          "pred": 4,
+          "error": -1,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 6.0
+        },
+        {
+          "sample": "north_600",
+          "gold": 4,
+          "pred": 4,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 7.09
+        },
+        {
+          "sample": "north_900",
+          "gold": 3,
+          "pred": 3,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 6.53
+        },
+        {
+          "sample": "south_1200",
+          "gold": 5,
+          "pred": 5,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 3.43
+        },
+        {
+          "sample": "south_1500",
+          "gold": 5,
+          "pred": 5,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 2.65
+        },
+        {
+          "sample": "south_1800",
+          "gold": 4,
+          "pred": 4,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 3.26
+        },
+        {
+          "sample": "south_2100",
+          "gold": 3,
+          "pred": 4,
+          "error": 1,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 3.01
+        },
+        {
+          "sample": "south_2400",
+          "gold": 3,
+          "pred": 3,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 3.4
+        },
+        {
+          "sample": "south_2600",
+          "gold": 4,
+          "pred": 4,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 3.94
+        },
+        {
+          "sample": "south_300",
+          "gold": 4,
+          "pred": 4,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 3.33
+        },
+        {
+          "sample": "south_5",
+          "gold": 3,
+          "pred": 3,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 3.21
+        },
+        {
+          "sample": "south_600",
+          "gold": 4,
+          "pred": 5,
+          "error": 1,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 4.54
+        },
+        {
+          "sample": "south_900",
+          "gold": 5,
+          "pred": 5,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 3.62
+        }
+      ],
+      "cost": {
+        "calls": 20,
+        "success": 20,
+        "failed": 0,
+        "mean_latency_s_all_calls": 4.51,
+        "median_latency_s_all_calls": 3.63,
+        "mean_latency_s_success": 4.51,
+        "serial_equivalent_s": 90.3,
+        "total_tokens": 39222,
+        "prompt_tokens": 29180,
+        "completion_tokens": 10042,
+        "reasoning_tokens": 0,
+        "usage_calls": 20,
+        "total_count_vehicle_mismatches": 0
+      },
+      "model_id": "glm-5.3-flash",
+      "coverage_2frames": {
+        "covered": 5,
+        "marked": 9,
+        "recall": 55.6,
+        "scope": "north_600 + north_5 only; diagnostic, not 20-frame accuracy"
+      }
+    },
+    "zhipu": {
+      "N": 20,
+      "success": 20,
+      "failed": 0,
+      "exact": 15,
+      "exact_rate": 75.0,
+      "mae": 0.25,
+      "under": 2,
+      "over": 3,
+      "failed_samples": [],
+      "rows": [
+        {
+          "sample": "north_1200",
+          "gold": 3,
+          "pred": 3,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 56.99
+        },
+        {
+          "sample": "north_1500",
+          "gold": 2,
+          "pred": 2,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 47.68
+        },
+        {
+          "sample": "north_1800",
+          "gold": 2,
+          "pred": 2,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 53.97
+        },
+        {
+          "sample": "north_2100",
+          "gold": 2,
+          "pred": 2,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 36.87
+        },
+        {
+          "sample": "north_2400",
+          "gold": 3,
+          "pred": 4,
+          "error": 1,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 131.04
+        },
+        {
+          "sample": "north_2600",
+          "gold": 2,
+          "pred": 2,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 27.18
+        },
+        {
+          "sample": "north_300",
+          "gold": 3,
+          "pred": 3,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 50.87
+        },
+        {
+          "sample": "north_5",
+          "gold": 5,
+          "pred": 5,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 54.72
+        },
+        {
+          "sample": "north_600",
+          "gold": 4,
+          "pred": 3,
+          "error": -1,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 64.89
+        },
+        {
+          "sample": "north_900",
+          "gold": 3,
+          "pred": 3,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 68.02
+        },
+        {
+          "sample": "south_1200",
+          "gold": 5,
+          "pred": 5,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 59.6
+        },
+        {
+          "sample": "south_1500",
+          "gold": 5,
+          "pred": 5,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 69.97
+        },
+        {
+          "sample": "south_1800",
+          "gold": 4,
+          "pred": 4,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 32.73
+        },
+        {
+          "sample": "south_2100",
+          "gold": 3,
+          "pred": 4,
+          "error": 1,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 57.3
+        },
+        {
+          "sample": "south_2400",
+          "gold": 3,
+          "pred": 4,
+          "error": 1,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 44.15
+        },
+        {
+          "sample": "south_2600",
+          "gold": 4,
+          "pred": 4,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 62.76
+        },
+        {
+          "sample": "south_300",
+          "gold": 4,
+          "pred": 4,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 56.73
+        },
+        {
+          "sample": "south_5",
+          "gold": 3,
+          "pred": 3,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 43.65
+        },
+        {
+          "sample": "south_600",
+          "gold": 4,
+          "pred": 4,
+          "error": 0,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 67.78
+        },
+        {
+          "sample": "south_900",
+          "gold": 5,
+          "pred": 4,
+          "error": -1,
+          "ok": true,
+          "uncertain": false,
+          "latency_s": 62.26
+        }
+      ],
+      "cost": {
+        "calls": 20,
+        "success": 20,
+        "failed": 0,
+        "mean_latency_s_all_calls": 57.46,
+        "median_latency_s_all_calls": 56.86,
+        "mean_latency_s_success": 57.46,
+        "serial_equivalent_s": 1149.16,
+        "total_tokens": 106210,
+        "prompt_tokens": 57960,
+        "completion_tokens": 48250,
+        "reasoning_tokens": 36383,
+        "usage_calls": 20,
+        "total_count_vehicle_mismatches": 0
+      },
+      "model_id": "glm-4.5v",
+      "coverage_2frames": {
+        "covered": 5,
+        "marked": 9,
+        "recall": 55.6,
+        "scope": "north_600 + north_5 only; diagnostic, not 20-frame accuracy"
+      }
+    }
+  },
+  "common_sets": {
+    "core_three": {
+      "samples": [
+        "north_1200",
+        "north_1500",
+        "north_1800",
+        "north_2100",
+        "north_2400",
+        "north_2600",
+        "north_300",
+        "north_5",
+        "north_600",
+        "north_900",
+        "south_1200",
+        "south_1500",
+        "south_1800",
+        "south_2100",
+        "south_2400",
+        "south_2600",
+        "south_300",
+        "south_5",
+        "south_600",
+        "south_900"
+      ],
+      "N": 20,
+      "models": {
+        "doubao": {
+          "N": 20,
+          "success": 20,
+          "failed": 0,
+          "exact": 16,
+          "exact_rate": 80.0,
+          "mae": 0.2,
+          "under": 2,
+          "over": 2,
+          "failed_samples": [],
+          "rows": [
+            {
+              "sample": "north_1200",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 14.05
+            },
+            {
+              "sample": "north_1500",
+              "gold": 2,
+              "pred": 2,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 19.47
+            },
+            {
+              "sample": "north_1800",
+              "gold": 2,
+              "pred": 2,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 13.76
+            },
+            {
+              "sample": "north_2100",
+              "gold": 2,
+              "pred": 2,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 11.31
+            },
+            {
+              "sample": "north_2400",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 12.1
+            },
+            {
+              "sample": "north_2600",
+              "gold": 2,
+              "pred": 2,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 13.67
+            },
+            {
+              "sample": "north_300",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 17.07
+            },
+            {
+              "sample": "north_5",
+              "gold": 5,
+              "pred": 4,
+              "error": -1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 18.64
+            },
+            {
+              "sample": "north_600",
+              "gold": 4,
+              "pred": 3,
+              "error": -1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 23.55
+            },
+            {
+              "sample": "north_900",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 20.72
+            },
+            {
+              "sample": "south_1200",
+              "gold": 5,
+              "pred": 5,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 24.28
+            },
+            {
+              "sample": "south_1500",
+              "gold": 5,
+              "pred": 5,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 17.72
+            },
+            {
+              "sample": "south_1800",
+              "gold": 4,
+              "pred": 5,
+              "error": 1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 17.75
+            },
+            {
+              "sample": "south_2100",
+              "gold": 3,
+              "pred": 4,
+              "error": 1,
+              "ok": true,
+              "uncertain": true,
+              "latency_s": 15.37
+            },
+            {
+              "sample": "south_2400",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 10.3
+            },
+            {
+              "sample": "south_2600",
+              "gold": 4,
+              "pred": 4,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 12.3
+            },
+            {
+              "sample": "south_300",
+              "gold": 4,
+              "pred": 4,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 22.68
+            },
+            {
+              "sample": "south_5",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 13.46
+            },
+            {
+              "sample": "south_600",
+              "gold": 4,
+              "pred": 4,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 13.31
+            },
+            {
+              "sample": "south_900",
+              "gold": 5,
+              "pred": 5,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 20.11
+            }
+          ]
+        },
+        "aibox-deepseek-v4.1-flash": {
+          "N": 20,
+          "success": 20,
+          "failed": 0,
+          "exact": 14,
+          "exact_rate": 70.0,
+          "mae": 0.3,
+          "under": 2,
+          "over": 4,
+          "failed_samples": [],
+          "rows": [
+            {
+              "sample": "north_1200",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 6.3
+            },
+            {
+              "sample": "north_1500",
+              "gold": 2,
+              "pred": 2,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 7.17
+            },
+            {
+              "sample": "north_1800",
+              "gold": 2,
+              "pred": 3,
+              "error": 1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 4.9
+            },
+            {
+              "sample": "north_2100",
+              "gold": 2,
+              "pred": 2,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 4.28
+            },
+            {
+              "sample": "north_2400",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 4.22
+            },
+            {
+              "sample": "north_2600",
+              "gold": 2,
+              "pred": 3,
+              "error": 1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 2.74
+            },
+            {
+              "sample": "north_300",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 6.37
+            },
+            {
+              "sample": "north_5",
+              "gold": 5,
+              "pred": 4,
+              "error": -1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 7.24
+            },
+            {
+              "sample": "north_600",
+              "gold": 4,
+              "pred": 3,
+              "error": -1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 6.73
+            },
+            {
+              "sample": "north_900",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 6.52
+            },
+            {
+              "sample": "south_1200",
+              "gold": 5,
+              "pred": 5,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 6.06
+            },
+            {
+              "sample": "south_1500",
+              "gold": 5,
+              "pred": 5,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 4.58
+            },
+            {
+              "sample": "south_1800",
+              "gold": 4,
+              "pred": 4,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 6.55
+            },
+            {
+              "sample": "south_2100",
+              "gold": 3,
+              "pred": 4,
+              "error": 1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 6.69
+            },
+            {
+              "sample": "south_2400",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 5.8
+            },
+            {
+              "sample": "south_2600",
+              "gold": 4,
+              "pred": 4,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 5.84
+            },
+            {
+              "sample": "south_300",
+              "gold": 4,
+              "pred": 4,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 5.89
+            },
+            {
+              "sample": "south_5",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 5.6
+            },
+            {
+              "sample": "south_600",
+              "gold": 4,
+              "pred": 5,
+              "error": 1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 3.44
+            },
+            {
+              "sample": "south_900",
+              "gold": 5,
+              "pred": 5,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 3.88
+            }
+          ]
+        },
+        "aibox-glm-5.3-flash": {
+          "N": 20,
+          "success": 20,
+          "failed": 0,
+          "exact": 13,
+          "exact_rate": 65.0,
+          "mae": 0.35,
+          "under": 1,
+          "over": 6,
+          "failed_samples": [],
+          "rows": [
+            {
+              "sample": "north_1200",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 2.92
+            },
+            {
+              "sample": "north_1500",
+              "gold": 2,
+              "pred": 2,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 2.53
+            },
+            {
+              "sample": "north_1800",
+              "gold": 2,
+              "pred": 3,
+              "error": 1,
+              "ok": true,
+              "uncertain": true,
+              "latency_s": 3.65
+            },
+            {
+              "sample": "north_2100",
+              "gold": 2,
+              "pred": 3,
+              "error": 1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 6.77
+            },
+            {
+              "sample": "north_2400",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 5.56
+            },
+            {
+              "sample": "north_2600",
+              "gold": 2,
+              "pred": 3,
+              "error": 1,
+              "ok": true,
+              "uncertain": true,
+              "latency_s": 7.54
+            },
+            {
+              "sample": "north_300",
+              "gold": 3,
+              "pred": 4,
+              "error": 1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 7.32
+            },
+            {
+              "sample": "north_5",
+              "gold": 5,
+              "pred": 4,
+              "error": -1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 6.0
+            },
+            {
+              "sample": "north_600",
+              "gold": 4,
+              "pred": 4,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 7.09
+            },
+            {
+              "sample": "north_900",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 6.53
+            },
+            {
+              "sample": "south_1200",
+              "gold": 5,
+              "pred": 5,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 3.43
+            },
+            {
+              "sample": "south_1500",
+              "gold": 5,
+              "pred": 5,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 2.65
+            },
+            {
+              "sample": "south_1800",
+              "gold": 4,
+              "pred": 4,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 3.26
+            },
+            {
+              "sample": "south_2100",
+              "gold": 3,
+              "pred": 4,
+              "error": 1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 3.01
+            },
+            {
+              "sample": "south_2400",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 3.4
+            },
+            {
+              "sample": "south_2600",
+              "gold": 4,
+              "pred": 4,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 3.94
+            },
+            {
+              "sample": "south_300",
+              "gold": 4,
+              "pred": 4,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 3.33
+            },
+            {
+              "sample": "south_5",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 3.21
+            },
+            {
+              "sample": "south_600",
+              "gold": 4,
+              "pred": 5,
+              "error": 1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 4.54
+            },
+            {
+              "sample": "south_900",
+              "gold": 5,
+              "pred": 5,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 3.62
+            }
+          ]
+        }
+      }
+    },
+    "all_four": {
+      "samples": [
+        "north_1200",
+        "north_1500",
+        "north_1800",
+        "north_2100",
+        "north_2400",
+        "north_2600",
+        "north_300",
+        "north_5",
+        "north_600",
+        "north_900",
+        "south_1200",
+        "south_1500",
+        "south_1800",
+        "south_2100",
+        "south_2400",
+        "south_2600",
+        "south_300",
+        "south_5",
+        "south_600",
+        "south_900"
+      ],
+      "N": 20,
+      "models": {
+        "doubao": {
+          "N": 20,
+          "success": 20,
+          "failed": 0,
+          "exact": 16,
+          "exact_rate": 80.0,
+          "mae": 0.2,
+          "under": 2,
+          "over": 2,
+          "failed_samples": [],
+          "rows": [
+            {
+              "sample": "north_1200",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 14.05
+            },
+            {
+              "sample": "north_1500",
+              "gold": 2,
+              "pred": 2,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 19.47
+            },
+            {
+              "sample": "north_1800",
+              "gold": 2,
+              "pred": 2,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 13.76
+            },
+            {
+              "sample": "north_2100",
+              "gold": 2,
+              "pred": 2,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 11.31
+            },
+            {
+              "sample": "north_2400",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 12.1
+            },
+            {
+              "sample": "north_2600",
+              "gold": 2,
+              "pred": 2,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 13.67
+            },
+            {
+              "sample": "north_300",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 17.07
+            },
+            {
+              "sample": "north_5",
+              "gold": 5,
+              "pred": 4,
+              "error": -1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 18.64
+            },
+            {
+              "sample": "north_600",
+              "gold": 4,
+              "pred": 3,
+              "error": -1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 23.55
+            },
+            {
+              "sample": "north_900",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 20.72
+            },
+            {
+              "sample": "south_1200",
+              "gold": 5,
+              "pred": 5,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 24.28
+            },
+            {
+              "sample": "south_1500",
+              "gold": 5,
+              "pred": 5,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 17.72
+            },
+            {
+              "sample": "south_1800",
+              "gold": 4,
+              "pred": 5,
+              "error": 1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 17.75
+            },
+            {
+              "sample": "south_2100",
+              "gold": 3,
+              "pred": 4,
+              "error": 1,
+              "ok": true,
+              "uncertain": true,
+              "latency_s": 15.37
+            },
+            {
+              "sample": "south_2400",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 10.3
+            },
+            {
+              "sample": "south_2600",
+              "gold": 4,
+              "pred": 4,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 12.3
+            },
+            {
+              "sample": "south_300",
+              "gold": 4,
+              "pred": 4,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 22.68
+            },
+            {
+              "sample": "south_5",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 13.46
+            },
+            {
+              "sample": "south_600",
+              "gold": 4,
+              "pred": 4,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 13.31
+            },
+            {
+              "sample": "south_900",
+              "gold": 5,
+              "pred": 5,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 20.11
+            }
+          ]
+        },
+        "aibox-deepseek-v4.1-flash": {
+          "N": 20,
+          "success": 20,
+          "failed": 0,
+          "exact": 14,
+          "exact_rate": 70.0,
+          "mae": 0.3,
+          "under": 2,
+          "over": 4,
+          "failed_samples": [],
+          "rows": [
+            {
+              "sample": "north_1200",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 6.3
+            },
+            {
+              "sample": "north_1500",
+              "gold": 2,
+              "pred": 2,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 7.17
+            },
+            {
+              "sample": "north_1800",
+              "gold": 2,
+              "pred": 3,
+              "error": 1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 4.9
+            },
+            {
+              "sample": "north_2100",
+              "gold": 2,
+              "pred": 2,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 4.28
+            },
+            {
+              "sample": "north_2400",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 4.22
+            },
+            {
+              "sample": "north_2600",
+              "gold": 2,
+              "pred": 3,
+              "error": 1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 2.74
+            },
+            {
+              "sample": "north_300",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 6.37
+            },
+            {
+              "sample": "north_5",
+              "gold": 5,
+              "pred": 4,
+              "error": -1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 7.24
+            },
+            {
+              "sample": "north_600",
+              "gold": 4,
+              "pred": 3,
+              "error": -1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 6.73
+            },
+            {
+              "sample": "north_900",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 6.52
+            },
+            {
+              "sample": "south_1200",
+              "gold": 5,
+              "pred": 5,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 6.06
+            },
+            {
+              "sample": "south_1500",
+              "gold": 5,
+              "pred": 5,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 4.58
+            },
+            {
+              "sample": "south_1800",
+              "gold": 4,
+              "pred": 4,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 6.55
+            },
+            {
+              "sample": "south_2100",
+              "gold": 3,
+              "pred": 4,
+              "error": 1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 6.69
+            },
+            {
+              "sample": "south_2400",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 5.8
+            },
+            {
+              "sample": "south_2600",
+              "gold": 4,
+              "pred": 4,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 5.84
+            },
+            {
+              "sample": "south_300",
+              "gold": 4,
+              "pred": 4,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 5.89
+            },
+            {
+              "sample": "south_5",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 5.6
+            },
+            {
+              "sample": "south_600",
+              "gold": 4,
+              "pred": 5,
+              "error": 1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 3.44
+            },
+            {
+              "sample": "south_900",
+              "gold": 5,
+              "pred": 5,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 3.88
+            }
+          ]
+        },
+        "aibox-glm-5.3-flash": {
+          "N": 20,
+          "success": 20,
+          "failed": 0,
+          "exact": 13,
+          "exact_rate": 65.0,
+          "mae": 0.35,
+          "under": 1,
+          "over": 6,
+          "failed_samples": [],
+          "rows": [
+            {
+              "sample": "north_1200",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 2.92
+            },
+            {
+              "sample": "north_1500",
+              "gold": 2,
+              "pred": 2,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 2.53
+            },
+            {
+              "sample": "north_1800",
+              "gold": 2,
+              "pred": 3,
+              "error": 1,
+              "ok": true,
+              "uncertain": true,
+              "latency_s": 3.65
+            },
+            {
+              "sample": "north_2100",
+              "gold": 2,
+              "pred": 3,
+              "error": 1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 6.77
+            },
+            {
+              "sample": "north_2400",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 5.56
+            },
+            {
+              "sample": "north_2600",
+              "gold": 2,
+              "pred": 3,
+              "error": 1,
+              "ok": true,
+              "uncertain": true,
+              "latency_s": 7.54
+            },
+            {
+              "sample": "north_300",
+              "gold": 3,
+              "pred": 4,
+              "error": 1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 7.32
+            },
+            {
+              "sample": "north_5",
+              "gold": 5,
+              "pred": 4,
+              "error": -1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 6.0
+            },
+            {
+              "sample": "north_600",
+              "gold": 4,
+              "pred": 4,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 7.09
+            },
+            {
+              "sample": "north_900",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 6.53
+            },
+            {
+              "sample": "south_1200",
+              "gold": 5,
+              "pred": 5,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 3.43
+            },
+            {
+              "sample": "south_1500",
+              "gold": 5,
+              "pred": 5,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 2.65
+            },
+            {
+              "sample": "south_1800",
+              "gold": 4,
+              "pred": 4,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 3.26
+            },
+            {
+              "sample": "south_2100",
+              "gold": 3,
+              "pred": 4,
+              "error": 1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 3.01
+            },
+            {
+              "sample": "south_2400",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 3.4
+            },
+            {
+              "sample": "south_2600",
+              "gold": 4,
+              "pred": 4,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 3.94
+            },
+            {
+              "sample": "south_300",
+              "gold": 4,
+              "pred": 4,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 3.33
+            },
+            {
+              "sample": "south_5",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 3.21
+            },
+            {
+              "sample": "south_600",
+              "gold": 4,
+              "pred": 5,
+              "error": 1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 4.54
+            },
+            {
+              "sample": "south_900",
+              "gold": 5,
+              "pred": 5,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 3.62
+            }
+          ]
+        },
+        "zhipu": {
+          "N": 20,
+          "success": 20,
+          "failed": 0,
+          "exact": 15,
+          "exact_rate": 75.0,
+          "mae": 0.25,
+          "under": 2,
+          "over": 3,
+          "failed_samples": [],
+          "rows": [
+            {
+              "sample": "north_1200",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 56.99
+            },
+            {
+              "sample": "north_1500",
+              "gold": 2,
+              "pred": 2,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 47.68
+            },
+            {
+              "sample": "north_1800",
+              "gold": 2,
+              "pred": 2,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 53.97
+            },
+            {
+              "sample": "north_2100",
+              "gold": 2,
+              "pred": 2,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 36.87
+            },
+            {
+              "sample": "north_2400",
+              "gold": 3,
+              "pred": 4,
+              "error": 1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 131.04
+            },
+            {
+              "sample": "north_2600",
+              "gold": 2,
+              "pred": 2,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 27.18
+            },
+            {
+              "sample": "north_300",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 50.87
+            },
+            {
+              "sample": "north_5",
+              "gold": 5,
+              "pred": 5,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 54.72
+            },
+            {
+              "sample": "north_600",
+              "gold": 4,
+              "pred": 3,
+              "error": -1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 64.89
+            },
+            {
+              "sample": "north_900",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 68.02
+            },
+            {
+              "sample": "south_1200",
+              "gold": 5,
+              "pred": 5,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 59.6
+            },
+            {
+              "sample": "south_1500",
+              "gold": 5,
+              "pred": 5,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 69.97
+            },
+            {
+              "sample": "south_1800",
+              "gold": 4,
+              "pred": 4,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 32.73
+            },
+            {
+              "sample": "south_2100",
+              "gold": 3,
+              "pred": 4,
+              "error": 1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 57.3
+            },
+            {
+              "sample": "south_2400",
+              "gold": 3,
+              "pred": 4,
+              "error": 1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 44.15
+            },
+            {
+              "sample": "south_2600",
+              "gold": 4,
+              "pred": 4,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 62.76
+            },
+            {
+              "sample": "south_300",
+              "gold": 4,
+              "pred": 4,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 56.73
+            },
+            {
+              "sample": "south_5",
+              "gold": 3,
+              "pred": 3,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 43.65
+            },
+            {
+              "sample": "south_600",
+              "gold": 4,
+              "pred": 4,
+              "error": 0,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 67.78
+            },
+            {
+              "sample": "south_900",
+              "gold": 5,
+              "pred": 4,
+              "error": -1,
+              "ok": true,
+              "uncertain": false,
+              "latency_s": 62.26
+            }
+          ]
+        }
+      }
+    }
+  },
+  "consensus_rules": {
+    "R1_unanimous": {
+      "graded": 20,
+      "auto_released": 13,
+      "auto_exact": 11,
+      "auto_errors": 2,
+      "auto_error_frames": [
+        "north_5",
+        "south_2100"
+      ],
+      "auto_precision": 84.6,
+      "auto_coverage": 65.0,
+      "review_count": 7,
+      "review_rate": 35.0,
+      "review_frames": [
+        "north_1800",
+        "north_2100",
+        "north_2600",
+        "north_300",
+        "north_600",
+        "south_1800",
+        "south_600"
+      ],
+      "end_to_end_auto_exact": 11,
+      "end_to_end_auto_exact_rate": 55.0,
+      "auto_mae": 0.154,
+      "auto_error_abs_sum": 2,
+      "errors_not_auto_counted": 9,
+      "upper_bound_if_review_always_correct": 18,
+      "upper_bound_exact_rate": 90.0,
+      "review_reasons": {
+        "dissent": 7
+      }
+    },
+    "R2_two_of_three": {
+      "graded": 20,
+      "auto_released": 20,
+      "auto_exact": 14,
+      "auto_errors": 6,
+      "auto_error_frames": [
+        "north_1800",
+        "north_2600",
+        "north_5",
+        "north_600",
+        "south_2100",
+        "south_600"
+      ],
+      "auto_precision": 70.0,
+      "auto_coverage": 100.0,
+      "review_count": 0,
+      "review_rate": 0.0,
+      "review_frames": [],
+      "end_to_end_auto_exact": 14,
+      "end_to_end_auto_exact_rate": 70.0,
+      "auto_mae": 0.3,
+      "auto_error_abs_sum": 6,
+      "errors_not_auto_counted": 6,
+      "upper_bound_if_review_always_correct": 14,
+      "upper_bound_exact_rate": 70.0,
+      "review_reasons": {}
+    },
+    "R3_any_dissent_or_uncertainty": {
+      "graded": 20,
+      "auto_released": 12,
+      "auto_exact": 11,
+      "auto_errors": 1,
+      "auto_error_frames": [
+        "north_5"
+      ],
+      "auto_precision": 91.7,
+      "auto_coverage": 60.0,
+      "review_count": 8,
+      "review_rate": 40.0,
+      "review_frames": [
+        "north_1800",
+        "north_2100",
+        "north_2600",
+        "north_300",
+        "north_600",
+        "south_1800",
+        "south_2100",
+        "south_600"
+      ],
+      "end_to_end_auto_exact": 11,
+      "end_to_end_auto_exact_rate": 55.0,
+      "auto_mae": 0.083,
+      "auto_error_abs_sum": 1,
+      "errors_not_auto_counted": 9,
+      "upper_bound_if_review_always_correct": 19,
+      "upper_bound_exact_rate": 95.0,
+      "review_reasons": {
+        "dissent": 7,
+        "uncertain_flag": 1
+      }
+    },
+    "R4_two_of_three_plus_uncertainty": {
+      "graded": 20,
+      "auto_released": 17,
+      "auto_exact": 14,
+      "auto_errors": 3,
+      "auto_error_frames": [
+        "north_5",
+        "north_600",
+        "south_600"
+      ],
+      "auto_precision": 82.4,
+      "auto_coverage": 85.0,
+      "review_count": 3,
+      "review_rate": 15.0,
+      "review_frames": [
+        "north_1800",
+        "north_2600",
+        "south_2100"
+      ],
+      "end_to_end_auto_exact": 14,
+      "end_to_end_auto_exact_rate": 70.0,
+      "auto_mae": 0.176,
+      "auto_error_abs_sum": 3,
+      "errors_not_auto_counted": 6,
+      "upper_bound_if_review_always_correct": 17,
+      "upper_bound_exact_rate": 85.0,
+      "review_reasons": {
+        "uncertain_flag": 3
+      }
+    },
+    "S4_unanimous_including_zhipu": {
+      "graded": 20,
+      "auto_released": 9,
+      "auto_exact": 8,
+      "auto_errors": 1,
+      "auto_error_frames": [
+        "south_2100"
+      ],
+      "auto_precision": 88.9,
+      "auto_coverage": 45.0,
+      "review_count": 11,
+      "review_rate": 55.0,
+      "review_frames": [
+        "north_1800",
+        "north_2100",
+        "north_2400",
+        "north_2600",
+        "north_300",
+        "north_5",
+        "north_600",
+        "south_1800",
+        "south_2400",
+        "south_600",
+        "south_900"
+      ],
+      "end_to_end_auto_exact": 8,
+      "end_to_end_auto_exact_rate": 40.0,
+      "auto_mae": 0.111,
+      "auto_error_abs_sum": 1,
+      "errors_not_auto_counted": 12,
+      "upper_bound_if_review_always_correct": 19,
+      "upper_bound_exact_rate": 95.0,
+      "review_reasons": {
+        "dissent": 11
+      }
+    },
+    "R5_four_unanimous_plus_uncertainty": {
+      "graded": 20,
+      "auto_released": 8,
+      "auto_exact": 8,
+      "auto_errors": 0,
+      "auto_error_frames": [],
+      "auto_precision": 100.0,
+      "auto_coverage": 40.0,
+      "review_count": 12,
+      "review_rate": 60.0,
+      "review_frames": [
+        "north_1800",
+        "north_2100",
+        "north_2400",
+        "north_2600",
+        "north_300",
+        "north_5",
+        "north_600",
+        "south_1800",
+        "south_2100",
+        "south_2400",
+        "south_600",
+        "south_900"
+      ],
+      "end_to_end_auto_exact": 8,
+      "end_to_end_auto_exact_rate": 40.0,
+      "auto_mae": 0.0,
+      "auto_error_abs_sum": 0,
+      "errors_not_auto_counted": 12,
+      "upper_bound_if_review_always_correct": 20,
+      "upper_bound_exact_rate": 100.0,
+      "review_reasons": {
+        "dissent": 11,
+        "uncertain_flag": 1
+      }
+    }
+  },
+  "consensus_detail": {
+    "R1_unanimous": [
+      {
+        "sample": "north_1200",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_1500",
+        "gold": 2,
+        "status": "auto",
+        "value": 2,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 2,
+          "aibox-deepseek-v4.1-flash": 2,
+          "aibox-glm-5.3-flash": 2
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_1800",
+        "gold": 2,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 2,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": [
+          "aibox-glm-5.3-flash"
+        ]
+      },
+      {
+        "sample": "north_2100",
+        "gold": 2,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 2,
+          "aibox-deepseek-v4.1-flash": 2,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_2400",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_2600",
+        "gold": 2,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 2,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": [
+          "aibox-glm-5.3-flash"
+        ]
+      },
+      {
+        "sample": "north_300",
+        "gold": 3,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_5",
+        "gold": 5,
+        "status": "auto",
+        "value": 4,
+        "error": -1,
+        "reason": "",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_600",
+        "gold": 4,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_900",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_1200",
+        "gold": 5,
+        "status": "auto",
+        "value": 5,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 5,
+          "aibox-deepseek-v4.1-flash": 5,
+          "aibox-glm-5.3-flash": 5
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_1500",
+        "gold": 5,
+        "status": "auto",
+        "value": 5,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 5,
+          "aibox-deepseek-v4.1-flash": 5,
+          "aibox-glm-5.3-flash": 5
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_1800",
+        "gold": 4,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 5,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_2100",
+        "gold": 3,
+        "status": "auto",
+        "value": 4,
+        "error": 1,
+        "reason": "",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": [
+          "doubao"
+        ]
+      },
+      {
+        "sample": "south_2400",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_2600",
+        "gold": 4,
+        "status": "auto",
+        "value": 4,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_300",
+        "gold": 4,
+        "status": "auto",
+        "value": 4,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_5",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_600",
+        "gold": 4,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 5,
+          "aibox-glm-5.3-flash": 5
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_900",
+        "gold": 5,
+        "status": "auto",
+        "value": 5,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 5,
+          "aibox-deepseek-v4.1-flash": 5,
+          "aibox-glm-5.3-flash": 5
+        },
+        "missing": [],
+        "uncertain_models": []
+      }
+    ],
+    "R2_two_of_three": [
+      {
+        "sample": "north_1200",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_1500",
+        "gold": 2,
+        "status": "auto",
+        "value": 2,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 2,
+          "aibox-deepseek-v4.1-flash": 2,
+          "aibox-glm-5.3-flash": 2
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_1800",
+        "gold": 2,
+        "status": "auto",
+        "value": 3,
+        "error": 1,
+        "reason": "",
+        "votes": {
+          "doubao": 2,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": [
+          "aibox-glm-5.3-flash"
+        ]
+      },
+      {
+        "sample": "north_2100",
+        "gold": 2,
+        "status": "auto",
+        "value": 2,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 2,
+          "aibox-deepseek-v4.1-flash": 2,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_2400",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_2600",
+        "gold": 2,
+        "status": "auto",
+        "value": 3,
+        "error": 1,
+        "reason": "",
+        "votes": {
+          "doubao": 2,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": [
+          "aibox-glm-5.3-flash"
+        ]
+      },
+      {
+        "sample": "north_300",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_5",
+        "gold": 5,
+        "status": "auto",
+        "value": 4,
+        "error": -1,
+        "reason": "",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_600",
+        "gold": 4,
+        "status": "auto",
+        "value": 3,
+        "error": -1,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_900",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_1200",
+        "gold": 5,
+        "status": "auto",
+        "value": 5,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 5,
+          "aibox-deepseek-v4.1-flash": 5,
+          "aibox-glm-5.3-flash": 5
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_1500",
+        "gold": 5,
+        "status": "auto",
+        "value": 5,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 5,
+          "aibox-deepseek-v4.1-flash": 5,
+          "aibox-glm-5.3-flash": 5
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_1800",
+        "gold": 4,
+        "status": "auto",
+        "value": 4,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 5,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_2100",
+        "gold": 3,
+        "status": "auto",
+        "value": 4,
+        "error": 1,
+        "reason": "",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": [
+          "doubao"
+        ]
+      },
+      {
+        "sample": "south_2400",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_2600",
+        "gold": 4,
+        "status": "auto",
+        "value": 4,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_300",
+        "gold": 4,
+        "status": "auto",
+        "value": 4,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_5",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_600",
+        "gold": 4,
+        "status": "auto",
+        "value": 5,
+        "error": 1,
+        "reason": "",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 5,
+          "aibox-glm-5.3-flash": 5
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_900",
+        "gold": 5,
+        "status": "auto",
+        "value": 5,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 5,
+          "aibox-deepseek-v4.1-flash": 5,
+          "aibox-glm-5.3-flash": 5
+        },
+        "missing": [],
+        "uncertain_models": []
+      }
+    ],
+    "R3_any_dissent_or_uncertainty": [
+      {
+        "sample": "north_1200",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_1500",
+        "gold": 2,
+        "status": "auto",
+        "value": 2,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 2,
+          "aibox-deepseek-v4.1-flash": 2,
+          "aibox-glm-5.3-flash": 2
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_1800",
+        "gold": 2,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 2,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": [
+          "aibox-glm-5.3-flash"
+        ]
+      },
+      {
+        "sample": "north_2100",
+        "gold": 2,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 2,
+          "aibox-deepseek-v4.1-flash": 2,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_2400",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_2600",
+        "gold": 2,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 2,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": [
+          "aibox-glm-5.3-flash"
+        ]
+      },
+      {
+        "sample": "north_300",
+        "gold": 3,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_5",
+        "gold": 5,
+        "status": "auto",
+        "value": 4,
+        "error": -1,
+        "reason": "",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_600",
+        "gold": 4,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_900",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_1200",
+        "gold": 5,
+        "status": "auto",
+        "value": 5,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 5,
+          "aibox-deepseek-v4.1-flash": 5,
+          "aibox-glm-5.3-flash": 5
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_1500",
+        "gold": 5,
+        "status": "auto",
+        "value": 5,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 5,
+          "aibox-deepseek-v4.1-flash": 5,
+          "aibox-glm-5.3-flash": 5
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_1800",
+        "gold": 4,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 5,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_2100",
+        "gold": 3,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "uncertain_flag",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": [
+          "doubao"
+        ]
+      },
+      {
+        "sample": "south_2400",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_2600",
+        "gold": 4,
+        "status": "auto",
+        "value": 4,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_300",
+        "gold": 4,
+        "status": "auto",
+        "value": 4,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_5",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_600",
+        "gold": 4,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 5,
+          "aibox-glm-5.3-flash": 5
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_900",
+        "gold": 5,
+        "status": "auto",
+        "value": 5,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 5,
+          "aibox-deepseek-v4.1-flash": 5,
+          "aibox-glm-5.3-flash": 5
+        },
+        "missing": [],
+        "uncertain_models": []
+      }
+    ],
+    "R4_two_of_three_plus_uncertainty": [
+      {
+        "sample": "north_1200",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_1500",
+        "gold": 2,
+        "status": "auto",
+        "value": 2,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 2,
+          "aibox-deepseek-v4.1-flash": 2,
+          "aibox-glm-5.3-flash": 2
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_1800",
+        "gold": 2,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "uncertain_flag",
+        "votes": {
+          "doubao": 2,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": [
+          "aibox-glm-5.3-flash"
+        ]
+      },
+      {
+        "sample": "north_2100",
+        "gold": 2,
+        "status": "auto",
+        "value": 2,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 2,
+          "aibox-deepseek-v4.1-flash": 2,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_2400",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_2600",
+        "gold": 2,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "uncertain_flag",
+        "votes": {
+          "doubao": 2,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": [
+          "aibox-glm-5.3-flash"
+        ]
+      },
+      {
+        "sample": "north_300",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_5",
+        "gold": 5,
+        "status": "auto",
+        "value": 4,
+        "error": -1,
+        "reason": "",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_600",
+        "gold": 4,
+        "status": "auto",
+        "value": 3,
+        "error": -1,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_900",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_1200",
+        "gold": 5,
+        "status": "auto",
+        "value": 5,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 5,
+          "aibox-deepseek-v4.1-flash": 5,
+          "aibox-glm-5.3-flash": 5
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_1500",
+        "gold": 5,
+        "status": "auto",
+        "value": 5,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 5,
+          "aibox-deepseek-v4.1-flash": 5,
+          "aibox-glm-5.3-flash": 5
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_1800",
+        "gold": 4,
+        "status": "auto",
+        "value": 4,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 5,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_2100",
+        "gold": 3,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "uncertain_flag",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": [
+          "doubao"
+        ]
+      },
+      {
+        "sample": "south_2400",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_2600",
+        "gold": 4,
+        "status": "auto",
+        "value": 4,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_300",
+        "gold": 4,
+        "status": "auto",
+        "value": 4,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_5",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_600",
+        "gold": 4,
+        "status": "auto",
+        "value": 5,
+        "error": 1,
+        "reason": "",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 5,
+          "aibox-glm-5.3-flash": 5
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_900",
+        "gold": 5,
+        "status": "auto",
+        "value": 5,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 5,
+          "aibox-deepseek-v4.1-flash": 5,
+          "aibox-glm-5.3-flash": 5
+        },
+        "missing": [],
+        "uncertain_models": []
+      }
+    ],
+    "S4_unanimous_including_zhipu": [
+      {
+        "sample": "north_1200",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3,
+          "zhipu": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_1500",
+        "gold": 2,
+        "status": "auto",
+        "value": 2,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 2,
+          "aibox-deepseek-v4.1-flash": 2,
+          "aibox-glm-5.3-flash": 2,
+          "zhipu": 2
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_1800",
+        "gold": 2,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 2,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3,
+          "zhipu": 2
+        },
+        "missing": [],
+        "uncertain_models": [
+          "aibox-glm-5.3-flash"
+        ]
+      },
+      {
+        "sample": "north_2100",
+        "gold": 2,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 2,
+          "aibox-deepseek-v4.1-flash": 2,
+          "aibox-glm-5.3-flash": 3,
+          "zhipu": 2
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_2400",
+        "gold": 3,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3,
+          "zhipu": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_2600",
+        "gold": 2,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 2,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3,
+          "zhipu": 2
+        },
+        "missing": [],
+        "uncertain_models": [
+          "aibox-glm-5.3-flash"
+        ]
+      },
+      {
+        "sample": "north_300",
+        "gold": 3,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 4,
+          "zhipu": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_5",
+        "gold": 5,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4,
+          "zhipu": 5
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_600",
+        "gold": 4,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 4,
+          "zhipu": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_900",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3,
+          "zhipu": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_1200",
+        "gold": 5,
+        "status": "auto",
+        "value": 5,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 5,
+          "aibox-deepseek-v4.1-flash": 5,
+          "aibox-glm-5.3-flash": 5,
+          "zhipu": 5
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_1500",
+        "gold": 5,
+        "status": "auto",
+        "value": 5,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 5,
+          "aibox-deepseek-v4.1-flash": 5,
+          "aibox-glm-5.3-flash": 5,
+          "zhipu": 5
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_1800",
+        "gold": 4,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 5,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4,
+          "zhipu": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_2100",
+        "gold": 3,
+        "status": "auto",
+        "value": 4,
+        "error": 1,
+        "reason": "",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4,
+          "zhipu": 4
+        },
+        "missing": [],
+        "uncertain_models": [
+          "doubao"
+        ]
+      },
+      {
+        "sample": "south_2400",
+        "gold": 3,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3,
+          "zhipu": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_2600",
+        "gold": 4,
+        "status": "auto",
+        "value": 4,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4,
+          "zhipu": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_300",
+        "gold": 4,
+        "status": "auto",
+        "value": 4,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4,
+          "zhipu": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_5",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3,
+          "zhipu": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_600",
+        "gold": 4,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 5,
+          "aibox-glm-5.3-flash": 5,
+          "zhipu": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_900",
+        "gold": 5,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 5,
+          "aibox-deepseek-v4.1-flash": 5,
+          "aibox-glm-5.3-flash": 5,
+          "zhipu": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      }
+    ],
+    "R5_four_unanimous_plus_uncertainty": [
+      {
+        "sample": "north_1200",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3,
+          "zhipu": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_1500",
+        "gold": 2,
+        "status": "auto",
+        "value": 2,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 2,
+          "aibox-deepseek-v4.1-flash": 2,
+          "aibox-glm-5.3-flash": 2,
+          "zhipu": 2
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_1800",
+        "gold": 2,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 2,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3,
+          "zhipu": 2
+        },
+        "missing": [],
+        "uncertain_models": [
+          "aibox-glm-5.3-flash"
+        ]
+      },
+      {
+        "sample": "north_2100",
+        "gold": 2,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 2,
+          "aibox-deepseek-v4.1-flash": 2,
+          "aibox-glm-5.3-flash": 3,
+          "zhipu": 2
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_2400",
+        "gold": 3,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3,
+          "zhipu": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_2600",
+        "gold": 2,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 2,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3,
+          "zhipu": 2
+        },
+        "missing": [],
+        "uncertain_models": [
+          "aibox-glm-5.3-flash"
+        ]
+      },
+      {
+        "sample": "north_300",
+        "gold": 3,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 4,
+          "zhipu": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_5",
+        "gold": 5,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4,
+          "zhipu": 5
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_600",
+        "gold": 4,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 4,
+          "zhipu": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "north_900",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3,
+          "zhipu": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_1200",
+        "gold": 5,
+        "status": "auto",
+        "value": 5,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 5,
+          "aibox-deepseek-v4.1-flash": 5,
+          "aibox-glm-5.3-flash": 5,
+          "zhipu": 5
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_1500",
+        "gold": 5,
+        "status": "auto",
+        "value": 5,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 5,
+          "aibox-deepseek-v4.1-flash": 5,
+          "aibox-glm-5.3-flash": 5,
+          "zhipu": 5
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_1800",
+        "gold": 4,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 5,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4,
+          "zhipu": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_2100",
+        "gold": 3,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "uncertain_flag",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4,
+          "zhipu": 4
+        },
+        "missing": [],
+        "uncertain_models": [
+          "doubao"
+        ]
+      },
+      {
+        "sample": "south_2400",
+        "gold": 3,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3,
+          "zhipu": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_2600",
+        "gold": 4,
+        "status": "auto",
+        "value": 4,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4,
+          "zhipu": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_300",
+        "gold": 4,
+        "status": "auto",
+        "value": 4,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 4,
+          "aibox-glm-5.3-flash": 4,
+          "zhipu": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_5",
+        "gold": 3,
+        "status": "auto",
+        "value": 3,
+        "error": 0,
+        "reason": "",
+        "votes": {
+          "doubao": 3,
+          "aibox-deepseek-v4.1-flash": 3,
+          "aibox-glm-5.3-flash": 3,
+          "zhipu": 3
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_600",
+        "gold": 4,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 4,
+          "aibox-deepseek-v4.1-flash": 5,
+          "aibox-glm-5.3-flash": 5,
+          "zhipu": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      },
+      {
+        "sample": "south_900",
+        "gold": 5,
+        "status": "review",
+        "value": null,
+        "error": null,
+        "reason": "dissent",
+        "votes": {
+          "doubao": 5,
+          "aibox-deepseek-v4.1-flash": 5,
+          "aibox-glm-5.3-flash": 5,
+          "zhipu": 4
+        },
+        "missing": [],
+        "uncertain_models": []
+      }
+    ]
+  },
+  "error_frames": {
+    "north_300": {
+      "gold": 3,
+      "doubao": {
+        "pred": 3,
+        "ok": true,
+        "uncertain": false
+      },
+      "aibox-deepseek-v4.1-flash": {
+        "pred": 3,
+        "ok": true,
+        "uncertain": false
+      },
+      "aibox-glm-5.3-flash": {
+        "pred": 4,
+        "ok": true,
+        "uncertain": false
+      },
+      "zhipu": {
+        "pred": 3,
+        "ok": true,
+        "uncertain": false
+      }
+    },
+    "north_5": {
+      "gold": 5,
+      "doubao": {
+        "pred": 4,
+        "ok": true,
+        "uncertain": false
+      },
+      "aibox-deepseek-v4.1-flash": {
+        "pred": 4,
+        "ok": true,
+        "uncertain": false
+      },
+      "aibox-glm-5.3-flash": {
+        "pred": 4,
+        "ok": true,
+        "uncertain": false
+      },
+      "zhipu": {
+        "pred": 5,
+        "ok": true,
+        "uncertain": false
+      }
+    },
+    "north_600": {
+      "gold": 4,
+      "doubao": {
+        "pred": 3,
+        "ok": true,
+        "uncertain": false
+      },
+      "aibox-deepseek-v4.1-flash": {
+        "pred": 3,
+        "ok": true,
+        "uncertain": false
+      },
+      "aibox-glm-5.3-flash": {
+        "pred": 4,
+        "ok": true,
+        "uncertain": false
+      },
+      "zhipu": {
+        "pred": 3,
+        "ok": true,
+        "uncertain": false
+      }
+    },
+    "south_2100": {
+      "gold": 3,
+      "doubao": {
+        "pred": 4,
+        "ok": true,
+        "uncertain": true
+      },
+      "aibox-deepseek-v4.1-flash": {
+        "pred": 4,
+        "ok": true,
+        "uncertain": false
+      },
+      "aibox-glm-5.3-flash": {
+        "pred": 4,
+        "ok": true,
+        "uncertain": false
+      },
+      "zhipu": {
+        "pred": 4,
+        "ok": true,
+        "uncertain": false
+      }
+    }
+  },
+  "majority_four_error_frames": [
+    {
+      "sample": "north_300",
+      "gold": 3,
+      "status": "auto",
+      "value": 3,
+      "error": 0,
+      "reason": "",
+      "votes": {
+        "doubao": 3,
+        "aibox-deepseek-v4.1-flash": 3,
+        "aibox-glm-5.3-flash": 4
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "north_5",
+      "gold": 5,
+      "status": "auto",
+      "value": 4,
+      "error": -1,
+      "reason": "",
+      "votes": {
+        "doubao": 4,
+        "aibox-deepseek-v4.1-flash": 4,
+        "aibox-glm-5.3-flash": 4
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "north_600",
+      "gold": 4,
+      "status": "auto",
+      "value": 3,
+      "error": -1,
+      "reason": "",
+      "votes": {
+        "doubao": 3,
+        "aibox-deepseek-v4.1-flash": 3,
+        "aibox-glm-5.3-flash": 4
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "south_2100",
+      "gold": 3,
+      "status": "auto",
+      "value": 4,
+      "error": 1,
+      "reason": "",
+      "votes": {
+        "doubao": 4,
+        "aibox-deepseek-v4.1-flash": 4,
+        "aibox-glm-5.3-flash": 4
+      },
+      "missing": [],
+      "uncertain_models": [
+        "doubao"
+      ]
+    }
+  ],
+  "majority_non_error_frames": [
+    {
+      "sample": "north_1200",
+      "gold": 3,
+      "status": "auto",
+      "value": 3,
+      "error": 0,
+      "reason": "",
+      "votes": {
+        "doubao": 3,
+        "aibox-deepseek-v4.1-flash": 3,
+        "aibox-glm-5.3-flash": 3
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "north_1500",
+      "gold": 2,
+      "status": "auto",
+      "value": 2,
+      "error": 0,
+      "reason": "",
+      "votes": {
+        "doubao": 2,
+        "aibox-deepseek-v4.1-flash": 2,
+        "aibox-glm-5.3-flash": 2
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "north_1800",
+      "gold": 2,
+      "status": "auto",
+      "value": 3,
+      "error": 1,
+      "reason": "",
+      "votes": {
+        "doubao": 2,
+        "aibox-deepseek-v4.1-flash": 3,
+        "aibox-glm-5.3-flash": 3
+      },
+      "missing": [],
+      "uncertain_models": [
+        "aibox-glm-5.3-flash"
+      ]
+    },
+    {
+      "sample": "north_2100",
+      "gold": 2,
+      "status": "auto",
+      "value": 2,
+      "error": 0,
+      "reason": "",
+      "votes": {
+        "doubao": 2,
+        "aibox-deepseek-v4.1-flash": 2,
+        "aibox-glm-5.3-flash": 3
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "north_2400",
+      "gold": 3,
+      "status": "auto",
+      "value": 3,
+      "error": 0,
+      "reason": "",
+      "votes": {
+        "doubao": 3,
+        "aibox-deepseek-v4.1-flash": 3,
+        "aibox-glm-5.3-flash": 3
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "north_2600",
+      "gold": 2,
+      "status": "auto",
+      "value": 3,
+      "error": 1,
+      "reason": "",
+      "votes": {
+        "doubao": 2,
+        "aibox-deepseek-v4.1-flash": 3,
+        "aibox-glm-5.3-flash": 3
+      },
+      "missing": [],
+      "uncertain_models": [
+        "aibox-glm-5.3-flash"
+      ]
+    },
+    {
+      "sample": "north_900",
+      "gold": 3,
+      "status": "auto",
+      "value": 3,
+      "error": 0,
+      "reason": "",
+      "votes": {
+        "doubao": 3,
+        "aibox-deepseek-v4.1-flash": 3,
+        "aibox-glm-5.3-flash": 3
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "south_1200",
+      "gold": 5,
+      "status": "auto",
+      "value": 5,
+      "error": 0,
+      "reason": "",
+      "votes": {
+        "doubao": 5,
+        "aibox-deepseek-v4.1-flash": 5,
+        "aibox-glm-5.3-flash": 5
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "south_1500",
+      "gold": 5,
+      "status": "auto",
+      "value": 5,
+      "error": 0,
+      "reason": "",
+      "votes": {
+        "doubao": 5,
+        "aibox-deepseek-v4.1-flash": 5,
+        "aibox-glm-5.3-flash": 5
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "south_1800",
+      "gold": 4,
+      "status": "auto",
+      "value": 4,
+      "error": 0,
+      "reason": "",
+      "votes": {
+        "doubao": 5,
+        "aibox-deepseek-v4.1-flash": 4,
+        "aibox-glm-5.3-flash": 4
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "south_2400",
+      "gold": 3,
+      "status": "auto",
+      "value": 3,
+      "error": 0,
+      "reason": "",
+      "votes": {
+        "doubao": 3,
+        "aibox-deepseek-v4.1-flash": 3,
+        "aibox-glm-5.3-flash": 3
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "south_2600",
+      "gold": 4,
+      "status": "auto",
+      "value": 4,
+      "error": 0,
+      "reason": "",
+      "votes": {
+        "doubao": 4,
+        "aibox-deepseek-v4.1-flash": 4,
+        "aibox-glm-5.3-flash": 4
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "south_300",
+      "gold": 4,
+      "status": "auto",
+      "value": 4,
+      "error": 0,
+      "reason": "",
+      "votes": {
+        "doubao": 4,
+        "aibox-deepseek-v4.1-flash": 4,
+        "aibox-glm-5.3-flash": 4
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "south_5",
+      "gold": 3,
+      "status": "auto",
+      "value": 3,
+      "error": 0,
+      "reason": "",
+      "votes": {
+        "doubao": 3,
+        "aibox-deepseek-v4.1-flash": 3,
+        "aibox-glm-5.3-flash": 3
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "south_600",
+      "gold": 4,
+      "status": "auto",
+      "value": 5,
+      "error": 1,
+      "reason": "",
+      "votes": {
+        "doubao": 4,
+        "aibox-deepseek-v4.1-flash": 5,
+        "aibox-glm-5.3-flash": 5
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "south_900",
+      "gold": 5,
+      "status": "auto",
+      "value": 5,
+      "error": 0,
+      "reason": "",
+      "votes": {
+        "doubao": 5,
+        "aibox-deepseek-v4.1-flash": 5,
+        "aibox-glm-5.3-flash": 5
+      },
+      "missing": [],
+      "uncertain_models": []
+    }
+  ],
+  "majority_non_error_exact": 13,
+  "majority_non_error_count": 16,
+  "four_model_safe_error_frames": [
+    {
+      "sample": "north_300",
+      "gold": 3,
+      "status": "review",
+      "value": null,
+      "error": null,
+      "reason": "dissent",
+      "votes": {
+        "doubao": 3,
+        "aibox-deepseek-v4.1-flash": 3,
+        "aibox-glm-5.3-flash": 4,
+        "zhipu": 3
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "north_5",
+      "gold": 5,
+      "status": "review",
+      "value": null,
+      "error": null,
+      "reason": "dissent",
+      "votes": {
+        "doubao": 4,
+        "aibox-deepseek-v4.1-flash": 4,
+        "aibox-glm-5.3-flash": 4,
+        "zhipu": 5
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "north_600",
+      "gold": 4,
+      "status": "review",
+      "value": null,
+      "error": null,
+      "reason": "dissent",
+      "votes": {
+        "doubao": 3,
+        "aibox-deepseek-v4.1-flash": 3,
+        "aibox-glm-5.3-flash": 4,
+        "zhipu": 3
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "south_2100",
+      "gold": 3,
+      "status": "review",
+      "value": null,
+      "error": null,
+      "reason": "uncertain_flag",
+      "votes": {
+        "doubao": 4,
+        "aibox-deepseek-v4.1-flash": 4,
+        "aibox-glm-5.3-flash": 4,
+        "zhipu": 4
+      },
+      "missing": [],
+      "uncertain_models": [
+        "doubao"
+      ]
+    }
+  ],
+  "four_model_safe_non_error_frames": [
+    {
+      "sample": "north_1200",
+      "gold": 3,
+      "status": "auto",
+      "value": 3,
+      "error": 0,
+      "reason": "",
+      "votes": {
+        "doubao": 3,
+        "aibox-deepseek-v4.1-flash": 3,
+        "aibox-glm-5.3-flash": 3,
+        "zhipu": 3
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "north_1500",
+      "gold": 2,
+      "status": "auto",
+      "value": 2,
+      "error": 0,
+      "reason": "",
+      "votes": {
+        "doubao": 2,
+        "aibox-deepseek-v4.1-flash": 2,
+        "aibox-glm-5.3-flash": 2,
+        "zhipu": 2
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "north_1800",
+      "gold": 2,
+      "status": "review",
+      "value": null,
+      "error": null,
+      "reason": "dissent",
+      "votes": {
+        "doubao": 2,
+        "aibox-deepseek-v4.1-flash": 3,
+        "aibox-glm-5.3-flash": 3,
+        "zhipu": 2
+      },
+      "missing": [],
+      "uncertain_models": [
+        "aibox-glm-5.3-flash"
+      ]
+    },
+    {
+      "sample": "north_2100",
+      "gold": 2,
+      "status": "review",
+      "value": null,
+      "error": null,
+      "reason": "dissent",
+      "votes": {
+        "doubao": 2,
+        "aibox-deepseek-v4.1-flash": 2,
+        "aibox-glm-5.3-flash": 3,
+        "zhipu": 2
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "north_2400",
+      "gold": 3,
+      "status": "review",
+      "value": null,
+      "error": null,
+      "reason": "dissent",
+      "votes": {
+        "doubao": 3,
+        "aibox-deepseek-v4.1-flash": 3,
+        "aibox-glm-5.3-flash": 3,
+        "zhipu": 4
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "north_2600",
+      "gold": 2,
+      "status": "review",
+      "value": null,
+      "error": null,
+      "reason": "dissent",
+      "votes": {
+        "doubao": 2,
+        "aibox-deepseek-v4.1-flash": 3,
+        "aibox-glm-5.3-flash": 3,
+        "zhipu": 2
+      },
+      "missing": [],
+      "uncertain_models": [
+        "aibox-glm-5.3-flash"
+      ]
+    },
+    {
+      "sample": "north_900",
+      "gold": 3,
+      "status": "auto",
+      "value": 3,
+      "error": 0,
+      "reason": "",
+      "votes": {
+        "doubao": 3,
+        "aibox-deepseek-v4.1-flash": 3,
+        "aibox-glm-5.3-flash": 3,
+        "zhipu": 3
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "south_1200",
+      "gold": 5,
+      "status": "auto",
+      "value": 5,
+      "error": 0,
+      "reason": "",
+      "votes": {
+        "doubao": 5,
+        "aibox-deepseek-v4.1-flash": 5,
+        "aibox-glm-5.3-flash": 5,
+        "zhipu": 5
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "south_1500",
+      "gold": 5,
+      "status": "auto",
+      "value": 5,
+      "error": 0,
+      "reason": "",
+      "votes": {
+        "doubao": 5,
+        "aibox-deepseek-v4.1-flash": 5,
+        "aibox-glm-5.3-flash": 5,
+        "zhipu": 5
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "south_1800",
+      "gold": 4,
+      "status": "review",
+      "value": null,
+      "error": null,
+      "reason": "dissent",
+      "votes": {
+        "doubao": 5,
+        "aibox-deepseek-v4.1-flash": 4,
+        "aibox-glm-5.3-flash": 4,
+        "zhipu": 4
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "south_2400",
+      "gold": 3,
+      "status": "review",
+      "value": null,
+      "error": null,
+      "reason": "dissent",
+      "votes": {
+        "doubao": 3,
+        "aibox-deepseek-v4.1-flash": 3,
+        "aibox-glm-5.3-flash": 3,
+        "zhipu": 4
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "south_2600",
+      "gold": 4,
+      "status": "auto",
+      "value": 4,
+      "error": 0,
+      "reason": "",
+      "votes": {
+        "doubao": 4,
+        "aibox-deepseek-v4.1-flash": 4,
+        "aibox-glm-5.3-flash": 4,
+        "zhipu": 4
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "south_300",
+      "gold": 4,
+      "status": "auto",
+      "value": 4,
+      "error": 0,
+      "reason": "",
+      "votes": {
+        "doubao": 4,
+        "aibox-deepseek-v4.1-flash": 4,
+        "aibox-glm-5.3-flash": 4,
+        "zhipu": 4
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "south_5",
+      "gold": 3,
+      "status": "auto",
+      "value": 3,
+      "error": 0,
+      "reason": "",
+      "votes": {
+        "doubao": 3,
+        "aibox-deepseek-v4.1-flash": 3,
+        "aibox-glm-5.3-flash": 3,
+        "zhipu": 3
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "south_600",
+      "gold": 4,
+      "status": "review",
+      "value": null,
+      "error": null,
+      "reason": "dissent",
+      "votes": {
+        "doubao": 4,
+        "aibox-deepseek-v4.1-flash": 5,
+        "aibox-glm-5.3-flash": 5,
+        "zhipu": 4
+      },
+      "missing": [],
+      "uncertain_models": []
+    },
+    {
+      "sample": "south_900",
+      "gold": 5,
+      "status": "review",
+      "value": null,
+      "error": null,
+      "reason": "dissent",
+      "votes": {
+        "doubao": 5,
+        "aibox-deepseek-v4.1-flash": 5,
+        "aibox-glm-5.3-flash": 5,
+        "zhipu": 4
+      },
+      "missing": [],
+      "uncertain_models": []
+    }
+  ],
+  "baseline_aisle_doubao": {
+    "N": 20,
+    "success": 19,
+    "failed": 1,
+    "exact": 15,
+    "exact_rate": 78.9,
+    "mae": 0.263,
+    "under": 4,
+    "over": 1,
+    "failed_samples": [
+      "south_1200"
+    ],
+    "rows": [
+      {
+        "sample": "north_1200",
+        "gold": 3,
+        "pred": 3,
+        "error": 0,
+        "ok": true,
+        "uncertain": false,
+        "latency_s": null
+      },
+      {
+        "sample": "north_1500",
+        "gold": 2,
+        "pred": 2,
+        "error": 0,
+        "ok": true,
+        "uncertain": false,
+        "latency_s": null
+      },
+      {
+        "sample": "north_1800",
+        "gold": 2,
+        "pred": 2,
+        "error": 0,
+        "ok": true,
+        "uncertain": false,
+        "latency_s": null
+      },
+      {
+        "sample": "north_2100",
+        "gold": 2,
+        "pred": 2,
+        "error": 0,
+        "ok": true,
+        "uncertain": false,
+        "latency_s": null
+      },
+      {
+        "sample": "north_2400",
+        "gold": 3,
+        "pred": 3,
+        "error": 0,
+        "ok": true,
+        "uncertain": false,
+        "latency_s": null
+      },
+      {
+        "sample": "north_2600",
+        "gold": 2,
+        "pred": 2,
+        "error": 0,
+        "ok": true,
+        "uncertain": false,
+        "latency_s": null
+      },
+      {
+        "sample": "north_300",
+        "gold": 3,
+        "pred": 2,
+        "error": -1,
+        "ok": true,
+        "uncertain": false,
+        "latency_s": null
+      },
+      {
+        "sample": "north_5",
+        "gold": 5,
+        "pred": 4,
+        "error": -1,
+        "ok": true,
+        "uncertain": false,
+        "latency_s": null
+      },
+      {
+        "sample": "north_600",
+        "gold": 4,
+        "pred": 2,
+        "error": -2,
+        "ok": true,
+        "uncertain": false,
+        "latency_s": null
+      },
+      {
+        "sample": "north_900",
+        "gold": 3,
+        "pred": 3,
+        "error": 0,
+        "ok": true,
+        "uncertain": false,
+        "latency_s": null
+      },
+      {
+        "sample": "south_1200",
+        "gold": 5,
+        "pred": null,
+        "error": null,
+        "ok": false
+      },
+      {
+        "sample": "south_1500",
+        "gold": 5,
+        "pred": 5,
+        "error": 0,
+        "ok": true,
+        "uncertain": false,
+        "latency_s": null
+      },
+      {
+        "sample": "south_1800",
+        "gold": 4,
+        "pred": 4,
+        "error": 0,
+        "ok": true,
+        "uncertain": false,
+        "latency_s": null
+      },
+      {
+        "sample": "south_2100",
+        "gold": 3,
+        "pred": 4,
+        "error": 1,
+        "ok": true,
+        "uncertain": false,
+        "latency_s": null
+      },
+      {
+        "sample": "south_2400",
+        "gold": 3,
+        "pred": 3,
+        "error": 0,
+        "ok": true,
+        "uncertain": false,
+        "latency_s": null
+      },
+      {
+        "sample": "south_2600",
+        "gold": 4,
+        "pred": 4,
+        "error": 0,
+        "ok": true,
+        "uncertain": false,
+        "latency_s": null
+      },
+      {
+        "sample": "south_300",
+        "gold": 4,
+        "pred": 4,
+        "error": 0,
+        "ok": true,
+        "uncertain": false,
+        "latency_s": null
+      },
+      {
+        "sample": "south_5",
+        "gold": 3,
+        "pred": 3,
+        "error": 0,
+        "ok": true,
+        "uncertain": false,
+        "latency_s": null
+      },
+      {
+        "sample": "south_600",
+        "gold": 4,
+        "pred": 4,
+        "error": 0,
+        "ok": true,
+        "uncertain": false,
+        "latency_s": null
+      },
+      {
+        "sample": "south_900",
+        "gold": 5,
+        "pred": 5,
+        "error": 0,
+        "ok": true,
+        "uncertain": false,
+        "latency_s": null
+      }
+    ],
+    "source": "accuracy/runs/aisle_doubao/*_aisle.json only"
+  },
+  "coverage_2frames": {
+    "schema": "truckflow-consensus-coverage-2frames-v1",
+    "annotation_source": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\review\\user-attachments-20261021\\manifest.json",
+    "scope": "diagnostic on 2 user-annotated frames only; not 20-frame accuracy",
+    "coordinate_mode": "normalized bbox x de-letterboxed from square input: x_crop=(x_model-0.22917)/(1040/1920)",
+    "frames": {
+      "north_600": {
+        "file": "1000_2.png",
+        "marked": 4,
+        "user_boxes": [
+          [
+            0.32558139534883723,
+            0.1411764705882353,
+            0.4108527131782946,
+            0.1803921568627451
+          ],
+          [
+            0.29069767441860467,
+            0.22941176470588234,
+            0.42248062015503873,
+            0.307843137254902
+          ],
+          [
+            0.4108527131782946,
+            0.30980392156862746,
+            0.5813953488372093,
+            0.4372549019607843
+          ],
+          [
+            0.07751937984496124,
+            0.6098039215686275,
+            0.375968992248062,
+            0.9411764705882353
+          ]
+        ],
+        "models": {
+          "doubao": {
+            "covered": 2,
+            "marked": 4,
+            "candidate_boxes": 3,
+            "vehicles": [
+              {
+                "vehicle": 1,
+                "covered": false,
+                "best_iou": 0.014
+              },
+              {
+                "vehicle": 2,
+                "covered": true,
+                "best_iou": 0.123
+              },
+              {
+                "vehicle": 3,
+                "covered": false,
+                "best_iou": 0.119
+              },
+              {
+                "vehicle": 4,
+                "covered": true,
+                "best_iou": 0.502
+              }
+            ]
+          },
+          "aibox-deepseek-v4.1-flash": {
+            "covered": 3,
+            "marked": 4,
+            "candidate_boxes": 3,
+            "vehicles": [
+              {
+                "vehicle": 1,
+                "covered": true,
+                "best_iou": 0.062
+              },
+              {
+                "vehicle": 2,
+                "covered": true,
+                "best_iou": 0.172
+              },
+              {
+                "vehicle": 3,
+                "covered": false,
+                "best_iou": 0.053
+              },
+              {
+                "vehicle": 4,
+                "covered": true,
+                "best_iou": 0.475
+              }
+            ]
+          },
+          "aibox-glm-5.3-flash": {
+            "covered": 3,
+            "marked": 4,
+            "candidate_boxes": 4,
+            "vehicles": [
+              {
+                "vehicle": 1,
+                "covered": true,
+                "best_iou": 0.043
+              },
+              {
+                "vehicle": 2,
+                "covered": true,
+                "best_iou": 0.208
+              },
+              {
+                "vehicle": 3,
+                "covered": false,
+                "best_iou": 0.05
+              },
+              {
+                "vehicle": 4,
+                "covered": true,
+                "best_iou": 0.475
+              }
+            ]
+          },
+          "zhipu": {
+            "covered": 3,
+            "marked": 4,
+            "candidate_boxes": 3,
+            "vehicles": [
+              {
+                "vehicle": 1,
+                "covered": false,
+                "best_iou": 0.0
+              },
+              {
+                "vehicle": 2,
+                "covered": true,
+                "best_iou": 0.109
+              },
+              {
+                "vehicle": 3,
+                "covered": true,
+                "best_iou": 0.439
+              },
+              {
+                "vehicle": 4,
+                "covered": true,
+                "best_iou": 0.476
+              }
+            ]
+          }
+        }
+      },
+      "north_5": {
+        "file": "0005_1.png",
+        "marked": 5,
+        "user_boxes": [
+          [
+            0.35714285714285715,
+            0.06500691562932227,
+            0.4312169312169312,
+            0.1037344398340249
+          ],
+          [
+            0.4656084656084656,
+            0.08990318118948824,
+            0.5476190476190477,
+            0.1272475795297372
+          ],
+          [
+            0.3201058201058201,
+            0.1313969571230982,
+            0.42592592592592593,
+            0.18533886583679116
+          ],
+          [
+            0.2857142857142857,
+            0.22544951590594745,
+            0.41798941798941797,
+            0.29737206085753803
+          ],
+          [
+            0.1931216931216931,
+            0.49930843706777317,
+            0.41005291005291006,
+            0.6984785615491009
+          ]
+        ],
+        "models": {
+          "doubao": {
+            "covered": 2,
+            "marked": 5,
+            "candidate_boxes": 4,
+            "vehicles": [
+              {
+                "vehicle": 1,
+                "covered": false,
+                "best_iou": 0.0
+              },
+              {
+                "vehicle": 2,
+                "covered": false,
+                "best_iou": 0.0
+              },
+              {
+                "vehicle": 3,
+                "covered": false,
+                "best_iou": 0.036
+              },
+              {
+                "vehicle": 4,
+                "covered": true,
+                "best_iou": 0.151
+              },
+              {
+                "vehicle": 5,
+                "covered": true,
+                "best_iou": 0.209
+              }
+            ]
+          },
+          "aibox-deepseek-v4.1-flash": {
+            "covered": 3,
+            "marked": 5,
+            "candidate_boxes": 4,
+            "vehicles": [
+              {
+                "vehicle": 1,
+                "covered": false,
+                "best_iou": 0.026
+              },
+              {
+                "vehicle": 2,
+                "covered": true,
+                "best_iou": 0.153
+              },
+              {
+                "vehicle": 3,
+                "covered": false,
+                "best_iou": 0.075
+              },
+              {
+                "vehicle": 4,
+                "covered": true,
+                "best_iou": 0.08
+              },
+              {
+                "vehicle": 5,
+                "covered": true,
+                "best_iou": 0.233
+              }
+            ]
+          },
+          "aibox-glm-5.3-flash": {
+            "covered": 2,
+            "marked": 5,
+            "candidate_boxes": 4,
+            "vehicles": [
+              {
+                "vehicle": 1,
+                "covered": false,
+                "best_iou": 0.016
+              },
+              {
+                "vehicle": 2,
+                "covered": true,
+                "best_iou": 0.167
+              },
+              {
+                "vehicle": 3,
+                "covered": false,
+                "best_iou": 0.038
+              },
+              {
+                "vehicle": 4,
+                "covered": false,
+                "best_iou": 0.088
+              },
+              {
+                "vehicle": 5,
+                "covered": true,
+                "best_iou": 0.233
+              }
+            ]
+          },
+          "zhipu": {
+            "covered": 2,
+            "marked": 5,
+            "candidate_boxes": 5,
+            "vehicles": [
+              {
+                "vehicle": 1,
+                "covered": false,
+                "best_iou": 0.0
+              },
+              {
+                "vehicle": 2,
+                "covered": false,
+                "best_iou": 0.0
+              },
+              {
+                "vehicle": 3,
+                "covered": false,
+                "best_iou": 0.028
+              },
+              {
+                "vehicle": 4,
+                "covered": true,
+                "best_iou": 0.078
+              },
+              {
+                "vehicle": 5,
+                "covered": true,
+                "best_iou": 0.224
+              }
+            ]
+          }
+        }
+      }
+    },
+    "per_model": {
+      "doubao": {
+        "covered": 4,
+        "marked": 9,
+        "frames": {
+          "north_600": {
+            "covered": 2,
+            "marked": 4,
+            "candidate_boxes": 3,
+            "vehicles": [
+              {
+                "vehicle": 1,
+                "covered": false,
+                "best_iou": 0.014
+              },
+              {
+                "vehicle": 2,
+                "covered": true,
+                "best_iou": 0.123
+              },
+              {
+                "vehicle": 3,
+                "covered": false,
+                "best_iou": 0.119
+              },
+              {
+                "vehicle": 4,
+                "covered": true,
+                "best_iou": 0.502
+              }
+            ]
+          },
+          "north_5": {
+            "covered": 2,
+            "marked": 5,
+            "candidate_boxes": 4,
+            "vehicles": [
+              {
+                "vehicle": 1,
+                "covered": false,
+                "best_iou": 0.0
+              },
+              {
+                "vehicle": 2,
+                "covered": false,
+                "best_iou": 0.0
+              },
+              {
+                "vehicle": 3,
+                "covered": false,
+                "best_iou": 0.036
+              },
+              {
+                "vehicle": 4,
+                "covered": true,
+                "best_iou": 0.151
+              },
+              {
+                "vehicle": 5,
+                "covered": true,
+                "best_iou": 0.209
+              }
+            ]
+          }
+        },
+        "candidate_boxes": 7,
+        "recall": 44.4
+      },
+      "aibox-deepseek-v4.1-flash": {
+        "covered": 6,
+        "marked": 9,
+        "frames": {
+          "north_600": {
+            "covered": 3,
+            "marked": 4,
+            "candidate_boxes": 3,
+            "vehicles": [
+              {
+                "vehicle": 1,
+                "covered": true,
+                "best_iou": 0.062
+              },
+              {
+                "vehicle": 2,
+                "covered": true,
+                "best_iou": 0.172
+              },
+              {
+                "vehicle": 3,
+                "covered": false,
+                "best_iou": 0.053
+              },
+              {
+                "vehicle": 4,
+                "covered": true,
+                "best_iou": 0.475
+              }
+            ]
+          },
+          "north_5": {
+            "covered": 3,
+            "marked": 5,
+            "candidate_boxes": 4,
+            "vehicles": [
+              {
+                "vehicle": 1,
+                "covered": false,
+                "best_iou": 0.026
+              },
+              {
+                "vehicle": 2,
+                "covered": true,
+                "best_iou": 0.153
+              },
+              {
+                "vehicle": 3,
+                "covered": false,
+                "best_iou": 0.075
+              },
+              {
+                "vehicle": 4,
+                "covered": true,
+                "best_iou": 0.08
+              },
+              {
+                "vehicle": 5,
+                "covered": true,
+                "best_iou": 0.233
+              }
+            ]
+          }
+        },
+        "candidate_boxes": 7,
+        "recall": 66.7
+      },
+      "aibox-glm-5.3-flash": {
+        "covered": 5,
+        "marked": 9,
+        "frames": {
+          "north_600": {
+            "covered": 3,
+            "marked": 4,
+            "candidate_boxes": 4,
+            "vehicles": [
+              {
+                "vehicle": 1,
+                "covered": true,
+                "best_iou": 0.043
+              },
+              {
+                "vehicle": 2,
+                "covered": true,
+                "best_iou": 0.208
+              },
+              {
+                "vehicle": 3,
+                "covered": false,
+                "best_iou": 0.05
+              },
+              {
+                "vehicle": 4,
+                "covered": true,
+                "best_iou": 0.475
+              }
+            ]
+          },
+          "north_5": {
+            "covered": 2,
+            "marked": 5,
+            "candidate_boxes": 4,
+            "vehicles": [
+              {
+                "vehicle": 1,
+                "covered": false,
+                "best_iou": 0.016
+              },
+              {
+                "vehicle": 2,
+                "covered": true,
+                "best_iou": 0.167
+              },
+              {
+                "vehicle": 3,
+                "covered": false,
+                "best_iou": 0.038
+              },
+              {
+                "vehicle": 4,
+                "covered": false,
+                "best_iou": 0.088
+              },
+              {
+                "vehicle": 5,
+                "covered": true,
+                "best_iou": 0.233
+              }
+            ]
+          }
+        },
+        "candidate_boxes": 8,
+        "recall": 55.6
+      },
+      "zhipu": {
+        "covered": 5,
+        "marked": 9,
+        "frames": {
+          "north_600": {
+            "covered": 3,
+            "marked": 4,
+            "candidate_boxes": 3,
+            "vehicles": [
+              {
+                "vehicle": 1,
+                "covered": false,
+                "best_iou": 0.0
+              },
+              {
+                "vehicle": 2,
+                "covered": true,
+                "best_iou": 0.109
+              },
+              {
+                "vehicle": 3,
+                "covered": true,
+                "best_iou": 0.439
+              },
+              {
+                "vehicle": 4,
+                "covered": true,
+                "best_iou": 0.476
+              }
+            ]
+          },
+          "north_5": {
+            "covered": 2,
+            "marked": 5,
+            "candidate_boxes": 5,
+            "vehicles": [
+              {
+                "vehicle": 1,
+                "covered": false,
+                "best_iou": 0.0
+              },
+              {
+                "vehicle": 2,
+                "covered": false,
+                "best_iou": 0.0
+              },
+              {
+                "vehicle": 3,
+                "covered": false,
+                "best_iou": 0.028
+              },
+              {
+                "vehicle": 4,
+                "covered": true,
+                "best_iou": 0.078
+              },
+              {
+                "vehicle": 5,
+                "covered": true,
+                "best_iou": 0.224
+              }
+            ]
+          }
+        },
+        "candidate_boxes": 8,
+        "recall": 55.6
+      }
+    }
+  },
+  "cost": {
+    "per_model": {
+      "doubao": {
+        "calls": 20,
+        "success": 20,
+        "failed": 0,
+        "mean_latency_s_all_calls": 16.58,
+        "median_latency_s_all_calls": 16.22,
+        "mean_latency_s_success": 16.58,
+        "serial_equivalent_s": 331.62,
+        "total_tokens": 69949,
+        "prompt_tokens": 35520,
+        "completion_tokens": 34429,
+        "reasoning_tokens": 24697,
+        "usage_calls": 20,
+        "total_count_vehicle_mismatches": 0
+      },
+      "aibox-deepseek-v4.1-flash": {
+        "calls": 20,
+        "success": 20,
+        "failed": 0,
+        "mean_latency_s_all_calls": 5.54,
+        "median_latency_s_all_calls": 5.87,
+        "mean_latency_s_success": 5.54,
+        "serial_equivalent_s": 110.8,
+        "total_tokens": 38880,
+        "prompt_tokens": 29180,
+        "completion_tokens": 9700,
+        "reasoning_tokens": 0,
+        "usage_calls": 20,
+        "total_count_vehicle_mismatches": 0
+      },
+      "aibox-glm-5.3-flash": {
+        "calls": 20,
+        "success": 20,
+        "failed": 0,
+        "mean_latency_s_all_calls": 4.51,
+        "median_latency_s_all_calls": 3.63,
+        "mean_latency_s_success": 4.51,
+        "serial_equivalent_s": 90.3,
+        "total_tokens": 39222,
+        "prompt_tokens": 29180,
+        "completion_tokens": 10042,
+        "reasoning_tokens": 0,
+        "usage_calls": 20,
+        "total_count_vehicle_mismatches": 0
+      },
+      "zhipu": {
+        "calls": 20,
+        "success": 20,
+        "failed": 0,
+        "mean_latency_s_all_calls": 57.46,
+        "median_latency_s_all_calls": 56.86,
+        "mean_latency_s_success": 57.46,
+        "serial_equivalent_s": 1149.16,
+        "total_tokens": 106210,
+        "prompt_tokens": 57960,
+        "completion_tokens": 48250,
+        "reasoning_tokens": 36383,
+        "usage_calls": 20,
+        "total_count_vehicle_mismatches": 0
+      }
+    },
+    "core_three_serial_equivalent_s": 532.72,
+    "core_three_serial_equivalent_per_frame_s": 26.64,
+    "core_three_total_tokens": 148051,
+    "all_four_total_tokens": 254261,
+    "currency": "not computed; no unit price supplied"
+  }
+}
