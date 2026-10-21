@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T10:19:15.336Z",
+  "generatedAt": "2026-10-21T11:32:31.088Z",
   "status": "ai-single-annotator-provisional-pending-final-human-review",
   "warning": "初标来自 AI 对外部视频抽帧的目视计数，不是人工金标准，也没有逐车框。连续帧和视频只用于帮助终审，不改变这一事实。",
   "countDefinition": "每张画面内独立可辨的货车车体；叉车、轿车、面包车、行人排除；牵引车与其挂车计一辆；明确独立且可辨的货厢单独计。",
@@ -575,7 +575,7 @@
           "exists": true
         }
       ],
-      "clip": null,
+      "clip": "clips/south_900.mp4",
       "clipStart": 885
     },
     {
@@ -657,7 +657,7 @@
           "exists": true
         }
       ],
-      "clip": null,
+      "clip": "clips/south_1500.mp4",
       "clipStart": 1485
     },
     {
@@ -698,7 +698,7 @@
           "exists": true
         }
       ],
-      "clip": null,
+      "clip": "clips/south_1800.mp4",
       "clipStart": 1785
     },
     {
@@ -739,7 +739,7 @@
           "exists": true
         }
       ],
-      "clip": null,
+      "clip": "clips/south_2100.mp4",
       "clipStart": 2085
     },
     {
@@ -780,7 +780,7 @@
           "exists": true
         }
       ],
-      "clip": null,
+      "clip": "clips/south_2400.mp4",
       "clipStart": 2385
     },
     {
