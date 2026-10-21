@@ -71,7 +71,8 @@
     "prior_L2_calls": 2
   },
   "validation": {
-    "json_files_parsed": 140,
+    "pre_call_json_files_parsed": 140,
+    "published_json_files_parsed": 190,
     "passport_schema_valid": true,
     "memory_cache_schema_valid": true,
     "memory_entries_total": 72,
