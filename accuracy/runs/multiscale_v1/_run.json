@@ -1,0 +1,390 @@
+{
+  "schema": "truckflow-multiscale-run-v1",
+  "status": "complete-with-failures",
+  "started_at": "2026-10-21T13:17:15+00:00",
+  "finished_at": "2026-10-21T13:23:47+00:00",
+  "command_contract": "one primary request per sample; transport retry policy frozen in preregistration; schema-invalid responses fail without resampling",
+  "model_id": "ep-20260828174616-dthpx",
+  "endpoint": "https://ark.cn-beijing.volces.com/api/v3/chat/completions",
+  "temperature": 0,
+  "max_tokens": 6000,
+  "input_order": [
+    "global",
+    "detail"
+  ],
+  "prompt_file": "accuracy/prompts/multiscale_v1.txt",
+  "prompt_sha256": "656465095b844a0ea71967b97fbd7339bb4ae35e2475a7da16a25496fac2e17f",
+  "manifest_file": "accuracy/crops/multiscale_v1/manifest.json",
+  "manifest_sha256": "72e37e75cf1d4c82bc9dc04f61075fcfa208c415c21af18133ae173e0b1e7fd0",
+  "preregistration_file": "accuracy/input_representation/preregistration.json",
+  "preregistration_sha256": "efdc593d3a091ec15c410e8bd20eb13286f0633dd4e94d6a0507e86e10eda173",
+  "sample_count": 20,
+  "primary_requests": 20,
+  "images_per_primary_request": 2,
+  "samples": {
+    "north_1200": {
+      "file": "north_1200.json",
+      "status": "ok",
+      "failure_kind": null,
+      "transport_retry_count": 0,
+      "wall_latency_s": 16.377,
+      "usage": {
+        "completion_tokens": 1805,
+        "prompt_tokens": 3606,
+        "total_tokens": 5411,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1242
+        }
+      }
+    },
+    "north_1500": {
+      "file": "north_1500.json",
+      "status": "ok",
+      "failure_kind": null,
+      "transport_retry_count": 0,
+      "wall_latency_s": 15.329,
+      "usage": {
+        "completion_tokens": 1847,
+        "prompt_tokens": 3606,
+        "total_tokens": 5453,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1365
+        }
+      }
+    },
+    "north_1800": {
+      "file": "north_1800.json",
+      "status": "ok",
+      "failure_kind": null,
+      "transport_retry_count": 0,
+      "wall_latency_s": 8.738,
+      "usage": {
+        "completion_tokens": 1000,
+        "prompt_tokens": 3606,
+        "total_tokens": 4606,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 561
+        }
+      }
+    },
+    "north_2100": {
+      "file": "north_2100.json",
+      "status": "ok",
+      "failure_kind": null,
+      "transport_retry_count": 0,
+      "wall_latency_s": 22.72,
+      "usage": {
+        "completion_tokens": 2372,
+        "prompt_tokens": 3606,
+        "total_tokens": 5978,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1959
+        }
+      }
+    },
+    "north_2400": {
+      "file": "north_2400.json",
+      "status": "ok",
+      "failure_kind": null,
+      "transport_retry_count": 0,
+      "wall_latency_s": 20.61,
+      "usage": {
+        "completion_tokens": 2592,
+        "prompt_tokens": 3606,
+        "total_tokens": 6198,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2011
+        }
+      }
+    },
+    "north_2600": {
+      "file": "north_2600.json",
+      "status": "ok",
+      "failure_kind": null,
+      "transport_retry_count": 0,
+      "wall_latency_s": 20.048,
+      "usage": {
+        "completion_tokens": 1935,
+        "prompt_tokens": 3606,
+        "total_tokens": 5541,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1491
+        }
+      }
+    },
+    "north_300": {
+      "file": "north_300.json",
+      "status": "ok",
+      "failure_kind": null,
+      "transport_retry_count": 0,
+      "wall_latency_s": 18.877,
+      "usage": {
+        "completion_tokens": 2267,
+        "prompt_tokens": 3606,
+        "total_tokens": 5873,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1688
+        }
+      }
+    },
+    "north_5": {
+      "file": "north_5.json",
+      "status": "failed",
+      "failure_kind": "schema",
+      "transport_retry_count": 0,
+      "wall_latency_s": 21.631,
+      "usage": {
+        "completion_tokens": 2676,
+        "prompt_tokens": 3606,
+        "total_tokens": 6282,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1938
+        }
+      }
+    },
+    "north_600": {
+      "file": "north_600.json",
+      "status": "failed",
+      "failure_kind": "schema",
+      "transport_retry_count": 0,
+      "wall_latency_s": 17.911,
+      "usage": {
+        "completion_tokens": 1869,
+        "prompt_tokens": 3606,
+        "total_tokens": 5475,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1394
+        }
+      }
+    },
+    "north_900": {
+      "file": "north_900.json",
+      "status": "ok",
+      "failure_kind": null,
+      "transport_retry_count": 0,
+      "wall_latency_s": 17.164,
+      "usage": {
+        "completion_tokens": 2123,
+        "prompt_tokens": 3606,
+        "total_tokens": 5729,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1513
+        }
+      }
+    },
+    "south_1200": {
+      "file": "south_1200.json",
+      "status": "failed",
+      "failure_kind": "schema",
+      "transport_retry_count": 0,
+      "wall_latency_s": 21.099,
+      "usage": {
+        "completion_tokens": 2374,
+        "prompt_tokens": 3606,
+        "total_tokens": 5980,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1533
+        }
+      }
+    },
+    "south_1500": {
+      "file": "south_1500.json",
+      "status": "ok",
+      "failure_kind": null,
+      "transport_retry_count": 0,
+      "wall_latency_s": 17.882,
+      "usage": {
+        "completion_tokens": 2353,
+        "prompt_tokens": 3606,
+        "total_tokens": 5959,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1653
+        }
+      }
+    },
+    "south_1800": {
+      "file": "south_1800.json",
+      "status": "failed",
+      "failure_kind": "schema",
+      "transport_retry_count": 0,
+      "wall_latency_s": 19.786,
+      "usage": {
+        "completion_tokens": 2402,
+        "prompt_tokens": 3606,
+        "total_tokens": 6008,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1706
+        }
+      }
+    },
+    "south_2100": {
+      "file": "south_2100.json",
+      "status": "ok",
+      "failure_kind": null,
+      "transport_retry_count": 0,
+      "wall_latency_s": 14.369,
+      "usage": {
+        "completion_tokens": 1704,
+        "prompt_tokens": 3606,
+        "total_tokens": 5310,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1026
+        }
+      }
+    },
+    "south_2400": {
+      "file": "south_2400.json",
+      "status": "ok",
+      "failure_kind": null,
+      "transport_retry_count": 0,
+      "wall_latency_s": 17.007,
+      "usage": {
+        "completion_tokens": 2105,
+        "prompt_tokens": 3606,
+        "total_tokens": 5711,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1505
+        }
+      }
+    },
+    "south_2600": {
+      "file": "south_2600.json",
+      "status": "ok",
+      "failure_kind": null,
+      "transport_retry_count": 0,
+      "wall_latency_s": 39.072,
+      "usage": {
+        "completion_tokens": 2617,
+        "prompt_tokens": 3606,
+        "total_tokens": 6223,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1874
+        }
+      }
+    },
+    "south_300": {
+      "file": "south_300.json",
+      "status": "failed",
+      "failure_kind": "schema",
+      "transport_retry_count": 0,
+      "wall_latency_s": 27.828,
+      "usage": {
+        "completion_tokens": 3320,
+        "prompt_tokens": 3606,
+        "total_tokens": 6926,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2496
+        }
+      }
+    },
+    "south_5": {
+      "file": "south_5.json",
+      "status": "failed",
+      "failure_kind": "schema",
+      "transport_retry_count": 0,
+      "wall_latency_s": 23.484,
+      "usage": {
+        "completion_tokens": 2280,
+        "prompt_tokens": 3606,
+        "total_tokens": 5886,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1657
+        }
+      }
+    },
+    "south_600": {
+      "file": "south_600.json",
+      "status": "ok",
+      "failure_kind": null,
+      "transport_retry_count": 0,
+      "wall_latency_s": 16.144,
+      "usage": {
+        "completion_tokens": 1915,
+        "prompt_tokens": 3606,
+        "total_tokens": 5521,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1180
+        }
+      }
+    },
+    "south_900": {
+      "file": "south_900.json",
+      "status": "failed",
+      "failure_kind": "schema",
+      "transport_retry_count": 0,
+      "wall_latency_s": 14.971,
+      "usage": {
+        "completion_tokens": 1936,
+        "prompt_tokens": 3606,
+        "total_tokens": 5542,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1220
+        }
+      }
+    }
+  },
+  "total_wall_latency_s": 391.234,
+  "ok_samples": 13,
+  "failed_samples": 7,
+  "total_attempts": 20
+}

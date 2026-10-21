@@ -1,0 +1,180 @@
+{
+  "schema": "truckflow-multiscale-preregistration-v1",
+  "status": "frozen-before-primary-call",
+  "created_at": "2026-10-21T21:30:00+08:00",
+  "route": "input-representation/single-call-multiscale-v1",
+  "base_commit": "f5eb47614494c4a8e4b8df6d5bcd426ac61207ec",
+  "hypothesis": "A single model call that sees the full-height aisle view plus one fixed far-channel detail view can recover small far-end cargo bodies without losing near-side vehicles, while preserving one physical vehicle as one ID.",
+  "baseline": {
+    "report": "accuracy/REPORT_clean_baseline_v1.md",
+    "run_directory": "accuracy/runs/aisle_clean",
+    "n": 20,
+    "exact": 16,
+    "exact_rate": 0.8,
+    "mae": 0.25,
+    "under": 4,
+    "over": 1,
+    "failed": 0,
+    "missing": 0,
+    "errors": {
+      "north_5": {"gold": 5, "predicted": 4, "error": -1},
+      "north_300": {"gold": 3, "predicted": 2, "error": -1},
+      "north_600": {"gold": 4, "predicted": 2, "error": -2},
+      "south_2100": {"gold": 3, "predicted": 4, "error": 1}
+    }
+  },
+  "sample_count": 20,
+  "samples": [
+    "north_1200",
+    "north_1500",
+    "north_1800",
+    "north_2100",
+    "north_2400",
+    "north_2600",
+    "north_300",
+    "north_5",
+    "north_600",
+    "north_900",
+    "south_1200",
+    "south_1500",
+    "south_1800",
+    "south_2100",
+    "south_2400",
+    "south_2600",
+    "south_300",
+    "south_5",
+    "south_600",
+    "south_900"
+  ],
+  "truth": {
+    "file": "accuracy/reviewed/user-final-review-v2-2026-10-21.json",
+    "sha256": "735045af4055d2badae2c3bed1942c5a15c6a872ce548243cd52e6657fda971e",
+    "usage": "Evaluation only. No truth value, future observation, user red box, or manual count is placed in the prompt or model input."
+  },
+  "inputs": {
+    "manifest": "accuracy/crops/multiscale_v1/manifest.json",
+    "manifest_sha256": "72e37e75cf1d4c82bc9dc04f61075fcfa208c415c21af18133ae173e0b1e7fd0",
+    "builder": "accuracy/input_representation/build_inputs.py",
+    "builder_sha256": "e08c1de95585cbfdd05874bf8dc2f3b36830ccecbc2a826bf0f38f7cdb6b785e",
+    "geometry_audit": "accuracy/input_representation/input_geometry_audit.json",
+    "geometry_audit_sha256": "0e1012fb8ebabec8c739fce60c4f4fca03a7bccdb8cba028d50cdd6883c978f3",
+    "geometry_evidence": [
+      {
+        "file": "accuracy/evidence/input_representation/geometry_check.jpg",
+        "sha256": "669eb65803f0f5d8d8a5219c774be0690447481aaaf0e77d15db33345eeb4599"
+      },
+      {
+        "file": "accuracy/evidence/input_representation/detail_contact.jpg",
+        "sha256": "b5259673fcbe79bf007b40d914e3b372b127328ebdb560de5d60d9879e5c09cd"
+      }
+    ],
+    "input_order": ["global", "detail"],
+    "global": {
+      "role": "full-height central aisle context",
+      "source_frame_size": [1280, 960],
+      "source_rect_xyxy": [350, 0, 870, 960],
+      "scale": 2,
+      "output_size": [1040, 1920],
+      "pixels": 1996800,
+      "preprocessing": "existing clean aisle crop, 2x enlargement"
+    },
+    "detail": {
+      "role": "fixed far-channel detail; never counted separately",
+      "source_frame_size": [1280, 960],
+      "source_rect_xyxy": [480, 60, 760, 620],
+      "scale": 2,
+      "output_size": [560, 1120],
+      "pixels": 627200,
+      "preprocessing": "PIL Lanczos resize only; no generated content or sharpening",
+      "same_rectangle_for_all_20_samples": true
+    },
+    "two_image_pixels_per_request": 2624000,
+    "baseline_single_aisle_pixels": 1996800,
+    "pixel_increase_vs_baseline": 0.3141025641,
+    "coordinate_output": {
+      "system": "original_frame_1280x960_normalized_xyxy",
+      "global_restore": "px=(350+520*gx)/1280; py=gy",
+      "detail_restore": "px=(480+280*dx)/1280; py=(60+560*dy)/960",
+      "detail_to_global": "gx=(130+280*dx)/520; gy=(60+560*dy)/960",
+      "raw_boxes_preserved": true
+    },
+    "audit_result": "No additional crop truncation of an accounted central-aisle vehicle was found. The global view keeps the full source height; the detail rectangle covers the far queue. The source frame itself cuts objects at its top and bottom edges."
+  },
+  "prompt": {
+    "file": "accuracy/prompts/multiscale_v1.txt",
+    "sha256": "656465095b844a0ea71967b97fbd7339bb4ae35e2475a7da16a25496fac2e17f",
+    "text_sha256": "656465095b844a0ea71967b97fbd7339bb4ae35e2475a7da16a25496fac2e17f"
+  },
+  "request": {
+    "provider": "doubao",
+    "model_id": "ep-20260828174616-dthpx",
+    "temperature": 0,
+    "max_tokens": 6000,
+    "message_content_order": ["image:global", "image:detail", "text:prompt"],
+    "one_primary_request_per_sample": true,
+    "independent_repeated_sampling": false,
+    "next_frame_observation_input": false,
+    "manual_answer_or_red_box_input": false
+  },
+  "input_order": ["global", "detail"],
+  "deduplication_rule": {
+    "one_physical_vehicle_one_id": true,
+    "never_sum_view_counts": true,
+    "same_vehicle_in_both_views": "one record with seen_in containing global and detail",
+    "ids": "non-empty and unique",
+    "count_consistency": "counts.total == len(vehicles) and size categories sum to counts.total"
+  },
+  "valid_output": {
+    "strict_json_without_markdown": true,
+    "required_coordinate_system": "original_frame_1280x960_normalized_xyxy",
+    "bbox_requirements": "four finite normalized values in [0,1] with x0<x1 and y0<y1",
+    "required_enums": {
+      "size": ["large", "medium", "small", "unknown"],
+      "visible": ["full", "partial_top", "partial_side", "partial_rear", "trailer_only"],
+      "seen_in": ["global", "detail"]
+    },
+    "truncated_finish_reason_is_failure": true,
+    "invalid_schema_is_failure_without_recovery": true,
+    "no_manual_box_repair": true
+  },
+  "transport_retry_policy": {
+    "max_attempts_per_sample": 3,
+    "retry_http_status": [408, 429, 500, 502, 503, 504],
+    "retry_connection_or_timeout": true,
+    "backoff_seconds_before_retry_2_and_3": [2, 4],
+    "schema_error_retry": false,
+    "truncation_retry": false,
+    "every_attempt_recorded": true,
+    "retry_is_not_an_independent_sample": true
+  },
+  "execution_plan": {
+    "samples": 20,
+    "concurrency": 1,
+    "run_directory": "accuracy/runs/multiscale_v1",
+    "primary_requests": 20,
+    "image_inputs": 40,
+    "no_retuning_during_run": true,
+    "no_additional_sample_after_seeing_results": true
+  },
+  "evaluation": {
+    "primary_metric": "camera-count exact out of fixed N=20",
+    "secondary_accuracy": ["MAE on graded samples", "under count", "over count", "four historical error-frame outcomes", "regressions among the 16 baseline-correct frames"],
+    "failure_reporting": ["failed", "missing", "transport retry count", "truncated output", "schema-invalid output"],
+    "vehicle_audit": ["unique IDs", "bbox validity", "seen_in distribution", "high-IoU duplicate candidates"],
+    "cost_reporting": ["input image count", "input pixels", "prompt/completion/total tokens", "attempt latency", "sample wall latency mean/p95", "total wall latency", "serial concurrency"],
+    "denominator_rule": "All 20 reviewed camera samples remain in the denominator. Failed and missing samples are never counted as exact.",
+    "accuracy_before_cost": true
+  },
+  "decision_rule": {
+    "continue_to_independent_confirmation": "At least 18/20 exact, at least 15/16 baseline-correct frames retained, and no more than 1 failure.",
+    "conditional": "17/20 exact with net gain and at least 15/16 baseline-correct frames retained; inspect errors before any new experiment.",
+    "eliminate_current_form": "16/20 or below, or at least 2 regressions among the 16 baseline-correct frames. Cost alone does not override accuracy, and an apparently good count does not establish correct vehicle identity.",
+    "no_post_hoc_prompt_or_crop_tuning_on_these_20_frames": true
+  },
+  "limitations": [
+    "These 20 frames and 10 moments were used during development; results are development-set regressions, not proof of generalization.",
+    "Camera-count exactness does not establish correct vehicle boxes, vehicle identity, cross-camera matching, or type classification.",
+    "A two-image call is not single-image cost: it adds 627,200 pixels plus image-token, transport, and inference overhead.",
+    "The only truth is the user-completed per-camera count review; no new truth is inferred by geometry."
+  ]
+}

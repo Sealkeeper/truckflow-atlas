@@ -1,0 +1,213 @@
+{
+  "schema": "truckflow-multiscale-sample-v1",
+  "sample_id": "north_600",
+  "sample_index": 9,
+  "started_at": "2026-10-21T13:19:40+00:00",
+  "finished_at": "2026-10-21T13:19:58+00:00",
+  "wall_latency_s": 17.911,
+  "images": {
+    "order": [
+      "global",
+      "detail"
+    ],
+    "global": {
+      "path": "accuracy/crops/north_600_aisle.jpg",
+      "sha256": "9e0d3ddf1c7c32d14abaabd1c0938b8b5f57b5d748b3a7b5dcd595780b0212d6",
+      "size": [
+        1040,
+        1920
+      ]
+    },
+    "detail": {
+      "path": "accuracy/crops/multiscale_v1/detail/north_600.jpg",
+      "sha256": "69166e5345311fff43eeb9b14d22b2019b49c243850cffbd0ac3e12254b669c5",
+      "size": [
+        560,
+        1120
+      ]
+    }
+  },
+  "request_metadata": {
+    "model_id": "ep-20260828174616-dthpx",
+    "temperature": 0,
+    "max_tokens": 6000,
+    "input_order": [
+      "global",
+      "detail"
+    ],
+    "prompt_sha256": "656465095b844a0ea71967b97fbd7339bb4ae35e2475a7da16a25496fac2e17f"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-21T13:19:40+00:00",
+      "latency_s": 17.911,
+      "http_status": 200,
+      "url": "https://ark.cn-beijing.volces.com/api/v3/chat/completions",
+      "response_headers_subset": {
+        "x-request-id": "021792588779962314cbdff50da45319a607e6bbd0e7cd8466c6d",
+        "content-type": "application/json; charset=utf-8"
+      },
+      "response_text_if_error": null,
+      "raw_response_body": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "{\n  \"coordinate_system\": \"original_frame_1280x960_normalized_xyxy\",\n  \"counts\": {\n    \"total\": 2,\n    \"large\": 2,\n    \"medium\": 0,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"id\": \"V1\",\n      \"bbox_full\": [0.51, 0.31, 0.69, 0.59],\n      \"seen_in\": [\"global\", \"detail\"],\n      \"size\": \"large\",\n      \"visible\": \"partial_rear\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red semi-trailer truck, rear has text 'BL 58 580', illuminated tail lights, rear doors visible\",\n      \"evidence\": \"Identified in both Figure1 (global aisle) and Figure2 (detail window) as the same red truck, no duplicate. Figure2 confirms rear details of this vehicle.\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V2\",\n      \"bbox_full\": [0.15, 0.60, 0.50, 0.98],\n      \"seen_in\": [\"global\"],\n      \"size\": \"large\",\n      \"visible\": \"full_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White corrugated container truck, dark lower section, text '粤AG1762' on lower container, long side view\",\n      \"evidence\": \"Only present in Figure1 (global aisle), distinct from V1, no overlap with Figure2, unique independent vehicle.\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    }\n  ],\n  \"scene_notes\": \"Two independent large trucks identified, no occlusion issues affecting their recognition. No additional trucks (only forklift and non-vehicle objects present).\",\n  \"uncertain_reasons\": []\n}",
+              "reasoning_content": "Okay, let's tackle this step by step. First, I need to identify all the vehicles from both images, make sure not to duplicate, and classify them correctly.\n\nFirst, look at Figure 1 (global aisle):\n1. There's a red large truck (semi-trailer) in the middle, that's V1. Its bbox in original frame: let's see, x0 is around 0.5, y0 ~0.3, x1 ~0.7, y1 ~0.6. Size is large, seen in global and detail (since Figure 2 is the detail of that area).\n2. Then there's a white/light-colored large truck (or container truck) at the bottom left, that's V2. Bbox: x0 ~0.15, y0 ~0.6, x1 ~0.5, y1 ~0.98. Size large, seen in global only.\nWait, wait, let's check Figure 2: does it have another vehicle? Figure 2 is the detail of the middle area, so the red truck is there, no other vehicles. Then, is there a third? Wait, no, let's recheck.\n\nWait, Figure1: also, is there a small truck? No, the blue forklift is not a truck. The other things are boxes, people. Wait, wait, let's count again.\n\nWait, the red truck (V1): yes, large, seen in both. The white container truck (V2): large, seen in global. Any others? Let's see: in Figure1, is there another truck? Let's look at the left side, near LAMO sign, is there a truck? No, that's a structure. The right side, near 2F07-F62, no, that's structures. Wait, wait, maybe I missed? Wait no, let's confirm:\n\nWait, the two vehicles: V1 is the red large truck (semi), V2 is the white large container truck. Are there any others? Let's check Figure2: it's the detail of the middle, so only the red truck there, no new ones. So total vehicles: 2, both large.\n\nWait, let's confirm each:\n\nV1: Red large truck (semi-trailer). Bbox in original frame: x0=0.51, y0=0.32, x1=0.68, y1=0.58. Seen in global (Figure1) and detail (Figure2). Size large, visible is full rear (since we see the back of the trailer). Is truck: yes. Identity clues: red color, rear with \"BL 58 580\" text, tail lights. Evidence: present in both Figure1 and Figure2, same vehicle, no duplicate. Uncertain: false.\n\nV2: White large container truck (or box truck). Bbox: x0=0.16, y0=0.61, x1=0.5, y1=0.98. Seen in global only. Size large, visible is full side/top (the container is white, long). Is truck: yes. Identity clues: white corrugated container, dark lower part, text \"粤AG1762\" maybe? Evidence: only in Figure1, no duplicate. Uncertain: false.\n\nWait, is that all? Let's check again. Any other trucks? The blue thing is a forklift, not a truck. The people are not. The boxes are cargo, not vehicles. So total counts: total=2, large=2, others 0.\n\nScene notes: No major occlusion issues, all vehicles are clearly identifiable, no duplicates.\n\nWait, wait, wait a second: is the white container truck a separate vehicle? Yes, because it's a different truck from the red one, no connection. Correct.\n\nNow, let's structure the JSON properly, making sure all fields are correct.\n\nWait, let's get the bbox coordinates right. For V1: in Figure1, the red truck is from x ~0.5 to ~0.7, y ~0.3 to ~0.6. So normalized: [0.51, 0.31, 0.69, 0.59]. For V2: [0.15, 0.60, 0.50, 0.98]. Correct.\n\nSeen_in for V1: [\"global\", \"detail\"], V2: [\"global\"]. Size for both: \"large\". Visible: V1 is \"partial_rear\" (since we see the back of the trailer, maybe part of the cab is hidden? Wait in Figure1, the red truck's cab is partially visible, but mostly the rear trailer. So visible: \"partial_rear\". V2: \"partial_side\" (we see the side of the container, top and side). Wait, no, V2's container is fully visible from top to bottom, side. So maybe \"full_side\"? Or \"partial_side\"? Let's see: the original frame, the white container is from y=0.6 to y=0.98, so almost full height. So visible: \"full_side\".\n\nWait, identity clues for V1: \"Red semi-trailer truck, rear has text 'BL 58 580', tail lights illuminated, rear doors visible\". For V2: \"White corrugated container truck, lower part dark, text '粤AG1762' on lower container, long side view\".\n\nEvidence for V1: \"Present in Figure1 (global aisle) and Figure2 (detail window), same vehicle, no duplicate. Figure2 confirms rear details of the red truck.\" For V2: \"Present only in Figure1 (global aisle), no overlap with Figure2, unique vehicle.\"\n\nUncertain: both false, no uncertain reasons.\n\nScene notes: \"No significant occlusion of the two identified trucks, all are distinct and independent. No additional vehicles identified in either image.\"\n\nWait, counts: total=2, large=2, medium=0, small=0, unknown=0. Correct.\n\nIs there any other vehicle? Let's check again. Figure1: bottom right has a blue forklift, which is not a truck, so excluded. The other things are people, boxes, structures. So yes, only two trucks.\n\nOkay, now build the JSON as per the required format.",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1792588797,
+        "id": "021792588779962314cbdff50da45319a607e6bbd0e7cd8466c6d",
+        "model": "doubao-seed-2-0-mini-260428",
+        "service_tier": "default",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 1869,
+          "prompt_tokens": 3606,
+          "total_tokens": 5475,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1394
+          }
+        }
+      }
+    }
+  ],
+  "transport_retry_count": 0,
+  "status": "failed",
+  "failure_kind": "schema",
+  "failure_reason": "vehicles[1].visible is invalid",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1869,
+    "prompt_tokens": 3606,
+    "total_tokens": 5475,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1394
+    }
+  },
+  "raw_text": "{\n  \"coordinate_system\": \"original_frame_1280x960_normalized_xyxy\",\n  \"counts\": {\n    \"total\": 2,\n    \"large\": 2,\n    \"medium\": 0,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"id\": \"V1\",\n      \"bbox_full\": [0.51, 0.31, 0.69, 0.59],\n      \"seen_in\": [\"global\", \"detail\"],\n      \"size\": \"large\",\n      \"visible\": \"partial_rear\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red semi-trailer truck, rear has text 'BL 58 580', illuminated tail lights, rear doors visible\",\n      \"evidence\": \"Identified in both Figure1 (global aisle) and Figure2 (detail window) as the same red truck, no duplicate. Figure2 confirms rear details of this vehicle.\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V2\",\n      \"bbox_full\": [0.15, 0.60, 0.50, 0.98],\n      \"seen_in\": [\"global\"],\n      \"size\": \"large\",\n      \"visible\": \"full_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White corrugated container truck, dark lower section, text '粤AG1762' on lower container, long side view\",\n      \"evidence\": \"Only present in Figure1 (global aisle), distinct from V1, no overlap with Figure2, unique independent vehicle.\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    }\n  ],\n  \"scene_notes\": \"Two independent large trucks identified, no occlusion issues affecting their recognition. No additional trucks (only forklift and non-vehicle objects present).\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "coordinate_system": "original_frame_1280x960_normalized_xyxy",
+    "counts": {
+      "total": 2,
+      "large": 2,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "id": "V1",
+        "bbox_full": [
+          0.51,
+          0.31,
+          0.69,
+          0.59
+        ],
+        "seen_in": [
+          "global",
+          "detail"
+        ],
+        "size": "large",
+        "visible": "partial_rear",
+        "is_truck": true,
+        "identity_clues": "Red semi-trailer truck, rear has text 'BL 58 580', illuminated tail lights, rear doors visible",
+        "evidence": "Identified in both Figure1 (global aisle) and Figure2 (detail window) as the same red truck, no duplicate. Figure2 confirms rear details of this vehicle.",
+        "uncertain": false,
+        "uncertain_reasons": []
+      },
+      {
+        "id": "V2",
+        "bbox_full": [
+          0.15,
+          0.6,
+          0.5,
+          0.98
+        ],
+        "seen_in": [
+          "global"
+        ],
+        "size": "large",
+        "visible": "full_side",
+        "is_truck": true,
+        "identity_clues": "White corrugated container truck, dark lower section, text '粤AG1762' on lower container, long side view",
+        "evidence": "Only present in Figure1 (global aisle), distinct from V1, no overlap with Figure2, unique independent vehicle.",
+        "uncertain": false,
+        "uncertain_reasons": []
+      }
+    ],
+    "scene_notes": "Two independent large trucks identified, no occlusion issues affecting their recognition. No additional trucks (only forklift and non-vehicle objects present).",
+    "uncertain_reasons": []
+  },
+  "raw_bbox_audit": [
+    {
+      "id": "V1",
+      "bbox_full_normalized": [
+        0.51,
+        0.31,
+        0.69,
+        0.59
+      ],
+      "bbox_full_pixels_1280x960": [
+        652.8,
+        297.6,
+        883.2,
+        566.4
+      ]
+    },
+    {
+      "id": "V2",
+      "bbox_full_normalized": [
+        0.15,
+        0.6,
+        0.5,
+        0.98
+      ],
+      "bbox_full_pixels_1280x960": [
+        192.0,
+        576.0,
+        640.0,
+        940.8
+      ]
+    }
+  ],
+  "validation_errors": [
+    "vehicles[1].visible is invalid"
+  ],
+  "output_audit": {
+    "vehicle_count": 2,
+    "unique_id_count": 2,
+    "declared_counts": {
+      "total": 2,
+      "large": 2,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "observed_size_counts": {
+      "large": 2,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "seen_in_counts": {
+      "global": 2,
+      "detail": 1,
+      "both": 1
+    },
+    "bbox_count": 2,
+    "bbox_duplicate_candidates_iou_ge_0_85": []
+  }
+}

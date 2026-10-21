@@ -1,0 +1,244 @@
+{
+  "schema": "truckflow-multiscale-sample-v1",
+  "sample_id": "north_300",
+  "sample_index": 7,
+  "started_at": "2026-10-21T13:18:59+00:00",
+  "finished_at": "2026-10-21T13:19:18+00:00",
+  "wall_latency_s": 18.877,
+  "images": {
+    "order": [
+      "global",
+      "detail"
+    ],
+    "global": {
+      "path": "accuracy/crops/north_300_aisle.jpg",
+      "sha256": "84fd0d67ecd0f0cac878f59bd55401a841e2cf5eb1d613366041552e847a1073",
+      "size": [
+        1040,
+        1920
+      ]
+    },
+    "detail": {
+      "path": "accuracy/crops/multiscale_v1/detail/north_300.jpg",
+      "sha256": "158e9a7214dd1593a29cb1c9c68acea27bbe9bb1403cf7f276735938aca20dbb",
+      "size": [
+        560,
+        1120
+      ]
+    }
+  },
+  "request_metadata": {
+    "model_id": "ep-20260828174616-dthpx",
+    "temperature": 0,
+    "max_tokens": 6000,
+    "input_order": [
+      "global",
+      "detail"
+    ],
+    "prompt_sha256": "656465095b844a0ea71967b97fbd7339bb4ae35e2475a7da16a25496fac2e17f"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-21T13:18:59+00:00",
+      "latency_s": 18.876,
+      "http_status": 200,
+      "url": "https://ark.cn-beijing.volces.com/api/v3/chat/completions",
+      "response_headers_subset": {
+        "x-request-id": "021792588739438314cbdff50da45319a607e6bbd0e7cd82dfcd0",
+        "content-type": "application/json; charset=utf-8"
+      },
+      "response_text_if_error": null,
+      "raw_response_body": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "{\n  \"coordinate_system\": \"original_frame_1280x960_normalized_xyxy\",\n  \"counts\": {\n    \"total\": 3,\n    \"large\": 1,\n    \"medium\": 2,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"id\": \"V1\",\n      \"bbox_full\": [0.17, 0.57, 0.56, 0.99],\n      \"seen_in\": [\"global\"],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White corrugated cargo, dark lower body, located at bottom left of the channel\",\n      \"evidence\": \"Visible in Figure1 (global view) as a large independent truck, no overlap with other vehicles\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V2\",\n      \"bbox_full\": [0.31, 0.24, 0.54, 0.47],\n      \"seen_in\": [\"global\"],\n      \"size\": \"medium\",\n      \"visible\": \"partial_rear\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Blue flat roof, dark body, middle of the channel\",\n      \"evidence\": \"Visible in Figure1 (global view) as a medium truck, distinct from V1 and V3\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V3\",\n      \"bbox_full\": [0.44, 0.12, 0.53, 0.21],\n      \"seen_in\": [\"detail\"],\n      \"size\": \"medium\",\n      \"visible\": \"partial_rear\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Dark roof, visible number plate (62619), upper channel area\",\n      \"evidence\": \"Extracted from Figure2 (detail view) and mapped to original frame coordinates, distinct from V2, no overlap with other vehicles\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    }\n  ],\n  \"scene_notes\": \"Three independent vehicles identified, no duplicates between global and detail views; all are trucks with clear visual evidence\",\n  \"uncertain_reasons\": []\n}",
+              "reasoning_content": "Okay, let's tackle this step by step. First, I need to identify all the vehicles from both images, making sure not to duplicate.\n\nLooking at Figure 1 (global):\n1. There's a large white truck at the bottom left, its bbox would be like [0.18, 0.58, 0.55, 0.99], size large, seen in global.\n2. Then there's a blue-roofed truck in the middle, bbox [0.32, 0.25, 0.55, 0.48], size medium, seen in global.\n3. Wait, Figure 2 (detail) shows another truck further up, the one with the number plate like 62619, right? Let's check: in Figure 2, that's the truck above the blue-roofed one. So that's a separate vehicle, not the same as the blue-roofed one. So that's another one, bbox from Figure 2: let's calculate. Figure 2's dx is around 0.3 to 0.7, dy around 0.15 to 0.3. So original px: (480 +280*0.3)/1280 = (480+84)/1280=564/1280≈0.44, px for dx=0.7: (480+196)/1280=676/1280≈0.52. py: (60 +560*0.15)/960=(60+84)/960=144/960=0.15; dy=0.3: (60+168)/960=228/960=0.2375. So that truck's bbox is [0.44,0.15,0.52,0.24], size medium, seen in detail.\n\nWait, let's confirm: the three vehicles? Wait no, let's list all:\n1. V1: The large white truck at bottom left in Figure1. Bbox [0.17,0.57,0.56,0.99], size large, seen in global, is_truck true, visible partial (since only the top part is maybe? No, in Figure1 it's the whole lower part, so visible partial? Wait no, the white truck's cargo is fully visible, so maybe partial side? Wait no, the bbox covers from y=0.57 to 0.99, so it's a large truck, seen in global.\n2. V2: The blue-roofed truck in Figure1, middle. Bbox [0.31,0.24,0.54,0.47], size medium, seen in global.\n3. V3: The truck above the blue one, in Figure2 (detail). That's a separate vehicle, not in Figure1's main part? Wait Figure1's top part: yes, in Figure1, there's a truck with dark roof, above the blue one. So that's V3, bbox from Figure2: let's get correct. Figure2's that truck is at dx ~0.3 to 0.7, dy ~0.1 to 0.25. So original px: (480 +280*0.3)/1280=564/1280≈0.44, dx=0.7: (480+196)=676 → 0.52. py: (60 +560*0.1)/960= (60+56)=116 → 0.12, dy=0.25: (60+140)=200 → 0.208. So bbox [0.44,0.12,0.52,0.21], size medium, seen in detail.\n\nWait, are these three distinct? Let's check: V1 is bottom left, V2 is middle (blue roof), V3 is upper (dark roof). Yes, three separate vehicles. Let's confirm no duplicates: V1 only in global, V2 only in global, V3 only in detail. So total 3.\n\nNow, let's assign each:\n\nV1: id V1, bbox [0.17,0.57,0.56,0.99], seen_in [\"global\"], size large, visible \"partial_side\", is_truck true, identity_clues: white cargo, dark lower part, located at bottom left of channel. Evidence: visible in Figure1 as a large truck, no overlap with other vehicles. Uncertain false.\n\nV2: id V2, bbox [0.31,0.24,0.54,0.47], seen_in [\"global\"], size medium, visible \"partial_rear\", is_truck true, identity_clues: blue roof, dark body, middle of channel. Evidence: visible in Figure1, distinct from V1 and V3. Uncertain false.\n\nV3: id V3, bbox [0.44,0.12,0.52,0.21], seen_in [\"detail\"], size medium, visible \"partial_rear\", is_truck true, identity_clues: dark roof, number plate visible (62619), upper channel. Evidence: from Figure2, mapped to original frame, distinct from V2. Uncertain false.\n\nCounts: total=3, large=1, medium=2, small=0, unknown=0.\n\nScene notes: All vehicles are in the channel, no overlapping duplicates. Uncertain reasons none.\n\nWait, let's make sure: is V3 a separate vehicle? Yes, because in Figure1, above the blue truck (V2) there's another truck, which is exactly the one in Figure2. So yes, three total.\n\nNow, structure the JSON correctly, making sure all fields are filled properly. Let's check the coordinates again for V3: Figure2's dx is 0.3 to 0.7, dy 0.1 to 0.25, so px is (480 +280*dx)/1280, so dx=0.3 → (480+84)=564 → 564/1280=0.4414, dx=0.7 → (480+196)=676 → 676/1280=0.5281. py: (60 +560*dy)/960, dy=0.1 → (60+56)=116 →116/960≈0.1208, dy=0.25 → (60+140)=200 →200/960≈0.2083. So V3's bbox is [0.4414,0.1208,0.5281,0.2083], which is correct.\n\nV1's bbox in Figure1: x from ~0.17 to 0.56, y from ~0.57 to 0.99, yes. V2's x ~0.31 to0.54, y ~0.24 to0.47, correct.\n\nAll right, now build the JSON as per the required format.",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1792588758,
+        "id": "021792588739438314cbdff50da45319a607e6bbd0e7cd82dfcd0",
+        "model": "doubao-seed-2-0-mini-260428",
+        "service_tier": "default",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 2267,
+          "prompt_tokens": 3606,
+          "total_tokens": 5873,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1688
+          }
+        }
+      }
+    }
+  ],
+  "transport_retry_count": 0,
+  "status": "ok",
+  "failure_kind": null,
+  "failure_reason": null,
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2267,
+    "prompt_tokens": 3606,
+    "total_tokens": 5873,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1688
+    }
+  },
+  "raw_text": "{\n  \"coordinate_system\": \"original_frame_1280x960_normalized_xyxy\",\n  \"counts\": {\n    \"total\": 3,\n    \"large\": 1,\n    \"medium\": 2,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"id\": \"V1\",\n      \"bbox_full\": [0.17, 0.57, 0.56, 0.99],\n      \"seen_in\": [\"global\"],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White corrugated cargo, dark lower body, located at bottom left of the channel\",\n      \"evidence\": \"Visible in Figure1 (global view) as a large independent truck, no overlap with other vehicles\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V2\",\n      \"bbox_full\": [0.31, 0.24, 0.54, 0.47],\n      \"seen_in\": [\"global\"],\n      \"size\": \"medium\",\n      \"visible\": \"partial_rear\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Blue flat roof, dark body, middle of the channel\",\n      \"evidence\": \"Visible in Figure1 (global view) as a medium truck, distinct from V1 and V3\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V3\",\n      \"bbox_full\": [0.44, 0.12, 0.53, 0.21],\n      \"seen_in\": [\"detail\"],\n      \"size\": \"medium\",\n      \"visible\": \"partial_rear\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Dark roof, visible number plate (62619), upper channel area\",\n      \"evidence\": \"Extracted from Figure2 (detail view) and mapped to original frame coordinates, distinct from V2, no overlap with other vehicles\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    }\n  ],\n  \"scene_notes\": \"Three independent vehicles identified, no duplicates between global and detail views; all are trucks with clear visual evidence\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "coordinate_system": "original_frame_1280x960_normalized_xyxy",
+    "counts": {
+      "total": 3,
+      "large": 1,
+      "medium": 2,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "id": "V1",
+        "bbox_full": [
+          0.17,
+          0.57,
+          0.56,
+          0.99
+        ],
+        "seen_in": [
+          "global"
+        ],
+        "size": "large",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "White corrugated cargo, dark lower body, located at bottom left of the channel",
+        "evidence": "Visible in Figure1 (global view) as a large independent truck, no overlap with other vehicles",
+        "uncertain": false,
+        "uncertain_reasons": []
+      },
+      {
+        "id": "V2",
+        "bbox_full": [
+          0.31,
+          0.24,
+          0.54,
+          0.47
+        ],
+        "seen_in": [
+          "global"
+        ],
+        "size": "medium",
+        "visible": "partial_rear",
+        "is_truck": true,
+        "identity_clues": "Blue flat roof, dark body, middle of the channel",
+        "evidence": "Visible in Figure1 (global view) as a medium truck, distinct from V1 and V3",
+        "uncertain": false,
+        "uncertain_reasons": []
+      },
+      {
+        "id": "V3",
+        "bbox_full": [
+          0.44,
+          0.12,
+          0.53,
+          0.21
+        ],
+        "seen_in": [
+          "detail"
+        ],
+        "size": "medium",
+        "visible": "partial_rear",
+        "is_truck": true,
+        "identity_clues": "Dark roof, visible number plate (62619), upper channel area",
+        "evidence": "Extracted from Figure2 (detail view) and mapped to original frame coordinates, distinct from V2, no overlap with other vehicles",
+        "uncertain": false,
+        "uncertain_reasons": []
+      }
+    ],
+    "scene_notes": "Three independent vehicles identified, no duplicates between global and detail views; all are trucks with clear visual evidence",
+    "uncertain_reasons": []
+  },
+  "raw_bbox_audit": [
+    {
+      "id": "V1",
+      "bbox_full_normalized": [
+        0.17,
+        0.57,
+        0.56,
+        0.99
+      ],
+      "bbox_full_pixels_1280x960": [
+        217.6,
+        547.2,
+        716.8,
+        950.4
+      ]
+    },
+    {
+      "id": "V2",
+      "bbox_full_normalized": [
+        0.31,
+        0.24,
+        0.54,
+        0.47
+      ],
+      "bbox_full_pixels_1280x960": [
+        396.8,
+        230.4,
+        691.2,
+        451.2
+      ]
+    },
+    {
+      "id": "V3",
+      "bbox_full_normalized": [
+        0.44,
+        0.12,
+        0.53,
+        0.21
+      ],
+      "bbox_full_pixels_1280x960": [
+        563.2,
+        115.2,
+        678.4,
+        201.6
+      ]
+    }
+  ],
+  "validation_errors": [],
+  "output_audit": {
+    "vehicle_count": 3,
+    "unique_id_count": 3,
+    "declared_counts": {
+      "total": 3,
+      "large": 1,
+      "medium": 2,
+      "small": 0,
+      "unknown": 0
+    },
+    "observed_size_counts": {
+      "large": 1,
+      "medium": 2,
+      "small": 0,
+      "unknown": 0
+    },
+    "seen_in_counts": {
+      "global": 2,
+      "detail": 1,
+      "both": 0
+    },
+    "bbox_count": 3,
+    "bbox_duplicate_candidates_iou_ge_0_85": []
+  }
+}

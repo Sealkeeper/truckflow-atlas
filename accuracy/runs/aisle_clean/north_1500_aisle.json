@@ -1,0 +1,65 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_1500_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 8.6,
+      "usage": {
+        "completion_tokens": 880,
+        "prompt_tokens": 1776,
+        "total_tokens": 2656,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 542
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.34,
+              0.36,
+              0.53,
+              0.64
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red cargo box, yellow reflectors at bottom, text '9L88 580' on side, oriented towards the background of the aisle",
+            "evidence": "Clearly visible as a large truck in the central aisle, no major occlusion",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.16,
+              0.61,
+              0.52,
+              0.99
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "White corrugated box top, dark lower body with partial text '粤A C1162', oriented towards the bottom of the image",
+            "evidence": "Fully visible large box truck positioned below the red truck in the aisle",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "Both trucks are fully visible in the central aisle, no significant occlusion or ambiguity",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.34, 0.36, 0.53, 0.64],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cargo box, yellow reflectors at bottom, text '9L88 580' on side, oriented towards the background of the aisle\",\n      \"evidence\": \"Clearly visible as a large truck in the central aisle, no major occlusion\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.16, 0.61, 0.52, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White corrugated box top, dark lower body with partial text '粤A C1162', oriented towards the bottom of the image\",\n      \"evidence\": \"Fully visible large box truck positioned below the red truck in the aisle\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"Both trucks are fully visible in the central aisle, no significant occlusion or ambiguity\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_1500_aisle.jpg"
+    }
+  ]
+}

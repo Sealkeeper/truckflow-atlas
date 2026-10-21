@@ -1,0 +1,318 @@
+{
+  "schema": "truckflow-multiscale-sample-v1",
+  "sample_id": "south_300",
+  "sample_index": 17,
+  "started_at": "2026-10-21T13:22:24+00:00",
+  "finished_at": "2026-10-21T13:22:52+00:00",
+  "wall_latency_s": 27.828,
+  "images": {
+    "order": [
+      "global",
+      "detail"
+    ],
+    "global": {
+      "path": "accuracy/crops/south_300_aisle.jpg",
+      "sha256": "7ebb434a2b3889f0eda549ecb3f672fcac4dc5ee441298a8d6a019a22dd021e6",
+      "size": [
+        1040,
+        1920
+      ]
+    },
+    "detail": {
+      "path": "accuracy/crops/multiscale_v1/detail/south_300.jpg",
+      "sha256": "69cdab981eee1c3b951978f9fd121b119622ece0ba2a4a0530038cdd85d0c33f",
+      "size": [
+        560,
+        1120
+      ]
+    }
+  },
+  "request_metadata": {
+    "model_id": "ep-20260828174616-dthpx",
+    "temperature": 0,
+    "max_tokens": 6000,
+    "input_order": [
+      "global",
+      "detail"
+    ],
+    "prompt_sha256": "656465095b844a0ea71967b97fbd7339bb4ae35e2475a7da16a25496fac2e17f"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-21T13:22:24+00:00",
+      "latency_s": 27.827,
+      "http_status": 200,
+      "url": "https://ark.cn-beijing.volces.com/api/v3/chat/completions",
+      "response_headers_subset": {
+        "x-request-id": "021792588944328314cbdff50da45319a607e6bbd0e7cd82475cc",
+        "content-type": "application/json; charset=utf-8"
+      },
+      "response_text_if_error": null,
+      "raw_response_body": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "{\n  \"coordinate_system\": \"original_frame_1280x960_normalized_xyxy\",\n  \"counts\": {\n    \"total\": 5,\n    \"large\": 4,\n    \"medium\": 1,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"id\": \"V1\",\n      \"bbox_full\": [0.46, 0.48, 0.68, 0.94],\n      \"seen_in\": [\"global\"],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White cab with '东风商用车' text, white container, front view, complete visible\",\n      \"evidence\": \"Visible only in global frame, no overlap with detail frame, unique vehicle\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V2\",\n      \"bbox_full\": [0.43, 0.27, 0.58, 0.51],\n      \"seen_in\": [\"global\", \"detail\"],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, gray container, front view, bottom partially obscured by white truck\",\n      \"evidence\": \"Visible in both global and detail frames, same vehicle, no duplicate\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V3\",\n      \"bbox_full\": [0.35, 0.19, 0.45, 0.37],\n      \"seen_in\": [\"global\", \"detail\"],\n      \"size\": \"medium\",\n      \"visible\": \"partial_front\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red medium cab, front view, complete visible\",\n      \"evidence\": \"Visible in both global and detail frames, same vehicle, no duplicate\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V4\",\n      \"bbox_full\": [0.44, 0.12, 0.52, 0.28],\n      \"seen_in\": [\"global\", \"detail\"],\n      \"size\": \"large\",\n      \"visible\": \"partial_rear\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red container, rear view, partial visible\",\n      \"evidence\": \"Visible in both global and detail frames, same vehicle, no duplicate\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V5\",\n      \"bbox_full\": [0.39, 0.10, 0.50, 0.19],\n      \"seen_in\": [\"global\", \"detail\"],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Brown container, rear view, partial visible\",\n      \"evidence\": \"Visible in both global and detail frames, same vehicle, no duplicate\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    }\n  ],\n  \"scene_notes\": \"All vehicles are clearly visible, no duplicate counting, no ambiguous cases\",\n  \"uncertain_reasons\": []\n}",
+              "reasoning_content": "\n我现在需要处理用户的请求，把图1和图2的货车合并去重，输出正确的JSON。首先，先识别图里的车辆：\n\n首先看原图（图1是全局，图2是细节）：\n1. 最前面的白色东风商用车，在图1里，是large，牵引车+货厢，seen_in是global，因为图2没覆盖到这里。\n2. 红色的半挂（带灰色货厢），在图1里，是large，seen_in global。\n3. 红色的中卡（车头，后面的货厢？不对，看，图1里中间偏上的红色车头，还有更上面的红色货厢？不对，仔细看：\n图1里的车辆队列：从近到远：\nV1：白色东风，bbox大概是[0.47, 0.49, 0.67, 0.93]，large，is_truck，seen_in global，visible full。\nV2：红色半挂（灰色货厢），bbox [0.44, 0.28, 0.59, 0.52]，large，seen_in global，visible full。\nV3：红色中卡（车头，后面的货厢？不，图1里V2后面是红色车头（V3），再后面是红色货厢（V4），还有最上面的棕色货厢（V5）？不对，图2是细节，看远端的：\n图2里的车辆，对应原帧的坐标：图2的x范围是480-760，y60-620，所以图2里的红色车头（V3）、红色货厢（V4）、棕色货厢（V5），这些在图1里也有，所以要合并，不能重复。\n\n等下，重新数：\n图1里可见的货车：\n1. 白色东风（最前面）：large，id V1，bbox [0.46, 0.48, 0.68, 0.94]，seen_in [\"global\"]，size large，visible full，is_truck true，identity_clues: white cab with \"东风商用车\" text, white container, front view. Evidence: visible in global frame, no overlap with detail frame.\n2. 红色半挂（灰色货厢，在白色车后面）：large，id V2，bbox [0.43, 0.27, 0.58, 0.51]，seen_in [\"global\", \"detail\"]，因为图2里也能看到这个车的部分，所以seen_in是两个，size large，visible partial_top（因为被白色车挡了下面），is_truck true，identity_clues: red cab, gray container, front view. Evidence: present in both global and detail frames, no duplicate.\n3. 红色中卡（车头，在V2后面）：medium，id V3，bbox [0.35, 0.19, 0.45, 0.37]，seen_in [\"global\", \"detail\"]，size medium，visible partial_front，is_truck true，identity_clues: red cab, no full container, front view. Evidence: in both frames, no duplicate.\n4. 红色货厢（在V3后面）：large，id V4，bbox [0.44, 0.12, 0.52, 0.28]，seen_in [\"global\", \"detail\"]，size large，visible partial_rear，is_truck true，identity_clues: red container, rear view. Evidence: in both frames, no duplicate.\n5. 棕色货厢（最远端）：large，id V5，bbox [0.39, 0.10, 0.50, 0.19]，seen_in [\"global\", \"detail\"]，size large，visible partial_top，is_truck true，identity_clues: brown container, rear view. Evidence: in both frames, no duplicate.\n\n等下，有没有重复？比如V2是红色半挂，在图1和图2都有，所以只算一次。那总共有5辆车？不对，再看：图1里的车辆，从近到远：\n1. 白色东风（V1）\n2. 红色半挂（V2）\n3. 红色中卡（V3）\n4. 红色货厢（V4）\n5. 棕色货厢（V5）\n对，这五个，都是独立的，没有重复，因为每个的位置不同，连接关系？V1是牵引车+货厢，V2是牵引车+灰色货厢，V3是牵引车（没有货厢？不对，V3的后面是V4的货厢？那V3和V4是不是同一辆？哦，这里要注意：如果牵引车和货厢是连接的，就是一辆，否则是两辆。看V3（红色车头）后面的V4（红色货厢），有没有连接？从图里看，V3的车头和V4的货厢是分开的？不对，图1里V3的车头（x0.35,y0.19到0.45,y0.37），V4的货厢是x0.44,y0.12到0.52,y0.28，所以V4在V3的上方（更靠后），所以V3和V4是两辆？然后V5是更后面的棕色货厢，是第三辆货厢，所以V3（中卡）、V4（红色货厢）、V5（棕色货厢），加上V2（红色半挂）、V1（白色东风），总共5辆？\n\n然后分类：V1是large，V2是large，V3是medium，V4是large，V5是large。所以counts.total=5，large=4，medium=1，small=0，unknown=0。\n\n然后每个的bbox要正确映射：\n比如V2，在图2里的位置，图2的局部坐标，假设图2里V2的车头是在dx=0.5, dy=0.5，所以原帧px=(480+280*0.5)/1280=(480+140)/1280=620/1280≈0.484，py=(60+560*0.5)/960=(60+280)/960=340/960≈0.354，所以V2的bbox在原帧是[0.43,0.27,0.58,0.51]，正确。\n\n然后seen_in：V1只在global，V2在global和detail，V3在global和detail，V4在global和detail，V5在global和detail。\n\n然后visible：V1是full，V2是partial_top（因为被V1挡了底部），V3是partial_front，V4是partial_rear，V5是partial_top。\n\nidentity_clues要写清楚，比如V1：白色东风商用车，车头有文字，白色货厢，完整可见；V2：红色车头，灰色货厢，部分可见（底部被挡）；V3：红色中卡车头，完整可见（在图1和图2）；V4：红色货厢，部分可见（在图2）；V5：棕色货厢，部分可见（在图2）。\n\nevidence：每个车的证据，比如V1：仅在全局图（图1）可见，无重复；V2：在全局图和细节图（图2）均可见，为同一车辆，无重复；以此类推。\n\nuncertain都是false，因为都是明确的货车。\n\nscene_notes：无特殊遮挡，所有车辆均可见，无重复计数。\n\n现在整理成严格的JSON格式，注意所有字段都正确，没有多余内容。\n\n等下，再检查有没有错误：比如V3是中卡，对，因为它的尺寸比V2小，V2是半挂（large），V3是中卡（medium），V4和V5是large，V1是large，所以large是4，medium是1，total 5，正确。\n\n还有，有没有把人物算进去？没有，人物不计，所以没问题。\n\n现在写出来：\n\n首先，coordinate_system是\"original_frame_1280x960_normalized_xyxy\"，counts的total是5，large=4，medium=1，small=0，unknown=0。\n\nvehicles数组里的5个id：V1到V5。\n\n每个的bbox：\nV1: [0.46, 0.48, 0.68, 0.94]\nV2: [0.43, 0.27, 0.58, 0.51]\nV3: [0.35, 0.19, 0.45, 0.37]\nV4: [0.44, 0.12, 0.52, 0.28]\nV5: [0.39, 0.10, 0.50, 0.19]\n\nseen_in：\nV1: [\"global\"]\nV2: [\"global\", \"detail\"]\nV3: [\"global\", \"detail\"]\nV4: [\"global\", \"detail\"]\nV5: [\"global\", \"detail\"]\n\nsize：\nV1: \"large\"\nV2: \"large\"\nV3: \"medium\"\nV4: \"large\"\nV5: \"large\"\n\nvisible：\nV1: \"full\"\nV2: \"partial_top\"\nV3: \"partial_front\"\nV4: \"partial_rear\"\nV5: \"partial_top\"\n\nis_truck都是true，uncertain都是false，uncertain_reasons空数组。\n\nidentity_clues：\nV1: \"White cab with '东风商用车' text, white container, front view, complete visible\"\nV2: \"Red cab, gray container, front view, bottom partially obscured by white truck\"\nV3: \"Red medium cab, front view, complete visible\"\nV4: \"Red container, rear view, partial visible\"\nV5: \"Brown container, rear view, partial visible\"\n\nevidence：\nV1: \"Visible only in global frame, no overlap with detail frame, unique vehicle\"\nV2: \"Visible in both global and detail frames, same vehicle, no duplicate\"\nV3: \"Visible in both global and detail frames, same vehicle, no duplicate\"\nV4: \"Visible in both global and detail frames, same vehicle, no duplicate\"\nV5: \"Visible in both global and detail frames, same vehicle, no duplicate\"\n\nscene_notes: \"All vehicles are clearly visible, no duplicate counting, no ambiguous cases\"\n\n现在把这些整理成正确的JSON，注意不要有语法错误，比如引号都是双引号，数组正确，逗号正确。",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1792588972,
+        "id": "021792588944328314cbdff50da45319a607e6bbd0e7cd82475cc",
+        "model": "doubao-seed-2-0-mini-260428",
+        "service_tier": "default",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 3320,
+          "prompt_tokens": 3606,
+          "total_tokens": 6926,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 2496
+          }
+        }
+      }
+    }
+  ],
+  "transport_retry_count": 0,
+  "status": "failed",
+  "failure_kind": "schema",
+  "failure_reason": "vehicles[2].visible is invalid",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 3320,
+    "prompt_tokens": 3606,
+    "total_tokens": 6926,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2496
+    }
+  },
+  "raw_text": "{\n  \"coordinate_system\": \"original_frame_1280x960_normalized_xyxy\",\n  \"counts\": {\n    \"total\": 5,\n    \"large\": 4,\n    \"medium\": 1,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"id\": \"V1\",\n      \"bbox_full\": [0.46, 0.48, 0.68, 0.94],\n      \"seen_in\": [\"global\"],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White cab with '东风商用车' text, white container, front view, complete visible\",\n      \"evidence\": \"Visible only in global frame, no overlap with detail frame, unique vehicle\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V2\",\n      \"bbox_full\": [0.43, 0.27, 0.58, 0.51],\n      \"seen_in\": [\"global\", \"detail\"],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, gray container, front view, bottom partially obscured by white truck\",\n      \"evidence\": \"Visible in both global and detail frames, same vehicle, no duplicate\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V3\",\n      \"bbox_full\": [0.35, 0.19, 0.45, 0.37],\n      \"seen_in\": [\"global\", \"detail\"],\n      \"size\": \"medium\",\n      \"visible\": \"partial_front\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red medium cab, front view, complete visible\",\n      \"evidence\": \"Visible in both global and detail frames, same vehicle, no duplicate\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V4\",\n      \"bbox_full\": [0.44, 0.12, 0.52, 0.28],\n      \"seen_in\": [\"global\", \"detail\"],\n      \"size\": \"large\",\n      \"visible\": \"partial_rear\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red container, rear view, partial visible\",\n      \"evidence\": \"Visible in both global and detail frames, same vehicle, no duplicate\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V5\",\n      \"bbox_full\": [0.39, 0.10, 0.50, 0.19],\n      \"seen_in\": [\"global\", \"detail\"],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Brown container, rear view, partial visible\",\n      \"evidence\": \"Visible in both global and detail frames, same vehicle, no duplicate\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    }\n  ],\n  \"scene_notes\": \"All vehicles are clearly visible, no duplicate counting, no ambiguous cases\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "coordinate_system": "original_frame_1280x960_normalized_xyxy",
+    "counts": {
+      "total": 5,
+      "large": 4,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "id": "V1",
+        "bbox_full": [
+          0.46,
+          0.48,
+          0.68,
+          0.94
+        ],
+        "seen_in": [
+          "global"
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "White cab with '东风商用车' text, white container, front view, complete visible",
+        "evidence": "Visible only in global frame, no overlap with detail frame, unique vehicle",
+        "uncertain": false,
+        "uncertain_reasons": []
+      },
+      {
+        "id": "V2",
+        "bbox_full": [
+          0.43,
+          0.27,
+          0.58,
+          0.51
+        ],
+        "seen_in": [
+          "global",
+          "detail"
+        ],
+        "size": "large",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "Red cab, gray container, front view, bottom partially obscured by white truck",
+        "evidence": "Visible in both global and detail frames, same vehicle, no duplicate",
+        "uncertain": false,
+        "uncertain_reasons": []
+      },
+      {
+        "id": "V3",
+        "bbox_full": [
+          0.35,
+          0.19,
+          0.45,
+          0.37
+        ],
+        "seen_in": [
+          "global",
+          "detail"
+        ],
+        "size": "medium",
+        "visible": "partial_front",
+        "is_truck": true,
+        "identity_clues": "Red medium cab, front view, complete visible",
+        "evidence": "Visible in both global and detail frames, same vehicle, no duplicate",
+        "uncertain": false,
+        "uncertain_reasons": []
+      },
+      {
+        "id": "V4",
+        "bbox_full": [
+          0.44,
+          0.12,
+          0.52,
+          0.28
+        ],
+        "seen_in": [
+          "global",
+          "detail"
+        ],
+        "size": "large",
+        "visible": "partial_rear",
+        "is_truck": true,
+        "identity_clues": "Red container, rear view, partial visible",
+        "evidence": "Visible in both global and detail frames, same vehicle, no duplicate",
+        "uncertain": false,
+        "uncertain_reasons": []
+      },
+      {
+        "id": "V5",
+        "bbox_full": [
+          0.39,
+          0.1,
+          0.5,
+          0.19
+        ],
+        "seen_in": [
+          "global",
+          "detail"
+        ],
+        "size": "large",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "Brown container, rear view, partial visible",
+        "evidence": "Visible in both global and detail frames, same vehicle, no duplicate",
+        "uncertain": false,
+        "uncertain_reasons": []
+      }
+    ],
+    "scene_notes": "All vehicles are clearly visible, no duplicate counting, no ambiguous cases",
+    "uncertain_reasons": []
+  },
+  "raw_bbox_audit": [
+    {
+      "id": "V1",
+      "bbox_full_normalized": [
+        0.46,
+        0.48,
+        0.68,
+        0.94
+      ],
+      "bbox_full_pixels_1280x960": [
+        588.8,
+        460.8,
+        870.4,
+        902.4
+      ]
+    },
+    {
+      "id": "V2",
+      "bbox_full_normalized": [
+        0.43,
+        0.27,
+        0.58,
+        0.51
+      ],
+      "bbox_full_pixels_1280x960": [
+        550.4,
+        259.2,
+        742.4,
+        489.6
+      ]
+    },
+    {
+      "id": "V3",
+      "bbox_full_normalized": [
+        0.35,
+        0.19,
+        0.45,
+        0.37
+      ],
+      "bbox_full_pixels_1280x960": [
+        448.0,
+        182.4,
+        576.0,
+        355.2
+      ]
+    },
+    {
+      "id": "V4",
+      "bbox_full_normalized": [
+        0.44,
+        0.12,
+        0.52,
+        0.28
+      ],
+      "bbox_full_pixels_1280x960": [
+        563.2,
+        115.2,
+        665.6,
+        268.8
+      ]
+    },
+    {
+      "id": "V5",
+      "bbox_full_normalized": [
+        0.39,
+        0.1,
+        0.5,
+        0.19
+      ],
+      "bbox_full_pixels_1280x960": [
+        499.2,
+        96.0,
+        640.0,
+        182.4
+      ]
+    }
+  ],
+  "validation_errors": [
+    "vehicles[2].visible is invalid"
+  ],
+  "output_audit": {
+    "vehicle_count": 5,
+    "unique_id_count": 5,
+    "declared_counts": {
+      "total": 5,
+      "large": 4,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "observed_size_counts": {
+      "large": 4,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "seen_in_counts": {
+      "global": 5,
+      "detail": 4,
+      "both": 4
+    },
+    "bbox_count": 5,
+    "bbox_duplicate_candidates_iou_ge_0_85": []
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_2400_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 10.93,
+      "usage": {
+        "completion_tokens": 1126,
+        "prompt_tokens": 1776,
+        "total_tokens": 2902,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 700
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.34,
+              0.62,
+              0.635,
+              0.999
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "灰色厢式货厢，红色车尾，左侧车门打开",
+            "evidence": "画面下方中间位置，完整可见的厢式货车",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.425,
+              0.255,
+              0.55,
+              0.45
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "红色金属货厢，带有黄色反光标识",
+            "evidence": "画面中间位置，灰色货车后方，单独可见的半挂货厢",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.42,
+              0.145,
+              0.605,
+              0.275
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "红色货柜，带有编号标识",
+            "evidence": "画面上方通道尽头附近，单独可见的货厢",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "共3辆可见货车，其中2辆为单独货厢，1辆为完整厢式货车，无被完全遮挡或无法确定的车辆",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.34, 0.62, 0.635, 0.999],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"灰色厢式货厢，红色车尾，左侧车门打开\",\n      \"evidence\": \"画面下方中间位置，完整可见的厢式货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.425, 0.255, 0.55, 0.45],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色金属货厢，带有黄色反光标识\",\n      \"evidence\": \"画面中间位置，灰色货车后方，单独可见的半挂货厢\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.42, 0.145, 0.605, 0.275],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货柜，带有编号标识\",\n      \"evidence\": \"画面上方通道尽头附近，单独可见的货厢\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"共3辆可见货车，其中2辆为单独货厢，1辆为完整厢式货车，无被完全遮挡或无法确定的车辆\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_2400_aisle.jpg"
+    }
+  ]
+}

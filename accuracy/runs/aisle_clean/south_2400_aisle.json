@@ -1,0 +1,79 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\south_2400_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 9.8,
+      "usage": {
+        "completion_tokens": 1063,
+        "prompt_tokens": 1776,
+        "total_tokens": 2839,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 623
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 2,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.38,
+              0.47,
+              0.63,
+              0.88
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red heavy-duty cab with 'SITRAK' text, open driver door, front headlights illuminated",
+            "evidence": "Fully visible at the bottom center of the image, a large truck with enclosed cargo area",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.31,
+              0.22,
+              0.43,
+              0.4
+            ],
+            "size": "medium",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "White box-type truck, front grille and logo visible, cargo area is white enclosed box",
+            "evidence": "Located in the left middle aisle, fully visible as a medium-sized box truck",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.44,
+              0.19,
+              0.54,
+              0.32
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red heavy-duty truck, cargo on top of its cab, front grille visible",
+            "evidence": "Located in the upper middle aisle behind the white box truck, fully visible as a large truck",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "All trucks are in the central aisle, no significant occlusion, all fully visible within the frame",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 2, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.38, 0.47, 0.63, 0.88],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red heavy-duty cab with 'SITRAK' text, open driver door, front headlights illuminated\",\n      \"evidence\": \"Fully visible at the bottom center of the image, a large truck with enclosed cargo area\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.31, 0.22, 0.43, 0.40],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White box-type truck, front grille and logo visible, cargo area is white enclosed box\",\n      \"evidence\": \"Located in the left middle aisle, fully visible as a medium-sized box truck\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.19, 0.54, 0.32],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red heavy-duty truck, cargo on top of its cab, front grille visible\",\n      \"evidence\": \"Located in the upper middle aisle behind the white box truck, fully visible as a large truck\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All trucks are in the central aisle, no significant occlusion, all fully visible within the frame\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\south_2400_aisle.jpg"
+    }
+  ]
+}

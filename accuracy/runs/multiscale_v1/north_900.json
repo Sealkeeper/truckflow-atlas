@@ -1,0 +1,245 @@
+{
+  "schema": "truckflow-multiscale-sample-v1",
+  "sample_id": "north_900",
+  "sample_index": 10,
+  "started_at": "2026-10-21T13:19:58+00:00",
+  "finished_at": "2026-10-21T13:20:15+00:00",
+  "wall_latency_s": 17.164,
+  "images": {
+    "order": [
+      "global",
+      "detail"
+    ],
+    "global": {
+      "path": "accuracy/crops/north_900_aisle.jpg",
+      "sha256": "89b8b383c73f27dfba4d16c8cf42f9b3ea27ac58b935d310ba932459cddce6a7",
+      "size": [
+        1040,
+        1920
+      ]
+    },
+    "detail": {
+      "path": "accuracy/crops/multiscale_v1/detail/north_900.jpg",
+      "sha256": "45f86c1a95213f918c2d080ad414fd0c85d05dcb026ef01b4d3a8bfd7b794d39",
+      "size": [
+        560,
+        1120
+      ]
+    }
+  },
+  "request_metadata": {
+    "model_id": "ep-20260828174616-dthpx",
+    "temperature": 0,
+    "max_tokens": 6000,
+    "input_order": [
+      "global",
+      "detail"
+    ],
+    "prompt_sha256": "656465095b844a0ea71967b97fbd7339bb4ae35e2475a7da16a25496fac2e17f"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-21T13:19:58+00:00",
+      "latency_s": 17.164,
+      "http_status": 200,
+      "url": "https://ark.cn-beijing.volces.com/api/v3/chat/completions",
+      "response_headers_subset": {
+        "x-request-id": "021792588797882314cbdff50da45319a607e6bbd0e7cd8ab85fe",
+        "content-type": "application/json; charset=utf-8"
+      },
+      "response_text_if_error": null,
+      "raw_response_body": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "{\n  \"coordinate_system\": \"original_frame_1280x960_normalized_xyxy\",\n  \"counts\": {\n    \"total\": 3,\n    \"large\": 2,\n    \"medium\": 1,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"id\": \"V1\",\n      \"bbox_full\": [0.33, 0.37, 0.55, 0.65],\n      \"seen_in\": [\"global\"],\n      \"size\": \"large\",\n      \"visible\": \"partial_rear\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cargo truck with rear doors marked '9L88 580', rear orientation, located in the middle of the aisle\",\n      \"evidence\": \"Visible in Figure1 (global view), unique identity via rear door markings, no overlap with other vehicles\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V2\",\n      \"bbox_full\": [0.17, 0.61, 0.53, 0.99],\n      \"seen_in\": [\"global\"],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White truck with corrugated side panels, full front and trailer visible, located at lower part of the aisle\",\n      \"evidence\": \"Visible in Figure1 (global view), unique identity via white color and corrugated texture, no duplicate entries\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V3\",\n      \"bbox_full\": [0.41, 0.15, 0.56, 0.31],\n      \"seen_in\": [\"global\", \"detail\"],\n      \"size\": \"medium\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Truck with blue roof, dark body, located at far end of the aisle\",\n      \"evidence\": \"Visible in both Figure1 (global) and Figure2 (detail) views, confirmed as truck from both perspectives, no duplicate identification\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    }\n  ],\n  \"scene_notes\": \"All vehicles are within the aisle, no ambiguous or duplicate entries; V3 is partially visible at the far end and confirmed via both views\",\n  \"uncertain_reasons\": []\n}",
+              "reasoning_content": "Okay, let's tackle this step by step. First, I need to identify all the vehicles from both images, making sure not to double count.\n\nLooking at Figure 1 (global):\n1. There's a red cargo truck (V1) in the middle, lower part. Its bbox in original frame: let's see, x0 around 0.3, y0 ~0.35, x1 ~0.55, y1 ~0.65. It's a large truck, trailer only? Wait no, wait there's a white truck (V2) below it, the one with the corrugated roof. Then another truck in the upper part, near the back, with blue roof (V3). Wait wait, let's check Figure 2 (detail) which is the upper part. The blue roof truck is in both Figure1 and Figure2.\n\nWait let's list each unique vehicle:\n- V1: Red cargo truck (middle, rear part visible in Figure1). Bbox: [0.32, 0.36, 0.54, 0.64]. Size large, visible partial rear. Seen in global.\n- V2: White truck with corrugated roof (lower part, front of red truck). Bbox: [0.18, 0.62, 0.52, 0.99]. Size large, visible full (front and trailer). Seen in global.\n- V3: Blue roof truck (upper part, near back, in both Figure1 and Figure2). Bbox: [0.42, 0.16, 0.56, 0.32]. Size medium? Wait it's a truck with blue roof, in the detail image. Seen in both global and detail.\nWait wait, is there another? Let's check: in Figure1, upper part, the blue roof truck is one, then the red one, white one. Are there any others? Let's see: no, the rest are people or equipment. Wait wait, let's confirm:\n\nWait the count should be 3? Wait no, wait let's check again. Let's make sure:\n1. White truck (V2): large, full, seen in global.\n2. Red truck (V1): large, partial rear, seen in global.\n3. Blue roof truck (V3): medium, partial (since upper part), seen in both global and detail.\n\nWait is that all? Let's check the rules: no hand carts, people, etc. So total 3 vehicles. Let's assign IDs correctly.\n\nWait let's get their bboxes right:\nV1: Red cargo truck. In Figure1, it's from x ~0.33 to 0.55, y ~0.37 to 0.65. So bbox [0.33, 0.37, 0.55, 0.65]. Size large, visible partial rear. Is it a truck? Yes. Uncertain? No. Identity clues: red, rear doors with \"9L88 580\" text, rear orientation. Evidence: visible in Figure1, no overlap with others.\n\nV2: White truck with corrugated roof. Bbox [0.17, 0.61, 0.53, 0.99]. Size large, visible full (front and trailer). Seen in global. Identity clues: white, corrugated side panels, front cab visible. Evidence: only in Figure1, no duplicate.\n\nV3: Blue roof truck. Bbox: in Figure1, it's at x ~0.41, y ~0.15 to 0.31. So [0.41,0.15,0.56,0.31]. Size medium, visible partial (upper part). Seen in both global and detail. Identity clues: blue roof, dark body, located at the far end of the aisle. Evidence: present in both Figure1 and Figure2, no duplicate.\n\nWait counts: total 3, large:2 (V1, V2), medium:1 (V3). That adds up.\n\nScene notes: All vehicles are in the aisle, no major occlusion except V1 is partially behind V2? No, V2 is below V1, so V1 is above V2, so V1 is not occluded by V2. Correct.\n\nUncertain reasons: none.\n\nWait wait, is V3 a truck? Yes, it's a truck with blue roof, so is_truck true.\n\nLet me structure this into the JSON properly, making sure all fields are correct. Let's check each part:\n\ncoordinate_system is \"original_frame_1280x960_normalized_xyxy\".\n\ncounts: total 3, large:2, medium:1, small:0, unknown:0.\n\nvehicles array:\nFirst V1: id \"V1\", bbox [0.33,0.37,0.55,0.65], seen_in [\"global\"], size \"large\", visible \"partial_rear\", is_truck true, identity_clues \"Red cargo truck with rear doors marked '9L88 580', rear orientation, located in the middle of the aisle\", evidence \"Visible in Figure1 (global view), no overlap with other vehicles, unique identity via rear markings\", uncertain false, uncertain_reasons [].\n\nV2: id \"V2\", bbox [0.17,0.61,0.53,0.99], seen_in [\"global\"], size \"large\", visible \"full\", is_truck true, identity_clues \"White truck with corrugated side panels, full front and trailer visible, located at lower part of the aisle\", evidence \"Visible in Figure1 (global view), unique identity via white color and corrugated texture\", uncertain false.\n\nV3: id \"V3\", bbox [0.41,0.15,0.56,0.31], seen_in [\"global\",\"detail\"], size \"medium\", visible \"partial_top\", is_truck true, identity_clues \"Truck with blue roof, dark body, located at far end of the aisle\", evidence \"Visible in both Figure1 (global) and Figure2 (detail) views, no duplicate, confirmed as truck from both views\", uncertain false.\n\nScene notes: \"All vehicles are within the aisle, no ambiguous or duplicate entries; V3 is partially visible at the far end, confirmed via both views.\"\n\nUncertain_reasons: []\n\nWait that should be it. Let me make sure no mistakes. Did I miss any vehicles? Let's check again: Figure1 has three distinct trucks, Figure2 only shows the far one (V3), so no duplicates. Correct. No other vehicles, people are excluded, hand carts excluded. So total 3, which matches counts.total=3, large=2, medium=1. Perfect.",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1792588814,
+        "id": "021792588797882314cbdff50da45319a607e6bbd0e7cd8ab85fe",
+        "model": "doubao-seed-2-0-mini-260428",
+        "service_tier": "default",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 2123,
+          "prompt_tokens": 3606,
+          "total_tokens": 5729,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1513
+          }
+        }
+      }
+    }
+  ],
+  "transport_retry_count": 0,
+  "status": "ok",
+  "failure_kind": null,
+  "failure_reason": null,
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2123,
+    "prompt_tokens": 3606,
+    "total_tokens": 5729,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1513
+    }
+  },
+  "raw_text": "{\n  \"coordinate_system\": \"original_frame_1280x960_normalized_xyxy\",\n  \"counts\": {\n    \"total\": 3,\n    \"large\": 2,\n    \"medium\": 1,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"id\": \"V1\",\n      \"bbox_full\": [0.33, 0.37, 0.55, 0.65],\n      \"seen_in\": [\"global\"],\n      \"size\": \"large\",\n      \"visible\": \"partial_rear\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cargo truck with rear doors marked '9L88 580', rear orientation, located in the middle of the aisle\",\n      \"evidence\": \"Visible in Figure1 (global view), unique identity via rear door markings, no overlap with other vehicles\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V2\",\n      \"bbox_full\": [0.17, 0.61, 0.53, 0.99],\n      \"seen_in\": [\"global\"],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White truck with corrugated side panels, full front and trailer visible, located at lower part of the aisle\",\n      \"evidence\": \"Visible in Figure1 (global view), unique identity via white color and corrugated texture, no duplicate entries\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V3\",\n      \"bbox_full\": [0.41, 0.15, 0.56, 0.31],\n      \"seen_in\": [\"global\", \"detail\"],\n      \"size\": \"medium\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Truck with blue roof, dark body, located at far end of the aisle\",\n      \"evidence\": \"Visible in both Figure1 (global) and Figure2 (detail) views, confirmed as truck from both perspectives, no duplicate identification\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    }\n  ],\n  \"scene_notes\": \"All vehicles are within the aisle, no ambiguous or duplicate entries; V3 is partially visible at the far end and confirmed via both views\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "coordinate_system": "original_frame_1280x960_normalized_xyxy",
+    "counts": {
+      "total": 3,
+      "large": 2,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "id": "V1",
+        "bbox_full": [
+          0.33,
+          0.37,
+          0.55,
+          0.65
+        ],
+        "seen_in": [
+          "global"
+        ],
+        "size": "large",
+        "visible": "partial_rear",
+        "is_truck": true,
+        "identity_clues": "Red cargo truck with rear doors marked '9L88 580', rear orientation, located in the middle of the aisle",
+        "evidence": "Visible in Figure1 (global view), unique identity via rear door markings, no overlap with other vehicles",
+        "uncertain": false,
+        "uncertain_reasons": []
+      },
+      {
+        "id": "V2",
+        "bbox_full": [
+          0.17,
+          0.61,
+          0.53,
+          0.99
+        ],
+        "seen_in": [
+          "global"
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "White truck with corrugated side panels, full front and trailer visible, located at lower part of the aisle",
+        "evidence": "Visible in Figure1 (global view), unique identity via white color and corrugated texture, no duplicate entries",
+        "uncertain": false,
+        "uncertain_reasons": []
+      },
+      {
+        "id": "V3",
+        "bbox_full": [
+          0.41,
+          0.15,
+          0.56,
+          0.31
+        ],
+        "seen_in": [
+          "global",
+          "detail"
+        ],
+        "size": "medium",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "Truck with blue roof, dark body, located at far end of the aisle",
+        "evidence": "Visible in both Figure1 (global) and Figure2 (detail) views, confirmed as truck from both perspectives, no duplicate identification",
+        "uncertain": false,
+        "uncertain_reasons": []
+      }
+    ],
+    "scene_notes": "All vehicles are within the aisle, no ambiguous or duplicate entries; V3 is partially visible at the far end and confirmed via both views",
+    "uncertain_reasons": []
+  },
+  "raw_bbox_audit": [
+    {
+      "id": "V1",
+      "bbox_full_normalized": [
+        0.33,
+        0.37,
+        0.55,
+        0.65
+      ],
+      "bbox_full_pixels_1280x960": [
+        422.4,
+        355.2,
+        704.0,
+        624.0
+      ]
+    },
+    {
+      "id": "V2",
+      "bbox_full_normalized": [
+        0.17,
+        0.61,
+        0.53,
+        0.99
+      ],
+      "bbox_full_pixels_1280x960": [
+        217.6,
+        585.6,
+        678.4,
+        950.4
+      ]
+    },
+    {
+      "id": "V3",
+      "bbox_full_normalized": [
+        0.41,
+        0.15,
+        0.56,
+        0.31
+      ],
+      "bbox_full_pixels_1280x960": [
+        524.8,
+        144.0,
+        716.8,
+        297.6
+      ]
+    }
+  ],
+  "validation_errors": [],
+  "output_audit": {
+    "vehicle_count": 3,
+    "unique_id_count": 3,
+    "declared_counts": {
+      "total": 3,
+      "large": 2,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "observed_size_counts": {
+      "large": 2,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "seen_in_counts": {
+      "global": 3,
+      "detail": 1,
+      "both": 1
+    },
+    "bbox_count": 3,
+    "bbox_duplicate_candidates_iou_ge_0_85": []
+  }
+}

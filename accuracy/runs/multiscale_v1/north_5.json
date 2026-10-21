@@ -1,0 +1,283 @@
+{
+  "schema": "truckflow-multiscale-sample-v1",
+  "sample_id": "north_5",
+  "sample_index": 8,
+  "started_at": "2026-10-21T13:19:18+00:00",
+  "finished_at": "2026-10-21T13:19:40+00:00",
+  "wall_latency_s": 21.631,
+  "images": {
+    "order": [
+      "global",
+      "detail"
+    ],
+    "global": {
+      "path": "accuracy/crops/north_5_aisle.jpg",
+      "sha256": "8b98320e3ec5d913b48234ac6b2eabc906a943a3d26cbeeb40e53428f1574689",
+      "size": [
+        1040,
+        1920
+      ]
+    },
+    "detail": {
+      "path": "accuracy/crops/multiscale_v1/detail/north_5.jpg",
+      "sha256": "6b17a2823144d36a8a28382d21d1f8275ee347ecb8c487fc8327ce6c2a2a2c59",
+      "size": [
+        560,
+        1120
+      ]
+    }
+  },
+  "request_metadata": {
+    "model_id": "ep-20260828174616-dthpx",
+    "temperature": 0,
+    "max_tokens": 6000,
+    "input_order": [
+      "global",
+      "detail"
+    ],
+    "prompt_sha256": "656465095b844a0ea71967b97fbd7339bb4ae35e2475a7da16a25496fac2e17f"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-21T13:19:18+00:00",
+      "latency_s": 21.63,
+      "http_status": 200,
+      "url": "https://ark.cn-beijing.volces.com/api/v3/chat/completions",
+      "response_headers_subset": {
+        "x-request-id": "021792588758324314cbdff50da45319a607e6bbd0e7cd81be745",
+        "content-type": "application/json; charset=utf-8"
+      },
+      "response_text_if_error": null,
+      "raw_response_body": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "{\n  \"coordinate_system\": \"original_frame_1280x960_normalized_xyxy\",\n  \"counts\": {\n    \"total\": 4,\n    \"large\": 2,\n    \"medium\": 2,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"id\": \"V1\",\n      \"bbox_full\": [0.27, 0.50, 0.54, 0.92],\n      \"seen_in\": [\"global\"],\n      \"size\": \"large\",\n      \"visible\": \"full_rear\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货厢，后视图，车牌QL66002，位于通道近景左侧\",\n      \"evidence\": \"仅在图1全局通道中可见，为独立大型货车，无重复匹配\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V2\",\n      \"bbox_full\": [0.37, 0.24, 0.55, 0.46],\n      \"seen_in\": [\"global\", \"detail\"],\n      \"size\": \"medium\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色货厢顶，侧视图，货厢上有两个黄色长方体货物，位于通道中间左侧\",\n      \"evidence\": \"图1全局和图2细节均可见，位置匹配，为同一中型货车\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V3\",\n      \"bbox_full\": [0.42, 0.15, 0.56, 0.35],\n      \"seen_in\": [\"global\", \"detail\"],\n      \"size\": \"medium\",\n      \"visible\": \"partial_rear\",\n      \"is_truck\": true,\n      \"identity_clues\": \"黑色货厢，白色顶，位于V2后方，通道中间\",\n      \"evidence\": \"图1全局和图2细节均可见，与V2有明显间隙，为独立中型货车\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V4\",\n      \"bbox_full\": [0.56, 0.10, 0.68, 0.25],\n      \"seen_in\": [\"global\", \"detail\"],\n      \"size\": \"large\",\n      \"visible\": \"partial_rear\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货厢，远端，位于通道尽头\",\n      \"evidence\": \"图1全局和图2细节均可见，与V3有距离，为独立大型货车\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    }\n  ],\n  \"scene_notes\": \"所有可见货车均已识别，无重复计数，无因遮挡遗漏的车辆，远端车辆均按独立车体计数\",\n  \"uncertain_reasons\": []\n}",
+              "reasoning_content": "\n我现在需要处理用户的请求，把两张图的货车合并成正确的车辆集合，输出符合要求的JSON。首先，先仔细看两张图里的货车：\n\n首先看原图1（全局通道）里的货车：\n1. 最下方的红色大货车，车牌是QL66002，这个是large，在图1里是完整的后视图，seen_in是global。\n2. 中间偏左的蓝色顶的货车，有两个黄色箱子，这个是medium？不对，看位置，图1里的蓝色顶货车，还有它旁边的？不对，再看远端的：\n然后图2是细节放大，看远端的货车：\n- 远端的红色货厢的货车，还有它前面的？不对，图1里远端有个红色的货车（带货厢），还有中间的蓝色顶的那个，还有最前面的红色大货车（V1）。\n等下，重新数：\n首先，图1里可见的货车：\nV1：红色大货车，后视图，车牌QL66002，位置在图1下方，归一化坐标大概是[0.28, 0.5, 0.53, 0.9]，size large，seen_in global，visible full rear。\nV2：蓝色顶的货车，在图1中间，位置[0.38, 0.25, 0.54, 0.45]，这个是medium，seen_in global。\n然后远端的，图1里远端有个红色的货车（带货厢，在通道尽头），还有图2里的远端的货车：图2里的红色货厢的货车，还有它旁边的？不对，图2里的远端，有个红色的货厢（属于一个货车），还有它前面的？不对，再看，图1里通道里的远端，有两个？不，看：\n图1里的通道里，从近到远：\n1. V1：红色大货车（近，后视图）\n2. V2：蓝色顶的货车（中间，侧视图，有两个黄箱子）\n3. V3：远端的红色货车（在通道尽头，车头朝里？不对，图1里最远端的红色货厢的车，还有它前面的？不对，图2里的细节，那个红色货厢的车，还有旁边的？\n哦，不对，用户说不能重复，同一辆车在两图都出现的话，seen_in是两个。现在仔细看，图1里的V2（蓝色顶），图2里也有，所以seen_in是global和detail。然后远端的红色货车，图1里有，图2里也有，所以是V3？\n等下，再数清楚，不要漏，也不要重复：\n现在整理所有可见的货车，符合计数口径的（排除人物、手推车等）：\n1. 近景红色大货车（V1）：在图1，后视图，车牌QL66002，large，visible full rear，seen_in global，is_truck true，uncertain false。\n2. 中间蓝色顶货车（V2）：在图1和图2，侧视图，有两个黄色箱子，medium，visible partial side，seen_in [\"global\",\"detail\"]，is_truck true。\n3. 远端红色货厢货车（V3）：在图1和图2，远端，货厢红色，large，visible partial rear（图1里是远端的货厢，图2里更清楚），seen_in [\"global\",\"detail\"]，is_truck true。\n还有吗？看，图1里中间偏左的红色小推车？不算，是手推车。人物都不算。那有没有第四辆？\n不对，再看，图1里V2旁边的那个红色的小推车？不，是手推车，不算。那远端还有没有？图2里的远端，除了红色货厢的，还有没有？图2里的那个黑色的货车（在蓝色顶货车后面），哦，对，图1里蓝色顶货车后面有个黑色的货车（带白色顶？不对，图1里蓝色顶货车后面是个黑色的，带白色的顶？不对，图1里的结构：从近到远，通道左边的货车：V1（红），V2（蓝顶），然后V2后面是黑色的货车（带白色的顶？），然后再后面是红色货厢的货车。那这个黑色的货车，在图1里有，图2里也有吗？图2里的细节，蓝色顶后面的黑色货车，是的，那这个是V4？\n哦，我刚才漏了。那现在重新数：\nV1：近景红色大货车，large，seen_in global，bbox [0.27, 0.5, 0.54, 0.92]（归一化，原帧1280x960）\nV2：中间蓝色顶货车，medium，seen_in [\"global\",\"detail\"]，bbox [0.37, 0.24, 0.55, 0.46]\nV3：黑色顶（带白色？）的货车，在V2后面，medium，seen_in [\"global\",\"detail\"]，bbox [0.42, 0.15, 0.56, 0.35]\nV4：远端红色货厢货车，large，seen_in [\"global\",\"detail\"]，bbox [0.56, 0.1, 0.68, 0.25]\n对吗？再检查，这些都是货车，不是其他。那现在counts.total是4，large是2（V1和V4），medium是2（V2和V3），small是0，unknown是0。\n然后scene_notes：无遮挡导致的漏记，所有可见货车都已识别，无重复。\n现在要把每个的bbox正确映射，比如图2里的V2，图2的局部坐标是dx=0.3到0.5，dy=0.2到0.4，所以原帧px=(480 +280*0.4)/1280 = (480+112)/1280=592/1280=0.46，py=(60+560*0.3)/960=(60+168)/960=228/960=0.2375，所以V2的bbox在原帧是[0.37,0.24,0.55,0.46]，正确。\n然后每个的identity_clues：比如V1是红色货厢，车牌QL66002，后视图，位置近景；V2是蓝色货厢顶，两个黄色箱子，侧视图；V3是黑色货厢，白色顶，在V2后方；V4是红色货厢，远端，车头朝通道内。\nevidence：每个车在图1和/或图2的定位，去重依据是同一车在两图的位置匹配，没有重复。\n现在整理成严格的JSON，注意所有字段都符合要求，没有额外内容。\n等下，再确认有没有错误：比如，V3那个黑色的货车，是不是和V2是同一辆？不是，因为V2是蓝色顶，V3是黑色顶，中间有间隙，所以是独立的。V4是远端的红色货厢，和前面的V3是独立的，因为有距离，所以是独立的。\n那现在counts.total是4，large是2，medium是2，small是0，unknown是0。\n然后vehicles数组有4个元素，id分别是V1,V2,V3,V4。\n现在写出来，确保格式正确，没有语法错误，所有坐标都是归一化的，x0<x1，y0<y1。\n还有，seen_in的数组，比如V1只在global，所以seen_in是[\"global\"]，V2是[\"global\",\"detail\"]，V3是[\"global\",\"detail\"]，V4是[\"global\",\"detail\"]。\nvisible字段：V1是full rear，V2是partial side，V3是partial rear（图1里是部分，图2里是部分），V4是partial rear（远端，部分可见）。\nis_truck都是true，uncertain都是false，uncertain_reasons是空数组。\nscene_notes：\"所有可见货车均已识别，无重复计数，无因遮挡遗漏的车辆\"。\n现在把这些整理成正确的JSON，注意不要有任何markdown，就是纯JSON。",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1792588779,
+        "id": "021792588758324314cbdff50da45319a607e6bbd0e7cd81be745",
+        "model": "doubao-seed-2-0-mini-260428",
+        "service_tier": "default",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 2676,
+          "prompt_tokens": 3606,
+          "total_tokens": 6282,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1938
+          }
+        }
+      }
+    }
+  ],
+  "transport_retry_count": 0,
+  "status": "failed",
+  "failure_kind": "schema",
+  "failure_reason": "vehicles[0].visible is invalid",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2676,
+    "prompt_tokens": 3606,
+    "total_tokens": 6282,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1938
+    }
+  },
+  "raw_text": "{\n  \"coordinate_system\": \"original_frame_1280x960_normalized_xyxy\",\n  \"counts\": {\n    \"total\": 4,\n    \"large\": 2,\n    \"medium\": 2,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"id\": \"V1\",\n      \"bbox_full\": [0.27, 0.50, 0.54, 0.92],\n      \"seen_in\": [\"global\"],\n      \"size\": \"large\",\n      \"visible\": \"full_rear\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货厢，后视图，车牌QL66002，位于通道近景左侧\",\n      \"evidence\": \"仅在图1全局通道中可见，为独立大型货车，无重复匹配\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V2\",\n      \"bbox_full\": [0.37, 0.24, 0.55, 0.46],\n      \"seen_in\": [\"global\", \"detail\"],\n      \"size\": \"medium\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色货厢顶，侧视图，货厢上有两个黄色长方体货物，位于通道中间左侧\",\n      \"evidence\": \"图1全局和图2细节均可见，位置匹配，为同一中型货车\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V3\",\n      \"bbox_full\": [0.42, 0.15, 0.56, 0.35],\n      \"seen_in\": [\"global\", \"detail\"],\n      \"size\": \"medium\",\n      \"visible\": \"partial_rear\",\n      \"is_truck\": true,\n      \"identity_clues\": \"黑色货厢，白色顶，位于V2后方，通道中间\",\n      \"evidence\": \"图1全局和图2细节均可见，与V2有明显间隙，为独立中型货车\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V4\",\n      \"bbox_full\": [0.56, 0.10, 0.68, 0.25],\n      \"seen_in\": [\"global\", \"detail\"],\n      \"size\": \"large\",\n      \"visible\": \"partial_rear\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货厢，远端，位于通道尽头\",\n      \"evidence\": \"图1全局和图2细节均可见，与V3有距离，为独立大型货车\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    }\n  ],\n  \"scene_notes\": \"所有可见货车均已识别，无重复计数，无因遮挡遗漏的车辆，远端车辆均按独立车体计数\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "coordinate_system": "original_frame_1280x960_normalized_xyxy",
+    "counts": {
+      "total": 4,
+      "large": 2,
+      "medium": 2,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "id": "V1",
+        "bbox_full": [
+          0.27,
+          0.5,
+          0.54,
+          0.92
+        ],
+        "seen_in": [
+          "global"
+        ],
+        "size": "large",
+        "visible": "full_rear",
+        "is_truck": true,
+        "identity_clues": "红色货厢，后视图，车牌QL66002，位于通道近景左侧",
+        "evidence": "仅在图1全局通道中可见，为独立大型货车，无重复匹配",
+        "uncertain": false,
+        "uncertain_reasons": []
+      },
+      {
+        "id": "V2",
+        "bbox_full": [
+          0.37,
+          0.24,
+          0.55,
+          0.46
+        ],
+        "seen_in": [
+          "global",
+          "detail"
+        ],
+        "size": "medium",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "蓝色货厢顶，侧视图，货厢上有两个黄色长方体货物，位于通道中间左侧",
+        "evidence": "图1全局和图2细节均可见，位置匹配，为同一中型货车",
+        "uncertain": false,
+        "uncertain_reasons": []
+      },
+      {
+        "id": "V3",
+        "bbox_full": [
+          0.42,
+          0.15,
+          0.56,
+          0.35
+        ],
+        "seen_in": [
+          "global",
+          "detail"
+        ],
+        "size": "medium",
+        "visible": "partial_rear",
+        "is_truck": true,
+        "identity_clues": "黑色货厢，白色顶，位于V2后方，通道中间",
+        "evidence": "图1全局和图2细节均可见，与V2有明显间隙，为独立中型货车",
+        "uncertain": false,
+        "uncertain_reasons": []
+      },
+      {
+        "id": "V4",
+        "bbox_full": [
+          0.56,
+          0.1,
+          0.68,
+          0.25
+        ],
+        "seen_in": [
+          "global",
+          "detail"
+        ],
+        "size": "large",
+        "visible": "partial_rear",
+        "is_truck": true,
+        "identity_clues": "红色货厢，远端，位于通道尽头",
+        "evidence": "图1全局和图2细节均可见，与V3有距离，为独立大型货车",
+        "uncertain": false,
+        "uncertain_reasons": []
+      }
+    ],
+    "scene_notes": "所有可见货车均已识别，无重复计数，无因遮挡遗漏的车辆，远端车辆均按独立车体计数",
+    "uncertain_reasons": []
+  },
+  "raw_bbox_audit": [
+    {
+      "id": "V1",
+      "bbox_full_normalized": [
+        0.27,
+        0.5,
+        0.54,
+        0.92
+      ],
+      "bbox_full_pixels_1280x960": [
+        345.6,
+        480.0,
+        691.2,
+        883.2
+      ]
+    },
+    {
+      "id": "V2",
+      "bbox_full_normalized": [
+        0.37,
+        0.24,
+        0.55,
+        0.46
+      ],
+      "bbox_full_pixels_1280x960": [
+        473.6,
+        230.4,
+        704.0,
+        441.6
+      ]
+    },
+    {
+      "id": "V3",
+      "bbox_full_normalized": [
+        0.42,
+        0.15,
+        0.56,
+        0.35
+      ],
+      "bbox_full_pixels_1280x960": [
+        537.6,
+        144.0,
+        716.8,
+        336.0
+      ]
+    },
+    {
+      "id": "V4",
+      "bbox_full_normalized": [
+        0.56,
+        0.1,
+        0.68,
+        0.25
+      ],
+      "bbox_full_pixels_1280x960": [
+        716.8,
+        96.0,
+        870.4,
+        240.0
+      ]
+    }
+  ],
+  "validation_errors": [
+    "vehicles[0].visible is invalid"
+  ],
+  "output_audit": {
+    "vehicle_count": 4,
+    "unique_id_count": 4,
+    "declared_counts": {
+      "total": 4,
+      "large": 2,
+      "medium": 2,
+      "small": 0,
+      "unknown": 0
+    },
+    "observed_size_counts": {
+      "large": 2,
+      "medium": 2,
+      "small": 0,
+      "unknown": 0
+    },
+    "seen_in_counts": {
+      "global": 4,
+      "detail": 3,
+      "both": 3
+    },
+    "bbox_count": 4,
+    "bbox_duplicate_candidates_iou_ge_0_85": []
+  }
+}
