@@ -1,0 +1,282 @@
+{
+  "schema": "truckflow-multiscale-sample-v1",
+  "sample_id": "south_1800",
+  "sample_index": 13,
+  "started_at": "2026-10-21T13:20:54+00:00",
+  "finished_at": "2026-10-21T13:21:14+00:00",
+  "wall_latency_s": 19.786,
+  "images": {
+    "order": [
+      "global",
+      "detail"
+    ],
+    "global": {
+      "path": "accuracy/crops/south_1800_aisle.jpg",
+      "sha256": "26deb1af7e5dd15b6baa4f684f821135dacc734516aa3cd1d7754e9d5f530c7f",
+      "size": [
+        1040,
+        1920
+      ]
+    },
+    "detail": {
+      "path": "accuracy/crops/multiscale_v1/detail/south_1800.jpg",
+      "sha256": "96c3e37869a6c71e7ca5f7dc9029786e70ca88f1f574b6f9e9158c2cc4bb10cc",
+      "size": [
+        560,
+        1120
+      ]
+    }
+  },
+  "request_metadata": {
+    "model_id": "ep-20260828174616-dthpx",
+    "temperature": 0,
+    "max_tokens": 6000,
+    "input_order": [
+      "global",
+      "detail"
+    ],
+    "prompt_sha256": "656465095b844a0ea71967b97fbd7339bb4ae35e2475a7da16a25496fac2e17f"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-21T13:20:54+00:00",
+      "latency_s": 19.785,
+      "http_status": 200,
+      "url": "https://ark.cn-beijing.volces.com/api/v3/chat/completions",
+      "response_headers_subset": {
+        "x-request-id": "021792588854065314cbdff50da45319a607e6bbd0e7cd84aabc3",
+        "content-type": "application/json; charset=utf-8"
+      },
+      "response_text_if_error": null,
+      "raw_response_body": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "{\n  \"coordinate_system\": \"original_frame_1280x960_normalized_xyxy\",\n  \"counts\": {\n    \"total\": 4,\n    \"large\": 3,\n    \"medium\": 1,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"id\": \"V1\",\n      \"bbox_full\": [0.44, 0.45, 0.67, 0.92],\n      \"seen_in\": [\"global\"],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White cab with '东风商用车' text, white full trailer, front and rear visible\",\n      \"evidence\": \"Clearly visible in Figure1 global view, no overlap with other vehicles\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V2\",\n      \"bbox_full\": [0.41, 0.28, 0.59, 0.73],\n      \"seen_in\": [\"global\"],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, gray corrugated trailer, positioned between V3 and V1\",\n      \"evidence\": \"Visible in Figure1 global view, distinct from adjacent trucks\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V3\",\n      \"bbox_full\": [0.32, 0.22, 0.45, 0.52],\n      \"seen_in\": [\"global\"],\n      \"size\": \"large\",\n      \"visible\": \"partial_front\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab with blue/white object on top, above V2\",\n      \"evidence\": \"Visible in Figure1 global view, unique position in aisle\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V4\",\n      \"bbox_full\": [0.43, 0.12, 0.55, 0.32],\n      \"seen_in\": [\"global\", \"detail\"],\n      \"size\": \"medium\",\n      \"visible\": \"partial_front\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab at top of aisle, confirmed by both Figure1 and Figure2\",\n      \"evidence\": \"Visible in Figure1 global view, clearer details in Figure2 detail view, no duplicate identification\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    }\n  ],\n  \"scene_notes\": \"Four distinct trucks in central aisle, no duplicate entries, all visible parts confirm unique vehicles\",\n  \"uncertain_reasons\": []\n}",
+              "reasoning_content": "Okay, let's tackle this step by step. First, I need to identify all the trucks from both images, making sure not to duplicate. Let's start with Figure 1 (global aisle):\n\n1. The white Dongfeng truck at the bottom: that's V1. Bbox in original frame: let's see, x from ~0.45 to ~0.68, y from ~0.45 to ~0.9. Size large, seen in global.\n2. The red truck with gray trailer above it: V2. Bbox ~0.42 to ~0.58, y ~0.28 to ~0.7. Size large, global.\n3. The red truck further up: V3. Bbox ~0.32 to ~0.45, y ~0.22 to ~0.5. Size large, global.\n4. The red truck at the very top: V4. Bbox ~0.43 to ~0.55, y ~0.12 to ~0.3. Size medium? Wait, no, let's check Figure 2 (detail) which shows that top truck. Wait, Figure 2's detail includes that top red truck, so that's V4, seen in both global and detail.\n\nWait, let's count again carefully. Let's list each unique truck:\n\nFrom Figure1 (global):\n- Truck 1: White Dongfeng, bottom, full visible. Bbox [0.44, 0.46, 0.67, 0.91]. Size large. Seen in global.\n- Truck2: Red cab with gray trailer, above white one. Bbox [0.41, 0.27, 0.59, 0.72]. Size large. Global.\n- Truck3: Red cab, above truck2. Bbox [0.31, 0.21, 0.46, 0.51]. Size large. Global.\n- Truck4: Red cab, top of aisle, partially visible in Figure1, fully in Figure2. Bbox [0.42, 0.11, 0.56, 0.31]. Size medium. Seen in both global and detail.\n\nWait, is there a fifth? Let's check Figure2: does it add any? No, because Figure2 is a crop of the same frame, so the top truck is already in Figure1, just clearer in Figure2. So total 4 trucks? Wait wait, let's check again. Let's see: in Figure1, the aisle has four trucks: bottom white, then red with gray trailer, then red cab, then top red cab. That's four. Are any of these duplicates? No, each is distinct.\n\nWait let's confirm each:\n\nV1: White Dongfeng truck. Bbox in original frame: x0=0.45, y0=0.45, x1=0.68, y1=0.92. Size large. Visible full. Is truck yes. Identity clues: white cab with \"东风商用车\" text, white trailer. Seen in global. Evidence: clearly visible in Figure1, no overlap with others. Uncertain no.\n\nV2: Red cab with gray trailer. Bbox: x0=0.42, y0=0.28, x1=0.58, y1=0.73. Size large. Visible: cab full, trailer partial (side). Identity: red cab, gray corrugated trailer. Seen in global. Evidence: Figure1 shows this, no duplicate.\n\nV3: Red cab, above V2. Bbox: x0=0.32, y0=0.22, x1=0.45, y1=0.52. Size large. Visible: full cab, partial front. Identity: red cab, blue/white item on top. Seen in global.\n\nV4: Red cab at top of aisle. Bbox: x0=0.43, y0=0.12, x1=0.55, y1=0.32. Size medium. Visible: partial (front). Identity: red cab, seen in both Figure1 and Figure2. So seen_in is [\"global\",\"detail\"]. Evidence: Figure2's detail confirms this is the same truck as in Figure1, no duplicate.\n\nWait, is that all? Let's check if any other trucks. The left side has structures, right side too. No other trucks in the aisle. So total 4 vehicles. Counts: total=4, large=3 (V1, V2, V3), medium=1 (V4), small=0, unknown=0.\n\nNow, let's structure the JSON correctly. Let's make sure each bbox is in original 1280x960 normalized coordinates, so x0 between 0 and1, same for others.\n\nWait let's adjust the bboxes properly:\n\nV1: The white truck is at the bottom, so y from ~0.45 (top of cab) to ~0.92 (bottom of trailer). x from ~0.44 to ~0.67. So [0.44, 0.45, 0.67, 0.92]. Correct.\n\nV2: Red cab with gray trailer: cab is at y ~0.28 to ~0.5, trailer from ~0.4 to ~0.73. So overall bbox [0.41,0.28,0.59,0.73]. Correct.\n\nV3: Red cab above V2: cab from y ~0.22 to ~0.52, x ~0.32 to ~0.45. So [0.32,0.22,0.45,0.52]. Correct.\n\nV4: Top red cab: in Figure1, it's at y ~0.12 to ~0.32, x ~0.43 to ~0.55. So [0.43,0.12,0.55,0.32]. Correct.\n\nNow, identity clues for each:\n\nV1: White cab with \"东风商用车\" text on front, white trailer, visible from front to rear.\n\nV2: Red cab, gray corrugated trailer, positioned between V3 and V1.\n\nV3: Red cab with blue/white object on top, positioned between V4 and V2.\n\nV4: Red cab, top of aisle, partially visible in Figure1, fully in Figure2.\n\nEvidence for V4: Visible in both Figure1 (global) and Figure2 (detail), so no duplicate.\n\nAll are trucks, so is_truck=true. Uncertain is false for all.\n\nScene notes: All trucks are in the central aisle, no occlusion that hides entire trucks. No duplicates.\n\nWait, let's confirm counts: total=4, large=3, medium=1, others 0. Correct.\n\nNow, let's write the JSON properly, making sure no mistakes. Let's check the required fields:\n\ncoordinate_system is \"original_frame_1280x960_normalized_xyxy\".\n\ncounts: total=4, large=3, medium=1, small=0, unknown=0.\n\nvehicles array has 4 entries, each with id V1, V2, V3, V4.\n\nEach entry has bbox_full, seen_in, size, visible, is_truck, identity_clues, evidence, uncertain, uncertain_reasons.\n\nLet's make sure seen_in for V4 is [\"global\",\"detail\"], others [\"global\"].\n\nYes. Let's draft the JSON now.",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1792588873,
+        "id": "021792588854065314cbdff50da45319a607e6bbd0e7cd84aabc3",
+        "model": "doubao-seed-2-0-mini-260428",
+        "service_tier": "default",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 2402,
+          "prompt_tokens": 3606,
+          "total_tokens": 6008,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1706
+          }
+        }
+      }
+    }
+  ],
+  "transport_retry_count": 0,
+  "status": "failed",
+  "failure_kind": "schema",
+  "failure_reason": "vehicles[2].visible is invalid; vehicles[3].visible is invalid",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2402,
+    "prompt_tokens": 3606,
+    "total_tokens": 6008,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1706
+    }
+  },
+  "raw_text": "{\n  \"coordinate_system\": \"original_frame_1280x960_normalized_xyxy\",\n  \"counts\": {\n    \"total\": 4,\n    \"large\": 3,\n    \"medium\": 1,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"id\": \"V1\",\n      \"bbox_full\": [0.44, 0.45, 0.67, 0.92],\n      \"seen_in\": [\"global\"],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White cab with '东风商用车' text, white full trailer, front and rear visible\",\n      \"evidence\": \"Clearly visible in Figure1 global view, no overlap with other vehicles\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V2\",\n      \"bbox_full\": [0.41, 0.28, 0.59, 0.73],\n      \"seen_in\": [\"global\"],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, gray corrugated trailer, positioned between V3 and V1\",\n      \"evidence\": \"Visible in Figure1 global view, distinct from adjacent trucks\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V3\",\n      \"bbox_full\": [0.32, 0.22, 0.45, 0.52],\n      \"seen_in\": [\"global\"],\n      \"size\": \"large\",\n      \"visible\": \"partial_front\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab with blue/white object on top, above V2\",\n      \"evidence\": \"Visible in Figure1 global view, unique position in aisle\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V4\",\n      \"bbox_full\": [0.43, 0.12, 0.55, 0.32],\n      \"seen_in\": [\"global\", \"detail\"],\n      \"size\": \"medium\",\n      \"visible\": \"partial_front\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab at top of aisle, confirmed by both Figure1 and Figure2\",\n      \"evidence\": \"Visible in Figure1 global view, clearer details in Figure2 detail view, no duplicate identification\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    }\n  ],\n  \"scene_notes\": \"Four distinct trucks in central aisle, no duplicate entries, all visible parts confirm unique vehicles\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "coordinate_system": "original_frame_1280x960_normalized_xyxy",
+    "counts": {
+      "total": 4,
+      "large": 3,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "id": "V1",
+        "bbox_full": [
+          0.44,
+          0.45,
+          0.67,
+          0.92
+        ],
+        "seen_in": [
+          "global"
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "White cab with '东风商用车' text, white full trailer, front and rear visible",
+        "evidence": "Clearly visible in Figure1 global view, no overlap with other vehicles",
+        "uncertain": false,
+        "uncertain_reasons": []
+      },
+      {
+        "id": "V2",
+        "bbox_full": [
+          0.41,
+          0.28,
+          0.59,
+          0.73
+        ],
+        "seen_in": [
+          "global"
+        ],
+        "size": "large",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "Red cab, gray corrugated trailer, positioned between V3 and V1",
+        "evidence": "Visible in Figure1 global view, distinct from adjacent trucks",
+        "uncertain": false,
+        "uncertain_reasons": []
+      },
+      {
+        "id": "V3",
+        "bbox_full": [
+          0.32,
+          0.22,
+          0.45,
+          0.52
+        ],
+        "seen_in": [
+          "global"
+        ],
+        "size": "large",
+        "visible": "partial_front",
+        "is_truck": true,
+        "identity_clues": "Red cab with blue/white object on top, above V2",
+        "evidence": "Visible in Figure1 global view, unique position in aisle",
+        "uncertain": false,
+        "uncertain_reasons": []
+      },
+      {
+        "id": "V4",
+        "bbox_full": [
+          0.43,
+          0.12,
+          0.55,
+          0.32
+        ],
+        "seen_in": [
+          "global",
+          "detail"
+        ],
+        "size": "medium",
+        "visible": "partial_front",
+        "is_truck": true,
+        "identity_clues": "Red cab at top of aisle, confirmed by both Figure1 and Figure2",
+        "evidence": "Visible in Figure1 global view, clearer details in Figure2 detail view, no duplicate identification",
+        "uncertain": false,
+        "uncertain_reasons": []
+      }
+    ],
+    "scene_notes": "Four distinct trucks in central aisle, no duplicate entries, all visible parts confirm unique vehicles",
+    "uncertain_reasons": []
+  },
+  "raw_bbox_audit": [
+    {
+      "id": "V1",
+      "bbox_full_normalized": [
+        0.44,
+        0.45,
+        0.67,
+        0.92
+      ],
+      "bbox_full_pixels_1280x960": [
+        563.2,
+        432.0,
+        857.6,
+        883.2
+      ]
+    },
+    {
+      "id": "V2",
+      "bbox_full_normalized": [
+        0.41,
+        0.28,
+        0.59,
+        0.73
+      ],
+      "bbox_full_pixels_1280x960": [
+        524.8,
+        268.8,
+        755.2,
+        700.8
+      ]
+    },
+    {
+      "id": "V3",
+      "bbox_full_normalized": [
+        0.32,
+        0.22,
+        0.45,
+        0.52
+      ],
+      "bbox_full_pixels_1280x960": [
+        409.6,
+        211.2,
+        576.0,
+        499.2
+      ]
+    },
+    {
+      "id": "V4",
+      "bbox_full_normalized": [
+        0.43,
+        0.12,
+        0.55,
+        0.32
+      ],
+      "bbox_full_pixels_1280x960": [
+        550.4,
+        115.2,
+        704.0,
+        307.2
+      ]
+    }
+  ],
+  "validation_errors": [
+    "vehicles[2].visible is invalid",
+    "vehicles[3].visible is invalid"
+  ],
+  "output_audit": {
+    "vehicle_count": 4,
+    "unique_id_count": 4,
+    "declared_counts": {
+      "total": 4,
+      "large": 3,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "observed_size_counts": {
+      "large": 3,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "seen_in_counts": {
+      "global": 4,
+      "detail": 1,
+      "both": 1
+    },
+    "bbox_count": 4,
+    "bbox_duplicate_candidates_iou_ge_0_85": []
+  }
+}

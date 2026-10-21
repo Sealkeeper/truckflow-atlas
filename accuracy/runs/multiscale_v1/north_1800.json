@@ -1,0 +1,211 @@
+{
+  "schema": "truckflow-multiscale-sample-v1",
+  "sample_id": "north_1800",
+  "sample_index": 3,
+  "started_at": "2026-10-21T13:17:47+00:00",
+  "finished_at": "2026-10-21T13:17:56+00:00",
+  "wall_latency_s": 8.738,
+  "images": {
+    "order": [
+      "global",
+      "detail"
+    ],
+    "global": {
+      "path": "accuracy/crops/north_1800_aisle.jpg",
+      "sha256": "dcd076f26d2414f17db85b89199aca458f4f0da0ddbaec2f69a1eee60ad9b2cb",
+      "size": [
+        1040,
+        1920
+      ]
+    },
+    "detail": {
+      "path": "accuracy/crops/multiscale_v1/detail/north_1800.jpg",
+      "sha256": "0dcb71403a5b0d45da63154144a102dfe40ad51338760f80e3c3260a09309fd0",
+      "size": [
+        560,
+        1120
+      ]
+    }
+  },
+  "request_metadata": {
+    "model_id": "ep-20260828174616-dthpx",
+    "temperature": 0,
+    "max_tokens": 6000,
+    "input_order": [
+      "global",
+      "detail"
+    ],
+    "prompt_sha256": "656465095b844a0ea71967b97fbd7339bb4ae35e2475a7da16a25496fac2e17f"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-21T13:17:47+00:00",
+      "latency_s": 8.738,
+      "http_status": 200,
+      "url": "https://ark.cn-beijing.volces.com/api/v3/chat/completions",
+      "response_headers_subset": {
+        "x-request-id": "021792588667284314cbdff50da45319a607e6bbd0e7cd8a023ba",
+        "content-type": "application/json; charset=utf-8"
+      },
+      "response_text_if_error": null,
+      "raw_response_body": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "{\n  \"coordinate_system\": \"original_frame_1280x960_normalized_xyxy\",\n  \"counts\": {\n    \"total\": 2,\n    \"large\": 2,\n    \"medium\": 0,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"id\": \"V1\",\n      \"bbox_full\": [0.32, 0.21, 0.51, 0.55],\n      \"seen_in\": [\"global\", \"detail\"],\n      \"size\": \"large\",\n      \"visible\": \"partial_rear\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色封闭货厢，尾门带有黄色反光标识，朝向为车尾朝向镜头\",\n      \"evidence\": \"该车在图1全局通道中可见，图2细节窗口中也能识别到同一红色货厢，去重后仅保留一个记录\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V2\",\n      \"bbox_full\": [0.18, 0.62, 0.52, 0.99],\n      \"seen_in\": [\"global\"],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹金属顶的长货厢，位于画面左下角，货厢侧面可见\",\n      \"evidence\": \"该车仅在图1全局通道中可见，图2细节窗口未覆盖该区域，无重复记录\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    }\n  ],\n  \"scene_notes\": \"无遮挡导致的车辆歧义，所有识别的车辆均为明确的货车\",\n  \"uncertain_reasons\": []\n}",
+              "reasoning_content": "\n我现在需要处理用户的请求，从两张图里识别货车，按照要求输出JSON。首先看两张图里的车辆：\n\n首先看原图1（全局）里的车：\n1. 红色的大货厢车，在通道中间，是大型重卡，bbox应该是原帧里的，比如x大概0.3到0.5，y0.2到0.5左右？\n2. 下方的白色带波纹顶的货厢车，在左下角，是中型？或者大型？\n然后图2是细节，看远端有没有车？图2里的红色货厢就是图1里的那个，所以不用重复。\n\n然后检查：\n- 红色货厢车：在图1和图2都有，seen_in是[\"global\",\"detail\"]，size是large，visible是partial_rear（因为只看到货厢尾部），is_truck=true，identity是红色货厢，尾门有标识，朝向是车尾对着镜头。\n- 白色波纹顶的货厢车：在图1左下角，是单独的，和其他车不连，size是large？或者medium？看它的长度，应该是large，visible是partial_top（因为只看到顶部和侧面），seen_in是[\"global\"]，因为图2没显示它。\n\n然后计数：total是2，large是2，其他medium、small、unknown是0。\n\n然后坐标要归一化到1280x960的原帧。比如红色车的bbox：x0=0.32，y0=0.21，x1=0.51，y1=0.55；白色车的bbox：x0=0.18，y0=0.62，x1=0.52，y1=0.99。\n\n然后identity_clues：红色车是红色封闭货厢，尾门有黄色反光标识，在通道中间；白色车是白色波纹金属顶的货厢，在左下角，车头部分被遮挡？不对，看原图1，白色车的车头在下方，货厢是长的，所以是大型。\n\nevidence：红色车在图1全局可见，图2细节中也能看到同一红色货厢，去重后保留；白色车仅在图1全局可见，图2未覆盖该区域，无重复。\n\nuncertain都是false，因为都是明确的货车。\n\nscene_notes：无遮挡导致的歧义，所有车辆明确。\n\n现在整理成严格的JSON格式，注意所有字段正确，没有额外内容。",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1792588675,
+        "id": "021792588667284314cbdff50da45319a607e6bbd0e7cd8a023ba",
+        "model": "doubao-seed-2-0-mini-260428",
+        "service_tier": "default",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 1000,
+          "prompt_tokens": 3606,
+          "total_tokens": 4606,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 561
+          }
+        }
+      }
+    }
+  ],
+  "transport_retry_count": 0,
+  "status": "ok",
+  "failure_kind": null,
+  "failure_reason": null,
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1000,
+    "prompt_tokens": 3606,
+    "total_tokens": 4606,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 561
+    }
+  },
+  "raw_text": "{\n  \"coordinate_system\": \"original_frame_1280x960_normalized_xyxy\",\n  \"counts\": {\n    \"total\": 2,\n    \"large\": 2,\n    \"medium\": 0,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"id\": \"V1\",\n      \"bbox_full\": [0.32, 0.21, 0.51, 0.55],\n      \"seen_in\": [\"global\", \"detail\"],\n      \"size\": \"large\",\n      \"visible\": \"partial_rear\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色封闭货厢，尾门带有黄色反光标识，朝向为车尾朝向镜头\",\n      \"evidence\": \"该车在图1全局通道中可见，图2细节窗口中也能识别到同一红色货厢，去重后仅保留一个记录\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    },\n    {\n      \"id\": \"V2\",\n      \"bbox_full\": [0.18, 0.62, 0.52, 0.99],\n      \"seen_in\": [\"global\"],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹金属顶的长货厢，位于画面左下角，货厢侧面可见\",\n      \"evidence\": \"该车仅在图1全局通道中可见，图2细节窗口未覆盖该区域，无重复记录\",\n      \"uncertain\": false,\n      \"uncertain_reasons\": []\n    }\n  ],\n  \"scene_notes\": \"无遮挡导致的车辆歧义，所有识别的车辆均为明确的货车\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "coordinate_system": "original_frame_1280x960_normalized_xyxy",
+    "counts": {
+      "total": 2,
+      "large": 2,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "id": "V1",
+        "bbox_full": [
+          0.32,
+          0.21,
+          0.51,
+          0.55
+        ],
+        "seen_in": [
+          "global",
+          "detail"
+        ],
+        "size": "large",
+        "visible": "partial_rear",
+        "is_truck": true,
+        "identity_clues": "红色封闭货厢，尾门带有黄色反光标识，朝向为车尾朝向镜头",
+        "evidence": "该车在图1全局通道中可见，图2细节窗口中也能识别到同一红色货厢，去重后仅保留一个记录",
+        "uncertain": false,
+        "uncertain_reasons": []
+      },
+      {
+        "id": "V2",
+        "bbox_full": [
+          0.18,
+          0.62,
+          0.52,
+          0.99
+        ],
+        "seen_in": [
+          "global"
+        ],
+        "size": "large",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "白色波纹金属顶的长货厢，位于画面左下角，货厢侧面可见",
+        "evidence": "该车仅在图1全局通道中可见，图2细节窗口未覆盖该区域，无重复记录",
+        "uncertain": false,
+        "uncertain_reasons": []
+      }
+    ],
+    "scene_notes": "无遮挡导致的车辆歧义，所有识别的车辆均为明确的货车",
+    "uncertain_reasons": []
+  },
+  "raw_bbox_audit": [
+    {
+      "id": "V1",
+      "bbox_full_normalized": [
+        0.32,
+        0.21,
+        0.51,
+        0.55
+      ],
+      "bbox_full_pixels_1280x960": [
+        409.6,
+        201.6,
+        652.8,
+        528.0
+      ]
+    },
+    {
+      "id": "V2",
+      "bbox_full_normalized": [
+        0.18,
+        0.62,
+        0.52,
+        0.99
+      ],
+      "bbox_full_pixels_1280x960": [
+        230.4,
+        595.2,
+        665.6,
+        950.4
+      ]
+    }
+  ],
+  "validation_errors": [],
+  "output_audit": {
+    "vehicle_count": 2,
+    "unique_id_count": 2,
+    "declared_counts": {
+      "total": 2,
+      "large": 2,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "observed_size_counts": {
+      "large": 2,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "seen_in_counts": {
+      "global": 2,
+      "detail": 1,
+      "both": 1
+    },
+    "bbox_count": 2,
+    "bbox_duplicate_candidates_iou_ge_0_85": []
+  }
+}

@@ -1,0 +1,2411 @@
+{
+  "schema": "truckflow-multiscale-evaluation-v1",
+  "route": "input-representation/single-call-multiscale-v1",
+  "truth": {
+    "file": "accuracy/reviewed/user-final-review-v2-2026-10-21.json",
+    "sha256": "735045af4055d2badae2c3bed1942c5a15c6a872ce548243cd52e6657fda971e",
+    "n": 20,
+    "denominator_includes_failures": true
+  },
+  "baseline": {
+    "file": "accuracy/reviewed/evaluation-clean-v1.json",
+    "sha256": "7f5aedd22da7de94fde7927c61e7621daf7069d9ad6a53da6900f04e2124e885",
+    "exact": 16,
+    "n": 20,
+    "mae_graded": 0.25,
+    "failed": 0,
+    "missing": 0
+  },
+  "run": {
+    "directory": "accuracy/runs/multiscale_v1",
+    "meta_file": "accuracy/runs/multiscale_v1/_run.json",
+    "meta_sha256": "0c55978211d3db490657930ea493ef3e63b79a9d4f4e3b5592ca275abf58b720",
+    "status": "complete-with-failures",
+    "model_id": "ep-20260828174616-dthpx",
+    "prompt_sha256": "656465095b844a0ea71967b97fbd7339bb4ae35e2475a7da16a25496fac2e17f",
+    "manifest_sha256": "72e37e75cf1d4c82bc9dc04f61075fcfa208c415c21af18133ae173e0b1e7fd0",
+    "preregistration_sha256": "efdc593d3a091ec15c410e8bd20eb13286f0633dd4e94d6a0507e86e10eda173",
+    "raw_files": 20,
+    "run_set_sha256": "277e26a31f247659ee36cd6a3b01caa9a583317111180eb89a9d231570d602e8"
+  },
+  "metrics": {
+    "n_total": 20,
+    "graded": 13,
+    "exact": 11,
+    "exact_rate_graded": 84.6,
+    "exact_rate_all": 55.0,
+    "mae_graded": 0.154,
+    "mae_denominator_graded": 13,
+    "under": 1,
+    "over": 1,
+    "failed": 7,
+    "missing": 0,
+    "transport_retries": 0,
+    "diagnostic_exact_if_schema_failures_were_ignored": 14,
+    "diagnostic_note": "This is not the official score. Failed outputs remain failures under the frozen contract; the diagnostic count only quantifies schema usability."
+  },
+  "outcomes": {
+    "baseline_correct_retained": 10,
+    "regression": 1,
+    "historical_error_fixed": 1,
+    "historical_error_still_wrong": 1,
+    "baseline_correct_but_failed": 5,
+    "historical_error_but_failed": 2,
+    "historical_errors": 4,
+    "baseline_correct_frames": 16
+  },
+  "historical_error_rows": [
+    {
+      "sample_id": "north_300",
+      "gold": 3,
+      "baseline_predicted": 2,
+      "status": "ok",
+      "predicted": 3,
+      "diagnostic_raw_total": 3,
+      "failure_kind": null,
+      "outcome": "historical_error_fixed"
+    },
+    {
+      "sample_id": "north_5",
+      "gold": 5,
+      "baseline_predicted": 4,
+      "status": "failed",
+      "predicted": null,
+      "diagnostic_raw_total": 4,
+      "failure_kind": "schema",
+      "outcome": "historical_error_but_failed"
+    },
+    {
+      "sample_id": "north_600",
+      "gold": 4,
+      "baseline_predicted": 2,
+      "status": "failed",
+      "predicted": null,
+      "diagnostic_raw_total": 2,
+      "failure_kind": "schema",
+      "outcome": "historical_error_but_failed"
+    },
+    {
+      "sample_id": "south_2100",
+      "gold": 3,
+      "baseline_predicted": 4,
+      "status": "ok",
+      "predicted": 4,
+      "diagnostic_raw_total": 4,
+      "failure_kind": null,
+      "outcome": "historical_error_still_wrong"
+    }
+  ],
+  "regression_rows": [
+    {
+      "sample_id": "south_1200",
+      "gold": 5,
+      "baseline_predicted": 5,
+      "status": "failed",
+      "predicted": null,
+      "diagnostic_raw_total": 5,
+      "failure_kind": "schema",
+      "outcome": "baseline_correct_but_failed"
+    },
+    {
+      "sample_id": "south_1500",
+      "gold": 5,
+      "baseline_predicted": 5,
+      "status": "ok",
+      "predicted": 4,
+      "diagnostic_raw_total": 4,
+      "failure_kind": null,
+      "outcome": "regression"
+    },
+    {
+      "sample_id": "south_1800",
+      "gold": 4,
+      "baseline_predicted": 4,
+      "status": "failed",
+      "predicted": null,
+      "diagnostic_raw_total": 4,
+      "failure_kind": "schema",
+      "outcome": "baseline_correct_but_failed"
+    },
+    {
+      "sample_id": "south_300",
+      "gold": 4,
+      "baseline_predicted": 4,
+      "status": "failed",
+      "predicted": null,
+      "diagnostic_raw_total": 5,
+      "failure_kind": "schema",
+      "outcome": "baseline_correct_but_failed"
+    },
+    {
+      "sample_id": "south_5",
+      "gold": 3,
+      "baseline_predicted": 3,
+      "status": "failed",
+      "predicted": null,
+      "diagnostic_raw_total": 3,
+      "failure_kind": "schema",
+      "outcome": "baseline_correct_but_failed"
+    },
+    {
+      "sample_id": "south_900",
+      "gold": 5,
+      "baseline_predicted": 5,
+      "status": "failed",
+      "predicted": null,
+      "diagnostic_raw_total": 4,
+      "failure_kind": "schema",
+      "outcome": "baseline_correct_but_failed"
+    }
+  ],
+  "failure_breakdown": {
+    "schema": 7
+  },
+  "vehicle_output_audit": {
+    "note": "Only successful schema-valid outputs. No full per-vehicle truth is available.",
+    "graded_vehicle_count": 39,
+    "unique_id_failures": 0,
+    "seen_in": {
+      "global": 38,
+      "detail": 13,
+      "both": 12
+    },
+    "high_iou_duplicate_candidates": []
+  },
+  "cost": {
+    "primary_requests": 20,
+    "total_http_attempts": 20,
+    "transport_retries": 0,
+    "images_per_primary_request": 2,
+    "image_inputs": 40,
+    "pixels_per_request": 2624000,
+    "total_pixels": 52480000,
+    "baseline_pixels_per_request": 1996800,
+    "pixel_increase_vs_baseline_pct": 31.41,
+    "prompt_tokens": 72120,
+    "completion_tokens": 43492,
+    "reasoning_tokens": 31012,
+    "total_tokens": 115612,
+    "prompt_tokens_per_sample": 3606.0,
+    "baseline_prompt_tokens": 35520,
+    "baseline_completion_tokens": 31507,
+    "baseline_total_tokens": 67027,
+    "prompt_token_increase_vs_baseline_pct": 103.0,
+    "attempt_latency_mean_s": 19.552,
+    "attempt_latency_p95_s": 27.827,
+    "baseline_attempt_latency_mean_s": 15.864,
+    "baseline_attempt_latency_p95_s": 21.27,
+    "sample_wall_mean_s": 19.552,
+    "sample_wall_p95_s": 27.828,
+    "total_wall_s": 391.234,
+    "concurrency": 1
+  },
+  "rows": [
+    {
+      "sample_id": "north_1200",
+      "camera": "north",
+      "time_s": 1200,
+      "gold": 3,
+      "baseline_predicted": 3,
+      "baseline_error": 0,
+      "baseline_correct": true,
+      "status": "ok",
+      "failure_kind": null,
+      "failure_reason": null,
+      "predicted": 3,
+      "error": 0,
+      "diagnostic_raw_total": 3,
+      "diagnostic_raw_error_if_ignored": 0,
+      "outcome": "baseline_correct_retained",
+      "wall_latency_s": 16.377,
+      "attempts": 1,
+      "transport_retry_count": 0,
+      "usage": {
+        "completion_tokens": 1805,
+        "prompt_tokens": 3606,
+        "total_tokens": 5411,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1242
+        }
+      },
+      "validation_errors": [],
+      "output_audit": {
+        "vehicle_count": 3,
+        "unique_id_count": 3,
+        "declared_counts": {
+          "total": 3,
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "observed_size_counts": {
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "seen_in_counts": {
+          "global": 3,
+          "detail": 1,
+          "both": 1
+        },
+        "bbox_count": 3,
+        "bbox_duplicate_candidates_iou_ge_0_85": []
+      },
+      "diagnostic_boxes": [
+        {
+          "id": "V1",
+          "bbox_full_normalized": [
+            0.1,
+            0.6,
+            0.5,
+            0.98
+          ],
+          "bbox_full_pixels_1280x960": [
+            128.0,
+            576.0,
+            640.0,
+            940.8
+          ]
+        },
+        {
+          "id": "V2",
+          "bbox_full_normalized": [
+            0.3,
+            0.3,
+            0.5,
+            0.6
+          ],
+          "bbox_full_pixels_1280x960": [
+            384.0,
+            288.0,
+            640.0,
+            576.0
+          ]
+        },
+        {
+          "id": "V3",
+          "bbox_full_normalized": [
+            0.45,
+            0.15,
+            0.55,
+            0.35
+          ],
+          "bbox_full_pixels_1280x960": [
+            576.0,
+            144.0,
+            704.0,
+            336.0
+          ]
+        }
+      ],
+      "file": "north_1200.json",
+      "sha256": "11abf4ff79031e4748c148cafa3b86bef5c60172923dd7893d765cde701af344"
+    },
+    {
+      "sample_id": "north_1500",
+      "camera": "north",
+      "time_s": 1500,
+      "gold": 2,
+      "baseline_predicted": 2,
+      "baseline_error": 0,
+      "baseline_correct": true,
+      "status": "ok",
+      "failure_kind": null,
+      "failure_reason": null,
+      "predicted": 2,
+      "error": 0,
+      "diagnostic_raw_total": 2,
+      "diagnostic_raw_error_if_ignored": 0,
+      "outcome": "baseline_correct_retained",
+      "wall_latency_s": 15.329,
+      "attempts": 1,
+      "transport_retry_count": 0,
+      "usage": {
+        "completion_tokens": 1847,
+        "prompt_tokens": 3606,
+        "total_tokens": 5453,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1365
+        }
+      },
+      "validation_errors": [],
+      "output_audit": {
+        "vehicle_count": 2,
+        "unique_id_count": 2,
+        "declared_counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "observed_size_counts": {
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "seen_in_counts": {
+          "global": 2,
+          "detail": 1,
+          "both": 1
+        },
+        "bbox_count": 2,
+        "bbox_duplicate_candidates_iou_ge_0_85": []
+      },
+      "diagnostic_boxes": [
+        {
+          "id": "V1",
+          "bbox_full_normalized": [
+            0.296875,
+            0.3,
+            0.4296875,
+            0.65
+          ],
+          "bbox_full_pixels_1280x960": [
+            380.0,
+            288.0,
+            550.0,
+            624.0
+          ]
+        },
+        {
+          "id": "V2",
+          "bbox_full_normalized": [
+            0.15,
+            0.6,
+            0.5,
+            0.95
+          ],
+          "bbox_full_pixels_1280x960": [
+            192.0,
+            576.0,
+            640.0,
+            912.0
+          ]
+        }
+      ],
+      "file": "north_1500.json",
+      "sha256": "c43ba5d3c93205868c318e04204c3d8f2687c4f39e9e922df3997d76aaf13638"
+    },
+    {
+      "sample_id": "north_1800",
+      "camera": "north",
+      "time_s": 1800,
+      "gold": 2,
+      "baseline_predicted": 2,
+      "baseline_error": 0,
+      "baseline_correct": true,
+      "status": "ok",
+      "failure_kind": null,
+      "failure_reason": null,
+      "predicted": 2,
+      "error": 0,
+      "diagnostic_raw_total": 2,
+      "diagnostic_raw_error_if_ignored": 0,
+      "outcome": "baseline_correct_retained",
+      "wall_latency_s": 8.738,
+      "attempts": 1,
+      "transport_retry_count": 0,
+      "usage": {
+        "completion_tokens": 1000,
+        "prompt_tokens": 3606,
+        "total_tokens": 4606,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 561
+        }
+      },
+      "validation_errors": [],
+      "output_audit": {
+        "vehicle_count": 2,
+        "unique_id_count": 2,
+        "declared_counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "observed_size_counts": {
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "seen_in_counts": {
+          "global": 2,
+          "detail": 1,
+          "both": 1
+        },
+        "bbox_count": 2,
+        "bbox_duplicate_candidates_iou_ge_0_85": []
+      },
+      "diagnostic_boxes": [
+        {
+          "id": "V1",
+          "bbox_full_normalized": [
+            0.32,
+            0.21,
+            0.51,
+            0.55
+          ],
+          "bbox_full_pixels_1280x960": [
+            409.6,
+            201.6,
+            652.8,
+            528.0
+          ]
+        },
+        {
+          "id": "V2",
+          "bbox_full_normalized": [
+            0.18,
+            0.62,
+            0.52,
+            0.99
+          ],
+          "bbox_full_pixels_1280x960": [
+            230.4,
+            595.2,
+            665.6,
+            950.4
+          ]
+        }
+      ],
+      "file": "north_1800.json",
+      "sha256": "2bb0fee014fbc9a436a59708434b9df69afafd8d226e2491c0b10d499077b0fe"
+    },
+    {
+      "sample_id": "north_2100",
+      "camera": "north",
+      "time_s": 2100,
+      "gold": 2,
+      "baseline_predicted": 2,
+      "baseline_error": 0,
+      "baseline_correct": true,
+      "status": "ok",
+      "failure_kind": null,
+      "failure_reason": null,
+      "predicted": 2,
+      "error": 0,
+      "diagnostic_raw_total": 2,
+      "diagnostic_raw_error_if_ignored": 0,
+      "outcome": "baseline_correct_retained",
+      "wall_latency_s": 22.72,
+      "attempts": 1,
+      "transport_retry_count": 0,
+      "usage": {
+        "completion_tokens": 2372,
+        "prompt_tokens": 3606,
+        "total_tokens": 5978,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1959
+        }
+      },
+      "validation_errors": [],
+      "output_audit": {
+        "vehicle_count": 2,
+        "unique_id_count": 2,
+        "declared_counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "observed_size_counts": {
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "seen_in_counts": {
+          "global": 2,
+          "detail": 1,
+          "both": 1
+        },
+        "bbox_count": 2,
+        "bbox_duplicate_candidates_iou_ge_0_85": []
+      },
+      "diagnostic_boxes": [
+        {
+          "id": "V1",
+          "bbox_full_normalized": [
+            0.37,
+            0.18,
+            0.44,
+            0.6
+          ],
+          "bbox_full_pixels_1280x960": [
+            473.6,
+            172.8,
+            563.2,
+            576.0
+          ]
+        },
+        {
+          "id": "V2",
+          "bbox_full_normalized": [
+            0.1,
+            0.6,
+            0.5,
+            0.98
+          ],
+          "bbox_full_pixels_1280x960": [
+            128.0,
+            576.0,
+            640.0,
+            940.8
+          ]
+        }
+      ],
+      "file": "north_2100.json",
+      "sha256": "5260727649daa0377b9fcd7628b3b3d32a1841c424f6e9624bcafa8a5d73216d"
+    },
+    {
+      "sample_id": "north_2400",
+      "camera": "north",
+      "time_s": 2400,
+      "gold": 3,
+      "baseline_predicted": 3,
+      "baseline_error": 0,
+      "baseline_correct": true,
+      "status": "ok",
+      "failure_kind": null,
+      "failure_reason": null,
+      "predicted": 3,
+      "error": 0,
+      "diagnostic_raw_total": 3,
+      "diagnostic_raw_error_if_ignored": 0,
+      "outcome": "baseline_correct_retained",
+      "wall_latency_s": 20.61,
+      "attempts": 1,
+      "transport_retry_count": 0,
+      "usage": {
+        "completion_tokens": 2592,
+        "prompt_tokens": 3606,
+        "total_tokens": 6198,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2011
+        }
+      },
+      "validation_errors": [],
+      "output_audit": {
+        "vehicle_count": 3,
+        "unique_id_count": 3,
+        "declared_counts": {
+          "total": 3,
+          "large": 2,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "observed_size_counts": {
+          "large": 2,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "seen_in_counts": {
+          "global": 3,
+          "detail": 1,
+          "both": 1
+        },
+        "bbox_count": 3,
+        "bbox_duplicate_candidates_iou_ge_0_85": []
+      },
+      "diagnostic_boxes": [
+        {
+          "id": "V1",
+          "bbox_full_normalized": [
+            0.32,
+            0.61,
+            0.63,
+            0.99
+          ],
+          "bbox_full_pixels_1280x960": [
+            409.6,
+            585.6,
+            806.4,
+            950.4
+          ]
+        },
+        {
+          "id": "V2",
+          "bbox_full_normalized": [
+            0.31,
+            0.15,
+            0.65,
+            0.45
+          ],
+          "bbox_full_pixels_1280x960": [
+            396.8,
+            144.0,
+            832.0,
+            432.0
+          ]
+        },
+        {
+          "id": "V3",
+          "bbox_full_normalized": [
+            0.3,
+            0.25,
+            0.55,
+            0.55
+          ],
+          "bbox_full_pixels_1280x960": [
+            384.0,
+            240.0,
+            704.0,
+            528.0
+          ]
+        }
+      ],
+      "file": "north_2400.json",
+      "sha256": "cc81cd2ed40f0d2b887f291c89fb2d9885f714ae06e8fa80a42a422c09afaf39"
+    },
+    {
+      "sample_id": "north_2600",
+      "camera": "north",
+      "time_s": 2600,
+      "gold": 2,
+      "baseline_predicted": 2,
+      "baseline_error": 0,
+      "baseline_correct": true,
+      "status": "ok",
+      "failure_kind": null,
+      "failure_reason": null,
+      "predicted": 2,
+      "error": 0,
+      "diagnostic_raw_total": 2,
+      "diagnostic_raw_error_if_ignored": 0,
+      "outcome": "baseline_correct_retained",
+      "wall_latency_s": 20.048,
+      "attempts": 1,
+      "transport_retry_count": 0,
+      "usage": {
+        "completion_tokens": 1935,
+        "prompt_tokens": 3606,
+        "total_tokens": 5541,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1491
+        }
+      },
+      "validation_errors": [],
+      "output_audit": {
+        "vehicle_count": 2,
+        "unique_id_count": 2,
+        "declared_counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "observed_size_counts": {
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "seen_in_counts": {
+          "global": 2,
+          "detail": 1,
+          "both": 1
+        },
+        "bbox_count": 2,
+        "bbox_duplicate_candidates_iou_ge_0_85": []
+      },
+      "diagnostic_boxes": [
+        {
+          "id": "V1",
+          "bbox_full_normalized": [
+            0.273,
+            0.38,
+            0.436,
+            0.7
+          ],
+          "bbox_full_pixels_1280x960": [
+            349.44,
+            364.8,
+            558.08,
+            672.0
+          ]
+        },
+        {
+          "id": "V2",
+          "bbox_full_normalized": [
+            0.273,
+            0.85,
+            0.375,
+            1.0
+          ],
+          "bbox_full_pixels_1280x960": [
+            349.44,
+            816.0,
+            480.0,
+            960.0
+          ]
+        }
+      ],
+      "file": "north_2600.json",
+      "sha256": "7dba26d6bbac4f75871150dde29321400f2101529266f866e672575f5b0f5367"
+    },
+    {
+      "sample_id": "north_300",
+      "camera": "north",
+      "time_s": 300,
+      "gold": 3,
+      "baseline_predicted": 2,
+      "baseline_error": -1,
+      "baseline_correct": false,
+      "status": "ok",
+      "failure_kind": null,
+      "failure_reason": null,
+      "predicted": 3,
+      "error": 0,
+      "diagnostic_raw_total": 3,
+      "diagnostic_raw_error_if_ignored": 0,
+      "outcome": "historical_error_fixed",
+      "wall_latency_s": 18.877,
+      "attempts": 1,
+      "transport_retry_count": 0,
+      "usage": {
+        "completion_tokens": 2267,
+        "prompt_tokens": 3606,
+        "total_tokens": 5873,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1688
+        }
+      },
+      "validation_errors": [],
+      "output_audit": {
+        "vehicle_count": 3,
+        "unique_id_count": 3,
+        "declared_counts": {
+          "total": 3,
+          "large": 1,
+          "medium": 2,
+          "small": 0,
+          "unknown": 0
+        },
+        "observed_size_counts": {
+          "large": 1,
+          "medium": 2,
+          "small": 0,
+          "unknown": 0
+        },
+        "seen_in_counts": {
+          "global": 2,
+          "detail": 1,
+          "both": 0
+        },
+        "bbox_count": 3,
+        "bbox_duplicate_candidates_iou_ge_0_85": []
+      },
+      "diagnostic_boxes": [
+        {
+          "id": "V1",
+          "bbox_full_normalized": [
+            0.17,
+            0.57,
+            0.56,
+            0.99
+          ],
+          "bbox_full_pixels_1280x960": [
+            217.6,
+            547.2,
+            716.8,
+            950.4
+          ]
+        },
+        {
+          "id": "V2",
+          "bbox_full_normalized": [
+            0.31,
+            0.24,
+            0.54,
+            0.47
+          ],
+          "bbox_full_pixels_1280x960": [
+            396.8,
+            230.4,
+            691.2,
+            451.2
+          ]
+        },
+        {
+          "id": "V3",
+          "bbox_full_normalized": [
+            0.44,
+            0.12,
+            0.53,
+            0.21
+          ],
+          "bbox_full_pixels_1280x960": [
+            563.2,
+            115.2,
+            678.4,
+            201.6
+          ]
+        }
+      ],
+      "file": "north_300.json",
+      "sha256": "04870237b994df9f6cc79117f2ab87fdbe6d256478547d490dd4238006503bb2"
+    },
+    {
+      "sample_id": "north_5",
+      "camera": "north",
+      "time_s": 5,
+      "gold": 5,
+      "baseline_predicted": 4,
+      "baseline_error": -1,
+      "baseline_correct": false,
+      "status": "failed",
+      "failure_kind": "schema",
+      "failure_reason": "vehicles[0].visible is invalid",
+      "predicted": null,
+      "error": null,
+      "diagnostic_raw_total": 4,
+      "diagnostic_raw_error_if_ignored": -1,
+      "outcome": "historical_error_but_failed",
+      "wall_latency_s": 21.631,
+      "attempts": 1,
+      "transport_retry_count": 0,
+      "usage": {
+        "completion_tokens": 2676,
+        "prompt_tokens": 3606,
+        "total_tokens": 6282,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1938
+        }
+      },
+      "validation_errors": [
+        "vehicles[0].visible is invalid"
+      ],
+      "output_audit": {
+        "vehicle_count": 4,
+        "unique_id_count": 4,
+        "declared_counts": {
+          "total": 4,
+          "large": 2,
+          "medium": 2,
+          "small": 0,
+          "unknown": 0
+        },
+        "observed_size_counts": {
+          "large": 2,
+          "medium": 2,
+          "small": 0,
+          "unknown": 0
+        },
+        "seen_in_counts": {
+          "global": 4,
+          "detail": 3,
+          "both": 3
+        },
+        "bbox_count": 4,
+        "bbox_duplicate_candidates_iou_ge_0_85": []
+      },
+      "diagnostic_boxes": [
+        {
+          "id": "V1",
+          "bbox_full_normalized": [
+            0.27,
+            0.5,
+            0.54,
+            0.92
+          ],
+          "bbox_full_pixels_1280x960": [
+            345.6,
+            480.0,
+            691.2,
+            883.2
+          ]
+        },
+        {
+          "id": "V2",
+          "bbox_full_normalized": [
+            0.37,
+            0.24,
+            0.55,
+            0.46
+          ],
+          "bbox_full_pixels_1280x960": [
+            473.6,
+            230.4,
+            704.0,
+            441.6
+          ]
+        },
+        {
+          "id": "V3",
+          "bbox_full_normalized": [
+            0.42,
+            0.15,
+            0.56,
+            0.35
+          ],
+          "bbox_full_pixels_1280x960": [
+            537.6,
+            144.0,
+            716.8,
+            336.0
+          ]
+        },
+        {
+          "id": "V4",
+          "bbox_full_normalized": [
+            0.56,
+            0.1,
+            0.68,
+            0.25
+          ],
+          "bbox_full_pixels_1280x960": [
+            716.8,
+            96.0,
+            870.4,
+            240.0
+          ]
+        }
+      ],
+      "file": "north_5.json",
+      "sha256": "9d1e405af0f0a197a71d32afd11187d53563443e418fbd8e6bd1a74bb6e31716"
+    },
+    {
+      "sample_id": "north_600",
+      "camera": "north",
+      "time_s": 600,
+      "gold": 4,
+      "baseline_predicted": 2,
+      "baseline_error": -2,
+      "baseline_correct": false,
+      "status": "failed",
+      "failure_kind": "schema",
+      "failure_reason": "vehicles[1].visible is invalid",
+      "predicted": null,
+      "error": null,
+      "diagnostic_raw_total": 2,
+      "diagnostic_raw_error_if_ignored": -2,
+      "outcome": "historical_error_but_failed",
+      "wall_latency_s": 17.911,
+      "attempts": 1,
+      "transport_retry_count": 0,
+      "usage": {
+        "completion_tokens": 1869,
+        "prompt_tokens": 3606,
+        "total_tokens": 5475,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1394
+        }
+      },
+      "validation_errors": [
+        "vehicles[1].visible is invalid"
+      ],
+      "output_audit": {
+        "vehicle_count": 2,
+        "unique_id_count": 2,
+        "declared_counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "observed_size_counts": {
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "seen_in_counts": {
+          "global": 2,
+          "detail": 1,
+          "both": 1
+        },
+        "bbox_count": 2,
+        "bbox_duplicate_candidates_iou_ge_0_85": []
+      },
+      "diagnostic_boxes": [
+        {
+          "id": "V1",
+          "bbox_full_normalized": [
+            0.51,
+            0.31,
+            0.69,
+            0.59
+          ],
+          "bbox_full_pixels_1280x960": [
+            652.8,
+            297.6,
+            883.2,
+            566.4
+          ]
+        },
+        {
+          "id": "V2",
+          "bbox_full_normalized": [
+            0.15,
+            0.6,
+            0.5,
+            0.98
+          ],
+          "bbox_full_pixels_1280x960": [
+            192.0,
+            576.0,
+            640.0,
+            940.8
+          ]
+        }
+      ],
+      "file": "north_600.json",
+      "sha256": "8c4f32073ed0e3c939a0c70dc4c7e4954a365e4b21195dccae001064d706adbf"
+    },
+    {
+      "sample_id": "north_900",
+      "camera": "north",
+      "time_s": 900,
+      "gold": 3,
+      "baseline_predicted": 3,
+      "baseline_error": 0,
+      "baseline_correct": true,
+      "status": "ok",
+      "failure_kind": null,
+      "failure_reason": null,
+      "predicted": 3,
+      "error": 0,
+      "diagnostic_raw_total": 3,
+      "diagnostic_raw_error_if_ignored": 0,
+      "outcome": "baseline_correct_retained",
+      "wall_latency_s": 17.164,
+      "attempts": 1,
+      "transport_retry_count": 0,
+      "usage": {
+        "completion_tokens": 2123,
+        "prompt_tokens": 3606,
+        "total_tokens": 5729,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1513
+        }
+      },
+      "validation_errors": [],
+      "output_audit": {
+        "vehicle_count": 3,
+        "unique_id_count": 3,
+        "declared_counts": {
+          "total": 3,
+          "large": 2,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "observed_size_counts": {
+          "large": 2,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "seen_in_counts": {
+          "global": 3,
+          "detail": 1,
+          "both": 1
+        },
+        "bbox_count": 3,
+        "bbox_duplicate_candidates_iou_ge_0_85": []
+      },
+      "diagnostic_boxes": [
+        {
+          "id": "V1",
+          "bbox_full_normalized": [
+            0.33,
+            0.37,
+            0.55,
+            0.65
+          ],
+          "bbox_full_pixels_1280x960": [
+            422.4,
+            355.2,
+            704.0,
+            624.0
+          ]
+        },
+        {
+          "id": "V2",
+          "bbox_full_normalized": [
+            0.17,
+            0.61,
+            0.53,
+            0.99
+          ],
+          "bbox_full_pixels_1280x960": [
+            217.6,
+            585.6,
+            678.4,
+            950.4
+          ]
+        },
+        {
+          "id": "V3",
+          "bbox_full_normalized": [
+            0.41,
+            0.15,
+            0.56,
+            0.31
+          ],
+          "bbox_full_pixels_1280x960": [
+            524.8,
+            144.0,
+            716.8,
+            297.6
+          ]
+        }
+      ],
+      "file": "north_900.json",
+      "sha256": "32807631fbbf3d7c8ae48c751b745def75dbb82fac4099fa9156b6fd4fcfedcb"
+    },
+    {
+      "sample_id": "south_1200",
+      "camera": "south",
+      "time_s": 1200,
+      "gold": 5,
+      "baseline_predicted": 5,
+      "baseline_error": 0,
+      "baseline_correct": true,
+      "status": "failed",
+      "failure_kind": "schema",
+      "failure_reason": "vehicles[3].visible is invalid",
+      "predicted": null,
+      "error": null,
+      "diagnostic_raw_total": 5,
+      "diagnostic_raw_error_if_ignored": 0,
+      "outcome": "baseline_correct_but_failed",
+      "wall_latency_s": 21.099,
+      "attempts": 1,
+      "transport_retry_count": 0,
+      "usage": {
+        "completion_tokens": 2374,
+        "prompt_tokens": 3606,
+        "total_tokens": 5980,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1533
+        }
+      },
+      "validation_errors": [
+        "vehicles[3].visible is invalid"
+      ],
+      "output_audit": {
+        "vehicle_count": 5,
+        "unique_id_count": 5,
+        "declared_counts": {
+          "total": 5,
+          "large": 4,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "observed_size_counts": {
+          "large": 4,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "seen_in_counts": {
+          "global": 5,
+          "detail": 1,
+          "both": 1
+        },
+        "bbox_count": 5,
+        "bbox_duplicate_candidates_iou_ge_0_85": []
+      },
+      "diagnostic_boxes": [
+        {
+          "id": "V1",
+          "bbox_full_normalized": [
+            0.47,
+            0.46,
+            0.67,
+            0.87
+          ],
+          "bbox_full_pixels_1280x960": [
+            601.6,
+            441.6,
+            857.6,
+            835.2
+          ]
+        },
+        {
+          "id": "V2",
+          "bbox_full_normalized": [
+            0.43,
+            0.27,
+            0.61,
+            0.51
+          ],
+          "bbox_full_pixels_1280x960": [
+            550.4,
+            259.2,
+            780.8,
+            489.6
+          ]
+        },
+        {
+          "id": "V3",
+          "bbox_full_normalized": [
+            0.34,
+            0.24,
+            0.46,
+            0.36
+          ],
+          "bbox_full_pixels_1280x960": [
+            435.2,
+            230.4,
+            588.8,
+            345.6
+          ]
+        },
+        {
+          "id": "V4",
+          "bbox_full_normalized": [
+            0.42,
+            0.11,
+            0.54,
+            0.26
+          ],
+          "bbox_full_pixels_1280x960": [
+            537.6,
+            105.6,
+            691.2,
+            249.6
+          ]
+        },
+        {
+          "id": "V5",
+          "bbox_full_normalized": [
+            0.52,
+            0.85,
+            0.78,
+            0.99
+          ],
+          "bbox_full_pixels_1280x960": [
+            665.6,
+            816.0,
+            998.4,
+            950.4
+          ]
+        }
+      ],
+      "file": "south_1200.json",
+      "sha256": "d46e0659c17575b94319d501c64af8d4106fe050bce948fbb0f560182dfd582d"
+    },
+    {
+      "sample_id": "south_1500",
+      "camera": "south",
+      "time_s": 1500,
+      "gold": 5,
+      "baseline_predicted": 5,
+      "baseline_error": 0,
+      "baseline_correct": true,
+      "status": "ok",
+      "failure_kind": null,
+      "failure_reason": null,
+      "predicted": 4,
+      "error": -1,
+      "diagnostic_raw_total": 4,
+      "diagnostic_raw_error_if_ignored": -1,
+      "outcome": "regression",
+      "wall_latency_s": 17.882,
+      "attempts": 1,
+      "transport_retry_count": 0,
+      "usage": {
+        "completion_tokens": 2353,
+        "prompt_tokens": 3606,
+        "total_tokens": 5959,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1653
+        }
+      },
+      "validation_errors": [],
+      "output_audit": {
+        "vehicle_count": 4,
+        "unique_id_count": 4,
+        "declared_counts": {
+          "total": 4,
+          "large": 4,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "observed_size_counts": {
+          "large": 4,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "seen_in_counts": {
+          "global": 4,
+          "detail": 1,
+          "both": 1
+        },
+        "bbox_count": 4,
+        "bbox_duplicate_candidates_iou_ge_0_85": []
+      },
+      "diagnostic_boxes": [
+        {
+          "id": "V1",
+          "bbox_full_normalized": [
+            0.45,
+            0.45,
+            0.67,
+            0.89
+          ],
+          "bbox_full_pixels_1280x960": [
+            576.0,
+            432.0,
+            857.6,
+            854.4
+          ]
+        },
+        {
+          "id": "V2",
+          "bbox_full_normalized": [
+            0.39,
+            0.28,
+            0.61,
+            0.71
+          ],
+          "bbox_full_pixels_1280x960": [
+            499.2,
+            268.8,
+            780.8,
+            681.6
+          ]
+        },
+        {
+          "id": "V3",
+          "bbox_full_normalized": [
+            0.34,
+            0.22,
+            0.46,
+            0.56
+          ],
+          "bbox_full_pixels_1280x960": [
+            435.2,
+            211.2,
+            588.8,
+            537.6
+          ]
+        },
+        {
+          "id": "V4",
+          "bbox_full_normalized": [
+            0.42,
+            0.11,
+            0.56,
+            0.29
+          ],
+          "bbox_full_pixels_1280x960": [
+            537.6,
+            105.6,
+            716.8,
+            278.4
+          ]
+        }
+      ],
+      "file": "south_1500.json",
+      "sha256": "2a5f6e7608d579a735b81969d812aed01a9dfbbcec568f417e153f951c1ea3df"
+    },
+    {
+      "sample_id": "south_1800",
+      "camera": "south",
+      "time_s": 1800,
+      "gold": 4,
+      "baseline_predicted": 4,
+      "baseline_error": 0,
+      "baseline_correct": true,
+      "status": "failed",
+      "failure_kind": "schema",
+      "failure_reason": "vehicles[2].visible is invalid; vehicles[3].visible is invalid",
+      "predicted": null,
+      "error": null,
+      "diagnostic_raw_total": 4,
+      "diagnostic_raw_error_if_ignored": 0,
+      "outcome": "baseline_correct_but_failed",
+      "wall_latency_s": 19.786,
+      "attempts": 1,
+      "transport_retry_count": 0,
+      "usage": {
+        "completion_tokens": 2402,
+        "prompt_tokens": 3606,
+        "total_tokens": 6008,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1706
+        }
+      },
+      "validation_errors": [
+        "vehicles[2].visible is invalid",
+        "vehicles[3].visible is invalid"
+      ],
+      "output_audit": {
+        "vehicle_count": 4,
+        "unique_id_count": 4,
+        "declared_counts": {
+          "total": 4,
+          "large": 3,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "observed_size_counts": {
+          "large": 3,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "seen_in_counts": {
+          "global": 4,
+          "detail": 1,
+          "both": 1
+        },
+        "bbox_count": 4,
+        "bbox_duplicate_candidates_iou_ge_0_85": []
+      },
+      "diagnostic_boxes": [
+        {
+          "id": "V1",
+          "bbox_full_normalized": [
+            0.44,
+            0.45,
+            0.67,
+            0.92
+          ],
+          "bbox_full_pixels_1280x960": [
+            563.2,
+            432.0,
+            857.6,
+            883.2
+          ]
+        },
+        {
+          "id": "V2",
+          "bbox_full_normalized": [
+            0.41,
+            0.28,
+            0.59,
+            0.73
+          ],
+          "bbox_full_pixels_1280x960": [
+            524.8,
+            268.8,
+            755.2,
+            700.8
+          ]
+        },
+        {
+          "id": "V3",
+          "bbox_full_normalized": [
+            0.32,
+            0.22,
+            0.45,
+            0.52
+          ],
+          "bbox_full_pixels_1280x960": [
+            409.6,
+            211.2,
+            576.0,
+            499.2
+          ]
+        },
+        {
+          "id": "V4",
+          "bbox_full_normalized": [
+            0.43,
+            0.12,
+            0.55,
+            0.32
+          ],
+          "bbox_full_pixels_1280x960": [
+            550.4,
+            115.2,
+            704.0,
+            307.2
+          ]
+        }
+      ],
+      "file": "south_1800.json",
+      "sha256": "ff31dda474eb0f553183183811dbde3fcf4690d1af6ca7427b9ece19229c884e"
+    },
+    {
+      "sample_id": "south_2100",
+      "camera": "south",
+      "time_s": 2100,
+      "gold": 3,
+      "baseline_predicted": 4,
+      "baseline_error": 1,
+      "baseline_correct": false,
+      "status": "ok",
+      "failure_kind": null,
+      "failure_reason": null,
+      "predicted": 4,
+      "error": 1,
+      "diagnostic_raw_total": 4,
+      "diagnostic_raw_error_if_ignored": 1,
+      "outcome": "historical_error_still_wrong",
+      "wall_latency_s": 14.369,
+      "attempts": 1,
+      "transport_retry_count": 0,
+      "usage": {
+        "completion_tokens": 1704,
+        "prompt_tokens": 3606,
+        "total_tokens": 5310,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1026
+        }
+      },
+      "validation_errors": [],
+      "output_audit": {
+        "vehicle_count": 4,
+        "unique_id_count": 4,
+        "declared_counts": {
+          "total": 4,
+          "large": 4,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "observed_size_counts": {
+          "large": 4,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "seen_in_counts": {
+          "global": 4,
+          "detail": 1,
+          "both": 1
+        },
+        "bbox_count": 4,
+        "bbox_duplicate_candidates_iou_ge_0_85": []
+      },
+      "diagnostic_boxes": [
+        {
+          "id": "V1",
+          "bbox_full_normalized": [
+            0.46,
+            0.66,
+            0.67,
+            0.91
+          ],
+          "bbox_full_pixels_1280x960": [
+            588.8,
+            633.6,
+            857.6,
+            873.6
+          ]
+        },
+        {
+          "id": "V2",
+          "bbox_full_normalized": [
+            0.41,
+            0.31,
+            0.57,
+            0.67
+          ],
+          "bbox_full_pixels_1280x960": [
+            524.8,
+            297.6,
+            729.6,
+            643.2
+          ]
+        },
+        {
+          "id": "V3",
+          "bbox_full_normalized": [
+            0.31,
+            0.23,
+            0.46,
+            0.41
+          ],
+          "bbox_full_pixels_1280x960": [
+            396.8,
+            220.8,
+            588.8,
+            393.6
+          ]
+        },
+        {
+          "id": "V4",
+          "bbox_full_normalized": [
+            0.34,
+            0.14,
+            0.47,
+            0.29
+          ],
+          "bbox_full_pixels_1280x960": [
+            435.2,
+            134.4,
+            601.6,
+            278.4
+          ]
+        }
+      ],
+      "file": "south_2100.json",
+      "sha256": "002f0485e1eee7573c99479cb7860a1b08ce5a43d0ac9c502c94008c927f2a60"
+    },
+    {
+      "sample_id": "south_2400",
+      "camera": "south",
+      "time_s": 2400,
+      "gold": 3,
+      "baseline_predicted": 3,
+      "baseline_error": 0,
+      "baseline_correct": true,
+      "status": "ok",
+      "failure_kind": null,
+      "failure_reason": null,
+      "predicted": 3,
+      "error": 0,
+      "diagnostic_raw_total": 3,
+      "diagnostic_raw_error_if_ignored": 0,
+      "outcome": "baseline_correct_retained",
+      "wall_latency_s": 17.007,
+      "attempts": 1,
+      "transport_retry_count": 0,
+      "usage": {
+        "completion_tokens": 2105,
+        "prompt_tokens": 3606,
+        "total_tokens": 5711,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1505
+        }
+      },
+      "validation_errors": [],
+      "output_audit": {
+        "vehicle_count": 3,
+        "unique_id_count": 3,
+        "declared_counts": {
+          "total": 3,
+          "large": 2,
+          "medium": 0,
+          "small": 1,
+          "unknown": 0
+        },
+        "observed_size_counts": {
+          "large": 2,
+          "medium": 0,
+          "small": 1,
+          "unknown": 0
+        },
+        "seen_in_counts": {
+          "global": 3,
+          "detail": 1,
+          "both": 1
+        },
+        "bbox_count": 3,
+        "bbox_duplicate_candidates_iou_ge_0_85": []
+      },
+      "diagnostic_boxes": [
+        {
+          "id": "V1",
+          "bbox_full_normalized": [
+            0.37,
+            0.47,
+            0.63,
+            0.9
+          ],
+          "bbox_full_pixels_1280x960": [
+            473.6,
+            451.2,
+            806.4,
+            864.0
+          ]
+        },
+        {
+          "id": "V2",
+          "bbox_full_normalized": [
+            0.32,
+            0.22,
+            0.43,
+            0.41
+          ],
+          "bbox_full_pixels_1280x960": [
+            409.6,
+            211.2,
+            550.4,
+            393.6
+          ]
+        },
+        {
+          "id": "V3",
+          "bbox_full_normalized": [
+            0.44,
+            0.2,
+            0.55,
+            0.33
+          ],
+          "bbox_full_pixels_1280x960": [
+            563.2,
+            192.0,
+            704.0,
+            316.8
+          ]
+        }
+      ],
+      "file": "south_2400.json",
+      "sha256": "74b4114ea6fba6d23b7c8d6a194e85af09c10b2882af2c7025b20003e830ad97"
+    },
+    {
+      "sample_id": "south_2600",
+      "camera": "south",
+      "time_s": 2600,
+      "gold": 4,
+      "baseline_predicted": 4,
+      "baseline_error": 0,
+      "baseline_correct": true,
+      "status": "ok",
+      "failure_kind": null,
+      "failure_reason": null,
+      "predicted": 4,
+      "error": 0,
+      "diagnostic_raw_total": 4,
+      "diagnostic_raw_error_if_ignored": 0,
+      "outcome": "baseline_correct_retained",
+      "wall_latency_s": 39.072,
+      "attempts": 1,
+      "transport_retry_count": 0,
+      "usage": {
+        "completion_tokens": 2617,
+        "prompt_tokens": 3606,
+        "total_tokens": 6223,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1874
+        }
+      },
+      "validation_errors": [],
+      "output_audit": {
+        "vehicle_count": 4,
+        "unique_id_count": 4,
+        "declared_counts": {
+          "total": 4,
+          "large": 4,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "observed_size_counts": {
+          "large": 4,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "seen_in_counts": {
+          "global": 4,
+          "detail": 1,
+          "both": 1
+        },
+        "bbox_count": 4,
+        "bbox_duplicate_candidates_iou_ge_0_85": []
+      },
+      "diagnostic_boxes": [
+        {
+          "id": "V1",
+          "bbox_full_normalized": [
+            0.234,
+            0.229,
+            0.328,
+            0.427
+          ],
+          "bbox_full_pixels_1280x960": [
+            299.52,
+            219.84,
+            419.84,
+            409.92
+          ]
+        },
+        {
+          "id": "V2",
+          "bbox_full_normalized": [
+            0.355,
+            0.385,
+            0.476,
+            0.698
+          ],
+          "bbox_full_pixels_1280x960": [
+            454.4,
+            369.6,
+            609.28,
+            670.08
+          ]
+        },
+        {
+          "id": "V3",
+          "bbox_full_normalized": [
+            0.419,
+            0.179,
+            0.484,
+            0.296
+          ],
+          "bbox_full_pixels_1280x960": [
+            536.32,
+            171.84,
+            619.52,
+            284.16
+          ]
+        },
+        {
+          "id": "V4",
+          "bbox_full_normalized": [
+            0.477,
+            0.8,
+            0.598,
+            0.99
+          ],
+          "bbox_full_pixels_1280x960": [
+            610.56,
+            768.0,
+            765.44,
+            950.4
+          ]
+        }
+      ],
+      "file": "south_2600.json",
+      "sha256": "da4ba3a32c284da37a95636a4e5c3d0509193e1a294130a4c9a2626d12c2b828"
+    },
+    {
+      "sample_id": "south_300",
+      "camera": "south",
+      "time_s": 300,
+      "gold": 4,
+      "baseline_predicted": 4,
+      "baseline_error": 0,
+      "baseline_correct": true,
+      "status": "failed",
+      "failure_kind": "schema",
+      "failure_reason": "vehicles[2].visible is invalid",
+      "predicted": null,
+      "error": null,
+      "diagnostic_raw_total": 5,
+      "diagnostic_raw_error_if_ignored": 1,
+      "outcome": "baseline_correct_but_failed",
+      "wall_latency_s": 27.828,
+      "attempts": 1,
+      "transport_retry_count": 0,
+      "usage": {
+        "completion_tokens": 3320,
+        "prompt_tokens": 3606,
+        "total_tokens": 6926,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2496
+        }
+      },
+      "validation_errors": [
+        "vehicles[2].visible is invalid"
+      ],
+      "output_audit": {
+        "vehicle_count": 5,
+        "unique_id_count": 5,
+        "declared_counts": {
+          "total": 5,
+          "large": 4,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "observed_size_counts": {
+          "large": 4,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "seen_in_counts": {
+          "global": 5,
+          "detail": 4,
+          "both": 4
+        },
+        "bbox_count": 5,
+        "bbox_duplicate_candidates_iou_ge_0_85": []
+      },
+      "diagnostic_boxes": [
+        {
+          "id": "V1",
+          "bbox_full_normalized": [
+            0.46,
+            0.48,
+            0.68,
+            0.94
+          ],
+          "bbox_full_pixels_1280x960": [
+            588.8,
+            460.8,
+            870.4,
+            902.4
+          ]
+        },
+        {
+          "id": "V2",
+          "bbox_full_normalized": [
+            0.43,
+            0.27,
+            0.58,
+            0.51
+          ],
+          "bbox_full_pixels_1280x960": [
+            550.4,
+            259.2,
+            742.4,
+            489.6
+          ]
+        },
+        {
+          "id": "V3",
+          "bbox_full_normalized": [
+            0.35,
+            0.19,
+            0.45,
+            0.37
+          ],
+          "bbox_full_pixels_1280x960": [
+            448.0,
+            182.4,
+            576.0,
+            355.2
+          ]
+        },
+        {
+          "id": "V4",
+          "bbox_full_normalized": [
+            0.44,
+            0.12,
+            0.52,
+            0.28
+          ],
+          "bbox_full_pixels_1280x960": [
+            563.2,
+            115.2,
+            665.6,
+            268.8
+          ]
+        },
+        {
+          "id": "V5",
+          "bbox_full_normalized": [
+            0.39,
+            0.1,
+            0.5,
+            0.19
+          ],
+          "bbox_full_pixels_1280x960": [
+            499.2,
+            96.0,
+            640.0,
+            182.4
+          ]
+        }
+      ],
+      "file": "south_300.json",
+      "sha256": "f7eb046b77ce6aa9e07e2ed6c3b613cdce1ea54b8c924154c4857832b3f6912c"
+    },
+    {
+      "sample_id": "south_5",
+      "camera": "south",
+      "time_s": 5,
+      "gold": 3,
+      "baseline_predicted": 3,
+      "baseline_error": 0,
+      "baseline_correct": true,
+      "status": "failed",
+      "failure_kind": "schema",
+      "failure_reason": "vehicles[2].visible is invalid",
+      "predicted": null,
+      "error": null,
+      "diagnostic_raw_total": 3,
+      "diagnostic_raw_error_if_ignored": 0,
+      "outcome": "baseline_correct_but_failed",
+      "wall_latency_s": 23.484,
+      "attempts": 1,
+      "transport_retry_count": 0,
+      "usage": {
+        "completion_tokens": 2280,
+        "prompt_tokens": 3606,
+        "total_tokens": 5886,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1657
+        }
+      },
+      "validation_errors": [
+        "vehicles[2].visible is invalid"
+      ],
+      "output_audit": {
+        "vehicle_count": 3,
+        "unique_id_count": 3,
+        "declared_counts": {
+          "total": 3,
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "observed_size_counts": {
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "seen_in_counts": {
+          "global": 3,
+          "detail": 3,
+          "both": 3
+        },
+        "bbox_count": 3,
+        "bbox_duplicate_candidates_iou_ge_0_85": []
+      },
+      "diagnostic_boxes": [
+        {
+          "id": "V1",
+          "bbox_full_normalized": [
+            0.42,
+            0.6,
+            0.72,
+            0.99
+          ],
+          "bbox_full_pixels_1280x960": [
+            537.6,
+            576.0,
+            921.6,
+            950.4
+          ]
+        },
+        {
+          "id": "V2",
+          "bbox_full_normalized": [
+            0.45,
+            0.25,
+            0.6,
+            0.48
+          ],
+          "bbox_full_pixels_1280x960": [
+            576.0,
+            240.0,
+            768.0,
+            460.8
+          ]
+        },
+        {
+          "id": "V3",
+          "bbox_full_normalized": [
+            0.45,
+            0.15,
+            0.55,
+            0.28
+          ],
+          "bbox_full_pixels_1280x960": [
+            576.0,
+            144.0,
+            704.0,
+            268.8
+          ]
+        }
+      ],
+      "file": "south_5.json",
+      "sha256": "73fbd1fb87bf621baf6e70517b8c3c04eb5ec6258b7814745c4608fdc475b5a0"
+    },
+    {
+      "sample_id": "south_600",
+      "camera": "south",
+      "time_s": 600,
+      "gold": 4,
+      "baseline_predicted": 4,
+      "baseline_error": 0,
+      "baseline_correct": true,
+      "status": "ok",
+      "failure_kind": null,
+      "failure_reason": null,
+      "predicted": 4,
+      "error": 0,
+      "diagnostic_raw_total": 4,
+      "diagnostic_raw_error_if_ignored": 0,
+      "outcome": "baseline_correct_retained",
+      "wall_latency_s": 16.144,
+      "attempts": 1,
+      "transport_retry_count": 0,
+      "usage": {
+        "completion_tokens": 1915,
+        "prompt_tokens": 3606,
+        "total_tokens": 5521,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1180
+        }
+      },
+      "validation_errors": [],
+      "output_audit": {
+        "vehicle_count": 4,
+        "unique_id_count": 4,
+        "declared_counts": {
+          "total": 4,
+          "large": 3,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "observed_size_counts": {
+          "large": 3,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "seen_in_counts": {
+          "global": 4,
+          "detail": 1,
+          "both": 1
+        },
+        "bbox_count": 4,
+        "bbox_duplicate_candidates_iou_ge_0_85": []
+      },
+      "diagnostic_boxes": [
+        {
+          "id": "V1",
+          "bbox_full_normalized": [
+            0.45,
+            0.45,
+            0.68,
+            0.88
+          ],
+          "bbox_full_pixels_1280x960": [
+            576.0,
+            432.0,
+            870.4,
+            844.8
+          ]
+        },
+        {
+          "id": "V2",
+          "bbox_full_normalized": [
+            0.43,
+            0.28,
+            0.62,
+            0.55
+          ],
+          "bbox_full_pixels_1280x960": [
+            550.4,
+            268.8,
+            793.6,
+            528.0
+          ]
+        },
+        {
+          "id": "V3",
+          "bbox_full_normalized": [
+            0.33,
+            0.24,
+            0.45,
+            0.37
+          ],
+          "bbox_full_pixels_1280x960": [
+            422.4,
+            230.4,
+            576.0,
+            355.2
+          ]
+        },
+        {
+          "id": "V4",
+          "bbox_full_normalized": [
+            0.4,
+            0.1,
+            0.55,
+            0.35
+          ],
+          "bbox_full_pixels_1280x960": [
+            512.0,
+            96.0,
+            704.0,
+            336.0
+          ]
+        }
+      ],
+      "file": "south_600.json",
+      "sha256": "9b0a4c7705316bb82598697aa8d359b548a1aa31698fd650e95eb56cc00ef998"
+    },
+    {
+      "sample_id": "south_900",
+      "camera": "south",
+      "time_s": 900,
+      "gold": 5,
+      "baseline_predicted": 5,
+      "baseline_error": 0,
+      "baseline_correct": true,
+      "status": "failed",
+      "failure_kind": "schema",
+      "failure_reason": "vehicles[2].visible is invalid; vehicles[3].visible is invalid",
+      "predicted": null,
+      "error": null,
+      "diagnostic_raw_total": 4,
+      "diagnostic_raw_error_if_ignored": -1,
+      "outcome": "baseline_correct_but_failed",
+      "wall_latency_s": 14.971,
+      "attempts": 1,
+      "transport_retry_count": 0,
+      "usage": {
+        "completion_tokens": 1936,
+        "prompt_tokens": 3606,
+        "total_tokens": 5542,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1220
+        }
+      },
+      "validation_errors": [
+        "vehicles[2].visible is invalid",
+        "vehicles[3].visible is invalid"
+      ],
+      "output_audit": {
+        "vehicle_count": 4,
+        "unique_id_count": 4,
+        "declared_counts": {
+          "total": 4,
+          "large": 3,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "observed_size_counts": {
+          "large": 3,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "seen_in_counts": {
+          "global": 4,
+          "detail": 1,
+          "both": 1
+        },
+        "bbox_count": 4,
+        "bbox_duplicate_candidates_iou_ge_0_85": []
+      },
+      "diagnostic_boxes": [
+        {
+          "id": "V1",
+          "bbox_full_normalized": [
+            0.45,
+            0.45,
+            0.65,
+            0.9
+          ],
+          "bbox_full_pixels_1280x960": [
+            576.0,
+            432.0,
+            832.0,
+            864.0
+          ]
+        },
+        {
+          "id": "V2",
+          "bbox_full_normalized": [
+            0.4,
+            0.25,
+            0.6,
+            0.5
+          ],
+          "bbox_full_pixels_1280x960": [
+            512.0,
+            240.0,
+            768.0,
+            480.0
+          ]
+        },
+        {
+          "id": "V3",
+          "bbox_full_normalized": [
+            0.35,
+            0.2,
+            0.45,
+            0.35
+          ],
+          "bbox_full_pixels_1280x960": [
+            448.0,
+            192.0,
+            576.0,
+            336.0
+          ]
+        },
+        {
+          "id": "V4",
+          "bbox_full_normalized": [
+            0.44,
+            0.1,
+            0.56,
+            0.25
+          ],
+          "bbox_full_pixels_1280x960": [
+            563.2,
+            96.0,
+            716.8,
+            240.0
+          ]
+        }
+      ],
+      "file": "south_900.json",
+      "sha256": "8b2f0cc1086f16a941ec7b3081317e811cc3c49696cbd71a3dbeb05723492556"
+    }
+  ]
+}
