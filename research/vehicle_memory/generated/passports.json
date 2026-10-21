@@ -2,6 +2,14 @@
   "schema": "truckflow-passports-v1",
   "identity_method": "semantic_passport_only",
   "traditional_detection_or_tracking_used": false,
+  "identity_policy": {
+    "container_number_is_vehicle_id": false,
+    "cargo_id_scope": "cargo_only",
+    "tractor_id_scope": "tractor_only",
+    "vehicle_session_requires_current_attachment_or_continuity_evidence": true,
+    "unclear_ocr_may_merge": false,
+    "trailer_swap_creates_new_session": true
+  },
   "passports": [
     {
       "passport_id": "vp_98d43974c761",
@@ -47,7 +55,43 @@
         "verbatim": "白色波纹状货厢，车身带有模糊字符，朝向画面下方，位于画面左下方",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_3491b0951853",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/north_1200_aisle.json",
+        "observed_at_video_s": 1200,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -116,7 +160,43 @@
         "verbatim": "红色封闭货厢，底部带有黄色反光标识，下方连接白色车头，位于画面中间偏左",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_0ccbadf233db",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/north_1200_aisle.json",
+        "observed_at_video_s": 1200,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -185,7 +265,43 @@
         "verbatim": "蓝色平顶货厢，位于画面上方中间，被展台部分遮挡，无可见车头",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_fe47427f8f6b",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/north_1200_aisle.json",
+        "observed_at_video_s": 1200,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -252,7 +368,43 @@
         "verbatim": "Red cargo box, yellow reflectors at bottom, text '9L88 580' on side, oriented towards the background of the aisle",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_0b9285bbe8aa",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/north_1500_aisle.json",
+        "observed_at_video_s": 1500,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -319,7 +471,43 @@
         "verbatim": "White corrugated box top, dark lower body with partial text '粤A C1162', oriented towards the bottom of the image",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_b65634f5c69e",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/north_1500_aisle.json",
+        "observed_at_video_s": 1500,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -385,7 +573,43 @@
         "verbatim": "红色封闭货厢，朝向画面下方，货厢带有黄色反光标识，为单独可见的挂车",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_131d6c3620b6",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/north_1800_aisle.json",
+        "observed_at_video_s": 1800,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -459,7 +683,43 @@
           "AG1164"
         ],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_8d02121f474c",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/north_1800_aisle.json",
+        "observed_at_video_s": 1800,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -522,7 +782,43 @@
         "verbatim": "Red metal enclosed cargo truck, rear-facing, central aisle position",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_5366fec883b5",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/north_2100_aisle.json",
+        "observed_at_video_s": 2100,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -591,7 +887,43 @@
         "verbatim": "Long white corrugated cargo container truck, left side of image",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_1cb99510ebbc",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/north_2100_aisle.json",
+        "observed_at_video_s": 2100,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -657,7 +989,43 @@
         "verbatim": "灰色厢式货厢，红色车尾，左侧车门打开",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_0c108afae545",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/north_2400_aisle.json",
+        "observed_at_video_s": 2400,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -723,7 +1091,43 @@
         "verbatim": "红色金属货厢，带有黄色反光标识",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_af3e8b2b3699",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/north_2400_aisle.json",
+        "observed_at_video_s": 2400,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -789,7 +1193,43 @@
         "verbatim": "红色货柜，带有编号标识",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_a2a82266a31a",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/north_2400_aisle.json",
+        "observed_at_video_s": 2400,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -857,7 +1297,43 @@
           "粤T73778"
         ],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_f52d901776ae",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/north_2600_aisle.json",
+        "observed_at_video_s": 2600,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -924,7 +1400,43 @@
         "verbatim": "红色货厢，顶部放置有物品，仅露出货厢上部，位于画面底部",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_62211657ea27",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/north_2600_aisle.json",
+        "observed_at_video_s": 2600,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -995,7 +1507,43 @@
         "verbatim": "白色波纹状货厢，深色车头，沿画面垂直方向放置，朝向画面下方",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_1175eb52b0fe",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/north_300_aisle.json",
+        "observed_at_video_s": 300,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -1064,7 +1612,43 @@
         "verbatim": "蓝色平顶货厢，深色箱体，无车头，单独放置在通道中间，朝向画面上方",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_ba97b5efee45",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/north_300_aisle.json",
+        "observed_at_video_s": 300,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -1129,7 +1713,43 @@
           "QL66002"
         ],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_2077f6b14495",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/north_5_aisle.json",
+        "observed_at_video_s": 5,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -1198,7 +1818,43 @@
         "verbatim": "Truck with blue roof, boxes placed on its platform",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_19d43ec6d1ce",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/north_5_aisle.json",
+        "observed_at_video_s": 5,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "medium",
       "evidence_crops": [
@@ -1269,7 +1925,43 @@
         "verbatim": "Dark-colored truck located above the blue roof truck",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_aecb5a62dfb0",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/north_5_aisle.json",
+        "observed_at_video_s": 5,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "medium",
       "evidence_crops": [
@@ -1332,7 +2024,43 @@
         "verbatim": "Red truck at top rear, rear lights visible",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_01b750b774f8",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/north_5_aisle.json",
+        "observed_at_video_s": 5,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "medium",
       "evidence_crops": [
@@ -1397,7 +2125,43 @@
         "verbatim": "Red closed cargo box, rear lights and markings visible, facing away from camera",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_1844333fa836",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/north_600_aisle.json",
+        "observed_at_video_s": 600,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -1463,7 +2227,43 @@
         "verbatim": "White corrugated cargo area, partial text '粤A...' on lower section, positioned at bottom left",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_c6258830f718",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/north_600_aisle.json",
+        "observed_at_video_s": 600,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -1531,7 +2331,43 @@
         "verbatim": "白色波纹状厢式货厢，车身下部有模糊字符，朝向画面下方，位于左下方区域",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_1ac420fc6e7a",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/north_900_aisle.json",
+        "observed_at_video_s": 900,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -1599,7 +2435,43 @@
         "verbatim": "红色封闭货厢，货厢侧面有编号标识，朝向画面下方，位于中间通道左侧",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_d3965be4aa93",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/north_900_aisle.json",
+        "observed_at_video_s": 900,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -1666,7 +2538,43 @@
         "verbatim": "蓝色顶棚的厢式货车，位于中间通道远端，周围有工作人员",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_d5c6ddcfb5d3",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/north_900_aisle.json",
+        "observed_at_video_s": 900,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "medium",
       "evidence_crops": [
@@ -1732,7 +2640,43 @@
         "verbatim": "白色车身，车头印有“东风商用车”字样，朝向画面下方",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_e5dba30786c8",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_1200_aisle.json",
+        "observed_at_video_s": 1200,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -1800,7 +2744,43 @@
         "verbatim": "红色车头，灰色长货厢，朝向画面下方，位于白色货车后方",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_5d5b594d5b3f",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_1200_aisle.json",
+        "observed_at_video_s": 1200,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -1868,7 +2848,43 @@
         "verbatim": "红色车头，较短货厢，朝向画面下方，位于半挂货车后方",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_ab42f43d20fc",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_1200_aisle.json",
+        "observed_at_video_s": 1200,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "medium",
       "evidence_crops": [
@@ -1939,7 +2955,43 @@
         "verbatim": "红色车头，位于通道最深处，朝向画面下方",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_a8ebeccde51b",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_1200_aisle.json",
+        "observed_at_video_s": 1200,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "medium",
       "evidence_crops": [
@@ -2005,7 +3057,43 @@
         "verbatim": "红色空挂车，无车头，位于画面底部",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_4e18489d4f62",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_1200_aisle.json",
+        "observed_at_video_s": 1200,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -2074,7 +3162,43 @@
         "verbatim": "白色车头，带有“东风商用车”字样，封闭货厢，朝向画面观察者",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_3b427d1ea4a0",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_1500_aisle.json",
+        "observed_at_video_s": 1500,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -2143,7 +3267,43 @@
         "verbatim": "红色车头，灰色封闭货厢，半挂式结构，朝向画面观察者",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_5096290cb4f7",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_1500_aisle.json",
+        "observed_at_video_s": 1500,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -2209,7 +3369,43 @@
         "verbatim": "红色车身，封闭货厢，朝向画面观察者",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_ae94f1d306b3",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_1500_aisle.json",
+        "observed_at_video_s": 1500,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "medium",
       "evidence_crops": [
@@ -2275,7 +3471,43 @@
         "verbatim": "红色车身，封闭货厢，朝向画面观察者",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_50f5ed8c4b59",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_1500_aisle.json",
+        "observed_at_video_s": 1500,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "medium",
       "evidence_crops": [
@@ -2342,7 +3574,43 @@
         "verbatim": "红色空货厢挂车，无连接车头，位于画面最底部",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_51541f49cc65",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_1500_aisle.json",
+        "observed_at_video_s": 1500,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -2410,7 +3678,43 @@
         "verbatim": "White cab with '东风商用车' text, white cargo box, front-facing at bottom of frame",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_eb2f70385656",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_1800_aisle.json",
+        "observed_at_video_s": 1800,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -2480,7 +3784,43 @@
         "verbatim": "Red cab with white logo, red cargo area, positioned above the white truck",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_7ff62c4b1b5f",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_1800_aisle.json",
+        "observed_at_video_s": 1800,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -2548,7 +3888,43 @@
         "verbatim": "Red cab, red cargo box, front-facing, with blue load on top",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_53e402ac4b00",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_1800_aisle.json",
+        "observed_at_video_s": 1800,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -2615,7 +3991,43 @@
         "verbatim": "Red cab, front-facing, at the top of the central aisle",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_265b15082b4d",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_1800_aisle.json",
+        "observed_at_video_s": 1800,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -2684,7 +4096,43 @@
         "verbatim": "白色东风商用车车头，白色厢式货厢，朝向画面下方",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_f0f0647193f6",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_2100_aisle.json",
+        "observed_at_video_s": 2100,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -2753,7 +4201,43 @@
         "verbatim": "红色车头，灰色厢式货厢，朝向画面下方",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_1e80a400cf20",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_2100_aisle.json",
+        "observed_at_video_s": 2100,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -2825,7 +4309,43 @@
         "verbatim": "红色车头，棕色厢式货厢，朝向画面下方",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_e39856af18c2",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_2100_aisle.json",
+        "observed_at_video_s": 2100,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -2890,7 +4410,43 @@
         "verbatim": "红色货车，仅上部结构可见，朝向画面下方",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_8c33a03c3ae0",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_2100_aisle.json",
+        "observed_at_video_s": 2100,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -2957,7 +4513,43 @@
         "verbatim": "Red heavy-duty cab with 'SITRAK' text, open driver door, front headlights illuminated",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_1a450449f110",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_2400_aisle.json",
+        "observed_at_video_s": 2400,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -3020,7 +4612,43 @@
         "verbatim": "White box-type truck, front grille and logo visible, cargo area is white enclosed box",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_590b4bb55ffa",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_2400_aisle.json",
+        "observed_at_video_s": 2400,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "medium",
       "evidence_crops": [
@@ -3086,7 +4714,43 @@
         "verbatim": "Red heavy-duty truck, cargo on top of its cab, front grille visible",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_2071c3dec434",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_2400_aisle.json",
+        "observed_at_video_s": 2400,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -3152,7 +4816,43 @@
         "verbatim": "红色重型货车，车头及部分货厢可见，朝向画面下方",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_314f0196abb9",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_2600_aisle.json",
+        "observed_at_video_s": 2600,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -3218,7 +4918,43 @@
         "verbatim": "白色厢式货车，车头及完整厢体可见，朝向画面下方",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_bb21c20f8e2a",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_2600_aisle.json",
+        "observed_at_video_s": 2600,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -3285,7 +5021,43 @@
         "verbatim": "红色半挂货车，车头及长货厢完整可见，朝向画面下方",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_ee52d1b35689",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_2600_aisle.json",
+        "observed_at_video_s": 2600,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -3352,7 +5124,43 @@
         "verbatim": "红色单独货厢，无车头，位于画面最下方",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_460ae4102056",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_2600_aisle.json",
+        "observed_at_video_s": 2600,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -3421,7 +5229,43 @@
         "verbatim": "白色东风商用车车头，车头有东风标志及'东风商用车'字样，货厢为白色",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_0733d5ce335b",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_300_aisle.json",
+        "observed_at_video_s": 300,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -3490,7 +5334,43 @@
         "verbatim": "红色车头，灰色长货厢，位于白色货车后方",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_5fd9fe9c073b",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_300_aisle.json",
+        "observed_at_video_s": 300,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -3559,7 +5439,43 @@
         "verbatim": "红色车头，深色货厢，位于红色半挂货车后方",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_eabd44367b26",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_300_aisle.json",
+        "observed_at_video_s": 300,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "medium",
       "evidence_crops": [
@@ -3630,7 +5546,43 @@
         "verbatim": "红色车头，深色货厢，位于Haier标志左侧，画面最上方的货车",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_dfb940083eaf",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_300_aisle.json",
+        "observed_at_video_s": 300,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "medium",
       "evidence_crops": [
@@ -3693,7 +5645,43 @@
         "verbatim": "红色厢式货车，朝向画面上方，位于中间通道远端，Haier展位左侧",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_1d1a9a8a9a77",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_5_aisle.json",
+        "observed_at_video_s": 5,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -3760,7 +5748,43 @@
         "verbatim": "红色重卡，车头朝向画面下方，封闭式货厢，位于中间通道中部",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_5e3726fbaca4",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_5_aisle.json",
+        "observed_at_video_s": 5,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -3828,7 +5852,43 @@
         "verbatim": "红色半挂车，车头标注“一汽青岛”，开放式货厢，位于中间通道近景",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_31ac94ca55d2",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_5_aisle.json",
+        "observed_at_video_s": 5,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -3894,7 +5954,43 @@
         "verbatim": "白色车身，车头印有“东风商用车”字样，车头朝向画面下方",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_9c7e993884fd",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_600_aisle.json",
+        "observed_at_video_s": 600,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -3964,7 +6060,43 @@
         "verbatim": "红色车头，灰色封闭货厢，车头朝向画面下方",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_f688cf3f9455",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_600_aisle.json",
+        "observed_at_video_s": 600,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -4038,7 +6170,43 @@
         "verbatim": "红色车头，顶部有蓝色覆盖物，车头朝向画面下方",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_00d026671a46",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_600_aisle.json",
+        "observed_at_video_s": 600,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -4106,7 +6274,43 @@
         "verbatim": "红色车头，车头朝向画面下方",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_6ea9722fe0cd",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_600_aisle.json",
+        "observed_at_video_s": 600,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -4175,7 +6379,43 @@
         "verbatim": "白色车头印有“东风商用车”字样，白色封闭货厢，朝向镜头",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_43a24db513ee",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_900_aisle.json",
+        "observed_at_video_s": 900,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -4244,7 +6484,43 @@
         "verbatim": "红色车头，灰色封闭货厢，朝向镜头",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_14741fc0236a",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_900_aisle.json",
+        "observed_at_video_s": 900,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [
@@ -4317,7 +6593,43 @@
         "verbatim": "红色车头，货厢顶部有蓝色物品，朝向镜头",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_ce660f234149",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_900_aisle.json",
+        "observed_at_video_s": 900,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "medium",
       "evidence_crops": [
@@ -4386,7 +6698,43 @@
         "verbatim": "红色车头，棕色货厢，朝向镜头",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_b9affaae8238",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_900_aisle.json",
+        "observed_at_video_s": 900,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "medium",
       "evidence_crops": [
@@ -4453,7 +6801,43 @@
         "verbatim": "红色封闭货厢，无车头，单独放置",
         "tokens": [],
         "verified": false,
-        "policy": "verbatim only; missing or uncertain text is never reconstructed"
+        "policy": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
+      },
+      "identity_layers": {
+        "cargo_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "cargo_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a container number."
+        },
+        "tractor_id": {
+          "value": null,
+          "status": "unobserved_or_unverified",
+          "scope": "tractor_only",
+          "candidate_tokens": [],
+          "note": "No raw text is promoted into this typed layer. Unclassified model text cannot establish that a token is a tractor plate."
+        },
+        "vehicle_session_id": {
+          "value": "vs_cfaa7a5fd899",
+          "status": "provisional",
+          "scope": "single_observation_only",
+          "derived_from": [
+            "current_frame_observation"
+          ],
+          "note": "No cross-frame or cross-camera session continuity has been asserted."
+        }
+      },
+      "memory_metadata": {
+        "source": "research/vehicle_memory/evidence/aisle_clean/south_900_aisle.json",
+        "observed_at_video_s": 900,
+        "created_at_utc": "2026-10-21T13:13:55.302430+00:00",
+        "version": "passport-v1",
+        "ttl_s": 300,
+        "expires_at_utc": "2026-10-21T13:18:55.302430+00:00",
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": []
       },
       "dimension_class": "large",
       "evidence_crops": [

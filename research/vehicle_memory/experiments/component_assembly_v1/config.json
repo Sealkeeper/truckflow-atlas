@@ -1,0 +1,38 @@
+{
+  "schema": "truckflow-vision-experiment-config-v1",
+  "experiment_id": "component_assembly_v1",
+  "mechanism": "current-frame component inventory with explicit tractor-cargo assembly status",
+  "model": "doubao",
+  "temperature": 0,
+  "max_tokens": 5000,
+  "concurrency": 2,
+  "retry_policy": "none; every HTTP attempt counts",
+  "new_call_budget": 8,
+  "prompt_file": "experiments/component_assembly_v1/prompt.txt",
+  "samples": [
+    "north_5",
+    "north_300",
+    "north_600",
+    "south_2100",
+    "north_1200",
+    "south_600",
+    "north_1800",
+    "south_2600"
+  ],
+  "sample_roles": {
+    "north_5": "baseline error: undercount",
+    "north_300": "baseline error: undercount",
+    "north_600": "baseline error: undercount",
+    "south_2100": "baseline error: overcount",
+    "north_1200": "control: baseline exact",
+    "south_600": "control: baseline exact",
+    "north_1800": "control: baseline exact",
+    "south_2600": "control: baseline exact"
+  },
+  "forbidden_inputs": [
+    "previous or future frames",
+    "user red-box images",
+    "user counts or answers",
+    "other-camera frames"
+  ]
+}

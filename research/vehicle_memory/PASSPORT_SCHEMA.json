@@ -9,6 +9,7 @@
     "schema",
     "identity_method",
     "traditional_detection_or_tracking_used",
+    "identity_policy",
     "passports"
   ],
   "properties": {
@@ -21,6 +22,9 @@
     "traditional_detection_or_tracking_used": {
       "const": false
     },
+    "identity_policy": {
+      "$ref": "#/$defs/identity_policy"
+    },
     "passports": {
       "type": "array",
       "items": {
@@ -29,6 +33,148 @@
     }
   },
   "$defs": {
+    "identity_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "container_number_is_vehicle_id",
+        "cargo_id_scope",
+        "tractor_id_scope",
+        "vehicle_session_requires_current_attachment_or_continuity_evidence",
+        "unclear_ocr_may_merge",
+        "trailer_swap_creates_new_session"
+      ],
+      "properties": {
+        "container_number_is_vehicle_id": {
+          "const": false
+        },
+        "cargo_id_scope": {
+          "const": "cargo_only"
+        },
+        "tractor_id_scope": {
+          "const": "tractor_only"
+        },
+        "vehicle_session_requires_current_attachment_or_continuity_evidence": {
+          "const": true
+        },
+        "unclear_ocr_may_merge": {
+          "const": false
+        },
+        "trailer_swap_creates_new_session": {
+          "const": true
+        }
+      }
+    },
+    "identity_layer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "status",
+        "scope"
+      ],
+      "properties": {
+        "value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "unobserved_or_unverified",
+            "provisional",
+            "verified",
+            "conflict"
+          ]
+        },
+        "scope": {
+          "type": "string"
+        },
+        "candidate_tokens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "note": {
+          "type": "string"
+        },
+        "derived_from": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "memory_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source",
+        "observed_at_video_s",
+        "created_at_utc",
+        "version",
+        "ttl_s",
+        "expires_at_utc",
+        "state",
+        "conflicts",
+        "supersedes"
+      ],
+      "properties": {
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observed_at_video_s": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "created_at_utc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ttl_s": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "expires_at_utc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "state": {
+          "enum": [
+            "fresh",
+            "expired",
+            "conflicted",
+            "retired"
+          ]
+        },
+        "conflicts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "supersedes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        }
+      }
+    },
     "seen": {
       "type": "object",
       "additionalProperties": false,
@@ -170,7 +316,7 @@
           "type": "boolean"
         },
         "policy": {
-          "const": "verbatim only; missing or uncertain text is never reconstructed"
+          "const": "verbatim only; missing or uncertain text is never reconstructed, and unclassified tokens are not promoted to cargo_id or tractor_id"
         }
       }
     },
@@ -282,6 +428,8 @@
         "bbox_history",
         "visual",
         "readable_text",
+        "identity_layers",
+        "memory_metadata",
         "dimension_class",
         "evidence_crops",
         "confidence",
@@ -322,6 +470,56 @@
         },
         "readable_text": {
           "$ref": "#/$defs/readable_text"
+        },
+        "identity_layers": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "cargo_id",
+            "tractor_id",
+            "vehicle_session_id"
+          ],
+          "properties": {
+            "cargo_id": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/identity_layer"
+                }
+              ],
+              "properties": {
+                "scope": {
+                  "const": "cargo_only"
+                }
+              }
+            },
+            "tractor_id": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/identity_layer"
+                }
+              ],
+              "properties": {
+                "scope": {
+                  "const": "tractor_only"
+                }
+              }
+            },
+            "vehicle_session_id": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/identity_layer"
+                }
+              ],
+              "properties": {
+                "scope": {
+                  "const": "single_observation_only"
+                }
+              }
+            }
+          }
+        },
+        "memory_metadata": {
+          "$ref": "#/$defs/memory_metadata"
         },
         "dimension_class": {
           "enum": [

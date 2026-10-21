@@ -17,7 +17,7 @@ import re
 import statistics
 from collections import Counter
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -386,7 +386,60 @@ def crop_for_observation(observation: Observation) -> str:
     return str(output.relative_to(REPO_ROOT)).replace("\\", "/")
 
 
-def build_passport(observation: Observation) -> dict[str, Any]:
+def build_identity_layers(observation: Observation, passport_id: str) -> dict[str, Any]:
+    session_id = "vs_" + hashlib.sha1(
+        f"{passport_id}:{observation.sample_id}:{observation.index}".encode("utf-8")
+    ).hexdigest()[:12]
+    return {
+        "cargo_id": {
+            "value": None,
+            "status": "unobserved_or_unverified",
+            "scope": "cargo_only",
+            "candidate_tokens": [],
+            "note": (
+                "No raw text is promoted into this typed layer. Unclassified model text "
+                "cannot establish that a token is a container number."
+            ),
+        },
+        "tractor_id": {
+            "value": None,
+            "status": "unobserved_or_unverified",
+            "scope": "tractor_only",
+            "candidate_tokens": [],
+            "note": (
+                "No raw text is promoted into this typed layer. Unclassified model text "
+                "cannot establish that a token is a tractor plate."
+            ),
+        },
+        "vehicle_session_id": {
+            "value": session_id,
+            "status": "provisional",
+            "scope": "single_observation_only",
+            "derived_from": ["current_frame_observation"],
+            "note": "No cross-frame or cross-camera session continuity has been asserted.",
+        },
+    }
+
+
+def build_memory_metadata(
+    observation: Observation, created_at: datetime
+) -> dict[str, Any]:
+    ttl_s = 300
+    expires_at = created_at + timedelta(seconds=ttl_s)
+    return {
+        "source": observation.source,
+        "observed_at_video_s": observation.time_s,
+        "created_at_utc": created_at.isoformat(),
+        "version": "passport-v1",
+        "ttl_s": ttl_s,
+        "expires_at_utc": expires_at.isoformat(),
+        "state": "fresh",
+        "conflicts": [],
+        "supersedes": [],
+    }
+
+
+def build_passport(observation: Observation, created_at: datetime) -> dict[str, Any]:
     raw_id = f"{observation.sample_id}:{observation.camera}:{observation.index}"
     passport_id = "vp_" + hashlib.sha1(raw_id.encode("utf-8")).hexdigest()[:12]
     confidence = 0.45
@@ -425,8 +478,13 @@ def build_passport(observation: Observation) -> dict[str, Any]:
             "verbatim": observation.clues,
             "tokens": observation.features.texts,
             "verified": observation.text_verified,
-            "policy": "verbatim only; missing or uncertain text is never reconstructed",
+            "policy": (
+                "verbatim only; missing or uncertain text is never reconstructed, and "
+                "unclassified tokens are not promoted to cargo_id or tractor_id"
+            ),
         },
+        "identity_layers": build_identity_layers(observation, passport_id),
+        "memory_metadata": build_memory_metadata(observation, created_at),
         "dimension_class": observation.features.size,
         "evidence_crops": [crop_for_observation(observation)],
         "confidence": round(max(0.0, min(0.95, confidence)), 3),
@@ -446,6 +504,97 @@ def build_passport(observation: Observation) -> dict[str, Any]:
         "notes": [
             "Observation-level provisional passport facet. No cross-camera identity is asserted.",
         ],
+    }
+
+
+def build_memory_cache(
+    passports: list[dict[str, Any]],
+    l2: dict[str, Any],
+    per_camera_rows: list[dict[str, Any]],
+    created_at: datetime,
+) -> dict[str, Any]:
+    entries: list[dict[str, Any]] = []
+    for passport in passports:
+        metadata = passport["memory_metadata"]
+        entries.append(
+            {
+                "memory_id": "mem_l1_" + passport["passport_id"].removeprefix("vp_"),
+                "layer": "L1",
+                "memory_type": "provisional_passport_facet",
+                "key": passport["passport_id"],
+                "summary": "Observation-level semantic identity evidence; not a permanent vehicle ID.",
+                "payload_ref": "generated/passports.json#" + passport["passport_id"],
+                **metadata,
+            }
+        )
+
+    l2_created = created_at.isoformat()
+    l2_expires = (created_at + timedelta(days=30)).isoformat()
+    for row in l2["frames"]:
+        entries.append(
+            {
+                "memory_id": "mem_l2_" + row["sample_id"],
+                "layer": "L2",
+                "memory_type": "scene_miss_region_probe",
+                "key": row["sample_id"],
+                "summary": (
+                    f"main={row['main_count']}, supplement={row['supplement_raw_count']}, "
+                    f"new={row['supplement_new_count']}, merged={row['merged_count']}, "
+                    f"gold={row['gold_camera_count']}"
+                ),
+                "payload_ref": "evidence/l2_probe/" + row["sample_id"],
+                "source": "research/vehicle_memory/evidence/l2_probe",
+                "observed_at_video_s": int(row["sample_id"].split("_", 1)[1]),
+                "created_at_utc": l2_created,
+                "version": "l2-probe-v1",
+                "ttl_s": 30 * 24 * 60 * 60,
+                "expires_at_utc": l2_expires,
+                "state": "fresh",
+                "conflicts": [],
+                "supersedes": [],
+            }
+        )
+
+    l3_created = created_at.isoformat()
+    l3_expires = (created_at + timedelta(days=90)).isoformat()
+    for row in per_camera_rows:
+        if row["exact"]:
+            continue
+        entries.append(
+            {
+                "memory_id": "mem_l3_" + row["sample_id"],
+                "layer": "L3",
+                "memory_type": "count_failure_regression",
+                "key": row["sample_id"],
+                "summary": (
+                    f"baseline predicted {row['predicted']}, gold {row['gold']}, "
+                    f"error {row['error']:+d}"
+                ),
+                "payload_ref": "generated/metrics.json#per_camera_baseline",
+                "source": "research/vehicle_memory/evidence/aisle_clean",
+                "observed_at_video_s": row["time_s"],
+                "created_at_utc": l3_created,
+                "version": "clean-baseline-pr9",
+                "ttl_s": 90 * 24 * 60 * 60,
+                "expires_at_utc": l3_expires,
+                "state": "fresh",
+                "conflicts": [],
+                "supersedes": [],
+            }
+        )
+
+    return {
+        "schema": "truckflow-memory-cache-v1",
+        "created_at_utc": created_at.isoformat(),
+        "identity_policy": {
+            "container_number_is_vehicle_id": False,
+            "cargo_id_scope": "cargo_only",
+            "tractor_id_scope": "tractor_only",
+            "vehicle_session_requires_current_attachment_or_continuity_evidence": True,
+            "unclear_ocr_may_merge": False,
+            "trailer_swap_creates_new_session": True,
+        },
+        "entries": entries,
     }
 
 
@@ -820,9 +969,10 @@ def percentile(values: list[float], p: float) -> float:
 
 def main() -> None:
     GENERATED.mkdir(parents=True, exist_ok=True)
+    created_at = datetime.now(timezone.utc)
     observations = parse_aisle_runs()
     truth = parse_truth()
-    passports = [build_passport(observation) for observation in observations]
+    passports = [build_passport(observation, created_at) for observation in observations]
 
     by_sample = Counter(item.sample_id for item in observations)
     per_camera_rows: list[dict[str, Any]] = []
@@ -951,10 +1101,11 @@ def main() -> None:
                 "exact": predicted == row["gold"],
             }
         )
+    memory_cache = build_memory_cache(passports, l2, per_camera_rows, created_at)
 
     result = {
         "schema": "truckflow-vehicle-memory-replay-v2",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": created_at.isoformat(),
         "constraints": {
             "identity_decision": (
                 "semantic passport matching only; no detector, tracker, or cross-camera "
@@ -964,6 +1115,7 @@ def main() -> None:
             "review_threshold": REVIEW_THRESHOLD,
             "silent_merge": False,
             "new_model_calls": l2["new_calls"],
+            "identity_policy": memory_cache["identity_policy"],
         },
         "dataset": {
             "samples": len(per_camera_rows),
@@ -1023,9 +1175,11 @@ def main() -> None:
             "schema": "truckflow-passports-v1",
             "identity_method": "semantic_passport_only",
             "traditional_detection_or_tracking_used": False,
+            "identity_policy": memory_cache["identity_policy"],
             "passports": passports,
         },
     )
+    write_json(GENERATED / "memory_cache.json", memory_cache)
     write_json(GENERATED / "metrics.json", result)
     write_json(GENERATED / "pair_probes.json", {"metrics": probe_metrics, "rows": probe_rows})
     write_json(

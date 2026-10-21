@@ -1,0 +1,428 @@
+{
+  "schema": "truckflow-dualscale-inputs-v1",
+  "recipe": "archived aisle crop plus a fixed same-frame far-region detail crop",
+  "no_temporal_or_user_annotation_input": true,
+  "user_annotation_hash_match": false,
+  "samples": [
+    {
+      "sample_id": "north_5",
+      "primary": "accuracy/crops/north_5_aisle.jpg",
+      "primary_sha256": "8b98320e3ec5d913b48234ac6b2eabc906a943a3d26cbeeb40e53428f1574689",
+      "secondary": "research/vehicle_memory/experiments/dualscale_v1/inputs/north_5_far.jpg",
+      "secondary_sha256": "07aaf1bfe308e180e6e3c50b14721822f8a2c63d69f37cd54bbe7d635801288d",
+      "source_size": [
+        1040,
+        1920
+      ],
+      "secondary_crop_normalized": [
+        0.0,
+        0.0,
+        1.0,
+        0.52
+      ],
+      "secondary_size": [
+        1040,
+        998
+      ]
+    },
+    {
+      "sample_id": "south_5",
+      "primary": "accuracy/crops/south_5_aisle.jpg",
+      "primary_sha256": "df8d0041357342911269bd1a9c2c71d86f1b7049fa92b8aa4a61a8a01a89a8ef",
+      "secondary": "research/vehicle_memory/experiments/dualscale_v1/inputs/south_5_far.jpg",
+      "secondary_sha256": "b8b01d9b7cc46f51b85ba1d80779b414f1b011ed05952c08a9a5c13db4301e94",
+      "source_size": [
+        1040,
+        1920
+      ],
+      "secondary_crop_normalized": [
+        0.0,
+        0.0,
+        1.0,
+        0.52
+      ],
+      "secondary_size": [
+        1040,
+        998
+      ]
+    },
+    {
+      "sample_id": "north_300",
+      "primary": "accuracy/crops/north_300_aisle.jpg",
+      "primary_sha256": "84fd0d67ecd0f0cac878f59bd55401a841e2cf5eb1d613366041552e847a1073",
+      "secondary": "research/vehicle_memory/experiments/dualscale_v1/inputs/north_300_far.jpg",
+      "secondary_sha256": "1ee04404455958168f703c944a51762a806d36d38181897bee3047a727cec813",
+      "source_size": [
+        1040,
+        1920
+      ],
+      "secondary_crop_normalized": [
+        0.0,
+        0.0,
+        1.0,
+        0.52
+      ],
+      "secondary_size": [
+        1040,
+        998
+      ]
+    },
+    {
+      "sample_id": "south_300",
+      "primary": "accuracy/crops/south_300_aisle.jpg",
+      "primary_sha256": "7ebb434a2b3889f0eda549ecb3f672fcac4dc5ee441298a8d6a019a22dd021e6",
+      "secondary": "research/vehicle_memory/experiments/dualscale_v1/inputs/south_300_far.jpg",
+      "secondary_sha256": "243ffb47338105cc39c98b964870df534b8d5900e21bf63cd2dcc263583ef07c",
+      "source_size": [
+        1040,
+        1920
+      ],
+      "secondary_crop_normalized": [
+        0.0,
+        0.0,
+        1.0,
+        0.52
+      ],
+      "secondary_size": [
+        1040,
+        998
+      ]
+    },
+    {
+      "sample_id": "north_600",
+      "primary": "accuracy/crops/north_600_aisle.jpg",
+      "primary_sha256": "9e0d3ddf1c7c32d14abaabd1c0938b8b5f57b5d748b3a7b5dcd595780b0212d6",
+      "secondary": "research/vehicle_memory/experiments/dualscale_v1/inputs/north_600_far.jpg",
+      "secondary_sha256": "67bbf63670571dd7424fc6c47433a00f28b24f8317388d6388de8da0600ac4d2",
+      "source_size": [
+        1040,
+        1920
+      ],
+      "secondary_crop_normalized": [
+        0.0,
+        0.0,
+        1.0,
+        0.52
+      ],
+      "secondary_size": [
+        1040,
+        998
+      ]
+    },
+    {
+      "sample_id": "south_600",
+      "primary": "accuracy/crops/south_600_aisle.jpg",
+      "primary_sha256": "32a41e95620f5e4cb39c5deff8c9cc4c9e452a633631ca9eca2049e69bbac3d7",
+      "secondary": "research/vehicle_memory/experiments/dualscale_v1/inputs/south_600_far.jpg",
+      "secondary_sha256": "56c1eb82897f3642d1bab6e138f0288df51d0e897d67e64b34cc0731dc087a7b",
+      "source_size": [
+        1040,
+        1920
+      ],
+      "secondary_crop_normalized": [
+        0.0,
+        0.0,
+        1.0,
+        0.52
+      ],
+      "secondary_size": [
+        1040,
+        998
+      ]
+    },
+    {
+      "sample_id": "north_900",
+      "primary": "accuracy/crops/north_900_aisle.jpg",
+      "primary_sha256": "89b8b383c73f27dfba4d16c8cf42f9b3ea27ac58b935d310ba932459cddce6a7",
+      "secondary": "research/vehicle_memory/experiments/dualscale_v1/inputs/north_900_far.jpg",
+      "secondary_sha256": "1e6c2233bcf2d6d62795307859c4566b16ab6ebcd0b800a2f34dab7a6c29f55f",
+      "source_size": [
+        1040,
+        1920
+      ],
+      "secondary_crop_normalized": [
+        0.0,
+        0.0,
+        1.0,
+        0.52
+      ],
+      "secondary_size": [
+        1040,
+        998
+      ]
+    },
+    {
+      "sample_id": "south_900",
+      "primary": "accuracy/crops/south_900_aisle.jpg",
+      "primary_sha256": "99e96143981b5d2686185f8ba33588958097373f156b62018314c98b93e31fbf",
+      "secondary": "research/vehicle_memory/experiments/dualscale_v1/inputs/south_900_far.jpg",
+      "secondary_sha256": "e8a1b923c1f058cbb7b5c3a761fed6aeab66d981a3ec1aa0c09404823cfb5c99",
+      "source_size": [
+        1040,
+        1920
+      ],
+      "secondary_crop_normalized": [
+        0.0,
+        0.0,
+        1.0,
+        0.52
+      ],
+      "secondary_size": [
+        1040,
+        998
+      ]
+    },
+    {
+      "sample_id": "north_1200",
+      "primary": "accuracy/crops/north_1200_aisle.jpg",
+      "primary_sha256": "aeef1fce6cbd2c62f8c6b1e5f9090dc4359ffce85b7e924eae538994787fde09",
+      "secondary": "research/vehicle_memory/experiments/dualscale_v1/inputs/north_1200_far.jpg",
+      "secondary_sha256": "e4968ffc4efe52751d2facd5db7caa8b850d9ac2902607ddf598e14146e5ee60",
+      "source_size": [
+        1040,
+        1920
+      ],
+      "secondary_crop_normalized": [
+        0.0,
+        0.0,
+        1.0,
+        0.52
+      ],
+      "secondary_size": [
+        1040,
+        998
+      ]
+    },
+    {
+      "sample_id": "south_1200",
+      "primary": "accuracy/crops/south_1200_aisle.jpg",
+      "primary_sha256": "9b1e5e54d55d1197598b070647f65b25c20d57cbcb7b0d841ba4aeac97d5161a",
+      "secondary": "research/vehicle_memory/experiments/dualscale_v1/inputs/south_1200_far.jpg",
+      "secondary_sha256": "dd2f95bbc70e6a41627ed9cf2c2833fba2809fa9e5fa6ddfda8c0ea135a92af0",
+      "source_size": [
+        1040,
+        1920
+      ],
+      "secondary_crop_normalized": [
+        0.0,
+        0.0,
+        1.0,
+        0.52
+      ],
+      "secondary_size": [
+        1040,
+        998
+      ]
+    },
+    {
+      "sample_id": "north_1500",
+      "primary": "accuracy/crops/north_1500_aisle.jpg",
+      "primary_sha256": "71d814fccecf37b4ab9caf3aa9ba027a33d10a4e7a2e4a9e0e431b4d934a1700",
+      "secondary": "research/vehicle_memory/experiments/dualscale_v1/inputs/north_1500_far.jpg",
+      "secondary_sha256": "f0891d16e24dffb65d6bb5d86363dbb59032fcebfc1a9b11339b33188da23249",
+      "source_size": [
+        1040,
+        1920
+      ],
+      "secondary_crop_normalized": [
+        0.0,
+        0.0,
+        1.0,
+        0.52
+      ],
+      "secondary_size": [
+        1040,
+        998
+      ]
+    },
+    {
+      "sample_id": "south_1500",
+      "primary": "accuracy/crops/south_1500_aisle.jpg",
+      "primary_sha256": "94ae30ea7cc3da75bb66a82c48d4a926599982a22e6514f5a41b4afe0f8ae64f",
+      "secondary": "research/vehicle_memory/experiments/dualscale_v1/inputs/south_1500_far.jpg",
+      "secondary_sha256": "d6893b71d4630c18e5b04b506d2bca3c19571251e8ddf1f4b2fa7661dfa0c626",
+      "source_size": [
+        1040,
+        1920
+      ],
+      "secondary_crop_normalized": [
+        0.0,
+        0.0,
+        1.0,
+        0.52
+      ],
+      "secondary_size": [
+        1040,
+        998
+      ]
+    },
+    {
+      "sample_id": "north_1800",
+      "primary": "accuracy/crops/north_1800_aisle.jpg",
+      "primary_sha256": "dcd076f26d2414f17db85b89199aca458f4f0da0ddbaec2f69a1eee60ad9b2cb",
+      "secondary": "research/vehicle_memory/experiments/dualscale_v1/inputs/north_1800_far.jpg",
+      "secondary_sha256": "df0e7ac1ce03c849e8ca5175c3b2ff8f7e04bb17b86fb996404a092aa06ab7b6",
+      "source_size": [
+        1040,
+        1920
+      ],
+      "secondary_crop_normalized": [
+        0.0,
+        0.0,
+        1.0,
+        0.52
+      ],
+      "secondary_size": [
+        1040,
+        998
+      ]
+    },
+    {
+      "sample_id": "south_1800",
+      "primary": "accuracy/crops/south_1800_aisle.jpg",
+      "primary_sha256": "26deb1af7e5dd15b6baa4f684f821135dacc734516aa3cd1d7754e9d5f530c7f",
+      "secondary": "research/vehicle_memory/experiments/dualscale_v1/inputs/south_1800_far.jpg",
+      "secondary_sha256": "cb785e577e892d9a8050e076307e2cbb9dadb7a51c362c3c5ed19c31df39a231",
+      "source_size": [
+        1040,
+        1920
+      ],
+      "secondary_crop_normalized": [
+        0.0,
+        0.0,
+        1.0,
+        0.52
+      ],
+      "secondary_size": [
+        1040,
+        998
+      ]
+    },
+    {
+      "sample_id": "north_2100",
+      "primary": "accuracy/crops/north_2100_aisle.jpg",
+      "primary_sha256": "c529da6ebe872225137b02535965650b92cd1feb47448892084c953434f016b6",
+      "secondary": "research/vehicle_memory/experiments/dualscale_v1/inputs/north_2100_far.jpg",
+      "secondary_sha256": "71add57ec97a273c2d1838bb4cf4e4e532abc31fe899d822c1684e407ec445a7",
+      "source_size": [
+        1040,
+        1920
+      ],
+      "secondary_crop_normalized": [
+        0.0,
+        0.0,
+        1.0,
+        0.52
+      ],
+      "secondary_size": [
+        1040,
+        998
+      ]
+    },
+    {
+      "sample_id": "south_2100",
+      "primary": "accuracy/crops/south_2100_aisle.jpg",
+      "primary_sha256": "7e75be77dbf988a24e700ba3cbc6b237b9e916c8bc8fd0347e3b2ee2d82a2a9d",
+      "secondary": "research/vehicle_memory/experiments/dualscale_v1/inputs/south_2100_far.jpg",
+      "secondary_sha256": "19056a817dddd9423b42117c8f3299d9936285f8394ea81409f6159c6a8894df",
+      "source_size": [
+        1040,
+        1920
+      ],
+      "secondary_crop_normalized": [
+        0.0,
+        0.0,
+        1.0,
+        0.52
+      ],
+      "secondary_size": [
+        1040,
+        998
+      ]
+    },
+    {
+      "sample_id": "north_2400",
+      "primary": "accuracy/crops/north_2400_aisle.jpg",
+      "primary_sha256": "48c41ea3afbf95e26bb314d350b449aa8a3fcb7409647822a3cc5db0714d8a32",
+      "secondary": "research/vehicle_memory/experiments/dualscale_v1/inputs/north_2400_far.jpg",
+      "secondary_sha256": "daf4f0bb3eb6b190822ab081d4f67290ab22312b10758997a96c8643b4d60dce",
+      "source_size": [
+        1040,
+        1920
+      ],
+      "secondary_crop_normalized": [
+        0.0,
+        0.0,
+        1.0,
+        0.52
+      ],
+      "secondary_size": [
+        1040,
+        998
+      ]
+    },
+    {
+      "sample_id": "south_2400",
+      "primary": "accuracy/crops/south_2400_aisle.jpg",
+      "primary_sha256": "927e6b5bc4a71637774823d1c7b289c6550410a8b8226f6bb741d3656b67ebfa",
+      "secondary": "research/vehicle_memory/experiments/dualscale_v1/inputs/south_2400_far.jpg",
+      "secondary_sha256": "2a025b7d17a50860b0b918e60fac6904ae6b52f905a6b241cb9783e7bce4840f",
+      "source_size": [
+        1040,
+        1920
+      ],
+      "secondary_crop_normalized": [
+        0.0,
+        0.0,
+        1.0,
+        0.52
+      ],
+      "secondary_size": [
+        1040,
+        998
+      ]
+    },
+    {
+      "sample_id": "north_2600",
+      "primary": "accuracy/crops/north_2600_aisle.jpg",
+      "primary_sha256": "3e5e42b9fbed905f751defcbbdeecf7f62686dec44677f586126b7619bdeec22",
+      "secondary": "research/vehicle_memory/experiments/dualscale_v1/inputs/north_2600_far.jpg",
+      "secondary_sha256": "acdcf18111f76d1c670528890eb6dd68052a51585912bc93f86fd7c69f8de2b9",
+      "source_size": [
+        1040,
+        1920
+      ],
+      "secondary_crop_normalized": [
+        0.0,
+        0.0,
+        1.0,
+        0.52
+      ],
+      "secondary_size": [
+        1040,
+        998
+      ]
+    },
+    {
+      "sample_id": "south_2600",
+      "primary": "accuracy/crops/south_2600_aisle.jpg",
+      "primary_sha256": "70e6aeb3fcb9ffb2ab21677712ff576aa895b88c7c6f27e3fb9adcc81668ec86",
+      "secondary": "research/vehicle_memory/experiments/dualscale_v1/inputs/south_2600_far.jpg",
+      "secondary_sha256": "0c5c9dd2b62599ebae77d94c5b8d161aca61634e23b8b7a55815a72b95359a3a",
+      "source_size": [
+        1040,
+        1920
+      ],
+      "secondary_crop_normalized": [
+        0.0,
+        0.0,
+        1.0,
+        0.52
+      ],
+      "secondary_size": [
+        1040,
+        998
+      ]
+    }
+  ]
+}

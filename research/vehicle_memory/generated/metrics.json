@@ -1,12 +1,20 @@
 {
   "schema": "truckflow-vehicle-memory-replay-v2",
-  "generated_at": "2026-10-21T13:02:55.860690+00:00",
+  "generated_at": "2026-10-21T13:13:55.302430+00:00",
   "constraints": {
     "identity_decision": "semantic passport matching only; no detector, tracker, or cross-camera box geometry identity",
     "auto_threshold": 0.82,
     "review_threshold": 0.52,
     "silent_merge": false,
-    "new_model_calls": 2
+    "new_model_calls": 2,
+    "identity_policy": {
+      "container_number_is_vehicle_id": false,
+      "cargo_id_scope": "cargo_only",
+      "tractor_id_scope": "tractor_only",
+      "vehicle_session_requires_current_attachment_or_continuity_evidence": true,
+      "unclear_ocr_may_merge": false,
+      "trailer_swap_creates_new_session": true
+    }
   },
   "dataset": {
     "samples": 20,

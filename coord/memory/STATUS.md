@@ -6,7 +6,7 @@
 
 PR：创建后回填；保持打开，不合并。
 
-状态：研究原型和报告完成；结论为“复核/证据/回归有条件 go，自动计数和自动跨机位去重 no-go”。
+状态：身份分层、记忆缓存和实验预注册已完成；两套新机制尚未发起模型调用。结论仍为“复核/证据/回归有条件 go，自动计数和自动跨机位去重 no-go”。
 
 ## 已完成
 
@@ -15,6 +15,9 @@ PR：创建后回填；保持打开，不合并。
 - 完成 `ARCHITECTURE.md`、`PASSPORT_SCHEMA.json`、`REPORT.md`。
 - 修正成本统计单位：20 个相机帧、22 次调用、平均 1.1 次/相机帧。
 - 修正跨机位释放：双机位有观测且没有已验证配对时一律 review。
+- 将身份拆为 `cargo_id`、`tractor_id`、`vehicle_session_id`；未分类文字不得进入任一硬身份层。
+- 新增 `generated/memory_cache.json` 和 `MEMORY_CACHE_SCHEMA.json`，每条记忆带来源、观测/创建时间、版本、TTL、过期时间、状态、冲突和 supersedes。
+- 冻结 `dualscale_v1`（20 次）和 `component_assembly_v1`（8 次）的输入、提示词和配置；本轮预算 28/40。
 
 ## 已验证结果
 
@@ -26,6 +29,8 @@ PR：创建后回填；保持打开，不合并。
 - L2 两次补检：`north_600` 2 -> 4（真值 4），`north_5` 4 -> 8（真值 5）；两样本 MAE 1.5 -> 1.5。
 - 成本：主调用 20 + L2 2 = 22；75,950 tokens；平均 17.962 s/相机帧；p95 2、最大 2。
 - 没有 validated hard ID，可证明的记忆节省调用为 0。
+- 记忆缓存：L1 66 条、L2 2 条、L3 4 条；schema 校验通过。
+- `cargo_id`、`tractor_id`、`vehicle_session_id` 缺少完整人工真值，身份指标**未测**。
 
 ## 证据入口
 
@@ -33,6 +38,8 @@ PR：创建后回填；保持打开，不合并。
 - 护照：`research/vehicle_memory/generated/passports.json`
 - 架构：`research/vehicle_memory/ARCHITECTURE.md`
 - Schema：`research/vehicle_memory/PASSPORT_SCHEMA.json`
+- 记忆缓存 schema：`research/vehicle_memory/MEMORY_CACHE_SCHEMA.json`
+- 实验预注册：`research/vehicle_memory/experiments/PREREGISTRATION.md`
 - 报告：`research/vehicle_memory/REPORT.md`
 - 真值：`accuracy/reviewed/user-final-review-v2-2026-10-21.json`
 - 红框：`review/user-attachments-20261021/manifest.json`
@@ -50,7 +57,8 @@ PR：创建后回填；保持打开，不合并。
 
 ## 下一步
 
-1. 验证 OCR/箱号 provenance，建立真正的 hard ID。
-2. 扩大 L2 局部补检的 20 帧回归，同时考核漏计、过计和同帧语义去重。
-3. 扩充正负配对集，报告自动覆盖、precision、recall 和误合并业务影响。
-4. 记录复核队列的人工耗时和正确率。
+1. 运行冻结的 20 帧双尺度实验和 8 帧组件装配实验，按固定分母评测。
+2. 根据修复/回归结果决定继续、淘汰或改机制；不得把局部结果外推。
+3. 验证 OCR/箱号 provenance，建立真正的 hard ID 和人工身份真值。
+4. 扩充正负配对集，报告自动覆盖、precision、recall 和误合并业务影响。
+5. 记录复核队列的人工耗时和正确率。
