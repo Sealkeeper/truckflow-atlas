@@ -1,0 +1,54 @@
+{
+  "schema": "truckflow-agent-workflow-audit-v1",
+  "rows": [
+    {
+      "route_id": "event-ledger-doubao-v1",
+      "source": "coord/exploration/evaluation/event-ledger-v1.summary.json",
+      "findings": [
+        {
+          "level": "PASS",
+          "check": "human_boxes_used_as_model_input",
+          "detail": "人工红框是否进入模型输入：否"
+        },
+        {
+          "level": "PASS",
+          "check": "same_frame_annotations_exposed",
+          "detail": "同帧人工标注是否进入检索上下文：否"
+        },
+        {
+          "level": "FAIL",
+          "check": "future_frames_exposed",
+          "detail": "是否使用未来帧/未来观察：是"
+        },
+        {
+          "level": "FAIL",
+          "check": "memory_retrieval_scope",
+          "detail": "检索范围=window_includes_future_frames"
+        },
+        {
+          "level": "WARN",
+          "check": "previous_count_carryover",
+          "detail": "有续填，但登记了新增图像证据"
+        },
+        {
+          "level": "PASS",
+          "check": "failures_skipped",
+          "detail": "失败未被跳过"
+        },
+        {
+          "level": "PASS",
+          "check": "failure_counted_in_denominator",
+          "detail": "失败保留在固定分母"
+        },
+        {
+          "level": "PASS",
+          "check": "fixed_denominator",
+          "detail": "N=3, valid=3, failed=0, missing=0"
+        }
+      ],
+      "hard_failures": 2,
+      "untested": 0,
+      "verdict": "FAIL"
+    }
+  ]
+}

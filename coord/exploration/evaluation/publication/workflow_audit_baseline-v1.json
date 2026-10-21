@@ -1,0 +1,54 @@
+{
+  "schema": "truckflow-agent-workflow-audit-v1",
+  "rows": [
+    {
+      "route_id": "clean-aisle-doubao-v1",
+      "source": "coord/exploration/evaluation/publication/clean-aisle-baseline-v1.metrics.json",
+      "findings": [
+        {
+          "level": "PASS",
+          "check": "human_boxes_used_as_model_input",
+          "detail": "人工红框是否进入模型输入：否"
+        },
+        {
+          "level": "PASS",
+          "check": "same_frame_annotations_exposed",
+          "detail": "同帧人工标注是否进入检索上下文：否"
+        },
+        {
+          "level": "PASS",
+          "check": "future_frames_exposed",
+          "detail": "是否使用未来帧/未来观察：否"
+        },
+        {
+          "level": "PASS",
+          "check": "memory_retrieval_scope",
+          "detail": "检索范围=none"
+        },
+        {
+          "level": "PASS",
+          "check": "previous_count_carryover",
+          "detail": "没有仅按上一帧数量续填"
+        },
+        {
+          "level": "PASS",
+          "check": "failures_skipped",
+          "detail": "失败未被跳过"
+        },
+        {
+          "level": "PASS",
+          "check": "failure_counted_in_denominator",
+          "detail": "失败保留在固定分母"
+        },
+        {
+          "level": "PASS",
+          "check": "fixed_denominator",
+          "detail": "N=20, valid=20, failed=0, missing=0"
+        }
+      ],
+      "hard_failures": 0,
+      "untested": 0,
+      "verdict": "PASS"
+    }
+  ]
+}

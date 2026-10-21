@@ -1,0 +1,109 @@
+{
+  "schema": "truckflow-route-summary-v1",
+  "adapter": {
+    "note": "Derived only from the public event-ledger metrics.json; no model calls.",
+    "source": "all-sessions-can-see/coord/exploration/event-ledger/metrics.json",
+    "source_sha256": "efb7fe453bf41e477377472df6a5a6a3797b106b769fd5722676f7e240eb5f2b",
+    "source_report": "all-sessions-can-see/coord/exploration/event-ledger/REPORT.md",
+    "denominator_warning": "Fixed planned N=3 targeted points. Never aggregate or rank against the 20-sample baseline as if N were equal."
+  },
+  "route": {
+    "id": "event-ledger-doubao-v1",
+    "owner": "event_ledger_route",
+    "mechanism": "three chronological frames per call; seeded local IDs and an evidence-bound event ledger",
+    "branch": "research/event-ledger-v1",
+    "commit": "not published; base main 33a2cfea70cdd4ed4addc7ea13e5c6ffeb8d6e74",
+    "status": "rejected",
+    "pr": null
+  },
+  "dataset": {
+    "name": "user-final-review-v2-2026-10-21 targeted points",
+    "split": "dev",
+    "n_camera_samples": 3,
+    "n_times": 3,
+    "truth_file": "accuracy/reviewed/user-final-review-v2-2026-10-21.json",
+    "truth_sha256": "735045af4055d2badae2c3bed1942c5a15c6a872ce548243cd52e6657fda971e",
+    "note": "Three reused development points: north_600, north_2100, south_2600. Fixed planned N=3."
+  },
+  "camera_count": {
+    "n_total": 3,
+    "valid_n": 3,
+    "failed": 0,
+    "missing": 0,
+    "exact": 1,
+    "mae": 0.6666666666666666,
+    "under": 2,
+    "over": 0,
+    "exact_rate_valid": 0.3333333333333333,
+    "exact_rate_total": 0.3333333333333333,
+    "metric_scope": "target-frame visible truck count at three explicitly selected windows"
+  },
+  "unique": {
+    "n_total": 3,
+    "valid_n": null,
+    "failed": null,
+    "missing": null,
+    "exact": null,
+    "mae": null,
+    "status": "not measured",
+    "note": "Single-camera windows; cross-camera unique set is not evaluated."
+  },
+  "overlap": {
+    "n_total": 3,
+    "valid_n": null,
+    "failed": null,
+    "missing": null,
+    "exact": null,
+    "mae": null,
+    "status": "not measured",
+    "note": "Single-camera windows; overlap is not evaluated."
+  },
+  "release": {
+    "n_total": 3,
+    "auto_released": 3,
+    "correct": 1,
+    "errors": 2,
+    "coverage": 1.0,
+    "error_rate": 0.6666666666666666,
+    "status": "measured",
+    "note": "All three passed the ledger gate; two counts were wrong."
+  },
+  "review": {
+    "reviewed": 0,
+    "review_rate": 0.0,
+    "status": "measured",
+    "note": "Route-triggered review count; evaluation labels are not review actions."
+  },
+  "identity": {
+    "status": "not measured",
+    "n_total": null,
+    "exact": null,
+    "note": "Event and ID truth are not user-labeled."
+  },
+  "cost": {
+    "calls": 3,
+    "images": 9,
+    "tokens_total": 24397,
+    "latency_s_mean": 50.718333333333334,
+    "latency_s_p95": 94.273,
+    "concurrency": 3,
+    "peak_memory_mb": null,
+    "note": "Three new requests; three reused bootstrap calls are excluded. Aggregation waits are not included in API latency."
+  },
+  "workflow_audit": {
+    "human_boxes_used_as_model_input": false,
+    "same_frame_annotations_exposed": false,
+    "future_frames_exposed": true,
+    "memory_retrieval_scope": "window_includes_future_frames",
+    "previous_count_carryover": true,
+    "carryover_has_new_evidence": true,
+    "failures_skipped": false,
+    "failure_counted_in_denominator": true
+  },
+  "artifacts": {
+    "metrics": "all-sessions-can-see/coord/exploration/event-ledger/metrics.json",
+    "report": "all-sessions-can-see/coord/exploration/event-ledger/REPORT.md",
+    "raw": "all-sessions-can-see/coord/exploration/event-ledger/raw/",
+    "evidence": "all-sessions-can-see/coord/exploration/event-ledger/evidence_contact.jpg"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_300_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 15.32,
+      "usage": {
+        "completion_tokens": 1279,
+        "prompt_tokens": 1776,
+        "total_tokens": 3055,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 935
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.16,
+              0.56,
+              0.55,
+              0.99
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "白色波纹状货厢，深色车头，沿画面垂直方向放置，朝向画面下方",
+            "evidence": "画面下方左侧，完整可见的重型厢式货车，符合货车定义",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.4,
+              0.23,
+              0.56,
+              0.45
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "蓝色平顶货厢，深色箱体，无车头，单独放置在通道中间，朝向画面上方",
+            "evidence": "画面中间通道，单独的半挂货厢，符合货车定义",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面中共可见2辆符合要求的货车，1辆为完整重型厢式货车，1辆为单独半挂货厢，无其他符合条件的车辆，无遮挡或歧义车辆",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.16, 0.56, 0.55, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹状货厢，深色车头，沿画面垂直方向放置，朝向画面下方\",\n      \"evidence\": \"画面下方左侧，完整可见的重型厢式货车，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.40, 0.23, 0.56, 0.45],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色平顶货厢，深色箱体，无车头，单独放置在通道中间，朝向画面上方\",\n      \"evidence\": \"画面中间通道，单独的半挂货厢，符合货车定义\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中共可见2辆符合要求的货车，1辆为完整重型厢式货车，1辆为单独半挂货厢，无其他符合条件的车辆，无遮挡或歧义车辆\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_300_aisle.jpg"
+    }
+  ]
+}

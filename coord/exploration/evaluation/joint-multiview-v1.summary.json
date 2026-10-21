@@ -1,0 +1,110 @@
+{
+  "schema": "truckflow-route-summary-v1",
+  "adapter": {
+    "note": "Derived only from the public joint-multiview metrics.json; no model calls.",
+    "source": "all-sessions-can-see/coord/exploration/joint-multiview/metrics.json",
+    "source_sha256": "d964870dd78774b94065ac61c245545bf3772da7d46436f8047ad4f6ed61ed78",
+    "source_report": "all-sessions-can-see/coord/exploration/joint-multiview/REPORT.md",
+    "label_sha256": "c3fddc439da1574e74a6ceb7391297e1c65fedec109d3579da05cad05f34149d",
+    "label_note": "The route's derived label file has a different file hash from the user truth JSON, but its 20 per-camera truth counts and 10 unique/overlap truths match the user truth content."
+  },
+  "route": {
+    "id": "joint-multiview-doubao-v1",
+    "owner": "joint_multiview_route",
+    "mechanism": "one Doubao call on same-time north+south full frames; joint boxes, mapping and unique set",
+    "branch": "not published in public metrics",
+    "commit": "not published in public metrics",
+    "status": "rejected",
+    "pr": null
+  },
+  "dataset": {
+    "name": "user-final-review-v2-2026-10-21",
+    "split": "dev",
+    "n_camera_samples": 20,
+    "n_times": 10,
+    "truth_file": "accuracy/reviewed/user-final-review-v2-2026-10-21.json",
+    "truth_sha256": "c3fddc439da1574e74a6ceb7391297e1c65fedec109d3579da05cad05f34149d",
+    "note": "Reused development set, not a blind or independent holdout."
+  },
+  "camera_count": {
+    "n_total": 20,
+    "valid_n": 20,
+    "failed": 0,
+    "missing": 0,
+    "exact": 13,
+    "mae": 0.45,
+    "under": 9,
+    "over": 0,
+    "exact_rate_valid": 0.65,
+    "exact_rate_total": 0.65,
+    "metric_scope": "total visible truck count per camera; full frames, not aisle crops"
+  },
+  "unique": {
+    "n_total": 10,
+    "valid_n": 10,
+    "failed": 0,
+    "missing": 0,
+    "exact": 1,
+    "mae": 1.3,
+    "status": "measured",
+    "note": "Unique-set count exact only; object-level identity is not measured."
+  },
+  "overlap": {
+    "n_total": 10,
+    "valid_n": 10,
+    "failed": 0,
+    "missing": 0,
+    "exact": 6,
+    "mae": 0.4,
+    "status": "measured",
+    "note": "Overlap count exact only; t600 has the right overlap number with wrong object pairing."
+  },
+  "release": {
+    "n_total": 10,
+    "auto_released": 8,
+    "correct": 0,
+    "errors": 8,
+    "coverage": 0.8,
+    "error_rate": 1.0,
+    "status": "measured",
+    "note": "Eight auto-passed times all had at least one wrong camera/unique/overlap/aggregate count."
+  },
+  "review": {
+    "reviewed": 2,
+    "review_rate": 0.2,
+    "status": "measured",
+    "note": "t1800 was reviewed for uncertainty; t2600 for invalid box schema."
+  },
+  "identity": {
+    "status": "not measured",
+    "n_total": null,
+    "exact": null,
+    "note": "No full vehicle-level cross-camera ground truth; the report documents a t600 mismatch."
+  },
+  "cost": {
+    "calls": 10,
+    "images": 20,
+    "tokens_total": 62178,
+    "latency_s_mean": 26.6132,
+    "latency_s_p95": 35.027,
+    "concurrency": 2,
+    "peak_memory_mb": null,
+    "note": "10 calls, 2 images per call, 10 HTTP attempts, workers=2."
+  },
+  "workflow_audit": {
+    "human_boxes_used_as_model_input": false,
+    "same_frame_annotations_exposed": false,
+    "future_frames_exposed": false,
+    "memory_retrieval_scope": "none",
+    "previous_count_carryover": false,
+    "carryover_has_new_evidence": null,
+    "failures_skipped": false,
+    "failure_counted_in_denominator": true
+  },
+  "artifacts": {
+    "metrics": "all-sessions-can-see/coord/exploration/joint-multiview/metrics.json",
+    "report": "all-sessions-can-see/coord/exploration/joint-multiview/REPORT.md",
+    "raw": "all-sessions-can-see/coord/exploration/joint-multiview/raw/",
+    "evidence": "all-sessions-can-see/coord/exploration/joint-multiview/joint_mapping_t600.jpg"
+  }
+}

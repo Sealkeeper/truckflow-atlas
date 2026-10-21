@@ -1,0 +1,69 @@
+{
+  "schema": "truckflow-route-comparison-v1",
+  "rows": [
+    {
+      "route_id": "event-ledger-doubao-v1",
+      "owner": "event_ledger_route",
+      "mechanism": "three chronological frames per call; seeded local IDs and an evidence-bound event ledger",
+      "branch": "research/event-ledger-v1",
+      "commit": "not published; base main 33a2cfea70cdd4ed4addc7ea13e5c6ffeb8d6e74",
+      "status": "rejected",
+      "dataset_split": "dev",
+      "camera_count": {
+        "n_total": 3,
+        "valid_n": 3,
+        "failed": 0,
+        "missing": 0,
+        "exact": 1,
+        "mae": 0.6666666666666666,
+        "exact_display": "1/3 (valid=3; fail=0; miss=0)",
+        "mae_display": "0.666667 (valid n=3)",
+        "warnings": []
+      },
+      "unique": {
+        "n_total": 3,
+        "valid_n": null,
+        "failed": null,
+        "missing": null,
+        "exact": null,
+        "mae": null,
+        "exact_display": "未测",
+        "mae_display": "未测",
+        "warnings": []
+      },
+      "overlap": {
+        "n_total": 3,
+        "valid_n": null,
+        "failed": null,
+        "missing": null,
+        "exact": null,
+        "mae": null,
+        "exact_display": "未测",
+        "mae_display": "未测",
+        "warnings": []
+      },
+      "release": {
+        "release_display": "correct=1; errors=2; cov=100.0%; err_rate=66.7%",
+        "review_display": "0/3 (0.0%)",
+        "coverage": 1.0,
+        "error_rate": 0.6666666666666666,
+        "review_rate": 0.0
+      },
+      "review_display": "0/3 (0.0%)",
+      "cost": {
+        "calls": 3,
+        "images": 9,
+        "tokens": 24397,
+        "latency_mean": 50.718333333333334,
+        "latency_p95": 94.273
+      },
+      "identity_display": "未测",
+      "identity_status": "not measured",
+      "warnings": [
+        "workflow FAIL 使用了未来帧信息",
+        "workflow FAIL 检索范围=window_includes_future_frames"
+      ],
+      "source": "coord/exploration/evaluation/event-ledger-v1.summary.json"
+    }
+  ]
+}

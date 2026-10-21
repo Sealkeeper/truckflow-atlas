@@ -1,0 +1,127 @@
+{
+  "schema": "truckflow-clean-baseline-raw-list-v1",
+  "route_id": "clean-aisle-doubao-v1",
+  "count": 20,
+  "files": [
+    {
+      "sample_id": "north_5",
+      "path": "raw/north_5_aisle.json",
+      "sha256": "4aaea69b4f84d6cfc124f4ec2d3c7d5c9c7dafbb833a5ab7b1fd11c2afcdc125",
+      "bytes": 4695
+    },
+    {
+      "sample_id": "north_300",
+      "path": "raw/north_300_aisle.json",
+      "sha256": "ce3cecc4c6555c1578eb5a9dea0e3d88b08e91aa5684ce95022007ec5c09994e",
+      "bytes": 3265
+    },
+    {
+      "sample_id": "north_600",
+      "path": "raw/north_600_aisle.json",
+      "sha256": "73631e8ab81ffd26fa61ab471669212a1e071b75666410825b78a14c2c7f290b",
+      "bytes": 3134
+    },
+    {
+      "sample_id": "north_900",
+      "path": "raw/north_900_aisle.json",
+      "sha256": "2138e8eee740fb1e1a69fca669230dc8ad9adbc10914a6f2d3531b28ed142e80",
+      "bytes": 4087
+    },
+    {
+      "sample_id": "north_1200",
+      "path": "raw/north_1200_aisle.json",
+      "sha256": "88563b76ce0003be36bcfbd0af79bf4ca43c4d0d8fb5851bfaff8cad014f2ef1",
+      "bytes": 4211
+    },
+    {
+      "sample_id": "north_1500",
+      "path": "raw/north_1500_aisle.json",
+      "sha256": "ae05902eb8dc0c0f73904fec5ae8bd3af1b17a4c9f60ccf5f4d6a1c4cc59b723",
+      "bytes": 3201
+    },
+    {
+      "sample_id": "north_1800",
+      "path": "raw/north_1800_aisle.json",
+      "sha256": "7fc9418580916ae158942d7383390252afdcc5bf68cf8377e7b558c17f4774ed",
+      "bytes": 3423
+    },
+    {
+      "sample_id": "north_2100",
+      "path": "raw/north_2100_aisle.json",
+      "sha256": "3c2d99ea6929ab64d3e91c5004e408cb0e2ece976a9526da7682bbe962e72ddf",
+      "bytes": 3024
+    },
+    {
+      "sample_id": "north_2400",
+      "path": "raw/north_2400_aisle.json",
+      "sha256": "5f9e8162d9400c5acc0998cccf230b5b283609aaecd32da68c30760edf833547",
+      "bytes": 3753
+    },
+    {
+      "sample_id": "north_2600",
+      "path": "raw/north_2600_aisle.json",
+      "sha256": "a684f7c665a18420b5337c378abd1707aeef1eb96beaca1260cd138954795454",
+      "bytes": 3122
+    },
+    {
+      "sample_id": "south_5",
+      "path": "raw/south_5_aisle.json",
+      "sha256": "a68a9b24a2ee77edfd0801b56041a497b73b562d64ab0bb0042aa64d04c282df",
+      "bytes": 4056
+    },
+    {
+      "sample_id": "south_300",
+      "path": "raw/south_300_aisle.json",
+      "sha256": "6aa419f9ab91c1f8b7d06810ad48147da899422f5cf342f8c0224b13c5f3dea0",
+      "bytes": 4701
+    },
+    {
+      "sample_id": "south_600",
+      "path": "raw/south_600_aisle.json",
+      "sha256": "3d652e7d2aa0c093add861088be55bc880eacde7684557e2d50128ced49ea7c7",
+      "bytes": 4600
+    },
+    {
+      "sample_id": "south_900",
+      "path": "raw/south_900_aisle.json",
+      "sha256": "2c686c1a32d36fe8f153a0d6b417f3dfd1e2a602d41ed4b1499495b7d0f8dc6b",
+      "bytes": 5354
+    },
+    {
+      "sample_id": "south_1200",
+      "path": "raw/south_1200_aisle.json",
+      "sha256": "3fb509d49b65ec6e3f13b80b0c2bef05498f22a0d6c24b47aed89ffc14e57634",
+      "bytes": 5342
+    },
+    {
+      "sample_id": "south_1500",
+      "path": "raw/south_1500_aisle.json",
+      "sha256": "d64f57539fc247bb295fe602b94f2c04f149dcf0f19ac39d80dfd0ea2a761fd2",
+      "bytes": 5677
+    },
+    {
+      "sample_id": "south_1800",
+      "path": "raw/south_1800_aisle.json",
+      "sha256": "880c4d8a503d2c3ac353c67dadc1d2717017a6b491fd0bf0c97af722f17c5b75",
+      "bytes": 4707
+    },
+    {
+      "sample_id": "south_2100",
+      "path": "raw/south_2100_aisle.json",
+      "sha256": "2ce17076b7383e37366c05947c1f08ce1273c810fe620271385d58d24439715e",
+      "bytes": 4629
+    },
+    {
+      "sample_id": "south_2400",
+      "path": "raw/south_2400_aisle.json",
+      "sha256": "016f40c4b8e6bca5cee598fad5b52c7875ae93886c5c073b98a879e1258eb35e",
+      "bytes": 4024
+    },
+    {
+      "sample_id": "south_2600",
+      "path": "raw/south_2600_aisle.json",
+      "sha256": "0031a4ffcd8d9b6b300a4b64c751addd5cd89547e6853dd21d377b05194357f3",
+      "bytes": 4757
+    }
+  ]
+}
