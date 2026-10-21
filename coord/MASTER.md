@@ -1,6 +1,6 @@
 # 中枢作战板
 
-更新时间：2026-10-21 17:05 +08:00
+更新时间：2026-10-21 17:35 +08:00
 
 ## 当前路线
 
@@ -13,6 +13,8 @@
 | 架构挑战 | `research/architecture-challenge` | architecture | 空间分解/递归候选树/场景图 | 启动 |
 | 容量几何 | `research/capacity-geometry` | capacity | 单应标定、容量、不确定度 | 启动 |
 | 第二套界面 | `feat/web-workspace-v2` | ui_finish | 可交互工作台 + 截图验收 | 启动 |
+| 全时段时间轴 | `research/event-timeline` | events | 44 分钟分钟级采样与事件 | 实验中 |
+| 调试体验 | `debug/experience` | debug | 固定文件名截图 + 自动重跑 | **已合并 PR #1** |
 
 ## 已确认事实
 
@@ -22,6 +24,12 @@
 4. `north_600` 整帧模型报 2，人工核实为 4；裁剪放大后可找回，但会拆分同一辆车。
 5. 南机位车型有明显 `large` 偏置，必须做候选裁剪二次判定。
 6. 跨机位去重尚未完成，所有“合计”数字不能当唯一车辆真值。
+7. 新发现：`north_600` 可通过顶部/中部/近景三段裁剪分别找到远端两辆蓝色货厢车；但三类模型对同一车体的拆分并不稳定，必须做候选合并与复核。
+8. 当前界面：`all-sessions-can-see/assets/live/latest-desktop.png`，每 30 分钟自动重截。
+
+## 合并记录
+
+- PR #1 `debug/experience` 已合并：可重复的浏览器截图与独立预览页，无识别算法改动。
 
 ## 门禁
 
