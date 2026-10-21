@@ -201,6 +201,10 @@ async function main() {
       return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
     }, sampleTimes[index]);
     await page.waitForFunction((time) => document.querySelector("#reviewVideoTime")?.textContent === time, expected);
+    await page.waitForFunction(() => {
+      const images = [...document.querySelectorAll("#reviewSouthCrop, #reviewNorthCrop")];
+      return images.length === 2 && images.every((image) => image.complete && image.naturalWidth > 0);
+    });
     const cropState = await page.evaluate(() => {
       const images = [...document.querySelectorAll("#reviewSouthCrop, #reviewNorthCrop")];
       return images.map((image) => ({

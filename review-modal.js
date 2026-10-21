@@ -26,6 +26,10 @@
     northCrop: $("#reviewNorthCrop"),
     southCaption: $("#reviewSouthCaption"),
     northCaption: $("#reviewNorthCaption"),
+    definitionNote: $("#reviewDefinitionNote"),
+    definitionTitle: $("#reviewDefinitionTitle"),
+    definitionDetail: $("#reviewDefinitionDetail"),
+    definitionRule: $("#reviewDefinitionRule"),
     southCount: $("#reviewSouthCount"),
     northCount: $("#reviewNorthCount"),
     overlapCount: $("#reviewOverlapCount"),
@@ -308,6 +312,31 @@
     el.northCaption.textContent = `${cameraName(northCamera)} · AI 初标 ${northTotal} 辆（待终审）`;
   }
 
+  function renderDefinitionNote() {
+    const blockers = state.reviewData?.definitionBlockers;
+    const generic = blockers?.by_sample?.[String(state.currentTime)];
+    const northSpecific = blockers?.by_sample?.[`${state.currentTime}_north`];
+    const items = [generic, northSpecific].filter(Boolean);
+    el.definitionRule.textContent = blockers?.rule
+      || "本页口径：牵引车与其挂车计一辆；叉车、轿车、面包车、行人不计。若按独立货厢体计数，请在补充说明中写明。";
+    el.definitionNote.hidden = items.length === 0;
+    if (!items.length) {
+      el.definitionTitle.textContent = "";
+      el.definitionDetail.textContent = "";
+      el.definitionNote.classList.remove("is-error");
+      return;
+    }
+    el.definitionTitle.textContent = items
+      .map((item) => item.title)
+      .filter(Boolean)
+      .join("；");
+    el.definitionDetail.textContent = items
+      .map((item) => item.detail)
+      .filter(Boolean)
+      .join(" ");
+    el.definitionNote.classList.toggle("is-error", items.some((item) => item.severity === "error"));
+  }
+
   function renderHeader() {
     const samples = [...ctx.getSamples()].sort((left, right) => left.time - right.time);
     const index = samples.findIndex((sample) => sample.time === state.currentTime);
@@ -322,6 +351,7 @@
   function renderModal() {
     renderHeader();
     renderEvidenceImages();
+    renderDefinitionNote();
     fillFields();
     const record = state.record;
     el.saveNote.textContent = record.status === "saved"

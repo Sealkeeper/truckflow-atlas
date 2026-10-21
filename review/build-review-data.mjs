@@ -7,6 +7,9 @@ const repoRoot = path.resolve(here, "..");
 const gold = JSON.parse(
   fs.readFileSync(path.join(repoRoot, "data", "gold", "camera_counts_v0.json"), "utf8")
 );
+const blockers = JSON.parse(
+  fs.readFileSync(path.join(here, "definition-blockers.json"), "utf8")
+);
 
 const offsets = [-2, -1, 0, 1, 2];
 const samples = gold.samples.map((sample) => {
@@ -49,6 +52,7 @@ const payload = {
     "初标来自 AI 对外部视频抽帧的目视计数，不是人工金标准，也没有逐车框。连续帧和视频只用于帮助终审，不改变这一事实。",
   countDefinition:
     "每张画面内独立可辨的货车车体；叉车、轿车、面包车、行人排除；牵引车与其挂车计一辆；明确独立且可辨的货厢单独计。",
+  definitionBlockers: blockers,
   samples
 };
 

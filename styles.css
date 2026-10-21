@@ -3729,7 +3729,7 @@ body.is-drawer-open {
 
 .review-modal {
   width: min(1180px, calc(100vw - 48px));
-  max-height: calc(100vh - 20px);
+  max-height: calc(100vh - 8px);
   border-color: rgba(72, 227, 197, 0.24);
 }
 
@@ -3883,7 +3883,7 @@ body.is-drawer-open {
 
 .review-evidence-stage {
   display: flex;
-  height: 265px;
+  height: 225px;
   min-width: 0;
   align-items: center;
   justify-content: center;
@@ -3924,8 +3924,53 @@ body.is-drawer-open {
   font-size: 9px;
 }
 
+.review-definition-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin: 0 0 8px;
+  padding: 6px 9px;
+  border: 1px solid rgba(247, 185, 104, 0.32);
+  border-radius: 8px;
+  background: rgba(247, 185, 104, 0.055);
+}
+
+.review-definition-icon {
+  display: grid;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid rgba(247, 185, 104, 0.5);
+  border-radius: 50%;
+  color: var(--amber);
+  font-family: var(--font-display);
+  font-size: 11px;
+}
+
+.review-definition-note strong {
+  display: block;
+  color: var(--amber);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.review-definition-note p {
+  margin: 2px 0 0;
+  color: var(--ink-soft);
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+.review-definition-rule {
+  margin: 0 2px 7px;
+  color: rgba(130, 153, 158, 0.76);
+  font-size: 8px;
+  line-height: 1.5;
+}
+
 .review-result-block {
-  padding-top: 11px;
+  padding-top: 9px;
   border-top: 1px solid var(--line);
 }
 
@@ -4033,7 +4078,7 @@ body.is-drawer-open {
 
 .review-field textarea {
   width: 100%;
-  min-height: 48px;
+  min-height: 40px;
   margin-top: 4px;
   padding: 6px 7px;
   resize: vertical;
@@ -4096,7 +4141,7 @@ body.is-drawer-open {
 
 .review-wide-field textarea {
   width: 100%;
-  min-height: 46px;
+  min-height: 40px;
   margin-top: 4px;
   padding: 7px 9px;
   resize: vertical;
@@ -4108,8 +4153,8 @@ body.is-drawer-open {
 }
 
 .review-attachment {
-  margin-top: 10px;
-  padding-top: 9px;
+  margin-top: 8px;
+  padding-top: 7px;
   border-top: 1px solid var(--line);
 }
 
@@ -4140,7 +4185,7 @@ body.is-drawer-open {
 
 .review-dropzone {
   display: flex;
-  min-height: 44px;
+  min-height: 38px;
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -4222,7 +4267,7 @@ body.is-drawer-open {
 
 .review-modal-actions {
   flex: 0 0 auto;
-  padding: 9px 24px 12px;
+  padding: 6px 24px 8px;
 }
 
 .review-save-note {
