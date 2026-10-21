@@ -150,13 +150,31 @@ def compare_baseline(summary: dict[str, Any], baseline: dict[str, int]) -> dict[
     }
 
 
+def evaluate_or_mark_not_run(
+    experiment_id: str, truth: dict[str, int], baseline: dict[str, int]
+) -> dict[str, Any]:
+    manifest_path = EVIDENCE / experiment_id / "manifest.json"
+    if not manifest_path.exists():
+        return {
+            "experiment_id": experiment_id,
+            "status": "not_run",
+            "request_count": 0,
+            "reason": (
+                "Frozen configuration was not started. Coordination prohibited "
+                "additional paid calls after the running dual-scale experiment."
+            ),
+        }
+    block = evaluate_counts(experiment_id, truth)
+    block["status"] = "completed"
+    block["baseline_comparison"] = compare_baseline(block, baseline)
+    return block
+
+
 def main() -> None:
     truth = load_truth()
     baseline = load_baseline()
-    dual = evaluate_counts("dualscale_v1", truth)
-    component = evaluate_counts("component_assembly_v1", truth)
-    dual["baseline_comparison"] = compare_baseline(dual, baseline)
-    component["baseline_comparison"] = compare_baseline(component, baseline)
+    dual = evaluate_or_mark_not_run("dualscale_v1", truth, baseline)
+    component = evaluate_or_mark_not_run("component_assembly_v1", truth, baseline)
     result = {
         "schema": "truckflow-vehicle-memory-experiments-v1",
         "truth_source": "accuracy/reviewed/user-final-review-v2-2026-10-21.json",
@@ -174,6 +192,9 @@ def main() -> None:
     write_json(GENERATED / "experiment_metrics.json", result)
     for key in ("dualscale_v1", "component_assembly_v1"):
         block = result[key]
+        if block["status"] == "not_run":
+            print(json.dumps({"experiment": key, "status": "not_run"}, ensure_ascii=False))
+            continue
         print(
             json.dumps(
                 {

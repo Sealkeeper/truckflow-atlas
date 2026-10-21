@@ -1,0 +1,131 @@
+{
+  "schema": "truckflow-vision-experiment-run-v1",
+  "experiment_id": "dualscale_v1",
+  "sample_id": "south_300",
+  "mechanism": "one model call with the current global aisle view plus a fixed same-frame far-detail view",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "temperature": 0,
+  "max_tokens": 5000,
+  "attempts": 1,
+  "retry_policy": "none; every HTTP attempt counts",
+  "request_count": 1,
+  "started_at_utc": "2026-10-21T13:16:24.215521+00:00",
+  "frozen_commit": "0341a8c92acc3bb745a0c25af9095a5672efea48",
+  "worktree_status_at_start": "",
+  "config_sha256": "aebe71ff750e6b46ee646f8f6c11a1afa5f5aeaa8fb18e6324caced986c96064",
+  "prompt_sha256": "1d72b8b8afde082063d2d63618c23a2510d6e0068f94cc09264f1f5963807357",
+  "input_files": [
+    "accuracy/crops/south_300_aisle.jpg",
+    "research/vehicle_memory/experiments/dualscale_v1/inputs/south_300_far.jpg"
+  ],
+  "input_sha256": [
+    "7ebb434a2b3889f0eda549ecb3f672fcac4dc5ee441298a8d6a019a22dd021e6",
+    "243ffb47338105cc39c98b964870df534b8d5900e21bf63cd2dcc263583ef07c"
+  ],
+  "status_code": 200,
+  "latency_s": 16.88,
+  "ok": true,
+  "usage": {
+    "completion_tokens": 2277,
+    "prompt_tokens": 3209,
+    "total_tokens": 5486,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1558
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 4, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"local_id\": \"v1\",\n      \"bbox_global\": [0.46, 0.50, 0.67, 0.93],\n      \"evidence_views\": [\"global_only\"],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"identity_clues\": \"White cab with '东风商用车' text, white container, front and side visible\",\n      \"far_detail_clue\": \"\",\n      \"evidence\": \"Located in the global count range, independent rigid truck, no overlap with adjacent vehicles\",\n      \"uncertain\": false\n    },\n    {\n      \"local_id\": \"v2\",\n      \"bbox_global\": [0.44, 0.29, 0.58, 0.51],\n      \"evidence_views\": [\"global_and_far_detail\"],\n      \"vehicle_type\": \"tractor_trailer\",\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"identity_clues\": \"Red cab, gray metal container, middle lane\",\n      \"far_detail_clue\": \"Image2 confirms the red cab and gray container match the global view\",\n      \"evidence\": \"Independent tractor-trailer, within count range\",\n      \"uncertain\": false\n    },\n    {\n      \"local_id\": \"v3\",\n      \"bbox_global\": [0.34, 0.19, 0.45, 0.36],\n      \"evidence_views\": [\"global_and_far_detail\"],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"identity_clues\": \"Red cab, dark (black) container, middle lane behind v2\",\n      \"far_detail_clue\": \"Image2 shows this truck clearly, matches the global view\",\n      \"evidence\": \"Independent rigid truck, within count range\",\n      \"uncertain\": false\n    },\n    {\n      \"local_id\": \"v4\",\n      \"bbox_global\": [0.44, 0.12, 0.51, 0.27],\n      \"evidence_views\": [\"global_and_far_detail\"],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"identity_clues\": \"Red cab, red container, furthest in the lane\",\n      \"far_detail_clue\": \"Image2 confirms the red cab and red container are present\",\n      \"evidence\": \"Independent rigid truck, within count range\",\n      \"uncertain\": false\n    }\n  ],\n  \"dedupe_notes\": \"All four vehicles are distinct; no duplicates between image1 and image2, each counted once\",\n  \"scene_notes\": \"Exhibition hall撤展现场, trucks aligned in a central lane\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 4,
+      "large": 4,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "local_id": "v1",
+        "bbox_global": [
+          0.46,
+          0.5,
+          0.67,
+          0.93
+        ],
+        "evidence_views": [
+          "global_only"
+        ],
+        "vehicle_type": "rigid_truck",
+        "size": "large",
+        "visible": "full",
+        "identity_clues": "White cab with '东风商用车' text, white container, front and side visible",
+        "far_detail_clue": "",
+        "evidence": "Located in the global count range, independent rigid truck, no overlap with adjacent vehicles",
+        "uncertain": false
+      },
+      {
+        "local_id": "v2",
+        "bbox_global": [
+          0.44,
+          0.29,
+          0.58,
+          0.51
+        ],
+        "evidence_views": [
+          "global_and_far_detail"
+        ],
+        "vehicle_type": "tractor_trailer",
+        "size": "large",
+        "visible": "full",
+        "identity_clues": "Red cab, gray metal container, middle lane",
+        "far_detail_clue": "Image2 confirms the red cab and gray container match the global view",
+        "evidence": "Independent tractor-trailer, within count range",
+        "uncertain": false
+      },
+      {
+        "local_id": "v3",
+        "bbox_global": [
+          0.34,
+          0.19,
+          0.45,
+          0.36
+        ],
+        "evidence_views": [
+          "global_and_far_detail"
+        ],
+        "vehicle_type": "rigid_truck",
+        "size": "large",
+        "visible": "full",
+        "identity_clues": "Red cab, dark (black) container, middle lane behind v2",
+        "far_detail_clue": "Image2 shows this truck clearly, matches the global view",
+        "evidence": "Independent rigid truck, within count range",
+        "uncertain": false
+      },
+      {
+        "local_id": "v4",
+        "bbox_global": [
+          0.44,
+          0.12,
+          0.51,
+          0.27
+        ],
+        "evidence_views": [
+          "global_and_far_detail"
+        ],
+        "vehicle_type": "rigid_truck",
+        "size": "large",
+        "visible": "partial_top",
+        "identity_clues": "Red cab, red container, furthest in the lane",
+        "far_detail_clue": "Image2 confirms the red cab and red container are present",
+        "evidence": "Independent rigid truck, within count range",
+        "uncertain": false
+      }
+    ],
+    "dedupe_notes": "All four vehicles are distinct; no duplicates between image1 and image2, each counted once",
+    "scene_notes": "Exhibition hall撤展现场, trucks aligned in a central lane",
+    "uncertain_reasons": []
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "schema": "truckflow-vision-experiment-run-v1",
+  "experiment_id": "dualscale_v1",
+  "sample_id": "north_300",
+  "mechanism": "one model call with the current global aisle view plus a fixed same-frame far-detail view",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "temperature": 0,
+  "max_tokens": 5000,
+  "attempts": 1,
+  "retry_policy": "none; every HTTP attempt counts",
+  "request_count": 1,
+  "started_at_utc": "2026-10-21T13:16:16.122204+00:00",
+  "frozen_commit": "0341a8c92acc3bb745a0c25af9095a5672efea48",
+  "worktree_status_at_start": "",
+  "config_sha256": "aebe71ff750e6b46ee646f8f6c11a1afa5f5aeaa8fb18e6324caced986c96064",
+  "prompt_sha256": "1d72b8b8afde082063d2d63618c23a2510d6e0068f94cc09264f1f5963807357",
+  "input_files": [
+    "accuracy/crops/north_300_aisle.jpg",
+    "research/vehicle_memory/experiments/dualscale_v1/inputs/north_300_far.jpg"
+  ],
+  "input_sha256": [
+    "84fd0d67ecd0f0cac878f59bd55401a841e2cf5eb1d613366041552e847a1073",
+    "1ee04404455958168f703c944a51762a806d36d38181897bee3047a727cec813"
+  ],
+  "status_code": 200,
+  "latency_s": 16.894,
+  "ok": true,
+  "usage": {
+    "completion_tokens": 1993,
+    "prompt_tokens": 3209,
+    "total_tokens": 5202,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1395
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 1, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"local_id\": \"v1\",\n      \"bbox_global\": [0.17, 0.57, 0.55, 0.99],\n      \"evidence_views\": [\"global_only\"],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"identity_clues\": \"White corrugated container, dark rear with text markings\",\n      \"far_detail_clue\": \"\",\n      \"evidence\": \"Located in Figure1 lower left, independent container truck within count range\",\n      \"uncertain\": false\n    },\n    {\n      \"local_id\": \"v2\",\n      \"bbox_global\": [0.40, 0.25, 0.55, 0.47],\n      \"evidence_views\": [\"global_and_far_detail\"],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"medium\",\n      \"visible\": \"partial_side\",\n      \"identity_clues\": \"Blue roof, dark side panels, visible rear door\",\n      \"far_detail_clue\": \"Figure2 confirms the blue-roofed truck's details matching Figure1's position\",\n      \"evidence\": \"In Figure1 middle, independent truck confirmed by Figure2, within count range\",\n      \"uncertain\": false\n    },\n    {\n      \"local_id\": \"v3\",\n      \"bbox_global\": [0.43, 0.17, 0.54, 0.27],\n      \"evidence_views\": [\"global_and_far_detail\"],\n      \"vehicle_type\": \"trailer_only\",\n      \"size\": \"medium\",\n      \"visible\": \"partial_rear\",\n      \"identity_clues\": \"Dark roof, rear with alphanumeric text markings\",\n      \"far_detail_clue\": \"Figure2 shows the rear text confirming it's the same as Figure1's upper vehicle\",\n      \"evidence\": \"In Figure1 upper middle, independent trailer confirmed by Figure2, within count range\",\n      \"uncertain\": false\n    }\n  ],\n  \"dedupe_notes\": \"All three vehicles are distinct in Figure1; Figure2 only confirms the upper two vehicles without adding duplicates or new targets outside Figure1's range\",\n  \"scene_notes\": \"Exhibition hall撤展 scene with booth structures and workers, three independent trucks in the counting range\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 1,
+      "medium": 2,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "local_id": "v1",
+        "bbox_global": [
+          0.17,
+          0.57,
+          0.55,
+          0.99
+        ],
+        "evidence_views": [
+          "global_only"
+        ],
+        "vehicle_type": "rigid_truck",
+        "size": "large",
+        "visible": "full",
+        "identity_clues": "White corrugated container, dark rear with text markings",
+        "far_detail_clue": "",
+        "evidence": "Located in Figure1 lower left, independent container truck within count range",
+        "uncertain": false
+      },
+      {
+        "local_id": "v2",
+        "bbox_global": [
+          0.4,
+          0.25,
+          0.55,
+          0.47
+        ],
+        "evidence_views": [
+          "global_and_far_detail"
+        ],
+        "vehicle_type": "rigid_truck",
+        "size": "medium",
+        "visible": "partial_side",
+        "identity_clues": "Blue roof, dark side panels, visible rear door",
+        "far_detail_clue": "Figure2 confirms the blue-roofed truck's details matching Figure1's position",
+        "evidence": "In Figure1 middle, independent truck confirmed by Figure2, within count range",
+        "uncertain": false
+      },
+      {
+        "local_id": "v3",
+        "bbox_global": [
+          0.43,
+          0.17,
+          0.54,
+          0.27
+        ],
+        "evidence_views": [
+          "global_and_far_detail"
+        ],
+        "vehicle_type": "trailer_only",
+        "size": "medium",
+        "visible": "partial_rear",
+        "identity_clues": "Dark roof, rear with alphanumeric text markings",
+        "far_detail_clue": "Figure2 shows the rear text confirming it's the same as Figure1's upper vehicle",
+        "evidence": "In Figure1 upper middle, independent trailer confirmed by Figure2, within count range",
+        "uncertain": false
+      }
+    ],
+    "dedupe_notes": "All three vehicles are distinct in Figure1; Figure2 only confirms the upper two vehicles without adding duplicates or new targets outside Figure1's range",
+    "scene_notes": "Exhibition hall撤展 scene with booth structures and workers, three independent trucks in the counting range",
+    "uncertain_reasons": []
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "schema": "truckflow-vision-experiment-run-v1",
+  "experiment_id": "dualscale_v1",
+  "sample_id": "north_1200",
+  "mechanism": "one model call with the current global aisle view plus a fixed same-frame far-detail view",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "temperature": 0,
+  "max_tokens": 5000,
+  "attempts": 1,
+  "retry_policy": "none; every HTTP attempt counts",
+  "request_count": 1,
+  "started_at_utc": "2026-10-21T13:17:22.312736+00:00",
+  "frozen_commit": "0341a8c92acc3bb745a0c25af9095a5672efea48",
+  "worktree_status_at_start": "",
+  "config_sha256": "aebe71ff750e6b46ee646f8f6c11a1afa5f5aeaa8fb18e6324caced986c96064",
+  "prompt_sha256": "1d72b8b8afde082063d2d63618c23a2510d6e0068f94cc09264f1f5963807357",
+  "input_files": [
+    "accuracy/crops/north_1200_aisle.jpg",
+    "research/vehicle_memory/experiments/dualscale_v1/inputs/north_1200_far.jpg"
+  ],
+  "input_sha256": [
+    "aeef1fce6cbd2c62f8c6b1e5f9090dc4359ffce85b7e924eae538994787fde09",
+    "e4968ffc4efe52751d2facd5db7caa8b850d9ac2902607ddf598e14146e5ee60"
+  ],
+  "status_code": 200,
+  "latency_s": 19.84,
+  "ok": true,
+  "usage": {
+    "completion_tokens": 2049,
+    "prompt_tokens": 3209,
+    "total_tokens": 5258,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1471
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"local_id\": \"v1\",\n      \"bbox_global\": [0.15, 0.60, 0.52, 0.99],\n      \"evidence_views\": [\"global_only\"],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"identity_clues\": \"white corrugated cargo roof, dark lower body with partial alphanumeric text\",\n      \"far_detail_clue\": \"\",\n      \"evidence\": \"Within global count range, independent rigid truck with distinct cargo area and chassis\",\n      \"uncertain\": false\n    },\n    {\n      \"local_id\": \"v2\",\n      \"bbox_global\": [0.33, 0.37, 0.52, 0.64],\n      \"evidence_views\": [\"global_only\"],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"visible\": \"partial_rear\",\n      \"identity_clues\": \"red open cargo box, rear has partial text\",\n      \"far_detail_clue\": \"\",\n      \"evidence\": \"Within global count range, independent rigid truck with red open cargo structure\",\n      \"uncertain\": false\n    },\n    {\n      \"local_id\": \"v3\",\n      \"bbox_global\": [0.44, 0.17, 0.54, 0.32],\n      \"evidence_views\": [\"global_and_far_detail\"],\n      \"vehicle_type\": \"trailer_only\",\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"identity_clues\": \"dark cage-like cargo structure with blue top\",\n      \"far_detail_clue\": \"图2 confirms the distant cargo vehicle's structure matches the target in图1\",\n      \"evidence\": \"Within global count range, independent cargo vehicle, confirmed by far detail evidence\",\n      \"uncertain\": false\n    }\n  ],\n  \"dedupe_notes\": \"图1为全局空间视图，图2为远区细节，仅图2中对应图1顶部的车辆为同一目标，其余车辆仅在图1中出现，无重复计数\",\n  \"scene_notes\": \"展会撤展通道内的独立货车/货厢\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 3,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "local_id": "v1",
+        "bbox_global": [
+          0.15,
+          0.6,
+          0.52,
+          0.99
+        ],
+        "evidence_views": [
+          "global_only"
+        ],
+        "vehicle_type": "rigid_truck",
+        "size": "large",
+        "visible": "full",
+        "identity_clues": "white corrugated cargo roof, dark lower body with partial alphanumeric text",
+        "far_detail_clue": "",
+        "evidence": "Within global count range, independent rigid truck with distinct cargo area and chassis",
+        "uncertain": false
+      },
+      {
+        "local_id": "v2",
+        "bbox_global": [
+          0.33,
+          0.37,
+          0.52,
+          0.64
+        ],
+        "evidence_views": [
+          "global_only"
+        ],
+        "vehicle_type": "rigid_truck",
+        "size": "large",
+        "visible": "partial_rear",
+        "identity_clues": "red open cargo box, rear has partial text",
+        "far_detail_clue": "",
+        "evidence": "Within global count range, independent rigid truck with red open cargo structure",
+        "uncertain": false
+      },
+      {
+        "local_id": "v3",
+        "bbox_global": [
+          0.44,
+          0.17,
+          0.54,
+          0.32
+        ],
+        "evidence_views": [
+          "global_and_far_detail"
+        ],
+        "vehicle_type": "trailer_only",
+        "size": "large",
+        "visible": "partial_top",
+        "identity_clues": "dark cage-like cargo structure with blue top",
+        "far_detail_clue": "图2 confirms the distant cargo vehicle's structure matches the target in图1",
+        "evidence": "Within global count range, independent cargo vehicle, confirmed by far detail evidence",
+        "uncertain": false
+      }
+    ],
+    "dedupe_notes": "图1为全局空间视图，图2为远区细节，仅图2中对应图1顶部的车辆为同一目标，其余车辆仅在图1中出现，无重复计数",
+    "scene_notes": "展会撤展通道内的独立货车/货厢",
+    "uncertain_reasons": []
+  }
+}

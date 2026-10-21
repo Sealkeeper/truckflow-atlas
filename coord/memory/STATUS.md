@@ -6,7 +6,7 @@
 
 PR：创建后回填；保持打开，不合并。
 
-状态：身份分层、记忆缓存和实验预注册已完成；两套新机制尚未发起模型调用。结论仍为“复核/证据/回归有条件 go，自动计数和自动跨机位去重 no-go”。
+状态：身份分层、记忆缓存和双尺度无记忆消融已完成；组件装配冻结但未运行。结论仍为“复核/证据/回归有条件 go，自动计数和自动跨机位去重 no-go”。
 
 ## 已完成
 
@@ -30,6 +30,8 @@ PR：创建后回填；保持打开，不合并。
 - 成本：主调用 20 + L2 2 = 22；75,950 tokens；平均 17.962 s/相机帧；p95 2、最大 2。
 - 没有 validated hard ID，可证明的记忆节省调用为 0。
 - 记忆缓存：L1 66 条、L2 2 条、L3 4 条；schema 校验通过。
+- 双尺度无记忆消融：20/20 请求成功，14/20 exact、MAE 0.35、漏 4、多 2；修复 1、回归 3，当前形式淘汰。
+- 双尺度 20 个响应均满足 `counts.total == len(vehicles)`；模型自报跨图去重不等于逐车视觉审计，仍有 2 个过计。
 - `cargo_id`、`tractor_id`、`vehicle_session_id` 缺少完整人工真值，身份指标**未测**。
 
 ## 证据入口
@@ -40,6 +42,8 @@ PR：创建后回填；保持打开，不合并。
 - Schema：`research/vehicle_memory/PASSPORT_SCHEMA.json`
 - 记忆缓存 schema：`research/vehicle_memory/MEMORY_CACHE_SCHEMA.json`
 - 实验预注册：`research/vehicle_memory/experiments/PREREGISTRATION.md`
+- 双尺度结果：`research/vehicle_memory/experiments/RESULT.md`
+- 公共发布：`coord/exploration/vehicle-memory/`
 - 报告：`research/vehicle_memory/REPORT.md`
 - 真值：`accuracy/reviewed/user-final-review-v2-2026-10-21.json`
 - 红框：`review/user-attachments-20261021/manifest.json`
@@ -57,8 +61,8 @@ PR：创建后回填；保持打开，不合并。
 
 ## 下一步
 
-1. 运行冻结的 20 帧双尺度实验和 8 帧组件装配实验，按固定分母评测。
-2. 根据修复/回归结果决定继续、淘汰或改机制；不得把局部结果外推。
+1. 停止重复“全局 + 固定远区”付费机制；输入尺度交给公共 `input-representation` 路线。
+2. 转为离线身份记忆可行性：换挂、同箱不同车、OCR 不清和冲突 supersedes。
 3. 验证 OCR/箱号 provenance，建立真正的 hard ID 和人工身份真值。
 4. 扩充正负配对集，报告自动覆盖、precision、recall 和误合并业务影响。
 5. 记录复核队列的人工耗时和正确率。

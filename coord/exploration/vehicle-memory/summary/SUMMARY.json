@@ -1,0 +1,85 @@
+{
+  "schema": "truckflow-vehicle-memory-route-summary-v1",
+  "updated_at": "2026-10-21",
+  "branch": "research/vehicle-passport",
+  "frozen_call_commit": "0341a8c92acc3bb745a0c25af9095a5672efea48",
+  "baseline": {
+    "count_exact": 16,
+    "N": 20,
+    "mae": 0.25,
+    "under_count": 4,
+    "over_count": 1,
+    "failed": 0,
+    "evidence": "summary/baseline_and_memory_metrics.json#per_camera_baseline"
+  },
+  "identity": {
+    "cargo_id": "untested",
+    "tractor_id": "untested",
+    "vehicle_session_id": "untested",
+    "reason": "no complete human identity truth",
+    "container_number_is_vehicle_id": false,
+    "raw_unclassified_text_promoted_to_typed_identity": false
+  },
+  "memory": {
+    "model_input_contains_memory": false,
+    "L1_entries": 66,
+    "L2_entries": 2,
+    "L3_entries": 4,
+    "L1_ttl_seconds": 300,
+    "L2_ttl_seconds": 2592000,
+    "L3_ttl_seconds": 7776000,
+    "cross_camera_auto_released_frames": 0,
+    "cross_camera_review_frames": 10
+  },
+  "experiments": {
+    "dualscale_v1": {
+      "status": "completed_eliminated",
+      "mechanism": "memory-free same-frame global plus fixed far crop",
+      "N": 20,
+      "valid_N": 20,
+      "failed_N": 0,
+      "exact": 14,
+      "exact_rate_fixed_denominator": 0.7,
+      "mae": 0.35,
+      "under_count": 4,
+      "over_count": 2,
+      "count_field_mismatches": 0,
+      "fixed_from_baseline": 1,
+      "regressed_from_baseline": 3,
+      "requests": 20,
+      "successful_requests": 20,
+      "failed_requests": 0,
+      "total_tokens": 111150,
+      "latency_s_sum": 399.772,
+      "concurrency": 2,
+      "retry_policy": "none",
+      "claim_limit": "not a memory benefit and not evidence for the separate input-representation route"
+    },
+    "component_assembly_v1": {
+      "status": "not_run",
+      "frozen_budget": 8,
+      "actual_requests": 0,
+      "reason": "coordination prohibited additional paid calls after the started experiment"
+    }
+  },
+  "budget": {
+    "frozen_round_budget": 28,
+    "round_cap": 40,
+    "executed_this_round": 20,
+    "prior_L2_calls": 2
+  },
+  "validation": {
+    "json_files_parsed": 140,
+    "passport_schema_valid": true,
+    "memory_cache_schema_valid": true,
+    "memory_entries_total": 72,
+    "dualscale_total_equals_vehicle_rows": 20
+  },
+  "limitations": [
+    "development-set regression only",
+    "no complete identity truth",
+    "no manual audit proving every cross-view dedupe",
+    "no independent new time period",
+    "no measured review time or production concurrency"
+  ]
+}

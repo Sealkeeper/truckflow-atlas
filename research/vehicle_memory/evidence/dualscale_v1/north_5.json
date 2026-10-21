@@ -1,0 +1,112 @@
+{
+  "schema": "truckflow-vision-experiment-run-v1",
+  "experiment_id": "dualscale_v1",
+  "sample_id": "north_5",
+  "mechanism": "one model call with the current global aisle view plus a fixed same-frame far-detail view",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "temperature": 0,
+  "max_tokens": 5000,
+  "attempts": 1,
+  "retry_policy": "none; every HTTP attempt counts",
+  "request_count": 1,
+  "started_at_utc": "2026-10-21T13:15:59.101371+00:00",
+  "frozen_commit": "0341a8c92acc3bb745a0c25af9095a5672efea48",
+  "worktree_status_at_start": "",
+  "config_sha256": "aebe71ff750e6b46ee646f8f6c11a1afa5f5aeaa8fb18e6324caced986c96064",
+  "prompt_sha256": "1d72b8b8afde082063d2d63618c23a2510d6e0068f94cc09264f1f5963807357",
+  "input_files": [
+    "accuracy/crops/north_5_aisle.jpg",
+    "research/vehicle_memory/experiments/dualscale_v1/inputs/north_5_far.jpg"
+  ],
+  "input_sha256": [
+    "8b98320e3ec5d913b48234ac6b2eabc906a943a3d26cbeeb40e53428f1574689",
+    "07aaf1bfe308e180e6e3c50b14721822f8a2c63d69f37cd54bbe7d635801288d"
+  ],
+  "status_code": 200,
+  "latency_s": 25.102,
+  "ok": true,
+  "usage": {
+    "completion_tokens": 3233,
+    "prompt_tokens": 3209,
+    "total_tokens": 6442,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2613
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 2, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"local_id\": \"v1\",\n      \"bbox_global\": [0.27, 0.5, 0.54, 0.92],\n      \"evidence_views\": [\"global_and_far_detail\"],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"identity_clues\": \"Red rigid truck, rear displays text 'DL66002', closed cargo box, visible rear and side\",\n      \"far_detail_clue\": \"\",\n      \"evidence\": \"Within Figure1's count range, independent rigid truck, no overlap with other vehicles\",\n      \"uncertain\": false\n    },\n    {\n      \"local_id\": \"v2\",\n      \"bbox_global\": [0.4, 0.25, 0.53, 0.45],\n      \"evidence_views\": [\"global_and_far_detail\"],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"medium\",\n      \"visible\": \"partial_side\",\n      \"identity_clues\": \"Medium truck with blue roof, dark cargo area, adjacent to large boxes\",\n      \"far_detail_clue\": \"Figure2 confirms the blue roof truck is present in the same position\",\n      \"evidence\": \"Within Figure1's count range, independent medium truck, no overlap with other vehicles\",\n      \"uncertain\": false\n    },\n    {\n      \"local_id\": \"v3\",\n      \"bbox_global\": [0.55, 0.11, 0.66, 0.25],\n      \"evidence_views\": [\"global_and_far_detail\"],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"visible\": \"partial_rear\",\n      \"identity_clues\": \"Large distant truck with red container, rear has partial text, red taillights visible\",\n      \"far_detail_clue\": \"Figure2 shows the same distant red container truck, confirming it's the same vehicle\",\n      \"evidence\": \"Within Figure1's count range, independent large truck, no overlap with other vehicles\",\n      \"uncertain\": false\n    }\n  ],\n  \"dedupe_notes\": \"All three vehicles are present in both images, no duplicates; Figure2 only confirms their presence without adding any vehicles outside Figure1's count range\",\n  \"scene_notes\": \"Indoor exhibition hall during撤展, with exhibition booths and construction workers visible\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 2,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "local_id": "v1",
+        "bbox_global": [
+          0.27,
+          0.5,
+          0.54,
+          0.92
+        ],
+        "evidence_views": [
+          "global_and_far_detail"
+        ],
+        "vehicle_type": "rigid_truck",
+        "size": "large",
+        "visible": "full",
+        "identity_clues": "Red rigid truck, rear displays text 'DL66002', closed cargo box, visible rear and side",
+        "far_detail_clue": "",
+        "evidence": "Within Figure1's count range, independent rigid truck, no overlap with other vehicles",
+        "uncertain": false
+      },
+      {
+        "local_id": "v2",
+        "bbox_global": [
+          0.4,
+          0.25,
+          0.53,
+          0.45
+        ],
+        "evidence_views": [
+          "global_and_far_detail"
+        ],
+        "vehicle_type": "rigid_truck",
+        "size": "medium",
+        "visible": "partial_side",
+        "identity_clues": "Medium truck with blue roof, dark cargo area, adjacent to large boxes",
+        "far_detail_clue": "Figure2 confirms the blue roof truck is present in the same position",
+        "evidence": "Within Figure1's count range, independent medium truck, no overlap with other vehicles",
+        "uncertain": false
+      },
+      {
+        "local_id": "v3",
+        "bbox_global": [
+          0.55,
+          0.11,
+          0.66,
+          0.25
+        ],
+        "evidence_views": [
+          "global_and_far_detail"
+        ],
+        "vehicle_type": "rigid_truck",
+        "size": "large",
+        "visible": "partial_rear",
+        "identity_clues": "Large distant truck with red container, rear has partial text, red taillights visible",
+        "far_detail_clue": "Figure2 shows the same distant red container truck, confirming it's the same vehicle",
+        "evidence": "Within Figure1's count range, independent large truck, no overlap with other vehicles",
+        "uncertain": false
+      }
+    ],
+    "dedupe_notes": "All three vehicles are present in both images, no duplicates; Figure2 only confirms their presence without adding any vehicles outside Figure1's count range",
+    "scene_notes": "Indoor exhibition hall during撤展, with exhibition booths and construction workers visible",
+    "uncertain_reasons": []
+  }
+}

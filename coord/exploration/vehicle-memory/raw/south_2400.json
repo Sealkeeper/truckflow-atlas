@@ -1,0 +1,112 @@
+{
+  "schema": "truckflow-vision-experiment-run-v1",
+  "experiment_id": "dualscale_v1",
+  "sample_id": "south_2400",
+  "mechanism": "one model call with the current global aisle view plus a fixed same-frame far-detail view",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "temperature": 0,
+  "max_tokens": 5000,
+  "attempts": 1,
+  "retry_policy": "none; every HTTP attempt counts",
+  "request_count": 1,
+  "started_at_utc": "2026-10-21T13:18:45.732555+00:00",
+  "frozen_commit": "0341a8c92acc3bb745a0c25af9095a5672efea48",
+  "worktree_status_at_start": "",
+  "config_sha256": "aebe71ff750e6b46ee646f8f6c11a1afa5f5aeaa8fb18e6324caced986c96064",
+  "prompt_sha256": "1d72b8b8afde082063d2d63618c23a2510d6e0068f94cc09264f1f5963807357",
+  "input_files": [
+    "accuracy/crops/south_2400_aisle.jpg",
+    "research/vehicle_memory/experiments/dualscale_v1/inputs/south_2400_far.jpg"
+  ],
+  "input_sha256": [
+    "927e6b5bc4a71637774823d1c7b289c6550410a8b8226f6bb741d3656b67ebfa",
+    "2a025b7d17a50860b0b918e60fac6904ae6b52f905a6b241cb9783e7bce4840f"
+  ],
+  "status_code": 200,
+  "latency_s": 16.458,
+  "ok": true,
+  "usage": {
+    "completion_tokens": 1749,
+    "prompt_tokens": 3209,
+    "total_tokens": 4958,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1131
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 2, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"local_id\": \"v1\",\n      \"bbox_global\": [0.35, 0.45, 0.65, 0.89],\n      \"evidence_views\": [\"global_only\"],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"identity_clues\": \"Red cab, silver cargo box, open driver door, 'QITRAK' text on front grille\",\n      \"far_detail_clue\": \"\",\n      \"evidence\": \"Independent vehicle within figure1's count range, no overlap with other trucks, confirmed as a valid truck\",\n      \"uncertain\": false\n    },\n    {\n      \"local_id\": \"v2\",\n      \"bbox_global\": [0.30, 0.21, 0.45, 0.42],\n      \"evidence_views\": [\"global_and_far_detail\"],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"identity_clues\": \"White cab, white cargo box, text on cab front\",\n      \"far_detail_clue\": \"Figure2 confirms the same white truck details, matching figure1's vehicle\",\n      \"evidence\": \"Present in both figures, independent, within count range, no duplicates\",\n      \"uncertain\": false\n    },\n    {\n      \"local_id\": \"v3\",\n      \"bbox_global\": [0.42, 0.20, 0.55, 0.33],\n      \"evidence_views\": [\"global_and_far_detail\"],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"identity_clues\": \"Red cab, cargo on top, front details visible\",\n      \"far_detail_clue\": \"Figure2 clearly shows this upper red truck, confirming it is a separate vehicle from the white truck\",\n      \"evidence\": \"Independent, within count range, not overlapping with other trucks\",\n      \"uncertain\": false\n    }\n  ],\n  \"dedupe_notes\": \"Each truck is unique; figure2 confirms the upper red and white trucks are the same as in figure1, so no double-counting. The lower red truck only appears in figure1, counted once.\",\n  \"scene_notes\": \"Indoor exhibition hall during dismantling, workers and exhibition structures present, no other valid trucks counted.\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 2,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "local_id": "v1",
+        "bbox_global": [
+          0.35,
+          0.45,
+          0.65,
+          0.89
+        ],
+        "evidence_views": [
+          "global_only"
+        ],
+        "vehicle_type": "rigid_truck",
+        "size": "large",
+        "visible": "full",
+        "identity_clues": "Red cab, silver cargo box, open driver door, 'QITRAK' text on front grille",
+        "far_detail_clue": "",
+        "evidence": "Independent vehicle within figure1's count range, no overlap with other trucks, confirmed as a valid truck",
+        "uncertain": false
+      },
+      {
+        "local_id": "v2",
+        "bbox_global": [
+          0.3,
+          0.21,
+          0.45,
+          0.42
+        ],
+        "evidence_views": [
+          "global_and_far_detail"
+        ],
+        "vehicle_type": "rigid_truck",
+        "size": "large",
+        "visible": "full",
+        "identity_clues": "White cab, white cargo box, text on cab front",
+        "far_detail_clue": "Figure2 confirms the same white truck details, matching figure1's vehicle",
+        "evidence": "Present in both figures, independent, within count range, no duplicates",
+        "uncertain": false
+      },
+      {
+        "local_id": "v3",
+        "bbox_global": [
+          0.42,
+          0.2,
+          0.55,
+          0.33
+        ],
+        "evidence_views": [
+          "global_and_far_detail"
+        ],
+        "vehicle_type": "rigid_truck",
+        "size": "medium",
+        "visible": "full",
+        "identity_clues": "Red cab, cargo on top, front details visible",
+        "far_detail_clue": "Figure2 clearly shows this upper red truck, confirming it is a separate vehicle from the white truck",
+        "evidence": "Independent, within count range, not overlapping with other trucks",
+        "uncertain": false
+      }
+    ],
+    "dedupe_notes": "Each truck is unique; figure2 confirms the upper red and white trucks are the same as in figure1, so no double-counting. The lower red truck only appears in figure1, counted once.",
+    "scene_notes": "Indoor exhibition hall during dismantling, workers and exhibition structures present, no other valid trucks counted.",
+    "uncertain_reasons": []
+  }
+}

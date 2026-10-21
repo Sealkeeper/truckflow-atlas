@@ -1,0 +1,1771 @@
+{
+  "schema": "truckflow-vehicle-memory-replay-v2",
+  "generated_at": "2026-10-21T13:13:55.302430+00:00",
+  "constraints": {
+    "identity_decision": "semantic passport matching only; no detector, tracker, or cross-camera box geometry identity",
+    "auto_threshold": 0.82,
+    "review_threshold": 0.52,
+    "silent_merge": false,
+    "new_model_calls": 2,
+    "identity_policy": {
+      "container_number_is_vehicle_id": false,
+      "cargo_id_scope": "cargo_only",
+      "tractor_id_scope": "tractor_only",
+      "vehicle_session_requires_current_attachment_or_continuity_evidence": true,
+      "unclear_ocr_may_merge": false,
+      "trailer_swap_creates_new_session": true
+    }
+  },
+  "dataset": {
+    "samples": 20,
+    "times": 10,
+    "observations": 66,
+    "provisional_passport_facets": 66
+  },
+  "per_camera_baseline": {
+    "exact": 16,
+    "n": 20,
+    "exact_rate": 0.8,
+    "mae": 0.25,
+    "rows": [
+      {
+        "sample_id": "north_5",
+        "camera": "north",
+        "time_s": 5,
+        "gold": 5,
+        "predicted": 4,
+        "error": -1,
+        "exact": false
+      },
+      {
+        "sample_id": "south_5",
+        "camera": "south",
+        "time_s": 5,
+        "gold": 3,
+        "predicted": 3,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "north_300",
+        "camera": "north",
+        "time_s": 300,
+        "gold": 3,
+        "predicted": 2,
+        "error": -1,
+        "exact": false
+      },
+      {
+        "sample_id": "south_300",
+        "camera": "south",
+        "time_s": 300,
+        "gold": 4,
+        "predicted": 4,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "north_600",
+        "camera": "north",
+        "time_s": 600,
+        "gold": 4,
+        "predicted": 2,
+        "error": -2,
+        "exact": false
+      },
+      {
+        "sample_id": "south_600",
+        "camera": "south",
+        "time_s": 600,
+        "gold": 4,
+        "predicted": 4,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "north_900",
+        "camera": "north",
+        "time_s": 900,
+        "gold": 3,
+        "predicted": 3,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "south_900",
+        "camera": "south",
+        "time_s": 900,
+        "gold": 5,
+        "predicted": 5,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "north_1200",
+        "camera": "north",
+        "time_s": 1200,
+        "gold": 3,
+        "predicted": 3,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "south_1200",
+        "camera": "south",
+        "time_s": 1200,
+        "gold": 5,
+        "predicted": 5,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "north_1500",
+        "camera": "north",
+        "time_s": 1500,
+        "gold": 2,
+        "predicted": 2,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "south_1500",
+        "camera": "south",
+        "time_s": 1500,
+        "gold": 5,
+        "predicted": 5,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "north_1800",
+        "camera": "north",
+        "time_s": 1800,
+        "gold": 2,
+        "predicted": 2,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "south_1800",
+        "camera": "south",
+        "time_s": 1800,
+        "gold": 4,
+        "predicted": 4,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "north_2100",
+        "camera": "north",
+        "time_s": 2100,
+        "gold": 2,
+        "predicted": 2,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "south_2100",
+        "camera": "south",
+        "time_s": 2100,
+        "gold": 3,
+        "predicted": 4,
+        "error": 1,
+        "exact": false
+      },
+      {
+        "sample_id": "north_2400",
+        "camera": "north",
+        "time_s": 2400,
+        "gold": 3,
+        "predicted": 3,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "south_2400",
+        "camera": "south",
+        "time_s": 2400,
+        "gold": 3,
+        "predicted": 3,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "north_2600",
+        "camera": "north",
+        "time_s": 2600,
+        "gold": 2,
+        "predicted": 2,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "south_2600",
+        "camera": "south",
+        "time_s": 2600,
+        "gold": 4,
+        "predicted": 4,
+        "error": 0,
+        "exact": true
+      }
+    ]
+  },
+  "l2_adjusted_per_camera": {
+    "exact": 17,
+    "n": 20,
+    "mae": 0.25,
+    "rows": [
+      {
+        "sample_id": "north_5",
+        "camera": "north",
+        "time_s": 5,
+        "gold": 5,
+        "predicted": 8,
+        "error": 3,
+        "exact": false
+      },
+      {
+        "sample_id": "south_5",
+        "camera": "south",
+        "time_s": 5,
+        "gold": 3,
+        "predicted": 3,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "north_300",
+        "camera": "north",
+        "time_s": 300,
+        "gold": 3,
+        "predicted": 2,
+        "error": -1,
+        "exact": false
+      },
+      {
+        "sample_id": "south_300",
+        "camera": "south",
+        "time_s": 300,
+        "gold": 4,
+        "predicted": 4,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "north_600",
+        "camera": "north",
+        "time_s": 600,
+        "gold": 4,
+        "predicted": 4,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "south_600",
+        "camera": "south",
+        "time_s": 600,
+        "gold": 4,
+        "predicted": 4,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "north_900",
+        "camera": "north",
+        "time_s": 900,
+        "gold": 3,
+        "predicted": 3,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "south_900",
+        "camera": "south",
+        "time_s": 900,
+        "gold": 5,
+        "predicted": 5,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "north_1200",
+        "camera": "north",
+        "time_s": 1200,
+        "gold": 3,
+        "predicted": 3,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "south_1200",
+        "camera": "south",
+        "time_s": 1200,
+        "gold": 5,
+        "predicted": 5,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "north_1500",
+        "camera": "north",
+        "time_s": 1500,
+        "gold": 2,
+        "predicted": 2,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "south_1500",
+        "camera": "south",
+        "time_s": 1500,
+        "gold": 5,
+        "predicted": 5,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "north_1800",
+        "camera": "north",
+        "time_s": 1800,
+        "gold": 2,
+        "predicted": 2,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "south_1800",
+        "camera": "south",
+        "time_s": 1800,
+        "gold": 4,
+        "predicted": 4,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "north_2100",
+        "camera": "north",
+        "time_s": 2100,
+        "gold": 2,
+        "predicted": 2,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "south_2100",
+        "camera": "south",
+        "time_s": 2100,
+        "gold": 3,
+        "predicted": 4,
+        "error": 1,
+        "exact": false
+      },
+      {
+        "sample_id": "north_2400",
+        "camera": "north",
+        "time_s": 2400,
+        "gold": 3,
+        "predicted": 3,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "south_2400",
+        "camera": "south",
+        "time_s": 2400,
+        "gold": 3,
+        "predicted": 3,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "north_2600",
+        "camera": "north",
+        "time_s": 2600,
+        "gold": 2,
+        "predicted": 2,
+        "error": 0,
+        "exact": true
+      },
+      {
+        "sample_id": "south_2600",
+        "camera": "south",
+        "time_s": 2600,
+        "gold": 4,
+        "predicted": 4,
+        "error": 0,
+        "exact": true
+      }
+    ]
+  },
+  "cross_camera": {
+    "naive_unique_mae": 1.3,
+    "raw_auto_unique_mae": 1.3,
+    "gold_overlap_count": 14,
+    "visible_detection_count": 66,
+    "gold_overlap_rate_of_visible": 0.2121,
+    "auto_duplicate_count": 0,
+    "review_duplicate_count": 15,
+    "auto_released_frames": 0,
+    "auto_released_frame_errors": 0,
+    "review_frames": 10,
+    "review_rate": 1.0,
+    "rows": [
+      {
+        "time_s": 5,
+        "north_count": 4,
+        "south_count": 3,
+        "naive_sum": 7,
+        "auto_matches": [],
+        "review_matches": [
+          {
+            "north": 1,
+            "south": 1,
+            "score": 0.42,
+            "matched_categories": [
+              "cargo_colour"
+            ],
+            "conflicts": [],
+            "reason": "same-colour or weak semantic evidence is insufficient"
+          }
+        ],
+        "best_candidate_scores": [
+          {
+            "north": 1,
+            "south": 1,
+            "score": 0.42,
+            "decision": "review",
+            "matched_categories": [
+              "cargo_colour"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 1,
+            "south": 2,
+            "score": 0.42,
+            "decision": "review",
+            "matched_categories": [
+              "cargo_colour"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 1,
+            "south": 3,
+            "score": 0.42,
+            "decision": "review",
+            "matched_categories": [
+              "cargo_colour"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 4,
+            "south": 1,
+            "score": 0.32,
+            "decision": "reject",
+            "matched_categories": [
+              "cargo_colour"
+            ],
+            "conflicts": [
+              "size_disagrees"
+            ]
+          },
+          {
+            "north": 4,
+            "south": 2,
+            "score": 0.32,
+            "decision": "reject",
+            "matched_categories": [
+              "cargo_colour"
+            ],
+            "conflicts": [
+              "size_disagrees"
+            ]
+          }
+        ],
+        "raw_auto_unique": 7,
+        "review_gated": true,
+        "release_reason": "unresolved cross-camera candidate remains",
+        "release_status": "review",
+        "gold_unique": 7,
+        "gold_overlap": 1,
+        "naive_error": 0,
+        "raw_auto_unique_error": 0
+      },
+      {
+        "time_s": 300,
+        "north_count": 2,
+        "south_count": 4,
+        "naive_sum": 6,
+        "auto_matches": [],
+        "review_matches": [
+          {
+            "north": 1,
+            "south": 1,
+            "score": 0.6,
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": [],
+            "reason": "same-colour or weak semantic evidence is insufficient"
+          }
+        ],
+        "best_candidate_scores": [
+          {
+            "north": 1,
+            "south": 1,
+            "score": 0.6,
+            "decision": "review",
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 1,
+            "south": 2,
+            "score": 0.28,
+            "decision": "reject",
+            "matched_categories": [
+              "body_type"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 2,
+            "south": 1,
+            "score": 0.19,
+            "decision": "reject",
+            "matched_categories": [
+              "body_type"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 2,
+            "south": 2,
+            "score": 0.19,
+            "decision": "reject",
+            "matched_categories": [
+              "body_type"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 1,
+            "south": 3,
+            "score": 0.18,
+            "decision": "reject",
+            "matched_categories": [
+              "body_type"
+            ],
+            "conflicts": [
+              "size_disagrees"
+            ]
+          }
+        ],
+        "raw_auto_unique": 6,
+        "review_gated": true,
+        "release_reason": "unresolved cross-camera candidate remains",
+        "release_status": "review",
+        "gold_unique": 6,
+        "gold_overlap": 1,
+        "naive_error": 0,
+        "raw_auto_unique_error": 0
+      },
+      {
+        "time_s": 600,
+        "north_count": 2,
+        "south_count": 4,
+        "naive_sum": 6,
+        "auto_matches": [],
+        "review_matches": [
+          {
+            "north": 2,
+            "south": 1,
+            "score": 0.42,
+            "matched_categories": [
+              "cargo_colour"
+            ],
+            "conflicts": [],
+            "reason": "same-colour or weak semantic evidence is insufficient"
+          }
+        ],
+        "best_candidate_scores": [
+          {
+            "north": 1,
+            "south": 4,
+            "score": 0.42,
+            "decision": "reject",
+            "matched_categories": [
+              "cargo_colour"
+            ],
+            "conflicts": [
+              "body_roles_disagree"
+            ]
+          },
+          {
+            "north": 2,
+            "south": 1,
+            "score": 0.42,
+            "decision": "review",
+            "matched_categories": [
+              "cargo_colour"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 1,
+            "south": 2,
+            "score": 0.16,
+            "decision": "reject",
+            "matched_categories": [
+              "body_type"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 1,
+            "south": 3,
+            "score": 0.16,
+            "decision": "reject",
+            "matched_categories": [
+              "body_type"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 1,
+            "south": 1,
+            "score": 0.1,
+            "decision": "reject",
+            "matched_categories": [],
+            "conflicts": [
+              "body_roles_disagree"
+            ]
+          }
+        ],
+        "raw_auto_unique": 6,
+        "review_gated": true,
+        "release_reason": "unresolved cross-camera candidate remains",
+        "release_status": "review",
+        "gold_unique": 7,
+        "gold_overlap": 1,
+        "naive_error": -1,
+        "raw_auto_unique_error": -1
+      },
+      {
+        "time_s": 900,
+        "north_count": 3,
+        "south_count": 5,
+        "naive_sum": 8,
+        "auto_matches": [],
+        "review_matches": [
+          {
+            "north": 3,
+            "south": 3,
+            "score": 0.72,
+            "matched_categories": [
+              "cargo_colour",
+              "roof_colour",
+              "texture"
+            ],
+            "conflicts": [],
+            "reason": "same-colour or weak semantic evidence is insufficient"
+          },
+          {
+            "north": 1,
+            "south": 1,
+            "score": 0.54,
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": [],
+            "reason": "same-colour or weak semantic evidence is insufficient"
+          },
+          {
+            "north": 2,
+            "south": 5,
+            "score": 0.465,
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": [],
+            "reason": "same-colour or weak semantic evidence is insufficient"
+          }
+        ],
+        "best_candidate_scores": [
+          {
+            "north": 3,
+            "south": 3,
+            "score": 0.72,
+            "decision": "review",
+            "matched_categories": [
+              "cargo_colour",
+              "roof_colour",
+              "texture"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 1,
+            "south": 1,
+            "score": 0.54,
+            "decision": "review",
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 2,
+            "south": 5,
+            "score": 0.465,
+            "decision": "review",
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 1,
+            "south": 2,
+            "score": 0.22,
+            "decision": "reject",
+            "matched_categories": [
+              "body_type"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 2,
+            "south": 1,
+            "score": 0.22,
+            "decision": "reject",
+            "matched_categories": [
+              "body_type"
+            ],
+            "conflicts": []
+          }
+        ],
+        "raw_auto_unique": 8,
+        "review_gated": true,
+        "release_reason": "unresolved cross-camera candidate remains",
+        "release_status": "review",
+        "gold_unique": 6,
+        "gold_overlap": 2,
+        "naive_error": 2,
+        "raw_auto_unique_error": 2
+      },
+      {
+        "time_s": 1200,
+        "north_count": 3,
+        "south_count": 5,
+        "naive_sum": 8,
+        "auto_matches": [],
+        "review_matches": [
+          {
+            "north": 2,
+            "south": 5,
+            "score": 0.465,
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": [],
+            "reason": "same-colour or weak semantic evidence is insufficient"
+          }
+        ],
+        "best_candidate_scores": [
+          {
+            "north": 1,
+            "south": 1,
+            "score": 0.48,
+            "decision": "reject",
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": [
+              "body_roles_disagree"
+            ]
+          },
+          {
+            "north": 2,
+            "south": 5,
+            "score": 0.465,
+            "decision": "review",
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 2,
+            "south": 3,
+            "score": 0.44,
+            "decision": "reject",
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": [
+              "size_disagrees"
+            ]
+          },
+          {
+            "north": 2,
+            "south": 4,
+            "score": 0.38,
+            "decision": "reject",
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": [
+              "size_disagrees"
+            ]
+          },
+          {
+            "north": 2,
+            "south": 1,
+            "score": 0.22,
+            "decision": "reject",
+            "matched_categories": [
+              "body_type"
+            ],
+            "conflicts": []
+          }
+        ],
+        "raw_auto_unique": 8,
+        "review_gated": true,
+        "release_reason": "unresolved cross-camera candidate remains",
+        "release_status": "review",
+        "gold_unique": 6,
+        "gold_overlap": 2,
+        "naive_error": 2,
+        "raw_auto_unique_error": 2
+      },
+      {
+        "time_s": 1500,
+        "north_count": 2,
+        "south_count": 5,
+        "naive_sum": 7,
+        "auto_matches": [],
+        "review_matches": [
+          {
+            "north": 1,
+            "south": 5,
+            "score": 0.48,
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": [],
+            "reason": "same-colour or weak semantic evidence is insufficient"
+          },
+          {
+            "north": 2,
+            "south": 1,
+            "score": 0.2067,
+            "matched_categories": [
+              "cargo_colour"
+            ],
+            "conflicts": [],
+            "reason": "same-colour or weak semantic evidence is insufficient"
+          }
+        ],
+        "best_candidate_scores": [
+          {
+            "north": 1,
+            "south": 5,
+            "score": 0.48,
+            "decision": "review",
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 1,
+            "south": 3,
+            "score": 0.41,
+            "decision": "reject",
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": [
+              "size_disagrees"
+            ]
+          },
+          {
+            "north": 1,
+            "south": 4,
+            "score": 0.41,
+            "decision": "reject",
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": [
+              "size_disagrees"
+            ]
+          },
+          {
+            "north": 2,
+            "south": 1,
+            "score": 0.2067,
+            "decision": "review",
+            "matched_categories": [
+              "cargo_colour"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 2,
+            "south": 5,
+            "score": 0.2067,
+            "decision": "review",
+            "matched_categories": [
+              "cargo_colour"
+            ],
+            "conflicts": []
+          }
+        ],
+        "raw_auto_unique": 7,
+        "review_gated": true,
+        "release_reason": "unresolved cross-camera candidate remains",
+        "release_status": "review",
+        "gold_unique": 5,
+        "gold_overlap": 2,
+        "naive_error": 2,
+        "raw_auto_unique_error": 2
+      },
+      {
+        "time_s": 1800,
+        "north_count": 2,
+        "south_count": 4,
+        "naive_sum": 6,
+        "auto_matches": [],
+        "review_matches": [
+          {
+            "north": 2,
+            "south": 1,
+            "score": 0.54,
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": [],
+            "reason": "same-colour or weak semantic evidence is insufficient"
+          },
+          {
+            "north": 1,
+            "south": 3,
+            "score": 0.48,
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": [],
+            "reason": "same-colour or weak semantic evidence is insufficient"
+          }
+        ],
+        "best_candidate_scores": [
+          {
+            "north": 2,
+            "south": 1,
+            "score": 0.54,
+            "decision": "review",
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 1,
+            "south": 3,
+            "score": 0.48,
+            "decision": "review",
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 1,
+            "south": 2,
+            "score": 0.42,
+            "decision": "reject",
+            "matched_categories": [
+              "cargo_colour"
+            ],
+            "conflicts": [
+              "body_roles_disagree"
+            ]
+          },
+          {
+            "north": 1,
+            "south": 4,
+            "score": 0.42,
+            "decision": "reject",
+            "matched_categories": [
+              "cargo_colour"
+            ],
+            "conflicts": [
+              "body_roles_disagree"
+            ]
+          },
+          {
+            "north": 2,
+            "south": 2,
+            "score": 0.22,
+            "decision": "reject",
+            "matched_categories": [
+              "body_type",
+              "texture"
+            ],
+            "conflicts": []
+          }
+        ],
+        "raw_auto_unique": 6,
+        "review_gated": true,
+        "release_reason": "unresolved cross-camera candidate remains",
+        "release_status": "review",
+        "gold_unique": 5,
+        "gold_overlap": 1,
+        "naive_error": 1,
+        "raw_auto_unique_error": 1
+      },
+      {
+        "time_s": 2100,
+        "north_count": 2,
+        "south_count": 4,
+        "naive_sum": 6,
+        "auto_matches": [],
+        "review_matches": [
+          {
+            "north": 2,
+            "south": 1,
+            "score": 0.48,
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": [],
+            "reason": "same-colour or weak semantic evidence is insufficient"
+          },
+          {
+            "north": 1,
+            "south": 3,
+            "score": 0.2067,
+            "matched_categories": [
+              "cargo_colour"
+            ],
+            "conflicts": [],
+            "reason": "same-colour or weak semantic evidence is insufficient"
+          }
+        ],
+        "best_candidate_scores": [
+          {
+            "north": 2,
+            "south": 1,
+            "score": 0.48,
+            "decision": "review",
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 2,
+            "south": 4,
+            "score": 0.28,
+            "decision": "reject",
+            "matched_categories": [
+              "body_type"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 1,
+            "south": 3,
+            "score": 0.2067,
+            "decision": "review",
+            "matched_categories": [
+              "cargo_colour"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 2,
+            "south": 2,
+            "score": 0.16,
+            "decision": "reject",
+            "matched_categories": [
+              "body_type"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 2,
+            "south": 3,
+            "score": 0.16,
+            "decision": "reject",
+            "matched_categories": [
+              "body_type"
+            ],
+            "conflicts": []
+          }
+        ],
+        "raw_auto_unique": 6,
+        "review_gated": true,
+        "release_reason": "unresolved cross-camera candidate remains",
+        "release_status": "review",
+        "gold_unique": 4,
+        "gold_overlap": 1,
+        "naive_error": 2,
+        "raw_auto_unique_error": 2
+      },
+      {
+        "time_s": 2400,
+        "north_count": 3,
+        "south_count": 3,
+        "naive_sum": 6,
+        "auto_matches": [],
+        "review_matches": [],
+        "best_candidate_scores": [
+          {
+            "north": 2,
+            "south": 1,
+            "score": 0.42,
+            "decision": "reject",
+            "matched_categories": [
+              "cargo_colour"
+            ],
+            "conflicts": [
+              "body_roles_disagree"
+            ]
+          },
+          {
+            "north": 3,
+            "south": 1,
+            "score": 0.42,
+            "decision": "reject",
+            "matched_categories": [
+              "cargo_colour"
+            ],
+            "conflicts": [
+              "body_roles_disagree"
+            ]
+          },
+          {
+            "north": 2,
+            "south": 3,
+            "score": 0.26,
+            "decision": "reject",
+            "matched_categories": [
+              "cargo_colour"
+            ],
+            "conflicts": [
+              "body_roles_disagree"
+            ]
+          },
+          {
+            "north": 3,
+            "south": 3,
+            "score": 0.26,
+            "decision": "reject",
+            "matched_categories": [
+              "cargo_colour"
+            ],
+            "conflicts": [
+              "body_roles_disagree"
+            ]
+          },
+          {
+            "north": 1,
+            "south": 1,
+            "score": 0.1,
+            "decision": "reject",
+            "matched_categories": [],
+            "conflicts": [
+              "body_roles_disagree"
+            ]
+          }
+        ],
+        "raw_auto_unique": 6,
+        "review_gated": true,
+        "release_reason": "two occupied views without a verified cross-camera pair",
+        "release_status": "review",
+        "gold_unique": 5,
+        "gold_overlap": 1,
+        "naive_error": 1,
+        "raw_auto_unique_error": 1
+      },
+      {
+        "time_s": 2600,
+        "north_count": 2,
+        "south_count": 4,
+        "naive_sum": 6,
+        "auto_matches": [],
+        "review_matches": [
+          {
+            "north": 1,
+            "south": 3,
+            "score": 0.54,
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": [],
+            "reason": "same-colour or weak semantic evidence is insufficient"
+          },
+          {
+            "north": 2,
+            "south": 1,
+            "score": 0.51,
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": [],
+            "reason": "same-colour or weak semantic evidence is insufficient"
+          }
+        ],
+        "best_candidate_scores": [
+          {
+            "north": 1,
+            "south": 3,
+            "score": 0.54,
+            "decision": "review",
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 2,
+            "south": 1,
+            "score": 0.51,
+            "decision": "review",
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 1,
+            "south": 1,
+            "score": 0.48,
+            "decision": "review",
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 2,
+            "south": 3,
+            "score": 0.48,
+            "decision": "review",
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": []
+          },
+          {
+            "north": 2,
+            "south": 4,
+            "score": 0.48,
+            "decision": "review",
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ],
+            "conflicts": []
+          }
+        ],
+        "raw_auto_unique": 6,
+        "review_gated": true,
+        "release_reason": "unresolved cross-camera candidate remains",
+        "release_status": "review",
+        "gold_unique": 4,
+        "gold_overlap": 2,
+        "naive_error": 2,
+        "raw_auto_unique_error": 2
+      }
+    ]
+  },
+  "pair_probe_archived_models": {
+    "decisions": 16,
+    "exact": 4,
+    "exact_rate": 0.25,
+    "tp": 2,
+    "fp": 0,
+    "fn": 6,
+    "tn": 2,
+    "precision_committed_yes": 1.0,
+    "recall_committed_yes": 0.25,
+    "review_count": 16,
+    "review_rate": 1.0,
+    "latency_s_sum": 239.898,
+    "total_tokens": 29701
+  },
+  "pair_probe_archived_rows": [
+    {
+      "case": "t1200_blue_vs_far_red",
+      "model": "aibox",
+      "gold": "no",
+      "answer": "no",
+      "exact": true,
+      "review": true,
+      "latency_s": 8.06,
+      "total_tokens": 1190
+    },
+    {
+      "case": "t1200_blue_vs_far_red",
+      "model": "doubao",
+      "gold": "no",
+      "answer": "uncertain",
+      "exact": false,
+      "review": true,
+      "latency_s": 7.116,
+      "total_tokens": 2125
+    },
+    {
+      "case": "t1200_red_positive",
+      "model": "aibox",
+      "gold": "yes",
+      "answer": "no",
+      "exact": false,
+      "review": true,
+      "latency_s": 11.649,
+      "total_tokens": 1218
+    },
+    {
+      "case": "t1200_red_positive",
+      "model": "doubao",
+      "gold": "yes",
+      "answer": "uncertain",
+      "exact": false,
+      "review": true,
+      "latency_s": 12.62,
+      "total_tokens": 2630
+    },
+    {
+      "case": "t1200_red_vs_red_cab",
+      "model": "aibox",
+      "gold": "no",
+      "answer": "uncertain",
+      "exact": false,
+      "review": true,
+      "latency_s": 26.497,
+      "total_tokens": 1156
+    },
+    {
+      "case": "t1200_red_vs_red_cab",
+      "model": "doubao",
+      "gold": "no",
+      "answer": "uncertain",
+      "exact": false,
+      "review": true,
+      "latency_s": 8.484,
+      "total_tokens": 2257
+    },
+    {
+      "case": "t1200_white_positive",
+      "model": "aibox",
+      "gold": "yes",
+      "answer": "uncertain",
+      "exact": false,
+      "review": true,
+      "latency_s": 23.316,
+      "total_tokens": 1188
+    },
+    {
+      "case": "t1200_white_positive",
+      "model": "doubao",
+      "gold": "yes",
+      "answer": "yes",
+      "exact": true,
+      "review": true,
+      "latency_s": 11.002,
+      "total_tokens": 2393
+    },
+    {
+      "case": "t600_blue_vs_far_red",
+      "model": "aibox",
+      "gold": "no",
+      "answer": "no",
+      "exact": true,
+      "review": true,
+      "latency_s": 30.862,
+      "total_tokens": 1173
+    },
+    {
+      "case": "t600_blue_vs_far_red",
+      "model": "doubao",
+      "gold": "no",
+      "answer": "uncertain",
+      "exact": false,
+      "review": true,
+      "latency_s": 8.298,
+      "total_tokens": 2235
+    },
+    {
+      "case": "t600_blue_vs_red_cab",
+      "model": "aibox",
+      "gold": "no",
+      "answer": "uncertain",
+      "exact": false,
+      "review": true,
+      "latency_s": 8.662,
+      "total_tokens": 1237
+    },
+    {
+      "case": "t600_blue_vs_red_cab",
+      "model": "doubao",
+      "gold": "no",
+      "answer": "uncertain",
+      "exact": false,
+      "review": true,
+      "latency_s": 13.991,
+      "total_tokens": 2498
+    },
+    {
+      "case": "t600_red_positive",
+      "model": "aibox",
+      "gold": "yes",
+      "answer": "uncertain",
+      "exact": false,
+      "review": true,
+      "latency_s": 11.602,
+      "total_tokens": 1273
+    },
+    {
+      "case": "t600_red_positive",
+      "model": "doubao",
+      "gold": "yes",
+      "answer": "uncertain",
+      "exact": false,
+      "review": true,
+      "latency_s": 16.329,
+      "total_tokens": 2987
+    },
+    {
+      "case": "t600_white_positive",
+      "model": "aibox",
+      "gold": "yes",
+      "answer": "uncertain",
+      "exact": false,
+      "review": true,
+      "latency_s": 26.084,
+      "total_tokens": 1157
+    },
+    {
+      "case": "t600_white_positive",
+      "model": "doubao",
+      "gold": "yes",
+      "answer": "yes",
+      "exact": true,
+      "review": true,
+      "latency_s": 15.326,
+      "total_tokens": 2984
+    }
+  ],
+  "memory_pair_cases": {
+    "cases": 8,
+    "exact": 3,
+    "exact_rate": 0.375,
+    "tp": 0,
+    "fp": 0,
+    "fn": 4,
+    "tn": 3,
+    "precision_committed_yes": 0.0,
+    "recall_committed_yes": 0.0,
+    "review_count": 5,
+    "review_rate": 0.625
+  },
+  "memory_pair_case_rows": [
+    {
+      "case": "t600_red_positive",
+      "gold": "yes",
+      "answer": "uncertain",
+      "score": 0.51,
+      "decision": "review",
+      "matched_categories": [
+        "body_type",
+        "cargo_colour"
+      ],
+      "conflicts": [],
+      "exact": false,
+      "review": true
+    },
+    {
+      "case": "t600_white_positive",
+      "gold": "yes",
+      "answer": "uncertain",
+      "score": 0.51,
+      "decision": "review",
+      "matched_categories": [
+        "body_type",
+        "cargo_colour"
+      ],
+      "conflicts": [],
+      "exact": false,
+      "review": true
+    },
+    {
+      "case": "t600_blue_vs_far_red",
+      "gold": "no",
+      "answer": "uncertain",
+      "score": 0.26,
+      "decision": "review",
+      "matched_categories": [
+        "cargo_colour"
+      ],
+      "conflicts": [],
+      "exact": false,
+      "review": true
+    },
+    {
+      "case": "t600_blue_vs_red_cab",
+      "gold": "no",
+      "answer": "no",
+      "score": 0.46,
+      "decision": "reject",
+      "matched_categories": [
+        "cargo_colour",
+        "roof_colour",
+        "texture"
+      ],
+      "conflicts": [
+        "body_roles_disagree",
+        "size_disagrees"
+      ],
+      "exact": true,
+      "review": false
+    },
+    {
+      "case": "t1200_red_positive",
+      "gold": "yes",
+      "answer": "uncertain",
+      "score": 0.63,
+      "decision": "review",
+      "matched_categories": [
+        "body_type",
+        "cargo_colour",
+        "texture"
+      ],
+      "conflicts": [],
+      "exact": false,
+      "review": true
+    },
+    {
+      "case": "t1200_white_positive",
+      "gold": "yes",
+      "answer": "uncertain",
+      "score": 0.63,
+      "decision": "review",
+      "matched_categories": [
+        "body_type",
+        "cargo_colour",
+        "texture"
+      ],
+      "conflicts": [],
+      "exact": false,
+      "review": true
+    },
+    {
+      "case": "t1200_blue_vs_far_red",
+      "gold": "no",
+      "answer": "no",
+      "score": 0.1,
+      "decision": "reject",
+      "matched_categories": [],
+      "conflicts": [
+        "body_roles_disagree"
+      ],
+      "exact": true,
+      "review": false
+    },
+    {
+      "case": "t1200_red_vs_red_cab",
+      "gold": "no",
+      "answer": "no",
+      "score": 0.42,
+      "decision": "reject",
+      "matched_categories": [
+        "cargo_colour"
+      ],
+      "conflicts": [
+        "body_roles_disagree"
+      ],
+      "exact": true,
+      "review": false
+    }
+  ],
+  "l2_point_experiment": {
+    "scope": "two historical easy-miss frames only; not a 20-frame accuracy claim",
+    "frames": [
+      {
+        "sample_id": "north_5",
+        "gold_camera_count": 5,
+        "main_count": 4,
+        "supplement_raw_count": 4,
+        "supplement_new_count": 4,
+        "merged_count": 8,
+        "absolute_error_before": 1,
+        "absolute_error_after": 3,
+        "duplicate_matches": [],
+        "new_vehicle_evidence": [
+          {
+            "supplement_index": 1,
+            "clues": "white dark 独立货厢，白色顶",
+            "bbox_in_aisle_view": [
+              0.4395,
+              0.0908,
+              0.5518,
+              0.1744
+            ]
+          },
+          {
+            "supplement_index": 2,
+            "clues": "brown brown red 带车头的货车，红棕色货厢",
+            "bbox_in_aisle_view": [
+              0.5611,
+              0.1136,
+              0.664,
+              0.239
+            ]
+          },
+          {
+            "supplement_index": 3,
+            "clues": "gray black 独立货厢，灰色顶黑色箱体",
+            "bbox_in_aisle_view": [
+              0.4208,
+              0.1668,
+              0.5331,
+              0.2542
+            ]
+          },
+          {
+            "supplement_index": 4,
+            "clues": "blue dark 独立货厢，蓝色顶",
+            "bbox_in_aisle_view": [
+              0.4021,
+              0.2504,
+              0.5331,
+              0.3378
+            ]
+          }
+        ],
+        "probe_total_tokens": 4659,
+        "probe_latency_s": 22.12
+      },
+      {
+        "sample_id": "north_600",
+        "gold_camera_count": 4,
+        "main_count": 2,
+        "supplement_raw_count": 3,
+        "supplement_new_count": 2,
+        "merged_count": 4,
+        "absolute_error_before": 2,
+        "absolute_error_after": 0,
+        "duplicate_matches": [
+          {
+            "supplement_index": 3,
+            "main_index": 1,
+            "score": 0.6,
+            "matched_categories": [
+              "body_type",
+              "cargo_colour"
+            ]
+          }
+        ],
+        "new_vehicle_evidence": [
+          {
+            "supplement_index": 1,
+            "clues": "dark flat container 粤T62619 independent container with visible chassis and text",
+            "bbox_in_aisle_view": [
+              0.4272,
+              0.164,
+              0.5616,
+              0.252
+            ]
+          },
+          {
+            "supplement_index": 2,
+            "clues": "blue flat container independent blue-roofed container unit",
+            "bbox_in_aisle_view": [
+              0.3962,
+              0.252,
+              0.5513,
+              0.36
+            ]
+          }
+        ],
+        "probe_total_tokens": 4264,
+        "probe_latency_s": 19.84
+      }
+    ],
+    "camera_count_mae_before": 1.5,
+    "camera_count_mae_after": 1.5,
+    "corrected_frames": 1,
+    "regressed_frames": 1,
+    "new_calls": 2,
+    "total_tokens": 8923,
+    "latency_s_sum": 41.96
+  },
+  "cost": {
+    "unit": "camera-frame",
+    "camera_frames": 20,
+    "time_groups": 10,
+    "main_calls": 20,
+    "supplement_calls": 2,
+    "total_calls": 22,
+    "mean_calls_per_camera_frame": 1.1,
+    "mean_calls_per_time_group": 2.2,
+    "p50_calls_per_camera_frame": 1.0,
+    "p95_calls_per_camera_frame": 2.0,
+    "max_calls_per_camera_frame": 2,
+    "share_camera_frames_with_supplement_call": 0.1,
+    "main_latency_s_sum": 317.28,
+    "l2_latency_s_sum": 41.96,
+    "total_latency_s_sum": 359.24,
+    "mean_camera_frame_latency_s": 17.962,
+    "total_tokens": 75950,
+    "main_tokens": 67027,
+    "l2_tokens": 8923,
+    "new_calls_in_this_session": 2,
+    "replayed_archived_main_calls": 20,
+    "archived_pair_probe_calls_not_used_online": 16,
+    "pair_probe_tokens_for_audit_only": 29701
+  },
+  "call_savings": {
+    "candidate_cross_camera_pairs_enumerated": 101,
+    "model_pair_verification_calls_used": 0,
+    "verified_automatic_hits": 0,
+    "saved_model_calls": 0,
+    "archived_pair_probe_calls_not_replayed": 16,
+    "rule": "A confirmed passport hard-ID hit replaces one model pair-verification call. The main occupancy call is never skipped because a known vehicle may have left."
+  }
+}
