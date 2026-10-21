@@ -61,6 +61,19 @@ async function run() {
   });
   const desktop = await desktopContext.newPage();
   await attachAudit(desktop, "desktop", failures);
+  await desktop.addInitScript(() => {
+    const NativeDate = window.Date;
+    const fixedNow = new NativeDate("2026-10-21T09:40:00Z").valueOf();
+    class FixedDate extends NativeDate {
+      constructor(...args) {
+        super(...(args.length ? args : [fixedNow]));
+      }
+      static now() {
+        return fixedNow;
+      }
+    }
+    window.Date = FixedDate;
+  });
   await desktop.goto(baseUrl, { waitUntil: "networkidle" });
   await desktop.evaluate(() => localStorage.clear());
   await desktop.reload({ waitUntil: "networkidle" });
@@ -96,6 +109,7 @@ async function run() {
   await desktop.locator('[data-close-drawer="capacity"]').click();
 
   await desktop.locator("#uploadBtn").click();
+  await desktop.waitForTimeout(220);
   invariant(await desktop.locator("#uploadDialog").evaluate((node) => node.open), "Upload modal did not open");
   invariant(await desktop.locator("#submitUploadBtn").isDisabled(), "Upload submit must be disabled without files");
   await desktop.locator("#uploadDialog").screenshot({ path: path.join(screenshotDir, "upload-modal.png") });
