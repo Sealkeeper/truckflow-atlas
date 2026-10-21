@@ -1,0 +1,799 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071017">
+  <meta name="description" content="货车识别与通道容量工作台 · 双机位可追溯演示">
+  <title>货车识别与通道容量工作台</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a1821'/%3E%3Cpath d='M14 41V24h27v17H14zm27-9h6l4 5v4H41z' fill='%2348e3c5'/%3E%3Ccircle cx='22' cy='45' r='4' fill='%230a1821'/%3E%3Ccircle cx='45' cy='45' r='4' fill='%230a1821'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="i-upload" viewBox="0 0 24 24">
+      <path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5M5 14.5v4A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5v-4"/>
+    </symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24">
+      <path d="M4 6h7m4 0h5M4 12h3m4 0h9M4 18h10m4 0h2"/>
+      <circle cx="13" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="16" cy="18" r="2"/>
+    </symbol>
+    <symbol id="i-play" viewBox="0 0 24 24">
+      <path d="M8 5.5v13l10-6.5z"/>
+    </symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24">
+      <path d="M8 5v14M16 5v14"/>
+    </symbol>
+    <symbol id="i-prev" viewBox="0 0 24 24">
+      <path d="M18 6v12L9 12zM6 5v14"/>
+    </symbol>
+    <symbol id="i-next" viewBox="0 0 24 24">
+      <path d="M6 6v12l9-6zM18 5v14"/>
+    </symbol>
+    <symbol id="i-download" viewBox="0 0 24 24">
+      <path d="M12 4v11m0 0 4-4m-4 4-4-4M5 19h14"/>
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path d="m6 6 12 12M18 6 6 18"/>
+    </symbol>
+    <symbol id="i-info" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.2v.1"/>
+    </symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24">
+      <path d="m8 10 4 4 4-4"/>
+    </symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24">
+      <path d="M4 7.5h3l1.4-2h7.2l1.4 2h3v10H4z"/><circle cx="12" cy="12.5" r="3.2"/>
+    </symbol>
+    <symbol id="i-review" viewBox="0 0 24 24">
+      <path d="M5 5h14v11H9l-4 3z"/><path d="M12 8v3M12 14v.1"/>
+    </symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24">
+      <path d="M19 8a7.5 7.5 0 1 0 1 5M19 4v4h-4"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path d="m5 12 4.5 4L19 6.5"/>
+    </symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24">
+      <path d="M5 7h14M9 7V4h6v3M7 7l1 13h8l1-13M10 11v5M14 11v5"/>
+    </symbol>
+    <symbol id="i-link" viewBox="0 0 24 24">
+      <path d="M9 15l6-6M7.5 17.5l-1 1a3.5 3.5 0 0 1-5-5l3-3a3.5 3.5 0 0 1 5 0M16.5 6.5l1-1a3.5 3.5 0 0 1 5 5l-3 3a3.5 3.5 0 0 1-5 0"/>
+    </symbol>
+  </svg>
+
+  <div class="page-glow page-glow--one"></div>
+  <div class="page-glow page-glow--two"></div>
+
+  <header class="appbar">
+    <a class="brand" href="#workspace" aria-label="返回工作台顶部">
+      <span class="brand-mark" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </span>
+      <span class="brand-copy">
+        <span class="brand-kicker">TRUCKMETRIC / 02</span>
+        <strong>通道洞察台</strong>
+      </span>
+    </a>
+    <div class="appbar-actions">
+      <span class="mode-pill" id="modePill">
+        <span class="status-dot"></span>
+        <span>STATIC DEMO</span>
+      </span>
+      <button class="btn btn--quiet" id="aboutBtn" type="button">
+        <svg aria-hidden="true"><use href="#i-info"></use></svg>
+        数据说明
+      </button>
+      <button class="btn btn--quiet" id="capacityBtn" type="button">
+        <svg aria-hidden="true"><use href="#i-sliders"></use></svg>
+        容量设置
+      </button>
+      <button class="btn btn--primary" id="uploadBtn" type="button">
+        <svg aria-hidden="true"><use href="#i-upload"></use></svg>
+        上传视频
+      </button>
+    </div>
+  </header>
+
+  <main class="workspace" id="workspace">
+    <div class="fatal-state" id="fatalState" hidden>
+      <span class="fatal-code">DATA / OFFLINE</span>
+      <h1>演示数据未能载入</h1>
+      <p>请确认 <code>data/demo_result.js</code> 与页面位于同一静态目录，然后刷新页面。</p>
+      <button class="btn btn--primary" type="button" onclick="location.reload()">
+        <svg aria-hidden="true"><use href="#i-refresh"></use></svg>
+        重新载入
+      </button>
+    </div>
+
+    <section class="hero" aria-labelledby="pageTitle">
+      <div class="hero-copy">
+        <p class="eyebrow">VIDEO INTELLIGENCE / EVENT LOGISTICS</p>
+        <h1 id="pageTitle">看清每辆车，<span>把握通道余量。</span></h1>
+        <p class="hero-lead">同步查看天花北、天花南双机位，按真实采样帧核对数量、车型与负载。每一个待定项都保留可追溯证据。</p>
+      </div>
+      <div class="project-card">
+        <div class="project-topline">
+          <span>当前项目</span>
+          <span class="project-code">EVENT-2025-A3</span>
+        </div>
+        <strong>广交会撤换展 · A区天花通道</strong>
+        <div class="project-meta">
+          <span><i class="meta-dot"></i>2 机位</span>
+          <span>44:19 窗口</span>
+          <span>20 个真实采样帧</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="notice-strip" aria-label="演示数据提示">
+      <div class="notice-symbol">DEMO</div>
+      <div class="notice-copy">
+        <strong>开发集样帧 · 尚未验收</strong>
+        <span>计数来自人工开发集；画面内南北合计不等于跨机位去重车辆。当前没有可靠检测框，分析层会明确显示“框待后端返回”。</span>
+      </div>
+      <button class="text-button" id="noticeAboutBtn" type="button">查看口径与来源</button>
+    </section>
+
+    <section class="panel player-panel" aria-labelledby="liveTitle">
+      <div class="section-heading player-heading">
+        <div>
+          <p class="section-kicker"><span class="live-ring"></span>LIVE SAMPLE VIEW</p>
+          <h2 id="liveTitle">双机位同步画面</h2>
+        </div>
+        <div class="player-heading-tools">
+          <span class="sample-lock" id="sampleLock">
+            <span class="lock-line"></span>
+            最近采样 <strong id="sampleLockText">00:10:00</strong>
+          </span>
+          <div class="segmented" role="group" aria-label="画面显示模式">
+            <button class="segmented-btn is-active" type="button" data-view-mode="original" aria-pressed="true">原画面</button>
+            <button class="segmented-btn" type="button" data-view-mode="analysis" aria-pressed="false">分析画面</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="camera-grid">
+        <article class="camera-card" data-camera="north">
+          <div class="camera-head">
+            <div class="camera-identity">
+              <span class="camera-index">N</span>
+              <div>
+                <h3>天花北</h3>
+                <p>1280 × 960 · 北向通道</p>
+              </div>
+            </div>
+            <div class="camera-count">
+              <strong id="northCount">4</strong>
+              <span>画面内车辆</span>
+            </div>
+          </div>
+          <figure class="camera-stage">
+            <img id="northImage" src="assets/frames/north_600.jpg" alt="天花北机位真实采样画面" width="1280" height="960">
+            <div class="frame-vignette"></div>
+            <div class="frame-badge frame-badge--left">CAM-N / 天花北</div>
+            <div class="frame-badge frame-badge--right"><span class="status-dot"></span>FRAME LOCKED</div>
+            <div class="analysis-layer" id="northAnalysis" hidden>
+              <div class="analysis-unavailable">
+                <span class="analysis-empty-icon"></span>
+                <strong>框待后端返回</strong>
+                <span>本帧仅有人工画面级计数，不绘制推测位置</span>
+              </div>
+            </div>
+            <figcaption class="frame-caption">
+              <span id="northTimestamp">2025-10-19 22:09:26</span>
+              <span>offset 0.0s · 未校准</span>
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="camera-card" data-camera="south">
+          <div class="camera-head">
+            <div class="camera-identity">
+              <span class="camera-index">S</span>
+              <div>
+                <h3>天花南</h3>
+                <p>1280 × 960 · 南向通道</p>
+              </div>
+            </div>
+            <div class="camera-count">
+              <strong id="southCount">5</strong>
+              <span>画面内车辆</span>
+            </div>
+          </div>
+          <figure class="camera-stage">
+            <img id="southImage" src="assets/frames/south_600.jpg" alt="天花南机位真实采样画面" width="1280" height="960">
+            <div class="frame-vignette"></div>
+            <div class="frame-badge frame-badge--left">CAM-S / 天花南</div>
+            <div class="frame-badge frame-badge--right"><span class="status-dot"></span>FRAME LOCKED</div>
+            <div class="analysis-layer" id="southAnalysis" hidden>
+              <div class="analysis-unavailable">
+                <span class="analysis-empty-icon"></span>
+                <strong>框待后端返回</strong>
+                <span>底层金标准未提供车辆框，未生成虚假区域</span>
+              </div>
+            </div>
+            <figcaption class="frame-caption">
+              <span id="southTimestamp">2025-10-19 22:09:26</span>
+              <span>offset 0.0s · 未校准</span>
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+
+      <div class="transport" aria-label="回放控制">
+        <button class="icon-button icon-button--play" id="playBtn" type="button" aria-label="播放" title="播放（空格）">
+          <svg aria-hidden="true"><use href="#i-play"></use></svg>
+        </button>
+        <button class="icon-button" id="prevBtn" type="button" aria-label="上一样本" title="上一样本（←）">
+          <svg aria-hidden="true"><use href="#i-prev"></use></svg>
+        </button>
+        <button class="icon-button" id="nextBtn" type="button" aria-label="下一样本" title="下一样本（→）">
+          <svg aria-hidden="true"><use href="#i-next"></use></svg>
+        </button>
+        <div class="transport-time">
+          <strong id="videoClock">00:10:00</strong>
+          <span>/ 44:19</span>
+        </div>
+        <div class="scrubber-wrap">
+          <input id="scrubber" type="range" min="0" max="2659" value="600" step="1" aria-label="回放时间">
+          <div class="scrubber-ticks" aria-hidden="true">
+            <span>00:00</span><span>10:00</span><span>20:00</span><span>30:00</span><span>44:19</span>
+          </div>
+        </div>
+        <div class="transport-actions">
+          <span class="business-clock" id="businessClock">业务 22:09:26</span>
+          <label class="speed-control">
+            <span class="sr-only">播放速度</span>
+            <select id="speedSelect" aria-label="播放速度">
+              <option value="0.5">0.5×</option>
+              <option value="1" selected>1×</option>
+              <option value="2">2×</option>
+              <option value="4">4×</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div class="sample-note">
+        <svg aria-hidden="true"><use href="#i-camera"></use></svg>
+        <span id="sampleNote">当前画面锁定 00:10:00 真实采样帧；相邻采样间隔约 5 分钟。</span>
+      </div>
+    </section>
+
+    <section class="metrics-grid" aria-label="当前采样统计">
+      <article class="panel count-panel">
+        <div class="section-heading compact">
+          <div>
+            <p class="section-kicker">VISIBLE COUNT</p>
+            <h2>当前画面车辆</h2>
+          </div>
+          <span class="tag tag--demo">DEMO / 未验收</span>
+        </div>
+        <div class="count-total-row">
+          <div class="count-total">
+            <strong id="visibleTotal">9</strong>
+            <div>
+              <span>辆次</span>
+              <small>南北画面直接相加</small>
+            </div>
+          </div>
+          <div class="dedup-state">
+            <span>跨机位去重</span>
+            <strong><span class="pending-dot"></span>待复核</strong>
+            <button class="text-button" id="dedupReviewBtn" type="button">查看去重依据</button>
+          </div>
+        </div>
+        <div class="type-grid">
+          <button class="type-counter type-counter--large" type="button" data-type-filter="large">
+            <span class="type-line"></span>
+            <span class="type-label">大型</span>
+            <strong id="largeCount">5</strong>
+            <span class="type-detail" id="largeDetail">北 3 · 南 2</span>
+          </button>
+          <button class="type-counter type-counter--medium" type="button" data-type-filter="medium">
+            <span class="type-line"></span>
+            <span class="type-label">中型</span>
+            <strong id="mediumCount">2</strong>
+            <span class="type-detail" id="mediumDetail">北 0 · 南 2</span>
+          </button>
+          <button class="type-counter type-counter--small" type="button" data-type-filter="small">
+            <span class="type-line"></span>
+            <span class="type-label">小型</span>
+            <strong id="smallCount">0</strong>
+            <span class="type-detail" id="smallDetail">北 0 · 南 0</span>
+          </button>
+          <button class="type-counter type-counter--unknown" type="button" data-type-filter="unknown">
+            <span class="type-line"></span>
+            <span class="type-label">待定</span>
+            <strong id="unknownCount">0</strong>
+            <span class="type-detail">不计入确定总数</span>
+          </button>
+        </div>
+        <p class="panel-footnote">两机位可能看到同一辆实体车；合计值只代表画面可见辆次，不能作为通道唯一车辆数。</p>
+      </article>
+
+      <article class="panel load-panel">
+        <div class="section-heading compact">
+          <div>
+            <p class="section-kicker">CAPACITY PRESSURE</p>
+            <h2>叠加负载指数</h2>
+          </div>
+          <button class="tag tag--warning tag--button" id="capacityInlineBtn" type="button">容量待确认</button>
+        </div>
+        <div class="load-headline">
+          <strong id="loadPercent">95.8%</strong>
+          <div>
+            <span id="loadState">接近容量</span>
+            <small>未去重叠加口径 · 仅演示</small>
+          </div>
+        </div>
+        <div class="load-meter" aria-hidden="true">
+          <span id="loadMeterFill"></span>
+          <i class="load-limit"></i>
+        </div>
+        <div class="load-bars">
+          <div class="load-row">
+            <span>大型</span>
+            <div><i id="largeBar"></i></div>
+            <strong id="largeRate">62.5%</strong>
+          </div>
+          <div class="load-row">
+            <span>中型</span>
+            <div><i id="mediumBar"></i></div>
+            <strong id="mediumRate">33.3%</strong>
+          </div>
+          <div class="load-row">
+            <span>小型</span>
+            <div><i id="smallBar"></i></div>
+            <strong id="smallRate">0.0%</strong>
+          </div>
+        </div>
+        <div class="dedup-load">
+          <span>去重后综合负载</span>
+          <strong>不可计算</strong>
+          <small>需先完成跨机位身份合并</small>
+        </div>
+        <details class="formula-details">
+          <summary>
+            <span>查看计算口径</span>
+            <svg aria-hidden="true"><use href="#i-chevron"></use></svg>
+          </summary>
+          <div class="formula-body">
+            <code>L = N大型/C大型 + N中型/C中型 + N小型/C小型</code>
+            <p id="formulaNumbers">5/8 + 2/6 + 0/4 = 95.8%</p>
+            <small>容量由用户确认前保持“待确认”；当前值仅为界面演示基线，不可作为验收结论。</small>
+          </div>
+        </details>
+      </article>
+    </section>
+
+    <section class="panel evidence-panel" aria-labelledby="evidenceTitle">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">EVIDENCE RAIL</p>
+          <h2 id="evidenceTitle">本帧车辆证据</h2>
+        </div>
+        <div class="evidence-tools">
+          <div class="filter-tabs" role="group" aria-label="证据筛选">
+            <button class="filter-tab is-active" type="button" data-evidence-filter="all">全部 <span id="allEvidenceCount">9</span></button>
+            <button class="filter-tab" type="button" data-evidence-filter="review">待复核 <span id="reviewEvidenceCount">7</span></button>
+            <button class="filter-tab" type="button" data-evidence-filter="confirmed">已确认 <span id="confirmedEvidenceCount">2</span></button>
+            <button class="filter-tab" type="button" data-evidence-filter="rejected">拒答 <span>0</span></button>
+          </div>
+          <span class="local-save-state" id="localSaveState">本地复核记录已同步</span>
+        </div>
+      </div>
+      <div class="evidence-rail" id="evidenceRail" aria-live="polite"></div>
+      <div class="empty-state" id="evidenceEmpty" hidden>
+        <span class="empty-glyph">∅</span>
+        <strong>当前筛选没有证据</strong>
+        <p>切换到“全部”查看本采样帧的车辆切片。</p>
+        <button class="btn btn--quiet" type="button" data-reset-evidence>清除筛选</button>
+      </div>
+      <p class="panel-footnote evidence-footnote">
+        <svg aria-hidden="true"><use href="#i-info"></use></svg>
+        证据条目由画面级金标准生成演示编号；裁剪图来自真实样帧，但没有绑定后端检测框。
+      </p>
+    </section>
+
+    <section class="analytics-grid">
+      <article class="panel chart-panel" aria-labelledby="timelineTitle">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">SAMPLE TIMELINE</p>
+            <h2 id="timelineTitle">可见车辆时间轴</h2>
+          </div>
+          <div class="chart-legend" aria-label="图例">
+            <span><i class="legend-visible"></i>画面内合计</span>
+            <span><i class="legend-review"></i>存在待复核</span>
+          </div>
+        </div>
+        <div class="chart-wrap">
+          <svg id="countChart" viewBox="0 0 900 330" role="img" aria-labelledby="chartTitle chartDesc">
+            <title id="chartTitle">20 个采样帧的南北画面可见车辆合计</title>
+            <desc id="chartDesc">曲线只连接真实采样点，不进行逐帧插值或平滑。</desc>
+          </svg>
+          <div class="chart-tooltip" id="chartTooltip" hidden>
+            <strong></strong>
+            <span></span>
+          </div>
+        </div>
+        <div class="chart-foot">
+          <span>曲线仅连接真实采样时刻，不推断采样间车辆变化。</span>
+          <button class="text-button" type="button" id="jumpLatestBtn">跳到最近样本</button>
+        </div>
+      </article>
+
+      <article class="panel audit-panel" aria-labelledby="auditTitle">
+        <div class="section-heading compact">
+          <div>
+            <p class="section-kicker">SAMPLE AUDIT</p>
+            <h2 id="auditTitle">当前样本校验</h2>
+          </div>
+          <span class="tag tag--outline" id="sampleIndexTag">10 / 20</span>
+        </div>
+        <dl class="audit-list">
+          <div><dt>视频时间</dt><dd id="auditVideoTime">00:10:00</dd></div>
+          <div><dt>业务时间</dt><dd id="auditBusinessTime">22:09:26</dd></div>
+          <div><dt>距最近样本</dt><dd id="auditDelta">0 秒</dd></div>
+          <div><dt>机位内计数</dt><dd id="auditCameraCounts">北 4 · 南 5</dd></div>
+          <div><dt>数据状态</dt><dd><span class="tag tag--demo">开发集样帧</span></dd></div>
+          <div><dt>跨机位唯一数</dt><dd class="value-pending">待复核</dd></div>
+        </dl>
+        <div class="audit-callout">
+          <span class="audit-callout-icon">!</span>
+          <p id="auditCallout">南机位 00:10:00 存在底部边缘车辆归属风险，需确认通道边界。</p>
+        </div>
+        <button class="btn btn--outline btn--full" id="openSampleReviewBtn" type="button">
+          <svg aria-hidden="true"><use href="#i-review"></use></svg>
+          打开本帧复核队列
+        </button>
+      </article>
+    </section>
+
+    <section class="panel stats-panel" aria-labelledby="statsTitle">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">PERIOD AGGREGATION</p>
+          <h2 id="statsTitle">周期统计</h2>
+        </div>
+        <div class="stats-tools">
+          <div class="filter-tabs" role="group" aria-label="统计窗口">
+            <button class="filter-tab" type="button" data-bucket="300">5 分钟</button>
+            <button class="filter-tab is-active" type="button" data-bucket="600">10 分钟</button>
+            <button class="filter-tab" type="button" data-bucket="0">全时段</button>
+          </div>
+          <button class="btn btn--quiet" id="exportBtn" type="button">
+            <svg aria-hidden="true"><use href="#i-download"></use></svg>
+            导出 CSV
+          </button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <caption class="sr-only">按采样帧统计的画面内车辆、车型和未去重负载</caption>
+          <thead>
+            <tr>
+              <th scope="col">时间段</th>
+              <th scope="col">采样帧</th>
+              <th scope="col">平均可见辆次</th>
+              <th scope="col">大型 / 中型 / 小型</th>
+              <th scope="col">平均叠加负载</th>
+              <th scope="col">去重状态</th>
+            </tr>
+          </thead>
+          <tbody id="statsBody"></tbody>
+        </table>
+      </div>
+      <div class="table-footer">
+        <span>统计只对落入时段内的真实采样帧求平均，不使用插值补齐。</span>
+        <span id="statsMeta">共 20 个采样帧</span>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div>
+        <strong>TRUCKMETRIC / 通道洞察台</strong>
+        <span>本地静态演示 · 数据未经验收</span>
+      </div>
+      <div class="footer-links">
+        <button class="text-button" id="footerAboutBtn" type="button">数据与准确率边界</button>
+        <a href="coord/ui/STATUS.md">运行与验证说明</a>
+      </div>
+    </footer>
+  </main>
+
+  <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+
+  <aside class="drawer capacity-drawer" id="capacityDrawer" aria-labelledby="capacityTitle" aria-hidden="true" hidden>
+    <div class="drawer-head">
+      <div>
+        <p class="section-kicker">CHANNEL CAPACITY</p>
+        <h2 id="capacityTitle">容量设置</h2>
+      </div>
+      <button class="icon-button" type="button" data-close-drawer="capacity" aria-label="关闭容量设置">
+        <svg aria-hidden="true"><use href="#i-close"></use></svg>
+      </button>
+    </div>
+    <div class="drawer-body">
+      <div class="capacity-warning">
+        <span>!</span>
+        <p>默认容量是界面演示基线，<strong>待用户确认</strong>，不能作为真实通道结论。</p>
+      </div>
+      <fieldset class="capacity-fields">
+        <legend>额定容量（辆）</legend>
+        <label class="capacity-field">
+          <span><i class="type-dot type-dot--large"></i>大型货车</span>
+          <input id="capacityLarge" type="number" min="1" max="999" step="1" value="8" inputmode="numeric">
+        </label>
+        <label class="capacity-field">
+          <span><i class="type-dot type-dot--medium"></i>中型货车</span>
+          <input id="capacityMedium" type="number" min="1" max="999" step="1" value="6" inputmode="numeric">
+        </label>
+        <label class="capacity-field">
+          <span><i class="type-dot type-dot--small"></i>小型货车</span>
+          <input id="capacitySmall" type="number" min="1" max="999" step="1" value="4" inputmode="numeric">
+        </label>
+      </fieldset>
+      <div class="capacity-formula">
+        <span>综合负载率</span>
+        <code>N大/C大 + N中/C中 + N小/C小</code>
+        <p>数量使用“画面内南北合计”，跨机位重复尚未剔除；因此该百分比只用于压力演示。</p>
+      </div>
+      <label class="textarea-field">
+        <span>通道有效区域备注</span>
+        <textarea maxlength="180" placeholder="例如：仅计两列白色立柱之间的主通道，底边红色货厢不计。">先按两列白色立柱之间的主通道演示；底部边缘车辆归属待现场确认。</textarea>
+      </label>
+      <p class="capacity-confirmed" id="capacityConfirmed">当前状态：待用户确认</p>
+    </div>
+    <div class="drawer-actions">
+      <button class="btn btn--quiet" id="resetCapacityBtn" type="button">恢复演示值</button>
+      <button class="btn btn--primary" id="saveCapacityBtn" type="button">
+        <svg aria-hidden="true"><use href="#i-check"></use></svg>
+        保存到本机
+      </button>
+    </div>
+  </aside>
+
+  <aside class="drawer evidence-drawer" id="evidenceDrawer" aria-labelledby="drawerEvidenceTitle" aria-hidden="true" hidden>
+    <div class="drawer-head">
+      <div>
+        <p class="section-kicker">EVIDENCE INSPECTOR</p>
+        <h2 id="drawerEvidenceTitle">车辆证据</h2>
+      </div>
+      <button class="icon-button" type="button" data-close-drawer="evidence" aria-label="关闭证据侧栏">
+        <svg aria-hidden="true"><use href="#i-close"></use></svg>
+      </button>
+    </div>
+    <div class="drawer-body evidence-drawer-body">
+      <div class="evidence-hero">
+        <img id="drawerEvidenceImage" src="assets/frames/crops/north-large.jpg" alt="车辆证据真实画面裁剪图">
+        <span class="evidence-image-label">真实样帧裁剪 · 无检测框</span>
+      </div>
+      <div class="evidence-title-row">
+        <div>
+          <span class="tag tag--outline" id="drawerEvidenceCamera">天花北</span>
+          <h3 id="drawerEvidenceId">N-600-L-01</h3>
+        </div>
+        <span class="status-chip" id="drawerEvidenceStatus">待复核</span>
+      </div>
+      <dl class="evidence-facts">
+        <div><dt>机位</dt><dd id="drawerCameraName">天花北 / CAM-N</dd></div>
+        <div><dt>视频时间</dt><dd id="drawerVideoTime">00:10:00</dd></div>
+        <div><dt>业务时间</dt><dd id="drawerBusinessTime">22:09:26</dd></div>
+        <div><dt>演示车型</dt><dd id="drawerVehicleType">大型</dd></div>
+      </dl>
+      <section class="vote-block" aria-labelledby="voteTitle">
+        <div class="mini-heading">
+          <h4 id="voteTitle">模型共识票数</h4>
+          <span>DEMO</span>
+        </div>
+        <div class="vote-grid">
+          <div><span>识别为货车</span><strong id="truckVotes">2 / 3</strong></div>
+          <div><span>车型一致</span><strong id="typeVotes">2 / 3</strong></div>
+          <div><span>跨机位匹配</span><strong id="crossVotes">0 / 3</strong></div>
+        </div>
+        <p id="voteReason">车辆轮廓与货厢比例支持大型车，但底部边缘归属仍不确定。</p>
+      </section>
+      <section class="review-block" aria-labelledby="reviewActionTitle">
+        <div class="mini-heading">
+          <h4 id="reviewActionTitle">人工复核</h4>
+          <span>写入 localStorage</span>
+        </div>
+        <div class="review-actions">
+          <button class="review-btn review-btn--confirm" type="button" data-review-action="confirm">
+            <svg aria-hidden="true"><use href="#i-check"></use></svg>
+            确认车辆
+          </button>
+          <button class="review-btn review-btn--danger" type="button" data-review-action="delete">
+            <svg aria-hidden="true"><use href="#i-trash"></use></svg>
+            删除重复
+          </button>
+          <button class="review-btn" type="button" data-review-action="unknown">标记未知</button>
+          <button class="review-btn" type="button" data-review-action="merge">
+            <svg aria-hidden="true"><use href="#i-link"></use></svg>
+            合并编号
+          </button>
+          <button class="review-btn" type="button" data-review-action="split">拆分编号</button>
+        </div>
+        <label class="reclassify-row">
+          <span>改判车型</span>
+          <select id="reclassifySelect">
+            <option value="large">大型</option>
+            <option value="medium">中型</option>
+            <option value="small">小型</option>
+            <option value="unknown">待定</option>
+          </select>
+          <button class="btn btn--outline btn--small" type="button" id="reclassifyBtn">应用改判</button>
+        </label>
+        <p class="local-review-note" id="localReviewNote">尚未提交人工复核。操作只保存在当前浏览器，不回写原始开发集。</p>
+      </section>
+      <div class="evidence-disclaimer">
+        <svg aria-hidden="true"><use href="#i-info"></use></svg>
+        <p>此条目的车辆编号为演示生成，裁剪区用于说明真实画面质量；当前数据源没有可靠检测框，因此不展示虚构 IoU 或框坐标。</p>
+      </div>
+    </div>
+  </aside>
+
+  <dialog class="modal upload-modal" id="uploadDialog" aria-labelledby="uploadTitle">
+    <form id="uploadForm" novalidate>
+      <div class="modal-head">
+        <div>
+          <p class="section-kicker">NEW ANALYSIS JOB</p>
+          <h2 id="uploadTitle">上传双机位视频</h2>
+        </div>
+        <button class="icon-button" type="button" data-close-dialog="upload" aria-label="关闭上传弹窗">
+          <svg aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="api-note">
+          <span class="mode-pill"><span class="status-dot"></span>STATIC DEMO</span>
+          <p>页面无后端也能浏览样帧。提交后会按契约请求 <code>POST /api/jobs</code>；若服务离线，会保留演示数据并显示错误原因。</p>
+        </div>
+
+        <div class="form-section" id="uploadStep">
+          <label class="dropzone" id="dropzone">
+            <input id="videoInput" type="file" accept="video/mp4,video/quicktime,video/webm" multiple>
+            <span class="dropzone-icon"><svg aria-hidden="true"><use href="#i-upload"></use></svg></span>
+            <strong>选择 1–2 段视频</strong>
+            <span>MP4 / MOV / WebM · 原始文件仅发送到你配置的本地服务</span>
+          </label>
+          <div class="file-list" id="fileList" hidden></div>
+          <p class="field-error" id="fileError" role="alert" hidden></p>
+
+          <div class="form-grid">
+            <label class="input-field">
+              <span>本地 API 地址</span>
+              <input id="apiBaseInput" type="url" value="http://127.0.0.1:8765" autocomplete="off">
+            </label>
+            <label class="input-field">
+              <span>采样间隔</span>
+              <select id="sampleIntervalInput">
+                <option value="300" selected>5 分钟</option>
+                <option value="60">1 分钟</option>
+                <option value="600">10 分钟</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="camera-configs">
+            <fieldset class="camera-config" data-camera-config="0">
+              <legend><span>01</span>第一段视频</legend>
+              <label class="input-field">
+                <span>机位名称</span>
+                <input id="cameraName0" type="text" value="天花北" maxlength="30" required>
+              </label>
+              <label class="input-field">
+                <span>画面起始时间</span>
+                <input id="cameraStart0" type="datetime-local" value="2025-10-19T21:59:26" required>
+              </label>
+              <label class="input-field">
+                <span>时间偏移（秒）</span>
+                <input id="cameraOffset0" type="number" step="0.1" value="0" min="-60" max="60">
+              </label>
+            </fieldset>
+            <fieldset class="camera-config is-disabled" data-camera-config="1">
+              <legend><span>02</span>第二段视频</legend>
+              <label class="input-field">
+                <span>机位名称</span>
+                <input id="cameraName1" type="text" value="天花南" maxlength="30" disabled>
+              </label>
+              <label class="input-field">
+                <span>画面起始时间</span>
+                <input id="cameraStart1" type="datetime-local" value="2025-10-19T21:59:26" disabled>
+              </label>
+              <label class="input-field">
+                <span>时间偏移（秒）</span>
+                <input id="cameraOffset1" type="number" step="0.1" value="0" min="-60" max="60" disabled>
+              </label>
+            </fieldset>
+          </div>
+          <label class="textarea-field">
+            <span>通道有效区域说明</span>
+            <textarea id="corridorInput" maxlength="240" placeholder="描述纳入统计的通道边界；透视图不能直接当作真实米制尺寸。">先按两列白色立柱之间的主通道；底边红色货厢是否属于相邻通道待确认。</textarea>
+          </label>
+        </div>
+
+        <div class="upload-progress" id="uploadProgress" hidden aria-live="polite">
+          <div class="progress-top">
+            <div>
+              <span class="section-kicker">JOB IN PROGRESS</span>
+              <h3 id="progressStage">正在创建任务</h3>
+            </div>
+            <strong id="progressPercent">0%</strong>
+          </div>
+          <div class="job-progress"><span id="jobProgressFill"></span></div>
+          <p id="progressMessage">上传文件到本地 API…</p>
+          <div class="job-id-row"><span>Job ID</span><code id="jobIdText">等待返回</code></div>
+          <div class="upload-error" id="uploadError" role="alert" hidden>
+            <strong>分析服务不可用</strong>
+            <p id="uploadErrorMessage"></p>
+            <button class="btn btn--outline btn--small" type="button" id="retryUploadBtn">检查地址并重试</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn--quiet" type="button" data-close-dialog="upload" id="cancelUploadBtn">返回演示</button>
+        <button class="btn btn--primary" type="submit" id="submitUploadBtn" disabled title="请先选择至少一段视频">
+          <span>开始分析</span>
+          <svg aria-hidden="true"><use href="#i-upload"></use></svg>
+        </button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="modal info-modal" id="infoDialog" aria-labelledby="infoTitle">
+    <div class="modal-head">
+      <div>
+        <p class="section-kicker">DATA PROVENANCE</p>
+        <h2 id="infoTitle">演示数据与准确率边界</h2>
+      </div>
+      <button class="icon-button" type="button" data-close-dialog="info" aria-label="关闭数据说明">
+        <svg aria-hidden="true"><use href="#i-close"></use></svg>
+      </button>
+    </div>
+    <div class="modal-body info-body">
+      <div class="info-callout">
+        <strong>DEMO · 未验收</strong>
+        <p>当前界面使用 <code>camera-counts-v0</code> 人工开发集样帧，仅用于产品与交互验证，不构成准确率声明。</p>
+      </div>
+      <dl class="info-list">
+        <div>
+          <dt>计数来源</dt>
+          <dd>2025-10-19 21:59–22:43，A区天花北/南样帧，经全分辨率人工检查与 2× 通道裁剪复核。</dd>
+        </div>
+        <div>
+          <dt>统计口径</dt>
+          <dd>每张画面中的独立货车车体计数；叉车、轿车、面包车与行人排除。牵引车与挂车计为一辆。</dd>
+        </div>
+        <div>
+          <dt>为什么不能直接相加</dt>
+          <dd>两机位可能同时看到同一物理车辆。页面展示的 9 辆次是“画面内合计”，唯一车辆集合仍需跨机位匹配与人工确认。</dd>
+        </div>
+        <div>
+          <dt>检测框</dt>
+          <dd>本数据文件不提供车辆框，因此分析画面明确显示“框待后端返回”，不绘制任何推测区域。</dd>
+        </div>
+        <div>
+          <dt>容量参数</dt>
+          <dd>大 8 / 中 6 / 小 4 是界面演示基线，状态为“待用户确认”。未确认前，负载率不能用于现场调度结论。</dd>
+        </div>
+      </dl>
+      <div class="info-review">
+        <span>仍需人工复核</span>
+        <p>南机位多帧底部红色货厢可能属于相邻通道；南 00:05 远处棕色货体是否为独立挂车也待确认。</p>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <span class="info-source">source: data/gold/camera_counts_v0.json</span>
+      <button class="btn btn--primary" type="button" data-close-dialog="info">我已了解</button>
+    </div>
+  </dialog>
+
+  <div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="data/demo_result.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
