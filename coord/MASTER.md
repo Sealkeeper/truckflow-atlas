@@ -1,20 +1,20 @@
 # 中枢作战板
 
-更新时间：2026-10-21 17:35 +08:00
+更新时间：2026-10-21 18:05 +08:00
 
 ## 当前路线
 
 | 路线 | 分支 | 会话 | 目标 | 状态 |
 |---|---|---|---|---|
-| 基线准确率 | main `accuracy/` | 中枢 | 金标准、模型探针、逐帧精确率 | 开发集 18 帧；Doubao 15/18 精确 |
+| 基线准确率 | main `accuracy/` | 中枢 | 金标准、模型探针、逐帧精确率 | 开发集 Doubao 15/18；Aibox count_v2 实验中 |
 | 方案调研 | `research/accuracy-landscape` | research | 多模型/裁剪/共识专业方案 | 实验中 |
 | 识别后端 | `feat/accuracy-pipeline` | pipeline | 可运行 API、抽帧、共识、评测 | 实现中 |
 | 时序实体 | `research/temporal-reid` | temporal | 时序条 + 跨机位实体图 | 实验中 |
 | 架构挑战 | `research/architecture-challenge` | architecture | 空间分解/递归候选树/场景图 | 启动 |
-| 容量几何 | `research/capacity-geometry` | capacity | 单应标定、容量、不确定度 | 启动 |
-| 第二套界面 | `feat/web-workspace-v2` | ui_finish | 可交互工作台 + 截图验收 | 启动 |
+| 容量几何 | `research/capacity-geometry` | capacity | 单应标定、容量、不确定度 | 15/15 测试通过，PR 待补 REPORT |
+| 第二套界面 | `feat/web-workspace-v2` | ui_finish | 可交互工作台 + 截图验收 | PR #2 待评审 |
 | 全时段时间轴 | `research/event-timeline` | events | 44 分钟分钟级采样与事件 | 实验中 |
-| 调试体验 | `debug/experience` | debug | 固定文件名截图 + 自动重跑 | **已合并 PR #1** |
+| 调试体验 | `debug/live-experience` | debug | 实测识别调试台 + 固定文件名截图 | **已合并 PR #3** |
 
 ## 已确认事实
 
@@ -26,10 +26,17 @@
 6. 跨机位去重尚未完成，所有“合计”数字不能当唯一车辆真值。
 7. 新发现：`north_600` 可通过顶部/中部/近景三段裁剪分别找到远端两辆蓝色货厢车；但三类模型对同一车体的拆分并不稳定，必须做候选合并与复核。
 8. 当前界面：`all-sessions-can-see/assets/live/latest-desktop.png`，每 30 分钟自动重截。
+9. 实测调试台（已合并）：`debug/viewer/lab.html`，逐帧显示预测/人工/差值、模型真实 bbox、同帧模型对照；本机常驻地址 `http://127.0.0.1:4178/debug/viewer/lab.html`。
+10. Aibox `glm-5.3-flash` + count_v2 在 `north_600` 返回 4/4、`south_600` 返回 5/5，均带空间上可解释的候选框；单样本尚不足以证明稳定，需跑间重复验证。
+11. 全量 Aibox count_v2 正在 20 帧上运行；结果必须与 Doubao 同帧对照后再决定角色（主力或复核）。
+12. Aibox 单帧耗时约 30–50 秒，存在 503 重试成本；实时性需在架构层单独评估。
 
 ## 合并记录
 
 - PR #1 `debug/experience` 已合并：可重复的浏览器截图与独立预览页，无识别算法改动。
+- PR #3 `debug/live-experience` 已合并：实测识别调试台，只画模型原始 bbox，截图自检通过。
+- PR #2 `feat/web-workspace-v2` 已开：真实开发集计数、双机位工作台、无伪造框，待评审。
+- `main` 提交 `3b8d6a8`：留存 count_v2 提示词、三模型探针与 20 帧通道提示词实验证据。
 
 ## 门禁
 
