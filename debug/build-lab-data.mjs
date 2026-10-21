@@ -20,9 +20,39 @@ function readJson(filePath) {
 function pickRun(runFile) {
   if (!runFile || !fs.existsSync(runFile)) return null;
   const payload = readJson(runFile);
-  const run = (payload.runs || []).find((item) => item.ok) || (payload.runs || [])[0] || null;
+  const isFlatRun = typeof payload.predicted_count === "number" || payload.error;
+  const run = isFlatRun
+    ? {
+        ok: !payload.error && typeof payload.predicted_count === "number",
+        model: payload.model,
+        model_id: payload.model_id,
+        latency_s:
+          typeof payload.latency_ms === "number" ? payload.latency_ms / 1000 : null,
+        attempts: Array.isArray(payload.attempts) ? payload.attempts.length : null,
+        error: payload.error || "",
+        parsed: {
+          counts: payload.counts || { total: payload.predicted_count },
+          vehicles: (payload.vehicles || []).map((vehicle) => ({
+            bbox: Array.isArray(vehicle.box) && vehicle.box.length === 4
+              ? [
+                  vehicle.box[0],
+                  vehicle.box[1],
+                  vehicle.box[0] + vehicle.box[2],
+                  vehicle.box[1] + vehicle.box[3]
+                ]
+              : null,
+            size: vehicle.type || "unknown",
+            visible: vehicle.visible || "",
+            uncertain: Boolean(vehicle.uncertain),
+            evidence: vehicle.reason || "",
+            identity: vehicle.reason || ""
+          })),
+          scene_notes: payload.scene_notes || ""
+        }
+      }
+    : (payload.runs || []).find((item) => item.ok) || (payload.runs || [])[0] || null;
   if (!run) return null;
-  const probe = path.basename(path.dirname(runFile)) !== "full_batch";
+  const probe = path.basename(path.dirname(runFile)) !== "full_batch" && !isFlatRun;
   const counts = run.parsed?.counts || {};
   const vehicles = Array.isArray(run.parsed?.vehicles) ? run.parsed.vehicles : [];
   return {
@@ -91,19 +121,31 @@ const baseline = [];
 for (const camera of ["north", "south"]) {
   for (let index = 0; index < 10; index += 1) {
     const time = [5, 300, 600, 900, 1200, 1500, 1800, 2100, 2400, 2600][index];
+    const rerun = path.join(
+      runsRoot,
+      "count_v2",
+      "doubao_baseline_v1",
+      `${camera}_${time}.json`
+    );
+    const legacy = path.join(runsRoot, "full_batch", `${camera}_${time}.json`);
     baseline.push(
-      resultFor(`${camera}_${time}`, path.join(runsRoot, "full_batch", `${camera}_${time}.json`))
+      resultFor(`${camera}_${time}`, fs.existsSync(rerun) ? rerun : legacy)
     );
   }
 }
 
-const probeRuns = [
-  ["north_600", "promptv2_north_600.json"],
-  ["north_300", "promptv2_north_300.json"],
-  ["south_600", "promptv2_south_600.json"]
-];
-const doubaoV2 = probeRuns.map(([key, file]) => resultFor(key, path.join(runsRoot, file)));
-const aiboxV2 = [resultFor("north_600", path.join(runsRoot, "promptv2_north_600_aibox.json"))];
+const fullKeys = [];
+for (const camera of ["north", "south"]) {
+  for (const time of [5, 300, 600, 900, 1200, 1500, 1800, 2100, 2400, 2600]) {
+    fullKeys.push(`${camera}_${time}`);
+  }
+}
+const doubaoV2 = fullKeys.map((key) =>
+  resultFor(key, path.join(runsRoot, "count_v2", "doubao", `${key}.json`))
+);
+const aiboxV2 = fullKeys.map((key) =>
+  resultFor(key, path.join(runsRoot, "count_v2", "aibox", `${key}.json`))
+);
 const zhipuV2 = [resultFor("north_600", path.join(runsRoot, "promptv2_north_600_zhipu.json"))];
 
 function summarize(rows) {
@@ -136,17 +178,17 @@ const models = [
   },
   {
     id: "doubao-v2",
-    label: "豆包 · count_v2",
+    label: "豆包 · count_v2（20 帧）",
     short: "豆包 v2",
-    detail: "由远到近扫描 + 逐车区分说明",
+    detail: "20 帧全量：15/20 完全正确，提示词加严后反而回退",
     provider: "doubao",
     results: doubaoV2
   },
   {
     id: "aibox-v2",
-    label: "Aibox GLM-5.3-flash · count_v2",
+    label: "Aibox GLM-5.3-flash · count_v2（20 帧）",
     short: "Aibox v2",
-    detail: "单样本验证：north_600 找回远端第 4 辆",
+    detail: "20 帧全量：10/20 完全正确，9 帧多计，不能当主力",
     provider: "aibox",
     results: aiboxV2
   },

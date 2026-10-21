@@ -1,34 +1,22 @@
 {
-  "generatedAt": "2026-10-21T09:43:36.814Z",
-  "generatedAtLocal": "2026年10月21日 GMT+8 17:43:36",
-  "pageVersion": "debug-lab@1.0.0",
-  "sourceUrl": "http://127.0.0.1:10551/debug/viewer/lab.html",
-  "chromePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
-  "publicLiveDir": "D:\\File\\PROJECT\\codex\\codex-货车\\all-sessions-can-see\\assets\\live",
+  "generatedAt": "2026-10-21T10:06:45.222Z",
+  "generatedAtLocal": "2026年10月21日 18:06",
+  "pageVersion": "debug-viewer@0.2.0",
+  "sourceUrl": "http://127.0.0.1:4178/debug/viewer/lab.html",
+  "dataset": "camera-counts-v0 · 20 samples",
+  "models": {
+    "doubaoBaseline": "16/20",
+    "doubaoCountV2": "15/20",
+    "aiboxCountV2": "10/20",
+    "zhipuProbe": "0/1"
+  },
   "screenshots": [
     {
       "name": "desktop",
-      "viewport": {
+      "screenshotPath": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\debug\\shots\\latest-desktop.png",
+      "outputSize": {
         "width": 1440,
         "height": 1000
-      },
-      "screenshotPath": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\debug_experience\\debug\\shots\\latest-desktop.png",
-      "interactions": {
-        "aiboxModel": {
-          "model": "Aibox GLM-5.3-flash · count_v2",
-          "predicted": "4",
-          "gold": "4",
-          "delta": "0"
-        },
-        "afterSampleClick": {
-          "sample": "north_900",
-          "predicted": "3"
-        },
-        "final": {
-          "sample": "north_600",
-          "predicted": "2",
-          "gold": "4"
-        }
       },
       "audit": {
         "viewport": {
@@ -40,47 +28,23 @@
           "height": 1006,
           "hasHorizontalScroll": false
         },
-        "values": {
-          "model": "豆包 · 整帧基线 v1",
-          "exact": "15",
-          "graded": "已评分 18 帧 · 共 20 帧",
-          "mae": "0.22",
-          "sample": "north_600",
-          "predicted": "2",
-          "gold": "4",
-          "delta": "-2",
-          "boxes": 2
+        "counts": {
+          "baseline": "16",
+          "exact": "",
+          "sample": "north_600"
         },
-        "horizontalOverflow": [],
         "clippedText": [],
-        "failedImages": [],
-        "consoleErrors": [],
-        "httpErrors": []
+        "failedImages": []
       },
-      "outputSize": {
-        "width": 1440,
-        "height": 1000
-      }
+      "consoleErrors": [],
+      "httpErrors": []
     },
     {
       "name": "mobile",
-      "viewport": {
+      "screenshotPath": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\debug\\shots\\latest-mobile.png",
+      "outputSize": {
         "width": 390,
         "height": 844
-      },
-      "screenshotPath": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\debug_experience\\debug\\shots\\latest-mobile.png",
-      "interactions": {
-        "aiboxModel": {
-          "model": "Aibox GLM-5.3-flash · count_v2",
-          "predicted": "4",
-          "gold": "4",
-          "delta": "0"
-        },
-        "final": {
-          "sample": "north_600",
-          "predicted": "2",
-          "gold": "4"
-        }
       },
       "audit": {
         "viewport": {
@@ -89,30 +53,19 @@
         },
         "document": {
           "width": 390,
-          "height": 1817,
+          "height": 1815,
           "hasHorizontalScroll": false
         },
-        "values": {
-          "model": "豆包 · 整帧基线 v1",
-          "exact": "15",
-          "graded": "已评分 18 帧 · 共 20 帧",
-          "mae": "0.22",
-          "sample": "north_600",
-          "predicted": "2",
-          "gold": "4",
-          "delta": "-2",
-          "boxes": 2
+        "counts": {
+          "baseline": "16",
+          "exact": "",
+          "sample": "north_600"
         },
-        "horizontalOverflow": [],
         "clippedText": [],
-        "failedImages": [],
-        "consoleErrors": [],
-        "httpErrors": []
+        "failedImages": []
       },
-      "outputSize": {
-        "width": 390,
-        "height": 844
-      }
+      "consoleErrors": [],
+      "httpErrors": []
     }
   ]
 }

@@ -1,0 +1,101 @@
+{
+  "sample_id": "south_600",
+  "camera": "south",
+  "time": 600,
+  "image": "assets/frames/south_600.jpg",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "returned_model": null,
+  "prompt_version": "truck-count-v1",
+  "predicted_count": 4,
+  "counts": {
+    "total": 4,
+    "large": 2,
+    "medium": 2,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.455,
+        0.45,
+        0.11,
+        0.44
+      ],
+      "type": "large",
+      "reason": "画面中可见完整的重型货车，车头标有东风商用车字样，属于货车范畴",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.45,
+        0.28,
+        0.07,
+        0.26
+      ],
+      "type": "large",
+      "reason": "完整的半挂货车，红色车头搭配灰色长货厢，属于大型货车",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v3",
+      "box": [
+        0.41,
+        0.23,
+        0.05,
+        0.12
+      ],
+      "type": "medium",
+      "reason": "完整的中型红色货车，在通道中间位置",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v4",
+      "box": [
+        0.44,
+        0.12,
+        0.05,
+        0.14
+      ],
+      "type": "medium",
+      "reason": "完整的红色中型货车，在通道尽头位置",
+      "visible": "full",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 17250,
+  "total_latency_ms": 17250,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 2, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.455, 0.45, 0.565, 0.89],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色东风商用车头，白色封闭货厢，朝向镜头，位于通道最前方\",\n      \"evidence\": \"画面中可见完整的重型货车，车头标有东风商用车字样，属于货车范畴\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.28, 0.52, 0.54],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，灰色封闭货厢，位于白色货车后方\",\n      \"evidence\": \"完整的半挂货车，红色车头搭配灰色长货厢，属于大型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.41, 0.23, 0.46, 0.35],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色中型货车，位于半挂货车后方\",\n      \"evidence\": \"完整的中型红色货车，在通道中间位置\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.12, 0.49, 0.26],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货车，位于通道最远处\",\n      \"evidence\": \"完整的红色中型货车，在通道尽头位置\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"中间通道共可见4辆货车，均为完整可见，无被完全遮挡或边界截断的情况\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "imported_from": "D:\\File\\PROJECT\\codex\\codex-货车\\all-sessions-can-see\\accuracy\\runs\\full_batch\\south_600.json",
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": 200,
+      "latency_ms": 17250,
+      "ok": true,
+      "error": null,
+      "imported": true
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2114,
+    "prompt_tokens": 1773,
+    "total_tokens": 3887,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1585
+    }
+  }
+}

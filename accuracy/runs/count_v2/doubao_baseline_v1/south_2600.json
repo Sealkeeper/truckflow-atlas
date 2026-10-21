@@ -1,0 +1,100 @@
+{
+  "sample_id": "south_2600",
+  "camera": "south",
+  "time": 2600,
+  "image": "assets/frames/south_2600.jpg",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "returned_model": "doubao-seed-2-0-mini-260428",
+  "prompt_version": "truck-count-v1",
+  "predicted_count": 4,
+  "counts": {
+    "total": 4,
+    "large": 4,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.39,
+        0.21,
+        0.07,
+        0.21
+      ],
+      "type": "large",
+      "reason": "画面中间通道左侧，完整可见的白色厢式货车，符合货车定义",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.45,
+        0.2,
+        0.04,
+        0.13
+      ],
+      "type": "large",
+      "reason": "中间通道内，白色货车后方的红色重卡，完整可见",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v3",
+      "box": [
+        0.47,
+        0.36,
+        0.08,
+        0.32
+      ],
+      "type": "large",
+      "reason": "中间通道右侧，完整可见的红色重卡",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v4",
+      "box": [
+        0.48,
+        0.8,
+        0.13,
+        0.19
+      ],
+      "type": "large",
+      "reason": "画面最下方，单独可见的红色货厢挂车，符合单独挂车计数规则",
+      "visible": "trailer_only",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 14874,
+  "total_latency_ms": 14875,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 4, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.39, 0.21, 0.46, 0.42],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色厢式货车，车头朝向画面下方，位于中间通道左侧，车头有文字标识\",\n      \"evidence\": \"画面中间通道左侧，完整可见的白色厢式货车，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.20, 0.49, 0.33],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重卡，车头朝向画面下方，位于中间通道，在白色货车后方\",\n      \"evidence\": \"中间通道内，白色货车后方的红色重卡，完整可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.47, 0.36, 0.55, 0.68],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重卡，车头朝向画面下方，位于中间通道右侧\",\n      \"evidence\": \"中间通道右侧，完整可见的红色重卡\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.48, 0.80, 0.61, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货厢挂车，单独位于画面最下方，与相邻红色重卡非同一车辆\",\n      \"evidence\": \"画面最下方，单独可见的红色货厢挂车，符合单独挂车计数规则\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"所有可见货车均清晰判定，无遮挡导致的歧义或重复计数，无小汽车、工程机械等非目标车辆干扰\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "time": "2026-10-21T09:55:53.304424+00:00",
+      "status": 200,
+      "latency_ms": 14874,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1513,
+    "prompt_tokens": 1773,
+    "total_tokens": 3286,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 958
+    }
+  }
+}

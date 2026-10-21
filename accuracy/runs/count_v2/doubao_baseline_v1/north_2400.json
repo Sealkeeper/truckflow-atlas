@@ -1,0 +1,88 @@
+{
+  "sample_id": "north_2400",
+  "camera": "north",
+  "time": 2400,
+  "image": "assets/frames/north_2400.jpg",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "returned_model": null,
+  "prompt_version": "truck-count-v1",
+  "predicted_count": 3,
+  "counts": {
+    "total": 3,
+    "large": 3,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.4,
+        0.61,
+        0.16,
+        0.38
+      ],
+      "type": "large",
+      "reason": "画面下方中间位置，完整可见的厢式货车，符合货车定义",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.42,
+        0.26,
+        0.09,
+        0.19
+      ],
+      "type": "large",
+      "reason": "画面中间通道处，单独的红色高栏挂车，属于货车范畴",
+      "visible": "trailer_only",
+      "uncertain": false
+    },
+    {
+      "id": "v3",
+      "box": [
+        0.44,
+        0.16,
+        0.08,
+        0.11
+      ],
+      "type": "large",
+      "reason": "画面后方中间位置，红色货车部分可见，属于货车",
+      "visible": "partial_top",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 17410,
+  "total_latency_ms": 17410,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.40, 0.61, 0.56, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"灰色厢式货厢，红色车尾，车尾朝向画面下方\",\n      \"evidence\": \"画面下方中间位置，完整可见的厢式货车，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.42, 0.26, 0.51, 0.45],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色高栏货厢，无配套车头可见，位于中间通道\",\n      \"evidence\": \"画面中间通道处，单独的红色高栏挂车，属于货车范畴\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.16, 0.52, 0.27],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货车（含车头与货厢），位于中间挂车后方，顶部被画面边缘截断\",\n      \"evidence\": \"画面后方中间位置，红色货车部分可见，属于货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"共3辆大型货车，均清晰可见，无完全遮挡或无法判定的车辆\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "imported_from": "D:\\File\\PROJECT\\codex\\codex-货车\\all-sessions-can-see\\accuracy\\runs\\full_batch\\north_2400.json",
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": 200,
+      "latency_ms": 17410,
+      "ok": true,
+      "error": null,
+      "imported": true
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2034,
+    "prompt_tokens": 1773,
+    "total_tokens": 3807,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1605
+    }
+  }
+}

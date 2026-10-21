@@ -1,0 +1,75 @@
+{
+  "sample_id": "north_2600",
+  "camera": "north",
+  "time": 2600,
+  "image": "assets/frames/north_2600.jpg",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "returned_model": null,
+  "prompt_version": "truck-count-v1",
+  "predicted_count": 2,
+  "counts": {
+    "total": 2,
+    "large": 2,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.38,
+        0.38,
+        0.11,
+        0.3
+      ],
+      "type": "large",
+      "reason": "Located in central aisle, fully visible as a large box truck",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.33,
+        0.82,
+        0.14,
+        0.17
+      ],
+      "type": "large",
+      "reason": "Distinct vehicle partially visible in lower portion, separate from central truck",
+      "visible": "partial_top",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 11670,
+  "total_latency_ms": 11670,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.38, 0.38, 0.49, 0.68],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Rear has text '773778', red-brown rectangular cargo box, rear doors visible, facing away from camera\",\n      \"evidence\": \"Located in central aisle, fully visible as a large box truck\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.33, 0.82, 0.47, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, dark items on top of cab, located at bottom center of image\",\n      \"evidence\": \"Distinct vehicle partially visible in lower portion, separate from central truck\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"Two trucks are visible: one fully (central rear view) and one partially (lower front view) in the central aisle of the exhibition hall. No other trucks are present in the frame.\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "imported_from": "D:\\File\\PROJECT\\codex\\codex-货车\\all-sessions-can-see\\accuracy\\runs\\full_batch\\north_2600.json",
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": 200,
+      "latency_ms": 11670,
+      "ok": true,
+      "error": null,
+      "imported": true
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1221,
+    "prompt_tokens": 1773,
+    "total_tokens": 2994,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 881
+    }
+  }
+}

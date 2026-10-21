@@ -219,8 +219,12 @@ function renderDetail() {
   const finding = $("#findingText");
   if (state.sampleKey === "north_600" && aiboxRow?.ok && baseRow?.ok) {
     finding.textContent =
-      `人工计数 4 辆。整帧基线只找到 ${baseRow.count} 辆；同一帧换 count_v2 后 Aibox 找回 ${aiboxRow.count} 辆。` +
-      "结论需扩样复测，暂不改基线。";
+      `人工计数 4 辆。整帧基线只找到 ${baseRow.count} 辆，Aibox 本轮为 ${aiboxRow.count} 辆。` +
+      "Aibox 曾在单次实验返回 4，但全量 20 帧只有 10/20 正确、9 帧多计，故该单次结果不可复现，不能升为主力。";
+  } else if (state.sampleKey === "south_300" && aiboxRow?.ok && baseRow?.ok) {
+    finding.textContent =
+      `人工计数 4 辆。整帧基线 ${baseRow.count} 辆，Aibox ${aiboxRow.count} 辆。` +
+      "近景多计是 Aibox 的系统性问题，复核时必须检查画面底边与相邻车体是否被拆成两辆。";
   } else {
     finding.textContent =
       `当前模型在 ${result.key} 上预测 ${result.ok ? result.count : "失败"} 辆，人工 ${result.gold} 辆。` +

@@ -1,0 +1,75 @@
+{
+  "sample_id": "north_2100",
+  "camera": "north",
+  "time": 2100,
+  "image": "assets/frames/north_2100.jpg",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "returned_model": null,
+  "prompt_version": "truck-count-v1",
+  "predicted_count": 2,
+  "counts": {
+    "total": 2,
+    "large": 2,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.42,
+        0.25,
+        0.09,
+        0.2
+      ],
+      "type": "large",
+      "reason": "画面中可见完整的红色高栏货车，符合货车定义",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.35,
+        0.61,
+        0.14,
+        0.38
+      ],
+      "type": "large",
+      "reason": "可见完整的封闭货厢，属于厢式货车，符合定义",
+      "visible": "partial_side",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 14720,
+  "total_latency_ms": 14720,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.42, 0.25, 0.51, 0.45],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色高栏货厢，车尾朝向画面下方，位于展会中央通道\",\n      \"evidence\": \"画面中可见完整的红色高栏货车，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.35, 0.61, 0.49, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹封闭货厢，位于画面左下角，靠近CHANGHONG展台\",\n      \"evidence\": \"可见完整的封闭货厢，属于厢式货车，符合定义\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"共可见2辆货车，均位于展会通道；白色厢式货车底部在画面边缘，为部分可见\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "imported_from": "D:\\File\\PROJECT\\codex\\codex-货车\\all-sessions-can-see\\accuracy\\runs\\full_batch\\north_2100.json",
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": 200,
+      "latency_ms": 14720,
+      "ok": true,
+      "error": null,
+      "imported": true
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1803,
+    "prompt_tokens": 1773,
+    "total_tokens": 3576,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1485
+    }
+  }
+}

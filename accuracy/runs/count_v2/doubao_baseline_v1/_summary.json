@@ -1,0 +1,17 @@
+{
+  "model": "doubao",
+  "prompt_version": "truck-count-v1",
+  "samples_expected": 20,
+  "samples_recorded": 20,
+  "successful_samples": 20,
+  "failed_samples": 0,
+  "success_rate": 1.0,
+  "total_http_attempts": 20,
+  "http_503_responses": 0,
+  "http_503_rate_of_attempts": 0.0,
+  "retried_samples": 0,
+  "average_latency_ms_successful": 17229.8,
+  "average_attempt_latency_ms": 17229.8,
+  "failures": [],
+  "generated_at": "2026-10-21T09:56:24.436707+00:00"
+}

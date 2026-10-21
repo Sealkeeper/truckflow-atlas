@@ -1,0 +1,101 @@
+{
+  "sample_id": "south_2100",
+  "camera": "south",
+  "time": 2100,
+  "image": "assets/frames/south_2100.jpg",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "returned_model": null,
+  "prompt_version": "truck-count-v1",
+  "predicted_count": 4,
+  "counts": {
+    "total": 4,
+    "large": 4,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.45,
+        0.6,
+        0.11,
+        0.28
+      ],
+      "type": "large",
+      "reason": "Clearly visible at bottom center of the image, full vehicle shown",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.45,
+        0.3,
+        0.07,
+        0.2
+      ],
+      "type": "large",
+      "reason": "Located above the white truck, full vehicle visible",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v3",
+      "box": [
+        0.4,
+        0.2,
+        0.06,
+        0.2
+      ],
+      "type": "large",
+      "reason": "Above the gray cargo truck, full vehicle visible",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v4",
+      "box": [
+        0.42,
+        0.15,
+        0.05,
+        0.1
+      ],
+      "type": "large",
+      "reason": "Partially shown behind the brown cargo truck, upper portion visible",
+      "visible": "partial_top",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 14960,
+  "total_latency_ms": 14960,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 4, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.45, 0.60, 0.56, 0.88],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White cab with '东风商用车' text, front-facing heavy truck\",\n      \"evidence\": \"Clearly visible at bottom center of the image, full vehicle shown\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.30, 0.52, 0.50],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab with gray covered cargo area, front-facing semi-truck\",\n      \"evidence\": \"Located above the white truck, full vehicle visible\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.40, 0.20, 0.46, 0.40],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab with brown flat cargo area, front-facing heavy truck\",\n      \"evidence\": \"Above the gray cargo truck, full vehicle visible\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.42, 0.15, 0.47, 0.25],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, front-facing, partially visible in upper central alley\",\n      \"evidence\": \"Partially shown behind the brown cargo truck, upper portion visible\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All trucks are in the central aisle; only the fourth truck is partially visible, no other obscured or ambiguous vehicles\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "imported_from": "D:\\File\\PROJECT\\codex\\codex-货车\\all-sessions-can-see\\accuracy\\runs\\full_batch\\south_2100.json",
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": 200,
+      "latency_ms": 14960,
+      "ok": true,
+      "error": null,
+      "imported": true
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1758,
+    "prompt_tokens": 1773,
+    "total_tokens": 3531,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1239
+    }
+  }
+}

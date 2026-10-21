@@ -1,0 +1,88 @@
+{
+  "sample_id": "south_5",
+  "camera": "south",
+  "time": 5,
+  "image": "assets/frames/south_5.jpg",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "returned_model": null,
+  "prompt_version": "truck-count-v1",
+  "predicted_count": 3,
+  "counts": {
+    "total": 3,
+    "large": 1,
+    "medium": 2,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "box": [
+        0.46,
+        0.6,
+        0.12,
+        0.39
+      ],
+      "type": "large",
+      "reason": "画面底部中间通道，完整可见的重型半挂货车，无遮挡",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v2",
+      "box": [
+        0.45,
+        0.26,
+        0.06,
+        0.19
+      ],
+      "type": "medium",
+      "reason": "画面中间通道，完整可见的中型货车，无遮挡",
+      "visible": "full",
+      "uncertain": false
+    },
+    {
+      "id": "v3",
+      "box": [
+        0.45,
+        0.15,
+        0.04,
+        0.1
+      ],
+      "type": "medium",
+      "reason": "画面上方中间通道，完整可见的中型货车，无遮挡",
+      "visible": "full",
+      "uncertain": false
+    }
+  ],
+  "box_errors": [],
+  "latency_ms": 21910,
+  "total_latency_ms": 21910,
+  "total_attempts": 1,
+  "http_503_count": 0,
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 1, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.46, 0.6, 0.58, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车身，车头带有白色“一汽青岛”字样，重型半挂货车，朝向镜头\",\n      \"evidence\": \"画面底部中间通道，完整可见的重型半挂货车，无遮挡\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.26, 0.51, 0.45],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，货厢顶部为灰色，中型货车，朝向镜头\",\n      \"evidence\": \"画面中间通道，完整可见的中型货车，无遮挡\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.15, 0.49, 0.25],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，货厢为棕色，中型货车，朝向镜头\",\n      \"evidence\": \"画面上方中间通道，完整可见的中型货车，无遮挡\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"3辆货车均位于中间通道，无被遮挡或完全不可见的情况，车辆特征清晰可辨\",\n  \"uncertain_reasons\": []\n}",
+  "error": null,
+  "imported_from": "D:\\File\\PROJECT\\codex\\codex-货车\\all-sessions-can-see\\accuracy\\runs\\full_batch\\south_5.json",
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": 200,
+      "latency_ms": 21910,
+      "ok": true,
+      "error": null,
+      "imported": true
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1796,
+    "prompt_tokens": 1773,
+    "total_tokens": 3569,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1369
+    }
+  }
+}
