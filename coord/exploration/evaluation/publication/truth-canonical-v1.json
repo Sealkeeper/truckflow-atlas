@@ -1,0 +1,173 @@
+{
+  "schema": "truckflow-canonical-truth-v1",
+  "definition": "per-time canonical labels: north and south visible truck counts, cross-camera overlap count, and unique count",
+  "canonicalization": "JSON array sorted by time; each item has time,north,south,overlap,unique; sort_keys=true, separators=(',',':'), UTF-8",
+  "canonical_sha256": "78f255b1ae37463e2b36e15befb1ff8092ca87c2c6e946979d880f42cf0e5397",
+  "source_files": {
+    "user_truth": {
+      "file": "accuracy/reviewed/user-final-review-v2-2026-10-21.json",
+      "sha256": "735045af4055d2badae2c3bed1942c5a15c6a872ce548243cd52e6657fda971e"
+    },
+    "joint_metrics": {
+      "file": "coord/exploration/joint-multiview/metrics.json",
+      "sha256": "d964870dd78774b94065ac61c245545bf3772da7d46436f8047ad4f6ed61ed78",
+      "declared_label_sha256": "c3fddc439da1574e74a6ceb7391297e1c65fedec109d3579da05cad05f34149d"
+    },
+    "event_metrics": {
+      "file": "coord/exploration/event-ledger/metrics.json",
+      "sha256": "efb7fe453bf41e477377472df6a5a6a3797b106b769fd5722676f7e240eb5f2b"
+    },
+    "attachment_manifest": {
+      "file": "review/user-attachments-20261021/manifest.json",
+      "sha256": "ca299359e0f31f390176610826712a256c57ecd43979bf4bfcfbd58bbd02c65b"
+    }
+  },
+  "times": [
+    {
+      "time": 5,
+      "north": 5,
+      "south": 3,
+      "overlap": 1,
+      "unique": 7
+    },
+    {
+      "time": 300,
+      "north": 3,
+      "south": 4,
+      "overlap": 1,
+      "unique": 6
+    },
+    {
+      "time": 600,
+      "north": 4,
+      "south": 4,
+      "overlap": 1,
+      "unique": 7
+    },
+    {
+      "time": 900,
+      "north": 3,
+      "south": 5,
+      "overlap": 2,
+      "unique": 6
+    },
+    {
+      "time": 1200,
+      "north": 3,
+      "south": 5,
+      "overlap": 2,
+      "unique": 6
+    },
+    {
+      "time": 1500,
+      "north": 2,
+      "south": 5,
+      "overlap": 2,
+      "unique": 5
+    },
+    {
+      "time": 1800,
+      "north": 2,
+      "south": 4,
+      "overlap": 1,
+      "unique": 5
+    },
+    {
+      "time": 2100,
+      "north": 2,
+      "south": 3,
+      "overlap": 1,
+      "unique": 4
+    },
+    {
+      "time": 2400,
+      "north": 3,
+      "south": 3,
+      "overlap": 1,
+      "unique": 5
+    },
+    {
+      "time": 2600,
+      "north": 2,
+      "south": 4,
+      "overlap": 2,
+      "unique": 4
+    }
+  ],
+  "cross_checks": {
+    "user_truth_vs_joint_metrics": {
+      "match": true,
+      "mismatches": []
+    },
+    "user_truth_vs_event_subset": {
+      "match": true,
+      "mismatches": []
+    },
+    "user_truth_vs_attachment_manifest": {
+      "match": true,
+      "mismatches": [],
+      "annotated_samples": 9
+    }
+  },
+  "attachment_subset": [
+    {
+      "time": 5,
+      "camera": "north",
+      "count": 5,
+      "file": "0005_1.png"
+    },
+    {
+      "time": 5,
+      "camera": "south",
+      "count": 3,
+      "file": "0005_2.png"
+    },
+    {
+      "time": 300,
+      "camera": "south",
+      "count": 4,
+      "file": "0500_1.png"
+    },
+    {
+      "time": 600,
+      "camera": "south",
+      "count": 4,
+      "file": "1000_1.png"
+    },
+    {
+      "time": 600,
+      "camera": "north",
+      "count": 4,
+      "file": "1000_2.png"
+    },
+    {
+      "time": 900,
+      "camera": "south",
+      "count": 5,
+      "file": "1500_1.png"
+    },
+    {
+      "time": 1200,
+      "camera": "south",
+      "count": 5,
+      "file": "2000_1.png"
+    },
+    {
+      "time": 2600,
+      "camera": "south",
+      "count": 4,
+      "file": "4320_1.png"
+    },
+    {
+      "time": 2600,
+      "camera": "north",
+      "count": 2,
+      "file": "4320_2.png"
+    }
+  ],
+  "notes": [
+    "The user truth file hash 735045... and the joint route's declared label hash c3fddc... are different files/serializations.",
+    "Their canonical per-time label content matches; file-level hashes must not be compared as label content.",
+    "No label or truth value was changed."
+  ]
+}

@@ -5,7 +5,7 @@ A missing field is `未测`; failures remain visible against the fixed N.
 
 | Route | Split | Count exact | Count MAE | Unique exact | Unique MAE | Overlap exact | Overlap MAE | Vehicle ID |
 |---|---|---|---|---|---|---|---|---|
-| event-ledger-doubao-v1 | dev | 1/3 (N=3; fail=0; miss=0) | 0.666667 (n=3) | 未测 | 未测 | 未测 | 未测 | 未测 |
+| event-ledger-doubao-v1 | dev | 1/3 (valid=3; fail=0; miss=0) | 0.666667 (valid n=3) | 未测 | 未测 | 未测 | 未测 | 未测 |
 
 | Route | Auto release | Review | Calls | Images | Tokens | Latency mean/p95 | Audit / data notes |
 |---|---|---|---:|---:|---:|---|---|

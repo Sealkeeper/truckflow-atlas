@@ -27,9 +27,12 @@
     "mae": 0.25,
     "under": 4,
     "over": 1,
+    "under_frames": 3,
+    "over_frames": 1,
     "exact_rate_valid": 0.8,
     "exact_rate_total": 0.8,
-    "metric_scope": "total visible truck count per camera; not vehicle ID or model-class accuracy"
+    "metric_scope": "total visible truck count per camera; not vehicle ID or model-class accuracy",
+    "unit_note": "under/over are vehicle units; under_frames/over_frames count camera samples with any under/over error"
   },
   "unique": {
     "n_total": 10,

@@ -51,7 +51,9 @@ def load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def build_samples(evaluation: dict[str, Any], root: Path) -> list[dict[str, Any]]:
+def build_samples(
+    evaluation: dict[str, Any], root: Path, raw_prefix: str
+) -> list[dict[str, Any]]:
     rows = evaluation.get("rows") or []
     if len(rows) != 20:
         raise SystemExit(f"expected 20 evaluation rows, found {len(rows)}")
@@ -91,7 +93,8 @@ def build_samples(evaluation: dict[str, Any], root: Path) -> list[dict[str, Any]
                 "camera": row["camera"],
                 "time_s": row["time_s"],
                 "view": "aisle",
-                "path": row["file"],
+                "path": f"{raw_prefix}/{Path(row['file']).name}",
+                "file_name": Path(row["file"]).name,
                 "sha256": actual_sha,
                 "bytes": path.stat().st_size,
                 "truth_count": row["gold"],
@@ -143,6 +146,7 @@ def main() -> None:
     )
     parser.add_argument("--run-dir", type=Path, default=Path("accuracy/runs/aisle_clean"))
     parser.add_argument("--out-dir", type=Path, required=True)
+    parser.add_argument("--raw-prefix", default="raw")
     parser.add_argument("--today", default=date.today().isoformat())
     args = parser.parse_args()
 
@@ -165,7 +169,7 @@ def main() -> None:
             f"truth sha256 mismatch {truth_sha} != {evaluation['review']['sha256']}"
         )
 
-    samples = build_samples(evaluation, root)
+    samples = build_samples(evaluation, root, args.raw_prefix)
     directory = assert_directory_contract(
         run_dir, {Path(row["path"]).name for row in samples}
     )
@@ -188,9 +192,10 @@ def main() -> None:
             ),
         },
         "view_contract": VIEW_CONTRACT,
-        "run_directory": args.run_dir.as_posix(),
+        "run_directory": f"{args.raw_prefix}/",
+        "raw_metadata": f"{args.raw_prefix}/_provenance.json",
         "run_set_sha256": evaluation["runs"]["run_set_sha256"],
-        "evaluation_file": args.evaluation.as_posix(),
+        "evaluation_file": "evaluation-clean-v1.json",
         "evaluation_sha256": evaluation_sha,
         "directory_check": directory,
         "fixed_denominator": {
@@ -241,6 +246,12 @@ def main() -> None:
             "mae": metrics["mae_graded"],
             "under": metrics["under"],
             "over": metrics["over"],
+            "under_frames": sum(1 for row in samples if row["error"] < 0),
+            "over_frames": sum(1 for row in samples if row["error"] > 0),
+            "unit_note": (
+                "under/over are vehicle units; under_frames/over_frames count "
+                "camera samples with any under/over error"
+            ),
             "exact_rate_valid": metrics["exact_rate_graded"] / 100.0,
             "exact_rate_total": metrics["exact_rate_all"] / 100.0,
             "metric_scope": (
@@ -322,13 +333,13 @@ def main() -> None:
             "count": len(samples),
         },
         "evaluation": {
-            "file": args.evaluation.as_posix(),
+            "file": "evaluation-clean-v1.json",
             "sha256": evaluation_sha,
             "run_set_sha256": evaluation["runs"]["run_set_sha256"],
         },
         "artifacts": {
-            "runs": args.run_dir.as_posix(),
-            "evaluation": args.evaluation.as_posix(),
+            "runs": f"{args.raw_prefix}/",
+            "evaluation": "evaluation-clean-v1.json",
             "report": "accuracy/REPORT_clean_baseline_v1.md",
             "evidence": "accuracy/evidence/clean_baseline/errors_contact.jpg",
             "provenance": "accuracy/runs/aisle_clean/_provenance.json",

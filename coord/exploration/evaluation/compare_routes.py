@@ -112,13 +112,13 @@ def metric_columns(
         exact_display = "未测"
     else:
         exact_display = (
-            f"{exact}/{valid_n} (N={n_total}; "
+            f"{exact}/{n_total} (valid={valid_n}; "
             f"fail={number(failed)}; miss={number(missing)})"
         )
     if mae is None:
         mae_display = "未测"
     else:
-        mae_display = f"{number(mae)} (n={number(valid_n)})"
+        mae_display = f"{number(mae)} (valid n={number(valid_n)})"
 
     return {
         "n_total": n_total,

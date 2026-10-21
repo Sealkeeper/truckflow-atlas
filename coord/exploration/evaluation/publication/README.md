@@ -19,6 +19,11 @@ PR：https://github.com/Sealkeeper/truckflow-atlas/pull/9
 | `clean-aisle-baseline-v1.manifest.json` | 20 个样本的固定清单：路径、SHA256、字节数、真值、预测、误差、模型与耗时 |
 | `clean-aisle-baseline-v1.metrics.json` | `truckflow-route-summary-v1` 指标，可直接作为比较工具输入 |
 | `clean-aisle-baseline-v1.raw-list.json` | 20 个原始运行文件的精简清单与 SHA256 |
+| `raw/` | 20 个正式 aisle 原始运行文件与 `_provenance.json` |
+| `evaluation-clean-v1.json` | 逐样本评测输出副本 |
+| `truth-canonical-v1.json` | 10 时刻 canonical 真值内容与来源一致性 |
+| `BASELINE_REPORT_v1.md` | 纯 aisle 基线详细报告副本 |
+| `build_public_baseline.py` / `build_canonical_truth.py` | manifest 与 canonical 真值生成器（只读显式输入） |
 
 | 指标 | 结果 |
 |---|---:|
@@ -26,10 +31,18 @@ PR：https://github.com/Sealkeeper/truckflow-atlas/pull/9
 | valid | 20 |
 | exact | **16/20（80.0%）** |
 | MAE | **0.25** |
-| 漏计 / 多计 | 4 / 1 |
+| 漏计 / 多计 | **4 units / 3 frames** 与 **1 unit / 1 frame** |
 | failed / missing | 0 / 0 |
 
 真值合计 69，预测合计 66，绝对误差合计 5。
+
+### 真值 canonical 内容
+
+用户真值文件 SHA256 `7350...` 与 joint 路线声明 label SHA256 `c3fd...` 是不同文件/序列化。按 10 个时刻的 `north/south/overlap/unique` 规范化后：
+
+`canonical_sha256 = 78f255b1ae37463e2b36e15befb1ff8092ca87c2c6e946979d880f42cf0e5397`
+
+用户真值、joint 逐行真值、event 三点子集和 9 张用户红框计数全部一致。未改动任何标签。详见 `truth-canonical-v1.json`。
 
 ### 旧 17/20 不能作为基线
 
@@ -45,6 +58,8 @@ PR：https://github.com/Sealkeeper/truckflow-atlas/pull/9
 ## 文件契约
 
 - 运行目录固定为 `accuracy/runs/aisle_clean/`，恰好 20 个 `*_aisle.json`，另有且仅有 `_provenance.json` 元数据；
+- 公共包把这 20 个正式文件复制到 `raw/`，manifest 只写 `raw/<file>`，不指向私有 session；
+- PR 分支内的正式原件仍在 `accuracy/runs/aisle_clean/`，与公共 `raw/` 逐字节一致；
 - 每个样本只有一次成功运行；
 - 拒绝 `grid_aisle`、`grid_grid_aisle` 及其他视图；
 - 重复 `sample_id` 直接报错；
@@ -102,9 +117,10 @@ python audit_agent_workflow.py `
 |---|---|
 | 用户真值 `user-final-review-v2-2026-10-21.json` | `735045af4055d2badae2c3bed1942c5a15c6a872ce548243cd52e6657fda971e` |
 | 评测输出 `evaluation-clean-v1.json` | `7f5aedd22da7de94fde7927c61e7621daf7069d9ad6a53da6900f04e2124e885` |
-| 20 文件 manifest | `aa104c5fe03c1b23ced24e3a036b80d7779d77910fcc89ad3db7793bad0e3d5b` |
-| raw list | `248850e4ddb68b8a23325a186391daae6595167c24866e3406da9ac9fb9a3a0a` |
+| 20 文件 manifest | `6fa466dfaddc9443cae2fe65e0dc6975c31207a4fd4096fe206e2c85859806d1` |
+| raw list | `1305593fe784ac398a9f7c7ae74ede03529348c2faae33e9821280324e9647c5` |
 | run set | `44162e6dc763440d94152dbcac394e04506402c9830a8d2fba06025d998fe2e7` |
+| 真值内容 canonical | `78f255b1ae37463e2b36e15befb1ff8092ca87c2c6e946979d880f42cf0e5397` |
 | joint-multiview 源 metrics | `d964870dd78774b94065ac61c245545bf3772da7d46436f8047ad4f6ed61ed78` |
 | event-ledger 源 metrics | `efb7fe453bf41e477377472df6a5a6a3797b106b769fd5722676f7e240eb5f2b` |
 
@@ -113,5 +129,5 @@ python audit_agent_workflow.py `
 - 20 帧是 **dev 集**，不是盲测；`16/20` 不是泛化准确率。
 - 只测每机位可见货车总数；车辆 ID、车型、跨机位唯一集合、重合对象配对、自动放行与复核指标未测或按来源单独报告。
 - 南北数量不能相加当作唯一车辆数。
-- 盲测候选见 PR #9 的 `coord/exploration/evaluation/BLIND_TEST_CANDIDATES_v1.md`。
+- 标签未见候选见 `BLIND_TEST_CANDIDATES_v1.md`；公开 60 秒网格、人工复核和事件窗口已审计，当前没有真正的新视频盲测。
 - PR #9 未合并。

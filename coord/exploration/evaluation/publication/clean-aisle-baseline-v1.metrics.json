@@ -28,6 +28,9 @@
     "mae": 0.25,
     "under": 4,
     "over": 1,
+    "under_frames": 3,
+    "over_frames": 1,
+    "unit_note": "under/over are vehicle units; under_frames/over_frames count camera samples with any under/over error",
     "exact_rate_valid": 0.8,
     "exact_rate_total": 0.8,
     "metric_scope": "total visible truck count per camera; not vehicle ID, vehicle class, unique-set or overlap accuracy"
@@ -94,22 +97,22 @@
   },
   "manifest": {
     "file": "clean-aisle-baseline-v1.manifest.json",
-    "sha256": "aa104c5fe03c1b23ced24e3a036b80d7779d77910fcc89ad3db7793bad0e3d5b",
+    "sha256": "6fa466dfaddc9443cae2fe65e0dc6975c31207a4fd4096fe206e2c85859806d1",
     "sample_count": 20
   },
   "raw_list": {
     "file": "clean-aisle-baseline-v1.raw-list.json",
-    "sha256": "248850e4ddb68b8a23325a186391daae6595167c24866e3406da9ac9fb9a3a0a",
+    "sha256": "1305593fe784ac398a9f7c7ae74ede03529348c2faae33e9821280324e9647c5",
     "count": 20
   },
   "evaluation": {
-    "file": "accuracy/reviewed/evaluation-clean-v1.json",
+    "file": "evaluation-clean-v1.json",
     "sha256": "7f5aedd22da7de94fde7927c61e7621daf7069d9ad6a53da6900f04e2124e885",
     "run_set_sha256": "44162e6dc763440d94152dbcac394e04506402c9830a8d2fba06025d998fe2e7"
   },
   "artifacts": {
-    "runs": "accuracy/runs/aisle_clean",
-    "evaluation": "accuracy/reviewed/evaluation-clean-v1.json",
+    "runs": "raw/",
+    "evaluation": "evaluation-clean-v1.json",
     "report": "accuracy/REPORT_clean_baseline_v1.md",
     "evidence": "accuracy/evidence/clean_baseline/errors_contact.jpg",
     "provenance": "accuracy/runs/aisle_clean/_provenance.json"

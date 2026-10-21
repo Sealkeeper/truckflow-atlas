@@ -30,7 +30,9 @@
     "exact": 16,
     "mae": 0.25,
     "under": 4,
-    "over": 1
+    "over": 1,
+    "under_frames": 3,
+    "over_frames": 1
   },
   "unique": {
     "n_total": 10,
@@ -92,7 +94,9 @@
 
 - `n_total` 是该数据集的固定分母。
 - `valid_n + failed + missing` 必须等于 `n_total`。
-- `exact/valid_n` 是有效预测上的 exact 数；同时展示固定 `N`、`failed`、`missing`。
+- headline 一律写 `exact/n_total`（固定分母）。即使有失败也只能写 `15/20`，不能写成 `15/19` 误导成更高准确率。
+- `valid_N=19`、`failed=1` 单列，用来说明 MAE 只覆盖有效预测。
+- `under`/`over` 是车辆单位数；`under_frames`/`over_frames` 是出现该方向的机位样本数。两者不可混写。
 - MAE 只在 `valid_n` 上计算，不伪造失败样本的预测。
 - 不允许因为删除失败样本而提高 exact rate。
 

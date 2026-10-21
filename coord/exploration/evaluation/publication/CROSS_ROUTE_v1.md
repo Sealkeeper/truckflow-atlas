@@ -2,6 +2,8 @@
 
 日期：2026-10-21。只消费已发布 metrics，**没有新增模型调用**。
 
+headline 一律使用固定分母 `exact/N`；`valid_N`、`failed`、`missing` 单列。漏计/多计以车辆单位计，帧数另列。
+
 ## 20 帧路线（固定 N=20）
 
 | 路线 | Count exact | Count MAE | Unique exact | Unique MAE | Overlap exact | Overlap MAE | 车辆 ID |
@@ -37,6 +39,7 @@
 3. joint-multiview 的 unique 数量正确率仅 1/10，overlap 6/10；原报告已给出 `t600` overlap 数字正确但对象错配的反例，所以 overlap 数量不等于跨机位配对正确。
 4. joint-multiview 自动放行 8/10，但这 8 个时刻全部至少一项数量错误；协议门禁通过不等于视觉正确。
 5. event-ledger 1/3 与该路线自己的同点 aisle 2/3 对比才有意义；不能拿 1/3 与全量 16/20 比较。
+6. 真值内容 canonical hash 为 `78f255b1ae37463e2b36e15befb1ff8092ca87c2c6e946979d880f42cf0e5397`；用户真值、joint 逐行真值、event 三点子集与用户红框计数一致。
 
 ## 来源
 

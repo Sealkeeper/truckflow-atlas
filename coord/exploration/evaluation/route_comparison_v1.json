@@ -16,8 +16,8 @@
         "missing": 0,
         "exact": 16,
         "mae": 0.25,
-        "exact_display": "16/20 (N=20; fail=0; miss=0)",
-        "mae_display": "0.25 (n=20)",
+        "exact_display": "16/20 (valid=20; fail=0; miss=0)",
+        "mae_display": "0.25 (valid n=20)",
         "warnings": []
       },
       "unique": {
