@@ -1,5 +1,13 @@
 {
+  "frame_set": "diagnostic",
   "required_frames": [
+    "north_300",
+    "north_600",
+    "south_600",
+    "north_1200",
+    "south_1200"
+  ],
+  "frames": [
     "north_300",
     "north_600",
     "south_600",
@@ -12,8 +20,14 @@
       "label": "Doubao whole frame",
       "frames_required": 5,
       "frames_present": 5,
+      "valid_n": 5,
+      "count_exact_of_required": "3/5",
+      "count_exact_rate_of_required": 60.0,
+      "missing_samples": [],
+      "failed_samples": [],
       "count_exact": 3,
       "count_mae": 0.6,
+      "count_mae_fixed_denominator": 0.6,
       "miss_units": 3,
       "extra_units": 0,
       "v0_count_exact": 2,
@@ -22,10 +36,15 @@
       "v0_class_l1": 4,
       "calls": 5,
       "failed_calls": 0,
+      "input_images": 5,
       "prompt_tokens": 8865,
       "completion_tokens": 9434,
       "total_tokens": 18299,
       "summed_call_latency_s": 79.11,
+      "call_latency_mean_s": 15.82,
+      "call_latency_p95_s": 25.04,
+      "wall_mean_s": 15.82,
+      "wall_p95_s": 25.04,
       "summed_wall_s": 79.11,
       "rows": [
         {
@@ -58,6 +77,7 @@
             "total_tokens": 3123,
             "latency_s": 12.01
           },
+          "input_images": 1,
           "wall_s": null
         },
         {
@@ -90,6 +110,7 @@
             "total_tokens": 3090,
             "latency_s": 11.62
           },
+          "input_images": 1,
           "wall_s": null
         },
         {
@@ -122,6 +143,7 @@
             "total_tokens": 3887,
             "latency_s": 17.25
           },
+          "input_images": 1,
           "wall_s": null
         },
         {
@@ -154,6 +176,7 @@
             "total_tokens": 3128,
             "latency_s": 13.19
           },
+          "input_images": 1,
           "wall_s": null
         },
         {
@@ -186,6 +209,7 @@
             "total_tokens": 5071,
             "latency_s": 25.04
           },
+          "input_images": 1,
           "wall_s": null
         }
       ]
@@ -195,8 +219,14 @@
       "label": "A: perspective depth bands",
       "frames_required": 5,
       "frames_present": 5,
+      "valid_n": 5,
+      "count_exact_of_required": "2/5",
+      "count_exact_rate_of_required": 40.0,
+      "missing_samples": [],
+      "failed_samples": [],
       "count_exact": 2,
       "count_mae": 0.6,
+      "count_mae_fixed_denominator": 0.6,
       "miss_units": 1,
       "extra_units": 2,
       "v0_count_exact": 1,
@@ -205,10 +235,15 @@
       "v0_class_l1": 6,
       "calls": 48,
       "failed_calls": 0,
+      "input_images": 48,
       "prompt_tokens": 86964,
       "completion_tokens": 42232,
       "total_tokens": 129196,
       "summed_call_latency_s": 415.13,
+      "call_latency_mean_s": 83.03,
+      "call_latency_p95_s": 96.1,
+      "wall_mean_s": 83.44,
+      "wall_p95_s": 96.47,
       "summed_wall_s": 417.21,
       "rows": [
         {
@@ -241,6 +276,7 @@
             "completion_tokens": 8791,
             "total_tokens": 25195
           },
+          "input_images": 9,
           "wall_s": 87.98
         },
         {
@@ -273,6 +309,7 @@
             "completion_tokens": 9973,
             "total_tokens": 26309
           },
+          "input_images": 9,
           "wall_s": 96.47
         },
         {
@@ -305,6 +342,7 @@
             "completion_tokens": 9218,
             "total_tokens": 28844
           },
+          "input_images": 11,
           "wall_s": 92.91
         },
         {
@@ -337,6 +375,7 @@
             "completion_tokens": 4737,
             "total_tokens": 17182
           },
+          "input_images": 7,
           "wall_s": 47.44
         },
         {
@@ -369,6 +408,7 @@
             "completion_tokens": 9513,
             "total_tokens": 31666
           },
+          "input_images": 12,
           "wall_s": 92.41
         }
       ]
@@ -378,8 +418,14 @@
       "label": "A′: tight lane windows",
       "frames_required": 5,
       "frames_present": 5,
+      "valid_n": 5,
+      "count_exact_of_required": "4/5",
+      "count_exact_rate_of_required": 80.0,
+      "missing_samples": [],
+      "failed_samples": [],
       "count_exact": 4,
       "count_mae": 0.2,
+      "count_mae_fixed_denominator": 0.2,
       "miss_units": 0,
       "extra_units": 1,
       "v0_count_exact": 5,
@@ -388,10 +434,15 @@
       "v0_class_l1": 4,
       "calls": 51,
       "failed_calls": 0,
+      "input_images": 51,
       "prompt_tokens": 90811,
       "completion_tokens": 52514,
       "total_tokens": 143325,
       "summed_call_latency_s": 541.51,
+      "call_latency_mean_s": 108.3,
+      "call_latency_p95_s": 142.02,
+      "wall_mean_s": 108.81,
+      "wall_p95_s": 142.67,
       "summed_wall_s": 544.07,
       "rows": [
         {
@@ -424,6 +475,7 @@
             "completion_tokens": 8525,
             "total_tokens": 24389
           },
+          "input_images": 9,
           "wall_s": 92.56
         },
         {
@@ -456,6 +508,7 @@
             "completion_tokens": 12077,
             "total_tokens": 28284
           },
+          "input_images": 9,
           "wall_s": 110.1
         },
         {
@@ -488,6 +541,7 @@
             "completion_tokens": 12502,
             "total_tokens": 33994
           },
+          "input_images": 12,
           "wall_s": 124.53
         },
         {
@@ -520,6 +574,7 @@
             "completion_tokens": 6594,
             "total_tokens": 20799
           },
+          "input_images": 8,
           "wall_s": 74.21
         },
         {
@@ -552,6 +607,7 @@
             "completion_tokens": 12816,
             "total_tokens": 35859
           },
+          "input_images": 13,
           "wall_s": 142.67
         }
       ]
@@ -561,8 +617,14 @@
       "label": "B: recursive region tree",
       "frames_required": 5,
       "frames_present": 5,
+      "valid_n": 5,
+      "count_exact_of_required": "1/5",
+      "count_exact_rate_of_required": 20.0,
+      "missing_samples": [],
+      "failed_samples": [],
       "count_exact": 1,
       "count_mae": 1.0,
+      "count_mae_fixed_denominator": 1.0,
       "miss_units": 1,
       "extra_units": 4,
       "v0_count_exact": 2,
@@ -571,10 +633,15 @@
       "v0_class_l1": 8,
       "calls": 91,
       "failed_calls": 0,
+      "input_images": 91,
       "prompt_tokens": 162519,
       "completion_tokens": 128580,
       "total_tokens": 291099,
       "summed_call_latency_s": 1162.53,
+      "call_latency_mean_s": 232.51,
+      "call_latency_p95_s": 312.11,
+      "wall_mean_s": 233.31,
+      "wall_p95_s": 313.31,
       "summed_wall_s": 1166.55,
       "rows": [
         {
@@ -607,6 +674,7 @@
             "completion_tokens": 19599,
             "total_tokens": 44648
           },
+          "input_images": 14,
           "wall_s": 181.08
         },
         {
@@ -639,6 +707,7 @@
             "completion_tokens": 24972,
             "total_tokens": 55351
           },
+          "input_images": 17,
           "wall_s": 218.41
         },
         {
@@ -671,6 +740,7 @@
             "completion_tokens": 28888,
             "total_tokens": 64376
           },
+          "input_images": 20,
           "wall_s": 251.16
         },
         {
@@ -703,6 +773,7 @@
             "completion_tokens": 22290,
             "total_tokens": 53075
           },
+          "input_images": 17,
           "wall_s": 202.59
         },
         {
@@ -735,6 +806,7 @@
             "completion_tokens": 32831,
             "total_tokens": 73649
           },
+          "input_images": 23,
           "wall_s": 313.31
         }
       ]
@@ -744,8 +816,14 @@
       "label": "C: lane scene graph",
       "frames_required": 5,
       "frames_present": 5,
+      "valid_n": 5,
+      "count_exact_of_required": "2/5",
+      "count_exact_rate_of_required": 40.0,
+      "missing_samples": [],
+      "failed_samples": [],
       "count_exact": 2,
       "count_mae": 0.8,
+      "count_mae_fixed_denominator": 0.8,
       "miss_units": 4,
       "extra_units": 0,
       "v0_count_exact": 1,
@@ -754,10 +832,15 @@
       "v0_class_l1": 5,
       "calls": 21,
       "failed_calls": 0,
+      "input_images": 21,
       "prompt_tokens": 42178,
       "completion_tokens": 25050,
       "total_tokens": 67228,
       "summed_call_latency_s": 224.06,
+      "call_latency_mean_s": 44.81,
+      "call_latency_p95_s": 70.36,
+      "wall_mean_s": 44.95,
+      "wall_p95_s": 70.56,
       "summed_wall_s": 224.75,
       "rows": [
         {
@@ -790,6 +873,7 @@
             "completion_tokens": 5052,
             "total_tokens": 11185
           },
+          "input_images": 3,
           "wall_s": 46.78
         },
         {
@@ -822,6 +906,7 @@
             "completion_tokens": 2800,
             "total_tokens": 8930
           },
+          "input_images": 3,
           "wall_s": 26.6
         },
         {
@@ -854,6 +939,7 @@
             "completion_tokens": 4168,
             "total_tokens": 14263
           },
+          "input_images": 5,
           "wall_s": 38.25
         },
         {
@@ -886,6 +972,7 @@
             "completion_tokens": 5162,
             "total_tokens": 13258
           },
+          "input_images": 4,
           "wall_s": 42.56
         },
         {
@@ -918,6 +1005,7 @@
             "completion_tokens": 7868,
             "total_tokens": 19592
           },
+          "input_images": 6,
           "wall_s": 70.56
         }
       ]
@@ -927,8 +1015,14 @@
       "label": "D: annotated critic loop",
       "frames_required": 5,
       "frames_present": 5,
+      "valid_n": 5,
+      "count_exact_of_required": "3/5",
+      "count_exact_rate_of_required": 60.0,
+      "missing_samples": [],
+      "failed_samples": [],
       "count_exact": 3,
       "count_mae": 0.6,
+      "count_mae_fixed_denominator": 0.6,
       "miss_units": 3,
       "extra_units": 0,
       "v0_count_exact": 2,
@@ -937,10 +1031,15 @@
       "v0_class_l1": 8,
       "calls": 27,
       "failed_calls": 0,
+      "input_images": 32,
       "prompt_tokens": 59145,
       "completion_tokens": 35201,
       "total_tokens": 94346,
       "summed_call_latency_s": 338.13,
+      "call_latency_mean_s": 67.63,
+      "call_latency_p95_s": 111.86,
+      "wall_mean_s": 67.82,
+      "wall_p95_s": 112.07,
       "summed_wall_s": 339.11,
       "rows": [
         {
@@ -973,6 +1072,7 @@
             "completion_tokens": 5404,
             "total_tokens": 14467
           },
+          "input_images": 5,
           "wall_s": 47.38
         },
         {
@@ -1005,6 +1105,7 @@
             "completion_tokens": 5692,
             "total_tokens": 16552
           },
+          "input_images": 6,
           "wall_s": 72.58
         },
         {
@@ -1037,6 +1138,7 @@
             "completion_tokens": 6887,
             "total_tokens": 19984
           },
+          "input_images": 7,
           "wall_s": 60.23
         },
         {
@@ -1069,6 +1171,7 @@
             "completion_tokens": 4843,
             "total_tokens": 15870
           },
+          "input_images": 6,
           "wall_s": 46.85
         },
         {
@@ -1101,6 +1204,7 @@
             "completion_tokens": 12375,
             "total_tokens": 27473
           },
+          "input_images": 8,
           "wall_s": 112.07
         }
       ]
@@ -1111,8 +1215,14 @@
     "label": "Doubao whole frame",
     "frames_required": 20,
     "frames_present": 20,
+    "valid_n": 20,
+    "count_exact_of_required": "16/20",
+    "count_exact_rate_of_required": 80.0,
+    "missing_samples": [],
+    "failed_samples": [],
     "count_exact": 16,
     "count_mae": 0.3,
+    "count_mae_fixed_denominator": 0.3,
     "miss_units": 5,
     "extra_units": 1,
     "v0_count_exact": 16,
@@ -1121,10 +1231,15 @@
     "v0_class_l1": 21,
     "calls": 20,
     "failed_calls": 0,
+    "input_images": 20,
     "prompt_tokens": 35460,
     "completion_tokens": 36905,
     "total_tokens": 72365,
     "summed_call_latency_s": 344.6,
+    "call_latency_mean_s": 17.23,
+    "call_latency_p95_s": 34.12,
+    "wall_mean_s": 17.23,
+    "wall_p95_s": 34.12,
     "summed_wall_s": 344.6,
     "rows": [
       {
@@ -1157,6 +1272,7 @@
           "total_tokens": 3731,
           "latency_s": 34.12
         },
+        "input_images": 1,
         "wall_s": null
       },
       {
@@ -1189,6 +1305,7 @@
           "total_tokens": 3569,
           "latency_s": 21.91
         },
+        "input_images": 1,
         "wall_s": null
       },
       {
@@ -1221,6 +1338,7 @@
           "total_tokens": 3123,
           "latency_s": 12.01
         },
+        "input_images": 1,
         "wall_s": null
       },
       {
@@ -1253,6 +1371,7 @@
           "total_tokens": 6029,
           "latency_s": 35.72
         },
+        "input_images": 1,
         "wall_s": null
       },
       {
@@ -1285,6 +1404,7 @@
           "total_tokens": 3090,
           "latency_s": 11.62
         },
+        "input_images": 1,
         "wall_s": null
       },
       {
@@ -1317,6 +1437,7 @@
           "total_tokens": 3887,
           "latency_s": 17.25
         },
+        "input_images": 1,
         "wall_s": null
       },
       {
@@ -1349,6 +1470,7 @@
           "total_tokens": 3320,
           "latency_s": 14.87
         },
+        "input_images": 1,
         "wall_s": null
       },
       {
@@ -1381,6 +1503,7 @@
           "total_tokens": 3979,
           "latency_s": 17.9
         },
+        "input_images": 1,
         "wall_s": null
       },
       {
@@ -1413,6 +1536,7 @@
           "total_tokens": 3128,
           "latency_s": 13.19
         },
+        "input_images": 1,
         "wall_s": null
       },
       {
@@ -1445,6 +1569,7 @@
           "total_tokens": 5071,
           "latency_s": 25.04
         },
+        "input_images": 1,
         "wall_s": null
       },
       {
@@ -1477,6 +1602,7 @@
           "total_tokens": 2606,
           "latency_s": 9.91
         },
+        "input_images": 1,
         "wall_s": null
       },
       {
@@ -1509,6 +1635,7 @@
           "total_tokens": 4254,
           "latency_s": 19.89
         },
+        "input_images": 1,
         "wall_s": null
       },
       {
@@ -1541,6 +1668,7 @@
           "total_tokens": 2873,
           "latency_s": 11.0
         },
+        "input_images": 1,
         "wall_s": null
       },
       {
@@ -1573,6 +1701,7 @@
           "total_tokens": 3460,
           "latency_s": 13.7
         },
+        "input_images": 1,
         "wall_s": null
       },
       {
@@ -1605,6 +1734,7 @@
           "total_tokens": 3576,
           "latency_s": 14.72
         },
+        "input_images": 1,
         "wall_s": null
       },
       {
@@ -1637,6 +1767,7 @@
           "total_tokens": 3531,
           "latency_s": 14.96
         },
+        "input_images": 1,
         "wall_s": null
       },
       {
@@ -1669,6 +1800,7 @@
           "total_tokens": 3807,
           "latency_s": 17.41
         },
+        "input_images": 1,
         "wall_s": null
       },
       {
@@ -1701,6 +1833,7 @@
           "total_tokens": 3051,
           "latency_s": 12.83
         },
+        "input_images": 1,
         "wall_s": null
       },
       {
@@ -1733,6 +1866,7 @@
           "total_tokens": 2994,
           "latency_s": 11.67
         },
+        "input_images": 1,
         "wall_s": null
       },
       {
@@ -1765,6 +1899,7 @@
           "total_tokens": 3286,
           "latency_s": 14.88
         },
+        "input_images": 1,
         "wall_s": null
       }
     ]

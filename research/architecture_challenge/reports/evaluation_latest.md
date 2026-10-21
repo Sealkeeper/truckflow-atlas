@@ -4,14 +4,14 @@ Primary truth: `accuracy/reviewed/user-final-review-v2-2026-10-21.json` (confirm
 Required frames: north_300, north_600, south_600, north_1200, south_1200
 This is a five-frame diagnostic set, not the 20-frame regression set.
 
-| Architecture | Present | Human count exact | Count MAE | Miss | Extra | v0 full exact (diag) | v0 type exact (diag) | Calls | Failed | Tokens | Wall s |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| Doubao whole frame | 5/5 | 3 | 0.600 | 3 | 0 | 2 | 2 | 5 | 0 | 18299 | 79.1 |
-| A: perspective depth bands | 5/5 | 2 | 0.600 | 1 | 2 | 1 | 1 | 48 | 0 | 129196 | 417.2 |
-| A′: tight lane windows | 5/5 | 4 | 0.200 | 0 | 1 | 3 | 3 | 51 | 0 | 143325 | 544.1 |
-| B: recursive region tree | 5/5 | 1 | 1.000 | 1 | 4 | 0 | 0 | 91 | 0 | 291099 | 1166.5 |
-| C: lane scene graph | 5/5 | 2 | 0.800 | 4 | 0 | 1 | 1 | 21 | 0 | 67228 | 224.8 |
-| D: annotated critic loop | 5/5 | 3 | 0.600 | 3 | 0 | 1 | 1 | 27 | 0 | 94346 | 339.1 |
+| Architecture | Valid / required | Human count exact (of required) | Count MAE (valid) | Miss | Extra | v0 full exact (diag) | v0 type exact (diag) | Calls | Failed | Images | Tokens | Wall mean s | Wall p95 s |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Doubao whole frame | 5/5 | 3/5 | 0.600 | 3 | 0 | 2 | 2 | 5 | 0 | 5 | 18299 | 15.8 | 25.0 |
+| A: perspective depth bands | 5/5 | 2/5 | 0.600 | 1 | 2 | 1 | 1 | 48 | 0 | 48 | 129196 | 83.4 | 96.5 |
+| A′: tight lane windows | 5/5 | 4/5 | 0.200 | 0 | 1 | 3 | 3 | 51 | 0 | 51 | 143325 | 108.8 | 142.7 |
+| B: recursive region tree | 5/5 | 1/5 | 1.000 | 1 | 4 | 0 | 0 | 91 | 0 | 91 | 291099 | 233.3 | 313.3 |
+| C: lane scene graph | 5/5 | 2/5 | 0.800 | 4 | 0 | 1 | 1 | 21 | 0 | 21 | 67228 | 45.0 | 70.6 |
+| D: annotated critic loop | 5/5 | 3/5 | 0.600 | 3 | 0 | 1 | 1 | 27 | 0 | 32 | 94346 | 67.8 | 112.1 |
 
 ## Per-frame total counts (human / prediction)
 

@@ -106,6 +106,15 @@ def _baseline_cost(payload: dict[str, Any]) -> dict[str, int | float]:
     }
 
 
+def _percentile(values: list[float], q: float) -> float:
+    """Nearest-rank percentile; avoids interpolating over few samples."""
+    if not values:
+        return 0.0
+    ordered = sorted(values)
+    index = max(0, min(len(ordered) - 1, int(round(q * (len(ordered) - 1)))))
+    return round(ordered[index], 2)
+
+
 def summarize(
     architecture: str,
     spec: dict[str, Any],
@@ -144,6 +153,11 @@ def summarize(
             if spec["loader"] == "baseline"
             else payload.get("cost") or {}
         )
+        input_images = (
+            sum(len(call.get("images") or []) for call in payload.get("calls") or [])
+            if spec["loader"] == "run"
+            else 1
+        )
         row.update(
             counts=counts,
             count_error=human_error,
@@ -156,6 +170,7 @@ def summarize(
             v0_full_exact=metrics["exact"],
             v0_class_l1=metrics["class_l1"],
             cost=cost,
+            input_images=input_images,
             wall_s=payload.get("wall_s"),
         )
         rows.append(row)
@@ -163,14 +178,38 @@ def summarize(
     present = [row for row in rows if row.get("present")]
     n = len(present)
     denominator = max(1, n)
+    required = max(1, len(frames))
     costs = [row.get("cost") or {} for row in present]
+    latencies = [float(cost.get("latency_s") or 0) for cost in costs]
+    walls = [
+        float(row.get("wall_s") or (row.get("cost") or {}).get("latency_s") or 0)
+        for row in present
+    ]
     return {
         "architecture": architecture,
         "label": spec["label"],
         "frames_required": len(frames),
         "frames_present": n,
+        "valid_n": n,
+        "count_exact_of_required": f"{sum(bool(row['count_exact']) for row in present)}/{len(frames)}",
+        "count_exact_rate_of_required": round(
+            100.0 * sum(bool(row["count_exact"]) for row in present) / required, 1
+        ),
+        "missing_samples": [
+            row["sample"] for row in rows if not row.get("present")
+        ],
+        "failed_samples": [
+            row["sample"]
+            for row in present
+            if int((row.get("cost") or {}).get("failed_calls") or 0) > 0
+        ],
         "count_exact": sum(bool(row["count_exact"]) for row in present),
+        # Valid-sample MAE (missing/failed samples excluded from the mean, but
+        # still listed above and counted in the fixed required denominator).
         "count_mae": round(sum(abs(row["count_error"]) for row in present) / denominator, 3),
+        "count_mae_fixed_denominator": round(
+            sum(abs(row["count_error"]) for row in present) / required, 3
+        ),
         "miss_units": sum(row["miss"] for row in present),
         "extra_units": sum(row["extra"] for row in present),
         "v0_count_exact": sum(bool(row["v0_count_exact"]) for row in present),
@@ -179,6 +218,7 @@ def summarize(
         "v0_class_l1": sum(row["v0_class_l1"] for row in present),
         "calls": sum(int(cost.get("calls") or 0) for cost in costs),
         "failed_calls": sum(int(cost.get("failed_calls") or 0) for cost in costs),
+        "input_images": sum(int(row.get("input_images") or 0) for row in present),
         "prompt_tokens": sum(int(cost.get("prompt_tokens") or 0) for cost in costs),
         "completion_tokens": sum(
             int(cost.get("completion_tokens") or 0) for cost in costs
@@ -187,6 +227,10 @@ def summarize(
         "summed_call_latency_s": round(
             sum(float(cost.get("latency_s") or 0) for cost in costs), 2
         ),
+        "call_latency_mean_s": round(sum(latencies) / denominator, 2),
+        "call_latency_p95_s": _percentile(latencies, 0.95),
+        "wall_mean_s": round(sum(walls) / denominator, 2),
+        "wall_p95_s": _percentile(walls, 0.95),
         "summed_wall_s": round(
             sum(
                 float(row.get("wall_s") or (row.get("cost") or {}).get("latency_s") or 0)
@@ -199,31 +243,38 @@ def summarize(
 
 
 def markdown(summary: dict[str, Any]) -> str:
+    frames = [tuple(item.rsplit("_", 1)) for item in summary["frames"]]
+    frames = [(camera, int(time_s)) for camera, time_s in frames]
+    regression = len(frames) == 20
     lines = [
         "# Architecture challenge evaluation",
         "",
         "Primary truth: `accuracy/reviewed/user-final-review-v2-2026-10-21.json` "
         "(confirmed user review, per-camera totals).",
-        "Required frames: " + ", ".join(f"{c}_{t}" for c, t in REQUIRED),
-        "This is a five-frame diagnostic set, not the 20-frame regression set.",
+        "Required frames: " + ", ".join(f"{c}_{t}" for c, t in frames),
+        (
+            "This is the 20-camera regression set (development data)."
+            if regression
+            else "This is a five-frame diagnostic set, not the 20-frame regression set."
+        ),
         "",
-        "| Architecture | Present | Human count exact | Count MAE | Miss | Extra | v0 full exact (diag) | v0 type exact (diag) | Calls | Failed | Tokens | Wall s |",
-        "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
+        "| Architecture | Valid / required | Human count exact (of required) | Count MAE (valid) | Miss | Extra | v0 full exact (diag) | v0 type exact (diag) | Calls | Failed | Images | Tokens | Wall mean s | Wall p95 s |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for item in summary["architectures"]:
         lines.append(
-            "| {label} | {frames_present}/{frames_required} | {count_exact} | "
+            "| {label} | {frames_present}/{frames_required} | {count_exact_of_required} | "
             "{count_mae:.3f} | {miss_units} | {extra_units} | {v0_full_exact} | "
-            "{v0_type_exact} | {calls} | {failed_calls} | {total_tokens} | "
-            "{summed_wall_s:.1f} |".format(**item)
+            "{v0_type_exact} | {calls} | {failed_calls} | {input_images} | "
+            "{total_tokens} | {wall_mean_s:.1f} | {wall_p95_s:.1f} |".format(**item)
         )
     lines += ["", "## Per-frame total counts (human / prediction)", ""]
-    lines.append("| Architecture | " + " | ".join(f"{c}_{t}" for c, t in REQUIRED) + " |")
-    lines.append("|---|" + "---:|" * len(REQUIRED))
+    lines.append("| Architecture | " + " | ".join(f"{c}_{t}" for c, t in frames) + " |")
+    lines.append("|---|" + "---:|" * len(frames))
     for item in summary["architectures"]:
         by_sample = {row["sample"]: row for row in item["rows"]}
         cells = []
-        for camera, time_s in REQUIRED:
+        for camera, time_s in frames:
             row = by_sample[f"{camera}_{time_s}"]
             if not row.get("present"):
                 cells.append("missing")
@@ -236,16 +287,15 @@ def markdown(summary: dict[str, Any]) -> str:
         "confirmed metric. The v0 full/type columns use the older provisional "
         "`camera_counts_v0` labels and are diagnostic only.",
     ]
-    regression = summary.get("baseline_20_frame")
-    if regression:
+    baseline = summary.get("baseline_20_frame")
+    if baseline and not regression:
         lines += [
             "",
             "## 20-frame regression set (baseline only)",
             "",
-            f"Doubao whole frame: {regression['count_exact']}/"
-            f"{regression['frames_present']} human count exact, "
-            f"MAE {regression['count_mae']:.3f}, "
-            f"miss {regression['miss_units']}, extra {regression['extra_units']}.",
+            f"Doubao whole frame: {baseline['count_exact_of_required']} human count exact, "
+            f"MAE {baseline['count_mae']:.3f}, "
+            f"miss {baseline['miss_units']}, extra {baseline['extra_units']}.",
         ]
     lines.append("")
     return "\n".join(lines)
@@ -260,15 +310,28 @@ def main() -> None:
     )
     parser.add_argument("--out", default=str(REPORTS / "evaluation_latest.json"))
     parser.add_argument("--markdown-out", default=str(REPORTS / "evaluation_latest.md"))
+    parser.add_argument(
+        "--frame-set",
+        choices=("diagnostic", "regression20"),
+        default="diagnostic",
+        help="diagnostic = fixed five frames; regression20 = all 20 human-review samples",
+    )
     args = parser.parse_args()
 
     gold = load_gold()
     human = load_human_counts()
     selected = [name.strip() for name in args.architectures.split(",") if name.strip()]
+    frames = (
+        sorted(human, key=lambda item: (item[1], item[0]))
+        if args.frame_set == "regression20"
+        else REQUIRED
+    )
     summary = {
-        "required_frames": [f"{c}_{t}" for c, t in REQUIRED],
+        "frame_set": args.frame_set,
+        "required_frames": [f"{c}_{t}" for c, t in frames],
+        "frames": [f"{c}_{t}" for c, t in frames],
         "architectures": [
-            summarize(name, ARCHITECTURES[name], gold, human, frames=REQUIRED)
+            summarize(name, ARCHITECTURES[name], gold, human, frames=frames)
             for name in selected
         ],
         "baseline_20_frame": summarize(
