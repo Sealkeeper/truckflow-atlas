@@ -1,0 +1,178 @@
+{
+  "sample_id": "north_2400",
+  "camera": "north",
+  "time": 2400,
+  "truth": 3,
+  "config": "B_aisle",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\north_2400.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\north_2400.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 15.92,
+      "usage": {
+        "completion_tokens": 1835,
+        "prompt_tokens": 2334,
+        "total_tokens": 4169,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1253
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              0.335,
+              0.62,
+              0.64,
+              0.998
+            ],
+            "roof_color": "浅灰",
+            "cargo_color": "红",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "box_truck",
+            "readable_text": [],
+            "visibility": "full",
+            "confidence": 0.9,
+            "evidence": "位于画面下方中央，完整可见的货车车体，车头部分在左，货厢延伸至画面底部"
+          },
+          {
+            "bbox": [
+              0.402,
+              0.253,
+              0.552,
+              0.448
+            ],
+            "roof_color": "红",
+            "cargo_color": "红",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.9,
+            "evidence": "位于前景货车后方，独立的货厢，无可见车头，部分被后方集装箱遮挡"
+          },
+          {
+            "bbox": [
+              0.428,
+              0.148,
+              0.608,
+              0.283
+            ],
+            "roof_color": "红",
+            "cargo_color": "红",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "tractor_trailer",
+            "readable_text": [
+              "73778"
+            ],
+            "visibility": "partial",
+            "confidence": 0.9,
+            "evidence": "画面上部中央远端的牵引车加挂车，部分可见，箱体有清晰编号"
+          }
+        ],
+        "counts": {
+          "total": 3
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 3,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "扫描覆盖了画面上部远端、左右边缘及所有被遮挡区域，无未确认的漏计风险"
+        },
+        "scene_notes": "展会撤展现场中央通道，多辆货车分布，部分被展台、人群及其他车辆遮挡，远端可见集装箱货车"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [0.335, 0.62, 0.64, 0.998],\n      \"roof_color\": \"浅灰\",\n      \"cargo_color\": \"红\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"full\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于画面下方中央，完整可见的货车车体，车头部分在左，货厢延伸至画面底部\"\n    },\n    {\n      \"bbox\": [0.402, 0.253, 0.552, 0.448],\n      \"roof_color\": \"红\",\n      \"cargo_color\": \"红\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于前景货车后方，独立的货厢，无可见车头，部分被后方集装箱遮挡\"\n    },\n    {\n      \"bbox\": [0.428, 0.148, 0.608, 0.283],\n      \"roof_color\": \"红\",\n      \"cargo_color\": \"红\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"tractor_trailer\",\n      \"readable_text\": [\"73778\"],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.9,\n      \"evidence\": \"画面上部中央远端的牵引车加挂车，部分可见，箱体有清晰编号\"\n    }\n  ],\n  \"counts\": {\"total\": 3},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 3,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"扫描覆盖了画面上部远端、左右边缘及所有被遮挡区域，无未确认的漏计风险\"\n  },\n  \"scene_notes\": \"展会撤展现场中央通道，多辆货车分布，部分被展台、人群及其他车辆遮挡，远端可见集装箱货车\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.335,
+        0.62,
+        0.64,
+        0.998
+      ],
+      "roof_color": "浅灰",
+      "cargo_color": "红",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "box_truck",
+      "readable_text": [],
+      "visibility": "full",
+      "confidence": 0.9,
+      "evidence": "位于画面下方中央，完整可见的货车车体，车头部分在左，货厢延伸至画面底部"
+    },
+    {
+      "bbox": [
+        0.402,
+        0.253,
+        0.552,
+        0.448
+      ],
+      "roof_color": "红",
+      "cargo_color": "红",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.9,
+      "evidence": "位于前景货车后方，独立的货厢，无可见车头，部分被后方集装箱遮挡"
+    },
+    {
+      "bbox": [
+        0.428,
+        0.148,
+        0.608,
+        0.283
+      ],
+      "roof_color": "红",
+      "cargo_color": "红",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "tractor_trailer",
+      "readable_text": [
+        "73778"
+      ],
+      "visibility": "partial",
+      "confidence": 0.9,
+      "evidence": "画面上部中央远端的牵引车加挂车，部分可见，箱体有清晰编号"
+    }
+  ],
+  "predicted_count": 3,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 3,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "扫描覆盖了画面上部远端、左右边缘及所有被遮挡区域，无未确认的漏计风险"
+  },
+  "latency_total_s": 15.92,
+  "tokens_total": 4169
+}

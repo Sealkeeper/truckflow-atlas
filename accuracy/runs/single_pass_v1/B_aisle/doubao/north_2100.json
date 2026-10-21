@@ -1,0 +1,146 @@
+{
+  "sample_id": "north_2100",
+  "camera": "north",
+  "time": 2100,
+  "truth": 2,
+  "config": "B_aisle",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\north_2100.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\north_2100.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 15.89,
+      "usage": {
+        "completion_tokens": 1812,
+        "prompt_tokens": 2334,
+        "total_tokens": 4146,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1365
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              415,
+              250,
+              555,
+              455
+            ],
+            "roof_color": "unclear",
+            "cargo_color": "红色",
+            "relation": "rigid",
+            "vehicle_type": "rigid_truck",
+            "readable_text": [],
+            "visibility": "full",
+            "confidence": 1.0,
+            "evidence": "位于中央通道上部，为独立的红色高栏货车，车体轮廓清晰可辨，符合计数要求"
+          },
+          {
+            "bbox": [
+              170,
+              620,
+              520,
+              998
+            ],
+            "roof_color": "灰色",
+            "cargo_color": "白色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [
+              "8A1162"
+            ],
+            "visibility": "full",
+            "confidence": 1.0,
+            "evidence": "位于画面左下角，为独立的集装箱挂车，无可见车头，符合trailer_only计数要求"
+          }
+        ],
+        "counts": {
+          "total": 2
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 0,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "扫描覆盖画面所有区域，远端未发现独立货车，左右边缘及遮挡区域均已检查"
+        },
+        "scene_notes": "本次统计范围内共识别2辆符合要求的货车，叉车、堆叠纸箱、展台结构、人物等不计入；红色高栏货车位于中央通道上部，白色集装箱挂车位于左下角"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [415, 250, 555, 455],\n      \"roof_color\": \"unclear\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"rigid\",\n      \"vehicle_type\": \"rigid_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"full\",\n      \"confidence\": 1.0,\n      \"evidence\": \"位于中央通道上部，为独立的红色高栏货车，车体轮廓清晰可辨，符合计数要求\"\n    },\n    {\n      \"bbox\": [170, 620, 520, 998],\n      \"roof_color\": \"灰色\",\n      \"cargo_color\": \"白色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [\"8A1162\"],\n      \"visibility\": \"full\",\n      \"confidence\": 1.0,\n      \"evidence\": \"位于画面左下角，为独立的集装箱挂车，无可见车头，符合trailer_only计数要求\"\n    }\n  ],\n  \"counts\": {\"total\": 2},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 0,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"扫描覆盖画面所有区域，远端未发现独立货车，左右边缘及遮挡区域均已检查\"\n  },\n  \"scene_notes\": \"本次统计范围内共识别2辆符合要求的货车，叉车、堆叠纸箱、展台结构、人物等不计入；红色高栏货车位于中央通道上部，白色集装箱挂车位于左下角\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.415,
+        0.25,
+        0.555,
+        0.455
+      ],
+      "roof_color": "unclear",
+      "cargo_color": "红色",
+      "relation": "rigid",
+      "vehicle_type": "rigid_truck",
+      "readable_text": [],
+      "visibility": "full",
+      "confidence": 1.0,
+      "evidence": "位于中央通道上部，为独立的红色高栏货车，车体轮廓清晰可辨，符合计数要求"
+    },
+    {
+      "bbox": [
+        0.17,
+        0.62,
+        0.52,
+        0.998
+      ],
+      "roof_color": "灰色",
+      "cargo_color": "白色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [
+        "8A1162"
+      ],
+      "visibility": "full",
+      "confidence": 1.0,
+      "evidence": "位于画面左下角，为独立的集装箱挂车，无可见车头，符合trailer_only计数要求"
+    }
+  ],
+  "predicted_count": 2,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 0,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "扫描覆盖画面所有区域，远端未发现独立货车，左右边缘及遮挡区域均已检查"
+  },
+  "latency_total_s": 15.89,
+  "tokens_total": 4146
+}

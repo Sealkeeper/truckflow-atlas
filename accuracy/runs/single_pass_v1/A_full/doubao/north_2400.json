@@ -1,0 +1,174 @@
+{
+  "sample_id": "north_2400",
+  "camera": "north",
+  "time": 2400,
+  "truth": 3,
+  "config": "A_full",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "18b6c680e78863458b69f67d2ddbb47f9607308e603c5a95e95e612b34c53684",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\full\\north_2400.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\full\\north_2400.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 17.1,
+      "usage": {
+        "completion_tokens": 2037,
+        "prompt_tokens": 2345,
+        "total_tokens": 4382,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1480
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              415,
+              610,
+              560,
+              999
+            ],
+            "roof_color": "银灰色",
+            "cargo_color": "红色",
+            "relation": "rigid",
+            "vehicle_type": "box_truck",
+            "readable_text": [],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于中央通道最下部，左右为两侧展台边线，独立可辨，无遮挡"
+          },
+          {
+            "bbox": [
+              430,
+              250,
+              515,
+              450
+            ],
+            "roof_color": "unclear",
+            "cargo_color": "红色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [],
+            "visibility": "full",
+            "confidence": 0.9,
+            "evidence": "中央通道中部，独立货厢，无可见车头，独立停放"
+          },
+          {
+            "bbox": [
+              440,
+              150,
+              540,
+              270
+            ],
+            "roof_color": "unclear",
+            "cargo_color": "红色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "tractor_trailer",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.85,
+            "evidence": "中央通道最上部，靠近顶部门洞，牵引车与挂车连接，部分被远处人员遮挡"
+          }
+        ],
+        "counts": {
+          "total": 3
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 3,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "已逐排检查中央通道上部远端车辆，确认相邻车体分界清晰，左右边缘及遮挡区域均无漏计"
+        },
+        "scene_notes": "中央南北通道内共3辆独立货车，均符合统计范围，部分车辆存在轻微遮挡但不影响识别，无其他不确定候选车辆"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [415, 610, 560, 999],\n      \"roof_color\": \"银灰色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"rigid\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于中央通道最下部，左右为两侧展台边线，独立可辨，无遮挡\"\n    },\n    {\n      \"bbox\": [430, 250, 515, 450],\n      \"roof_color\": \"unclear\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [],\n      \"visibility\": \"full\",\n      \"confidence\": 0.9,\n      \"evidence\": \"中央通道中部，独立货厢，无可见车头，独立停放\"\n    },\n    {\n      \"bbox\": [440, 150, 540, 270],\n      \"roof_color\": \"unclear\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"tractor_trailer\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.85,\n      \"evidence\": \"中央通道最上部，靠近顶部门洞，牵引车与挂车连接，部分被远处人员遮挡\"\n    }\n  ],\n  \"counts\": {\"total\": 3},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 3,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"已逐排检查中央通道上部远端车辆，确认相邻车体分界清晰，左右边缘及遮挡区域均无漏计\"\n  },\n  \"scene_notes\": \"中央南北通道内共3辆独立货车，均符合统计范围，部分车辆存在轻微遮挡但不影响识别，无其他不确定候选车辆\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.415,
+        0.61,
+        0.56,
+        0.999
+      ],
+      "roof_color": "银灰色",
+      "cargo_color": "红色",
+      "relation": "rigid",
+      "vehicle_type": "box_truck",
+      "readable_text": [],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于中央通道最下部，左右为两侧展台边线，独立可辨，无遮挡"
+    },
+    {
+      "bbox": [
+        0.43,
+        0.25,
+        0.515,
+        0.45
+      ],
+      "roof_color": "unclear",
+      "cargo_color": "红色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [],
+      "visibility": "full",
+      "confidence": 0.9,
+      "evidence": "中央通道中部，独立货厢，无可见车头，独立停放"
+    },
+    {
+      "bbox": [
+        0.44,
+        0.15,
+        0.54,
+        0.27
+      ],
+      "roof_color": "unclear",
+      "cargo_color": "红色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "tractor_trailer",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.85,
+      "evidence": "中央通道最上部，靠近顶部门洞，牵引车与挂车连接，部分被远处人员遮挡"
+    }
+  ],
+  "predicted_count": 3,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 3,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "已逐排检查中央通道上部远端车辆，确认相邻车体分界清晰，左右边缘及遮挡区域均无漏计"
+  },
+  "latency_total_s": 17.1,
+  "tokens_total": 4382
+}

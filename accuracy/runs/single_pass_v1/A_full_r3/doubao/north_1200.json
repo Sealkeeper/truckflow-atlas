@@ -1,0 +1,184 @@
+{
+  "sample_id": "north_1200",
+  "camera": "north",
+  "time": 1200,
+  "truth": 3,
+  "config": "A_full",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "18b6c680e78863458b69f67d2ddbb47f9607308e603c5a95e95e612b34c53684",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\full\\north_1200.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\full\\north_1200.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 23.68,
+      "usage": {
+        "completion_tokens": 2706,
+        "prompt_tokens": 2345,
+        "total_tokens": 5051,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2115
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              355,
+              615,
+              485,
+              998
+            ],
+            "roof_color": "白色",
+            "cargo_color": "灰色",
+            "relation": "trailer_only",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "MAC1162"
+            ],
+            "visibility": "partial",
+            "confidence": 0.95,
+            "evidence": "位于中央通道下部，为独立停放的白色波纹厢式货厢，底部可见文字标识，边界清晰，符合统计范围"
+          },
+          {
+            "bbox": [
+              412,
+              352,
+              488,
+              618
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "trailer_only",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "9L86",
+              "980"
+            ],
+            "visibility": "full",
+            "confidence": 0.98,
+            "evidence": "位于中央通道中部，为独立停放的红色封闭货厢，尾门标识清晰，边界完整，符合统计范围"
+          },
+          {
+            "bbox": [
+              448,
+              162,
+              502,
+              318
+            ],
+            "roof_color": "蓝色",
+            "cargo_color": "深灰色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.9,
+            "evidence": "位于中央通道上部远端，为独立停放的货厢，顶棚蓝色，边界可辨，符合统计范围"
+          }
+        ],
+        "counts": {
+          "total": 3
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 3,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "中央通道内所有符合统计范围的车辆均已扫描，无遗漏"
+        },
+        "scene_notes": "本次统计仅针对画面中央南北向通道内的车辆，排除两侧展台及边缘露出的车辆，共统计到3辆独立货厢，均无牵引车连接，符合计数规则"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [355, 615, 485, 998],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"灰色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"MAC1162\"],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于中央通道下部，为独立停放的白色波纹厢式货厢，底部可见文字标识，边界清晰，符合统计范围\"\n    },\n    {\n      \"bbox\": [412, 352, 488, 618],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"9L86\", \"980\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.98,\n      \"evidence\": \"位于中央通道中部，为独立停放的红色封闭货厢，尾门标识清晰，边界完整，符合统计范围\"\n    },\n    {\n      \"bbox\": [448, 162, 502, 318],\n      \"roof_color\": \"蓝色\",\n      \"cargo_color\": \"深灰色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于中央通道上部远端，为独立停放的货厢，顶棚蓝色，边界可辨，符合统计范围\"\n    }\n  ],\n  \"counts\": {\"total\": 3},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 3,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"中央通道内所有符合统计范围的车辆均已扫描，无遗漏\"\n  },\n  \"scene_notes\": \"本次统计仅针对画面中央南北向通道内的车辆，排除两侧展台及边缘露出的车辆，共统计到3辆独立货厢，均无牵引车连接，符合计数规则\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.355,
+        0.615,
+        0.485,
+        0.998
+      ],
+      "roof_color": "白色",
+      "cargo_color": "灰色",
+      "relation": "trailer_only",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "MAC1162"
+      ],
+      "visibility": "partial",
+      "confidence": 0.95,
+      "evidence": "位于中央通道下部，为独立停放的白色波纹厢式货厢，底部可见文字标识，边界清晰，符合统计范围"
+    },
+    {
+      "bbox": [
+        0.412,
+        0.352,
+        0.488,
+        0.618
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "trailer_only",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "9L86",
+        "980"
+      ],
+      "visibility": "full",
+      "confidence": 0.98,
+      "evidence": "位于中央通道中部，为独立停放的红色封闭货厢，尾门标识清晰，边界完整，符合统计范围"
+    },
+    {
+      "bbox": [
+        0.448,
+        0.162,
+        0.502,
+        0.318
+      ],
+      "roof_color": "蓝色",
+      "cargo_color": "深灰色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.9,
+      "evidence": "位于中央通道上部远端，为独立停放的货厢，顶棚蓝色，边界可辨，符合统计范围"
+    }
+  ],
+  "predicted_count": 3,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 3,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "中央通道内所有符合统计范围的车辆均已扫描，无遗漏"
+  },
+  "latency_total_s": 23.68,
+  "tokens_total": 5051
+}

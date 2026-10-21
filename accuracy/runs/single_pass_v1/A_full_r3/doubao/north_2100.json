@@ -1,0 +1,146 @@
+{
+  "sample_id": "north_2100",
+  "camera": "north",
+  "time": 2100,
+  "truth": 2,
+  "config": "A_full",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "18b6c680e78863458b69f67d2ddbb47f9607308e603c5a95e95e612b34c53684",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\full\\north_2100.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\full\\north_2100.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 22.16,
+      "usage": {
+        "completion_tokens": 2229,
+        "prompt_tokens": 2345,
+        "total_tokens": 4574,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1761
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              0.335,
+              0.26,
+              0.388,
+              0.467
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "rigid",
+            "vehicle_type": "rigid_truck",
+            "readable_text": [],
+            "visibility": "full",
+            "confidence": 0.9,
+            "evidence": "位于中央南北通道中上部，独立可辨的高栏货车，周围为施工人员，边界清晰"
+          },
+          {
+            "bbox": [
+              0.36,
+              0.62,
+              0.48,
+              0.997
+            ],
+            "roof_color": "白色",
+            "cargo_color": "灰色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [
+              "MAC1152"
+            ],
+            "visibility": "partial",
+            "confidence": 0.95,
+            "evidence": "位于中央南北通道下部，仅可见货厢部分，无可见车头，独立停放，底部被画面底边截断"
+          }
+        ],
+        "counts": {
+          "total": 2
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 1,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "本次扫描覆盖中央南北通道全部区域，远端、边缘、遮挡区域均已检查，无漏计风险"
+        },
+        "scene_notes": "中央通道内共2辆符合要求的货车，分别为上部红色高栏货车、下部白色厢式挂车，叉车、施工人员、展台结构等不计入，无其他符合要求的车辆"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [0.335, 0.26, 0.388, 0.467],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"rigid\",\n      \"vehicle_type\": \"rigid_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"full\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于中央南北通道中上部，独立可辨的高栏货车，周围为施工人员，边界清晰\"\n    },\n    {\n      \"bbox\": [0.36, 0.62, 0.48, 0.997],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"灰色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [\"MAC1152\"],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于中央南北通道下部，仅可见货厢部分，无可见车头，独立停放，底部被画面底边截断\"\n    }\n  ],\n  \"counts\": {\"total\": 2},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 1,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"本次扫描覆盖中央南北通道全部区域，远端、边缘、遮挡区域均已检查，无漏计风险\"\n  },\n  \"scene_notes\": \"中央通道内共2辆符合要求的货车，分别为上部红色高栏货车、下部白色厢式挂车，叉车、施工人员、展台结构等不计入，无其他符合要求的车辆\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.335,
+        0.26,
+        0.388,
+        0.467
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "rigid",
+      "vehicle_type": "rigid_truck",
+      "readable_text": [],
+      "visibility": "full",
+      "confidence": 0.9,
+      "evidence": "位于中央南北通道中上部，独立可辨的高栏货车，周围为施工人员，边界清晰"
+    },
+    {
+      "bbox": [
+        0.36,
+        0.62,
+        0.48,
+        0.997
+      ],
+      "roof_color": "白色",
+      "cargo_color": "灰色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [
+        "MAC1152"
+      ],
+      "visibility": "partial",
+      "confidence": 0.95,
+      "evidence": "位于中央南北通道下部，仅可见货厢部分，无可见车头，独立停放，底部被画面底边截断"
+    }
+  ],
+  "predicted_count": 2,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 1,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "本次扫描覆盖中央南北通道全部区域，远端、边缘、遮挡区域均已检查，无漏计风险"
+  },
+  "latency_total_s": 22.16,
+  "tokens_total": 4574
+}

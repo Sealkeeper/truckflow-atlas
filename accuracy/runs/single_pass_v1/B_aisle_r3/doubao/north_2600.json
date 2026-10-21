@@ -1,0 +1,160 @@
+{
+  "sample_id": "north_2600",
+  "camera": "north",
+  "time": 2600,
+  "truth": 2,
+  "config": "B_aisle",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\north_2600.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\north_2600.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 16.39,
+      "usage": {
+        "completion_tokens": 1624,
+        "prompt_tokens": 2334,
+        "total_tokens": 3958,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1135
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              318,
+              388,
+              522,
+              688
+            ],
+            "roof_color": "红棕色",
+            "cargo_color": "红棕色",
+            "relation": "trailer_only",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "粤T73778",
+              "强力顺"
+            ],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于中央通道中间，车尾朝向镜头，完整可见的独立货厢，可识别车牌及箱体文字"
+          },
+          {
+            "bbox": [
+              148,
+              848,
+              488,
+              998
+            ],
+            "roof_color": "红棕色",
+            "cargo_color": "红棕色",
+            "relation": "unknown",
+            "vehicle_type": "rigid_truck",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.8,
+            "evidence": "位于画面左下角，仅露出顶部及部分货厢结构，为独立货车的可见部分"
+          }
+        ],
+        "counts": {
+          "total": 2
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 0,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [
+            {
+              "region": "far_top_center",
+              "appearance": "两个亮灯，疑似货车车灯",
+              "reason": "车体完全不可见，无法确认是否为独立货车"
+            }
+          ],
+          "notes": "扫描覆盖中央通道、左右边缘及远端区域，远端仅见疑似车灯无完整车体"
+        },
+        "scene_notes": "中央通道有2辆可见货车，左下角1辆部分可见，远端上方有疑似货车但车体不可识别"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [318, 388, 522, 688],\n      \"roof_color\": \"红棕色\",\n      \"cargo_color\": \"红棕色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"粤T73778\", \"强力顺\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于中央通道中间，车尾朝向镜头，完整可见的独立货厢，可识别车牌及箱体文字\"\n    },\n    {\n      \"bbox\": [148, 848, 488, 998],\n      \"roof_color\": \"红棕色\",\n      \"cargo_color\": \"红棕色\",\n      \"relation\": \"unknown\",\n      \"vehicle_type\": \"rigid_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.8,\n      \"evidence\": \"位于画面左下角，仅露出顶部及部分货厢结构，为独立货车的可见部分\"\n    }\n  ],\n  \"counts\": {\"total\": 2},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 0,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [\n      {\n        \"region\": \"far_top_center\",\n        \"appearance\": \"两个亮灯，疑似货车车灯\",\n        \"reason\": \"车体完全不可见，无法确认是否为独立货车\"\n      }\n    ],\n    \"notes\": \"扫描覆盖中央通道、左右边缘及远端区域，远端仅见疑似车灯无完整车体\"\n  },\n  \"scene_notes\": \"中央通道有2辆可见货车，左下角1辆部分可见，远端上方有疑似货车但车体不可识别\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.318,
+        0.388,
+        0.522,
+        0.688
+      ],
+      "roof_color": "红棕色",
+      "cargo_color": "红棕色",
+      "relation": "trailer_only",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "粤T73778",
+        "强力顺"
+      ],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于中央通道中间，车尾朝向镜头，完整可见的独立货厢，可识别车牌及箱体文字"
+    },
+    {
+      "bbox": [
+        0.148,
+        0.848,
+        0.488,
+        0.998
+      ],
+      "roof_color": "红棕色",
+      "cargo_color": "红棕色",
+      "relation": "unknown",
+      "vehicle_type": "rigid_truck",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.8,
+      "evidence": "位于画面左下角，仅露出顶部及部分货厢结构，为独立货车的可见部分"
+    }
+  ],
+  "predicted_count": 2,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 0,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [
+      {
+        "region": "far_top_center",
+        "appearance": "两个亮灯，疑似货车车灯",
+        "reason": "车体完全不可见，无法确认是否为独立货车"
+      }
+    ],
+    "notes": "扫描覆盖中央通道、左右边缘及远端区域，远端仅见疑似车灯无完整车体"
+  },
+  "latency_total_s": 16.39,
+  "tokens_total": 3958
+}

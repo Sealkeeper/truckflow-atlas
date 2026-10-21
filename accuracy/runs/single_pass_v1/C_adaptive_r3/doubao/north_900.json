@@ -1,0 +1,182 @@
+{
+  "sample_id": "north_900",
+  "camera": "north",
+  "time": 900,
+  "truth": 3,
+  "config": "C_adaptive",
+  "model": "doubao",
+  "prompt_version": "single-pass-adaptive-v1",
+  "prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\north_900.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\north_900.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 24.73,
+      "usage": {
+        "completion_tokens": 2751,
+        "prompt_tokens": 2334,
+        "total_tokens": 5085,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2140
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              160,
+              610,
+              540,
+              998
+            ],
+            "roof_color": "白色",
+            "cargo_color": "白色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "tractor_trailer",
+            "readable_text": [
+              "粤A G1182"
+            ],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于画面下方中央，牵引车与白色挂车直接连接，为独立可辨的完整货车，无遮挡导致无法确认的部分"
+          },
+          {
+            "bbox": [
+              325,
+              360,
+              545,
+              630
+            ],
+            "roof_color": "unclear",
+            "cargo_color": "红色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [
+              "9L88 980"
+            ],
+            "visibility": "full",
+            "confidence": 0.9,
+            "evidence": "位于中央通道左侧，独立停放的红色货厢，无可见车头，属于独立货车，货厢表面有可读数字标识"
+          },
+          {
+            "bbox": [
+              430,
+              155,
+              560,
+              290
+            ],
+            "roof_color": "蓝色",
+            "cargo_color": "unclear",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.85,
+            "evidence": "位于画面上部中央，带蓝色顶棚的独立货厢，无可见车头，部分被上方结构遮挡，仍可确认是独立货车"
+          }
+        ],
+        "counts": {
+          "total": 3
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 3,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "本次扫描覆盖中央通道及左右边缘、上部远端，所有可见独立货车均已确认，无未解决的候选车辆"
+        },
+        "scene_notes": "画面为展会撤展现场，中央通道内共3辆独立货车，人物、展台、手推车等非货车物体已排除，无其他符合要求的货车"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [160, 610, 540, 998],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"白色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"tractor_trailer\",\n      \"readable_text\": [\"粤A G1182\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于画面下方中央，牵引车与白色挂车直接连接，为独立可辨的完整货车，无遮挡导致无法确认的部分\"\n    },\n    {\n      \"bbox\": [325, 360, 545, 630],\n      \"roof_color\": \"unclear\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [\"9L88 980\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于中央通道左侧，独立停放的红色货厢，无可见车头，属于独立货车，货厢表面有可读数字标识\"\n    },\n    {\n      \"bbox\": [430, 155, 560, 290],\n      \"roof_color\": \"蓝色\",\n      \"cargo_color\": \"unclear\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.85,\n      \"evidence\": \"位于画面上部中央，带蓝色顶棚的独立货厢，无可见车头，部分被上方结构遮挡，仍可确认是独立货车\"\n    }\n  ],\n  \"counts\": {\"total\": 3},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 3,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"本次扫描覆盖中央通道及左右边缘、上部远端，所有可见独立货车均已确认，无未解决的候选车辆\"\n  },\n  \"scene_notes\": \"画面为展会撤展现场，中央通道内共3辆独立货车，人物、展台、手推车等非货车物体已排除，无其他符合要求的货车\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.16,
+        0.61,
+        0.54,
+        0.998
+      ],
+      "roof_color": "白色",
+      "cargo_color": "白色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "tractor_trailer",
+      "readable_text": [
+        "粤A G1182"
+      ],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于画面下方中央，牵引车与白色挂车直接连接，为独立可辨的完整货车，无遮挡导致无法确认的部分"
+    },
+    {
+      "bbox": [
+        0.325,
+        0.36,
+        0.545,
+        0.63
+      ],
+      "roof_color": "unclear",
+      "cargo_color": "红色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [
+        "9L88 980"
+      ],
+      "visibility": "full",
+      "confidence": 0.9,
+      "evidence": "位于中央通道左侧，独立停放的红色货厢，无可见车头，属于独立货车，货厢表面有可读数字标识"
+    },
+    {
+      "bbox": [
+        0.43,
+        0.155,
+        0.56,
+        0.29
+      ],
+      "roof_color": "蓝色",
+      "cargo_color": "unclear",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.85,
+      "evidence": "位于画面上部中央，带蓝色顶棚的独立货厢，无可见车头，部分被上方结构遮挡，仍可确认是独立货车"
+    }
+  ],
+  "predicted_count": 3,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 3,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "本次扫描覆盖中央通道及左右边缘、上部远端，所有可见独立货车均已确认，无未解决的候选车辆"
+  },
+  "latency_total_s": 24.73,
+  "tokens_total": 5085
+}

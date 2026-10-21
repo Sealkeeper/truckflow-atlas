@@ -1,0 +1,186 @@
+{
+  "sample_id": "north_300",
+  "camera": "north",
+  "time": 300,
+  "truth": 3,
+  "config": "B_aisle",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\north_300.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\north_300.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 16.36,
+      "usage": {
+        "completion_tokens": 1929,
+        "prompt_tokens": 2334,
+        "total_tokens": 4263,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1355
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              182,
+              578,
+              538,
+              997
+            ],
+            "roof_color": "白色",
+            "cargo_color": "深灰色",
+            "relation": "trailer_only",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "8A1176"
+            ],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于画面下方左侧，独立停放的大型货厢，车体完整可辨"
+          },
+          {
+            "bbox": [
+              402,
+              252,
+              548,
+              472
+            ],
+            "roof_color": "蓝色",
+            "cargo_color": "深灰色",
+            "relation": "trailer_only",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "JT62610"
+            ],
+            "visibility": "full",
+            "confidence": 0.9,
+            "evidence": "位于中央通道中间，独立停放的货厢，车顶为蓝色平顶"
+          },
+          {
+            "bbox": [
+              442,
+              162,
+              543,
+              248
+            ],
+            "roof_color": "深灰色",
+            "cargo_color": "深灰色",
+            "relation": "trailer_only",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "JT62610"
+            ],
+            "visibility": "full",
+            "confidence": 0.85,
+            "evidence": "位于中央通道上部，独立停放的货厢，车顶为深色平顶"
+          }
+        ],
+        "counts": {
+          "total": 3
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 3,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "本次扫描覆盖画面所有区域，包括上部远端、左右边缘及遮挡区域，无未确认的候选车体"
+        },
+        "scene_notes": "展会撤展现场，中央通道内有3个独立货厢，均为无牵引车的trailer_only类型，车体无明显遮挡，部分箱体文字可辨识"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [182, 578, 538, 997],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"深灰色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"8A1176\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于画面下方左侧，独立停放的大型货厢，车体完整可辨\"\n    },\n    {\n      \"bbox\": [402, 252, 548, 472],\n      \"roof_color\": \"蓝色\",\n      \"cargo_color\": \"深灰色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"JT62610\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于中央通道中间，独立停放的货厢，车顶为蓝色平顶\"\n    },\n    {\n      \"bbox\": [442, 162, 543, 248],\n      \"roof_color\": \"深灰色\",\n      \"cargo_color\": \"深灰色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"JT62610\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.85,\n      \"evidence\": \"位于中央通道上部，独立停放的货厢，车顶为深色平顶\"\n    }\n  ],\n  \"counts\": {\"total\": 3},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 3,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"本次扫描覆盖画面所有区域，包括上部远端、左右边缘及遮挡区域，无未确认的候选车体\"\n  },\n  \"scene_notes\": \"展会撤展现场，中央通道内有3个独立货厢，均为无牵引车的trailer_only类型，车体无明显遮挡，部分箱体文字可辨识\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.182,
+        0.578,
+        0.538,
+        0.997
+      ],
+      "roof_color": "白色",
+      "cargo_color": "深灰色",
+      "relation": "trailer_only",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "8A1176"
+      ],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于画面下方左侧，独立停放的大型货厢，车体完整可辨"
+    },
+    {
+      "bbox": [
+        0.402,
+        0.252,
+        0.548,
+        0.472
+      ],
+      "roof_color": "蓝色",
+      "cargo_color": "深灰色",
+      "relation": "trailer_only",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "JT62610"
+      ],
+      "visibility": "full",
+      "confidence": 0.9,
+      "evidence": "位于中央通道中间，独立停放的货厢，车顶为蓝色平顶"
+    },
+    {
+      "bbox": [
+        0.442,
+        0.162,
+        0.543,
+        0.248
+      ],
+      "roof_color": "深灰色",
+      "cargo_color": "深灰色",
+      "relation": "trailer_only",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "JT62610"
+      ],
+      "visibility": "full",
+      "confidence": 0.85,
+      "evidence": "位于中央通道上部，独立停放的货厢，车顶为深色平顶"
+    }
+  ],
+  "predicted_count": 3,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 3,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "本次扫描覆盖画面所有区域，包括上部远端、左右边缘及遮挡区域，无未确认的候选车体"
+  },
+  "latency_total_s": 16.36,
+  "tokens_total": 4263
+}

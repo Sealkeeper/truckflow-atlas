@@ -1,0 +1,182 @@
+{
+  "sample_id": "north_300",
+  "camera": "north",
+  "time": 300,
+  "truth": 3,
+  "config": "B_aisle",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\north_300.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\north_300.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 22.07,
+      "usage": {
+        "completion_tokens": 2848,
+        "prompt_tokens": 2334,
+        "total_tokens": 5182,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2252
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              182,
+              581,
+              538,
+              998
+            ],
+            "roof_color": "白色",
+            "cargo_color": "深灰色",
+            "relation": "trailer_only",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "粤A1176"
+            ],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于画面最下方，完整可见的独立集装箱货厢，无连接车头，符合计数要求"
+          },
+          {
+            "bbox": [
+              413,
+              256,
+              543,
+              473
+            ],
+            "roof_color": "蓝色",
+            "cargo_color": "深灰色",
+            "relation": "trailer_only",
+            "vehicle_type": "box_truck",
+            "readable_text": [],
+            "visibility": "full",
+            "confidence": 0.9,
+            "evidence": "位于中央通道中间左侧，独立的蓝色顶货厢，无连接车头，符合计数要求"
+          },
+          {
+            "bbox": [
+              445,
+              168,
+              532,
+              252
+            ],
+            "roof_color": "深灰色",
+            "cargo_color": "深灰色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [
+              "JT62610"
+            ],
+            "visibility": "partial",
+            "confidence": 0.85,
+            "evidence": "位于中央通道远端（上方），独立的小货厢，部分可见，符合计数要求"
+          }
+        ],
+        "counts": {
+          "total": 3
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 3,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "本次扫描覆盖了画面所有区域，包括远端、左右边缘及被遮挡的车体，未发现漏计的独立货车"
+        },
+        "scene_notes": "展会撤展现场，中央通道内共3辆独立货厢，均为无牵引车连接的拖车，底部集装箱完整可见，中间蓝色顶货厢，远端小货厢部分可见，无其他符合计数的车辆"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [182, 581, 538, 998],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"深灰色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"粤A1176\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于画面最下方，完整可见的独立集装箱货厢，无连接车头，符合计数要求\"\n    },\n    {\n      \"bbox\": [413, 256, 543, 473],\n      \"roof_color\": \"蓝色\",\n      \"cargo_color\": \"深灰色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"full\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于中央通道中间左侧，独立的蓝色顶货厢，无连接车头，符合计数要求\"\n    },\n    {\n      \"bbox\": [445, 168, 532, 252],\n      \"roof_color\": \"深灰色\",\n      \"cargo_color\": \"深灰色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [\"JT62610\"],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.85,\n      \"evidence\": \"位于中央通道远端（上方），独立的小货厢，部分可见，符合计数要求\"\n    }\n  ],\n  \"counts\": {\"total\": 3},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 3,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"本次扫描覆盖了画面所有区域，包括远端、左右边缘及被遮挡的车体，未发现漏计的独立货车\"\n  },\n  \"scene_notes\": \"展会撤展现场，中央通道内共3辆独立货厢，均为无牵引车连接的拖车，底部集装箱完整可见，中间蓝色顶货厢，远端小货厢部分可见，无其他符合计数的车辆\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.182,
+        0.581,
+        0.538,
+        0.998
+      ],
+      "roof_color": "白色",
+      "cargo_color": "深灰色",
+      "relation": "trailer_only",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "粤A1176"
+      ],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于画面最下方，完整可见的独立集装箱货厢，无连接车头，符合计数要求"
+    },
+    {
+      "bbox": [
+        0.413,
+        0.256,
+        0.543,
+        0.473
+      ],
+      "roof_color": "蓝色",
+      "cargo_color": "深灰色",
+      "relation": "trailer_only",
+      "vehicle_type": "box_truck",
+      "readable_text": [],
+      "visibility": "full",
+      "confidence": 0.9,
+      "evidence": "位于中央通道中间左侧，独立的蓝色顶货厢，无连接车头，符合计数要求"
+    },
+    {
+      "bbox": [
+        0.445,
+        0.168,
+        0.532,
+        0.252
+      ],
+      "roof_color": "深灰色",
+      "cargo_color": "深灰色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [
+        "JT62610"
+      ],
+      "visibility": "partial",
+      "confidence": 0.85,
+      "evidence": "位于中央通道远端（上方），独立的小货厢，部分可见，符合计数要求"
+    }
+  ],
+  "predicted_count": 3,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 3,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "本次扫描覆盖了画面所有区域，包括远端、左右边缘及被遮挡的车体，未发现漏计的独立货车"
+  },
+  "latency_total_s": 22.07,
+  "tokens_total": 5182
+}

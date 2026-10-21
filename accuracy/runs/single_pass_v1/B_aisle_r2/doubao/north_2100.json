@@ -1,0 +1,146 @@
+{
+  "sample_id": "north_2100",
+  "camera": "north",
+  "time": 2100,
+  "truth": 2,
+  "config": "B_aisle",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\north_2100.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\north_2100.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 19.82,
+      "usage": {
+        "completion_tokens": 2225,
+        "prompt_tokens": 2334,
+        "total_tokens": 4559,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1790
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              402,
+              251,
+              548,
+              449
+            ],
+            "roof_color": "unclear",
+            "cargo_color": "红色",
+            "relation": "rigid",
+            "vehicle_type": "rigid_truck",
+            "readable_text": [],
+            "visibility": "full",
+            "confidence": 0.9,
+            "evidence": "位于中央通道上部，为独立的红色厢式车体，整体可见，无连接其他车辆"
+          },
+          {
+            "bbox": [
+              171,
+              627,
+              512,
+              997
+            ],
+            "roof_color": "白色",
+            "cargo_color": "白色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [
+              "BAG1162"
+            ],
+            "visibility": "partial",
+            "confidence": 0.95,
+            "evidence": "位于画面左下角，为独立的长条形货厢，底部可见文字，车体部分露出画面下边缘"
+          }
+        ],
+        "counts": {
+          "total": 2
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 1,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "扫描覆盖了画面上部远端、左右边缘及所有遮挡区域，未发现未计入的独立货车"
+        },
+        "scene_notes": "排除了叉车、手推车、堆叠纸箱、展台结构等非货车物体，仅统计符合要求的独立货车车体"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [402, 251, 548, 449],\n      \"roof_color\": \"unclear\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"rigid\",\n      \"vehicle_type\": \"rigid_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"full\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于中央通道上部，为独立的红色厢式车体，整体可见，无连接其他车辆\"\n    },\n    {\n      \"bbox\": [171, 627, 512, 997],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"白色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [\"BAG1162\"],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于画面左下角，为独立的长条形货厢，底部可见文字，车体部分露出画面下边缘\"\n    }\n  ],\n  \"counts\": {\"total\": 2},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 1,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"扫描覆盖了画面上部远端、左右边缘及所有遮挡区域，未发现未计入的独立货车\"\n  },\n  \"scene_notes\": \"排除了叉车、手推车、堆叠纸箱、展台结构等非货车物体，仅统计符合要求的独立货车车体\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.402,
+        0.251,
+        0.548,
+        0.449
+      ],
+      "roof_color": "unclear",
+      "cargo_color": "红色",
+      "relation": "rigid",
+      "vehicle_type": "rigid_truck",
+      "readable_text": [],
+      "visibility": "full",
+      "confidence": 0.9,
+      "evidence": "位于中央通道上部，为独立的红色厢式车体，整体可见，无连接其他车辆"
+    },
+    {
+      "bbox": [
+        0.171,
+        0.627,
+        0.512,
+        0.997
+      ],
+      "roof_color": "白色",
+      "cargo_color": "白色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [
+        "BAG1162"
+      ],
+      "visibility": "partial",
+      "confidence": 0.95,
+      "evidence": "位于画面左下角，为独立的长条形货厢，底部可见文字，车体部分露出画面下边缘"
+    }
+  ],
+  "predicted_count": 2,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 1,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "扫描覆盖了画面上部远端、左右边缘及所有遮挡区域，未发现未计入的独立货车"
+  },
+  "latency_total_s": 19.82,
+  "tokens_total": 4559
+}

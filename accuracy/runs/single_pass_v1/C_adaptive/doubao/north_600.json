@@ -1,0 +1,186 @@
+{
+  "sample_id": "north_600",
+  "camera": "north",
+  "time": 600,
+  "truth": 4,
+  "config": "C_adaptive",
+  "model": "doubao",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\north_600.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\north_600.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 20.77,
+      "usage": {
+        "completion_tokens": 2149,
+        "prompt_tokens": 2334,
+        "total_tokens": 4483,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1554
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              515,
+              315,
+              670,
+              575
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "tractor_trailer",
+            "readable_text": [
+              "BL66",
+              "580"
+            ],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于中央通道中部，完整的牵引车与挂车连接，尾灯亮，车体清晰可辨"
+          },
+          {
+            "bbox": [
+              175,
+              610,
+              510,
+              995
+            ],
+            "roof_color": "白色",
+            "cargo_color": "深灰色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [
+              "粤A C1764"
+            ],
+            "visibility": "partial",
+            "confidence": 0.9,
+            "evidence": "位于画面左下角，独立停放的货厢，底部被画面下边缘截断，波纹车顶清晰可见"
+          },
+          {
+            "bbox": [
+              410,
+              250,
+              530,
+              450
+            ],
+            "roof_color": "蓝色",
+            "cargo_color": "蓝色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [
+              "JT62649"
+            ],
+            "visibility": "partial",
+            "confidence": 0.85,
+            "evidence": "红色货车左上方，独立货厢，顶部蓝色顶棚可见，部分被人物遮挡"
+          }
+        ],
+        "counts": {
+          "total": 3
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 1,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "扫描覆盖画面上部远端、左右边缘及遮挡区域，未发现未确认的车体"
+        },
+        "scene_notes": "中央通道内共3辆货车，含1辆完整牵引车挂车、2辆独立货厢；画面左下角货厢底部被截断，上部货厢部分被人物遮挡，叉车、人物、展台等不计入统计"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [515, 315, 670, 575],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"tractor_trailer\",\n      \"readable_text\": [\"BL66\", \"580\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于中央通道中部，完整的牵引车与挂车连接，尾灯亮，车体清晰可辨\"\n    },\n    {\n      \"bbox\": [175, 610, 510, 995],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"深灰色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [\"粤A C1764\"],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于画面左下角，独立停放的货厢，底部被画面下边缘截断，波纹车顶清晰可见\"\n    },\n    {\n      \"bbox\": [410, 250, 530, 450],\n      \"roof_color\": \"蓝色\",\n      \"cargo_color\": \"蓝色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [\"JT62649\"],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.85,\n      \"evidence\": \"红色货车左上方，独立货厢，顶部蓝色顶棚可见，部分被人物遮挡\"\n    }\n  ],\n  \"counts\": {\"total\": 3},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 1,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"扫描覆盖画面上部远端、左右边缘及遮挡区域，未发现未确认的车体\"\n  },\n  \"scene_notes\": \"中央通道内共3辆货车，含1辆完整牵引车挂车、2辆独立货厢；画面左下角货厢底部被截断，上部货厢部分被人物遮挡，叉车、人物、展台等不计入统计\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.515,
+        0.315,
+        0.67,
+        0.575
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "tractor_trailer",
+      "readable_text": [
+        "BL66",
+        "580"
+      ],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于中央通道中部，完整的牵引车与挂车连接，尾灯亮，车体清晰可辨"
+    },
+    {
+      "bbox": [
+        0.175,
+        0.61,
+        0.51,
+        0.995
+      ],
+      "roof_color": "白色",
+      "cargo_color": "深灰色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [
+        "粤A C1764"
+      ],
+      "visibility": "partial",
+      "confidence": 0.9,
+      "evidence": "位于画面左下角，独立停放的货厢，底部被画面下边缘截断，波纹车顶清晰可见"
+    },
+    {
+      "bbox": [
+        0.41,
+        0.25,
+        0.53,
+        0.45
+      ],
+      "roof_color": "蓝色",
+      "cargo_color": "蓝色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [
+        "JT62649"
+      ],
+      "visibility": "partial",
+      "confidence": 0.85,
+      "evidence": "红色货车左上方，独立货厢，顶部蓝色顶棚可见，部分被人物遮挡"
+    }
+  ],
+  "predicted_count": 3,
+  "error": -1,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 1,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "扫描覆盖画面上部远端、左右边缘及遮挡区域，未发现未确认的车体"
+  },
+  "latency_total_s": 20.77,
+  "tokens_total": 4483
+}

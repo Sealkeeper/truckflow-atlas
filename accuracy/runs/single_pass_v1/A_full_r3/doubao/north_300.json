@@ -1,0 +1,142 @@
+{
+  "sample_id": "north_300",
+  "camera": "north",
+  "time": 300,
+  "truth": 3,
+  "config": "A_full",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "18b6c680e78863458b69f67d2ddbb47f9607308e603c5a95e95e612b34c53684",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\full\\north_300.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\full\\north_300.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 16.16,
+      "usage": {
+        "completion_tokens": 1890,
+        "prompt_tokens": 2345,
+        "total_tokens": 4235,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1442
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              352,
+              576,
+              493,
+              997
+            ],
+            "roof_color": "白色",
+            "cargo_color": "灰色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于中央南北通道下半部分，为独立停放的无车头货厢，边界清晰，符合计数范围要求"
+          },
+          {
+            "bbox": [
+              432,
+              160,
+              492,
+              455
+            ],
+            "roof_color": "蓝色",
+            "cargo_color": "深色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [],
+            "visibility": "full",
+            "confidence": 0.9,
+            "evidence": "位于中央南北通道中上部，为独立停放的无车头货厢，边界清晰，符合计数范围要求"
+          }
+        ],
+        "counts": {
+          "total": 2
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 2,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "本次扫描覆盖中央南北通道上下全部区域，逐一对可见车体检查，未发现相邻箱体误判或漏计情况"
+        },
+        "scene_notes": "中央南北通道内共统计到2辆独立货厢式车辆，均未被遮挡，符合计数规则；人物、展台、手推车等非车辆物体不计入统计"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [352, 576, 493, 997],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"灰色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于中央南北通道下半部分，为独立停放的无车头货厢，边界清晰，符合计数范围要求\"\n    },\n    {\n      \"bbox\": [432, 160, 492, 455],\n      \"roof_color\": \"蓝色\",\n      \"cargo_color\": \"深色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [],\n      \"visibility\": \"full\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于中央南北通道中上部，为独立停放的无车头货厢，边界清晰，符合计数范围要求\"\n    }\n  ],\n  \"counts\": {\"total\": 2},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 2,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"本次扫描覆盖中央南北通道上下全部区域，逐一对可见车体检查，未发现相邻箱体误判或漏计情况\"\n  },\n  \"scene_notes\": \"中央南北通道内共统计到2辆独立货厢式车辆，均未被遮挡，符合计数规则；人物、展台、手推车等非车辆物体不计入统计\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.352,
+        0.576,
+        0.493,
+        0.997
+      ],
+      "roof_color": "白色",
+      "cargo_color": "灰色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于中央南北通道下半部分，为独立停放的无车头货厢，边界清晰，符合计数范围要求"
+    },
+    {
+      "bbox": [
+        0.432,
+        0.16,
+        0.492,
+        0.455
+      ],
+      "roof_color": "蓝色",
+      "cargo_color": "深色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [],
+      "visibility": "full",
+      "confidence": 0.9,
+      "evidence": "位于中央南北通道中上部，为独立停放的无车头货厢，边界清晰，符合计数范围要求"
+    }
+  ],
+  "predicted_count": 2,
+  "error": -1,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 2,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "本次扫描覆盖中央南北通道上下全部区域，逐一对可见车体检查，未发现相邻箱体误判或漏计情况"
+  },
+  "latency_total_s": 16.16,
+  "tokens_total": 4235
+}

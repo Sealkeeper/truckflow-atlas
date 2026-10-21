@@ -1,0 +1,190 @@
+{
+  "sample_id": "north_2400",
+  "camera": "north",
+  "time": 2400,
+  "truth": 3,
+  "config": "C_adaptive",
+  "model": "doubao",
+  "prompt_version": "single-pass-adaptive-v1",
+  "prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\north_2400.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\north_2400.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 25.95,
+      "usage": {
+        "completion_tokens": 2627,
+        "prompt_tokens": 2334,
+        "total_tokens": 4961,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1996
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              0.33,
+              0.62,
+              0.64,
+              0.99
+            ],
+            "roof_color": "灰色",
+            "cargo_color": "红色",
+            "relation": "rigid",
+            "vehicle_type": "box_truck",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.95,
+            "evidence": "位于画面中央下方，为独立箱式货车，仅左侧车头部分与货厢主体可见，符合计数标准"
+          },
+          {
+            "bbox": [
+              0.4,
+              0.25,
+              0.55,
+              0.45
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "rigid",
+            "vehicle_type": "rigid_truck",
+            "readable_text": [],
+            "visibility": "full",
+            "confidence": 0.9,
+            "evidence": "位于画面中央通道中部，为独立栏板货车，可见完整货厢与部分车身，无连接其他车辆"
+          },
+          {
+            "bbox": [
+              0.43,
+              0.15,
+              0.61,
+              0.27
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [
+              "粤T73778"
+            ],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于画面上方中央，为独立集装箱挂车，可见完整箱体，无连接车头，箱体上有清晰车牌文字"
+          }
+        ],
+        "counts": {
+          "total": 3
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 3,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [
+            {
+              "region": "画面最上方通道尽头",
+              "appearance": "小型深色模糊物体",
+              "reason": "仅局部可见，无法确认是否为独立货车"
+            }
+          ],
+          "notes": "本次扫描覆盖中央通道所有可见区域，远端、左右边缘、遮挡区域均已检查"
+        },
+        "scene_notes": "展会撤展现场，中央通道有3辆独立货车，周围为展台与施工人员，无其他车辆类型干扰"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [0.33, 0.62, 0.64, 0.99],\n      \"roof_color\": \"灰色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"rigid\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于画面中央下方，为独立箱式货车，仅左侧车头部分与货厢主体可见，符合计数标准\"\n    },\n    {\n      \"bbox\": [0.40, 0.25, 0.55, 0.45],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"rigid\",\n      \"vehicle_type\": \"rigid_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"full\",\n      \"confidence\": 0.90,\n      \"evidence\": \"位于画面中央通道中部，为独立栏板货车，可见完整货厢与部分车身，无连接其他车辆\"\n    },\n    {\n      \"bbox\": [0.43, 0.15, 0.61, 0.27],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [\"粤T73778\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于画面上方中央，为独立集装箱挂车，可见完整箱体，无连接车头，箱体上有清晰车牌文字\"\n    }\n  ],\n  \"counts\": {\"total\": 3},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 3,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [\n      {\n        \"region\": \"画面最上方通道尽头\",\n        \"appearance\": \"小型深色模糊物体\",\n        \"reason\": \"仅局部可见，无法确认是否为独立货车\"\n      }\n    ],\n    \"notes\": \"本次扫描覆盖中央通道所有可见区域，远端、左右边缘、遮挡区域均已检查\"\n  },\n  \"scene_notes\": \"展会撤展现场，中央通道有3辆独立货车，周围为展台与施工人员，无其他车辆类型干扰\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.33,
+        0.62,
+        0.64,
+        0.99
+      ],
+      "roof_color": "灰色",
+      "cargo_color": "红色",
+      "relation": "rigid",
+      "vehicle_type": "box_truck",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.95,
+      "evidence": "位于画面中央下方，为独立箱式货车，仅左侧车头部分与货厢主体可见，符合计数标准"
+    },
+    {
+      "bbox": [
+        0.4,
+        0.25,
+        0.55,
+        0.45
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "rigid",
+      "vehicle_type": "rigid_truck",
+      "readable_text": [],
+      "visibility": "full",
+      "confidence": 0.9,
+      "evidence": "位于画面中央通道中部，为独立栏板货车，可见完整货厢与部分车身，无连接其他车辆"
+    },
+    {
+      "bbox": [
+        0.43,
+        0.15,
+        0.61,
+        0.27
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [
+        "粤T73778"
+      ],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于画面上方中央，为独立集装箱挂车，可见完整箱体，无连接车头，箱体上有清晰车牌文字"
+    }
+  ],
+  "predicted_count": 3,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 3,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [
+      {
+        "region": "画面最上方通道尽头",
+        "appearance": "小型深色模糊物体",
+        "reason": "仅局部可见，无法确认是否为独立货车"
+      }
+    ],
+    "notes": "本次扫描覆盖中央通道所有可见区域，远端、左右边缘、遮挡区域均已检查"
+  },
+  "latency_total_s": 25.95,
+  "tokens_total": 4961
+}

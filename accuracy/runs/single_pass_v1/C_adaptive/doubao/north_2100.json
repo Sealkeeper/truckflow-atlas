@@ -1,0 +1,146 @@
+{
+  "sample_id": "north_2100",
+  "camera": "north",
+  "time": 2100,
+  "truth": 2,
+  "config": "C_adaptive",
+  "model": "doubao",
+  "prompt_version": "single-pass-adaptive-v1",
+  "prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\north_2100.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\north_2100.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 19.74,
+      "usage": {
+        "completion_tokens": 2055,
+        "prompt_tokens": 2334,
+        "total_tokens": 4389,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1586
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              402,
+              253,
+              548,
+              448
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "rigid",
+            "vehicle_type": "rigid_truck",
+            "readable_text": [],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于中央通道中上部，是独立的红色厢式货车，无其他车辆连接，可清晰辨识完整车体结构"
+          },
+          {
+            "bbox": [
+              172,
+              622,
+              512,
+              997
+            ],
+            "roof_color": "白色",
+            "cargo_color": "灰色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [
+              "BAG1162"
+            ],
+            "visibility": "partial",
+            "confidence": 0.9,
+            "evidence": "位于画面左下角，是独立的集装箱货厢，仅底部边缘被画面下边缘切掉，可辨识为独立货车车体"
+          }
+        ],
+        "counts": {
+          "total": 2
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 1,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "本次扫描覆盖中央通道所有区域，左边缘被部分切掉的货厢已确认，上部远端的车体已确认，无未解决的候选"
+        },
+        "scene_notes": "展会撤换展现场，中央通道内有2辆独立货车，分别为中上部红色厢式货车和左下角白色波纹顶集装箱货厢，叉车、人物、展台等不计入统计"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [402, 253, 548, 448],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"rigid\",\n      \"vehicle_type\": \"rigid_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于中央通道中上部，是独立的红色厢式货车，无其他车辆连接，可清晰辨识完整车体结构\"\n    },\n    {\n      \"bbox\": [172, 622, 512, 997],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"灰色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [\"BAG1162\"],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于画面左下角，是独立的集装箱货厢，仅底部边缘被画面下边缘切掉，可辨识为独立货车车体\"\n    }\n  ],\n  \"counts\": {\"total\": 2},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 1,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"本次扫描覆盖中央通道所有区域，左边缘被部分切掉的货厢已确认，上部远端的车体已确认，无未解决的候选\"\n  },\n  \"scene_notes\": \"展会撤换展现场，中央通道内有2辆独立货车，分别为中上部红色厢式货车和左下角白色波纹顶集装箱货厢，叉车、人物、展台等不计入统计\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.402,
+        0.253,
+        0.548,
+        0.448
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "rigid",
+      "vehicle_type": "rigid_truck",
+      "readable_text": [],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于中央通道中上部，是独立的红色厢式货车，无其他车辆连接，可清晰辨识完整车体结构"
+    },
+    {
+      "bbox": [
+        0.172,
+        0.622,
+        0.512,
+        0.997
+      ],
+      "roof_color": "白色",
+      "cargo_color": "灰色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [
+        "BAG1162"
+      ],
+      "visibility": "partial",
+      "confidence": 0.9,
+      "evidence": "位于画面左下角，是独立的集装箱货厢，仅底部边缘被画面下边缘切掉，可辨识为独立货车车体"
+    }
+  ],
+  "predicted_count": 2,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 1,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "本次扫描覆盖中央通道所有区域，左边缘被部分切掉的货厢已确认，上部远端的车体已确认，无未解决的候选"
+  },
+  "latency_total_s": 19.74,
+  "tokens_total": 4389
+}

@@ -1,0 +1,182 @@
+{
+  "sample_id": "north_900",
+  "camera": "north",
+  "time": 900,
+  "truth": 3,
+  "config": "A_full",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "18b6c680e78863458b69f67d2ddbb47f9607308e603c5a95e95e612b34c53684",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\full\\north_900.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\full\\north_900.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 18.15,
+      "usage": {
+        "completion_tokens": 2312,
+        "prompt_tokens": 2345,
+        "total_tokens": 4657,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1745
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              410,
+              360,
+              485,
+              620
+            ],
+            "roof_color": "unclear",
+            "cargo_color": "红色",
+            "relation": "trailer_only",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "BLSC 580"
+            ],
+            "visibility": "full",
+            "confidence": 0.9,
+            "evidence": "位于中央南北通道中部，为独立红色货厢，无可见车头，完全在统计范围内"
+          },
+          {
+            "bbox": [
+              355,
+              625,
+              490,
+              999
+            ],
+            "roof_color": "unclear",
+            "cargo_color": "白色",
+            "relation": "trailer_only",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "MAC1152"
+            ],
+            "visibility": "full",
+            "confidence": 0.9,
+            "evidence": "位于中央南北通道下部，为独立白色货厢，无可见车头，完全在统计范围内"
+          },
+          {
+            "bbox": [
+              445,
+              160,
+              505,
+              320
+            ],
+            "roof_color": "蓝色",
+            "cargo_color": "蓝色",
+            "relation": "trailer_only",
+            "vehicle_type": "box_truck",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.7,
+            "evidence": "位于中央南北通道上端门洞附近，为独立货车，部分被人群遮挡，在统计范围内"
+          }
+        ],
+        "counts": {
+          "total": 3
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 3,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "本次扫描覆盖中央通道所有区域，远端车辆、边缘车体、遮挡处均已检查"
+        },
+        "scene_notes": "中央通道内共3辆符合要求的货车，其中远端1辆部分被人群遮挡，中间2辆为无车头的独立货厢"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [410, 360, 485, 620],\n      \"roof_color\": \"unclear\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"BLSC 580\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于中央南北通道中部，为独立红色货厢，无可见车头，完全在统计范围内\"\n    },\n    {\n      \"bbox\": [355, 625, 490, 999],\n      \"roof_color\": \"unclear\",\n      \"cargo_color\": \"白色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"MAC1152\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于中央南北通道下部，为独立白色货厢，无可见车头，完全在统计范围内\"\n    },\n    {\n      \"bbox\": [445, 160, 505, 320],\n      \"roof_color\": \"蓝色\",\n      \"cargo_color\": \"蓝色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.7,\n      \"evidence\": \"位于中央南北通道上端门洞附近，为独立货车，部分被人群遮挡，在统计范围内\"\n    }\n  ],\n  \"counts\": {\"total\": 3},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 3,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"本次扫描覆盖中央通道所有区域，远端车辆、边缘车体、遮挡处均已检查\"\n  },\n  \"scene_notes\": \"中央通道内共3辆符合要求的货车，其中远端1辆部分被人群遮挡，中间2辆为无车头的独立货厢\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.41,
+        0.36,
+        0.485,
+        0.62
+      ],
+      "roof_color": "unclear",
+      "cargo_color": "红色",
+      "relation": "trailer_only",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "BLSC 580"
+      ],
+      "visibility": "full",
+      "confidence": 0.9,
+      "evidence": "位于中央南北通道中部，为独立红色货厢，无可见车头，完全在统计范围内"
+    },
+    {
+      "bbox": [
+        0.355,
+        0.625,
+        0.49,
+        0.999
+      ],
+      "roof_color": "unclear",
+      "cargo_color": "白色",
+      "relation": "trailer_only",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "MAC1152"
+      ],
+      "visibility": "full",
+      "confidence": 0.9,
+      "evidence": "位于中央南北通道下部，为独立白色货厢，无可见车头，完全在统计范围内"
+    },
+    {
+      "bbox": [
+        0.445,
+        0.16,
+        0.505,
+        0.32
+      ],
+      "roof_color": "蓝色",
+      "cargo_color": "蓝色",
+      "relation": "trailer_only",
+      "vehicle_type": "box_truck",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.7,
+      "evidence": "位于中央南北通道上端门洞附近，为独立货车，部分被人群遮挡，在统计范围内"
+    }
+  ],
+  "predicted_count": 3,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 3,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "本次扫描覆盖中央通道所有区域，远端车辆、边缘车体、遮挡处均已检查"
+  },
+  "latency_total_s": 18.15,
+  "tokens_total": 4657
+}

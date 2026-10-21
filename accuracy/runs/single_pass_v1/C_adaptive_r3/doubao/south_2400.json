@@ -1,0 +1,188 @@
+{
+  "sample_id": "south_2400",
+  "camera": "south",
+  "time": 2400,
+  "truth": 3,
+  "config": "C_adaptive",
+  "model": "doubao",
+  "prompt_version": "single-pass-adaptive-v1",
+  "prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\south_2400.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\south_2400.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 16.12,
+      "usage": {
+        "completion_tokens": 1570,
+        "prompt_tokens": 2334,
+        "total_tokens": 3904,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 998
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              372,
+              475,
+              648,
+              888
+            ],
+            "roof_color": "红色",
+            "cargo_color": "银灰色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "tractor_trailer",
+            "readable_text": [
+              "中国重汽",
+              "SITRAK"
+            ],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于中央通道最前方，为红色牵引车与银灰色货厢连接的独立货车，车头可见品牌标识"
+          },
+          {
+            "bbox": [
+              325,
+              222,
+              432,
+              412
+            ],
+            "roof_color": "白色",
+            "cargo_color": "白色",
+            "relation": "rigid",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "东风商用车"
+            ],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于中央通道左侧，白色厢式货车，车身可见“东风商用车”字样，为独立完整车辆"
+          },
+          {
+            "bbox": [
+              435,
+              218,
+              532,
+              328
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "tractor_trailer",
+            "readable_text": [
+              "重汽"
+            ],
+            "visibility": "full",
+            "confidence": 0.9,
+            "evidence": "位于白色厢式货车后方，中央通道内，红色牵引车带货厢，为独立车辆"
+          }
+        ],
+        "counts": {
+          "total": 3
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 3,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "本次扫描覆盖中央通道所有可见货车，未发现边缘、遮挡处的漏计"
+        },
+        "scene_notes": "展会撤换展现场，中央通道内共3辆独立货车，无其他类型车辆干扰"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [372, 475, 648, 888],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"银灰色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"tractor_trailer\",\n      \"readable_text\": [\"中国重汽\", \"SITRAK\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于中央通道最前方，为红色牵引车与银灰色货厢连接的独立货车，车头可见品牌标识\"\n    },\n    {\n      \"bbox\": [325, 222, 432, 412],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"白色\",\n      \"relation\": \"rigid\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"东风商用车\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于中央通道左侧，白色厢式货车，车身可见“东风商用车”字样，为独立完整车辆\"\n    },\n    {\n      \"bbox\": [435, 218, 532, 328],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"tractor_trailer\",\n      \"readable_text\": [\"重汽\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于白色厢式货车后方，中央通道内，红色牵引车带货厢，为独立车辆\"\n    }\n  ],\n  \"counts\": {\"total\": 3},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 3,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"本次扫描覆盖中央通道所有可见货车，未发现边缘、遮挡处的漏计\"\n  },\n  \"scene_notes\": \"展会撤换展现场，中央通道内共3辆独立货车，无其他类型车辆干扰\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.372,
+        0.475,
+        0.648,
+        0.888
+      ],
+      "roof_color": "红色",
+      "cargo_color": "银灰色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "tractor_trailer",
+      "readable_text": [
+        "中国重汽",
+        "SITRAK"
+      ],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于中央通道最前方，为红色牵引车与银灰色货厢连接的独立货车，车头可见品牌标识"
+    },
+    {
+      "bbox": [
+        0.325,
+        0.222,
+        0.432,
+        0.412
+      ],
+      "roof_color": "白色",
+      "cargo_color": "白色",
+      "relation": "rigid",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "东风商用车"
+      ],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于中央通道左侧，白色厢式货车，车身可见“东风商用车”字样，为独立完整车辆"
+    },
+    {
+      "bbox": [
+        0.435,
+        0.218,
+        0.532,
+        0.328
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "tractor_trailer",
+      "readable_text": [
+        "重汽"
+      ],
+      "visibility": "full",
+      "confidence": 0.9,
+      "evidence": "位于白色厢式货车后方，中央通道内，红色牵引车带货厢，为独立车辆"
+    }
+  ],
+  "predicted_count": 3,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 3,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "本次扫描覆盖中央通道所有可见货车，未发现边缘、遮挡处的漏计"
+  },
+  "latency_total_s": 16.12,
+  "tokens_total": 3904
+}

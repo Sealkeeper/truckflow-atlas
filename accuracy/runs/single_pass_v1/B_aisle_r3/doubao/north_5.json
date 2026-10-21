@@ -1,0 +1,178 @@
+{
+  "sample_id": "north_5",
+  "camera": "north",
+  "time": 5,
+  "truth": 5,
+  "config": "B_aisle",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\north_5.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\north_5.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 23.84,
+      "usage": {
+        "completion_tokens": 2923,
+        "prompt_tokens": 2334,
+        "total_tokens": 5257,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2346
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              280,
+              500,
+              535,
+              890
+            ],
+            "roof_color": "unclear",
+            "cargo_color": "红色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "QL66002"
+            ],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "画面中央下方的完整红色货车，可见后厢门与车牌，为独立的牵引车加挂车组合"
+          },
+          {
+            "bbox": [
+              400,
+              250,
+              545,
+              450
+            ],
+            "roof_color": "蓝色",
+            "cargo_color": "深色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.85,
+            "evidence": "画面中间偏左的蓝色顶盖独立货厢，无可见连接车头，为独立停放的货厢"
+          },
+          {
+            "bbox": [
+              550,
+              105,
+              665,
+              245
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "trailer_only",
+            "vehicle_type": "box_truck",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.75,
+            "evidence": "画面上部远端通道尽头的红色货车，仅可见尾部，为独立车辆"
+          }
+        ],
+        "counts": {
+          "total": 3
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 3,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "本次扫描覆盖了画面所有区域，远端、边缘、遮挡处均已检查，无未确认的车辆"
+        },
+        "scene_notes": "展会撤换展现场，中央通道内有3辆独立货车，远端货车部分可见，中间货厢部分可见，下方货车完整可见，无其他符合计数口径的车辆"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [280, 500, 535, 890],\n      \"roof_color\": \"unclear\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"QL66002\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"画面中央下方的完整红色货车，可见后厢门与车牌，为独立的牵引车加挂车组合\"\n    },\n    {\n      \"bbox\": [400, 250, 545, 450],\n      \"roof_color\": \"蓝色\",\n      \"cargo_color\": \"深色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.85,\n      \"evidence\": \"画面中间偏左的蓝色顶盖独立货厢，无可见连接车头，为独立停放的货厢\"\n    },\n    {\n      \"bbox\": [550, 105, 665, 245],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.75,\n      \"evidence\": \"画面上部远端通道尽头的红色货车，仅可见尾部，为独立车辆\"\n    }\n  ],\n  \"counts\": {\"total\": 3},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 3,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"本次扫描覆盖了画面所有区域，远端、边缘、遮挡处均已检查，无未确认的车辆\"\n  },\n  \"scene_notes\": \"展会撤换展现场，中央通道内有3辆独立货车，远端货车部分可见，中间货厢部分可见，下方货车完整可见，无其他符合计数口径的车辆\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.28,
+        0.5,
+        0.535,
+        0.89
+      ],
+      "roof_color": "unclear",
+      "cargo_color": "红色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "QL66002"
+      ],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "画面中央下方的完整红色货车，可见后厢门与车牌，为独立的牵引车加挂车组合"
+    },
+    {
+      "bbox": [
+        0.4,
+        0.25,
+        0.545,
+        0.45
+      ],
+      "roof_color": "蓝色",
+      "cargo_color": "深色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.85,
+      "evidence": "画面中间偏左的蓝色顶盖独立货厢，无可见连接车头，为独立停放的货厢"
+    },
+    {
+      "bbox": [
+        0.55,
+        0.105,
+        0.665,
+        0.245
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "trailer_only",
+      "vehicle_type": "box_truck",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.75,
+      "evidence": "画面上部远端通道尽头的红色货车，仅可见尾部，为独立车辆"
+    }
+  ],
+  "predicted_count": 3,
+  "error": -2,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 3,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "本次扫描覆盖了画面所有区域，远端、边缘、遮挡处均已检查，无未确认的车辆"
+  },
+  "latency_total_s": 23.84,
+  "tokens_total": 5257
+}

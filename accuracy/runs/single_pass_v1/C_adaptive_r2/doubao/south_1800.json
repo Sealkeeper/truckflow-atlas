@@ -1,0 +1,242 @@
+{
+  "sample_id": "south_1800",
+  "camera": "south",
+  "time": 1800,
+  "truth": 4,
+  "config": "C_adaptive",
+  "model": "doubao",
+  "prompt_version": "single-pass-adaptive-v1",
+  "prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\south_1800.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\south_1800.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 26.82,
+      "usage": {
+        "completion_tokens": 3455,
+        "prompt_tokens": 2334,
+        "total_tokens": 5789,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2622
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              0.47,
+              0.67,
+              0.68,
+              0.88
+            ],
+            "roof_color": "白色",
+            "cargo_color": "白色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "tractor_trailer",
+            "readable_text": [
+              "东风商用车"
+            ],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于中央通道最下方，完整可见的牵引车与挂车连接的货车，车头有清晰文字标识"
+          },
+          {
+            "bbox": [
+              0.45,
+              0.38,
+              0.58,
+              0.52
+            ],
+            "roof_color": "灰色",
+            "cargo_color": "红色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.85,
+            "evidence": "位于白色货车后方，仅可见红色货厢，无可见车头，为独立货厢"
+          },
+          {
+            "bbox": [
+              0.34,
+              0.25,
+              0.45,
+              0.36
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "rigid",
+            "vehicle_type": "rigid_truck",
+            "readable_text": [],
+            "visibility": "full",
+            "confidence": 0.9,
+            "evidence": "位于中间货厢后方，完整可见的红色一体式卡车（车头与货厢一体）"
+          },
+          {
+            "bbox": [
+              0.43,
+              0.13,
+              0.52,
+              0.24
+            ],
+            "roof_color": "棕色",
+            "cargo_color": "红色",
+            "relation": "rigid",
+            "vehicle_type": "rigid_truck",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.8,
+            "evidence": "位于画面远端中央通道，可见红色车头与部分货厢，为独立卡车"
+          },
+          {
+            "bbox": [
+              0.42,
+              0.12,
+              0.51,
+              0.18
+            ],
+            "roof_color": "棕色",
+            "cargo_color": "棕色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.75,
+            "evidence": "位于Haier标识下方，画面最上方中央通道，可见棕色货厢，为独立货厢"
+          }
+        ],
+        "counts": {
+          "total": 5
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 3,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "远端上部的3个车体均已检查，左右边缘无被截断的货车，遮挡区域的车辆已确认"
+        },
+        "scene_notes": "中央通道内共5辆货车，部分车辆被人群、展台结构遮挡，远端小型货车可见度较低，无边缘截断的货车"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [0.47, 0.67, 0.68, 0.88],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"白色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"tractor_trailer\",\n      \"readable_text\": [\"东风商用车\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于中央通道最下方，完整可见的牵引车与挂车连接的货车，车头有清晰文字标识\"\n    },\n    {\n      \"bbox\": [0.45, 0.38, 0.58, 0.52],\n      \"roof_color\": \"灰色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.85,\n      \"evidence\": \"位于白色货车后方，仅可见红色货厢，无可见车头，为独立货厢\"\n    },\n    {\n      \"bbox\": [0.34, 0.25, 0.45, 0.36],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"rigid\",\n      \"vehicle_type\": \"rigid_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"full\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于中间货厢后方，完整可见的红色一体式卡车（车头与货厢一体）\"\n    },\n    {\n      \"bbox\": [0.43, 0.13, 0.52, 0.24],\n      \"roof_color\": \"棕色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"rigid\",\n      \"vehicle_type\": \"rigid_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.8,\n      \"evidence\": \"位于画面远端中央通道，可见红色车头与部分货厢，为独立卡车\"\n    },\n    {\n      \"bbox\": [0.42, 0.12, 0.51, 0.18],\n      \"roof_color\": \"棕色\",\n      \"cargo_color\": \"棕色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.75,\n      \"evidence\": \"位于Haier标识下方，画面最上方中央通道，可见棕色货厢，为独立货厢\"\n    }\n  ],\n  \"counts\": {\"total\": 5},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 3,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"远端上部的3个车体均已检查，左右边缘无被截断的货车，遮挡区域的车辆已确认\"\n  },\n  \"scene_notes\": \"中央通道内共5辆货车，部分车辆被人群、展台结构遮挡，远端小型货车可见度较低，无边缘截断的货车\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.47,
+        0.67,
+        0.68,
+        0.88
+      ],
+      "roof_color": "白色",
+      "cargo_color": "白色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "tractor_trailer",
+      "readable_text": [
+        "东风商用车"
+      ],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于中央通道最下方，完整可见的牵引车与挂车连接的货车，车头有清晰文字标识"
+    },
+    {
+      "bbox": [
+        0.45,
+        0.38,
+        0.58,
+        0.52
+      ],
+      "roof_color": "灰色",
+      "cargo_color": "红色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.85,
+      "evidence": "位于白色货车后方，仅可见红色货厢，无可见车头，为独立货厢"
+    },
+    {
+      "bbox": [
+        0.34,
+        0.25,
+        0.45,
+        0.36
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "rigid",
+      "vehicle_type": "rigid_truck",
+      "readable_text": [],
+      "visibility": "full",
+      "confidence": 0.9,
+      "evidence": "位于中间货厢后方，完整可见的红色一体式卡车（车头与货厢一体）"
+    },
+    {
+      "bbox": [
+        0.43,
+        0.13,
+        0.52,
+        0.24
+      ],
+      "roof_color": "棕色",
+      "cargo_color": "红色",
+      "relation": "rigid",
+      "vehicle_type": "rigid_truck",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.8,
+      "evidence": "位于画面远端中央通道，可见红色车头与部分货厢，为独立卡车"
+    },
+    {
+      "bbox": [
+        0.42,
+        0.12,
+        0.51,
+        0.18
+      ],
+      "roof_color": "棕色",
+      "cargo_color": "棕色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.75,
+      "evidence": "位于Haier标识下方，画面最上方中央通道，可见棕色货厢，为独立货厢"
+    }
+  ],
+  "predicted_count": 5,
+  "error": 1,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 3,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "远端上部的3个车体均已检查，左右边缘无被截断的货车，遮挡区域的车辆已确认"
+  },
+  "latency_total_s": 26.82,
+  "tokens_total": 5789
+}

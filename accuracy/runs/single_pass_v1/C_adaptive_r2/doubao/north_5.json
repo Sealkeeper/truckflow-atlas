@@ -1,0 +1,360 @@
+{
+  "sample_id": "north_5",
+  "camera": "north",
+  "time": 5,
+  "truth": 5,
+  "config": "C_adaptive",
+  "model": "doubao",
+  "prompt_version": "single-pass-adaptive-v1",
+  "prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\north_5.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\north_5.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 18.62,
+      "usage": {
+        "completion_tokens": 2323,
+        "prompt_tokens": 2334,
+        "total_tokens": 4657,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1756
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              275,
+              505,
+              535,
+              885
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "QL66002"
+            ],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "画面底部中央，完整可见的红色货柜车，带有清晰的车牌文字"
+          },
+          {
+            "bbox": [
+              405,
+              260,
+              535,
+              450
+            ],
+            "roof_color": "蓝色",
+            "cargo_color": "黑色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.9,
+            "evidence": "中央通道左侧，部分被展台和人员遮挡的独立货厢，无可见车头"
+          },
+          {
+            "bbox": [
+              555,
+              110,
+              655,
+              235
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "rigid",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "MAN"
+            ],
+            "visibility": "partial",
+            "confidence": 0.85,
+            "evidence": "画面上方远端中央通道尽头的红色货车，部分被人群遮挡，可见箱体上的“MAN”字样"
+          }
+        ],
+        "counts": {
+          "total": 3
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 3,
+          "far_adjacency_verified": false,
+          "possible_miss": true,
+          "miss_risk_regions": [
+            "far_top"
+          ],
+          "uncertain_items": [],
+          "notes": "本次扫描覆盖中央通道所有可见货车，远端上部区域存在相邻箱体未逐一确认，左右边缘无被切割的货车车体"
+        },
+        "scene_notes": "中央通道内有3辆独立货车，远端上部有相邻箱体，部分被遮挡，无边缘切割的货车"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [275, 505, 535, 885],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"QL66002\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"画面底部中央，完整可见的红色货柜车，带有清晰的车牌文字\"\n    },\n    {\n      \"bbox\": [405, 260, 535, 450],\n      \"roof_color\": \"蓝色\",\n      \"cargo_color\": \"黑色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.9,\n      \"evidence\": \"中央通道左侧，部分被展台和人员遮挡的独立货厢，无可见车头\"\n    },\n    {\n      \"bbox\": [555, 110, 655, 235],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"rigid\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"MAN\"],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.85,\n      \"evidence\": \"画面上方远端中央通道尽头的红色货车，部分被人群遮挡，可见箱体上的“MAN”字样\"\n    }\n  ],\n  \"counts\": {\"total\": 3},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 3,\n    \"far_adjacency_verified\": false,\n    \"possible_miss\": true,\n    \"miss_risk_regions\": [\"far_top\"],\n    \"uncertain_items\": [],\n    \"notes\": \"本次扫描覆盖中央通道所有可见货车，远端上部区域存在相邻箱体未逐一确认，左右边缘无被切割的货车车体\"\n  },\n  \"scene_notes\": \"中央通道内有3辆独立货车，远端上部有相邻箱体，部分被遮挡，无边缘切割的货车\"\n}",
+      "http_requests": 1
+    },
+    {
+      "kind": "far_zoom",
+      "image": "accuracy\\crops\\single_pass_v1\\far\\north_5.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 21.74,
+      "usage": {
+        "completion_tokens": 2795,
+        "prompt_tokens": 2096,
+        "total_tokens": 4891,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1974
+        }
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "box_truck",
+            "bbox": [
+              0.53,
+              0.31,
+              0.65,
+              0.52
+            ],
+            "color": "红棕色",
+            "evidence": "位于裁剪中央偏下，带车头且可见红色尾灯，货厢为红棕色，与上方灰色顶棚箱体有明显分界，是独立运输单元"
+          },
+          {
+            "unit_id": "U2",
+            "kind": "cargo_box",
+            "bbox": [
+              0.43,
+              0.26,
+              0.53,
+              0.46
+            ],
+            "color": "灰色",
+            "evidence": "位于U1上方，独立矩形轮廓，灰色顶棚，与上方白色顶棚箱体分界清晰，是独立运输单元"
+          },
+          {
+            "unit_id": "U3",
+            "kind": "cargo_box",
+            "bbox": [
+              0.44,
+              0.16,
+              0.54,
+              0.36
+            ],
+            "color": "白色",
+            "evidence": "位于U2上方，独立矩形轮廓，白色顶棚，边界清晰，是独立运输单元"
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U1"
+            ],
+            "bbox": [
+              0.53,
+              0.31,
+              0.65,
+              0.52
+            ],
+            "roof_color": "红棕色",
+            "cargo_color": "红棕色",
+            "relation": "rigid",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "DAN...",
+              "SUPPLY"
+            ],
+            "visibility": "partial",
+            "confidence": 0.95,
+            "evidence": "裁剪内中央偏下，带车头的完整货车，为独立车辆"
+          },
+          {
+            "vehicle_id": "V2",
+            "unit_ids": [
+              "U2"
+            ],
+            "bbox": [
+              0.43,
+              0.26,
+              0.53,
+              0.46
+            ],
+            "roof_color": "灰色",
+            "cargo_color": "unclear",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.9,
+            "evidence": "位于U1上方，独立灰色顶棚货厢，无可见车头，为独立车辆"
+          },
+          {
+            "vehicle_id": "V3",
+            "unit_ids": [
+              "U3"
+            ],
+            "bbox": [
+              0.44,
+              0.16,
+              0.54,
+              0.36
+            ],
+            "roof_color": "白色",
+            "cargo_color": "unclear",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.9,
+            "evidence": "位于U2上方，独立白色顶棚货厢，无可见车头，为独立车辆"
+          }
+        ],
+        "counts": {
+          "total": 3
+        },
+        "uncertain_items": [],
+        "scene_notes": "裁剪为中央通道上半部（y0到0.46）远端区域，无遮挡，三个运输单元边界清晰，无不确定项"
+      },
+      "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"box_truck\",\n      \"bbox\": [0.53, 0.31, 0.65, 0.52],\n      \"color\": \"红棕色\",\n      \"evidence\": \"位于裁剪中央偏下，带车头且可见红色尾灯，货厢为红棕色，与上方灰色顶棚箱体有明显分界，是独立运输单元\"\n    },\n    {\n      \"unit_id\": \"U2\",\n      \"kind\": \"cargo_box\",\n      \"bbox\": [0.43, 0.26, 0.53, 0.46],\n      \"color\": \"灰色\",\n      \"evidence\": \"位于U1上方，独立矩形轮廓，灰色顶棚，与上方白色顶棚箱体分界清晰，是独立运输单元\"\n    },\n    {\n      \"unit_id\": \"U3\",\n      \"kind\": \"cargo_box\",\n      \"bbox\": [0.44, 0.16, 0.54, 0.36],\n      \"color\": \"白色\",\n      \"evidence\": \"位于U2上方，独立矩形轮廓，白色顶棚，边界清晰，是独立运输单元\"\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U1\"],\n      \"bbox\": [0.53, 0.31, 0.65, 0.52],\n      \"roof_color\": \"红棕色\",\n      \"cargo_color\": \"红棕色\",\n      \"relation\": \"rigid\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"DAN...\", \"SUPPLY\"],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.95,\n      \"evidence\": \"裁剪内中央偏下，带车头的完整货车，为独立车辆\"\n    },\n    {\n      \"vehicle_id\": \"V2\",\n      \"unit_ids\": [\"U2\"],\n      \"bbox\": [0.43, 0.26, 0.53, 0.46],\n      \"roof_color\": \"灰色\",\n      \"cargo_color\": \"unclear\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于U1上方，独立灰色顶棚货厢，无可见车头，为独立车辆\"\n    },\n    {\n      \"vehicle_id\": \"V3\",\n      \"unit_ids\": [\"U3\"],\n      \"bbox\": [0.44, 0.16, 0.54, 0.36],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"unclear\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于U2上方，独立白色顶棚货厢，无可见车头，为独立车辆\"\n    }\n  ],\n  \"counts\": {\"total\": 3},\n  \"uncertain_items\": [],\n  \"scene_notes\": \"裁剪为中央通道上半部（y0到0.46）远端区域，无遮挡，三个运输单元边界清晰，无不确定项\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 2,
+  "http_requests": 2,
+  "triggered_far": true,
+  "far_added": [
+    {
+      "vehicle_id": "V2",
+      "unit_ids": [
+        "U2"
+      ],
+      "bbox": [
+        0.43,
+        0.1196,
+        0.53,
+        0.2116
+      ],
+      "roof_color": "灰色",
+      "cargo_color": "unclear",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.9,
+      "evidence": "位于U1上方，独立灰色顶棚货厢，无可见车头，为独立车辆",
+      "source": "far_zoom"
+    }
+  ],
+  "vehicles": [
+    {
+      "bbox": [
+        0.275,
+        0.505,
+        0.535,
+        0.885
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "QL66002"
+      ],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "画面底部中央，完整可见的红色货柜车，带有清晰的车牌文字"
+    },
+    {
+      "bbox": [
+        0.405,
+        0.26,
+        0.535,
+        0.45
+      ],
+      "roof_color": "蓝色",
+      "cargo_color": "黑色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.9,
+      "evidence": "中央通道左侧，部分被展台和人员遮挡的独立货厢，无可见车头"
+    },
+    {
+      "bbox": [
+        0.555,
+        0.11,
+        0.655,
+        0.235
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "rigid",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "MAN"
+      ],
+      "visibility": "partial",
+      "confidence": 0.85,
+      "evidence": "画面上方远端中央通道尽头的红色货车，部分被人群遮挡，可见箱体上的“MAN”字样"
+    },
+    {
+      "vehicle_id": "V2",
+      "unit_ids": [
+        "U2"
+      ],
+      "bbox": [
+        0.43,
+        0.1196,
+        0.53,
+        0.2116
+      ],
+      "roof_color": "灰色",
+      "cargo_color": "unclear",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.9,
+      "evidence": "位于U1上方，独立灰色顶棚货厢，无可见车头，为独立车辆",
+      "source": "far_zoom"
+    }
+  ],
+  "predicted_count": 4,
+  "error": -1,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 3,
+    "far_adjacency_verified": false,
+    "possible_miss": true,
+    "miss_risk_regions": [
+      "far_top"
+    ],
+    "uncertain_items": [],
+    "notes": "本次扫描覆盖中央通道所有可见货车，远端上部区域存在相邻箱体未逐一确认，左右边缘无被切割的货车车体"
+  },
+  "latency_total_s": 40.36,
+  "tokens_total": 9548
+}

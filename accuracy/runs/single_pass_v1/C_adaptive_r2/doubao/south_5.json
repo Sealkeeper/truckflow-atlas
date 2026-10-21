@@ -1,0 +1,186 @@
+{
+  "sample_id": "south_5",
+  "camera": "south",
+  "time": 5,
+  "truth": 3,
+  "config": "C_adaptive",
+  "model": "doubao",
+  "prompt_version": "single-pass-adaptive-v1",
+  "prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\south_5.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\south_5.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 20.29,
+      "usage": {
+        "completion_tokens": 2256,
+        "prompt_tokens": 2334,
+        "total_tokens": 4590,
+        "prompt_tokens_details": {
+          "cached_tokens": 2334
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1696
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              0.47,
+              0.6,
+              0.72,
+              0.99
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "tractor_trailer",
+            "readable_text": [
+              "一汽青岛"
+            ],
+            "visibility": "full",
+            "confidence": 1.0,
+            "evidence": "位于中央通道最下方，完整可见的红色牵引车连接红色货厢，为独立货车"
+          },
+          {
+            "bbox": [
+              0.45,
+              0.25,
+              0.58,
+              0.47
+            ],
+            "roof_color": "灰色",
+            "cargo_color": "灰色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "tractor_trailer",
+            "readable_text": [
+              "中国重汽"
+            ],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于中央通道中部，完整可见的红色牵引车连接灰色货厢，为独立货车"
+          },
+          {
+            "bbox": [
+              0.44,
+              0.15,
+              0.56,
+              0.25
+            ],
+            "roof_color": "棕色",
+            "cargo_color": "棕色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [
+              "重汽"
+            ],
+            "visibility": "partial",
+            "confidence": 0.9,
+            "evidence": "位于中央通道最上方，仅可见货厢部分，无可见车头，为独立货厢"
+          }
+        ],
+        "counts": {
+          "total": 3
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 3,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "扫描覆盖中央通道全部区域，远端、边缘、遮挡处均已检查"
+        },
+        "scene_notes": "中央通道内共3辆独立货车，无漏计或歧义车辆"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [0.47, 0.60, 0.72, 0.99],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"tractor_trailer\",\n      \"readable_text\": [\"一汽青岛\"],\n      \"visibility\": \"full\",\n      \"confidence\": 1.0,\n      \"evidence\": \"位于中央通道最下方，完整可见的红色牵引车连接红色货厢，为独立货车\"\n    },\n    {\n      \"bbox\": [0.45, 0.25, 0.58, 0.47],\n      \"roof_color\": \"灰色\",\n      \"cargo_color\": \"灰色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"tractor_trailer\",\n      \"readable_text\": [\"中国重汽\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于中央通道中部，完整可见的红色牵引车连接灰色货厢，为独立货车\"\n    },\n    {\n      \"bbox\": [0.44, 0.15, 0.56, 0.25],\n      \"roof_color\": \"棕色\",\n      \"cargo_color\": \"棕色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [\"重汽\"],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于中央通道最上方，仅可见货厢部分，无可见车头，为独立货厢\"\n    }\n  ],\n  \"counts\": {\"total\": 3},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 3,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"扫描覆盖中央通道全部区域，远端、边缘、遮挡处均已检查\"\n  },\n  \"scene_notes\": \"中央通道内共3辆独立货车，无漏计或歧义车辆\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.47,
+        0.6,
+        0.72,
+        0.99
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "tractor_trailer",
+      "readable_text": [
+        "一汽青岛"
+      ],
+      "visibility": "full",
+      "confidence": 1.0,
+      "evidence": "位于中央通道最下方，完整可见的红色牵引车连接红色货厢，为独立货车"
+    },
+    {
+      "bbox": [
+        0.45,
+        0.25,
+        0.58,
+        0.47
+      ],
+      "roof_color": "灰色",
+      "cargo_color": "灰色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "tractor_trailer",
+      "readable_text": [
+        "中国重汽"
+      ],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于中央通道中部，完整可见的红色牵引车连接灰色货厢，为独立货车"
+    },
+    {
+      "bbox": [
+        0.44,
+        0.15,
+        0.56,
+        0.25
+      ],
+      "roof_color": "棕色",
+      "cargo_color": "棕色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [
+        "重汽"
+      ],
+      "visibility": "partial",
+      "confidence": 0.9,
+      "evidence": "位于中央通道最上方，仅可见货厢部分，无可见车头，为独立货厢"
+    }
+  ],
+  "predicted_count": 3,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 3,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "扫描覆盖中央通道全部区域，远端、边缘、遮挡处均已检查"
+  },
+  "latency_total_s": 20.29,
+  "tokens_total": 4590
+}

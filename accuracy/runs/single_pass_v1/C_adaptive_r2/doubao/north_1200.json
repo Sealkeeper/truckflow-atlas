@@ -1,0 +1,184 @@
+{
+  "sample_id": "north_1200",
+  "camera": "north",
+  "time": 1200,
+  "truth": 3,
+  "config": "C_adaptive",
+  "model": "doubao",
+  "prompt_version": "single-pass-adaptive-v1",
+  "prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\north_1200.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\north_1200.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 18.17,
+      "usage": {
+        "completion_tokens": 2201,
+        "prompt_tokens": 2334,
+        "total_tokens": 4535,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1614
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              172,
+              619,
+              518,
+              997
+            ],
+            "roof_color": "白色",
+            "cargo_color": "深灰色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "tractor_trailer",
+            "readable_text": [
+              "粤ACT182"
+            ],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于画面最下方，完整可见，为牵引车与挂车连接的独立货车，箱体文字清晰"
+          },
+          {
+            "bbox": [
+              332,
+              362,
+              533,
+              636
+            ],
+            "roof_color": "蓝色",
+            "cargo_color": "红色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "rigid_truck",
+            "readable_text": [
+              "BL88",
+              "980"
+            ],
+            "visibility": "partial",
+            "confidence": 0.9,
+            "evidence": "位于中央通道左侧，红色货厢，下方可见白色车头部分，被下方货车部分遮挡，为独立货车"
+          },
+          {
+            "bbox": [
+              442,
+              162,
+              558,
+              326
+            ],
+            "roof_color": "蓝色",
+            "cargo_color": "金属灰色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.85,
+            "evidence": "位于画面中上部中央通道，为独立货厢，无可见车头，被周围人员和展台结构部分遮挡"
+          }
+        ],
+        "counts": {
+          "total": 3
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 1,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "本次扫描覆盖画面所有区域，上部远端、左右边缘、遮挡区域均已检查"
+        },
+        "scene_notes": "共识别3辆独立货车，分别位于下部、中部、上部中央通道，部分被人员、展台结构及其他车辆遮挡，未发现漏计车辆"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [172, 619, 518, 997],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"深灰色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"tractor_trailer\",\n      \"readable_text\": [\"粤ACT182\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于画面最下方，完整可见，为牵引车与挂车连接的独立货车，箱体文字清晰\"\n    },\n    {\n      \"bbox\": [332, 362, 533, 636],\n      \"roof_color\": \"蓝色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"rigid_truck\",\n      \"readable_text\": [\"BL88\", \"980\"],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于中央通道左侧，红色货厢，下方可见白色车头部分，被下方货车部分遮挡，为独立货车\"\n    },\n    {\n      \"bbox\": [442, 162, 558, 326],\n      \"roof_color\": \"蓝色\",\n      \"cargo_color\": \"金属灰色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.85,\n      \"evidence\": \"位于画面中上部中央通道，为独立货厢，无可见车头，被周围人员和展台结构部分遮挡\"\n    }\n  ],\n  \"counts\": {\"total\": 3},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 1,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"本次扫描覆盖画面所有区域，上部远端、左右边缘、遮挡区域均已检查\"\n  },\n  \"scene_notes\": \"共识别3辆独立货车，分别位于下部、中部、上部中央通道，部分被人员、展台结构及其他车辆遮挡，未发现漏计车辆\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.172,
+        0.619,
+        0.518,
+        0.997
+      ],
+      "roof_color": "白色",
+      "cargo_color": "深灰色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "tractor_trailer",
+      "readable_text": [
+        "粤ACT182"
+      ],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于画面最下方，完整可见，为牵引车与挂车连接的独立货车，箱体文字清晰"
+    },
+    {
+      "bbox": [
+        0.332,
+        0.362,
+        0.533,
+        0.636
+      ],
+      "roof_color": "蓝色",
+      "cargo_color": "红色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "rigid_truck",
+      "readable_text": [
+        "BL88",
+        "980"
+      ],
+      "visibility": "partial",
+      "confidence": 0.9,
+      "evidence": "位于中央通道左侧，红色货厢，下方可见白色车头部分，被下方货车部分遮挡，为独立货车"
+    },
+    {
+      "bbox": [
+        0.442,
+        0.162,
+        0.558,
+        0.326
+      ],
+      "roof_color": "蓝色",
+      "cargo_color": "金属灰色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.85,
+      "evidence": "位于画面中上部中央通道，为独立货厢，无可见车头，被周围人员和展台结构部分遮挡"
+    }
+  ],
+  "predicted_count": 3,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 1,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "本次扫描覆盖画面所有区域，上部远端、左右边缘、遮挡区域均已检查"
+  },
+  "latency_total_s": 18.17,
+  "tokens_total": 4535
+}

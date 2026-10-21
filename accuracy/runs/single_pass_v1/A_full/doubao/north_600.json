@@ -1,0 +1,154 @@
+{
+  "sample_id": "north_600",
+  "camera": "north",
+  "time": 600,
+  "truth": 4,
+  "config": "A_full",
+  "model": "doubao",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\full\\north_600.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\full\\north_600.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 15.03,
+      "usage": {
+        "completion_tokens": 1757,
+        "prompt_tokens": 2345,
+        "total_tokens": 4102,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1282
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              0.47,
+              0.31,
+              0.57,
+              0.59
+            ],
+            "roof_color": "unclear",
+            "cargo_color": "红色",
+            "relation": "trailer_only",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "24",
+              "58",
+              "28",
+              "50"
+            ],
+            "visibility": "partial",
+            "confidence": 0.9,
+            "evidence": "位于中央南北通道上部，车尾朝向镜头，货厢为红色，是独立可辨的货厢"
+          },
+          {
+            "bbox": [
+              0.34,
+              0.61,
+              0.49,
+              0.99
+            ],
+            "roof_color": "白色",
+            "cargo_color": "白色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [
+              "MAC1162"
+            ],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于中央南北通道下部，完整可见的白色货厢，独立停放"
+          }
+        ],
+        "counts": {
+          "total": 2
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 1,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "中央通道内无远端额外车辆，左右边缘无被截断的车体，无遮挡导致的漏计"
+        },
+        "scene_notes": "本次统计仅包含中央南北通道内的2辆独立货厢，叉车、人物、展台结构不计入，红色货厢位于通道上部，白色货厢位于通道下部，均为无牵引车连接的独立货厢"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [0.47, 0.31, 0.57, 0.59],\n      \"roof_color\": \"unclear\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"24\", \"58\", \"28\", \"50\"],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于中央南北通道上部，车尾朝向镜头，货厢为红色，是独立可辨的货厢\"\n    },\n    {\n      \"bbox\": [0.34, 0.61, 0.49, 0.99],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"白色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [\"MAC1162\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于中央南北通道下部，完整可见的白色货厢，独立停放\"\n    }\n  ],\n  \"counts\": {\"total\": 2},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 1,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"中央通道内无远端额外车辆，左右边缘无被截断的车体，无遮挡导致的漏计\"\n  },\n  \"scene_notes\": \"本次统计仅包含中央南北通道内的2辆独立货厢，叉车、人物、展台结构不计入，红色货厢位于通道上部，白色货厢位于通道下部，均为无牵引车连接的独立货厢\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.47,
+        0.31,
+        0.57,
+        0.59
+      ],
+      "roof_color": "unclear",
+      "cargo_color": "红色",
+      "relation": "trailer_only",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "24",
+        "58",
+        "28",
+        "50"
+      ],
+      "visibility": "partial",
+      "confidence": 0.9,
+      "evidence": "位于中央南北通道上部，车尾朝向镜头，货厢为红色，是独立可辨的货厢"
+    },
+    {
+      "bbox": [
+        0.34,
+        0.61,
+        0.49,
+        0.99
+      ],
+      "roof_color": "白色",
+      "cargo_color": "白色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [
+        "MAC1162"
+      ],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于中央南北通道下部，完整可见的白色货厢，独立停放"
+    }
+  ],
+  "predicted_count": 2,
+  "error": -2,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 1,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "中央通道内无远端额外车辆，左右边缘无被截断的车体，无遮挡导致的漏计"
+  },
+  "latency_total_s": 15.03,
+  "tokens_total": 4102
+}

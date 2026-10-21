@@ -1,0 +1,158 @@
+{
+  "sample_id": "north_2100",
+  "camera": "north",
+  "time": 2100,
+  "truth": 2,
+  "config": "A_full",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "18b6c680e78863458b69f67d2ddbb47f9607308e603c5a95e95e612b34c53684",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\full\\north_2100.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\full\\north_2100.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 20.98,
+      "usage": {
+        "completion_tokens": 2251,
+        "prompt_tokens": 2345,
+        "total_tokens": 4596,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1753
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              0.42,
+              0.24,
+              0.51,
+              0.46
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "rigid",
+            "vehicle_type": "rigid_truck",
+            "readable_text": [],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于中央南北通道中上部，左右为展台边线，是独立的栏板货车，可见度完整"
+          },
+          {
+            "bbox": [
+              0.35,
+              0.61,
+              0.49,
+              0.99
+            ],
+            "roof_color": "白色",
+            "cargo_color": "白色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [
+              "MAC1152"
+            ],
+            "visibility": "partial",
+            "confidence": 0.9,
+            "evidence": "位于中央南北通道下部，无车头，为独立货厢，底部超出画面底边，可见度局部"
+          }
+        ],
+        "counts": {
+          "total": 2
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 2,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [
+            {
+              "region": "画面上部远端通道",
+              "appearance": "小型箱体",
+              "reason": "无法确认是否为独立货车，疑似货物堆叠"
+            }
+          ],
+          "notes": "本次扫描覆盖中央通道所有区域，左右边缘车辆、工程机械不计，远端疑似箱体未计入"
+        },
+        "scene_notes": "中央通道内共2辆符合条件的货车，远端有疑似箱体但无法确认，左右边缘车辆不在统计范围，叉车、人物、展台等不计入"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [0.42, 0.24, 0.51, 0.46],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"rigid\",\n      \"vehicle_type\": \"rigid_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于中央南北通道中上部，左右为展台边线，是独立的栏板货车，可见度完整\"\n    },\n    {\n      \"bbox\": [0.35, 0.61, 0.49, 0.99],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"白色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [\"MAC1152\"],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于中央南北通道下部，无车头，为独立货厢，底部超出画面底边，可见度局部\"\n    }\n  ],\n  \"counts\": {\"total\": 2},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 2,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [\n      {\n        \"region\": \"画面上部远端通道\",\n        \"appearance\": \"小型箱体\",\n        \"reason\": \"无法确认是否为独立货车，疑似货物堆叠\"\n      }\n    ],\n    \"notes\": \"本次扫描覆盖中央通道所有区域，左右边缘车辆、工程机械不计，远端疑似箱体未计入\"\n  },\n  \"scene_notes\": \"中央通道内共2辆符合条件的货车，远端有疑似箱体但无法确认，左右边缘车辆不在统计范围，叉车、人物、展台等不计入\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.42,
+        0.24,
+        0.51,
+        0.46
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "rigid",
+      "vehicle_type": "rigid_truck",
+      "readable_text": [],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于中央南北通道中上部，左右为展台边线，是独立的栏板货车，可见度完整"
+    },
+    {
+      "bbox": [
+        0.35,
+        0.61,
+        0.49,
+        0.99
+      ],
+      "roof_color": "白色",
+      "cargo_color": "白色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [
+        "MAC1152"
+      ],
+      "visibility": "partial",
+      "confidence": 0.9,
+      "evidence": "位于中央南北通道下部，无车头，为独立货厢，底部超出画面底边，可见度局部"
+    }
+  ],
+  "predicted_count": 2,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 2,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [
+      {
+        "region": "画面上部远端通道",
+        "appearance": "小型箱体",
+        "reason": "无法确认是否为独立货车，疑似货物堆叠"
+      }
+    ],
+    "notes": "本次扫描覆盖中央通道所有区域，左右边缘车辆、工程机械不计，远端疑似箱体未计入"
+  },
+  "latency_total_s": 20.98,
+  "tokens_total": 4596
+}

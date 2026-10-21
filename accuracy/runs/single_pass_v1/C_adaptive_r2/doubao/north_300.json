@@ -1,0 +1,182 @@
+{
+  "sample_id": "north_300",
+  "camera": "north",
+  "time": 300,
+  "truth": 3,
+  "config": "C_adaptive",
+  "model": "doubao",
+  "prompt_version": "single-pass-adaptive-v1",
+  "prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\north_300.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\north_300.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 20.46,
+      "usage": {
+        "completion_tokens": 2540,
+        "prompt_tokens": 2334,
+        "total_tokens": 4874,
+        "prompt_tokens_details": {
+          "cached_tokens": 2334
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1952
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              0.18,
+              0.388,
+              0.538,
+              0.665
+            ],
+            "roof_color": "白色",
+            "cargo_color": "深灰色",
+            "relation": "trailer_only",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "鄂A31164"
+            ],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于画面最下方左侧，完整可见的独立集装箱货厢，无遮挡"
+          },
+          {
+            "bbox": [
+              0.402,
+              0.17,
+              0.542,
+              0.315
+            ],
+            "roof_color": "蓝色",
+            "cargo_color": "深灰色",
+            "relation": "trailer_only",
+            "vehicle_type": "box_truck",
+            "readable_text": [],
+            "visibility": "full",
+            "confidence": 0.9,
+            "evidence": "位于中央通道中间，完整可见的独立货厢，蓝色车顶"
+          },
+          {
+            "bbox": [
+              0.432,
+              0.108,
+              0.538,
+              0.165
+            ],
+            "roof_color": "深灰色",
+            "cargo_color": "深灰色",
+            "relation": "trailer_only",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "JT62610"
+            ],
+            "visibility": "partial",
+            "confidence": 0.85,
+            "evidence": "位于中央通道远端，部分可见的独立货厢，可见箱体文字"
+          }
+        ],
+        "counts": {
+          "total": 3
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 2,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "本次扫描覆盖画面所有区域，远端上部的两个货厢、左右边缘均已检查，无明显漏计风险"
+        },
+        "scene_notes": "中央通道为统计范围，左侧边缘有完整大型集装箱货厢，中央通道有两个相邻的远端独立货厢，无遮挡导致的漏计"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [0.18, 0.388, 0.538, 0.665],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"深灰色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"鄂A31164\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于画面最下方左侧，完整可见的独立集装箱货厢，无遮挡\"\n    },\n    {\n      \"bbox\": [0.402, 0.17, 0.542, 0.315],\n      \"roof_color\": \"蓝色\",\n      \"cargo_color\": \"深灰色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"full\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于中央通道中间，完整可见的独立货厢，蓝色车顶\"\n    },\n    {\n      \"bbox\": [0.432, 0.108, 0.538, 0.165],\n      \"roof_color\": \"深灰色\",\n      \"cargo_color\": \"深灰色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"JT62610\"],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.85,\n      \"evidence\": \"位于中央通道远端，部分可见的独立货厢，可见箱体文字\"\n    }\n  ],\n  \"counts\": {\"total\": 3},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 2,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"本次扫描覆盖画面所有区域，远端上部的两个货厢、左右边缘均已检查，无明显漏计风险\"\n  },\n  \"scene_notes\": \"中央通道为统计范围，左侧边缘有完整大型集装箱货厢，中央通道有两个相邻的远端独立货厢，无遮挡导致的漏计\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.18,
+        0.388,
+        0.538,
+        0.665
+      ],
+      "roof_color": "白色",
+      "cargo_color": "深灰色",
+      "relation": "trailer_only",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "鄂A31164"
+      ],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于画面最下方左侧，完整可见的独立集装箱货厢，无遮挡"
+    },
+    {
+      "bbox": [
+        0.402,
+        0.17,
+        0.542,
+        0.315
+      ],
+      "roof_color": "蓝色",
+      "cargo_color": "深灰色",
+      "relation": "trailer_only",
+      "vehicle_type": "box_truck",
+      "readable_text": [],
+      "visibility": "full",
+      "confidence": 0.9,
+      "evidence": "位于中央通道中间，完整可见的独立货厢，蓝色车顶"
+    },
+    {
+      "bbox": [
+        0.432,
+        0.108,
+        0.538,
+        0.165
+      ],
+      "roof_color": "深灰色",
+      "cargo_color": "深灰色",
+      "relation": "trailer_only",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "JT62610"
+      ],
+      "visibility": "partial",
+      "confidence": 0.85,
+      "evidence": "位于中央通道远端，部分可见的独立货厢，可见箱体文字"
+    }
+  ],
+  "predicted_count": 3,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 2,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "本次扫描覆盖画面所有区域，远端上部的两个货厢、左右边缘均已检查，无明显漏计风险"
+  },
+  "latency_total_s": 20.46,
+  "tokens_total": 4874
+}
