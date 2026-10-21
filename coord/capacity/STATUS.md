@@ -4,6 +4,9 @@
 分支：`research/capacity-geometry`  
 工作目录：`sessions/capacity_geometry`
 
+PR：[#4 feat(capacity): 单应标定与容量不确定性](https://github.com/Sealkeeper/truckflow-atlas/pull/4)。  
+该 PR 已由仓库所有者合并；本会话没有执行合并。`REPORT.md` 已进入 `origin/main`。
+
 ## 当前目标
 
 为工作台提供可解释的通道几何标定与容量建议：
