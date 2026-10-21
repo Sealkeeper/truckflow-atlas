@@ -1,0 +1,103 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\assets\\frames\\south_600.jpg",
+  "prompt_version": "truck-count-v1",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 30.07,
+      "usage": {
+        "completion_tokens": 3777,
+        "prompt_tokens": 1884,
+        "total_tokens": 5661,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2995
+        }
+      },
+      "parsed": {
+        "scan_order": "先扫描画面中间垂直通道，由远到近（从上至下），再扫描画面左右边缘，未发现额外货车",
+        "counts": {
+          "total": 4,
+          "large": 3,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "sequence": 1,
+            "bbox": [
+              0.43,
+              0.15,
+              0.5,
+              0.27
+            ],
+            "size": "medium",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色卡车车头，位于通道最远端，无可见货厢，朝向画面下方",
+            "distinct_from_previous": "无（为第一辆统计车辆）",
+            "evidence": "画面中间通道最上方，独立红色车头，与下方车辆有明显间隔，无货厢，符合中型货车特征",
+            "uncertain": false
+          },
+          {
+            "sequence": 2,
+            "bbox": [
+              0.41,
+              0.25,
+              0.47,
+              0.36
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色完整货车，车头与红色货厢连接为整体，朝向画面下方",
+            "distinct_from_previous": "与上一辆（1号）有明显间隙，为独立车体，非同一车辆",
+            "evidence": "画面中间通道，1号车正下方，红色完整货车，车头货厢连接，独立停放，与上下车辆有间隔",
+            "uncertain": false
+          },
+          {
+            "sequence": 3,
+            "bbox": [
+              0.45,
+              0.29,
+              0.52,
+              0.47
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色半挂货车，车头与灰色货厢连接为整体，朝向画面下方",
+            "distinct_from_previous": "与上一辆（2号）有明显间隙，为独立车体，非同一车辆",
+            "evidence": "画面中间通道，2号车正下方，红色半挂车头搭配灰色货厢，整体完整，独立停放，与上下车辆有间隔",
+            "uncertain": false
+          },
+          {
+            "sequence": 4,
+            "bbox": [
+              0.46,
+              0.45,
+              0.56,
+              0.87
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "白色东风商用车，车头与白色货厢连接为整体，朝向画面下方",
+            "distinct_from_previous": "与上一辆（3号）有明显间隙，为独立车体，非同一车辆",
+            "evidence": "画面中间通道，3号车正下方，白色完整货车，车头货厢连接，独立停放，与上下车辆有间隔",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面中间垂直通道内共4辆可见货车，均无严重遮挡，左右边缘未发现符合要求的货车，叉车、工程机械等非货车已排除统计",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"scan_order\": \"先扫描画面中间垂直通道，由远到近（从上至下），再扫描画面左右边缘，未发现额外货车\",\n  \"counts\": {\"total\": 4, \"large\": 3, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.43, 0.15, 0.50, 0.27],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色卡车车头，位于通道最远端，无可见货厢，朝向画面下方\",\n      \"distinct_from_previous\": \"无（为第一辆统计车辆）\",\n      \"evidence\": \"画面中间通道最上方，独立红色车头，与下方车辆有明显间隔，无货厢，符合中型货车特征\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.41, 0.25, 0.47, 0.36],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色完整货车，车头与红色货厢连接为整体，朝向画面下方\",\n      \"distinct_from_previous\": \"与上一辆（1号）有明显间隙，为独立车体，非同一车辆\",\n      \"evidence\": \"画面中间通道，1号车正下方，红色完整货车，车头货厢连接，独立停放，与上下车辆有间隔\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 3,\n      \"bbox\": [0.45, 0.29, 0.52, 0.47],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色半挂货车，车头与灰色货厢连接为整体，朝向画面下方\",\n      \"distinct_from_previous\": \"与上一辆（2号）有明显间隙，为独立车体，非同一车辆\",\n      \"evidence\": \"画面中间通道，2号车正下方，红色半挂车头搭配灰色货厢，整体完整，独立停放，与上下车辆有间隔\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 4,\n      \"bbox\": [0.46, 0.45, 0.56, 0.87],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色东风商用车，车头与白色货厢连接为整体，朝向画面下方\",\n      \"distinct_from_previous\": \"与上一辆（3号）有明显间隙，为独立车体，非同一车辆\",\n      \"evidence\": \"画面中间通道，3号车正下方，白色完整货车，车头货厢连接，独立停放，与上下车辆有间隔\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中间垂直通道内共4辆可见货车，均无严重遮挡，左右边缘未发现符合要求的货车，叉车、工程机械等非货车已排除统计\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

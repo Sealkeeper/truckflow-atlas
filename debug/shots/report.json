@@ -1,32 +1,33 @@
 {
-  "generatedAt": "2026-10-21T09:24:33.822Z",
-  "generatedAtLocal": "2026年10月21日 GMT+8 17:24:33",
-  "pageVersion": "debug-viewer@0.1.0",
-  "sourceUrl": "http://127.0.0.1:11025/debug/viewer/",
+  "generatedAt": "2026-10-21T09:43:36.814Z",
+  "generatedAtLocal": "2026年10月21日 GMT+8 17:43:36",
+  "pageVersion": "debug-lab@1.0.0",
+  "sourceUrl": "http://127.0.0.1:10551/debug/viewer/lab.html",
   "chromePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
   "publicLiveDir": "D:\\File\\PROJECT\\codex\\codex-货车\\all-sessions-can-see\\assets\\live",
   "screenshots": [
     {
       "name": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
       "screenshotPath": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\debug_experience\\debug\\shots\\latest-desktop.png",
       "interactions": {
+        "aiboxModel": {
+          "model": "Aibox GLM-5.3-flash · count_v2",
+          "predicted": "4",
+          "gold": "4",
+          "delta": "0"
+        },
         "afterSampleClick": {
-          "time": "00:10:00",
-          "north": "4",
-          "south": "5",
-          "northFrame": "/assets/frames/north_600.jpg",
-          "southFrame": "/assets/frames/south_600.jpg"
+          "sample": "north_900",
+          "predicted": "3"
         },
-        "analysisMode": {
-          "activeTab": "分析画面",
-          "overlayDisplay": "flex",
-          "caption": "天花北 · 分析画面"
-        },
-        "resetToDefault": {
-          "time": "00:20:00",
-          "north": "3",
-          "south": "5",
-          "activeTab": "原画面"
+        "final": {
+          "sample": "north_600",
+          "predicted": "2",
+          "gold": "4"
         }
       },
       "audit": {
@@ -36,28 +37,25 @@
         },
         "document": {
           "width": 1440,
-          "height": 1000,
+          "height": 1006,
           "hasHorizontalScroll": false
         },
-        "requiredElements": {
-          ".camera-workspace": true,
-          ".snapshot-card": true,
-          ".load-card": true,
-          ".timeline-panel": true,
-          "[data-camera='north'] [data-frame]": true,
-          "[data-camera='south'] [data-frame]": true,
-          ".analysis-empty": true
-        },
-        "counts": {
-          "north": "3",
-          "south": "5",
-          "load": "120"
+        "values": {
+          "model": "豆包 · 整帧基线 v1",
+          "exact": "15",
+          "graded": "已评分 18 帧 · 共 20 帧",
+          "mae": "0.22",
+          "sample": "north_600",
+          "predicted": "2",
+          "gold": "4",
+          "delta": "-2",
+          "boxes": 2
         },
         "horizontalOverflow": [],
         "clippedText": [],
         "failedImages": [],
         "consoleErrors": [],
-        "httpNotFounds": []
+        "httpErrors": []
       },
       "outputSize": {
         "width": 1440,
@@ -66,8 +64,24 @@
     },
     {
       "name": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
       "screenshotPath": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\debug_experience\\debug\\shots\\latest-mobile.png",
-      "interactions": {},
+      "interactions": {
+        "aiboxModel": {
+          "model": "Aibox GLM-5.3-flash · count_v2",
+          "predicted": "4",
+          "gold": "4",
+          "delta": "0"
+        },
+        "final": {
+          "sample": "north_600",
+          "predicted": "2",
+          "gold": "4"
+        }
+      },
       "audit": {
         "viewport": {
           "width": 390,
@@ -75,28 +89,25 @@
         },
         "document": {
           "width": 390,
-          "height": 1430,
+          "height": 1817,
           "hasHorizontalScroll": false
         },
-        "requiredElements": {
-          ".camera-workspace": true,
-          ".snapshot-card": true,
-          ".load-card": true,
-          ".timeline-panel": true,
-          "[data-camera='north'] [data-frame]": true,
-          "[data-camera='south'] [data-frame]": true,
-          ".analysis-empty": true
-        },
-        "counts": {
-          "north": "3",
-          "south": "5",
-          "load": "120"
+        "values": {
+          "model": "豆包 · 整帧基线 v1",
+          "exact": "15",
+          "graded": "已评分 18 帧 · 共 20 帧",
+          "mae": "0.22",
+          "sample": "north_600",
+          "predicted": "2",
+          "gold": "4",
+          "delta": "-2",
+          "boxes": 2
         },
         "horizontalOverflow": [],
         "clippedText": [],
         "failedImages": [],
         "consoleErrors": [],
-        "httpNotFounds": []
+        "httpErrors": []
       },
       "outputSize": {
         "width": 390,

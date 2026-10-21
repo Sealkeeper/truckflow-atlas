@@ -1,0 +1,104 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\assets\\frames\\north_600.jpg",
+  "prompt_version": "truck-count-v1",
+  "runs": [
+    {
+      "model": "aibox",
+      "model_id": "glm-5.3-flash",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 24.77,
+      "usage": {
+        "prompt_tokens": 2178,
+        "total_tokens": 3105,
+        "completion_tokens": 927,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "image_tokens": 1610
+        },
+        "reasoning_tokens": 181
+      },
+      "parsed": {
+        "scan_order": "先沿中央主通道由远(画面上方)到近(下方)扫描，再扫左右两侧展位间区域；叉车不计入。",
+        "counts": {
+          "total": 4,
+          "large": 4,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "sequence": 1,
+            "bbox": [
+              0.44,
+              0.16,
+              0.51,
+              0.27
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "远端通道上的深色货厢，只见厢体不见车头，位于通道最远处",
+            "distinct_from_previous": "画面中第一辆",
+            "evidence": "通道远端上方可见独立货厢轮廓，与下方蓝色货厢之间有距离",
+            "uncertain": true
+          },
+          {
+            "sequence": 2,
+            "bbox": [
+              0.43,
+              0.26,
+              0.51,
+              0.43
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "蓝色集装箱式货厢，斜向停放，未见牵引车头",
+            "distinct_from_previous": "与远端货厢之间有明显间隙且朝向不同，非同一辆",
+            "evidence": "红色货车左上方独立停放的蓝色货厢",
+            "uncertain": false
+          },
+          {
+            "sequence": 3,
+            "bbox": [
+              0.48,
+              0.32,
+              0.57,
+              0.6
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色货厢重卡，尾部朝向镜头，尾灯亮起，可见尾门与车牌区域",
+            "distinct_from_previous": "红色车体与蓝色货厢颜色不同、位置独立，中间有通道间隔",
+            "evidence": "画面中央通道上正对镜头的红色货车，车尾灯光清晰",
+            "uncertain": false
+          },
+          {
+            "sequence": 4,
+            "bbox": [
+              0.34,
+              0.62,
+              0.49,
+              1.0
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "白色波纹板长货厢，纵向停放，车头被画面下方/展位遮挡，厢体延伸出画面底边",
+            "distinct_from_previous": "位于红色货车左前方，白色厢体与红色车体明显不同且不相连",
+            "evidence": "左下通道旁的白色长货厢，占据画面左下区域",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "现场为撤展期，通道内还有蓝色叉车(不计入)及多名工人。远端小目标受分辨率限制，第1辆与第2辆蓝色货厢存在为同一辆延续的可能，但间隙与朝向差异支持按两辆计。白色货厢车头不可见，标记 trailer_only。",
+        "uncertain_reasons": [
+          "远端深色货厢(第1辆)成像小，无法确认车头连接关系，可能与第2辆蓝色货厢存在关联"
+        ]
+      },
+      "raw_text": "{\n  \"scan_order\": \"先沿中央主通道由远(画面上方)到近(下方)扫描，再扫左右两侧展位间区域；叉车不计入。\",\n  \"counts\": {\"total\": 4, \"large\": 4, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.44, 0.16, 0.51, 0.27],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"远端通道上的深色货厢，只见厢体不见车头，位于通道最远处\",\n      \"distinct_from_previous\": \"画面中第一辆\",\n      \"evidence\": \"通道远端上方可见独立货厢轮廓，与下方蓝色货厢之间有距离\",\n      \"uncertain\": true\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.43, 0.26, 0.51, 0.43],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色集装箱式货厢，斜向停放，未见牵引车头\",\n      \"distinct_from_previous\": \"与远端货厢之间有明显间隙且朝向不同，非同一辆\",\n      \"evidence\": \"红色货车左上方独立停放的蓝色货厢\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 3,\n      \"bbox\": [0.48, 0.32, 0.57, 0.60],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货厢重卡，尾部朝向镜头，尾灯亮起，可见尾门与车牌区域\",\n      \"distinct_from_previous\": \"红色车体与蓝色货厢颜色不同、位置独立，中间有通道间隔\",\n      \"evidence\": \"画面中央通道上正对镜头的红色货车，车尾灯光清晰\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 4,\n      \"bbox\": [0.34, 0.62, 0.49, 1.0],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹板长货厢，纵向停放，车头被画面下方/展位遮挡，厢体延伸出画面底边\",\n      \"distinct_from_previous\": \"位于红色货车左前方，白色厢体与红色车体明显不同且不相连\",\n      \"evidence\": \"左下通道旁的白色长货厢，占据画面左下区域\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"现场为撤展期，通道内还有蓝色叉车(不计入)及多名工人。远端小目标受分辨率限制，第1辆与第2辆蓝色货厢存在为同一辆延续的可能，但间隙与朝向差异支持按两辆计。白色货厢车头不可见，标记 trailer_only。\",\n  \"uncertain_reasons\": [\"远端深色货厢(第1辆)成像小，无法确认车头连接关系，可能与第2辆蓝色货厢存在关联\"]\n}"
+    }
+  ]
+}

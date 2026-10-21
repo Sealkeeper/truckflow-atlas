@@ -1,0 +1,1826 @@
+{
+  "generatedAt": "2026-10-21T09:39:00.264Z",
+  "generatedAtLocal": "2026年10月21日 17:39",
+  "dataset": {
+    "name": "人工开发集 v0",
+    "scope": "per-camera visible truck count; cross-camera physical identity is deliberately NOT merged here",
+    "countDefinition": "Every distinct truck body visible in the camera image, including trailer-only when clearly separate; forklifts, cars, vans and people excluded. A tractor and its trailer count once.",
+    "reviewNotes": [
+      "south_5: the far brown cargo body may be a trailer of the middle truck; counted as separate only because the two cargo bodies and cabs are spatially distinct.",
+      "All south frames: bottom-edge red cargo body may belong to the adjacent aisle rather than the counted corridor; corridor polygon must be confirmed by the user.",
+      "Boxes are not yet part of this gold file; do not report box IoU against it."
+    ]
+  },
+  "models": [
+    {
+      "id": "doubao-full",
+      "label": "豆包 · 整帧基线 v1",
+      "short": "豆包 v1",
+      "detail": "20 帧全量基线，整帧输入，逐机位计数",
+      "provider": "doubao",
+      "results": [
+        {
+          "key": "north_5",
+          "camera": "north",
+          "time": 5,
+          "gold": 3,
+          "goldReview": false,
+          "ok": true,
+          "provider": "doubao",
+          "modelId": "ep-20260828174616-dthpx",
+          "promptVersion": "",
+          "latency": 34.12,
+          "attempts": null,
+          "count": 3,
+          "types": {
+            "large": 2,
+            "medium": 1,
+            "small": 0,
+            "unknown": 0
+          },
+          "boxes": [
+            {
+              "sequence": 1,
+              "bbox": [
+                0.37,
+                0.49,
+                0.49,
+                0.91
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "位于画面中间通道左侧，CHANGHONG展位右侧，完整可见的重型货车",
+              "identity": "红色货厢半挂车，车尾朝向镜头，车牌标识L66002"
+            },
+            {
+              "sequence": 2,
+              "bbox": [
+                0.43,
+                0.25,
+                0.5,
+                0.45
+              ],
+              "size": "medium",
+              "visible": "partial_side",
+              "uncertain": false,
+              "evidence": "画面中间通道，红色半挂车后方，货厢部分可见的中型货车",
+              "identity": "蓝色顶棚的厢式货车，位于红色半挂车后方"
+            },
+            {
+              "sequence": 3,
+              "bbox": [
+                0.48,
+                0.1,
+                0.54,
+                0.25
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "画面最深处通道，靠近GUORI展位后方，完整可见的大型货车",
+              "identity": "远处红色车头的货车，位于通道尽头"
+            }
+          ],
+          "vehicleCount": 3,
+          "uncertainCount": 0,
+          "notes": "所有可见货车均清晰识别，无被完全遮挡或无法判定的车辆",
+          "error": "",
+          "probe": false,
+          "delta": 0
+        },
+        {
+          "key": "north_300",
+          "camera": "north",
+          "time": 300,
+          "gold": 3,
+          "goldReview": false,
+          "ok": true,
+          "provider": "doubao",
+          "modelId": "ep-20260828174616-dthpx",
+          "promptVersion": "",
+          "latency": 12.01,
+          "attempts": null,
+          "count": 2,
+          "types": {
+            "large": 2,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "boxes": [
+            {
+              "sequence": 1,
+              "bbox": [
+                0.34,
+                0.57,
+                0.49,
+                0.99
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "Fully visible large box truck in the lower middle area of the scene",
+              "identity": "White corrugated cargo body, gray rear section, positioned in lower central aisle"
+            },
+            {
+              "sequence": 2,
+              "bbox": [
+                0.42,
+                0.15,
+                0.5,
+                0.46
+              ],
+              "size": "large",
+              "visible": "trailer_only",
+              "uncertain": false,
+              "evidence": "Separate trailer visible in upper central aisle, not attached to the lower truck",
+              "identity": "Blue flat roof, dark rectangular trailer body, located in upper central aisle, separate from adjacent truck"
+            }
+          ],
+          "vehicleCount": 2,
+          "uncertainCount": 0,
+          "notes": "Both vehicles are clearly visible with no significant occlusion in the frame. No ambiguous or partially hidden trucks.",
+          "error": "",
+          "probe": false,
+          "delta": -1
+        },
+        {
+          "key": "north_600",
+          "camera": "north",
+          "time": 600,
+          "gold": 4,
+          "goldReview": false,
+          "ok": true,
+          "provider": "doubao",
+          "modelId": "ep-20260828174616-dthpx",
+          "promptVersion": "",
+          "latency": 11.62,
+          "attempts": null,
+          "count": 2,
+          "types": {
+            "large": 2,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "boxes": [
+            {
+              "sequence": 1,
+              "bbox": [
+                0.48,
+                0.31,
+                0.57,
+                0.59
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "Clearly visible as a large truck in the middle of the scene, no part obscured",
+              "identity": "Red heavy truck, rear view, taillights illuminated, positioned in central aisle"
+            },
+            {
+              "sequence": 2,
+              "bbox": [
+                0.33,
+                0.61,
+                0.49,
+                0.99
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "Fully visible large truck at bottom left, no part obscured",
+              "identity": "White corrugated side panel of a large厢式 truck, parked along left aisle side"
+            }
+          ],
+          "vehicleCount": 2,
+          "uncertainCount": 0,
+          "notes": "All counted trucks are fully visible with no significant occlusion; forklift and containers are excluded per rules",
+          "error": "",
+          "probe": false,
+          "delta": -2
+        },
+        {
+          "key": "north_900",
+          "camera": "north",
+          "time": 900,
+          "gold": 3,
+          "goldReview": false,
+          "ok": true,
+          "provider": "doubao",
+          "modelId": "ep-20260828174616-dthpx",
+          "promptVersion": "",
+          "latency": 14.87,
+          "attempts": null,
+          "count": 3,
+          "types": {
+            "large": 3,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "boxes": [
+            {
+              "sequence": 1,
+              "bbox": [
+                0.4,
+                0.36,
+                0.5,
+                0.64
+              ],
+              "size": "large",
+              "visible": "trailer_only",
+              "uncertain": false,
+              "evidence": "位于中间通道左侧，在白色厢式货车上方，货厢完整可见",
+              "identity": "红色封闭货厢，无可见车头，朝向画面下方"
+            },
+            {
+              "sequence": 2,
+              "bbox": [
+                0.35,
+                0.61,
+                0.49,
+                0.99
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "位于中间通道左下方，红色挂车正下方，车辆完整可见",
+              "identity": "白色波纹状厢式货厢，可见部分车头，朝向画面下方"
+            },
+            {
+              "sequence": 3,
+              "bbox": [
+                0.43,
+                0.14,
+                0.49,
+                0.31
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "在画面上方中间通道尽头，货厢完整可见",
+              "identity": "蓝色平顶货厢，位于通道远端，朝向画面上方"
+            }
+          ],
+          "vehicleCount": 3,
+          "uncertainCount": 0,
+          "notes": "画面中可见3辆货车，均位于中间通道区域，无遮挡或歧义车辆",
+          "error": "",
+          "probe": false,
+          "delta": 0
+        },
+        {
+          "key": "north_1200",
+          "camera": "north",
+          "time": 1200,
+          "gold": 3,
+          "goldReview": false,
+          "ok": true,
+          "provider": "doubao",
+          "modelId": "ep-20260828174616-dthpx",
+          "promptVersion": "",
+          "latency": 13.19,
+          "attempts": null,
+          "count": 3,
+          "types": {
+            "large": 3,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "boxes": [
+            {
+              "sequence": 1,
+              "bbox": [
+                0.4,
+                0.36,
+                0.49,
+                0.64
+              ],
+              "size": "large",
+              "visible": "trailer_only",
+              "uncertain": false,
+              "evidence": "画面中间偏左位置，可见完整红色货厢，无车头，为单独挂车",
+              "identity": "红色高栏式货厢，朝向画面下方"
+            },
+            {
+              "sequence": 2,
+              "bbox": [
+                0.36,
+                0.61,
+                0.47,
+                0.99
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "画面下方中间，完整可见厢式部分，属于货车",
+              "identity": "白色波纹金属厢式货车，朝向画面下方"
+            },
+            {
+              "sequence": 3,
+              "bbox": [
+                0.45,
+                0.16,
+                0.5,
+                0.34
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "画面中间上方通道尽头，可见完整货车货厢部分，属于货车",
+              "identity": "蓝色顶部的货车，位于通道尽头，朝向画面上方"
+            }
+          ],
+          "vehicleCount": 3,
+          "uncertainCount": 0,
+          "notes": "画面内共3辆可见大型货车，无被完全遮挡或无法确定的车辆，均清晰可见",
+          "error": "",
+          "probe": false,
+          "delta": 0
+        },
+        {
+          "key": "north_1500",
+          "camera": "north",
+          "time": 1500,
+          "gold": 2,
+          "goldReview": false,
+          "ok": true,
+          "provider": "doubao",
+          "modelId": "ep-20260828174616-dthpx",
+          "promptVersion": "",
+          "latency": 9.91,
+          "attempts": null,
+          "count": 2,
+          "types": {
+            "large": 2,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "boxes": [
+            {
+              "sequence": 1,
+              "bbox": [
+                0.41,
+                0.36,
+                0.49,
+                0.66
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "位于展会中间通道，完整可见的重型货车货厢部分，符合大型货车特征",
+              "identity": "红色高栏货厢，朝向画面深处，货厢为红色金属材质"
+            },
+            {
+              "sequence": 2,
+              "bbox": [
+                0.36,
+                0.62,
+                0.48,
+                0.98
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "位于红色货车前方，完整可见的重型厢式货车，符合大型货车特征",
+              "identity": "白色厢式货厢，朝向画面下方，货厢为白色波纹金属材质"
+            }
+          ],
+          "vehicleCount": 2,
+          "uncertainCount": 0,
+          "notes": "画面内可见2辆大型货车，均位于展会中间通道区域，无完全遮挡或无法确定的车辆",
+          "error": "",
+          "probe": false,
+          "delta": 0
+        },
+        {
+          "key": "north_1800",
+          "camera": "north",
+          "time": 1800,
+          "gold": 2,
+          "goldReview": false,
+          "ok": true,
+          "provider": "doubao",
+          "modelId": "ep-20260828174616-dthpx",
+          "promptVersion": "",
+          "latency": 11,
+          "attempts": null,
+          "count": 2,
+          "types": {
+            "large": 2,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "boxes": [
+            {
+              "sequence": 1,
+              "bbox": [
+                0.41,
+                0.24,
+                0.52,
+                0.47
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "画面中间偏上区域，清晰可见完整的红色重型货车，符合货车定义",
+              "identity": "红色高栏式重型货车，货厢为红色，位于画面中间通道，朝向画面下方"
+            },
+            {
+              "sequence": 2,
+              "bbox": [
+                0.34,
+                0.6,
+                0.49,
+                0.99
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "画面下方偏左区域，清晰可见完整的白色厢式重型货车，符合货车定义",
+              "identity": "白色封闭厢式重型货车，货厢为白色，位于画面下方偏左，朝向画面下方"
+            }
+          ],
+          "vehicleCount": 2,
+          "uncertainCount": 0,
+          "notes": "画面中共可见2辆完整的大型货车，无遮挡或边界导致的不确定车辆，未计入叉车、人物等非货车对象",
+          "error": "",
+          "probe": false,
+          "delta": 0
+        },
+        {
+          "key": "north_2100",
+          "camera": "north",
+          "time": 2100,
+          "gold": 2,
+          "goldReview": false,
+          "ok": true,
+          "provider": "doubao",
+          "modelId": "ep-20260828174616-dthpx",
+          "promptVersion": "",
+          "latency": 14.72,
+          "attempts": null,
+          "count": 2,
+          "types": {
+            "large": 2,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "boxes": [
+            {
+              "sequence": 1,
+              "bbox": [
+                0.42,
+                0.25,
+                0.51,
+                0.45
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "画面中可见完整的红色高栏货车，符合货车定义",
+              "identity": "红色高栏货厢，车尾朝向画面下方，位于展会中央通道"
+            },
+            {
+              "sequence": 2,
+              "bbox": [
+                0.35,
+                0.61,
+                0.49,
+                0.99
+              ],
+              "size": "large",
+              "visible": "partial_side",
+              "uncertain": false,
+              "evidence": "可见完整的封闭货厢，属于厢式货车，符合定义",
+              "identity": "白色波纹封闭货厢，位于画面左下角，靠近CHANGHONG展台"
+            }
+          ],
+          "vehicleCount": 2,
+          "uncertainCount": 0,
+          "notes": "共可见2辆货车，均位于展会通道；白色厢式货车底部在画面边缘，为部分可见",
+          "error": "",
+          "probe": false,
+          "delta": 0
+        },
+        {
+          "key": "north_2400",
+          "camera": "north",
+          "time": 2400,
+          "gold": 3,
+          "goldReview": false,
+          "ok": true,
+          "provider": "doubao",
+          "modelId": "ep-20260828174616-dthpx",
+          "promptVersion": "",
+          "latency": 17.41,
+          "attempts": null,
+          "count": 3,
+          "types": {
+            "large": 3,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "boxes": [
+            {
+              "sequence": 1,
+              "bbox": [
+                0.4,
+                0.61,
+                0.56,
+                0.99
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "画面下方中间位置，完整可见的厢式货车，符合货车定义",
+              "identity": "灰色厢式货厢，红色车尾，车尾朝向画面下方"
+            },
+            {
+              "sequence": 2,
+              "bbox": [
+                0.42,
+                0.26,
+                0.51,
+                0.45
+              ],
+              "size": "large",
+              "visible": "trailer_only",
+              "uncertain": false,
+              "evidence": "画面中间通道处，单独的红色高栏挂车，属于货车范畴",
+              "identity": "红色高栏货厢，无配套车头可见，位于中间通道"
+            },
+            {
+              "sequence": 3,
+              "bbox": [
+                0.44,
+                0.16,
+                0.52,
+                0.27
+              ],
+              "size": "large",
+              "visible": "partial_top",
+              "uncertain": false,
+              "evidence": "画面后方中间位置，红色货车部分可见，属于货车",
+              "identity": "红色货车（含车头与货厢），位于中间挂车后方，顶部被画面边缘截断"
+            }
+          ],
+          "vehicleCount": 3,
+          "uncertainCount": 0,
+          "notes": "共3辆大型货车，均清晰可见，无完全遮挡或无法判定的车辆",
+          "error": "",
+          "probe": false,
+          "delta": 0
+        },
+        {
+          "key": "north_2600",
+          "camera": "north",
+          "time": 2600,
+          "gold": 2,
+          "goldReview": false,
+          "ok": true,
+          "provider": "doubao",
+          "modelId": "ep-20260828174616-dthpx",
+          "promptVersion": "",
+          "latency": 11.67,
+          "attempts": null,
+          "count": 2,
+          "types": {
+            "large": 2,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "boxes": [
+            {
+              "sequence": 1,
+              "bbox": [
+                0.38,
+                0.38,
+                0.49,
+                0.68
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "Located in central aisle, fully visible as a large box truck",
+              "identity": "Rear has text '773778', red-brown rectangular cargo box, rear doors visible, facing away from camera"
+            },
+            {
+              "sequence": 2,
+              "bbox": [
+                0.33,
+                0.82,
+                0.47,
+                0.99
+              ],
+              "size": "large",
+              "visible": "partial_top",
+              "uncertain": false,
+              "evidence": "Distinct vehicle partially visible in lower portion, separate from central truck",
+              "identity": "Red cab, dark items on top of cab, located at bottom center of image"
+            }
+          ],
+          "vehicleCount": 2,
+          "uncertainCount": 0,
+          "notes": "Two trucks are visible: one fully (central rear view) and one partially (lower front view) in the central aisle of the exhibition hall. No other trucks are present in the frame.",
+          "error": "",
+          "probe": false,
+          "delta": 0
+        },
+        {
+          "key": "south_5",
+          "camera": "south",
+          "time": 5,
+          "gold": 3,
+          "goldReview": true,
+          "ok": true,
+          "provider": "doubao",
+          "modelId": "ep-20260828174616-dthpx",
+          "promptVersion": "",
+          "latency": 21.91,
+          "attempts": null,
+          "count": 3,
+          "types": {
+            "large": 1,
+            "medium": 2,
+            "small": 0,
+            "unknown": 0
+          },
+          "boxes": [
+            {
+              "sequence": 1,
+              "bbox": [
+                0.46,
+                0.6,
+                0.58,
+                0.99
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "画面底部中间通道，完整可见的重型半挂货车，无遮挡",
+              "identity": "红色车身，车头带有白色“一汽青岛”字样，重型半挂货车，朝向镜头"
+            },
+            {
+              "sequence": 2,
+              "bbox": [
+                0.45,
+                0.26,
+                0.51,
+                0.45
+              ],
+              "size": "medium",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "画面中间通道，完整可见的中型货车，无遮挡",
+              "identity": "红色车头，货厢顶部为灰色，中型货车，朝向镜头"
+            },
+            {
+              "sequence": 3,
+              "bbox": [
+                0.45,
+                0.15,
+                0.49,
+                0.25
+              ],
+              "size": "medium",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "画面上方中间通道，完整可见的中型货车，无遮挡",
+              "identity": "红色车头，货厢为棕色，中型货车，朝向镜头"
+            }
+          ],
+          "vehicleCount": 3,
+          "uncertainCount": 0,
+          "notes": "3辆货车均位于中间通道，无被遮挡或完全不可见的情况，车辆特征清晰可辨",
+          "error": "",
+          "probe": false,
+          "delta": 0
+        },
+        {
+          "key": "south_300",
+          "camera": "south",
+          "time": 300,
+          "gold": 4,
+          "goldReview": false,
+          "ok": true,
+          "provider": "doubao",
+          "modelId": "ep-20260828174616-dthpx",
+          "promptVersion": "",
+          "latency": 35.72,
+          "attempts": null,
+          "count": 4,
+          "types": {
+            "large": 4,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "boxes": [
+            {
+              "sequence": 1,
+              "bbox": [
+                0.45,
+                0.48,
+                0.57,
+                0.94
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "位于画面下方中间通道，完整可见的重型厢式货车",
+              "identity": "白色东风商用车，车头带有东风标志，货厢为白色，车头朝向画面下方"
+            },
+            {
+              "sequence": 2,
+              "bbox": [
+                0.44,
+                0.28,
+                0.54,
+                0.53
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "位于中间通道，完整可见的重型半挂货车",
+              "identity": "红色车头搭配灰色长货厢，车头朝向画面下方，位于白色货车后方"
+            },
+            {
+              "sequence": 3,
+              "bbox": [
+                0.4,
+                0.18,
+                0.47,
+                0.37
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "位于中间通道，完整可见的红色重型牵引车",
+              "identity": "红色重型牵引车，车头朝向画面下方，位于第二辆红色货车后方"
+            },
+            {
+              "sequence": 4,
+              "bbox": [
+                0.45,
+                0.12,
+                0.5,
+                0.25
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "位于中间通道最上方，完整可见的红色重型货车",
+              "identity": "红色车头搭配红色货厢，位于第三辆红色货车后方，画面上方中间"
+            }
+          ],
+          "vehicleCount": 4,
+          "uncertainCount": 0,
+          "notes": "画面中间通道内共4辆可见重型货车，所有车辆均完整可见，无遮挡导致的歧义车辆",
+          "error": "",
+          "probe": false,
+          "delta": 0
+        },
+        {
+          "key": "south_600",
+          "camera": "south",
+          "time": 600,
+          "gold": 5,
+          "goldReview": true,
+          "ok": true,
+          "provider": "doubao",
+          "modelId": "ep-20260828174616-dthpx",
+          "promptVersion": "",
+          "latency": 17.25,
+          "attempts": null,
+          "count": 4,
+          "types": {
+            "large": 2,
+            "medium": 2,
+            "small": 0,
+            "unknown": 0
+          },
+          "boxes": [
+            {
+              "sequence": 1,
+              "bbox": [
+                0.455,
+                0.45,
+                0.565,
+                0.89
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "画面中可见完整的重型货车，车头标有东风商用车字样，属于货车范畴",
+              "identity": "白色东风商用车头，白色封闭货厢，朝向镜头，位于通道最前方"
+            },
+            {
+              "sequence": 2,
+              "bbox": [
+                0.45,
+                0.28,
+                0.52,
+                0.54
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "完整的半挂货车，红色车头搭配灰色长货厢，属于大型货车",
+              "identity": "红色车头，灰色封闭货厢，位于白色货车后方"
+            },
+            {
+              "sequence": 3,
+              "bbox": [
+                0.41,
+                0.23,
+                0.46,
+                0.35
+              ],
+              "size": "medium",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "完整的中型红色货车，在通道中间位置",
+              "identity": "红色中型货车，位于半挂货车后方"
+            },
+            {
+              "sequence": 4,
+              "bbox": [
+                0.44,
+                0.12,
+                0.49,
+                0.26
+              ],
+              "size": "medium",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "完整的红色中型货车，在通道尽头位置",
+              "identity": "红色货车，位于通道最远处"
+            }
+          ],
+          "vehicleCount": 4,
+          "uncertainCount": 0,
+          "notes": "中间通道共可见4辆货车，均为完整可见，无被完全遮挡或边界截断的情况",
+          "error": "",
+          "probe": false,
+          "delta": -1
+        },
+        {
+          "key": "south_900",
+          "camera": "south",
+          "time": 900,
+          "gold": 5,
+          "goldReview": true,
+          "ok": true,
+          "provider": "doubao",
+          "modelId": "ep-20260828174616-dthpx",
+          "promptVersion": "",
+          "latency": 17.9,
+          "attempts": null,
+          "count": 5,
+          "types": {
+            "large": 3,
+            "medium": 2,
+            "small": 0,
+            "unknown": 0
+          },
+          "boxes": [
+            {
+              "sequence": 1,
+              "bbox": [
+                0.45,
+                0.65,
+                0.57,
+                0.89
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "Full visible heavy truck in central aisle, meets truck definition",
+              "identity": "White cab with '东风商用车' text, white cargo box, facing downward"
+            },
+            {
+              "sequence": 2,
+              "bbox": [
+                0.45,
+                0.3,
+                0.52,
+                0.55
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "Full visible heavy truck with semi-trailer in central aisle",
+              "identity": "Red cab, gray long semi-trailer, facing downward"
+            },
+            {
+              "sequence": 3,
+              "bbox": [
+                0.41,
+                0.25,
+                0.46,
+                0.36
+              ],
+              "size": "medium",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "Full visible medium truck cab in central aisle",
+              "identity": "Red cab, no visible trailer, facing downward"
+            },
+            {
+              "sequence": 4,
+              "bbox": [
+                0.44,
+                0.13,
+                0.49,
+                0.25
+              ],
+              "size": "medium",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "Full visible medium truck cab at far end of central aisle",
+              "identity": "Red cab, topmost in central aisle, facing downward"
+            },
+            {
+              "sequence": 5,
+              "bbox": [
+                0.47,
+                0.87,
+                0.59,
+                0.99
+              ],
+              "size": "large",
+              "visible": "trailer_only",
+              "uncertain": false,
+              "evidence": "Separate visible trailer in bottom right, not attached to any adjacent cab",
+              "identity": "Red empty semi-trailer, no attached cab"
+            }
+          ],
+          "vehicleCount": 5,
+          "uncertainCount": 0,
+          "notes": "All trucks located in central aisle between exhibition booths; no vehicles are fully obscured, separate trailer counted per rules",
+          "error": "",
+          "probe": false,
+          "delta": 0
+        },
+        {
+          "key": "south_1200",
+          "camera": "south",
+          "time": 1200,
+          "gold": 5,
+          "goldReview": true,
+          "ok": true,
+          "provider": "doubao",
+          "modelId": "ep-20260828174616-dthpx",
+          "promptVersion": "",
+          "latency": 25.04,
+          "attempts": null,
+          "count": 5,
+          "types": {
+            "large": 3,
+            "medium": 2,
+            "small": 0,
+            "unknown": 0
+          },
+          "boxes": [
+            {
+              "sequence": 1,
+              "bbox": [
+                0.455,
+                0.46,
+                0.575,
+                0.875
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "位于中间通道最下方，完整可见的重型货车",
+              "identity": "白色东风商用车头，带有‘东风商用车’字样，白色货厢，车头朝向画面下方"
+            },
+            {
+              "sequence": 2,
+              "bbox": [
+                0.45,
+                0.29,
+                0.53,
+                0.51
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "位于白色东风货车后方，中间通道内",
+              "identity": "红色车头，灰色货厢的半挂货车，车头朝向画面上方"
+            },
+            {
+              "sequence": 3,
+              "bbox": [
+                0.41,
+                0.23,
+                0.47,
+                0.36
+              ],
+              "size": "medium",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "位于半挂货车后方，中间通道内",
+              "identity": "红色车头，蓝色货厢的中型货车，车头朝向画面上方"
+            },
+            {
+              "sequence": 4,
+              "bbox": [
+                0.45,
+                0.12,
+                0.5,
+                0.26
+              ],
+              "size": "medium",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "中间通道最上方的红色货车，完整可见",
+              "identity": "红色货车，车头朝向画面上方，位于中间通道最远端"
+            },
+            {
+              "sequence": 5,
+              "bbox": [
+                0.48,
+                0.85,
+                0.6,
+                0.99
+              ],
+              "size": "large",
+              "visible": "trailer_only",
+              "uncertain": false,
+              "evidence": "画面最下方中间偏右，单独可见的挂车",
+              "identity": "红色空货厢挂车，无车头，位于白色东风货车下方"
+            }
+          ],
+          "vehicleCount": 5,
+          "uncertainCount": 0,
+          "notes": "中间通道排列多辆货车，部分被展位桁架轻微遮挡，底部存在单独的挂车",
+          "error": "",
+          "probe": false,
+          "delta": 0
+        },
+        {
+          "key": "south_1500",
+          "camera": "south",
+          "time": 1500,
+          "gold": 5,
+          "goldReview": true,
+          "ok": true,
+          "provider": "doubao",
+          "modelId": "ep-20260828174616-dthpx",
+          "promptVersion": "",
+          "latency": 19.89,
+          "attempts": null,
+          "count": 5,
+          "types": {
+            "large": 3,
+            "medium": 2,
+            "small": 0,
+            "unknown": 0
+          },
+          "boxes": [
+            {
+              "sequence": 1,
+              "bbox": [
+                0.44,
+                0.66,
+                0.57,
+                0.89
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "位于通道中间偏下，完整可见的重型卡车车头及部分货厢",
+              "identity": "白色车头，印有'东风商用车'字样，车头朝向镜头方向"
+            },
+            {
+              "sequence": 2,
+              "bbox": [
+                0.45,
+                0.3,
+                0.52,
+                0.5
+              ],
+              "size": "large",
+              "visible": "partial_side",
+              "uncertain": false,
+              "evidence": "下半部分被白色车辆遮挡，可见上半部分车头及货厢",
+              "identity": "红色车头，灰色封闭货厢，位于白色东风商用车后方"
+            },
+            {
+              "sequence": 3,
+              "bbox": [
+                0.41,
+                0.25,
+                0.46,
+                0.37
+              ],
+              "size": "medium",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "完整可见的中型货车，在通道内靠近中间位置",
+              "identity": "红色车身，货厢顶部有蓝色覆盖物，位于通道中间"
+            },
+            {
+              "sequence": 4,
+              "bbox": [
+                0.44,
+                0.14,
+                0.49,
+                0.26
+              ],
+              "size": "medium",
+              "visible": "partial_front",
+              "uncertain": false,
+              "evidence": "在通道最深处，仅露出车头，属于中型货车",
+              "identity": "红色车身，位于通道尽头，仅可见车头部分"
+            },
+            {
+              "sequence": 5,
+              "bbox": [
+                0.47,
+                0.85,
+                0.6,
+                0.99
+              ],
+              "size": "large",
+              "visible": "trailer_only",
+              "uncertain": false,
+              "evidence": "单独可见的货车挂车，无对应车头，符合计数口径",
+              "identity": "红色封闭货厢，无可见车头，位于画面最下方中间"
+            }
+          ],
+          "vehicleCount": 5,
+          "uncertainCount": 0,
+          "notes": "展会撤换展现场通道内，5辆货车分布于通道中，1辆为单独可见的挂车，部分车辆被展位结构及相邻货车遮挡",
+          "error": "",
+          "probe": false,
+          "delta": 0
+        },
+        {
+          "key": "south_1800",
+          "camera": "south",
+          "time": 1800,
+          "gold": 4,
+          "goldReview": true,
+          "ok": true,
+          "provider": "doubao",
+          "modelId": "ep-20260828174616-dthpx",
+          "promptVersion": "",
+          "latency": 13.7,
+          "attempts": null,
+          "count": 4,
+          "types": {
+            "large": 3,
+            "medium": 1,
+            "small": 0,
+            "unknown": 0
+          },
+          "boxes": [
+            {
+              "sequence": 1,
+              "bbox": [
+                0.45,
+                0.45,
+                0.56,
+                0.88
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "位于画面中下部通道，完整可见的重型牵引车及货厢",
+              "identity": "白色东风商用车，车头带东风标志，白色货厢，朝向镜头方向"
+            },
+            {
+              "sequence": 2,
+              "bbox": [
+                0.46,
+                0.28,
+                0.53,
+                0.48
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "位于白色东风车后方，完整可见的半挂货车",
+              "identity": "红色车头，灰色封闭货厢，朝向镜头方向"
+            },
+            {
+              "sequence": 3,
+              "bbox": [
+                0.41,
+                0.23,
+                0.46,
+                0.36
+              ],
+              "size": "medium",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "位于灰色货厢后方，完整可见的中型货车",
+              "identity": "红色中型货车，朝向镜头方向"
+            },
+            {
+              "sequence": 4,
+              "bbox": [
+                0.44,
+                0.12,
+                0.49,
+                0.24
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "位于通道最内侧，完整可见",
+              "identity": "红色重型货车，朝向镜头方向"
+            }
+          ],
+          "vehicleCount": 4,
+          "uncertainCount": 0,
+          "notes": "画面中间通道内共4辆可见货车，均无完全遮挡，无边界或遮挡导致的歧义",
+          "error": "",
+          "probe": false,
+          "delta": 0
+        },
+        {
+          "key": "south_2100",
+          "camera": "south",
+          "time": 2100,
+          "gold": 4,
+          "goldReview": true,
+          "ok": true,
+          "provider": "doubao",
+          "modelId": "ep-20260828174616-dthpx",
+          "promptVersion": "",
+          "latency": 14.96,
+          "attempts": null,
+          "count": 4,
+          "types": {
+            "large": 4,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "boxes": [
+            {
+              "sequence": 1,
+              "bbox": [
+                0.45,
+                0.6,
+                0.56,
+                0.88
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "Clearly visible at bottom center of the image, full vehicle shown",
+              "identity": "White cab with '东风商用车' text, front-facing heavy truck"
+            },
+            {
+              "sequence": 2,
+              "bbox": [
+                0.45,
+                0.3,
+                0.52,
+                0.5
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "Located above the white truck, full vehicle visible",
+              "identity": "Red cab with gray covered cargo area, front-facing semi-truck"
+            },
+            {
+              "sequence": 3,
+              "bbox": [
+                0.4,
+                0.2,
+                0.46,
+                0.4
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "Above the gray cargo truck, full vehicle visible",
+              "identity": "Red cab with brown flat cargo area, front-facing heavy truck"
+            },
+            {
+              "sequence": 4,
+              "bbox": [
+                0.42,
+                0.15,
+                0.47,
+                0.25
+              ],
+              "size": "large",
+              "visible": "partial_top",
+              "uncertain": false,
+              "evidence": "Partially shown behind the brown cargo truck, upper portion visible",
+              "identity": "Red cab, front-facing, partially visible in upper central alley"
+            }
+          ],
+          "vehicleCount": 4,
+          "uncertainCount": 0,
+          "notes": "All trucks are in the central aisle; only the fourth truck is partially visible, no other obscured or ambiguous vehicles",
+          "error": "",
+          "probe": false,
+          "delta": 0
+        },
+        {
+          "key": "south_2400",
+          "camera": "south",
+          "time": 2400,
+          "gold": 3,
+          "goldReview": true,
+          "ok": false,
+          "provider": "aibox",
+          "modelId": "glm-5.3",
+          "promptVersion": "",
+          "latency": 1.25,
+          "attempts": null,
+          "count": null,
+          "types": {
+            "large": null,
+            "medium": null,
+            "small": null,
+            "unknown": null
+          },
+          "boxes": [],
+          "vehicleCount": 0,
+          "uncertainCount": 0,
+          "notes": "",
+          "error": "HTTPError: 503 Server Error: Service Unavailable for url: https://aibox.richaibox.com:2078/v1/chat/completions",
+          "probe": false,
+          "delta": null
+        },
+        {
+          "key": "south_2600",
+          "camera": "south",
+          "time": 2600,
+          "gold": 3,
+          "goldReview": true,
+          "ok": false,
+          "provider": "aibox",
+          "modelId": "glm-5.3",
+          "promptVersion": "",
+          "latency": 1.34,
+          "attempts": null,
+          "count": null,
+          "types": {
+            "large": null,
+            "medium": null,
+            "small": null,
+            "unknown": null
+          },
+          "boxes": [],
+          "vehicleCount": 0,
+          "uncertainCount": 0,
+          "notes": "",
+          "error": "HTTPError: 503 Server Error: Service Unavailable for url: https://aibox.richaibox.com:2078/v1/chat/completions",
+          "probe": false,
+          "delta": null
+        }
+      ],
+      "metrics": {
+        "total": 20,
+        "graded": 18,
+        "exact": 15,
+        "failed": 2,
+        "mae": 0.22,
+        "missing": 4,
+        "extra": 0,
+        "exactRate": 83.3
+      }
+    },
+    {
+      "id": "doubao-v2",
+      "label": "豆包 · count_v2",
+      "short": "豆包 v2",
+      "detail": "由远到近扫描 + 逐车区分说明",
+      "provider": "doubao",
+      "results": [
+        {
+          "key": "north_600",
+          "camera": "north",
+          "time": 600,
+          "gold": 4,
+          "goldReview": false,
+          "ok": true,
+          "provider": "doubao",
+          "modelId": "ep-20260828174616-dthpx",
+          "promptVersion": "truck-count-v1",
+          "latency": 20.7,
+          "attempts": 1,
+          "count": 3,
+          "types": {
+            "large": 3,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "boxes": [
+            {
+              "sequence": 1,
+              "bbox": [
+                0.43,
+                0.16,
+                0.5,
+                0.3
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "画面中间通道最上方，蓝色货厢清晰可见，为独立车体",
+              "identity": "蓝色平顶货厢，位于通道最远端，朝向画面下方，独立停放"
+            },
+            {
+              "sequence": 2,
+              "bbox": [
+                0.47,
+                0.31,
+                0.56,
+                0.57
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "中间通道，蓝色货车下方，红色货厢独立存在，无连接到蓝色货车的迹象",
+              "identity": "红色封闭货厢，尾门有反光标识，朝向画面下方，位于中间通道，在蓝色货车前方"
+            },
+            {
+              "sequence": 3,
+              "bbox": [
+                0.34,
+                0.6,
+                0.48,
+                0.99
+              ],
+              "size": "large",
+              "visible": "trailer_only",
+              "uncertain": false,
+              "evidence": "中间通道，红色货车前方，白色货厢挂车独立停放，无牵引车头",
+              "identity": "白色波纹状货厢，无牵引车头，朝向画面下方，位于中间通道，红色货车前方"
+            }
+          ],
+          "vehicleCount": 3,
+          "uncertainCount": 0,
+          "notes": "画面中可见3辆独立货车，均在中间通道，左右边缘无符合条件的货车，叉车等工程机械不计入统计",
+          "error": "",
+          "probe": true,
+          "delta": -1
+        },
+        {
+          "key": "north_300",
+          "camera": "north",
+          "time": 300,
+          "gold": 3,
+          "goldReview": false,
+          "ok": true,
+          "provider": "doubao",
+          "modelId": "ep-20260828174616-dthpx",
+          "promptVersion": "truck-count-v1",
+          "latency": 22.65,
+          "attempts": 1,
+          "count": 2,
+          "types": {
+            "large": 2,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "boxes": [
+            {
+              "sequence": 1,
+              "bbox": [
+                0.42,
+                0.15,
+                0.5,
+                0.46
+              ],
+              "size": "large",
+              "visible": "partial",
+              "uncertain": false,
+              "evidence": "位于中间通道最远端，为独立车体，无与其他车辆连接",
+              "identity": "蓝色货厢，位于通道远端，车身部分可见"
+            },
+            {
+              "sequence": 2,
+              "bbox": [
+                0.34,
+                0.57,
+                0.49,
+                0.99
+              ],
+              "size": "large",
+              "visible": "trailer_only",
+              "uncertain": false,
+              "evidence": "位于中间通道近段，与前一辆车辆有清晰通道间隔，为独立停放的挂车",
+              "identity": "白色长货厢，位于通道近段，仅货厢可见，无牵引车头"
+            }
+          ],
+          "vehicleCount": 2,
+          "uncertainCount": 0,
+          "notes": "中间通道可见两辆独立货车，远端为蓝色货厢车，近段为白色长货厢挂车，均无完全遮挡，左右边缘无可见货车",
+          "error": "",
+          "probe": true,
+          "delta": -1
+        },
+        {
+          "key": "south_600",
+          "camera": "south",
+          "time": 600,
+          "gold": 5,
+          "goldReview": true,
+          "ok": true,
+          "provider": "doubao",
+          "modelId": "ep-20260828174616-dthpx",
+          "promptVersion": "truck-count-v1",
+          "latency": 30.07,
+          "attempts": 1,
+          "count": 4,
+          "types": {
+            "large": 3,
+            "medium": 1,
+            "small": 0,
+            "unknown": 0
+          },
+          "boxes": [
+            {
+              "sequence": 1,
+              "bbox": [
+                0.43,
+                0.15,
+                0.5,
+                0.27
+              ],
+              "size": "medium",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "画面中间通道最上方，独立红色车头，与下方车辆有明显间隔，无货厢，符合中型货车特征",
+              "identity": "红色卡车车头，位于通道最远端，无可见货厢，朝向画面下方"
+            },
+            {
+              "sequence": 2,
+              "bbox": [
+                0.41,
+                0.25,
+                0.47,
+                0.36
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "画面中间通道，1号车正下方，红色完整货车，车头货厢连接，独立停放，与上下车辆有间隔",
+              "identity": "红色完整货车，车头与红色货厢连接为整体，朝向画面下方"
+            },
+            {
+              "sequence": 3,
+              "bbox": [
+                0.45,
+                0.29,
+                0.52,
+                0.47
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "画面中间通道，2号车正下方，红色半挂车头搭配灰色货厢，整体完整，独立停放，与上下车辆有间隔",
+              "identity": "红色半挂货车，车头与灰色货厢连接为整体，朝向画面下方"
+            },
+            {
+              "sequence": 4,
+              "bbox": [
+                0.46,
+                0.45,
+                0.56,
+                0.87
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "画面中间通道，3号车正下方，白色完整货车，车头货厢连接，独立停放，与上下车辆有间隔",
+              "identity": "白色东风商用车，车头与白色货厢连接为整体，朝向画面下方"
+            }
+          ],
+          "vehicleCount": 4,
+          "uncertainCount": 0,
+          "notes": "画面中间垂直通道内共4辆可见货车，均无严重遮挡，左右边缘未发现符合要求的货车，叉车、工程机械等非货车已排除统计",
+          "error": "",
+          "probe": true,
+          "delta": -1
+        }
+      ],
+      "metrics": {
+        "total": 3,
+        "graded": 3,
+        "exact": 0,
+        "failed": 0,
+        "mae": 1,
+        "missing": 3,
+        "extra": 0,
+        "exactRate": 0
+      }
+    },
+    {
+      "id": "aibox-v2",
+      "label": "Aibox GLM-5.3-flash · count_v2",
+      "short": "Aibox v2",
+      "detail": "单样本验证：north_600 找回远端第 4 辆",
+      "provider": "aibox",
+      "results": [
+        {
+          "key": "north_600",
+          "camera": "north",
+          "time": 600,
+          "gold": 4,
+          "goldReview": false,
+          "ok": true,
+          "provider": "aibox",
+          "modelId": "glm-5.3-flash",
+          "promptVersion": "truck-count-v1",
+          "latency": 24.77,
+          "attempts": 1,
+          "count": 4,
+          "types": {
+            "large": 4,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "boxes": [
+            {
+              "sequence": 1,
+              "bbox": [
+                0.44,
+                0.16,
+                0.51,
+                0.27
+              ],
+              "size": "large",
+              "visible": "trailer_only",
+              "uncertain": true,
+              "evidence": "通道远端上方可见独立货厢轮廓，与下方蓝色货厢之间有距离",
+              "identity": "远端通道上的深色货厢，只见厢体不见车头，位于通道最远处"
+            },
+            {
+              "sequence": 2,
+              "bbox": [
+                0.43,
+                0.26,
+                0.51,
+                0.43
+              ],
+              "size": "large",
+              "visible": "trailer_only",
+              "uncertain": false,
+              "evidence": "红色货车左上方独立停放的蓝色货厢",
+              "identity": "蓝色集装箱式货厢，斜向停放，未见牵引车头"
+            },
+            {
+              "sequence": 3,
+              "bbox": [
+                0.48,
+                0.32,
+                0.57,
+                0.6
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "画面中央通道上正对镜头的红色货车，车尾灯光清晰",
+              "identity": "红色货厢重卡，尾部朝向镜头，尾灯亮起，可见尾门与车牌区域"
+            },
+            {
+              "sequence": 4,
+              "bbox": [
+                0.34,
+                0.62,
+                0.49,
+                1
+              ],
+              "size": "large",
+              "visible": "trailer_only",
+              "uncertain": false,
+              "evidence": "左下通道旁的白色长货厢，占据画面左下区域",
+              "identity": "白色波纹板长货厢，纵向停放，车头被画面下方/展位遮挡，厢体延伸出画面底边"
+            }
+          ],
+          "vehicleCount": 4,
+          "uncertainCount": 1,
+          "notes": "现场为撤展期，通道内还有蓝色叉车(不计入)及多名工人。远端小目标受分辨率限制，第1辆与第2辆蓝色货厢存在为同一辆延续的可能，但间隙与朝向差异支持按两辆计。白色货厢车头不可见，标记 trailer_only。",
+          "error": "",
+          "probe": true,
+          "delta": 0
+        }
+      ],
+      "metrics": {
+        "total": 1,
+        "graded": 1,
+        "exact": 1,
+        "failed": 0,
+        "mae": 0,
+        "missing": 0,
+        "extra": 0,
+        "exactRate": 100
+      }
+    },
+    {
+      "id": "zhipu-v2",
+      "label": "智谱 GLM-4.5V · count_v2",
+      "short": "智谱 v2",
+      "detail": "单样本验证：north_600 对照",
+      "provider": "zhipu",
+      "results": [
+        {
+          "key": "north_600",
+          "camera": "north",
+          "time": 600,
+          "gold": 4,
+          "goldReview": false,
+          "ok": true,
+          "provider": "zhipu",
+          "modelId": "glm-4.5v",
+          "promptVersion": "truck-count-v1",
+          "latency": 77.42,
+          "attempts": 1,
+          "count": 3,
+          "types": {
+            "large": 2,
+            "medium": 1,
+            "small": 0,
+            "unknown": 0
+          },
+          "boxes": [
+            {
+              "sequence": 1,
+              "bbox": [
+                0.447,
+                0.196,
+                0.49,
+                0.267
+              ],
+              "size": "medium",
+              "visible": "partial_top",
+              "uncertain": false,
+              "evidence": "在通道远端呈现规整矩形轮廓，具有典型厢式货车外形特征，与周围展位结构分离且位于行车动线上",
+              "identity": "深色(蓝/灰)封闭式货厢，位于CUORI展位后方通道深处，纵向停放"
+            },
+            {
+              "sequence": 2,
+              "bbox": [
+                0.489,
+                0.326,
+                0.556,
+                0.59
+              ],
+              "size": "large",
+              "visible": "full",
+              "uncertain": false,
+              "evidence": "画面中央最醒目的红色车体，具有完整集装箱半挂车特征，与上方深色货车非同一物体",
+              "identity": "红色标准集装箱货厢，车尾朝向镜头，可见双开门及尾灯，周围有装卸工人"
+            },
+            {
+              "sequence": 3,
+              "bbox": [
+                0.346,
+                0.622,
+                0.483,
+                0.998
+              ],
+              "size": "large",
+              "visible": "trailer_only",
+              "uncertain": false,
+              "evidence": "占据画面下半部左侧的巨大白色矩形物体，表面有横向波纹纹理，符合货车货厢/挂车特征，与红色卡车为前后排列的两独立车体",
+              "identity": "白色波纹板长货厢(疑似40尺集装箱或厢式挂车)，纵向停放于前景左侧，无可见牵引车头"
+            }
+          ],
+          "vehicleCount": 3,
+          "uncertainCount": 0,
+          "notes": "展会撤展期间夜间场景，通道内光线充足；序列3(白色货厢)前端超出画面下边界；序列2(红色卡车)左侧有人员及散落物料；画面底部存在蓝色叉车(已按规则排除)；所有车辆均处于静止停放状态。",
+          "error": "",
+          "probe": true,
+          "delta": -1
+        }
+      ],
+      "metrics": {
+        "total": 1,
+        "graded": 1,
+        "exact": 0,
+        "failed": 0,
+        "mae": 1,
+        "missing": 1,
+        "extra": 0,
+        "exactRate": 0
+      }
+    }
+  ]
+}
