@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -110,9 +111,23 @@ async function main() {
   assert((await page.textContent("#reviewDraftState")).includes("共 1 次记录"), "保存记录数未更新");
   assert((await page.textContent("#auditUniqueTotal")).includes("6 辆"), "主页面跨机位唯一数未更新");
 
-  await page.setInputFiles("#reviewAttachmentInput", path.join(repoRoot, "review", "crops", "south_600.jpg"));
-  await page.waitForSelector("#reviewAttachmentPreview:not([hidden])");
-  assert((await page.textContent("#reviewAttachmentName")).includes("south_600.jpg"), "标注图文件名未显示");
+  const southAttachment = path.join(repoRoot, "review", "crops", "south_600.jpg");
+  const northAttachment = path.join(repoRoot, "review", "crops", "north_600.jpg");
+  await page.setInputFiles("#reviewAttachmentInput", [southAttachment, northAttachment]);
+  await page.waitForSelector("#reviewAttachmentList:not([hidden])");
+  await page.waitForFunction(() => document.querySelectorAll("#reviewAttachmentList .review-attachment-item").length === 2);
+  await page.waitForFunction(() => {
+    const images = [...document.querySelectorAll("#reviewAttachmentList .review-attachment-item img")];
+    return images.length === 2 && images.every((image) => image.complete && image.naturalWidth > 0);
+  });
+  const attachmentNames = await page.locator("#reviewAttachmentList .review-attachment-item strong").allTextContents();
+  assert(attachmentNames.some((name) => name.includes("south_600.jpg")), "第一张标注图文件名未显示");
+  assert(attachmentNames.some((name) => name.includes("north_600.jpg")), "第二张标注图文件名未显示");
+  await page.locator("#reviewAttachmentList").scrollIntoViewIfNeeded();
+  await page.screenshot({
+    path: path.join(repoRoot, "review", "review-modal-multi-attachments-desktop.png"),
+    animations: "disabled"
+  });
 
   const [download] = await Promise.all([
     page.waitForEvent("download"),
@@ -125,7 +140,17 @@ async function main() {
   assert(exported.schema === "truckflow-final-review-v2", "导出 schema 不是 v2");
   assert(reviewedRow.camera_counts.south === 3 && reviewedRow.camera_counts.north === 5, "导出南北计数错误");
   assert(reviewedRow.overlap === 2 && reviewedRow.unique_total === 6, "导出重合/去重计数错误");
-  assert(reviewedRow.attachment_file === "south_600.jpg", "导出未记录标注图文件名");
+  assert(reviewedRow.attachments?.length === 2, "导出未记录两张标注图");
+  assert(reviewedRow.attachment_count === 2, "导出标注图数量错误");
+  assert(
+    reviewedRow.attachment_files?.includes("south_600.jpg") && reviewedRow.attachment_files?.includes("north_600.jpg"),
+    "导出 attachment_files 未包含两张标注图"
+  );
+  assert(
+    reviewedRow.attachments.every((attachment) => attachment.preview_available && attachment.data_url?.startsWith("data:image/jpeg;base64,")),
+    "导出未包含当前会话标注图原图数据"
+  );
+  assert(reviewedRow.attachment_file === "south_600.jpg", "导出兼容字段 attachment_file 未指向第一张图");
   assert(reviewedRow.completed === true, "完整记录未标记 completed");
   report.exportCheck = {
     schema: exported.schema,
@@ -133,6 +158,51 @@ async function main() {
     completed_samples: exported.completed_samples,
     row: reviewedRow
   };
+
+  await page.locator("#reviewAttachmentList [data-attachment-remove]").first().click();
+  await page.waitForFunction(() => document.querySelectorAll("#reviewAttachmentList .review-attachment-item").length === 1);
+  assert((await page.textContent("#reviewAttachmentList")).includes("north_600.jpg"), "逐张移除后剩余图片错误");
+
+  await page.setInputFiles("#reviewAttachmentInput", northAttachment);
+  await page.waitForTimeout(200);
+  assert(
+    await page.locator("#reviewAttachmentList .review-attachment-item").count() === 1,
+    "重复选择同一批图片时应去重"
+  );
+
+  const fixtureDir = fs.mkdtempSync(path.join(os.tmpdir(), "truckflow-attachments-"));
+  const fixtureImages = Array.from({ length: 8 }, (_, index) => {
+    const target = path.join(fixtureDir, `capacity_${index + 1}.jpg`);
+    fs.copyFileSync(northAttachment, target);
+    return target;
+  });
+  await page.setInputFiles("#reviewAttachmentInput", fixtureImages);
+  await page.waitForFunction(() => document.querySelectorAll("#reviewAttachmentList .review-attachment-item").length === 8);
+  await page.waitForFunction(() => document.querySelector("#toastStack")?.textContent.includes("超过 8 张上限"));
+  assert(
+    await page.locator("#reviewAttachmentList .review-attachment-item").count() === 8,
+    "标注图应限制为最多 8 张"
+  );
+
+  const invalidFixture = path.join(fixtureDir, "not-an-image.txt");
+  fs.writeFileSync(invalidFixture, "not an image", "utf8");
+  await page.setInputFiles("#reviewAttachmentInput", invalidFixture);
+  await page.waitForTimeout(200);
+  assert(
+    await page.locator("#reviewAttachmentList .review-attachment-item").count() === 8,
+    "非图片文件不应加入标注图"
+  );
+  assert(
+    (await page.textContent("#toastStack")).includes("不是 PNG / JPG / WebP"),
+    "非图片文件未显示拒绝原因"
+  );
+  fs.rmSync(fixtureDir, { recursive: true, force: true });
+
+  for (let index = 0; index < 7; index += 1) {
+    await page.locator("#reviewAttachmentList [data-attachment-remove]").first().click();
+    await page.waitForTimeout(60);
+  }
+  await page.waitForFunction(() => document.querySelectorAll("#reviewAttachmentList .review-attachment-item").length === 1);
 
   await page.click('#reviewDialog [data-review-original="south"]');
   await page.waitForSelector("#reviewEvidenceDialog[open]");
@@ -169,7 +239,7 @@ async function main() {
   await page.click("#reviewPrevBtn");
   await page.waitForFunction(() => document.querySelector("#reviewVideoTime")?.textContent === "10:00");
   assert((await page.inputValue("#reviewSouthCount")) === "3", "返回上一时刻后未恢复已保存数值");
-  assert((await page.textContent("#reviewAttachmentName")).includes("south_600.jpg"), "返回上一时刻后标注图记录丢失");
+  assert((await page.textContent("#reviewAttachmentList")).includes("capacity_7.jpg"), "返回上一时刻后标注图记录丢失");
 
   await page.click("#reviewDialog [data-close-review]");
   await page.waitForFunction(() => !document.querySelector("#reviewDialog").open);
@@ -228,6 +298,17 @@ async function main() {
     animations: "disabled"
   });
   report.mobile = await auditModal(mobile.page);
+  await mobile.page.setInputFiles("#reviewAttachmentInput", [southAttachment, northAttachment]);
+  await mobile.page.waitForFunction(() => document.querySelectorAll("#reviewAttachmentList .review-attachment-item").length === 2);
+  await mobile.page.waitForFunction(() => {
+    const images = [...document.querySelectorAll("#reviewAttachmentList .review-attachment-item img")];
+    return images.length === 2 && images.every((image) => image.complete && image.naturalWidth > 0);
+  });
+  await mobile.page.locator("#reviewAttachmentList").scrollIntoViewIfNeeded();
+  await mobile.page.screenshot({
+    path: path.join(repoRoot, "review", "review-modal-multi-attachments-mobile.png"),
+    animations: "disabled"
+  });
   await mobile.page.locator(".review-modal-body").evaluate((node) => {
     node.scrollTop = node.scrollHeight;
   });

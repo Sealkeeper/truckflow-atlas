@@ -1,0 +1,313 @@
+{
+  "schema": "truckflow-final-review-v2",
+  "exported_at": "2026-10-21T12:13:35.859Z",
+  "reviewer": "user-final-review",
+  "source_status": "user-completed-in-browser-review",
+  "source_warning": "All 10 sampling moments were completed by the user in the local review interface. Saved values are reproduced verbatim; attachment previews were not exported by the user.",
+  "definition": "每张画面内独立可辨的货车车体；叉车、轿车、面包车、行人排除；牵引车与其挂车计一辆；明确独立且可辨的货厢单独计。",
+  "complete": true,
+  "reviewed_samples": 10,
+  "completed_samples": 10,
+  "samples": [
+    {
+      "sample_key": "t5",
+      "time": 5,
+      "video_time": "00:05",
+      "camera_counts": {
+        "south": 3,
+        "north": 5
+      },
+      "visible_total": 8,
+      "overlap": 1,
+      "unique_total": 7,
+      "formula_total": 7,
+      "total_source": "auto",
+      "formula_mismatch": false,
+      "notes": {
+        "south": "",
+        "north": "",
+        "overlap": "画面最下方的那辆红车",
+        "total": "",
+        "general": ""
+      },
+      "attachments": [],
+      "attachment_count": 0,
+      "attachment_files": [],
+      "attachment": null,
+      "attachment_file": null,
+      "reviewed_at": "2026-10-21T12:08:36.367Z",
+      "saved_at": "2026-10-21T12:08:36.367Z",
+      "completed": true
+    },
+    {
+      "sample_key": "t300",
+      "time": 300,
+      "video_time": "05:00",
+      "camera_counts": {
+        "south": 4,
+        "north": 3
+      },
+      "visible_total": 7,
+      "overlap": 1,
+      "unique_total": 6,
+      "formula_total": 6,
+      "total_source": "auto",
+      "formula_mismatch": false,
+      "notes": {
+        "south": "",
+        "north": "",
+        "overlap": "最下方那辆白车",
+        "total": "",
+        "general": ""
+      },
+      "attachments": [],
+      "attachment_count": 0,
+      "attachment_files": [],
+      "attachment": null,
+      "attachment_file": null,
+      "reviewed_at": "2026-10-21T12:09:15.914Z",
+      "saved_at": "2026-10-21T12:09:15.914Z",
+      "completed": true
+    },
+    {
+      "sample_key": "t600",
+      "time": 600,
+      "video_time": "10:00",
+      "camera_counts": {
+        "south": 4,
+        "north": 4
+      },
+      "visible_total": 8,
+      "overlap": 1,
+      "unique_total": 7,
+      "formula_total": 7,
+      "total_source": "auto",
+      "formula_mismatch": false,
+      "notes": {
+        "south": "",
+        "north": "",
+        "overlap": "最下方那辆白车",
+        "total": "",
+        "general": ""
+      },
+      "attachments": [],
+      "attachment_count": 0,
+      "attachment_files": [],
+      "attachment": null,
+      "attachment_file": null,
+      "reviewed_at": "2026-10-21T12:09:39.848Z",
+      "saved_at": "2026-10-21T12:09:39.848Z",
+      "completed": true
+    },
+    {
+      "sample_key": "t900",
+      "time": 900,
+      "video_time": "15:00",
+      "camera_counts": {
+        "south": 5,
+        "north": 3
+      },
+      "visible_total": 8,
+      "overlap": 2,
+      "unique_total": 6,
+      "formula_total": 6,
+      "total_source": "auto",
+      "formula_mismatch": false,
+      "notes": {
+        "south": "其中最下方那辆红车只有露出一半",
+        "north": "",
+        "overlap": "最下方那辆红车和白车为重叠车",
+        "total": "",
+        "general": ""
+      },
+      "attachments": [],
+      "attachment_count": 0,
+      "attachment_files": [],
+      "attachment": null,
+      "attachment_file": null,
+      "reviewed_at": "2026-10-21T12:10:15.301Z",
+      "saved_at": "2026-10-21T12:10:15.301Z",
+      "completed": true
+    },
+    {
+      "sample_key": "t1200",
+      "time": 1200,
+      "video_time": "20:00",
+      "camera_counts": {
+        "south": 5,
+        "north": 3
+      },
+      "visible_total": 8,
+      "overlap": 2,
+      "unique_total": 6,
+      "formula_total": 6,
+      "total_source": "auto",
+      "formula_mismatch": false,
+      "notes": {
+        "south": "",
+        "north": "",
+        "overlap": "最下方的红车和白车\n",
+        "total": "",
+        "general": ""
+      },
+      "attachments": [],
+      "attachment_count": 0,
+      "attachment_files": [],
+      "attachment": null,
+      "attachment_file": null,
+      "reviewed_at": "2026-10-21T12:10:46.932Z",
+      "saved_at": "2026-10-21T12:10:46.932Z",
+      "completed": true
+    },
+    {
+      "sample_key": "t1500",
+      "time": 1500,
+      "video_time": "25:00",
+      "camera_counts": {
+        "south": 5,
+        "north": 2
+      },
+      "visible_total": 7,
+      "overlap": 2,
+      "unique_total": 5,
+      "formula_total": 5,
+      "total_source": "auto",
+      "formula_mismatch": false,
+      "notes": {
+        "south": "最下方的红车只露出一半，也算",
+        "north": "",
+        "overlap": "最下方的红车和白车",
+        "total": "",
+        "general": ""
+      },
+      "attachments": [],
+      "attachment_count": 0,
+      "attachment_files": [],
+      "attachment": null,
+      "attachment_file": null,
+      "reviewed_at": "2026-10-21T12:11:39.767Z",
+      "saved_at": "2026-10-21T12:11:39.767Z",
+      "completed": true
+    },
+    {
+      "sample_key": "t1800",
+      "time": 1800,
+      "video_time": "30:00",
+      "camera_counts": {
+        "south": 4,
+        "north": 2
+      },
+      "visible_total": 6,
+      "overlap": 1,
+      "unique_total": 5,
+      "formula_total": 5,
+      "total_source": "auto",
+      "formula_mismatch": false,
+      "notes": {
+        "south": "",
+        "north": "",
+        "overlap": "白车",
+        "total": "",
+        "general": ""
+      },
+      "attachments": [],
+      "attachment_count": 0,
+      "attachment_files": [],
+      "attachment": null,
+      "attachment_file": null,
+      "reviewed_at": "2026-10-21T12:11:56.765Z",
+      "saved_at": "2026-10-21T12:11:56.765Z",
+      "completed": true
+    },
+    {
+      "sample_key": "t2100",
+      "time": 2100,
+      "video_time": "35:00",
+      "camera_counts": {
+        "south": 3,
+        "north": 2
+      },
+      "visible_total": 5,
+      "overlap": 1,
+      "unique_total": 4,
+      "formula_total": 4,
+      "total_source": "auto",
+      "formula_mismatch": false,
+      "notes": {
+        "south": "",
+        "north": "",
+        "overlap": "白车",
+        "total": "",
+        "general": ""
+      },
+      "attachments": [],
+      "attachment_count": 0,
+      "attachment_files": [],
+      "attachment": null,
+      "attachment_file": null,
+      "reviewed_at": "2026-10-21T12:12:17.067Z",
+      "saved_at": "2026-10-21T12:12:17.067Z",
+      "completed": true
+    },
+    {
+      "sample_key": "t2400",
+      "time": 2400,
+      "video_time": "40:00",
+      "camera_counts": {
+        "south": 3,
+        "north": 3
+      },
+      "visible_total": 6,
+      "overlap": 1,
+      "unique_total": 5,
+      "formula_total": 5,
+      "total_source": "auto",
+      "formula_mismatch": false,
+      "notes": {
+        "south": "",
+        "north": "",
+        "overlap": "最下面的那辆车",
+        "total": "",
+        "general": ""
+      },
+      "attachments": [],
+      "attachment_count": 0,
+      "attachment_files": [],
+      "attachment": null,
+      "attachment_file": null,
+      "reviewed_at": "2026-10-21T12:12:34.264Z",
+      "saved_at": "2026-10-21T12:12:34.264Z",
+      "completed": true
+    },
+    {
+      "sample_key": "t2600",
+      "time": 2600,
+      "video_time": "43:20",
+      "camera_counts": {
+        "south": 4,
+        "north": 2
+      },
+      "visible_total": 6,
+      "overlap": 2,
+      "unique_total": 4,
+      "formula_total": 4,
+      "total_source": "auto",
+      "formula_mismatch": false,
+      "notes": {
+        "south": "",
+        "north": "",
+        "overlap": "最下面那两辆红车",
+        "total": "",
+        "general": ""
+      },
+      "attachments": [],
+      "attachment_count": 0,
+      "attachment_files": [],
+      "attachment": null,
+      "attachment_file": null,
+      "reviewed_at": "2026-10-21T12:13:35.859Z",
+      "saved_at": "2026-10-21T12:13:35.859Z",
+      "completed": true
+    }
+  ]
+}

@@ -926,21 +926,17 @@
               <h3 id="reviewAttachmentTitle">补充标注图片</h3>
               <span>可选</span>
             </div>
-            <p>需要标出车辆时，可上传标记后的截图。</p>
+            <p>需要标出车辆时，可一次上传多张标记截图，最多 8 张。</p>
           </div>
           <div class="review-dropzone" id="reviewDropzone">
-            <input id="reviewAttachmentInput" type="file" accept="image/png,image/jpeg,image/webp" hidden>
-            <button class="review-attachment-btn" id="reviewAttachmentBtn" type="button">＋ 选择图片</button>
-            <span>也可粘贴或拖入图片 · PNG / JPG / WebP</span>
+            <input id="reviewAttachmentInput" type="file" accept="image/png,image/jpeg,image/webp" multiple hidden>
+            <button class="review-attachment-btn" id="reviewAttachmentBtn" type="button">＋ 选择图片（可多选）</button>
+            <span>也可一次粘贴或拖入多张图片 · PNG / JPG / WebP</span>
           </div>
-          <div class="review-attachment-preview" id="reviewAttachmentPreview" hidden>
-            <img id="reviewAttachmentImage" alt="已选择的本机标注图预览">
-            <div>
-              <strong id="reviewAttachmentName"></strong>
-              <span>仅在本页预览，不上传服务器；导出 JSON 只记录文件名。</span>
-            </div>
-            <button class="review-attachment-remove" id="reviewAttachmentRemove" type="button">移除</button>
-          </div>
+          <div class="review-attachment-list" id="reviewAttachmentList" hidden></div>
+          <p class="review-attachment-help" id="reviewAttachmentHelp" hidden>
+            图片不上传服务器；导出复核 JSON 时会一并带上本会话内每张标注图的原图数据。
+          </p>
         </section>
       </div>
 

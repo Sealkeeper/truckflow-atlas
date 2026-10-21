@@ -1,0 +1,136 @@
+{
+  "reviewed_camera_samples": 20,
+  "reviewed_unique_times": 10,
+  "unique_totals": {
+    "5": 7,
+    "300": 6,
+    "600": 7,
+    "900": 6,
+    "1200": 6,
+    "1500": 5,
+    "1800": 5,
+    "2100": 4,
+    "2400": 5,
+    "2600": 4
+  },
+  "models": {
+    "full_batch": {
+      "graded": 18,
+      "exact": 14,
+      "exact_rate": 77.8,
+      "mae": 0.333,
+      "under": 5,
+      "over": 1,
+      "rows": [
+        {
+          "key": "north_1200",
+          "gold": 3,
+          "predicted": 3,
+          "error": 0
+        },
+        {
+          "key": "north_1500",
+          "gold": 2,
+          "predicted": 2,
+          "error": 0
+        },
+        {
+          "key": "north_1800",
+          "gold": 2,
+          "predicted": 2,
+          "error": 0
+        },
+        {
+          "key": "north_2100",
+          "gold": 2,
+          "predicted": 2,
+          "error": 0
+        },
+        {
+          "key": "north_2400",
+          "gold": 3,
+          "predicted": 3,
+          "error": 0
+        },
+        {
+          "key": "north_2600",
+          "gold": 2,
+          "predicted": 2,
+          "error": 0
+        },
+        {
+          "key": "north_300",
+          "gold": 3,
+          "predicted": 2,
+          "error": -1
+        },
+        {
+          "key": "north_5",
+          "gold": 5,
+          "predicted": 3,
+          "error": -2
+        },
+        {
+          "key": "north_600",
+          "gold": 4,
+          "predicted": 2,
+          "error": -2
+        },
+        {
+          "key": "north_900",
+          "gold": 3,
+          "predicted": 3,
+          "error": 0
+        },
+        {
+          "key": "south_1200",
+          "gold": 5,
+          "predicted": 5,
+          "error": 0
+        },
+        {
+          "key": "south_1500",
+          "gold": 5,
+          "predicted": 5,
+          "error": 0
+        },
+        {
+          "key": "south_1800",
+          "gold": 4,
+          "predicted": 4,
+          "error": 0
+        },
+        {
+          "key": "south_2100",
+          "gold": 3,
+          "predicted": 4,
+          "error": 1
+        },
+        {
+          "key": "south_300",
+          "gold": 4,
+          "predicted": 4,
+          "error": 0
+        },
+        {
+          "key": "south_5",
+          "gold": 3,
+          "predicted": 3,
+          "error": 0
+        },
+        {
+          "key": "south_600",
+          "gold": 4,
+          "predicted": 4,
+          "error": 0
+        },
+        {
+          "key": "south_900",
+          "gold": 5,
+          "predicted": 5,
+          "error": 0
+        }
+      ]
+    }
+  }
+}

@@ -4215,35 +4215,52 @@ body.is-drawer-open {
   cursor: pointer;
 }
 
-.review-attachment-preview {
+.review-attachment-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.review-attachment-item {
+  position: relative;
   display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 7px;
-  padding: 7px;
+  min-width: 0;
+  flex-direction: column;
+  margin: 0;
+  padding: 6px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(1, 10, 14, 0.34);
 }
 
-.review-attachment-preview img {
-  width: 46px;
-  height: 36px;
-  flex: 0 0 auto;
-  border-radius: 4px;
-  object-fit: cover;
+.review-attachment-item img,
+.review-attachment-placeholder {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
   background: #02070a;
+  object-fit: cover;
 }
 
-.review-attachment-preview > div {
+.review-attachment-placeholder {
+  border: 1px dashed rgba(154, 191, 198, 0.2);
+  color: var(--muted);
+  font-size: 8px;
+}
+
+.review-attachment-item figcaption {
   display: flex;
   min-width: 0;
-  flex: 1;
   flex-direction: column;
   gap: 2px;
+  padding: 6px 1px 0;
 }
 
-.review-attachment-preview strong {
+.review-attachment-item strong {
   overflow: hidden;
   color: var(--ink-soft);
   font-size: 9px;
@@ -4252,17 +4269,33 @@ body.is-drawer-open {
   white-space: nowrap;
 }
 
-.review-attachment-preview span {
+.review-attachment-item figcaption span {
   color: var(--muted);
   font-size: 8px;
 }
 
 .review-attachment-remove {
-  border: 0;
-  color: var(--red);
-  background: transparent;
-  font-size: 9px;
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  padding: 2px 6px;
+  border: 1px solid rgba(255, 111, 111, 0.34);
+  border-radius: 4px;
+  color: #ff9b9b;
+  background: rgba(2, 7, 10, 0.88);
+  font-size: 8px;
   cursor: pointer;
+}
+
+.review-attachment-remove:hover {
+  border-color: rgba(255, 111, 111, 0.68);
+  color: #ffc4c4;
+}
+
+.review-attachment-help {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 8px;
 }
 
 .review-modal-actions {
@@ -4386,6 +4419,10 @@ body.is-drawer-open {
   .review-fields {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .review-attachment-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 760px) {
@@ -4423,6 +4460,10 @@ body.is-drawer-open {
 
   .review-modal-body {
     padding: 11px 15px 16px;
+  }
+
+  .review-attachment-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .review-evidence-grid {

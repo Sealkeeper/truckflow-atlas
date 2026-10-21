@@ -4,6 +4,9 @@
   const REVIEW_KEY = "truckflow.workspace.review.v2";
   const REVIEW_DATA_URL = "review/review-data.json";
   const OFFSETS = [-2, -1, 0, 1, 2];
+  const MAX_ATTACHMENTS = 8;
+  const MAX_ATTACHMENT_BYTES = 10 * 1024 * 1024;
+  const ATTACHMENT_TYPES = new Set(["image/png", "image/jpeg", "image/webp"]);
 
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
@@ -46,10 +49,8 @@
     saveNote: $("#reviewSaveNote"),
     attachmentInput: $("#reviewAttachmentInput"),
     attachmentBtn: $("#reviewAttachmentBtn"),
-    attachmentPreview: $("#reviewAttachmentPreview"),
-    attachmentImage: $("#reviewAttachmentImage"),
-    attachmentName: $("#reviewAttachmentName"),
-    attachmentRemove: $("#reviewAttachmentRemove"),
+    attachmentList: $("#reviewAttachmentList"),
+    attachmentHelp: $("#reviewAttachmentHelp"),
     dropzone: $("#reviewDropzone"),
     evidenceBody: $("#reviewEvidenceBody")
   };
@@ -113,6 +114,7 @@
       total: null,
       total_source: "auto",
       notes: { south: "", north: "", overlap: "", total: "", general: "" },
+      attachments: [],
       attachment: null,
       status: "draft",
       completed: false,
@@ -126,14 +128,72 @@
     return JSON.parse(JSON.stringify(value));
   }
 
+  function attachmentKey(item) {
+    return [item?.name, item?.type, item?.size, item?.last_modified].join("|");
+  }
+
+  function legacyAttachmentId(item) {
+    let hash = 2166136261;
+    for (const character of attachmentKey(item)) {
+      hash ^= character.charCodeAt(0);
+      hash = Math.imul(hash, 16777619);
+    }
+    return `att-${(hash >>> 0).toString(36)}`;
+  }
+
+  function newAttachmentId() {
+    if (window.crypto?.randomUUID) return `att-${window.crypto.randomUUID()}`;
+    return `att-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
+  }
+
+  function normalizeAttachments(attachments, legacyAttachment) {
+    const candidates = Array.isArray(attachments) && attachments.length
+      ? attachments
+      : legacyAttachment?.name
+        ? [legacyAttachment]
+        : [];
+    const seenKeys = new Set();
+    const seenIds = new Set();
+    return candidates
+      .filter((item) => item && typeof item.name === "string" && item.name.trim())
+      .map((item) => ({
+        id: String(item.id || legacyAttachmentId(item)),
+        name: item.name,
+        type: String(item.type || ""),
+        size: Number(item.size) || 0,
+        last_modified: Number(item.last_modified) || 0
+      }))
+      .filter((item) => {
+        const key = attachmentKey(item);
+        if (seenKeys.has(key)) return false;
+        seenKeys.add(key);
+        return true;
+      })
+      .map((item, index) => {
+        if (seenIds.has(item.id)) item.id = `${legacyAttachmentId(item)}-${index + 1}`;
+        seenIds.add(item.id);
+        return item;
+      })
+      .slice(0, MAX_ATTACHMENTS);
+  }
+
   function recordFor(time) {
     const stored = state.records[String(time)];
-    return stored ? { ...blankRecord(time), ...clone(stored), notes: { ...blankRecord(time).notes, ...(stored.notes || {}) } } : blankRecord(time);
+    if (!stored) return blankRecord(time);
+    const record = {
+      ...blankRecord(time),
+      ...clone(stored),
+      notes: { ...blankRecord(time).notes, ...(stored.notes || {}) }
+    };
+    record.attachments = normalizeAttachments(record.attachments, record.attachment);
+    record.attachment = record.attachments[0] ? { ...record.attachments[0] } : null;
+    return record;
   }
 
   function hasAnyContent(record) {
     return ["south", "north", "overlap", "total"].some((key) => Number.isInteger(record[key]))
       || Object.values(record.notes || {}).some((value) => String(value || "").trim())
+      || Boolean(record.attachments?.length)
       || Boolean(record.attachment?.name);
   }
 
@@ -248,9 +308,13 @@
 
   function commitDraft() {
     if (!state.record) return;
-    const key = String(state.record.time);
-    if (hasAnyContent(state.record)) {
-      state.records[key] = state.record;
+    persistRecord(state.record.time, state.record);
+  }
+
+  function persistRecord(time, record) {
+    const key = String(time);
+    if (hasAnyContent(record)) {
+      state.records[key] = record;
     } else {
       delete state.records[key];
     }
@@ -274,23 +338,38 @@
   }
 
   function renderAttachment() {
-    const preview = state.attachmentPreviews.get(String(state.currentTime));
-    const attachment = state.record?.attachment;
-    const visible = Boolean(attachment?.name || preview);
-    el.attachmentPreview.hidden = !visible;
+    const attachments = state.record?.attachments || [];
+    const visible = attachments.length > 0;
+    el.attachmentList.hidden = !visible;
+    el.attachmentHelp.hidden = !visible;
     if (!visible) {
-      el.attachmentImage.removeAttribute("src");
-      el.attachmentImage.hidden = true;
-      el.attachmentName.textContent = "";
+      el.attachmentList.innerHTML = "";
+      el.attachmentHelp.textContent = "";
       return;
     }
-    el.attachmentImage.hidden = !preview;
-    if (preview) {
-      el.attachmentImage.src = preview;
-    } else {
-      el.attachmentImage.removeAttribute("src");
-    }
-    el.attachmentName.textContent = attachment?.name || "本页临时图片";
+    el.attachmentList.innerHTML = attachments.map((attachment, index) => {
+      const preview = state.attachmentPreviews.get(`${state.currentTime}:${attachment.id}`);
+      const previewHtml = preview
+        ? `<img src="${preview}" alt="${escapeHtml(attachment.name)} 预览">`
+        : `<span class="review-attachment-placeholder" aria-label="预览图片已释放">文件名已保留</span>`;
+      return `
+        <figure class="review-attachment-item" data-attachment-id="${escapeHtml(attachment.id)}">
+          ${previewHtml}
+          <figcaption>
+            <strong title="${escapeHtml(attachment.name)}">${escapeHtml(attachment.name)}</strong>
+            <span>${index + 1} / ${MAX_ATTACHMENTS} · ${formatBytes(attachment.size)}</span>
+          </figcaption>
+          <button class="review-attachment-remove" type="button" data-attachment-remove="${escapeHtml(attachment.id)}" aria-label="移除 ${escapeHtml(attachment.name)}">移除</button>
+        </figure>`;
+    }).join("");
+    el.attachmentHelp.textContent = `已加入 ${attachments.length} / ${MAX_ATTACHMENTS} 张；图片不上传服务器，导出复核 JSON 时一并带上本会话原图数据。`;
+  }
+
+  function formatBytes(bytes) {
+    const value = Number(bytes) || 0;
+    if (value < 1024) return `${value} B`;
+    if (value < 1024 * 1024) return `${(value / 1024).toFixed(1)} KB`;
+    return `${(value / (1024 * 1024)).toFixed(1)} MB`;
   }
 
   function renderEvidenceImages() {
@@ -437,39 +516,105 @@
     showToast(state.record.completed ? "本帧复核已保存，四项数量完整。" : "本帧已暂存；留空项仍待补全。");
   }
 
-  function handleAttachment(file) {
-    if (!file) return;
-    if (!["image/png", "image/jpeg", "image/webp"].includes(file.type)) {
-      showToast("只支持 PNG、JPG、WebP 图片。", true);
-      return;
-    }
-    if (file.size > 10 * 1024 * 1024) {
-      showToast("图片超过 10 MB，请压缩后再选择。", true);
-      return;
-    }
-    const reader = new FileReader();
-    reader.addEventListener("load", () => {
-      const preview = String(reader.result || "");
-      state.attachmentPreviews.set(String(state.currentTime), preview);
-      state.record.attachment = {
+  function readAttachmentPreview(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.addEventListener("load", () => resolve(String(reader.result || "")));
+      reader.addEventListener("error", () => reject(reader.error || new Error("图片读取失败")));
+      reader.readAsDataURL(file);
+    });
+  }
+
+  async function handleAttachments(fileList) {
+    const files = Array.from(fileList || []);
+    const targetTime = state.currentTime;
+    const record = state.record;
+    el.attachmentInput.value = "";
+    if (!files.length || !record) return;
+
+    const existingKeys = new Set((record.attachments || []).map(attachmentKey));
+    const candidates = [];
+    let unsupported = 0;
+    let oversized = 0;
+    let duplicates = 0;
+    files.forEach((file) => {
+      if (!ATTACHMENT_TYPES.has(file.type)) {
+        unsupported += 1;
+        return;
+      }
+      if (file.size > MAX_ATTACHMENT_BYTES) {
+        oversized += 1;
+        return;
+      }
+      const metadata = {
         name: file.name,
         type: file.type,
         size: file.size,
         last_modified: file.lastModified
       };
-      renderAttachment();
-      commitDraft();
-      showToast("标注图已加入本页预览，不会上传到服务器。");
+      const key = attachmentKey(metadata);
+      if (existingKeys.has(key)) {
+        duplicates += 1;
+        return;
+      }
+      existingKeys.add(key);
+      candidates.push({ file, metadata });
     });
-    reader.readAsDataURL(file);
+
+    const slotsLeft = Math.max(0, MAX_ATTACHMENTS - (record.attachments || []).length);
+    const accepted = candidates.slice(0, slotsLeft);
+    const overflow = Math.max(0, candidates.length - accepted.length);
+    const issues = [];
+    if (unsupported) issues.push(`${unsupported} 张不是 PNG / JPG / WebP`);
+    if (oversized) issues.push(`${oversized} 张超过 10 MB`);
+    if (duplicates) issues.push(`${duplicates} 张与本时刻已有图片重复`);
+    if (overflow) issues.push(`${overflow} 张超过 8 张上限`);
+
+    const loaded = (await Promise.allSettled(accepted.map(async ({ file, metadata }) => {
+      const preview = await readAttachmentPreview(file);
+      return {
+        attachment: { id: newAttachmentId(), ...metadata },
+        preview
+      };
+    }))).filter((result) => result.status === "fulfilled").map((result) => result.value);
+    const failed = accepted.length - loaded.length;
+    if (failed) issues.push(`${failed} 张读取失败`);
+
+    if (loaded.length) {
+      record.attachments = [...(record.attachments || [])];
+      loaded.forEach(({ attachment, preview }) => {
+        record.attachments.push(attachment);
+        state.attachmentPreviews.set(`${targetTime}:${attachment.id}`, preview);
+      });
+      record.attachment = { ...record.attachments[0] };
+      persistRecord(targetTime, record);
+      if (state.currentTime === targetTime) {
+        state.record = record;
+        renderAttachment();
+      }
+    }
+
+    if (issues.length) {
+      const joined = issues.join("；");
+      showToast(loaded.length
+        ? `${joined}；其余 ${record.attachments.length} 张已加入。`
+        : `${joined}；本次没有加入图片。`, true);
+      return;
+    }
+    showToast(`已加入 ${loaded.length} 张标注图，本时刻共 ${record.attachments.length} / ${MAX_ATTACHMENTS} 张；不会上传到服务器。`);
   }
 
-  function clearAttachment() {
-    state.attachmentPreviews.delete(String(state.currentTime));
-    if (state.record) state.record.attachment = null;
-    el.attachmentInput.value = "";
+  function removeAttachment(id) {
+    if (!state.record) return;
+    const targetTime = state.currentTime;
+    const before = state.record.attachments || [];
+    const attachment = before.find((item) => item.id === id);
+    state.record.attachments = before.filter((item) => item.id !== id);
+    state.record.attachment = state.record.attachments[0] ? { ...state.record.attachments[0] } : null;
+    state.attachmentPreviews.delete(`${targetTime}:${id}`);
+    persistRecord(targetTime, state.record);
     renderAttachment();
-    commitDraft();
+    showToast(attachment ? `已移除 ${attachment.name}。` : "已移除标注图。");
   }
 
   function tabButton(tab, active) {
@@ -542,6 +687,19 @@
       const visibleTotal = [record.south, record.north].every(Number.isInteger)
         ? record.south + record.north
         : null;
+      const attachments = (record.attachments || []).map((attachment, index) => {
+        const dataUrl = state.attachmentPreviews.get(`${sample.time}:${attachment.id}`) || null;
+        return {
+          name: attachment.name,
+          type: attachment.type,
+          size: attachment.size,
+          last_modified: attachment.last_modified,
+          source_order: index + 1,
+          preview_available: Boolean(dataUrl),
+          data_url: dataUrl
+        };
+      });
+      const attachmentFiles = attachments.map((attachment) => attachment.name);
       return {
         sample_key: sample.key || `t${sample.time}`,
         time: sample.time,
@@ -557,8 +715,11 @@
         total_source: record.total_source,
         formula_mismatch: Boolean(record.formula_mismatch),
         notes: { ...record.notes },
-        attachment: record.attachment ? { ...record.attachment } : null,
-        attachment_file: record.attachment?.name || null,
+        attachments,
+        attachment_count: attachments.length,
+        attachment_files: attachmentFiles,
+        attachment: attachments[0] || null,
+        attachment_file: attachmentFiles[0] || null,
         reviewed_at: record.reviewed_at,
         saved_at: record.saved_at,
         completed
@@ -633,8 +794,11 @@
       if (event.target.closest("button")) return;
       el.attachmentInput.click();
     });
-    el.attachmentInput.addEventListener("change", () => handleAttachment(el.attachmentInput.files?.[0]));
-    el.attachmentRemove.addEventListener("click", clearAttachment);
+    el.attachmentInput.addEventListener("change", () => handleAttachments(el.attachmentInput.files));
+    el.attachmentList.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-attachment-remove]");
+      if (button) removeAttachment(button.dataset.attachmentRemove);
+    });
     ["dragenter", "dragover"].forEach((type) => {
       el.dropzone.addEventListener(type, (event) => {
         event.preventDefault();
@@ -647,11 +811,11 @@
         el.dropzone.classList.remove("is-dragging");
       });
     });
-    el.dropzone.addEventListener("drop", (event) => handleAttachment(event.dataTransfer?.files?.[0]));
+    el.dropzone.addEventListener("drop", (event) => handleAttachments(event.dataTransfer?.files));
     document.addEventListener("paste", (event) => {
       if (!dialog.open) return;
-      const file = Array.from(event.clipboardData?.files || []).find((item) => item.type.startsWith("image/"));
-      if (file) handleAttachment(file);
+      const files = Array.from(event.clipboardData?.files || []).filter((item) => item.type.startsWith("image/"));
+      if (files.length) handleAttachments(files);
     });
   }
 
