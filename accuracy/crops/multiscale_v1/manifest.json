@@ -1,0 +1,351 @@
+{
+  "schema": "truckflow-multiscale-inputs-v1",
+  "created_at": "2026-10-21T21:08:55+08:00",
+  "sample_count": 20,
+  "samples": [
+    "north_1200",
+    "north_1500",
+    "north_1800",
+    "north_2100",
+    "north_2400",
+    "north_2600",
+    "north_300",
+    "north_5",
+    "north_600",
+    "north_900",
+    "south_1200",
+    "south_1500",
+    "south_1800",
+    "south_2100",
+    "south_2400",
+    "south_2600",
+    "south_300",
+    "south_5",
+    "south_600",
+    "south_900"
+  ],
+  "global_view": {
+    "kind": "existing clean aisle crop",
+    "source_frame_size": [
+      1280,
+      960
+    ],
+    "source_rect_xyxy": [
+      350,
+      0,
+      870,
+      960
+    ],
+    "scale": 2,
+    "output_size": [
+      1040,
+      1920
+    ],
+    "image_pattern": "accuracy/crops/<sample>_aisle.jpg",
+    "normalized_to_source": "px=350+x*520, py=0+y*960"
+  },
+  "detail_view": {
+    "kind": "fixed far-channel window, same for every sample",
+    "source_frame_size": [
+      1280,
+      960
+    ],
+    "source_rect_xyxy": [
+      480,
+      60,
+      760,
+      620
+    ],
+    "scale": 2,
+    "output_size": [
+      560,
+      1120
+    ],
+    "image_pattern": "accuracy/crops/multiscale_v1/detail/<sample>.jpg",
+    "normalized_to_source": "px=480+u*280, py=60+v*560",
+    "detail_to_global_normalized": "x_global=(130+280*u)/520; y_global=(60+560*v)/960",
+    "generation": "PIL Lanczos resize only; no generative content"
+  },
+  "images": {
+    "north_1200": {
+      "global": "accuracy/crops/north_1200_aisle.jpg",
+      "detail": "accuracy/crops/multiscale_v1/detail/north_1200.jpg",
+      "global_sha256": "aeef1fce6cbd2c62f8c6b1e5f9090dc4359ffce85b7e924eae538994787fde09",
+      "detail_sha256": "76fa98bcfc93a268f0383d3a216b213dd343d97b2f94fce4c81db4f7e2d94edc",
+      "global_size": [
+        1040,
+        1920
+      ],
+      "detail_size": [
+        560,
+        1120
+      ]
+    },
+    "north_1500": {
+      "global": "accuracy/crops/north_1500_aisle.jpg",
+      "detail": "accuracy/crops/multiscale_v1/detail/north_1500.jpg",
+      "global_sha256": "71d814fccecf37b4ab9caf3aa9ba027a33d10a4e7a2e4a9e0e431b4d934a1700",
+      "detail_sha256": "b4ce4b536de4ed3d472e98186f463d2afea63d1e935228e993ae6b09d18fea3c",
+      "global_size": [
+        1040,
+        1920
+      ],
+      "detail_size": [
+        560,
+        1120
+      ]
+    },
+    "north_1800": {
+      "global": "accuracy/crops/north_1800_aisle.jpg",
+      "detail": "accuracy/crops/multiscale_v1/detail/north_1800.jpg",
+      "global_sha256": "dcd076f26d2414f17db85b89199aca458f4f0da0ddbaec2f69a1eee60ad9b2cb",
+      "detail_sha256": "0dcb71403a5b0d45da63154144a102dfe40ad51338760f80e3c3260a09309fd0",
+      "global_size": [
+        1040,
+        1920
+      ],
+      "detail_size": [
+        560,
+        1120
+      ]
+    },
+    "north_2100": {
+      "global": "accuracy/crops/north_2100_aisle.jpg",
+      "detail": "accuracy/crops/multiscale_v1/detail/north_2100.jpg",
+      "global_sha256": "c529da6ebe872225137b02535965650b92cd1feb47448892084c953434f016b6",
+      "detail_sha256": "129ae562b6efe005ed50c510923f1cbf49583c5a3fa481f76f74e47820ee55be",
+      "global_size": [
+        1040,
+        1920
+      ],
+      "detail_size": [
+        560,
+        1120
+      ]
+    },
+    "north_2400": {
+      "global": "accuracy/crops/north_2400_aisle.jpg",
+      "detail": "accuracy/crops/multiscale_v1/detail/north_2400.jpg",
+      "global_sha256": "48c41ea3afbf95e26bb314d350b449aa8a3fcb7409647822a3cc5db0714d8a32",
+      "detail_sha256": "4b76282d49b6624f25e6cc5b241d86259d7dab4dffb3bace577ff1f0ec8186c9",
+      "global_size": [
+        1040,
+        1920
+      ],
+      "detail_size": [
+        560,
+        1120
+      ]
+    },
+    "north_2600": {
+      "global": "accuracy/crops/north_2600_aisle.jpg",
+      "detail": "accuracy/crops/multiscale_v1/detail/north_2600.jpg",
+      "global_sha256": "3e5e42b9fbed905f751defcbbdeecf7f62686dec44677f586126b7619bdeec22",
+      "detail_sha256": "83c333b045451c9e43b1f211da63018b4f603418ecc0eea43b85f6feba524ea8",
+      "global_size": [
+        1040,
+        1920
+      ],
+      "detail_size": [
+        560,
+        1120
+      ]
+    },
+    "north_300": {
+      "global": "accuracy/crops/north_300_aisle.jpg",
+      "detail": "accuracy/crops/multiscale_v1/detail/north_300.jpg",
+      "global_sha256": "84fd0d67ecd0f0cac878f59bd55401a841e2cf5eb1d613366041552e847a1073",
+      "detail_sha256": "158e9a7214dd1593a29cb1c9c68acea27bbe9bb1403cf7f276735938aca20dbb",
+      "global_size": [
+        1040,
+        1920
+      ],
+      "detail_size": [
+        560,
+        1120
+      ]
+    },
+    "north_5": {
+      "global": "accuracy/crops/north_5_aisle.jpg",
+      "detail": "accuracy/crops/multiscale_v1/detail/north_5.jpg",
+      "global_sha256": "8b98320e3ec5d913b48234ac6b2eabc906a943a3d26cbeeb40e53428f1574689",
+      "detail_sha256": "6b17a2823144d36a8a28382d21d1f8275ee347ecb8c487fc8327ce6c2a2a2c59",
+      "global_size": [
+        1040,
+        1920
+      ],
+      "detail_size": [
+        560,
+        1120
+      ]
+    },
+    "north_600": {
+      "global": "accuracy/crops/north_600_aisle.jpg",
+      "detail": "accuracy/crops/multiscale_v1/detail/north_600.jpg",
+      "global_sha256": "9e0d3ddf1c7c32d14abaabd1c0938b8b5f57b5d748b3a7b5dcd595780b0212d6",
+      "detail_sha256": "69166e5345311fff43eeb9b14d22b2019b49c243850cffbd0ac3e12254b669c5",
+      "global_size": [
+        1040,
+        1920
+      ],
+      "detail_size": [
+        560,
+        1120
+      ]
+    },
+    "north_900": {
+      "global": "accuracy/crops/north_900_aisle.jpg",
+      "detail": "accuracy/crops/multiscale_v1/detail/north_900.jpg",
+      "global_sha256": "89b8b383c73f27dfba4d16c8cf42f9b3ea27ac58b935d310ba932459cddce6a7",
+      "detail_sha256": "45f86c1a95213f918c2d080ad414fd0c85d05dcb026ef01b4d3a8bfd7b794d39",
+      "global_size": [
+        1040,
+        1920
+      ],
+      "detail_size": [
+        560,
+        1120
+      ]
+    },
+    "south_1200": {
+      "global": "accuracy/crops/south_1200_aisle.jpg",
+      "detail": "accuracy/crops/multiscale_v1/detail/south_1200.jpg",
+      "global_sha256": "9b1e5e54d55d1197598b070647f65b25c20d57cbcb7b0d841ba4aeac97d5161a",
+      "detail_sha256": "a0eb05e0edb91587f59856dace7536aeb01bb3b02b0989ec66dcd957cf0e4e1a",
+      "global_size": [
+        1040,
+        1920
+      ],
+      "detail_size": [
+        560,
+        1120
+      ]
+    },
+    "south_1500": {
+      "global": "accuracy/crops/south_1500_aisle.jpg",
+      "detail": "accuracy/crops/multiscale_v1/detail/south_1500.jpg",
+      "global_sha256": "94ae30ea7cc3da75bb66a82c48d4a926599982a22e6514f5a41b4afe0f8ae64f",
+      "detail_sha256": "dfebb87c5587bb387b69a821af68a1ed09eeb9db775fe94b98db59d76fcd0564",
+      "global_size": [
+        1040,
+        1920
+      ],
+      "detail_size": [
+        560,
+        1120
+      ]
+    },
+    "south_1800": {
+      "global": "accuracy/crops/south_1800_aisle.jpg",
+      "detail": "accuracy/crops/multiscale_v1/detail/south_1800.jpg",
+      "global_sha256": "26deb1af7e5dd15b6baa4f684f821135dacc734516aa3cd1d7754e9d5f530c7f",
+      "detail_sha256": "96c3e37869a6c71e7ca5f7dc9029786e70ca88f1f574b6f9e9158c2cc4bb10cc",
+      "global_size": [
+        1040,
+        1920
+      ],
+      "detail_size": [
+        560,
+        1120
+      ]
+    },
+    "south_2100": {
+      "global": "accuracy/crops/south_2100_aisle.jpg",
+      "detail": "accuracy/crops/multiscale_v1/detail/south_2100.jpg",
+      "global_sha256": "7e75be77dbf988a24e700ba3cbc6b237b9e916c8bc8fd0347e3b2ee2d82a2a9d",
+      "detail_sha256": "1f31451c516c6c7c55051f67b73878a9691bc9ba9e56bc00ae689b91da1ba384",
+      "global_size": [
+        1040,
+        1920
+      ],
+      "detail_size": [
+        560,
+        1120
+      ]
+    },
+    "south_2400": {
+      "global": "accuracy/crops/south_2400_aisle.jpg",
+      "detail": "accuracy/crops/multiscale_v1/detail/south_2400.jpg",
+      "global_sha256": "927e6b5bc4a71637774823d1c7b289c6550410a8b8226f6bb741d3656b67ebfa",
+      "detail_sha256": "234b731ed77068af530f6772d10252d38b8fca665d0119d1f1b90c2cb3a626e5",
+      "global_size": [
+        1040,
+        1920
+      ],
+      "detail_size": [
+        560,
+        1120
+      ]
+    },
+    "south_2600": {
+      "global": "accuracy/crops/south_2600_aisle.jpg",
+      "detail": "accuracy/crops/multiscale_v1/detail/south_2600.jpg",
+      "global_sha256": "70e6aeb3fcb9ffb2ab21677712ff576aa895b88c7c6f27e3fb9adcc81668ec86",
+      "detail_sha256": "128dbda49ad5df8a35fcfc4c728178d565f7dd811852b52b29d638e268d20b30",
+      "global_size": [
+        1040,
+        1920
+      ],
+      "detail_size": [
+        560,
+        1120
+      ]
+    },
+    "south_300": {
+      "global": "accuracy/crops/south_300_aisle.jpg",
+      "detail": "accuracy/crops/multiscale_v1/detail/south_300.jpg",
+      "global_sha256": "7ebb434a2b3889f0eda549ecb3f672fcac4dc5ee441298a8d6a019a22dd021e6",
+      "detail_sha256": "69cdab981eee1c3b951978f9fd121b119622ece0ba2a4a0530038cdd85d0c33f",
+      "global_size": [
+        1040,
+        1920
+      ],
+      "detail_size": [
+        560,
+        1120
+      ]
+    },
+    "south_5": {
+      "global": "accuracy/crops/south_5_aisle.jpg",
+      "detail": "accuracy/crops/multiscale_v1/detail/south_5.jpg",
+      "global_sha256": "df8d0041357342911269bd1a9c2c71d86f1b7049fa92b8aa4a61a8a01a89a8ef",
+      "detail_sha256": "97f67188762301b7cbb38c9662d78b208a5a970f8698773e42233920256cf620",
+      "global_size": [
+        1040,
+        1920
+      ],
+      "detail_size": [
+        560,
+        1120
+      ]
+    },
+    "south_600": {
+      "global": "accuracy/crops/south_600_aisle.jpg",
+      "detail": "accuracy/crops/multiscale_v1/detail/south_600.jpg",
+      "global_sha256": "32a41e95620f5e4cb39c5deff8c9cc4c9e452a633631ca9eca2049e69bbac3d7",
+      "detail_sha256": "e22322e8e4970c51561b9f1bfcc4232cd19c49873e6c746ebedc40afc11a6802",
+      "global_size": [
+        1040,
+        1920
+      ],
+      "detail_size": [
+        560,
+        1120
+      ]
+    },
+    "south_900": {
+      "global": "accuracy/crops/south_900_aisle.jpg",
+      "detail": "accuracy/crops/multiscale_v1/detail/south_900.jpg",
+      "global_sha256": "99e96143981b5d2686185f8ba33588958097373f156b62018314c98b93e31fbf",
+      "detail_sha256": "a1da697783628ea6b6d3b012aa245e666db459f036149e56ffae17d38168d56e",
+      "global_size": [
+        1040,
+        1920
+      ],
+      "detail_size": [
+        560,
+        1120
+      ]
+    }
+  }
+}

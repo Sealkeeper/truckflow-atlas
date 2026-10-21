@@ -1,0 +1,44 @@
+{
+  "schema": "truckflow-input-geometry-audit-v1",
+  "audit_date": "2026-10-21",
+  "method": "At original-frame resolution and on the 20-sample geometry contact sheet, visually checked every central-aisle truck against the global x boundaries and checked the far queue against the fixed detail window. This is an input coverage audit, not a detector or a change to user truth.",
+  "evidence": [
+    "accuracy/evidence/input_representation/geometry_check.jpg",
+    "accuracy/evidence/input_representation/detail_contact.jpg"
+  ],
+  "global_view": {
+    "source_rect_xyxy": [350, 0, 870, 960],
+    "full_source_height": true,
+    "result": "All trucks represented by the reviewed central-aisle counts are inside the left/right boundaries. No counted truck is split by x=350 or x=870. Near-side trucks reach the original bottom edge but are not additionally cut by the crop.",
+    "limitation": "The source frames themselves cut objects at y=0/960; this audit verifies that the crop introduces no extra top/bottom loss."
+  },
+  "detail_view": {
+    "source_rect_xyxy": [480, 60, 760, 620],
+    "same_rect_for_all_samples": true,
+    "result": "The window covers the far queue, including the separate far cargo bodies relevant to north_300, north_5, and north_600 and the far vehicles relevant to south_2100. It intentionally excludes most near-side bodies, which remain covered by the global view.",
+    "limitation": "The detail view is not a second full-frame count and must never be summed with the global view."
+  },
+  "per_sample": [
+    {"sample_id": "north_5", "reviewed_count": 5, "counted_vehicles_within_global_x": true, "far_queue_within_detail": true, "new_truncation_detected": false},
+    {"sample_id": "north_300", "reviewed_count": 3, "counted_vehicles_within_global_x": true, "far_queue_within_detail": true, "new_truncation_detected": false},
+    {"sample_id": "north_600", "reviewed_count": 4, "counted_vehicles_within_global_x": true, "far_queue_within_detail": true, "new_truncation_detected": false},
+    {"sample_id": "north_900", "reviewed_count": 3, "counted_vehicles_within_global_x": true, "far_queue_within_detail": true, "new_truncation_detected": false},
+    {"sample_id": "north_1200", "reviewed_count": 3, "counted_vehicles_within_global_x": true, "far_queue_within_detail": true, "new_truncation_detected": false},
+    {"sample_id": "north_1500", "reviewed_count": 2, "counted_vehicles_within_global_x": true, "far_queue_within_detail": true, "new_truncation_detected": false},
+    {"sample_id": "north_1800", "reviewed_count": 2, "counted_vehicles_within_global_x": true, "far_queue_within_detail": true, "new_truncation_detected": false},
+    {"sample_id": "north_2100", "reviewed_count": 2, "counted_vehicles_within_global_x": true, "far_queue_within_detail": true, "new_truncation_detected": false},
+    {"sample_id": "north_2400", "reviewed_count": 3, "counted_vehicles_within_global_x": true, "far_queue_within_detail": true, "new_truncation_detected": false},
+    {"sample_id": "north_2600", "reviewed_count": 2, "counted_vehicles_within_global_x": true, "far_queue_within_detail": true, "new_truncation_detected": false},
+    {"sample_id": "south_5", "reviewed_count": 3, "counted_vehicles_within_global_x": true, "far_queue_within_detail": true, "new_truncation_detected": false},
+    {"sample_id": "south_300", "reviewed_count": 4, "counted_vehicles_within_global_x": true, "far_queue_within_detail": true, "new_truncation_detected": false},
+    {"sample_id": "south_600", "reviewed_count": 4, "counted_vehicles_within_global_x": true, "far_queue_within_detail": true, "new_truncation_detected": false},
+    {"sample_id": "south_900", "reviewed_count": 5, "counted_vehicles_within_global_x": true, "far_queue_within_detail": true, "new_truncation_detected": false},
+    {"sample_id": "south_1200", "reviewed_count": 5, "counted_vehicles_within_global_x": true, "far_queue_within_detail": true, "new_truncation_detected": false},
+    {"sample_id": "south_1500", "reviewed_count": 5, "counted_vehicles_within_global_x": true, "far_queue_within_detail": true, "new_truncation_detected": false},
+    {"sample_id": "south_1800", "reviewed_count": 4, "counted_vehicles_within_global_x": true, "far_queue_within_detail": true, "new_truncation_detected": false},
+    {"sample_id": "south_2100", "reviewed_count": 3, "counted_vehicles_within_global_x": true, "far_queue_within_detail": true, "new_truncation_detected": false},
+    {"sample_id": "south_2400", "reviewed_count": 3, "counted_vehicles_within_global_x": true, "far_queue_within_detail": true, "new_truncation_detected": false},
+    {"sample_id": "south_2600", "reviewed_count": 4, "counted_vehicles_within_global_x": true, "far_queue_within_detail": true, "new_truncation_detected": false}
+  ],
+  "conclusion": "Keep the fixed detail rectangle. No per-error-frame crop is introduced."
+}
