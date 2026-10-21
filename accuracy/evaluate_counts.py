@@ -11,8 +11,10 @@ ROOT = Path(__file__).resolve().parents[1]
 def load_runs(directory: Path) -> dict[tuple[str, int], dict]:
     values = {}
     for path in directory.glob("*.json"):
+        if path.name.startswith("_"):
+            continue
         payload = json.loads(path.read_text(encoding="utf-8"))
-        name = Path(payload.get("image", path)).stem
+        name = payload.get("sample_id") or Path(payload.get("image", path)).stem
         parts = name.split("_")
         camera, time_text = parts[0], parts[1]
         values[(camera, int(time_text))] = payload
@@ -32,10 +34,20 @@ def main() -> None:
         payload = runs.get(key)
         if not payload:
             continue
-        for run in payload["runs"]:
-            if not run.get("ok"):
+        runs_in_file = payload.get("runs")
+        if runs_in_file is None:
+            runs_in_file = [payload]
+        for run in runs_in_file:
+            if not run.get("ok", not run.get("error")):
                 continue
-            predicted = run["parsed"].get("counts", {}).get("total")
+            parsed = run.get("parsed")
+            predicted = (
+                parsed.get("counts", {}).get("total")
+                if parsed is not None
+                else run.get("counts", {}).get("total", run.get("predicted_count"))
+            )
+            if predicted is None:
+                continue
             rows.append({
                 "camera": key[0],
                 "time": key[1],
