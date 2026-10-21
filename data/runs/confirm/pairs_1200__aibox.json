@@ -1,0 +1,134 @@
+{
+  "job": "pairs_1200",
+  "image": "assets\\sheets\\pairs_1200.jpg",
+  "prompt": "这张联系表上排 N1... 是北机位在同一时刻的候选窗口，下排 S1... 是南机位的候选窗口。\n两机位存在重叠，但视角和尺度不同。每格是互相重叠的窗口，不是“一格必定一辆车”。\n\n请建立跨机位物理实体图：\n1. 全图每个物理车辆只列一次，members 写出所有显示它的 N/S 窗口。\n2. 只有当颜色、货厢结构、车头、文字、顶部特征等至少两个语义证据一致时，才判为跨机位同一车。\n3. 同一辆车的车头与货厢不得分开；一个窗口可归入多个物理车辆。\n4. 排除人物、叉车、轿车、空窗、展台。\n5. 视角改变导致无法确认时写 match=\"uncertain\" 且 review=true；不能为凑数强行配对。\n6. 车型 large/medium/small/unknown。\n\n输出严格 JSON：\n{\"physical_vehicles\":[{\"group\":\"G1\",\"members\":[\"N1\",\"S2\"],\"match\":\"north_only|south_only|same_across_cameras|uncertain\",\"size\":\"large|medium|small|unknown\",\"identity\":\"可复核的至少两个特征\",\"review\":false}],\"unique_total\":0,\"rejected_candidates\":[{\"candidate\":\"N4\",\"reason\":\"\"}],\"review_reasons\":[]}",
+  "run": {
+    "model": "aibox",
+    "model_id": "glm-5.3-flash",
+    "ok": true,
+    "latency_s": 58.631,
+    "request_id": "640d399001e147b4971adde1dbaca649",
+    "usage": {
+      "prompt_tokens": 2604,
+      "total_tokens": 3745,
+      "completion_tokens": 1141,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "image_tokens": 2300
+      },
+      "reasoning_tokens": 439
+    },
+    "parsed": {
+      "physical_vehicles": [
+        {
+          "group": "G1",
+          "members": [
+            "N8",
+            "N10",
+            "S7"
+          ],
+          "match": "same_across_cameras",
+          "size": "large",
+          "identity": "白色集装箱式货厢+白色车头，顶部纵向波纹纹理一致；N10与S7为同一白箱车不同视角，N8为同车近景",
+          "review": false
+        },
+        {
+          "group": "G2",
+          "members": [
+            "N7",
+            "S6",
+            "S9"
+          ],
+          "match": "same_across_cameras",
+          "size": "large",
+          "identity": "红色货厢/红色车头，俯视红色厢体带纵向棱线；S6中红头后接白色厢体与N7/S9红色厢体区域相邻，判为同一列车队单元",
+          "review": true
+        },
+        {
+          "group": "G3",
+          "members": [
+            "S2",
+            "S4"
+          ],
+          "match": "same_across_cameras",
+          "size": "medium",
+          "identity": "红色车头+多名橙色反光衣工人围绕，车头格栅与挡风布局一致，为南机位同一车的两个窗口",
+          "review": false
+        },
+        {
+          "group": "G4",
+          "members": [
+            "N3",
+            "S5"
+          ],
+          "match": "uncertain",
+          "size": "medium",
+          "identity": "蓝色篷布覆盖货厢为共同特征；S5可见红色车头，N3未见车头，仅单一证据，需人工复核",
+          "review": true
+        },
+        {
+          "group": "G5",
+          "members": [
+            "N2",
+            "N4"
+          ],
+          "match": "uncertain",
+          "size": "medium",
+          "identity": "深色/黑色货厢且周围有戴安全帽工人；两窗视角尺度差异大，货厢纹理无法逐点对齐",
+          "review": true
+        },
+        {
+          "group": "G6",
+          "members": [
+            "N6"
+          ],
+          "match": "north_only",
+          "size": "medium",
+          "identity": "红色货厢+背景'LAMO'白色招牌+金属爬梯结构，南机位无对应招牌证据",
+          "review": false
+        }
+      ],
+      "unique_total": 6,
+      "rejected_candidates": [
+        {
+          "candidate": "N1",
+          "reason": "时间戳叠加的广角全景窗，含多辆小车与设施，无法稳定分割单一车辆"
+        },
+        {
+          "candidate": "S1",
+          "reason": "时间戳叠加广角窗，车辆过小且与N1为同场景全景，不作为独立实体"
+        },
+        {
+          "candidate": "N9",
+          "reason": "广角地面窗带'A区3-2天花北'文字，车辆尺度过小无法提取两项语义证据"
+        },
+        {
+          "candidate": "N10",
+          "reason": "已并入G1（白箱车），不重复单列"
+        },
+        {
+          "candidate": "S8",
+          "reason": "广角窗含红色货车但仅局部且文字遮挡，证据不足"
+        },
+        {
+          "candidate": "S3",
+          "reason": "画面主体为人群/工人，车辆不可辨"
+        },
+        {
+          "candidate": "N5",
+          "reason": "货架与展台结构，无完整车辆"
+        },
+        {
+          "candidate": "S9",
+          "reason": "已并入G2，不重复单列"
+        }
+      ],
+      "review_reasons": [
+        "G2：S6中红头后接白色厢体，与N7/S9纯红色厢体的衔接关系需确认是否为同一挂车或相邻车",
+        "G4：N3与S5仅共享蓝色篷布单一证据，车头颜色未在N3中可见",
+        "G5：N2与N4深色货厢在两视角下纹理无法对齐，存在为两辆不同深色货车的可能"
+      ]
+    },
+    "raw_text": "{\"physical_vehicles\":[\n{\"group\":\"G1\",\"members\":[\"N8\",\"N10\",\"S7\"],\"match\":\"same_across_cameras\",\"size\":\"large\",\"identity\":\"白色集装箱式货厢+白色车头，顶部纵向波纹纹理一致；N10与S7为同一白箱车不同视角，N8为同车近景\",\"review\":false},\n{\"group\":\"G2\",\"members\":[\"N7\",\"S6\",\"S9\"],\"match\":\"same_across_cameras\",\"size\":\"large\",\"identity\":\"红色货厢/红色车头，俯视红色厢体带纵向棱线；S6中红头后接白色厢体与N7/S9红色厢体区域相邻，判为同一列车队单元\",\"review\":true},\n{\"group\":\"G3\",\"members\":[\"S2\",\"S4\"],\"match\":\"same_across_cameras\",\"size\":\"medium\",\"identity\":\"红色车头+多名橙色反光衣工人围绕，车头格栅与挡风布局一致，为南机位同一车的两个窗口\",\"review\":false},\n{\"group\":\"G4\",\"members\":[\"N3\",\"S5\"],\"match\":\"uncertain\",\"size\":\"medium\",\"identity\":\"蓝色篷布覆盖货厢为共同特征；S5可见红色车头，N3未见车头，仅单一证据，需人工复核\",\"review\":true},\n{\"group\":\"G5\",\"members\":[\"N2\",\"N4\"],\"match\":\"uncertain\",\"size\":\"medium\",\"identity\":\"深色/黑色货厢且周围有戴安全帽工人；两窗视角尺度差异大，货厢纹理无法逐点对齐\",\"review\":true},\n{\"group\":\"G6\",\"members\":[\"N6\"],\"match\":\"north_only\",\"size\":\"medium\",\"identity\":\"红色货厢+背景'LAMO'白色招牌+金属爬梯结构，南机位无对应招牌证据\",\"review\":false}\n],\"unique_total\":6,\n\"rejected_candidates\":[\n{\"candidate\":\"N1\",\"reason\":\"时间戳叠加的广角全景窗，含多辆小车与设施，无法稳定分割单一车辆\"},\n{\"candidate\":\"S1\",\"reason\":\"时间戳叠加广角窗，车辆过小且与N1为同场景全景，不作为独立实体\"},\n{\"candidate\":\"N9\",\"reason\":\"广角地面窗带'A区3-2天花北'文字，车辆尺度过小无法提取两项语义证据\"},\n{\"candidate\":\"N10\",\"reason\":\"已并入G1（白箱车），不重复单列\"},\n{\"candidate\":\"S8\",\"reason\":\"广角窗含红色货车但仅局部且文字遮挡，证据不足\"},\n{\"candidate\":\"S3\",\"reason\":\"画面主体为人群/工人，车辆不可辨\"},\n{\"candidate\":\"N5\",\"reason\":\"货架与展台结构，无完整车辆\"},\n{\"candidate\":\"S9\",\"reason\":\"已并入G2，不重复单列\"}\n],\n\"review_reasons\":[\n\"G2：S6中红头后接白色厢体，与N7/S9纯红色厢体的衔接关系需确认是否为同一挂车或相邻车\",\n\"G4：N3与S5仅共享蓝色篷布单一证据，车头颜色未在N3中可见\",\n\"G5：N2与N4深色货厢在两视角下纹理无法对齐，存在为两辆不同深色货车的可能\"\n]}"
+  }
+}

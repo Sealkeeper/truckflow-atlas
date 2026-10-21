@@ -1,0 +1,204 @@
+{
+  "observation": "north_1200",
+  "mode": "strip",
+  "images": [
+    "assets\\strips\\north_1200_strip.jpg"
+  ],
+  "prompt": "这是一条同一机位在 t-10s、t、t+10s 的三个连续证据面板，从左到右排列。\n请分别清点每帧，并利用颜色、货厢、车头、文字、朝向等语义判断车辆是否跨帧为同一物理车。\n禁止用像素跟踪或根据上一帧数量填数；每帧计数必须有该帧可见证据。\n\n输出严格 JSON：\n{\"frames\":[{\"panel\":\"left|center|right\",\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"panel_index\":0,\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"identity_clues\":\"\",\"uncertain\":false}]}],\"links\":[{\"from\":\"left:0\",\"to\":\"center:1\",\"same_vehicle\":\"yes|no|uncertain\",\"evidence\":\"\"}],\"new_or_exited\":[{\"frame\":\"left|center|right\",\"vehicle\":\"panel_index\",\"event\":\"enter|exit|uncertain\",\"evidence\":\"\"}],\"review_reasons\":[]}\nbbox 是单个面板内的 0-1 坐标。",
+  "run": {
+    "model": "doubao",
+    "model_id": "ep-20260828174616-dthpx",
+    "ok": true,
+    "latency_s": 12.379,
+    "request_id": "0217925735385816c7b67136913b8291adfcb1079846bf4671565",
+    "usage": {
+      "completion_tokens": 1313,
+      "prompt_tokens": 1580,
+      "total_tokens": 2893,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 669
+      }
+    },
+    "parsed": {
+      "frames": [
+        {
+          "panel": "left",
+          "counts": {
+            "total": 2,
+            "large": 2,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.12,
+                0.6,
+                0.165,
+                1
+              ],
+              "size": "large",
+              "identity_clues": "白色大型长货厢",
+              "uncertain": false
+            },
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.13,
+                0.4,
+                0.165,
+                0.68
+              ],
+              "size": "large",
+              "identity_clues": "红色大型货厢",
+              "uncertain": false
+            }
+          ]
+        },
+        {
+          "panel": "center",
+          "counts": {
+            "total": 2,
+            "large": 2,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.45,
+                0.6,
+                0.49,
+                1
+              ],
+              "size": "large",
+              "identity_clues": "白色大型长货厢",
+              "uncertain": false
+            },
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.47,
+                0.4,
+                0.5,
+                0.68
+              ],
+              "size": "large",
+              "identity_clues": "红色大型货厢",
+              "uncertain": false
+            }
+          ]
+        },
+        {
+          "panel": "right",
+          "counts": {
+            "total": 2,
+            "large": 2,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.785,
+                0.6,
+                0.82,
+                1
+              ],
+              "size": "large",
+              "identity_clues": "白色大型长货厢",
+              "uncertain": false
+            },
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.805,
+                0.4,
+                0.83,
+                0.68
+              ],
+              "size": "large",
+              "identity_clues": "红色大型货厢",
+              "uncertain": false
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "from": "left:0",
+          "to": "center:1",
+          "same_vehicle": "yes",
+          "evidence": "位置、颜色一致，为同一白色大型货厢"
+        },
+        {
+          "from": "left:1",
+          "to": "center:2",
+          "same_vehicle": "yes",
+          "evidence": "位置、颜色一致，为同一红色大型货厢"
+        },
+        {
+          "from": "center:0",
+          "to": "right:0",
+          "same_vehicle": "yes",
+          "evidence": "位置、颜色一致，为同一白色大型货厢"
+        },
+        {
+          "from": "center:1",
+          "to": "right:1",
+          "same_vehicle": "yes",
+          "evidence": "位置、颜色一致，为同一红色大型货厢"
+        }
+      ],
+      "new_or_exited": [
+        {
+          "frame": "left",
+          "vehicle": "0",
+          "event": "uncertain",
+          "evidence": "车辆存在无进出"
+        },
+        {
+          "frame": "left",
+          "vehicle": "1",
+          "event": "uncertain",
+          "evidence": "车辆存在无进出"
+        },
+        {
+          "frame": "center",
+          "vehicle": "0",
+          "event": "uncertain",
+          "evidence": "车辆存在无进出"
+        },
+        {
+          "frame": "center",
+          "vehicle": "1",
+          "event": "uncertain",
+          "evidence": "车辆存在无进出"
+        },
+        {
+          "frame": "right",
+          "vehicle": "0",
+          "event": "uncertain",
+          "evidence": "车辆存在无进出"
+        },
+        {
+          "frame": "right",
+          "vehicle": "1",
+          "event": "uncertain",
+          "evidence": "车辆存在无进出"
+        }
+      ],
+      "review_reasons": []
+    },
+    "raw_text": "{\"frames\":[{\"panel\":\"left\",\"counts\":{\"total\":2,\"large\":2,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"panel_index\":0,\"bbox\":[0.12,0.6,0.165,1],\"size\":\"large\",\"identity_clues\":\"白色大型长货厢\",\"uncertain\":false},{\"panel_index\":0,\"bbox\":[0.13,0.4,0.165,0.68],\"size\":\"large\",\"identity_clues\":\"红色大型货厢\",\"uncertain\":false}]},{\"panel\":\"center\",\"counts\":{\"total\":2,\"large\":2,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"panel_index\":1,\"bbox\":[0.45,0.6,0.49,1],\"size\":\"large\",\"identity_clues\":\"白色大型长货厢\",\"uncertain\":false},{\"panel_index\":1,\"bbox\":[0.47,0.4,0.5,0.68],\"size\":\"large\",\"identity_clues\":\"红色大型货厢\",\"uncertain\":false}]},{\"panel\":\"right\",\"counts\":{\"total\":2,\"large\":2,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"panel_index\":2,\"bbox\":[0.785,0.6,0.82,1],\"size\":\"large\",\"identity_clues\":\"白色大型长货厢\",\"uncertain\":false},{\"panel_index\":2,\"bbox\":[0.805,0.4,0.83,0.68],\"size\":\"large\",\"identity_clues\":\"红色大型货厢\",\"uncertain\":false}]}],\"links\":[{\"from\":\"left:0\",\"to\":\"center:1\",\"same_vehicle\":\"yes\",\"evidence\":\"位置、颜色一致，为同一白色大型货厢\"},{\"from\":\"left:1\",\"to\":\"center:2\",\"same_vehicle\":\"yes\",\"evidence\":\"位置、颜色一致，为同一红色大型货厢\"},{\"from\":\"center:0\",\"to\":\"right:0\",\"same_vehicle\":\"yes\",\"evidence\":\"位置、颜色一致，为同一白色大型货厢\"},{\"from\":\"center:1\",\"to\":\"right:1\",\"same_vehicle\":\"yes\",\"evidence\":\"位置、颜色一致，为同一红色大型货厢\"}],\"new_or_exited\":[{\"frame\":\"left\",\"vehicle\":\"0\",\"event\":\"uncertain\",\"evidence\":\"车辆存在无进出\"},{\"frame\":\"left\",\"vehicle\":\"1\",\"event\":\"uncertain\",\"evidence\":\"车辆存在无进出\"},{\"frame\":\"center\",\"vehicle\":\"0\",\"event\":\"uncertain\",\"evidence\":\"车辆存在无进出\"},{\"frame\":\"center\",\"vehicle\":\"1\",\"event\":\"uncertain\",\"evidence\":\"车辆存在无进出\"},{\"frame\":\"right\",\"vehicle\":\"0\",\"event\":\"uncertain\",\"evidence\":\"车辆存在无进出\"},{\"frame\":\"right\",\"vehicle\":\"1\",\"event\":\"uncertain\",\"evidence\":\"车辆存在无进出\"}],\"review_reasons\":[]}"
+  }
+}

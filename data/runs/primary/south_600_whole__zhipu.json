@@ -1,0 +1,96 @@
+{
+  "observation": "south_600",
+  "mode": "whole",
+  "images": [
+    "assets\\frames\\south_t600.jpg"
+  ],
+  "prompt": "你是展会撤换展现场的货车清点专家。只依据这张整帧画面清点所有可见货车。\n\n口径：\n1. 同一辆车的车头、挂车和货厢只算一辆；与相邻车头分离的独立挂车算一辆。\n2. 小汽车、面包车、叉车、手推车、人物、工程机械不计。\n3. 只统计画面内实际可见车辆；远处或遮挡但仍能确定是货车时必须计入；完全看不见不猜。\n4. 按整车轮廓与比例分 large（重卡/半挂/长货厢）、medium（中卡）、small（轻卡/厢车）；不确定写 unknown。\n5. 对远处、边界、遮挡、疑似车头货厢拆分的候选设 uncertain=true。\n\nbbox 使用 0-1 归一化 [x0,y0,x1,y1]，框住整辆可见车辆的联合外接框。\n只输出严格 JSON：\n{\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"visible\":\"full|partial_top|partial_side|trailer_only\",\"is_truck\":true,\"identity_clues\":\"颜色、货厢、车头、文字等证据\",\"evidence\":\"画面位置与理由\",\"uncertain\":false}],\"scene_notes\":\"\",\"uncertain_reasons\":[]}",
+  "run": {
+    "model": "zhipu",
+    "model_id": "glm-4.5v",
+    "ok": true,
+    "latency_s": 113.744,
+    "request_id": "2026102117074003f82a5c14784014",
+    "usage": {
+      "completion_tokens": 1941,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1425
+      },
+      "prompt_tokens": 1892,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 3833
+    },
+    "parsed": {
+      "counts": {
+        "total": 4,
+        "large": 4,
+        "medium": 0,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.468,
+            0.477,
+            0.561,
+            0.882
+          ],
+          "size": "large",
+          "visible": "partial_top",
+          "is_truck": true,
+          "identity_clues": "白色车头带奔驰三叉星徽标、白色厢式货厢/挂车、前部'东风商用车'汉字标识",
+          "evidence": "位于画面下方中央通道最近处，整车轮廓完整清晰，具备典型重型牵引车+半挂厢式特征",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.459,
+            0.289,
+            0.521,
+            0.504
+          ],
+          "size": "large",
+          "visible": "partial_top",
+          "is_truck": true,
+          "identity_clues": "红色驾驶室、红色/深色货厢、位于白色货车正后方",
+          "evidence": "紧邻第一辆白色货车后方，车头与货厢比例符合中重卡特征，与前方车辆保持安全跟车距离",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.417,
+            0.228,
+            0.456,
+            0.365
+          ],
+          "size": "large",
+          "visible": "partial_top",
+          "is_truck": true,
+          "identity_clues": "红色车头、可见驾驶室轮廓与后视镜",
+          "evidence": "位于通道中段，在第二辆红色货车后方，尺寸略小于前两辆因透视关系，但具备完整卡车轮廓",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.453,
+            0.118,
+            0.493,
+            0.258
+          ],
+          "size": "large",
+          "visible": "partial_top",
+          "is_truck": true,
+          "identity_clues": "深红色/暗色车头、位于通道尽头发光区域附近",
+          "evidence": "通道内第四辆车，距离相机最远，体型较小但可辨识出卡车驾驶室形状与货厢起始部分",
+          "uncertain": false
+        }
+      ],
+      "scene_notes": "室内展览中心撤展现场（时间戳显示2025年10月19日22:09），高位俯拍视角。中央主通道停放一列待装/待卸货车，两侧为正在拆除的展位桁架（可见Haier、CHANGHONG、Homa等品牌标识）。地面散落包装材料，多名工人及一辆叉车（不计入）在作业。",
+      "uncertain_reasons": []
+    },
+    "raw_text": "{\"counts\":{\"total\":4,\"large\":4,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0.468,0.477,0.561,0.882],\"size\":\"large\",\"visible\":\"partial_top\",\"is_truck\":true,\"identity_clues\":\"白色车头带奔驰三叉星徽标、白色厢式货厢/挂车、前部'东风商用车'汉字标识\",\"evidence\":\"位于画面下方中央通道最近处，整车轮廓完整清晰，具备典型重型牵引车+半挂厢式特征\",\"uncertain\":false},{\"bbox\":[0.459,0.289,0.521,0.504],\"size\":\"large\",\"visible\":\"partial_top\",\"is_truck\":true,\"identity_clues\":\"红色驾驶室、红色/深色货厢、位于白色货车正后方\",\"evidence\":\"紧邻第一辆白色货车后方，车头与货厢比例符合中重卡特征，与前方车辆保持安全跟车距离\",\"uncertain\":false},{\"bbox\":[0.417,0.228,0.456,0.365],\"size\":\"large\",\"visible\":\"partial_top\",\"is_truck\":true,\"identity_clues\":\"红色车头、可见驾驶室轮廓与后视镜\",\"evidence\":\"位于通道中段，在第二辆红色货车后方，尺寸略小于前两辆因透视关系，但具备完整卡车轮廓\",\"uncertain\":false},{\"bbox\":[0.453,0.118,0.493,0.258],\"size\":\"large\",\"visible\":\"partial_top\",\"is_truck\":true,\"identity_clues\":\"深红色/暗色车头、位于通道尽头发光区域附近\",\"evidence\":\"通道内第四辆车，距离相机最远，体型较小但可辨识出卡车驾驶室形状与货厢起始部分\",\"uncertain\":false}],\"scene_notes\":\"室内展览中心撤展现场（时间戳显示2025年10月19日22:09），高位俯拍视角。中央主通道停放一列待装/待卸货车，两侧为正在拆除的展位桁架（可见Haier、CHANGHONG、Homa等品牌标识）。地面散落包装材料，多名工人及一辆叉车（不计入）在作业。\",\"uncertain_reasons\":[]}"
+  }
+}

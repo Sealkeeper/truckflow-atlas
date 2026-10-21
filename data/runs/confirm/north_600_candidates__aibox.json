@@ -1,0 +1,76 @@
+{
+  "job": "north_600_candidates",
+  "image": "assets\\sheets\\north_600_candidates.jpg",
+  "prompt": "这是一个机位同一原始帧切出的候选联系表。每格 C1、C2... 是互相重叠的局部窗口，\n不是“一格必定一辆车”，同一格可能包含多辆，同一辆也可能出现在多格。\n\n请建立该帧的物理车辆集合：\n1. 每个物理车辆只列一次，并在 candidates 中列出显示它的所有窗口编号。\n2. 一个窗口可同时归入多个物理车辆；只有同一车头/货厢绝不能拆成两辆。\n3. 排除人物、叉车、轿车、展台、杂物；完全空窗也应 reject。\n4. 只按窗口中实际可见的车顶、货厢、车头、颜色、文字和比例判断，不猜画面外。\n5. 远处、遮挡、窗口边界或与你看到的其它窗口有歧义时 review=true。\n6. 车型按 large（重卡/半挂/长货厢）、medium（中卡）、small（轻卡/厢车）；不能确认写 unknown。\n\n只输出严格 JSON：\n{\"physical_vehicles\":[{\"group\":\"G1\",\"candidates\":[\"C1\",\"C3\"],\"size\":\"large|medium|small|unknown\",\"identity\":\"颜色/货厢/车头/文字等可复核证据\",\"reason\":\"为何这些窗口是同一物理车\",\"review\":false}],\"rejected_candidates\":[{\"candidate\":\"C5\",\"reason\":\"\"}],\"review_reasons\":[]}",
+  "run": {
+    "model": "aibox",
+    "model_id": "glm-5.3-flash",
+    "ok": true,
+    "latency_s": 21.65,
+    "request_id": "ba36e2aebbac4844853e79d489b82fb1",
+    "usage": {
+      "prompt_tokens": 2589,
+      "total_tokens": 3212,
+      "completion_tokens": 623,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "image_tokens": 2279
+      },
+      "reasoning_tokens": 275
+    },
+    "parsed": {
+      "physical_vehicles": [
+        {
+          "group": "G1",
+          "candidates": [
+            "N2",
+            "N3",
+            "N4",
+            "N5",
+            "N8",
+            "N10"
+          ],
+          "size": "large",
+          "identity": "白色长货厢卡车，货厢顶为白色波纹板，N3/N4 可见白色车头，N8 显示完整长货厢",
+          "reason": "N2/N3/N4/N5 是同一白色货厢顶部的重叠特写，N8 为整车俯视，N10 中同一白色货厢再次出现，位置连续衔接",
+          "review": true
+        },
+        {
+          "group": "G2",
+          "candidates": [
+            "N6"
+          ],
+          "size": "large",
+          "identity": "红色重型卡车，红色货厢栏板，车头亮着灯，位于通道中央",
+          "reason": "N6 完整显示红色货车，与其他窗口车辆颜色明显不同",
+          "review": false
+        },
+        {
+          "group": "G3",
+          "candidates": [
+            "N9",
+            "N10"
+          ],
+          "size": "small",
+          "identity": "蓝色小型货车/轻卡，车身为蓝色，位于画面下方 A区3.2 标牌附近",
+          "reason": "N9 与 N10 均显示同一蓝色小车，位置在白色货厢卡车旁下方",
+          "review": false
+        }
+      ],
+      "rejected_candidates": [
+        {
+          "candidate": "N1",
+          "reason": "GEO 窗口仅含时间戳和远处通道，无可辨识车辆"
+        },
+        {
+          "candidate": "N7",
+          "reason": "窗口内容为 LAMO 展台和楼梯，无车辆"
+        }
+      ],
+      "review_reasons": [
+        "G1 的 N2/N3/N4/N5 为高度重叠的局部特写，白色货厢顶归属需确认是否与 N8 长货厢为同一辆车，存在被拆分或合并的风险"
+      ]
+    },
+    "raw_text": "{\"physical_vehicles\":[{\"group\":\"G1\",\"candidates\":[\"N2\",\"N3\",\"N4\",\"N5\",\"N8\",\"N10\"],\"size\":\"large\",\"identity\":\"白色长货厢卡车，货厢顶为白色波纹板，N3/N4 可见白色车头，N8 显示完整长货厢\",\"reason\":\"N2/N3/N4/N5 是同一白色货厢顶部的重叠特写，N8 为整车俯视，N10 中同一白色货厢再次出现，位置连续衔接\",\"review\":true},{\"group\":\"G2\",\"candidates\":[\"N6\"],\"size\":\"large\",\"identity\":\"红色重型卡车，红色货厢栏板，车头亮着灯，位于通道中央\",\"reason\":\"N6 完整显示红色货车，与其他窗口车辆颜色明显不同\",\"review\":false},{\"group\":\"G3\",\"candidates\":[\"N9\",\"N10\"],\"size\":\"small\",\"identity\":\"蓝色小型货车/轻卡，车身为蓝色，位于画面下方 A区3.2 标牌附近\",\"reason\":\"N9 与 N10 均显示同一蓝色小车，位置在白色货厢卡车旁下方\",\"review\":false}],\"rejected_candidates\":[{\"candidate\":\"N1\",\"reason\":\"GEO 窗口仅含时间戳和远处通道，无可辨识车辆\"},{\"candidate\":\"N7\",\"reason\":\"窗口内容为 LAMO 展台和楼梯，无车辆\"}],\"review_reasons\":[\"G1 的 N2/N3/N4/N5 为高度重叠的局部特写，白色货厢顶归属需确认是否与 N8 长货厢为同一辆车，存在被拆分或合并的风险\"]}"
+  }
+}

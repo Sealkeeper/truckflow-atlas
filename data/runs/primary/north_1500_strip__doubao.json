@@ -1,0 +1,204 @@
+{
+  "observation": "north_1500",
+  "mode": "strip",
+  "images": [
+    "assets\\strips\\north_1500_strip.jpg"
+  ],
+  "prompt": "这是一条同一机位在 t-10s、t、t+10s 的三个连续证据面板，从左到右排列。\n请分别清点每帧，并利用颜色、货厢、车头、文字、朝向等语义判断车辆是否跨帧为同一物理车。\n禁止用像素跟踪或根据上一帧数量填数；每帧计数必须有该帧可见证据。\n\n输出严格 JSON：\n{\"frames\":[{\"panel\":\"left|center|right\",\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"panel_index\":0,\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"identity_clues\":\"\",\"uncertain\":false}]}],\"links\":[{\"from\":\"left:0\",\"to\":\"center:1\",\"same_vehicle\":\"yes|no|uncertain\",\"evidence\":\"\"}],\"new_or_exited\":[{\"frame\":\"left|center|right\",\"vehicle\":\"panel_index\",\"event\":\"enter|exit|uncertain\",\"evidence\":\"\"}],\"review_reasons\":[]}\nbbox 是单个面板内的 0-1 坐标。",
+  "run": {
+    "model": "doubao",
+    "model_id": "ep-20260828174616-dthpx",
+    "ok": true,
+    "latency_s": 30.925,
+    "request_id": "0217925736091526f6053399c9cd9a88fffa867c8208833e04054",
+    "usage": {
+      "completion_tokens": 3980,
+      "prompt_tokens": 1580,
+      "total_tokens": 5560,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 3019
+      }
+    },
+    "parsed": {
+      "frames": [
+        {
+          "panel": "left",
+          "counts": {
+            "total": 2,
+            "large": 2,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.12,
+                0.4,
+                0.16,
+                0.7
+              ],
+              "size": "large",
+              "identity_clues": "红色货柜，位于通道左侧",
+              "uncertain": false
+            },
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.12,
+                0.65,
+                0.18,
+                0.99
+              ],
+              "size": "large",
+              "identity_clues": "白色长货厢，位于红色货柜右侧",
+              "uncertain": false
+            }
+          ]
+        },
+        {
+          "panel": "center",
+          "counts": {
+            "total": 2,
+            "large": 2,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.47,
+                0.4,
+                0.51,
+                0.7
+              ],
+              "size": "large",
+              "identity_clues": "红色货柜，位于通道左侧",
+              "uncertain": false
+            },
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.47,
+                0.65,
+                0.53,
+                0.99
+              ],
+              "size": "large",
+              "identity_clues": "白色长货厢，位于红色货柜右侧",
+              "uncertain": false
+            }
+          ]
+        },
+        {
+          "panel": "right",
+          "counts": {
+            "total": 2,
+            "large": 2,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.82,
+                0.4,
+                0.86,
+                0.7
+              ],
+              "size": "large",
+              "identity_clues": "红色货柜，位于通道左侧",
+              "uncertain": false
+            },
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.82,
+                0.65,
+                0.88,
+                0.99
+              ],
+              "size": "large",
+              "identity_clues": "白色长货厢，位于红色货柜右侧",
+              "uncertain": false
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "from": "left:0",
+          "to": "center:0",
+          "same_vehicle": "yes",
+          "evidence": "红色货柜位置未移动，颜色一致"
+        },
+        {
+          "from": "left:1",
+          "to": "center:1",
+          "same_vehicle": "yes",
+          "evidence": "白色长货厢位置未移动，形状颜色一致"
+        },
+        {
+          "from": "center:0",
+          "to": "right:0",
+          "same_vehicle": "yes",
+          "evidence": "红色货柜位置未移动，颜色一致"
+        },
+        {
+          "from": "center:1",
+          "to": "right:1",
+          "same_vehicle": "yes",
+          "evidence": "白色长货厢位置未移动，形状颜色一致"
+        }
+      ],
+      "new_or_exited": [
+        {
+          "frame": "left",
+          "vehicle": 0,
+          "event": "uncertain",
+          "evidence": "初始帧，车辆已存在"
+        },
+        {
+          "frame": "left",
+          "vehicle": 1,
+          "event": "uncertain",
+          "evidence": "初始帧，车辆已存在"
+        },
+        {
+          "frame": "center",
+          "vehicle": 0,
+          "event": "uncertain",
+          "evidence": "车辆位置未变化，无退出或进入"
+        },
+        {
+          "frame": "center",
+          "vehicle": 1,
+          "event": "uncertain",
+          "evidence": "车辆位置未变化，无退出或进入"
+        },
+        {
+          "frame": "right",
+          "vehicle": 0,
+          "event": "uncertain",
+          "evidence": "车辆位置未变化，无退出或进入"
+        },
+        {
+          "frame": "right",
+          "vehicle": 1,
+          "event": "uncertain",
+          "evidence": "车辆位置未变化，无退出或进入"
+        }
+      ],
+      "review_reasons": []
+    },
+    "raw_text": "{\"frames\": [\n    {\n        \"panel\": \"left\",\n        \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n        \"vehicles\": [\n            {\"panel_index\": 0, \"bbox\": [0.12, 0.4, 0.16, 0.7], \"size\": \"large\", \"identity_clues\": \"红色货柜，位于通道左侧\", \"uncertain\": false},\n            {\"panel_index\": 1, \"bbox\": [0.12, 0.65, 0.18, 0.99], \"size\": \"large\", \"identity_clues\": \"白色长货厢，位于红色货柜右侧\", \"uncertain\": false}\n        ]\n    },\n    {\n        \"panel\": \"center\",\n        \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n        \"vehicles\": [\n            {\"panel_index\": 0, \"bbox\": [0.47, 0.4, 0.51, 0.7], \"size\": \"large\", \"identity_clues\": \"红色货柜，位于通道左侧\", \"uncertain\": false},\n            {\"panel_index\": 1, \"bbox\": [0.47, 0.65, 0.53, 0.99], \"size\": \"large\", \"identity_clues\": \"白色长货厢，位于红色货柜右侧\", \"uncertain\": false}\n        ]\n    },\n    {\n        \"panel\": \"right\",\n        \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n        \"vehicles\": [\n            {\"panel_index\": 0, \"bbox\": [0.82, 0.4, 0.86, 0.7], \"size\": \"large\", \"identity_clues\": \"红色货柜，位于通道左侧\", \"uncertain\": false},\n            {\"panel_index\": 1, \"bbox\": [0.82, 0.65, 0.88, 0.99], \"size\": \"large\", \"identity_clues\": \"白色长货厢，位于红色货柜右侧\", \"uncertain\": false}\n        ]\n    }\n],\n\"links\": [\n    {\"from\": \"left:0\", \"to\": \"center:0\", \"same_vehicle\": \"yes\", \"evidence\": \"红色货柜位置未移动，颜色一致\"},\n    {\"from\": \"left:1\", \"to\": \"center:1\", \"same_vehicle\": \"yes\", \"evidence\": \"白色长货厢位置未移动，形状颜色一致\"},\n    {\"from\": \"center:0\", \"to\": \"right:0\", \"same_vehicle\": \"yes\", \"evidence\": \"红色货柜位置未移动，颜色一致\"},\n    {\"from\": \"center:1\", \"to\": \"right:1\", \"same_vehicle\": \"yes\", \"evidence\": \"白色长货厢位置未移动，形状颜色一致\"}\n],\n\"new_or_exited\": [\n    {\"frame\": \"left\", \"vehicle\": 0, \"event\": \"uncertain\", \"evidence\": \"初始帧，车辆已存在\"},\n    {\"frame\": \"left\", \"vehicle\": 1, \"event\": \"uncertain\", \"evidence\": \"初始帧，车辆已存在\"},\n    {\"frame\": \"center\", \"vehicle\": 0, \"event\": \"uncertain\", \"evidence\": \"车辆位置未变化，无退出或进入\"},\n    {\"frame\": \"center\", \"vehicle\": 1, \"event\": \"uncertain\", \"evidence\": \"车辆位置未变化，无退出或进入\"},\n    {\"frame\": \"right\", \"vehicle\": 0, \"event\": \"uncertain\", \"evidence\": \"车辆位置未变化，无退出或进入\"},\n    {\"frame\": \"right\", \"vehicle\": 1, \"event\": \"uncertain\", \"evidence\": \"车辆位置未变化，无退出或进入\"}\n],\n\"review_reasons\": []\n}"
+  }
+}

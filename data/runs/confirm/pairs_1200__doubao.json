@@ -1,0 +1,129 @@
+{
+  "job": "pairs_1200",
+  "image": "assets\\sheets\\pairs_1200.jpg",
+  "prompt": "这张联系表上排 N1... 是北机位在同一时刻的候选窗口，下排 S1... 是南机位的候选窗口。\n两机位存在重叠，但视角和尺度不同。每格是互相重叠的窗口，不是“一格必定一辆车”。\n\n请建立跨机位物理实体图：\n1. 全图每个物理车辆只列一次，members 写出所有显示它的 N/S 窗口。\n2. 只有当颜色、货厢结构、车头、文字、顶部特征等至少两个语义证据一致时，才判为跨机位同一车。\n3. 同一辆车的车头与货厢不得分开；一个窗口可归入多个物理车辆。\n4. 排除人物、叉车、轿车、空窗、展台。\n5. 视角改变导致无法确认时写 match=\"uncertain\" 且 review=true；不能为凑数强行配对。\n6. 车型 large/medium/small/unknown。\n\n输出严格 JSON：\n{\"physical_vehicles\":[{\"group\":\"G1\",\"members\":[\"N1\",\"S2\"],\"match\":\"north_only|south_only|same_across_cameras|uncertain\",\"size\":\"large|medium|small|unknown\",\"identity\":\"可复核的至少两个特征\",\"review\":false}],\"unique_total\":0,\"rejected_candidates\":[{\"candidate\":\"N4\",\"reason\":\"\"}],\"review_reasons\":[]}",
+  "run": {
+    "model": "doubao",
+    "model_id": "ep-20260828174616-dthpx",
+    "ok": true,
+    "latency_s": 42.623,
+    "request_id": "0217925754292233b1efaefedc80320ce9d044f8a4375a9c18e69",
+    "usage": {
+      "completion_tokens": 5649,
+      "prompt_tokens": 1631,
+      "total_tokens": 7280,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 5232
+      }
+    },
+    "parsed": {
+      "physical_vehicles": [
+        {
+          "group": "G1",
+          "members": [
+            "N8",
+            "S7"
+          ],
+          "match": "same_across_cameras",
+          "size": "large",
+          "identity": "白色大型卡车，货厢与车头颜色均为白色",
+          "review": false
+        },
+        {
+          "group": "G2",
+          "members": [
+            "N7",
+            "S9"
+          ],
+          "match": "same_across_cameras",
+          "size": "large",
+          "identity": "红色封闭货厢卡车，货厢颜色与结构一致",
+          "review": false
+        },
+        {
+          "group": "G3",
+          "members": [
+            "N6",
+            "S6"
+          ],
+          "match": "same_across_cameras",
+          "size": "large",
+          "identity": "红色大型卡车，车身颜色一致",
+          "review": false
+        },
+        {
+          "group": "G4",
+          "members": [
+            "N3",
+            "N4"
+          ],
+          "match": "north_only",
+          "size": "medium",
+          "identity": "蓝色顶货厢卡车，仅北机位可见",
+          "review": false
+        },
+        {
+          "group": "G5",
+          "members": [
+            "S2",
+            "S4"
+          ],
+          "match": "south_only",
+          "size": "large",
+          "identity": "红色大型卡车，周围有橙色工作人员，仅南机位可见",
+          "review": false
+        },
+        {
+          "group": "G6",
+          "members": [
+            "S5"
+          ],
+          "match": "south_only",
+          "size": "large",
+          "identity": "红色大型卡车车头，仅南机位可见",
+          "review": false
+        }
+      ],
+      "unique_total": 6,
+      "rejected_candidates": [
+        {
+          "candidate": "N1",
+          "reason": "画面为时间显示与展台，无车辆"
+        },
+        {
+          "candidate": "N2",
+          "reason": "画面为建筑结构，无车辆"
+        },
+        {
+          "candidate": "N5",
+          "reason": "画面为建筑结构，无车辆"
+        },
+        {
+          "candidate": "N9",
+          "reason": "画面为区域标识，无车辆"
+        },
+        {
+          "candidate": "N10",
+          "reason": "画面为区域标识，无车辆"
+        },
+        {
+          "candidate": "S1",
+          "reason": "画面为时间显示与展台，无车辆"
+        },
+        {
+          "candidate": "S3",
+          "reason": "画面为人群，无车辆"
+        },
+        {
+          "candidate": "S8",
+          "reason": "画面为区域标识，无车辆"
+        }
+      ],
+      "review_reasons": []
+    },
+    "raw_text": "{\"physical_vehicles\":[{\"group\":\"G1\",\"members\":[\"N8\",\"S7\"],\"match\":\"same_across_cameras\",\"size\":\"large\",\"identity\":\"白色大型卡车，货厢与车头颜色均为白色\",\"review\":false},{\"group\":\"G2\",\"members\":[\"N7\",\"S9\"],\"match\":\"same_across_cameras\",\"size\":\"large\",\"identity\":\"红色封闭货厢卡车，货厢颜色与结构一致\",\"review\":false},{\"group\":\"G3\",\"members\":[\"N6\",\"S6\"],\"match\":\"same_across_cameras\",\"size\":\"large\",\"identity\":\"红色大型卡车，车身颜色一致\",\"review\":false},{\"group\":\"G4\",\"members\":[\"N3\",\"N4\"],\"match\":\"north_only\",\"size\":\"medium\",\"identity\":\"蓝色顶货厢卡车，仅北机位可见\",\"review\":false},{\"group\":\"G5\",\"members\":[\"S2\",\"S4\"],\"match\":\"south_only\",\"size\":\"large\",\"identity\":\"红色大型卡车，周围有橙色工作人员，仅南机位可见\",\"review\":false},{\"group\":\"G6\",\"members\":[\"S5\"],\"match\":\"south_only\",\"size\":\"large\",\"identity\":\"红色大型卡车车头，仅南机位可见\",\"review\":false}],\"unique_total\":6,\"rejected_candidates\":[{\"candidate\":\"N1\",\"reason\":\"画面为时间显示与展台，无车辆\"},{\"candidate\":\"N2\",\"reason\":\"画面为建筑结构，无车辆\"},{\"candidate\":\"N5\",\"reason\":\"画面为建筑结构，无车辆\"},{\"candidate\":\"N9\",\"reason\":\"画面为区域标识，无车辆\"},{\"candidate\":\"N10\",\"reason\":\"画面为区域标识，无车辆\"},{\"candidate\":\"S1\",\"reason\":\"画面为时间显示与展台，无车辆\"},{\"candidate\":\"S3\",\"reason\":\"画面为人群，无车辆\"},{\"candidate\":\"S8\",\"reason\":\"画面为区域标识，无车辆\"}],\"review_reasons\":[]}"
+  }
+}

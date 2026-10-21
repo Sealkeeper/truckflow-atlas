@@ -1,0 +1,2703 @@
+{
+  "north_600": [
+    {
+      "geo_window": "top",
+      "bbox": [
+        0.35,
+        0.02,
+        0.62,
+        0.19
+      ],
+      "models": [
+        "geometry"
+      ],
+      "proposals": [],
+      "candidate": "N1"
+    },
+    {
+      "bbox": [
+        0.3890625,
+        0.1328125,
+        0.4375,
+        0.234375
+      ],
+      "models": [
+        "doubao/crop"
+      ],
+      "proposals": [
+        {
+          "model": "doubao",
+          "source_mode": "crop",
+          "bbox": [
+            0.3890625,
+            0.1328125,
+            0.4375,
+            0.234375
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "蓝色顶部货柜车"
+        }
+      ],
+      "candidate": "N2"
+    },
+    {
+      "bbox": [
+        0.427734375,
+        0.14,
+        0.5,
+        0.36
+      ],
+      "models": [
+        "aibox/crop",
+        "aibox/whole",
+        "doubao/crop"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "crop",
+          "bbox": [
+            0.43734375,
+            0.16,
+            0.49640625,
+            0.28
+          ],
+          "model_size": "medium",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "蓝色顶棚货厢，侧面有编号文字"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "crop",
+          "bbox": [
+            0.427734375,
+            0.16666666666666666,
+            0.48359375,
+            0.3046875
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色货柜卡车"
+        },
+        {
+          "model": "aibox",
+          "source_mode": "whole",
+          "bbox": [
+            0.43,
+            0.14,
+            0.5,
+            0.36
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": true,
+          "identity_clues": "蓝色集装箱货厢，位于通道左侧"
+        }
+      ],
+      "candidate": "N3"
+    },
+    {
+      "bbox": [
+        0.445,
+        0.167,
+        0.495,
+        0.267
+      ],
+      "models": [
+        "doubao/whole"
+      ],
+      "proposals": [
+        {
+          "model": "doubao",
+          "source_mode": "whole",
+          "bbox": [
+            0.445,
+            0.167,
+            0.495,
+            0.267
+          ],
+          "model_size": "medium",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "蓝色顶的货车，位于红色货车后方"
+        }
+      ],
+      "candidate": "N4"
+    },
+    {
+      "bbox": [
+        0.43734375,
+        0.2700000000000001,
+        0.4914843749999999,
+        0.36
+      ],
+      "models": [
+        "aibox/crop"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "crop",
+          "bbox": [
+            0.43734375,
+            0.2700000000000001,
+            0.4914843749999999,
+            0.36
+          ],
+          "model_size": "small",
+          "visible": "partial_top",
+          "uncertain": true,
+          "identity_clues": "蓝色顶棚小型货厢/挂车"
+        }
+      ],
+      "candidate": "N5"
+    },
+    {
+      "bbox": [
+        0.48,
+        0.31,
+        0.57,
+        0.6
+      ],
+      "models": [
+        "aibox/crop",
+        "aibox/whole",
+        "doubao/whole",
+        "zhipu/crop",
+        "zhipu/whole"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "crop",
+          "bbox": [
+            0.481640625,
+            0.32,
+            0.5653124999999999,
+            0.6
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色货厢卡车，尾灯亮起，车牌区域可见"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "crop",
+          "bbox": [
+            0.48853125,
+            0.325,
+            0.5549765624999999,
+            0.586
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色厢式货车，尾部有反光标识及模糊编号，刹车灯亮起"
+        },
+        {
+          "model": "aibox",
+          "source_mode": "whole",
+          "bbox": [
+            0.48,
+            0.31,
+            0.57,
+            0.6
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色重卡货厢，尾部有尾灯和反光标识"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "whole",
+          "bbox": [
+            0.48,
+            0.32,
+            0.557,
+            0.582
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色厢式货车，尾部有灯光及标识"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "whole",
+          "bbox": [
+            0.489,
+            0.323,
+            0.558,
+            0.594
+          ],
+          "model_size": "large",
+          "visible": "partial_rear",
+          "uncertain": false,
+          "identity_clues": "红色封闭式货厢、矩形车体、尾部红灯、处于主通道卸货位"
+        }
+      ],
+      "candidate": "N6"
+    },
+    {
+      "bbox": [
+        0.31640625,
+        0.31979166666666664,
+        0.427734375,
+        0.5197916666666667
+      ],
+      "models": [
+        "doubao/crop"
+      ],
+      "proposals": [
+        {
+          "model": "doubao",
+          "source_mode": "crop",
+          "bbox": [
+            0.31640625,
+            0.31979166666666664,
+            0.427734375,
+            0.5197916666666667
+          ],
+          "model_size": "large",
+          "visible": "trailer_only",
+          "uncertain": false,
+          "identity_clues": "白色波纹货厢"
+        }
+      ],
+      "candidate": "N7"
+    },
+    {
+      "bbox": [
+        0.34,
+        0.615,
+        0.49640625,
+        1.0
+      ],
+      "models": [
+        "aibox/crop",
+        "aibox/whole",
+        "doubao/whole",
+        "zhipu/crop",
+        "zhipu/whole"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "crop",
+          "bbox": [
+            0.34875,
+            0.62,
+            0.49640625,
+            1.0
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "白色厢式货车/集装箱车厢，顶部波纹结构"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "crop",
+          "bbox": [
+            0.3462890625,
+            0.615,
+            0.481640625,
+            0.999
+          ],
+          "model_size": "large",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "白色厢式货车，波纹金属货厢顶盖"
+        },
+        {
+          "model": "aibox",
+          "source_mode": "whole",
+          "bbox": [
+            0.34,
+            0.62,
+            0.49,
+            0.99
+          ],
+          "model_size": "large",
+          "visible": "trailer_only",
+          "uncertain": true,
+          "identity_clues": "白色集装箱式货厢，底部有底盘结构"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "whole",
+          "bbox": [
+            0.345,
+            0.617,
+            0.485,
+            0.998
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "白色波纹长货厢，货厢侧面有编号MAC1162"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "whole",
+          "bbox": [
+            0.346,
+            0.62,
+            0.485,
+            0.999
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "银白色波纹板长货厢、纵向停放、长度显著大于普通轻卡"
+        }
+      ],
+      "candidate": "N8"
+    },
+    {
+      "geo_window": "bottom_right",
+      "bbox": [
+        0.55,
+        0.78,
+        0.9,
+        1.0
+      ],
+      "models": [
+        "geometry"
+      ],
+      "proposals": [],
+      "candidate": "N9"
+    },
+    {
+      "geo_window": "bottom",
+      "bbox": [
+        0.3,
+        0.82,
+        0.75,
+        1.0
+      ],
+      "models": [
+        "geometry"
+      ],
+      "proposals": [],
+      "candidate": "N10"
+    }
+  ],
+  "north_1200": [
+    {
+      "geo_window": "top",
+      "bbox": [
+        0.35,
+        0.02,
+        0.62,
+        0.19
+      ],
+      "models": [
+        "geometry"
+      ],
+      "proposals": [],
+      "candidate": "N1"
+    },
+    {
+      "bbox": [
+        0.402734375,
+        0.08125,
+        0.438671875,
+        0.16302083333333334
+      ],
+      "models": [
+        "doubao/crop"
+      ],
+      "proposals": [
+        {
+          "model": "doubao",
+          "source_mode": "crop",
+          "bbox": [
+            0.402734375,
+            0.08125,
+            0.438671875,
+            0.16302083333333334
+          ],
+          "model_size": "medium",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "blue covered cargo truck in distance"
+        }
+      ],
+      "candidate": "N2"
+    },
+    {
+      "bbox": [
+        0.4673671875,
+        0.132,
+        0.49296093750000003,
+        0.182
+      ],
+      "models": [
+        "zhipu/crop"
+      ],
+      "proposals": [
+        {
+          "model": "zhipu",
+          "source_mode": "crop",
+          "bbox": [
+            0.4673671875,
+            0.132,
+            0.49296093750000003,
+            0.182
+          ],
+          "model_size": "small",
+          "visible": "partial_top",
+          "uncertain": true,
+          "identity_clues": "深色小型货车/面包车"
+        }
+      ],
+      "candidate": "N3"
+    },
+    {
+      "bbox": [
+        0.447,
+        0.152,
+        0.502,
+        0.335
+      ],
+      "models": [
+        "aibox/crop",
+        "doubao/whole",
+        "zhipu/crop",
+        "zhipu/whole"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "crop",
+          "bbox": [
+            0.45210937500000004,
+            0.16,
+            0.501328125,
+            0.3
+          ],
+          "model_size": "unknown",
+          "visible": "partial_top",
+          "uncertain": true,
+          "identity_clues": "蓝色篷布覆盖的货厢"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "crop",
+          "bbox": [
+            0.4555546875,
+            0.158,
+            0.4988671875,
+            0.298
+          ],
+          "model_size": "large",
+          "visible": "trailer_only",
+          "uncertain": false,
+          "identity_clues": "蓝色/深灰色集装箱或货厢"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "whole",
+          "bbox": [
+            0.447,
+            0.152,
+            0.502,
+            0.319
+          ],
+          "model_size": "unknown",
+          "visible": "partial_top",
+          "uncertain": true,
+          "identity_clues": "蓝色货厢"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "whole",
+          "bbox": [
+            0.455,
+            0.16,
+            0.5,
+            0.335
+          ],
+          "model_size": "unknown",
+          "visible": "partial",
+          "uncertain": true,
+          "identity_clues": "深色（蓝/黑色）矩形货厢轮廓，位于通道远处"
+        }
+      ],
+      "candidate": "N4"
+    },
+    {
+      "bbox": [
+        0.367578125,
+        0.18802083333333333,
+        0.430859375,
+        0.3296875
+      ],
+      "models": [
+        "doubao/crop"
+      ],
+      "proposals": [
+        {
+          "model": "doubao",
+          "source_mode": "crop",
+          "bbox": [
+            0.367578125,
+            0.18802083333333333,
+            0.430859375,
+            0.3296875
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "red cargo truck"
+        }
+      ],
+      "candidate": "N5"
+    },
+    {
+      "bbox": [
+        0.3171875,
+        0.3234375,
+        0.426953125,
+        0.5192708333333333
+      ],
+      "models": [
+        "doubao/crop"
+      ],
+      "proposals": [
+        {
+          "model": "doubao",
+          "source_mode": "crop",
+          "bbox": [
+            0.3171875,
+            0.3234375,
+            0.426953125,
+            0.5192708333333333
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "white corrugated cargo truck"
+        }
+      ],
+      "candidate": "N6"
+    },
+    {
+      "bbox": [
+        0.4,
+        0.35,
+        0.5,
+        0.63
+      ],
+      "models": [
+        "aibox/crop",
+        "aibox/whole",
+        "doubao/whole",
+        "zhipu/crop",
+        "zhipu/whole"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "crop",
+          "bbox": [
+            0.40289062500000006,
+            0.36,
+            0.49640625,
+            0.62
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色货厢，厢体可见编号"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "crop",
+          "bbox": [
+            0.41174999999999995,
+            0.368,
+            0.4909921875,
+            0.618
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "红色集装箱，箱体印有BSSU字样及黄色反光标识"
+        },
+        {
+          "model": "aibox",
+          "source_mode": "whole",
+          "bbox": [
+            0.4,
+            0.36,
+            0.5,
+            0.63
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色货厢、白色车头、蓝色车牌"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "whole",
+          "bbox": [
+            0.405,
+            0.35,
+            0.493,
+            0.627
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "红色高栏货厢"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "whole",
+          "bbox": [
+            0.41,
+            0.368,
+            0.49,
+            0.622
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "红色长条形集装箱/货厢，表面有垂直加强筋，尾部可见"
+        }
+      ],
+      "candidate": "N7"
+    },
+    {
+      "bbox": [
+        0.342,
+        0.607,
+        0.4914843749999999,
+        1.0
+      ],
+      "models": [
+        "aibox/crop",
+        "aibox/whole",
+        "doubao/whole",
+        "zhipu/crop",
+        "zhipu/whole"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "crop",
+          "bbox": [
+            0.34875,
+            0.62,
+            0.4914843749999999,
+            0.99
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "白色集装箱式货厢"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "crop",
+          "bbox": [
+            0.345796875,
+            0.616,
+            0.49049999999999994,
+            1.0
+          ],
+          "model_size": "large",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "白色波纹金属顶厢式货车"
+        },
+        {
+          "model": "aibox",
+          "source_mode": "whole",
+          "bbox": [
+            0.35,
+            0.62,
+            0.49,
+            0.99
+          ],
+          "model_size": "large",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "白色波纹厢式货厢、顶部结构"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "whole",
+          "bbox": [
+            0.342,
+            0.607,
+            0.487,
+            0.998
+          ],
+          "model_size": "large",
+          "visible": "partial",
+          "uncertain": false,
+          "identity_clues": "白色厢式货厢"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "whole",
+          "bbox": [
+            0.348,
+            0.622,
+            0.483,
+            0.998
+          ],
+          "model_size": "large",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "白色/浅灰色波纹金属板货厢，长方体结构，表面有明显横向波纹"
+        }
+      ],
+      "candidate": "N8"
+    },
+    {
+      "geo_window": "bottom_right",
+      "bbox": [
+        0.55,
+        0.78,
+        0.9,
+        1.0
+      ],
+      "models": [
+        "geometry"
+      ],
+      "proposals": [],
+      "candidate": "N9"
+    },
+    {
+      "geo_window": "bottom",
+      "bbox": [
+        0.3,
+        0.82,
+        0.75,
+        1.0
+      ],
+      "models": [
+        "geometry"
+      ],
+      "proposals": [],
+      "candidate": "N10"
+    }
+  ],
+  "north_1500": [
+    {
+      "geo_window": "top",
+      "bbox": [
+        0.35,
+        0.02,
+        0.62,
+        0.19
+      ],
+      "models": [
+        "geometry"
+      ],
+      "proposals": [],
+      "candidate": "N1"
+    },
+    {
+      "bbox": [
+        0.3640625,
+        0.18645833333333334,
+        0.434375,
+        0.33177083333333335
+      ],
+      "models": [
+        "doubao/crop"
+      ],
+      "proposals": [
+        {
+          "model": "doubao",
+          "source_mode": "crop",
+          "bbox": [
+            0.3640625,
+            0.18645833333333334,
+            0.434375,
+            0.33177083333333335
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "红色货厢，带有编号BL88 980"
+        }
+      ],
+      "candidate": "N2"
+    },
+    {
+      "bbox": [
+        0.315625,
+        0.31927083333333334,
+        0.428125,
+        0.5203125
+      ],
+      "models": [
+        "doubao/crop"
+      ],
+      "proposals": [
+        {
+          "model": "doubao",
+          "source_mode": "crop",
+          "bbox": [
+            0.315625,
+            0.31927083333333334,
+            0.428125,
+            0.5203125
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "白色货厢货车，底部有编号"
+        }
+      ],
+      "candidate": "N3"
+    },
+    {
+      "bbox": [
+        0.34875,
+        0.35,
+        0.5,
+        0.65
+      ],
+      "models": [
+        "aibox/crop",
+        "aibox/whole",
+        "doubao/whole",
+        "zhipu/crop"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "crop",
+          "bbox": [
+            0.34875,
+            0.36,
+            0.49640625,
+            0.63
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色栏板货车，货厢内载蓝色板材，沿过道停放"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "crop",
+          "bbox": [
+            0.41174999999999995,
+            0.365,
+            0.4909921875,
+            0.621
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "红色集装箱，箱体印有BSSU 580标识"
+        },
+        {
+          "model": "aibox",
+          "source_mode": "whole",
+          "bbox": [
+            0.4,
+            0.36,
+            0.5,
+            0.63
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色集装箱式货厢，可见车牌与'BSO'字样"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "whole",
+          "bbox": [
+            0.405,
+            0.35,
+            0.488,
+            0.65
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "红色高栏货厢"
+        }
+      ],
+      "candidate": "N4"
+    },
+    {
+      "bbox": [
+        0.412,
+        0.368,
+        0.489,
+        0.627
+      ],
+      "models": [
+        "zhipu/whole"
+      ],
+      "proposals": [
+        {
+          "model": "zhipu",
+          "source_mode": "whole",
+          "bbox": [
+            0.412,
+            0.368,
+            0.489,
+            0.627
+          ],
+          "model_size": "large",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "红色封闭式货厢、矩形箱体、重型载货尺寸"
+        }
+      ],
+      "candidate": "N5"
+    },
+    {
+      "bbox": [
+        0.34,
+        0.608,
+        0.49640625,
+        1.0
+      ],
+      "models": [
+        "aibox/crop",
+        "aibox/whole",
+        "doubao/whole",
+        "zhipu/crop",
+        "zhipu/whole"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "crop",
+          "bbox": [
+            0.34875,
+            0.62,
+            0.49640625,
+            1.0
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "白色集装箱式货车，波纹箱体延伸至画面底部"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "crop",
+          "bbox": [
+            0.34678125,
+            0.619,
+            0.49049999999999994,
+            0.999
+          ],
+          "model_size": "large",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "白色波纹金属顶棚厢式货车"
+        },
+        {
+          "model": "aibox",
+          "source_mode": "whole",
+          "bbox": [
+            0.34,
+            0.62,
+            0.49,
+            0.99
+          ],
+          "model_size": "large",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "白色波纹厢式货厢，顶部可见'ISUZU'字样"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "whole",
+          "bbox": [
+            0.343,
+            0.608,
+            0.483,
+            0.998
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "白色厢式货厢"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "whole",
+          "bbox": [
+            0.347,
+            0.628,
+            0.484,
+            0.999
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "白色/银色长条形货厢、波纹板侧壁、超长轴距"
+        }
+      ],
+      "candidate": "N6"
+    },
+    {
+      "geo_window": "bottom_right",
+      "bbox": [
+        0.55,
+        0.78,
+        0.9,
+        1.0
+      ],
+      "models": [
+        "geometry"
+      ],
+      "proposals": [],
+      "candidate": "N7"
+    },
+    {
+      "geo_window": "bottom",
+      "bbox": [
+        0.3,
+        0.82,
+        0.75,
+        1.0
+      ],
+      "models": [
+        "geometry"
+      ],
+      "proposals": [],
+      "candidate": "N8"
+    }
+  ],
+  "south_600": [
+    {
+      "geo_window": "top",
+      "bbox": [
+        0.35,
+        0.02,
+        0.62,
+        0.19
+      ],
+      "models": [
+        "geometry"
+      ],
+      "proposals": [],
+      "candidate": "S1"
+    },
+    {
+      "bbox": [
+        0.46,
+        0.1,
+        0.5,
+        0.16
+      ],
+      "models": [
+        "aibox/whole"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "whole",
+          "bbox": [
+            0.46,
+            0.1,
+            0.5,
+            0.16
+          ],
+          "model_size": "large",
+          "visible": "partial_top",
+          "uncertain": true,
+          "identity_clues": "通道最远端深色车辆轮廓，疑似货车"
+        }
+      ],
+      "candidate": "S2"
+    },
+    {
+      "bbox": [
+        0.45,
+        0.118,
+        0.5,
+        0.2700000000000001
+      ],
+      "models": [
+        "aibox/crop",
+        "aibox/whole",
+        "doubao/crop",
+        "doubao/whole",
+        "zhipu/whole"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "crop",
+          "bbox": [
+            0.45703125,
+            0.13,
+            0.49640625,
+            0.2700000000000001
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "红色卡车车头，棕色货厢"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "crop",
+          "bbox": [
+            0.4535859374999999,
+            0.128,
+            0.4914843749999999,
+            0.265
+          ],
+          "model_size": "medium",
+          "visible": "partial_front",
+          "uncertain": false,
+          "identity_clues": "红色车头"
+        },
+        {
+          "model": "aibox",
+          "source_mode": "whole",
+          "bbox": [
+            0.45,
+            0.13,
+            0.5,
+            0.24
+          ],
+          "model_size": "large",
+          "visible": "partial_top",
+          "uncertain": true,
+          "identity_clues": "红色货车车头及货厢，远处略小"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "whole",
+          "bbox": [
+            0.45,
+            0.12,
+            0.49,
+            0.26
+          ],
+          "model_size": "large",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "红色货车，位于通道尽头"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "whole",
+          "bbox": [
+            0.453,
+            0.118,
+            0.493,
+            0.258
+          ],
+          "model_size": "large",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "深红色/暗色车头、位于通道尽头发光区域附近"
+        }
+      ],
+      "candidate": "S3"
+    },
+    {
+      "bbox": [
+        0.44,
+        0.2,
+        0.5,
+        0.37
+      ],
+      "models": [
+        "aibox/whole"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "whole",
+          "bbox": [
+            0.44,
+            0.2,
+            0.5,
+            0.37
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色重卡车头，后方连挂深色货厢"
+        }
+      ],
+      "candidate": "S4"
+    },
+    {
+      "bbox": [
+        0.41,
+        0.228,
+        0.46195312499999996,
+        0.365
+      ],
+      "models": [
+        "aibox/crop",
+        "doubao/crop",
+        "doubao/whole",
+        "zhipu/whole"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "crop",
+          "bbox": [
+            0.412734375,
+            0.23999999999999996,
+            0.46195312499999996,
+            0.36
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色卡车车头，载有蓝色货物"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "crop",
+          "bbox": [
+            0.41421093750000004,
+            0.243,
+            0.456046875,
+            0.36
+          ],
+          "model_size": "medium",
+          "visible": "partial_front",
+          "uncertain": false,
+          "identity_clues": "红色车头，顶部有蓝色覆盖物"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "whole",
+          "bbox": [
+            0.41,
+            0.24,
+            0.46,
+            0.36
+          ],
+          "model_size": "medium",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色车头，尺寸小于前方大型货车"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "whole",
+          "bbox": [
+            0.417,
+            0.228,
+            0.456,
+            0.365
+          ],
+          "model_size": "large",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "红色车头、可见驾驶室轮廓与后视镜"
+        }
+      ],
+      "candidate": "S5"
+    },
+    {
+      "bbox": [
+        0.45,
+        0.28,
+        0.53,
+        0.62
+      ],
+      "models": [
+        "aibox/crop",
+        "aibox/whole",
+        "doubao/crop",
+        "doubao/whole",
+        "zhipu/whole"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "crop",
+          "bbox": [
+            0.45703125,
+            0.29,
+            0.51609375,
+            0.47
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色卡车车头带红色货厢"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "crop",
+          "bbox": [
+            0.45506250000000004,
+            0.288,
+            0.51609375,
+            0.525
+          ],
+          "model_size": "large",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "红色车头，灰色货厢"
+        },
+        {
+          "model": "aibox",
+          "source_mode": "whole",
+          "bbox": [
+            0.45,
+            0.28,
+            0.53,
+            0.62
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色车头+白色集装箱货厢"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "whole",
+          "bbox": [
+            0.45,
+            0.29,
+            0.51,
+            0.5
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色车头，灰色封闭货厢"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "whole",
+          "bbox": [
+            0.459,
+            0.289,
+            0.521,
+            0.504
+          ],
+          "model_size": "large",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "红色驾驶室、红色/深色货厢、位于白色货车正后方"
+        }
+      ],
+      "candidate": "S6"
+    },
+    {
+      "bbox": [
+        0.45,
+        0.45,
+        0.561,
+        0.9
+      ],
+      "models": [
+        "aibox/crop",
+        "aibox/whole",
+        "doubao/crop",
+        "doubao/whole",
+        "zhipu/whole"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "crop",
+          "bbox": [
+            0.46687500000000004,
+            0.47,
+            0.55546875,
+            0.9
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "白色货厢+白色车头，东风商用车"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "crop",
+          "bbox": [
+            0.46441406250000006,
+            0.458,
+            0.5530078125,
+            0.885
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "东风商用车"
+        },
+        {
+          "model": "aibox",
+          "source_mode": "whole",
+          "bbox": [
+            0.45,
+            0.46,
+            0.56,
+            0.9
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "白色东风商用车车头+白色长货厢"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "whole",
+          "bbox": [
+            0.46,
+            0.45,
+            0.56,
+            0.87
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "白色车头，带有'东风商用车'字样，白色封闭货厢"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "whole",
+          "bbox": [
+            0.468,
+            0.477,
+            0.561,
+            0.882
+          ],
+          "model_size": "large",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "白色车头带奔驰三叉星徽标、白色厢式货厢/挂车、前部'东风商用车'汉字标识"
+        }
+      ],
+      "candidate": "S7"
+    },
+    {
+      "geo_window": "bottom_right",
+      "bbox": [
+        0.55,
+        0.78,
+        0.9,
+        1.0
+      ],
+      "models": [
+        "geometry"
+      ],
+      "proposals": [],
+      "candidate": "S8"
+    },
+    {
+      "geo_window": "bottom",
+      "bbox": [
+        0.3,
+        0.82,
+        0.75,
+        1.0
+      ],
+      "models": [
+        "geometry"
+      ],
+      "proposals": [],
+      "candidate": "S9"
+    }
+  ],
+  "south_900": [
+    {
+      "geo_window": "top",
+      "bbox": [
+        0.35,
+        0.02,
+        0.62,
+        0.19
+      ],
+      "models": [
+        "geometry"
+      ],
+      "proposals": [],
+      "candidate": "S1"
+    },
+    {
+      "bbox": [
+        0.45,
+        0.11,
+        0.5,
+        0.28
+      ],
+      "models": [
+        "aibox/crop",
+        "aibox/whole",
+        "doubao/crop",
+        "zhipu/crop"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "crop",
+          "bbox": [
+            0.45703125,
+            0.13,
+            0.49640625,
+            0.28
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "红色卡车头，位于过道远端"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "crop",
+          "bbox": [
+            0.45210937500000004,
+            0.13,
+            0.4914843749999999,
+            0.25
+          ],
+          "model_size": "medium",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "远处红色货车"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "crop",
+          "bbox": [
+            0.454078125,
+            0.12399999999999999,
+            0.49000781250000003,
+            0.27799999999999997
+          ],
+          "model_size": "large",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "暗红色/棕色货车，位于最远红色车后方"
+        },
+        {
+          "model": "aibox",
+          "source_mode": "whole",
+          "bbox": [
+            0.45,
+            0.11,
+            0.5,
+            0.22
+          ],
+          "model_size": "large",
+          "visible": "partial_top",
+          "uncertain": true,
+          "identity_clues": "红色货车，远处较小"
+        }
+      ],
+      "candidate": "S2"
+    },
+    {
+      "bbox": [
+        0.45,
+        0.11,
+        0.48,
+        0.23
+      ],
+      "models": [
+        "doubao/whole"
+      ],
+      "proposals": [
+        {
+          "model": "doubao",
+          "source_mode": "whole",
+          "bbox": [
+            0.45,
+            0.11,
+            0.48,
+            0.23
+          ],
+          "model_size": "medium",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "红色车头，远处可见"
+        }
+      ],
+      "candidate": "S3"
+    },
+    {
+      "bbox": [
+        0.41,
+        0.194,
+        0.46687500000000004,
+        0.37
+      ],
+      "models": [
+        "aibox/crop",
+        "doubao/crop",
+        "doubao/whole",
+        "zhipu/crop"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "crop",
+          "bbox": [
+            0.41765624999999995,
+            0.23999999999999996,
+            0.46687500000000004,
+            0.37
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色斯堪尼亚卡车头，载蓝色货物"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "crop",
+          "bbox": [
+            0.412734375,
+            0.25,
+            0.45703125,
+            0.36
+          ],
+          "model_size": "small",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色小型货车"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "crop",
+          "bbox": [
+            0.41371874999999997,
+            0.194,
+            0.4555546875,
+            0.359
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色重型卡车，车头朝向镜头"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "whole",
+          "bbox": [
+            0.41,
+            0.22,
+            0.45,
+            0.36
+          ],
+          "model_size": "medium",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色车头，蓝色货厢"
+        }
+      ],
+      "candidate": "S4"
+    },
+    {
+      "bbox": [
+        0.45,
+        0.2,
+        0.51,
+        0.32
+      ],
+      "models": [
+        "aibox/whole"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "whole",
+          "bbox": [
+            0.45,
+            0.2,
+            0.51,
+            0.32
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": true,
+          "identity_clues": "红色车头/货厢，蓝色帆布覆盖"
+        }
+      ],
+      "candidate": "S5"
+    },
+    {
+      "bbox": [
+        0.42,
+        0.248,
+        0.456,
+        0.366
+      ],
+      "models": [
+        "zhipu/whole"
+      ],
+      "proposals": [
+        {
+          "model": "zhipu",
+          "source_mode": "whole",
+          "bbox": [
+            0.42,
+            0.248,
+            0.456,
+            0.366
+          ],
+          "model_size": "large",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "红色重型卡车驾驶室，高顶造型"
+        }
+      ],
+      "candidate": "S6"
+    },
+    {
+      "bbox": [
+        0.44,
+        0.28,
+        0.53,
+        0.48
+      ],
+      "models": [
+        "aibox/whole",
+        "doubao/crop",
+        "doubao/whole",
+        "zhipu/crop"
+      ],
+      "proposals": [
+        {
+          "model": "doubao",
+          "source_mode": "crop",
+          "bbox": [
+            0.45703125,
+            0.29,
+            0.51609375,
+            0.47
+          ],
+          "model_size": "medium",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色车头灰色厢式货厢"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "crop",
+          "bbox": [
+            0.458015625,
+            0.289,
+            0.5146171875000001,
+            0.476
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色车头货车，深色货厢"
+        },
+        {
+          "model": "aibox",
+          "source_mode": "whole",
+          "bbox": [
+            0.45,
+            0.3,
+            0.53,
+            0.47
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色车头，白色/浅色货厢"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "whole",
+          "bbox": [
+            0.44,
+            0.28,
+            0.5,
+            0.48
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色车头，灰色货厢"
+        }
+      ],
+      "candidate": "S7"
+    },
+    {
+      "bbox": [
+        0.46,
+        0.284,
+        0.517,
+        0.5
+      ],
+      "models": [
+        "aibox/crop",
+        "zhipu/whole"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "crop",
+          "bbox": [
+            0.46195312499999996,
+            0.38,
+            0.51609375,
+            0.5
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色卡车头，右侧车列"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "whole",
+          "bbox": [
+            0.46,
+            0.284,
+            0.517,
+            0.49
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色重型载货车/牵引车，驾驶室及底盘前部可见"
+        }
+      ],
+      "candidate": "S8"
+    },
+    {
+      "bbox": [
+        0.45,
+        0.45,
+        0.56,
+        0.88
+      ],
+      "models": [
+        "aibox/crop",
+        "aibox/whole",
+        "doubao/crop",
+        "doubao/whole",
+        "zhipu/crop",
+        "zhipu/whole"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "crop",
+          "bbox": [
+            0.47179687500000006,
+            0.47,
+            0.545625,
+            0.72
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "白色厢式货柜挂车"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "crop",
+          "bbox": [
+            0.46195312499999996,
+            0.46,
+            0.550546875,
+            0.88
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "东风商用车"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "crop",
+          "bbox": [
+            0.46687500000000004,
+            0.473,
+            0.5510390624999999,
+            0.868
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "白色'东风商用车'牵引车头，红色半挂厢"
+        },
+        {
+          "model": "aibox",
+          "source_mode": "whole",
+          "bbox": [
+            0.46,
+            0.45,
+            0.56,
+            0.88
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "白色驾驶室，货厢印有'东风商用车'字样"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "whole",
+          "bbox": [
+            0.45,
+            0.6,
+            0.55,
+            0.88
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "白色车头，印有'东风商用车'字样，白色货厢"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "whole",
+          "bbox": [
+            0.471,
+            0.471,
+            0.555,
+            0.878
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "白色厢式货车，车头印有'东风商用车'汉字，可见奔驰三叉星徽标，白色货厢"
+        }
+      ],
+      "candidate": "S9"
+    },
+    {
+      "bbox": [
+        0.47179687500000006,
+        0.68,
+        0.55546875,
+        0.88
+      ],
+      "models": [
+        "aibox/crop"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "crop",
+          "bbox": [
+            0.47179687500000006,
+            0.68,
+            0.55546875,
+            0.88
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "白色东风商用车卡车头"
+        }
+      ],
+      "candidate": "S10"
+    },
+    {
+      "geo_window": "bottom",
+      "bbox": [
+        0.3,
+        0.82,
+        0.75,
+        1.0
+      ],
+      "models": [
+        "geometry"
+      ],
+      "proposals": [],
+      "candidate": "S11"
+    },
+    {
+      "bbox": [
+        0.48,
+        0.82,
+        0.62,
+        1.0
+      ],
+      "models": [
+        "aibox/crop",
+        "aibox/whole",
+        "doubao/crop",
+        "doubao/whole",
+        "zhipu/whole"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "crop",
+          "bbox": [
+            0.4914843749999999,
+            0.85,
+            0.580078125,
+            1.0
+          ],
+          "model_size": "large",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "红色货车货厢，画面底部"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "crop",
+          "bbox": [
+            0.48656249999999995,
+            0.86,
+            0.5948437500000001,
+            0.99
+          ],
+          "model_size": "unknown",
+          "visible": "trailer_only",
+          "uncertain": false,
+          "identity_clues": "红色空货厢（挂车）"
+        },
+        {
+          "model": "aibox",
+          "source_mode": "whole",
+          "bbox": [
+            0.49,
+            0.85,
+            0.62,
+            1.0
+          ],
+          "model_size": "large",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "红色货车货厢顶部，画面底部被裁切"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "whole",
+          "bbox": [
+            0.48,
+            0.82,
+            0.57,
+            0.99
+          ],
+          "model_size": "large",
+          "visible": "trailer_only",
+          "uncertain": false,
+          "identity_clues": "红色独立挂车，无车头"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "whole",
+          "bbox": [
+            0.495,
+            0.86,
+            0.604,
+            1.0
+          ],
+          "model_size": "large",
+          "visible": "partial_top",
+          "uncertain": true,
+          "identity_clues": "红色货厢（疑似栏板或厢式结构），仅露出上半部分主体"
+        }
+      ],
+      "candidate": "S12"
+    }
+  ],
+  "south_1200": [
+    {
+      "geo_window": "top",
+      "bbox": [
+        0.35,
+        0.02,
+        0.62,
+        0.19
+      ],
+      "models": [
+        "geometry"
+      ],
+      "proposals": [],
+      "candidate": "S1"
+    },
+    {
+      "bbox": [
+        0.44,
+        0.118,
+        0.501328125,
+        0.26
+      ],
+      "models": [
+        "aibox/crop",
+        "aibox/whole",
+        "doubao/crop",
+        "doubao/whole",
+        "zhipu/crop"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "crop",
+          "bbox": [
+            0.45210937500000004,
+            0.13,
+            0.501328125,
+            0.26
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "红色卡车车头，远处"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "crop",
+          "bbox": [
+            0.45210937500000004,
+            0.11999999999999998,
+            0.4914843749999999,
+            0.25
+          ],
+          "model_size": "small",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "红色车头，棕色货厢"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "crop",
+          "bbox": [
+            0.45703125,
+            0.11999999999999998,
+            0.49000781250000003,
+            0.252
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "深红色/棕色重型货车"
+        },
+        {
+          "model": "aibox",
+          "source_mode": "whole",
+          "bbox": [
+            0.44,
+            0.12,
+            0.5,
+            0.2
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": true,
+          "identity_clues": "远处红色/深色货车轮廓"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "whole",
+          "bbox": [
+            0.448,
+            0.118,
+            0.498,
+            0.258
+          ],
+          "model_size": "medium",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "红色中型货车，位于通道尽头"
+        }
+      ],
+      "candidate": "S2"
+    },
+    {
+      "bbox": [
+        0.41765624999999995,
+        0.14,
+        0.44718749999999996,
+        0.19
+      ],
+      "models": [
+        "aibox/crop"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "crop",
+          "bbox": [
+            0.41765624999999995,
+            0.14,
+            0.44718749999999996,
+            0.19
+          ],
+          "model_size": "unknown",
+          "visible": "partial_side",
+          "uncertain": true,
+          "identity_clues": "远处小型红色物体，疑似货车车头"
+        }
+      ],
+      "candidate": "S3"
+    },
+    {
+      "bbox": [
+        0.44,
+        0.18,
+        0.5,
+        0.27
+      ],
+      "models": [
+        "aibox/whole"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "whole",
+          "bbox": [
+            0.44,
+            0.18,
+            0.5,
+            0.27
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": true,
+          "identity_clues": "红色卡车车头"
+        }
+      ],
+      "candidate": "S4"
+    },
+    {
+      "bbox": [
+        0.412734375,
+        0.235,
+        0.48,
+        0.37
+      ],
+      "models": [
+        "aibox/crop",
+        "aibox/whole",
+        "doubao/crop",
+        "doubao/whole",
+        "zhipu/crop",
+        "zhipu/whole"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "crop",
+          "bbox": [
+            0.41765624999999995,
+            0.25,
+            0.46195312499999996,
+            0.37
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色斯堪尼亚平头卡车，蓝色前挡"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "crop",
+          "bbox": [
+            0.412734375,
+            0.23999999999999996,
+            0.45210937500000004,
+            0.35
+          ],
+          "model_size": "medium",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色车头，蓝色货厢"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "crop",
+          "bbox": [
+            0.4166718749999999,
+            0.246,
+            0.4555546875,
+            0.359
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "红色重卡车头"
+        },
+        {
+          "model": "aibox",
+          "source_mode": "whole",
+          "bbox": [
+            0.42,
+            0.25,
+            0.48,
+            0.36
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "红色卡车车头"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "whole",
+          "bbox": [
+            0.413,
+            0.238,
+            0.458,
+            0.368
+          ],
+          "model_size": "medium",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色中型货车，红色货厢与车头"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "whole",
+          "bbox": [
+            0.42,
+            0.235,
+            0.462,
+            0.367
+          ],
+          "model_size": "large",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "红色涂装，位于通道深处，具有典型重卡比例"
+        }
+      ],
+      "candidate": "S5"
+    },
+    {
+      "bbox": [
+        0.45,
+        0.28,
+        0.53,
+        0.52
+      ],
+      "models": [
+        "aibox/crop",
+        "aibox/whole",
+        "doubao/crop",
+        "doubao/whole",
+        "zhipu/crop",
+        "zhipu/whole"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "crop",
+          "bbox": [
+            0.45703125,
+            0.28,
+            0.521015625,
+            0.47
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色卡车车头+货厢/集装箱"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "crop",
+          "bbox": [
+            0.45703125,
+            0.28,
+            0.51609375,
+            0.52
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "红色货厢带白色标识"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "crop",
+          "bbox": [
+            0.4594921875,
+            0.29,
+            0.5126484375,
+            0.48800000000000004
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "红色重卡车头"
+        },
+        {
+          "model": "aibox",
+          "source_mode": "whole",
+          "bbox": [
+            0.45,
+            0.36,
+            0.53,
+            0.48
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "红色卡车车头，位于白色货车正后方"
+        },
+        {
+          "model": "aibox",
+          "source_mode": "whole",
+          "bbox": [
+            0.45,
+            0.28,
+            0.53,
+            0.43
+          ],
+          "model_size": "large",
+          "visible": "trailer_only",
+          "uncertain": true,
+          "identity_clues": "灰色长条货厢/挂车顶面"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "whole",
+          "bbox": [
+            0.453,
+            0.288,
+            0.523,
+            0.498
+          ],
+          "model_size": "large",
+          "visible": "partial_side",
+          "uncertain": false,
+          "identity_clues": "红色车头，灰色封闭货厢"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "whole",
+          "bbox": [
+            0.458,
+            0.288,
+            0.52,
+            0.493
+          ],
+          "model_size": "large",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "红色涂装，重型卡车车头及货厢轮廓"
+        }
+      ],
+      "candidate": "S6"
+    },
+    {
+      "bbox": [
+        0.458,
+        0.452,
+        0.57,
+        0.9
+      ],
+      "models": [
+        "aibox/crop",
+        "aibox/whole",
+        "doubao/crop",
+        "doubao/whole",
+        "zhipu/crop",
+        "zhipu/whole"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "crop",
+          "bbox": [
+            0.46195312499999996,
+            0.47,
+            0.5653124999999999,
+            0.9
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "白色东风商用车牵引车头+白色集装箱货厢"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "crop",
+          "bbox": [
+            0.46687500000000004,
+            0.46,
+            0.550546875,
+            0.87
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "东风商用车"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "crop",
+          "bbox": [
+            0.4663828125,
+            0.478,
+            0.5667890625,
+            0.872
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "东风商用车 白色厢式货车"
+        },
+        {
+          "model": "aibox",
+          "source_mode": "whole",
+          "bbox": [
+            0.46,
+            0.47,
+            0.57,
+            0.9
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "白色东风商用车车头+白色长货厢"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "whole",
+          "bbox": [
+            0.458,
+            0.452,
+            0.553,
+            0.878
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "白色东风商用车，车头印有‘东风商用车’字样，搭配白色封闭货厢"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "whole",
+          "bbox": [
+            0.471,
+            0.48,
+            0.554,
+            0.881
+          ],
+          "model_size": "large",
+          "visible": "full",
+          "uncertain": false,
+          "identity_clues": "白色驾驶室，车头印有'东风商用车'文字，银白色厢式货厢"
+        }
+      ],
+      "candidate": "S7"
+    },
+    {
+      "geo_window": "bottom",
+      "bbox": [
+        0.3,
+        0.82,
+        0.75,
+        1.0
+      ],
+      "models": [
+        "geometry"
+      ],
+      "proposals": [],
+      "candidate": "S8"
+    },
+    {
+      "bbox": [
+        0.47179687500000006,
+        0.848,
+        0.66,
+        1.0
+      ],
+      "models": [
+        "aibox/crop",
+        "aibox/whole",
+        "doubao/crop",
+        "doubao/whole",
+        "zhipu/crop"
+      ],
+      "proposals": [
+        {
+          "model": "aibox",
+          "source_mode": "crop",
+          "bbox": [
+            0.47179687500000006,
+            0.85,
+            0.629296875,
+            1.0
+          ],
+          "model_size": "large",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "红色货车尾部/货厢，仅露出上部"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "crop",
+          "bbox": [
+            0.48656249999999995,
+            0.85,
+            0.5948437500000001,
+            1.0
+          ],
+          "model_size": "unknown",
+          "visible": "trailer_only",
+          "uncertain": false,
+          "identity_clues": "红色货厢，无可见车头"
+        },
+        {
+          "model": "zhipu",
+          "source_mode": "crop",
+          "bbox": [
+            0.4919765625,
+            0.857,
+            0.5992734375000001,
+            1.0
+          ],
+          "model_size": "large",
+          "visible": "trailer_only",
+          "uncertain": false,
+          "identity_clues": "红色/棕色货厢"
+        },
+        {
+          "model": "aibox",
+          "source_mode": "whole",
+          "bbox": [
+            0.49,
+            0.85,
+            0.66,
+            1.0
+          ],
+          "model_size": "large",
+          "visible": "partial_top",
+          "uncertain": false,
+          "identity_clues": "红色货车货厢顶部，画面底部被裁切"
+        },
+        {
+          "model": "doubao",
+          "source_mode": "whole",
+          "bbox": [
+            0.488,
+            0.848,
+            0.603,
+            0.998
+          ],
+          "model_size": "unknown",
+          "visible": "trailer_only",
+          "uncertain": true,
+          "identity_clues": "红色封闭挂车"
+        }
+      ],
+      "candidate": "S9"
+    }
+  ]
+}

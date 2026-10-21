@@ -1,0 +1,149 @@
+{
+  "job": "pairs_600",
+  "image": "assets\\sheets\\pairs_600.jpg",
+  "prompt": "这张联系表上排 N1... 是北机位在同一时刻的候选窗口，下排 S1... 是南机位的候选窗口。\n两机位存在重叠，但视角和尺度不同。每格是互相重叠的窗口，不是“一格必定一辆车”。\n\n请建立跨机位物理实体图：\n1. 全图每个物理车辆只列一次，members 写出所有显示它的 N/S 窗口。\n2. 只有当颜色、货厢结构、车头、文字、顶部特征等至少两个语义证据一致时，才判为跨机位同一车。\n3. 同一辆车的车头与货厢不得分开；一个窗口可归入多个物理车辆。\n4. 排除人物、叉车、轿车、空窗、展台。\n5. 视角改变导致无法确认时写 match=\"uncertain\" 且 review=true；不能为凑数强行配对。\n6. 车型 large/medium/small/unknown。\n\n输出严格 JSON：\n{\"physical_vehicles\":[{\"group\":\"G1\",\"members\":[\"N1\",\"S2\"],\"match\":\"north_only|south_only|same_across_cameras|uncertain\",\"size\":\"large|medium|small|unknown\",\"identity\":\"可复核的至少两个特征\",\"review\":false}],\"unique_total\":0,\"rejected_candidates\":[{\"candidate\":\"N4\",\"reason\":\"\"}],\"review_reasons\":[]}",
+  "run": {
+    "model": "aibox",
+    "model_id": "glm-5.3-flash",
+    "ok": true,
+    "latency_s": 38.899,
+    "request_id": "6fae98416d27451c83a8dd0d03aac4f8",
+    "usage": {
+      "prompt_tokens": 2604,
+      "total_tokens": 4181,
+      "completion_tokens": 1577,
+      "prompt_tokens_details": {
+        "cached_tokens": 2560,
+        "image_tokens": 2300
+      },
+      "reasoning_tokens": 767
+    },
+    "parsed": {
+      "physical_vehicles": [
+        {
+          "group": "G1",
+          "members": [
+            "N6"
+          ],
+          "match": "north_only",
+          "size": "large",
+          "identity": "红色驾驶室+红色高栏货厢、俯视可见前照灯与红色货厢底板结构；南向窗口中无同时满足红色车头+红色货厢结构的对应车",
+          "review": false
+        },
+        {
+          "group": "G2",
+          "members": [
+            "N8",
+            "S7"
+          ],
+          "match": "uncertain",
+          "size": "large",
+          "identity": "N8为长条白色瓦楞货厢顶部俯视；S7为白色车头+白色货厢正面视角。白色货厢颜色一致，但N8看不到车头、S7看不到厢顶纹路，仅一维证据（白色长货厢）吻合，无法双证据确认",
+          "review": true
+        },
+        {
+          "group": "G3",
+          "members": [
+            "S3"
+          ],
+          "match": "south_only",
+          "size": "large",
+          "identity": "红色卡车驾驶室+棕色/锈色货厢，俯视视角；北向窗口无对应棕色货厢+红色车头组合",
+          "review": false
+        },
+        {
+          "group": "G4",
+          "members": [
+            "S4"
+          ],
+          "match": "south_only",
+          "size": "large",
+          "identity": "红色平头驾驶室+灰色瓦楞货厢，与S3棕色货厢、S6白色货厢均不同；北向无对应灰色货厢俯视窗口",
+          "review": false
+        },
+        {
+          "group": "G5",
+          "members": [
+            "S5"
+          ],
+          "match": "south_only",
+          "size": "large",
+          "identity": "红色长头卡车（格栅造型可辨），平板上载蓝色货物；N6虽为红色卡车但货厢为红色高栏且载货不同，证据不一致，不并组",
+          "review": false
+        },
+        {
+          "group": "G6",
+          "members": [
+            "S6"
+          ],
+          "match": "south_only",
+          "size": "large",
+          "identity": "红色驾驶室+白色货厢；北向N8为白色货厢但无红色车头证据，单证据不足，不强行配对",
+          "review": false
+        },
+        {
+          "group": "G7",
+          "members": [
+            "S9"
+          ],
+          "match": "south_only",
+          "size": "medium",
+          "identity": "画面右下可见白色/浅色卡车驾驶室顶部，位于A区3-2标识旁；北向对应窗口N10仅有叉车与白色厢体，无法确认同一车",
+          "review": false
+        }
+      ],
+      "unique_total": 7,
+      "rejected_candidates": [
+        {
+          "candidate": "N1",
+          "reason": "时间戳叠加、场景为空场地/结构，无可辨识车辆"
+        },
+        {
+          "candidate": "N2",
+          "reason": "俯视仅为集装箱顶与传送结构，无法确认车辆实体"
+        },
+        {
+          "candidate": "N3",
+          "reason": "堆叠的蓝色集装箱顶与人员，非车辆"
+        },
+        {
+          "candidate": "N4",
+          "reason": "带文字的蓝色集装箱顶，非车辆"
+        },
+        {
+          "candidate": "N5",
+          "reason": "大型蓝灰色箱顶与作业人员，非车辆"
+        },
+        {
+          "candidate": "N7",
+          "reason": "LAMO招牌、梯子等固定结构，无车辆"
+        },
+        {
+          "candidate": "N9",
+          "reason": "蓝色叉车（属排除类）"
+        },
+        {
+          "candidate": "N10",
+          "reason": "蓝色叉车与静态厢体，叉车属排除类"
+        },
+        {
+          "candidate": "S1",
+          "reason": "时间戳叠加、集装箱堆场，无可辨识车辆"
+        },
+        {
+          "candidate": "S2",
+          "reason": "严重模糊的棕色箱顶，无车头/结构证据，无法判定为车辆"
+        },
+        {
+          "candidate": "S8",
+          "reason": "A区3-2天花南标识与静态厢体，无完整车辆实体"
+        }
+      ],
+      "review_reasons": [
+        "G2(N8/S7)：跨机位仅白色长货厢单一证据吻合，车头-货厢无法在两视角同时确认，需人工复核",
+        "N6与S5均为红色卡车但货厢结构与载货不一致，按规则不并组，如需可人工复核N6是否对应南向某红色车头"
+      ]
+    },
+    "raw_text": "{\"physical_vehicles\":[\n{\"group\":\"G1\",\"members\":[\"N6\"],\"match\":\"north_only\",\"size\":\"large\",\"identity\":\"红色驾驶室+红色高栏货厢、俯视可见前照灯与红色货厢底板结构；南向窗口中无同时满足红色车头+红色货厢结构的对应车\",\"review\":false},\n{\"group\":\"G2\",\"members\":[\"N8\",\"S7\"],\"match\":\"uncertain\",\"size\":\"large\",\"identity\":\"N8为长条白色瓦楞货厢顶部俯视；S7为白色车头+白色货厢正面视角。白色货厢颜色一致，但N8看不到车头、S7看不到厢顶纹路，仅一维证据（白色长货厢）吻合，无法双证据确认\",\"review\":true},\n{\"group\":\"G3\",\"members\":[\"S3\"],\"match\":\"south_only\",\"size\":\"large\",\"identity\":\"红色卡车驾驶室+棕色/锈色货厢，俯视视角；北向窗口无对应棕色货厢+红色车头组合\",\"review\":false},\n{\"group\":\"G4\",\"members\":[\"S4\"],\"match\":\"south_only\",\"size\":\"large\",\"identity\":\"红色平头驾驶室+灰色瓦楞货厢，与S3棕色货厢、S6白色货厢均不同；北向无对应灰色货厢俯视窗口\",\"review\":false},\n{\"group\":\"G5\",\"members\":[\"S5\"],\"match\":\"south_only\",\"size\":\"large\",\"identity\":\"红色长头卡车（格栅造型可辨），平板上载蓝色货物；N6虽为红色卡车但货厢为红色高栏且载货不同，证据不一致，不并组\",\"review\":false},\n{\"group\":\"G6\",\"members\":[\"S6\"],\"match\":\"south_only\",\"size\":\"large\",\"identity\":\"红色驾驶室+白色货厢；北向N8为白色货厢但无红色车头证据，单证据不足，不强行配对\",\"review\":false},\n{\"group\":\"G7\",\"members\":[\"S9\"],\"match\":\"south_only\",\"size\":\"medium\",\"identity\":\"画面右下可见白色/浅色卡车驾驶室顶部，位于A区3-2标识旁；北向对应窗口N10仅有叉车与白色厢体，无法确认同一车\",\"review\":false}\n],\"unique_total\":7,\n\"rejected_candidates\":[\n{\"candidate\":\"N1\",\"reason\":\"时间戳叠加、场景为空场地/结构，无可辨识车辆\"},\n{\"candidate\":\"N2\",\"reason\":\"俯视仅为集装箱顶与传送结构，无法确认车辆实体\"},\n{\"candidate\":\"N3\",\"reason\":\"堆叠的蓝色集装箱顶与人员，非车辆\"},\n{\"candidate\":\"N4\",\"reason\":\"带文字的蓝色集装箱顶，非车辆\"},\n{\"candidate\":\"N5\",\"reason\":\"大型蓝灰色箱顶与作业人员，非车辆\"},\n{\"candidate\":\"N7\",\"reason\":\"LAMO招牌、梯子等固定结构，无车辆\"},\n{\"candidate\":\"N9\",\"reason\":\"蓝色叉车（属排除类）\"},\n{\"candidate\":\"N10\",\"reason\":\"蓝色叉车与静态厢体，叉车属排除类\"},\n{\"candidate\":\"S1\",\"reason\":\"时间戳叠加、集装箱堆场，无可辨识车辆\"},\n{\"candidate\":\"S2\",\"reason\":\"严重模糊的棕色箱顶，无车头/结构证据，无法判定为车辆\"},\n{\"candidate\":\"S8\",\"reason\":\"A区3-2天花南标识与静态厢体，无完整车辆实体\"}\n],\n\"review_reasons\":[\n\"G2(N8/S7)：跨机位仅白色长货厢单一证据吻合，车头-货厢无法在两视角同时确认，需人工复核\",\n\"N6与S5均为红色卡车但货厢结构与载货不一致，按规则不并组，如需可人工复核N6是否对应南向某红色车头\"\n]}"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "observation": "north_1500",
+  "mode": "whole",
+  "images": [
+    "assets\\frames\\north_t1500.jpg"
+  ],
+  "prompt": "你是展会撤换展现场的货车清点专家。只依据这张整帧画面清点所有可见货车。\n\n口径：\n1. 同一辆车的车头、挂车和货厢只算一辆；与相邻车头分离的独立挂车算一辆。\n2. 小汽车、面包车、叉车、手推车、人物、工程机械不计。\n3. 只统计画面内实际可见车辆；远处或遮挡但仍能确定是货车时必须计入；完全看不见不猜。\n4. 按整车轮廓与比例分 large（重卡/半挂/长货厢）、medium（中卡）、small（轻卡/厢车）；不确定写 unknown。\n5. 对远处、边界、遮挡、疑似车头货厢拆分的候选设 uncertain=true。\n\nbbox 使用 0-1 归一化 [x0,y0,x1,y1]，框住整辆可见车辆的联合外接框。\n只输出严格 JSON：\n{\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"visible\":\"full|partial_top|partial_side|trailer_only\",\"is_truck\":true,\"identity_clues\":\"颜色、货厢、车头、文字等证据\",\"evidence\":\"画面位置与理由\",\"uncertain\":false}],\"scene_notes\":\"\",\"uncertain_reasons\":[]}",
+  "run": {
+    "model": "doubao",
+    "model_id": "ep-20260828174616-dthpx",
+    "ok": true,
+    "latency_s": 14.702,
+    "request_id": "02179257355607664679ac7d60129ae9e4930c44bc9a1c42b3539",
+    "usage": {
+      "completion_tokens": 1599,
+      "prompt_tokens": 1623,
+      "total_tokens": 3222,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1374
+      }
+    },
+    "parsed": {
+      "counts": {
+        "total": 2,
+        "large": 2,
+        "medium": 0,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.405,
+            0.35,
+            0.488,
+            0.65
+          ],
+          "size": "large",
+          "visible": "partial_side",
+          "is_truck": true,
+          "identity_clues": "红色高栏货厢",
+          "evidence": "位于画面中间通道左侧，展会展位间的通道内，可见红色货车货厢，属于货车范畴",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.343,
+            0.608,
+            0.483,
+            0.998
+          ],
+          "size": "large",
+          "visible": "partial_side",
+          "is_truck": true,
+          "identity_clues": "白色厢式货厢",
+          "evidence": "位于红色货车下方，展会展位间的通道内，可见白色厢式货车货厢，属于货车范畴",
+          "uncertain": false
+        }
+      ],
+      "scene_notes": "展会撤换展现场，可见2辆大型货车，均位于展位间通道内",
+      "uncertain_reasons": []
+    },
+    "raw_text": "{\"counts\":{\"total\":2,\"large\":2,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0.405,0.35,0.488,0.65],\"size\":\"large\",\"visible\":\"partial_side\",\"is_truck\":true,\"identity_clues\":\"红色高栏货厢\",\"evidence\":\"位于画面中间通道左侧，展会展位间的通道内，可见红色货车货厢，属于货车范畴\",\"uncertain\":false},{\"bbox\":[0.343,0.608,0.483,0.998],\"size\":\"large\",\"visible\":\"partial_side\",\"is_truck\":true,\"identity_clues\":\"白色厢式货厢\",\"evidence\":\"位于红色货车下方，展会展位间的通道内，可见白色厢式货车货厢，属于货车范畴\",\"uncertain\":false}],\"scene_notes\":\"展会撤换展现场，可见2辆大型货车，均位于展位间通道内\",\"uncertain_reasons\":[]}"
+  }
+}

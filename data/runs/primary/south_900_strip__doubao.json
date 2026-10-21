@@ -1,0 +1,234 @@
+{
+  "observation": "south_900",
+  "mode": "strip",
+  "images": [
+    "assets\\strips\\south_900_strip.jpg"
+  ],
+  "prompt": "这是一条同一机位在 t-10s、t、t+10s 的三个连续证据面板，从左到右排列。\n请分别清点每帧，并利用颜色、货厢、车头、文字、朝向等语义判断车辆是否跨帧为同一物理车。\n禁止用像素跟踪或根据上一帧数量填数；每帧计数必须有该帧可见证据。\n\n输出严格 JSON：\n{\"frames\":[{\"panel\":\"left|center|right\",\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"panel_index\":0,\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"identity_clues\":\"\",\"uncertain\":false}]}],\"links\":[{\"from\":\"left:0\",\"to\":\"center:1\",\"same_vehicle\":\"yes|no|uncertain\",\"evidence\":\"\"}],\"new_or_exited\":[{\"frame\":\"left|center|right\",\"vehicle\":\"panel_index\",\"event\":\"enter|exit|uncertain\",\"evidence\":\"\"}],\"review_reasons\":[]}\nbbox 是单个面板内的 0-1 坐标。",
+  "run": {
+    "model": "doubao",
+    "model_id": "ep-20260828174616-dthpx",
+    "ok": true,
+    "latency_s": 37.661,
+    "request_id": "0217925738745687e51cc0b12bcea53e8635276e1c9d876d2642b",
+    "usage": {
+      "completion_tokens": 4806,
+      "prompt_tokens": 1580,
+      "total_tokens": 6386,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 3315
+      }
+    },
+    "parsed": {
+      "frames": [
+        {
+          "panel": "left",
+          "counts": {
+            "total": 3,
+            "large": 1,
+            "medium": 2,
+            "small": 0,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.13,
+                0.25,
+                0.15,
+                0.43
+              ],
+              "size": "medium",
+              "identity_clues": "红色车头，朝向镜头，位于通道左侧",
+              "uncertain": false
+            },
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.15,
+                0.35,
+                0.17,
+                0.52
+              ],
+              "size": "medium",
+              "identity_clues": "红色厢式货车，位于通道中间",
+              "uncertain": false
+            },
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.15,
+                0.52,
+                0.18,
+                0.89
+              ],
+              "size": "large",
+              "identity_clues": "白色大型货车，位于通道右侧",
+              "uncertain": false
+            }
+          ]
+        },
+        {
+          "panel": "center",
+          "counts": {
+            "total": 3,
+            "large": 1,
+            "medium": 2,
+            "small": 0,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.47,
+                0.25,
+                0.49,
+                0.43
+              ],
+              "size": "medium",
+              "identity_clues": "红色车头，朝向镜头，位于通道左侧",
+              "uncertain": false
+            },
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.49,
+                0.35,
+                0.51,
+                0.52
+              ],
+              "size": "medium",
+              "identity_clues": "红色厢式货车，位于通道中间",
+              "uncertain": false
+            },
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.48,
+                0.52,
+                0.51,
+                0.89
+              ],
+              "size": "large",
+              "identity_clues": "白色大型货车，位于通道右侧",
+              "uncertain": false
+            }
+          ]
+        },
+        {
+          "panel": "right",
+          "counts": {
+            "total": 3,
+            "large": 1,
+            "medium": 2,
+            "small": 0,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.8,
+                0.25,
+                0.82,
+                0.43
+              ],
+              "size": "medium",
+              "identity_clues": "红色车头，朝向镜头，位于通道左侧",
+              "uncertain": false
+            },
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.82,
+                0.35,
+                0.84,
+                0.52
+              ],
+              "size": "medium",
+              "identity_clues": "红色厢式货车，位于通道中间",
+              "uncertain": false
+            },
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.82,
+                0.52,
+                0.85,
+                0.89
+              ],
+              "size": "large",
+              "identity_clues": "白色大型货车，位于通道右侧",
+              "uncertain": false
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "from": "left:0",
+          "to": "center:0",
+          "same_vehicle": "yes",
+          "evidence": "颜色均为红色，车头朝向一致，位置在通道左侧，跨帧未发生明显位移"
+        },
+        {
+          "from": "left:1",
+          "to": "center:1",
+          "same_vehicle": "yes",
+          "evidence": "颜色均为红色，厢式结构，位置在通道中间，跨帧未发生明显位移"
+        },
+        {
+          "from": "left:2",
+          "to": "center:2",
+          "same_vehicle": "yes",
+          "evidence": "颜色均为白色，大型货车，位置在通道右侧，跨帧未发生明显位移"
+        },
+        {
+          "from": "center:0",
+          "to": "right:0",
+          "same_vehicle": "yes",
+          "evidence": "颜色均为红色，车头朝向一致，位置在通道左侧，跨帧未发生明显位移"
+        },
+        {
+          "from": "center:1",
+          "to": "right:1",
+          "same_vehicle": "yes",
+          "evidence": "颜色均为红色，厢式结构，位置在通道中间，跨帧未发生明显位移"
+        },
+        {
+          "from": "center:2",
+          "to": "right:2",
+          "same_vehicle": "yes",
+          "evidence": "颜色均为白色，大型货车，位置在通道右侧，跨帧未发生明显位移"
+        }
+      ],
+      "new_or_exited": [
+        {
+          "frame": "left",
+          "vehicle": "0,1,2",
+          "event": "uncertain",
+          "evidence": "所有车辆均在帧内，无新增或退出迹象"
+        },
+        {
+          "frame": "center",
+          "vehicle": "0,1,2",
+          "event": "uncertain",
+          "evidence": "所有车辆均在帧内，无新增或退出迹象"
+        },
+        {
+          "frame": "right",
+          "vehicle": "0,1,2",
+          "event": "uncertain",
+          "evidence": "所有车辆均在帧内，无新增或退出迹象"
+        }
+      ],
+      "review_reasons": []
+    },
+    "raw_text": "{\n  \"frames\": [\n    {\n      \"panel\": \"left\",\n      \"counts\": {\n        \"total\": 3,\n        \"large\": 1,\n        \"medium\": 2,\n        \"small\": 0,\n        \"unknown\": 0\n      },\n      \"vehicles\": [\n        {\n          \"panel_index\": 0,\n          \"bbox\": [0.13, 0.25, 0.15, 0.43],\n          \"size\": \"medium\",\n          \"identity_clues\": \"红色车头，朝向镜头，位于通道左侧\",\n          \"uncertain\": false\n        },\n        {\n          \"panel_index\": 1,\n          \"bbox\": [0.15, 0.35, 0.17, 0.52],\n          \"size\": \"medium\",\n          \"identity_clues\": \"红色厢式货车，位于通道中间\",\n          \"uncertain\": false\n        },\n        {\n          \"panel_index\": 2,\n          \"bbox\": [0.15, 0.52, 0.18, 0.89],\n          \"size\": \"large\",\n          \"identity_clues\": \"白色大型货车，位于通道右侧\",\n          \"uncertain\": false\n        }\n      ]\n    },\n    {\n      \"panel\": \"center\",\n      \"counts\": {\n        \"total\": 3,\n        \"large\": 1,\n        \"medium\": 2,\n        \"small\": 0,\n        \"unknown\": 0\n      },\n      \"vehicles\": [\n        {\n          \"panel_index\": 0,\n          \"bbox\": [0.47, 0.25, 0.49, 0.43],\n          \"size\": \"medium\",\n          \"identity_clues\": \"红色车头，朝向镜头，位于通道左侧\",\n          \"uncertain\": false\n        },\n        {\n          \"panel_index\": 1,\n          \"bbox\": [0.49, 0.35, 0.51, 0.52],\n          \"size\": \"medium\",\n          \"identity_clues\": \"红色厢式货车，位于通道中间\",\n          \"uncertain\": false\n        },\n        {\n          \"panel_index\": 2,\n          \"bbox\": [0.48, 0.52, 0.51, 0.89],\n          \"size\": \"large\",\n          \"identity_clues\": \"白色大型货车，位于通道右侧\",\n          \"uncertain\": false\n        }\n      ]\n    },\n    {\n      \"panel\": \"right\",\n      \"counts\": {\n        \"total\": 3,\n        \"large\": 1,\n        \"medium\": 2,\n        \"small\": 0,\n        \"unknown\": 0\n      },\n      \"vehicles\": [\n        {\n          \"panel_index\": 0,\n          \"bbox\": [0.80, 0.25, 0.82, 0.43],\n          \"size\": \"medium\",\n          \"identity_clues\": \"红色车头，朝向镜头，位于通道左侧\",\n          \"uncertain\": false\n        },\n        {\n          \"panel_index\": 1,\n          \"bbox\": [0.82, 0.35, 0.84, 0.52],\n          \"size\": \"medium\",\n          \"identity_clues\": \"红色厢式货车，位于通道中间\",\n          \"uncertain\": false\n        },\n        {\n          \"panel_index\": 2,\n          \"bbox\": [0.82, 0.52, 0.85, 0.89],\n          \"size\": \"large\",\n          \"identity_clues\": \"白色大型货车，位于通道右侧\",\n          \"uncertain\": false\n        }\n      ]\n    }\n  ],\n  \"links\": [\n    {\n      \"from\": \"left:0\",\n      \"to\": \"center:0\",\n      \"same_vehicle\": \"yes\",\n      \"evidence\": \"颜色均为红色，车头朝向一致，位置在通道左侧，跨帧未发生明显位移\"\n    },\n    {\n      \"from\": \"left:1\",\n      \"to\": \"center:1\",\n      \"same_vehicle\": \"yes\",\n      \"evidence\": \"颜色均为红色，厢式结构，位置在通道中间，跨帧未发生明显位移\"\n    },\n    {\n      \"from\": \"left:2\",\n      \"to\": \"center:2\",\n      \"same_vehicle\": \"yes\",\n      \"evidence\": \"颜色均为白色，大型货车，位置在通道右侧，跨帧未发生明显位移\"\n    },\n    {\n      \"from\": \"center:0\",\n      \"to\": \"right:0\",\n      \"same_vehicle\": \"yes\",\n      \"evidence\": \"颜色均为红色，车头朝向一致，位置在通道左侧，跨帧未发生明显位移\"\n    },\n    {\n      \"from\": \"center:1\",\n      \"to\": \"right:1\",\n      \"same_vehicle\": \"yes\",\n      \"evidence\": \"颜色均为红色，厢式结构，位置在通道中间，跨帧未发生明显位移\"\n    },\n    {\n      \"from\": \"center:2\",\n      \"to\": \"right:2\",\n      \"same_vehicle\": \"yes\",\n      \"evidence\": \"颜色均为白色，大型货车，位置在通道右侧，跨帧未发生明显位移\"\n    }\n  ],\n  \"new_or_exited\": [\n    {\n      \"frame\": \"left\",\n      \"vehicle\": \"0,1,2\",\n      \"event\": \"uncertain\",\n      \"evidence\": \"所有车辆均在帧内，无新增或退出迹象\"\n    },\n    {\n      \"frame\": \"center\",\n      \"vehicle\": \"0,1,2\",\n      \"event\": \"uncertain\",\n      \"evidence\": \"所有车辆均在帧内，无新增或退出迹象\"\n    },\n    {\n      \"frame\": \"right\",\n      \"vehicle\": \"0,1,2\",\n      \"event\": \"uncertain\",\n      \"evidence\": \"所有车辆均在帧内，无新增或退出迹象\"\n    }\n  ],\n  \"review_reasons\": []\n}"
+  }
+}

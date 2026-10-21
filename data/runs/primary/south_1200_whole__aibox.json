@@ -1,0 +1,140 @@
+{
+  "observation": "south_1200",
+  "mode": "whole",
+  "images": [
+    "assets\\frames\\south_t1200.jpg"
+  ],
+  "prompt": "你是展会撤换展现场的货车清点专家。只依据这张整帧画面清点所有可见货车。\n\n口径：\n1. 同一辆车的车头、挂车和货厢只算一辆；与相邻车头分离的独立挂车算一辆。\n2. 小汽车、面包车、叉车、手推车、人物、工程机械不计。\n3. 只统计画面内实际可见车辆；远处或遮挡但仍能确定是货车时必须计入；完全看不见不猜。\n4. 按整车轮廓与比例分 large（重卡/半挂/长货厢）、medium（中卡）、small（轻卡/厢车）；不确定写 unknown。\n5. 对远处、边界、遮挡、疑似车头货厢拆分的候选设 uncertain=true。\n\nbbox 使用 0-1 归一化 [x0,y0,x1,y1]，框住整辆可见车辆的联合外接框。\n只输出严格 JSON：\n{\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"visible\":\"full|partial_top|partial_side|trailer_only\",\"is_truck\":true,\"identity_clues\":\"颜色、货厢、车头、文字等证据\",\"evidence\":\"画面位置与理由\",\"uncertain\":false}],\"scene_notes\":\"\",\"uncertain_reasons\":[]}",
+  "run": {
+    "model": "aibox",
+    "model_id": "glm-5.3-flash",
+    "ok": true,
+    "latency_s": 44.784,
+    "request_id": "e0eca0ba174e4ff7882eadbb067a5aff",
+    "usage": {
+      "prompt_tokens": 1925,
+      "total_tokens": 2734,
+      "completion_tokens": 809,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "image_tokens": 1610
+      },
+      "reasoning_tokens": 266
+    },
+    "parsed": {
+      "counts": {
+        "total": 7,
+        "large": 7,
+        "medium": 0,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.49,
+            0.85,
+            0.66,
+            1.0
+          ],
+          "size": "large",
+          "visible": "partial_top",
+          "is_truck": true,
+          "identity_clues": "红色货车货厢顶部，画面底部被裁切",
+          "evidence": "画面底部中央偏右，仅见红色货厢顶面",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.46,
+            0.47,
+            0.57,
+            0.9
+          ],
+          "size": "large",
+          "visible": "full",
+          "is_truck": true,
+          "identity_clues": "白色东风商用车车头+白色长货厢",
+          "evidence": "画面中下部中央通道，整车可见",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.45,
+            0.36,
+            0.53,
+            0.48
+          ],
+          "size": "large",
+          "visible": "full",
+          "is_truck": true,
+          "identity_clues": "红色卡车车头，位于白色货车正后方",
+          "evidence": "中央通道中部，车头清晰",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.45,
+            0.28,
+            0.53,
+            0.43
+          ],
+          "size": "large",
+          "visible": "trailer_only",
+          "is_truck": true,
+          "identity_clues": "灰色长条货厢/挂车顶面",
+          "evidence": "红色车头上方，独立长货厢轮廓",
+          "uncertain": true
+        },
+        {
+          "bbox": [
+            0.42,
+            0.25,
+            0.48,
+            0.36
+          ],
+          "size": "large",
+          "visible": "partial_side",
+          "is_truck": true,
+          "identity_clues": "红色卡车车头",
+          "evidence": "中央通道中上部",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.44,
+            0.18,
+            0.5,
+            0.27
+          ],
+          "size": "large",
+          "visible": "partial_side",
+          "is_truck": true,
+          "identity_clues": "红色卡车车头",
+          "evidence": "通道上部，远处较小",
+          "uncertain": true
+        },
+        {
+          "bbox": [
+            0.44,
+            0.12,
+            0.5,
+            0.2
+          ],
+          "size": "large",
+          "visible": "partial_side",
+          "is_truck": true,
+          "identity_clues": "远处红色/深色货车轮廓",
+          "evidence": "通道尽头附近，距离远但可辨为货车",
+          "uncertain": true
+        }
+      ],
+      "scene_notes": "展馆撤展现场，中央主通道排成一列货车等待装卸，两侧为展位搭建桁架，地面有工人和杂物。",
+      "uncertain_reasons": [
+        "灰色长货厢与相邻红色车头是否属同一辆车难以确认",
+        "远处两辆红色货车距离远、细节不清，按轮廓判定为货车"
+      ]
+    },
+    "raw_text": "{\"counts\":{\"total\":7,\"large\":7,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0.49,0.85,0.66,1.0],\"size\":\"large\",\"visible\":\"partial_top\",\"is_truck\":true,\"identity_clues\":\"红色货车货厢顶部，画面底部被裁切\",\"evidence\":\"画面底部中央偏右，仅见红色货厢顶面\",\"uncertain\":false},{\"bbox\":[0.46,0.47,0.57,0.9],\"size\":\"large\",\"visible\":\"full\",\"is_truck\":true,\"identity_clues\":\"白色东风商用车车头+白色长货厢\",\"evidence\":\"画面中下部中央通道，整车可见\",\"uncertain\":false},{\"bbox\":[0.45,0.36,0.53,0.48],\"size\":\"large\",\"visible\":\"full\",\"is_truck\":true,\"identity_clues\":\"红色卡车车头，位于白色货车正后方\",\"evidence\":\"中央通道中部，车头清晰\",\"uncertain\":false},{\"bbox\":[0.45,0.28,0.53,0.43],\"size\":\"large\",\"visible\":\"trailer_only\",\"is_truck\":true,\"identity_clues\":\"灰色长条货厢/挂车顶面\",\"evidence\":\"红色车头上方，独立长货厢轮廓\",\"uncertain\":true},{\"bbox\":[0.42,0.25,0.48,0.36],\"size\":\"large\",\"visible\":\"partial_side\",\"is_truck\":true,\"identity_clues\":\"红色卡车车头\",\"evidence\":\"中央通道中上部\",\"uncertain\":false},{\"bbox\":[0.44,0.18,0.5,0.27],\"size\":\"large\",\"visible\":\"partial_side\",\"is_truck\":true,\"identity_clues\":\"红色卡车车头\",\"evidence\":\"通道上部，远处较小\",\"uncertain\":true},{\"bbox\":[0.44,0.12,0.5,0.2],\"size\":\"large\",\"visible\":\"partial_side\",\"is_truck\":true,\"identity_clues\":\"远处红色/深色货车轮廓\",\"evidence\":\"通道尽头附近，距离远但可辨为货车\",\"uncertain\":true}],\"scene_notes\":\"展馆撤展现场，中央主通道排成一列货车等待装卸，两侧为展位搭建桁架，地面有工人和杂物。\",\"uncertain_reasons\":[\"灰色长货厢与相邻红色车头是否属同一辆车难以确认\",\"远处两辆红色货车距离远、细节不清，按轮廓判定为货车\"]}"
+  }
+}

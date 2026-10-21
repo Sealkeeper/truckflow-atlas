@@ -1,0 +1,125 @@
+{
+  "observation": "south_1200",
+  "mode": "crop",
+  "images": [
+    "assets\\crops\\south_t1200_lane.jpg"
+  ],
+  "prompt": "这是同一机位的过道区域放大裁剪，四周展台已被裁掉。请只依据图中可见内容清点货车。\n\n重点检查远处小型、被柱子/车辆遮挡、只露出一部分的货车。计数单位必须是物理车辆：\n同一辆车的车头、底盘和货厢只算一辆；两个候选若是同一车的车头与货厢，必须合并。\n独立挂车/货厢算一辆。小汽车、面包车、叉车、手推车、人物不计。车型不确定写 unknown。\nbbox 是相对本裁剪图的 0-1 坐标。只输出严格 JSON，schema 与整帧清点相同：\n{\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"visible\":\"full|partial_top|partial_side|trailer_only\",\"is_truck\":true,\"identity_clues\":\"\",\"evidence\":\"\",\"uncertain\":false}],\"scene_notes\":\"\",\"uncertain_reasons\":[]}",
+  "run": {
+    "model": "aibox",
+    "model_id": "glm-5.3-flash",
+    "ok": true,
+    "latency_s": 24.618,
+    "request_id": "c7dca80b4e174200b6e602631b7186c3",
+    "usage": {
+      "prompt_tokens": 3345,
+      "total_tokens": 4272,
+      "completion_tokens": 927,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "image_tokens": 3105
+      },
+      "reasoning_tokens": 442
+    },
+    "parsed": {
+      "counts": {
+        "total": 6,
+        "large": 5,
+        "medium": 0,
+        "small": 0,
+        "unknown": 1
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.53,
+            0.85,
+            0.85,
+            1.0
+          ],
+          "size": "large",
+          "visible": "partial_top",
+          "is_truck": true,
+          "identity_clues": "红色货车尾部/货厢，仅露出上部",
+          "evidence": "画面底部红色货厢，车头被裁掉",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.51,
+            0.47,
+            0.72,
+            0.9
+          ],
+          "size": "large",
+          "visible": "full",
+          "is_truck": true,
+          "identity_clues": "白色东风商用车牵引车头+白色集装箱货厢",
+          "evidence": "车头与上方白色箱体连为一体，计为一辆车",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.5,
+            0.28,
+            0.63,
+            0.47
+          ],
+          "size": "large",
+          "visible": "full",
+          "is_truck": true,
+          "identity_clues": "红色卡车车头+货厢/集装箱",
+          "evidence": "红色驾驶室及其上方货厢为同一辆车",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.42,
+            0.25,
+            0.51,
+            0.37
+          ],
+          "size": "large",
+          "visible": "full",
+          "is_truck": true,
+          "identity_clues": "红色斯堪尼亚平头卡车，蓝色前挡",
+          "evidence": "车头完整可见，正对镜头",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.49,
+            0.13,
+            0.59,
+            0.26
+          ],
+          "size": "large",
+          "visible": "partial_side",
+          "is_truck": true,
+          "identity_clues": "红色卡车车头，远处",
+          "evidence": "通道尽头红色车头，部分被遮挡",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.42,
+            0.14,
+            0.48,
+            0.19
+          ],
+          "size": "unknown",
+          "visible": "partial_side",
+          "is_truck": true,
+          "identity_clues": "远处小型红色物体，疑似货车车头",
+          "evidence": "距离远、分辨率低，无法确认车型",
+          "uncertain": true
+        }
+      ],
+      "scene_notes": "展馆撤展/布展期，主通道内多辆货车排队装卸，两侧为展台桁架结构，地面散落杂物，有工人穿行。",
+      "uncertain_reasons": [
+        "最远处疑似车辆过小且被遮挡，无法确认是否为货车"
+      ]
+    },
+    "raw_text": "{\"counts\":{\"total\":6,\"large\":5,\"medium\":0,\"small\":0,\"unknown\":1},\"vehicles\":[{\"bbox\":[0.53,0.85,0.85,1.0],\"size\":\"large\",\"visible\":\"partial_top\",\"is_truck\":true,\"identity_clues\":\"红色货车尾部/货厢，仅露出上部\",\"evidence\":\"画面底部红色货厢，车头被裁掉\",\"uncertain\":false},{\"bbox\":[0.51,0.47,0.72,0.9],\"size\":\"large\",\"visible\":\"full\",\"is_truck\":true,\"identity_clues\":\"白色东风商用车牵引车头+白色集装箱货厢\",\"evidence\":\"车头与上方白色箱体连为一体，计为一辆车\",\"uncertain\":false},{\"bbox\":[0.5,0.28,0.63,0.47],\"size\":\"large\",\"visible\":\"full\",\"is_truck\":true,\"identity_clues\":\"红色卡车车头+货厢/集装箱\",\"evidence\":\"红色驾驶室及其上方货厢为同一辆车\",\"uncertain\":false},{\"bbox\":[0.42,0.25,0.51,0.37],\"size\":\"large\",\"visible\":\"full\",\"is_truck\":true,\"identity_clues\":\"红色斯堪尼亚平头卡车，蓝色前挡\",\"evidence\":\"车头完整可见，正对镜头\",\"uncertain\":false},{\"bbox\":[0.49,0.13,0.59,0.26],\"size\":\"large\",\"visible\":\"partial_side\",\"is_truck\":true,\"identity_clues\":\"红色卡车车头，远处\",\"evidence\":\"通道尽头红色车头，部分被遮挡\",\"uncertain\":false},{\"bbox\":[0.42,0.14,0.48,0.19],\"size\":\"unknown\",\"visible\":\"partial_side\",\"is_truck\":true,\"identity_clues\":\"远处小型红色物体，疑似货车车头\",\"evidence\":\"距离远、分辨率低，无法确认车型\",\"uncertain\":true}],\"scene_notes\":\"展馆撤展/布展期，主通道内多辆货车排队装卸，两侧为展台桁架结构，地面散落杂物，有工人穿行。\",\"uncertain_reasons\":[\"最远处疑似车辆过小且被遮挡，无法确认是否为货车\"]}"
+  }
+}

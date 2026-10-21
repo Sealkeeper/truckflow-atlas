@@ -1,0 +1,235 @@
+{
+  "observation": "north_1500",
+  "mode": "strip",
+  "images": [
+    "assets\\strips\\north_1500_strip.jpg"
+  ],
+  "prompt": "这是一条同一机位在 t-10s、t、t+10s 的三个连续证据面板，从左到右排列。\n请分别清点每帧，并利用颜色、货厢、车头、文字、朝向等语义判断车辆是否跨帧为同一物理车。\n禁止用像素跟踪或根据上一帧数量填数；每帧计数必须有该帧可见证据。\n\n输出严格 JSON：\n{\"frames\":[{\"panel\":\"left|center|right\",\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"panel_index\":0,\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"identity_clues\":\"\",\"uncertain\":false}]}],\"links\":[{\"from\":\"left:0\",\"to\":\"center:1\",\"same_vehicle\":\"yes|no|uncertain\",\"evidence\":\"\"}],\"new_or_exited\":[{\"frame\":\"left|center|right\",\"vehicle\":\"panel_index\",\"event\":\"enter|exit|uncertain\",\"evidence\":\"\"}],\"review_reasons\":[]}\nbbox 是单个面板内的 0-1 坐标。",
+  "run": {
+    "model": "aibox",
+    "model_id": "glm-5.3-flash",
+    "ok": true,
+    "latency_s": 25.613,
+    "request_id": "323eadef2751471b9c59c3a027a023ac",
+    "usage": {
+      "prompt_tokens": 1633,
+      "total_tokens": 2738,
+      "completion_tokens": 1105,
+      "prompt_tokens_details": {
+        "cached_tokens": 1600,
+        "image_tokens": 1380
+      },
+      "reasoning_tokens": 137
+    },
+    "parsed": {
+      "frames": [
+        {
+          "panel": "left",
+          "counts": {
+            "total": 3,
+            "large": 3,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.12,
+                0.4,
+                0.18,
+                0.66
+              ],
+              "size": "large",
+              "identity_clues": "红色集装箱货车，货厢为暗红色，位于KONIKA展台左侧通道，车尾朝向画面下方",
+              "uncertain": false
+            },
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.09,
+                0.66,
+                0.17,
+                0.96
+              ],
+              "size": "large",
+              "identity_clues": "白色厢式货车，位于左下角CHANGHONG展台旁，白色货厢带波纹侧板",
+              "uncertain": false
+            },
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.41,
+                0.66,
+                0.5,
+                0.96
+              ],
+              "size": "large",
+              "identity_clues": "白色厢式货车，位于画面中下部通道，白色货厢，车头朝下",
+              "uncertain": false
+            }
+          ]
+        },
+        {
+          "panel": "center",
+          "counts": {
+            "total": 3,
+            "large": 3,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.46,
+                0.4,
+                0.52,
+                0.66
+              ],
+              "size": "large",
+              "identity_clues": "红色集装箱货车，暗红色货厢，位置与左帧红色货车一致（画面整体右移对应相机视角）",
+              "uncertain": false
+            },
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.42,
+                0.66,
+                0.5,
+                0.96
+              ],
+              "size": "large",
+              "identity_clues": "白色厢式货车，左下角CHANGHONG展台旁，与左帧白色货车特征一致",
+              "uncertain": false
+            },
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.74,
+                0.66,
+                0.83,
+                0.96
+              ],
+              "size": "large",
+              "identity_clues": "白色厢式货车，中下部通道，白色货厢，与左帧中部白色货车特征一致",
+              "uncertain": false
+            }
+          ]
+        },
+        {
+          "panel": "right",
+          "counts": {
+            "total": 3,
+            "large": 3,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.79,
+                0.4,
+                0.85,
+                0.66
+              ],
+              "size": "large",
+              "identity_clues": "红色集装箱货车，暗红色货厢，位于KONIKA展台左侧，与前两帧红色货车一致",
+              "uncertain": false
+            },
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.75,
+                0.66,
+                0.83,
+                0.96
+              ],
+              "size": "large",
+              "identity_clues": "白色厢式货车，CHANGHONG展台旁，与前两帧左下白色货车一致",
+              "uncertain": false
+            },
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.41,
+                0.66,
+                0.5,
+                0.96
+              ],
+              "size": "large",
+              "identity_clues": "白色厢式货车，中下部通道，白色货厢，与前两帧中部白色货车一致",
+              "uncertain": false
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "from": "left:0",
+          "to": "center:1",
+          "same_vehicle": "yes",
+          "evidence": "红色集装箱货车，货厢颜色、位置（KONIKA展台左侧）及朝向完全一致，10秒内静止停放"
+        },
+        {
+          "from": "center:1",
+          "to": "right:2",
+          "same_vehicle": "yes",
+          "evidence": "红色集装箱货车位置、颜色、朝向不变，仍停放在原位"
+        },
+        {
+          "from": "left:1",
+          "to": "center:2",
+          "same_vehicle": "yes",
+          "evidence": "白色厢式货车停在CHANGHONG展台旁，货厢形态与位置一致，静止"
+        },
+        {
+          "from": "center:2",
+          "to": "right:3",
+          "same_vehicle": "yes",
+          "evidence": "同一白色货车仍在CHANGHONG展台旁原位停放"
+        },
+        {
+          "from": "left:2",
+          "to": "center:3",
+          "same_vehicle": "yes",
+          "evidence": "中下部白色厢式货车位置与货厢外观一致，静止停放"
+        },
+        {
+          "from": "center:3",
+          "to": "right:4",
+          "same_vehicle": "yes",
+          "evidence": "中下部白色货车位置不变，货厢特征一致"
+        }
+      ],
+      "new_or_exited": [
+        {
+          "frame": "left",
+          "vehicle": 0,
+          "event": "uncertain",
+          "evidence": "三辆车在t-10s已存在于画面中，无法判断更早的进出"
+        },
+        {
+          "frame": "left",
+          "vehicle": 1,
+          "event": "uncertain",
+          "evidence": "同上"
+        },
+        {
+          "frame": "left",
+          "vehicle": 2,
+          "event": "uncertain",
+          "evidence": "同上"
+        }
+      ],
+      "review_reasons": [
+        "三辆车均为静止停放状态，跨帧身份判定置信度高；无车辆进出或移动证据"
+      ]
+    },
+    "raw_text": "{\"frames\":[{\"panel\":\"left\",\"counts\":{\"total\":3,\"large\":3,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"panel_index\":0,\"bbox\":[0.12,0.40,0.18,0.66],\"size\":\"large\",\"identity_clues\":\"红色集装箱货车，货厢为暗红色，位于KONIKA展台左侧通道，车尾朝向画面下方\",\"uncertain\":false},{\"panel_index\":0,\"bbox\":[0.09,0.66,0.17,0.96],\"size\":\"large\",\"identity_clues\":\"白色厢式货车，位于左下角CHANGHONG展台旁，白色货厢带波纹侧板\",\"uncertain\":false},{\"panel_index\":0,\"bbox\":[0.41,0.66,0.50,0.96],\"size\":\"large\",\"identity_clues\":\"白色厢式货车，位于画面中下部通道，白色货厢，车头朝下\",\"uncertain\":false}]},{\"panel\":\"center\",\"counts\":{\"total\":3,\"large\":3,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"panel_index\":1,\"bbox\":[0.46,0.40,0.52,0.66],\"size\":\"large\",\"identity_clues\":\"红色集装箱货车，暗红色货厢，位置与左帧红色货车一致（画面整体右移对应相机视角）\",\"uncertain\":false},{\"panel_index\":1,\"bbox\":[0.42,0.66,0.50,0.96],\"size\":\"large\",\"identity_clues\":\"白色厢式货车，左下角CHANGHONG展台旁，与左帧白色货车特征一致\",\"uncertain\":false},{\"panel_index\":1,\"bbox\":[0.74,0.66,0.83,0.96],\"size\":\"large\",\"identity_clues\":\"白色厢式货车，中下部通道，白色货厢，与左帧中部白色货车特征一致\",\"uncertain\":false}]},{\"panel\":\"right\",\"counts\":{\"total\":3,\"large\":3,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"panel_index\":2,\"bbox\":[0.79,0.40,0.85,0.66],\"size\":\"large\",\"identity_clues\":\"红色集装箱货车，暗红色货厢，位于KONIKA展台左侧，与前两帧红色货车一致\",\"uncertain\":false},{\"panel_index\":2,\"bbox\":[0.75,0.66,0.83,0.96],\"size\":\"large\",\"identity_clues\":\"白色厢式货车，CHANGHONG展台旁，与前两帧左下白色货车一致\",\"uncertain\":false},{\"panel_index\":2,\"bbox\":[0.41,0.66,0.50,0.96],\"size\":\"large\",\"identity_clues\":\"白色厢式货车，中下部通道，白色货厢，与前两帧中部白色货车一致\",\"uncertain\":false}]}],\"links\":[{\"from\":\"left:0\",\"to\":\"center:1\",\"same_vehicle\":\"yes\",\"evidence\":\"红色集装箱货车，货厢颜色、位置（KONIKA展台左侧）及朝向完全一致，10秒内静止停放\"},{\"from\":\"center:1\",\"to\":\"right:2\",\"same_vehicle\":\"yes\",\"evidence\":\"红色集装箱货车位置、颜色、朝向不变，仍停放在原位\"},{\"from\":\"left:1\",\"to\":\"center:2\",\"same_vehicle\":\"yes\",\"evidence\":\"白色厢式货车停在CHANGHONG展台旁，货厢形态与位置一致，静止\"},{\"from\":\"center:2\",\"to\":\"right:3\",\"same_vehicle\":\"yes\",\"evidence\":\"同一白色货车仍在CHANGHONG展台旁原位停放\"},{\"from\":\"left:2\",\"to\":\"center:3\",\"same_vehicle\":\"yes\",\"evidence\":\"中下部白色厢式货车位置与货厢外观一致，静止停放\"},{\"from\":\"center:3\",\"to\":\"right:4\",\"same_vehicle\":\"yes\",\"evidence\":\"中下部白色货车位置不变，货厢特征一致\"}],\"new_or_exited\":[{\"frame\":\"left\",\"vehicle\":0,\"event\":\"uncertain\",\"evidence\":\"三辆车在t-10s已存在于画面中，无法判断更早的进出\"},{\"frame\":\"left\",\"vehicle\":1,\"event\":\"uncertain\",\"evidence\":\"同上\"},{\"frame\":\"left\",\"vehicle\":2,\"event\":\"uncertain\",\"evidence\":\"同上\"}],\"review_reasons\":[\"三辆车均为静止停放状态，跨帧身份判定置信度高；无车辆进出或移动证据\"]}"
+  }
+}

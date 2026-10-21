@@ -1,0 +1,74 @@
+{
+  "job": "south_1200_candidates",
+  "image": "assets\\sheets\\south_1200_candidates.jpg",
+  "prompt": "这是一个机位同一原始帧切出的候选联系表。每格 C1、C2... 是互相重叠的局部窗口，\n不是“一格必定一辆车”，同一格可能包含多辆，同一辆也可能出现在多格。\n\n请建立该帧的物理车辆集合：\n1. 每个物理车辆只列一次，并在 candidates 中列出显示它的所有窗口编号。\n2. 一个窗口可同时归入多个物理车辆；只有同一车头/货厢绝不能拆成两辆。\n3. 排除人物、叉车、轿车、展台、杂物；完全空窗也应 reject。\n4. 只按窗口中实际可见的车顶、货厢、车头、颜色、文字和比例判断，不猜画面外。\n5. 远处、遮挡、窗口边界或与你看到的其它窗口有歧义时 review=true。\n6. 车型按 large（重卡/半挂/长货厢）、medium（中卡）、small（轻卡/厢车）；不能确认写 unknown。\n\n只输出严格 JSON：\n{\"physical_vehicles\":[{\"group\":\"G1\",\"candidates\":[\"C1\",\"C3\"],\"size\":\"large|medium|small|unknown\",\"identity\":\"颜色/货厢/车头/文字等可复核证据\",\"reason\":\"为何这些窗口是同一物理车\",\"review\":false}],\"rejected_candidates\":[{\"candidate\":\"C5\",\"reason\":\"\"}],\"review_reasons\":[]}",
+  "run": {
+    "model": "aibox",
+    "model_id": "glm-5.3-flash",
+    "ok": true,
+    "latency_s": 31.279,
+    "request_id": "86f2b92c84ef4f16bd4b9281ed80a600",
+    "usage": {
+      "prompt_tokens": 2589,
+      "total_tokens": 3350,
+      "completion_tokens": 761,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "image_tokens": 2279
+      },
+      "reasoning_tokens": 411
+    },
+    "parsed": {
+      "physical_vehicles": [
+        {
+          "group": "G1",
+          "candidates": [
+            "S1",
+            "S2",
+            "S4",
+            "S5",
+            "S6"
+          ],
+          "size": "large",
+          "identity": "红色重卡车头，驾驶室前有穿橙色工作服人员围绕，S5/S6 可见红色车头与货厢",
+          "reason": "S2/S4/S5/S6 均显示同一辆红色卡车车头及周围橙衣人员，S1 远景小图位置对应同一辆车，属同一物理车",
+          "review": true
+        },
+        {
+          "group": "G2",
+          "candidates": [
+            "S5",
+            "S6",
+            "S7"
+          ],
+          "size": "large",
+          "identity": "白色厢式货车，白色货厢带文字，S7 俯视可见完整白色长货厢和车头",
+          "reason": "S5/S6 中红色卡车旁的白色厢车与 S7 俯视白色货厢车为同一辆，位置连续",
+          "review": false
+        },
+        {
+          "group": "G3",
+          "candidates": [
+            "S8",
+            "S9"
+          ],
+          "size": "large",
+          "identity": "红色货厢/集装箱卡车，S9 俯视红色货厢顶，S8 广角右侧可见同一红色货厢",
+          "reason": "S9 的红色货厢与 S8 广角右侧红色货厢位置对应，为同一辆红色厢式货车",
+          "review": true
+        }
+      ],
+      "rejected_candidates": [
+        {
+          "candidate": "S3",
+          "reason": "画面模糊，仅见人群和杂物，无可辨识车辆"
+        }
+      ],
+      "review_reasons": [
+        "S1 为远景 GEO 小窗，车辆很小，与 G1 红色卡车的对应需人工复核",
+        "S8 广角窗中红色货厢与 S9 的对应关系受窗口边界和比例影响，需复核"
+      ]
+    },
+    "raw_text": "{\"physical_vehicles\":[{\"group\":\"G1\",\"candidates\":[\"S1\",\"S2\",\"S4\",\"S5\",\"S6\"],\"size\":\"large\",\"identity\":\"红色重卡车头，驾驶室前有穿橙色工作服人员围绕，S5/S6 可见红色车头与货厢\",\"reason\":\"S2/S4/S5/S6 均显示同一辆红色卡车车头及周围橙衣人员，S1 远景小图位置对应同一辆车，属同一物理车\",\"review\":true},{\"group\":\"G2\",\"candidates\":[\"S5\",\"S6\",\"S7\"],\"size\":\"large\",\"identity\":\"白色厢式货车，白色货厢带文字，S7 俯视可见完整白色长货厢和车头\",\"reason\":\"S5/S6 中红色卡车旁的白色厢车与 S7 俯视白色货厢车为同一辆，位置连续\",\"review\":false},{\"group\":\"G3\",\"candidates\":[\"S8\",\"S9\"],\"size\":\"large\",\"identity\":\"红色货厢/集装箱卡车，S9 俯视红色货厢顶，S8 广角右侧可见同一红色货厢\",\"reason\":\"S9 的红色货厢与 S8 广角右侧红色货厢位置对应，为同一辆红色厢式货车\",\"review\":true}],\"rejected_candidates\":[{\"candidate\":\"S3\",\"reason\":\"画面模糊，仅见人群和杂物，无可辨识车辆\"}],\"review_reasons\":[\"S1 为远景 GEO 小窗，车辆很小，与 G1 红色卡车的对应需人工复核\",\"S8 广角窗中红色货厢与 S9 的对应关系受窗口边界和比例影响，需复核\"]}"
+  }
+}

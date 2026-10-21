@@ -1,0 +1,84 @@
+{
+  "observation": "north_1200",
+  "mode": "whole",
+  "images": [
+    "assets\\frames\\north_t1200.jpg"
+  ],
+  "prompt": "你是展会撤换展现场的货车清点专家。只依据这张整帧画面清点所有可见货车。\n\n口径：\n1. 同一辆车的车头、挂车和货厢只算一辆；与相邻车头分离的独立挂车算一辆。\n2. 小汽车、面包车、叉车、手推车、人物、工程机械不计。\n3. 只统计画面内实际可见车辆；远处或遮挡但仍能确定是货车时必须计入；完全看不见不猜。\n4. 按整车轮廓与比例分 large（重卡/半挂/长货厢）、medium（中卡）、small（轻卡/厢车）；不确定写 unknown。\n5. 对远处、边界、遮挡、疑似车头货厢拆分的候选设 uncertain=true。\n\nbbox 使用 0-1 归一化 [x0,y0,x1,y1]，框住整辆可见车辆的联合外接框。\n只输出严格 JSON：\n{\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"visible\":\"full|partial_top|partial_side|trailer_only\",\"is_truck\":true,\"identity_clues\":\"颜色、货厢、车头、文字等证据\",\"evidence\":\"画面位置与理由\",\"uncertain\":false}],\"scene_notes\":\"\",\"uncertain_reasons\":[]}",
+  "run": {
+    "model": "doubao",
+    "model_id": "ep-20260828174616-dthpx",
+    "ok": true,
+    "latency_s": 17.231,
+    "request_id": "0217925734263588d04290f080f41f1dcb9c4b0d68f093030c069",
+    "usage": {
+      "completion_tokens": 1641,
+      "prompt_tokens": 1623,
+      "total_tokens": 3264,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1328
+      }
+    },
+    "parsed": {
+      "counts": {
+        "total": 3,
+        "large": 2,
+        "medium": 0,
+        "small": 0,
+        "unknown": 1
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.405,
+            0.35,
+            0.493,
+            0.627
+          ],
+          "size": "large",
+          "visible": "partial_side",
+          "is_truck": true,
+          "identity_clues": "红色高栏货厢",
+          "evidence": "画面中间通道左侧，可见红色高栏货厢，属于货车",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.342,
+            0.607,
+            0.487,
+            0.998
+          ],
+          "size": "large",
+          "visible": "partial",
+          "is_truck": true,
+          "identity_clues": "白色厢式货厢",
+          "evidence": "画面中间通道左侧，红色货车前方，可见白色厢式货厢，属于货车",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.447,
+            0.152,
+            0.502,
+            0.319
+          ],
+          "size": "unknown",
+          "visible": "partial_top",
+          "is_truck": true,
+          "identity_clues": "蓝色货厢",
+          "evidence": "画面上方通道尽头，可见蓝色货厢，距离较远，无法确认是否为完整货车",
+          "uncertain": true
+        }
+      ],
+      "scene_notes": "展会撤换展现场，共统计到3辆货车，其中1辆位于画面上方远处存在不确定性",
+      "uncertain_reasons": [
+        "画面上方远处的蓝色货车距离较远，仅可见部分货厢，无法确认是否为完整货车"
+      ]
+    },
+    "raw_text": "{\"counts\":{\"total\":3,\"large\":2,\"medium\":0,\"small\":0,\"unknown\":1},\"vehicles\":[{\"bbox\":[0.405,0.35,0.493,0.627],\"size\":\"large\",\"visible\":\"partial_side\",\"is_truck\":true,\"identity_clues\":\"红色高栏货厢\",\"evidence\":\"画面中间通道左侧，可见红色高栏货厢，属于货车\",\"uncertain\":false},{\"bbox\":[0.342,0.607,0.487,0.998],\"size\":\"large\",\"visible\":\"partial\",\"is_truck\":true,\"identity_clues\":\"白色厢式货厢\",\"evidence\":\"画面中间通道左侧，红色货车前方，可见白色厢式货厢，属于货车\",\"uncertain\":false},{\"bbox\":[0.447,0.152,0.502,0.319],\"size\":\"unknown\",\"visible\":\"partial_top\",\"is_truck\":true,\"identity_clues\":\"蓝色货厢\",\"evidence\":\"画面上方通道尽头，可见蓝色货厢，距离较远，无法确认是否为完整货车\",\"uncertain\":true}],\"scene_notes\":\"展会撤换展现场，共统计到3辆货车，其中1辆位于画面上方远处存在不确定性\",\"uncertain_reasons\":[\"画面上方远处的蓝色货车距离较远，仅可见部分货厢，无法确认是否为完整货车\"]}"
+  }
+}

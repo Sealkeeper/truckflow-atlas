@@ -1,0 +1,96 @@
+{
+  "observation": "south_600",
+  "mode": "crop",
+  "images": [
+    "assets\\crops\\south_t600_lane.jpg"
+  ],
+  "prompt": "这是同一机位的过道区域放大裁剪，四周展台已被裁掉。请只依据图中可见内容清点货车。\n\n重点检查远处小型、被柱子/车辆遮挡、只露出一部分的货车。计数单位必须是物理车辆：\n同一辆车的车头、底盘和货厢只算一辆；两个候选若是同一车的车头与货厢，必须合并。\n独立挂车/货厢算一辆。小汽车、面包车、叉车、手推车、人物不计。车型不确定写 unknown。\nbbox 是相对本裁剪图的 0-1 坐标。只输出严格 JSON，schema 与整帧清点相同：\n{\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"visible\":\"full|partial_top|partial_side|trailer_only\",\"is_truck\":true,\"identity_clues\":\"\",\"evidence\":\"\",\"uncertain\":false}],\"scene_notes\":\"\",\"uncertain_reasons\":[]}",
+  "run": {
+    "model": "doubao",
+    "model_id": "ep-20260828174616-dthpx",
+    "ok": true,
+    "latency_s": 16.139,
+    "request_id": "0217925736783148068cba8c70f5aabb039eacbfc6c69b0abb763",
+    "usage": {
+      "completion_tokens": 1852,
+      "prompt_tokens": 1545,
+      "total_tokens": 3397,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1502
+      }
+    },
+    "parsed": {
+      "counts": {
+        "total": 4,
+        "large": 2,
+        "medium": 2,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.515,
+            0.458,
+            0.695,
+            0.885
+          ],
+          "size": "large",
+          "visible": "full",
+          "is_truck": true,
+          "identity_clues": "东风商用车",
+          "evidence": "白色货车，车头印有'东风商用车'字样，完整可见",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.496,
+            0.288,
+            0.62,
+            0.525
+          ],
+          "size": "large",
+          "visible": "partial_top",
+          "is_truck": true,
+          "identity_clues": "红色车头，灰色货厢",
+          "evidence": "位于白色货车后方，车头和货厢完整，仅下部被白色货车遮挡",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.413,
+            0.243,
+            0.498,
+            0.36
+          ],
+          "size": "medium",
+          "visible": "partial_front",
+          "is_truck": true,
+          "identity_clues": "红色车头，顶部有蓝色覆盖物",
+          "evidence": "位于第二辆红色货车后方，仅车头可见",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.493,
+            0.128,
+            0.57,
+            0.265
+          ],
+          "size": "medium",
+          "visible": "partial_front",
+          "is_truck": true,
+          "identity_clues": "红色车头",
+          "evidence": "位于第三辆红色货车后方，远处，仅车头可见",
+          "uncertain": false
+        }
+      ],
+      "scene_notes": "过道区域内共4辆货车，无小型或严重遮挡的未知类型货车",
+      "uncertain_reasons": []
+    },
+    "raw_text": "{\"counts\":{\"total\":4,\"large\":2,\"medium\":2,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0.515,0.458,0.695,0.885],\"size\":\"large\",\"visible\":\"full\",\"is_truck\":true,\"identity_clues\":\"东风商用车\",\"evidence\":\"白色货车，车头印有'东风商用车'字样，完整可见\",\"uncertain\":false},{\"bbox\":[0.496,0.288,0.620,0.525],\"size\":\"large\",\"visible\":\"partial_top\",\"is_truck\":true,\"identity_clues\":\"红色车头，灰色货厢\",\"evidence\":\"位于白色货车后方，车头和货厢完整，仅下部被白色货车遮挡\",\"uncertain\":false},{\"bbox\":[0.413,0.243,0.498,0.360],\"size\":\"medium\",\"visible\":\"partial_front\",\"is_truck\":true,\"identity_clues\":\"红色车头，顶部有蓝色覆盖物\",\"evidence\":\"位于第二辆红色货车后方，仅车头可见\",\"uncertain\":false},{\"bbox\":[0.493,0.128,0.570,0.265],\"size\":\"medium\",\"visible\":\"partial_front\",\"is_truck\":true,\"identity_clues\":\"红色车头\",\"evidence\":\"位于第三辆红色货车后方，远处，仅车头可见\",\"uncertain\":false}],\"scene_notes\":\"过道区域内共4辆货车，无小型或严重遮挡的未知类型货车\",\"uncertain_reasons\":[]}"
+  }
+}

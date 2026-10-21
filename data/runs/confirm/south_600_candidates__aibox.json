@@ -1,0 +1,77 @@
+{
+  "job": "south_600_candidates",
+  "image": "assets\\sheets\\south_600_candidates.jpg",
+  "prompt": "这是一个机位同一原始帧切出的候选联系表。每格 C1、C2... 是互相重叠的局部窗口，\n不是“一格必定一辆车”，同一格可能包含多辆，同一辆也可能出现在多格。\n\n请建立该帧的物理车辆集合：\n1. 每个物理车辆只列一次，并在 candidates 中列出显示它的所有窗口编号。\n2. 一个窗口可同时归入多个物理车辆；只有同一车头/货厢绝不能拆成两辆。\n3. 排除人物、叉车、轿车、展台、杂物；完全空窗也应 reject。\n4. 只按窗口中实际可见的车顶、货厢、车头、颜色、文字和比例判断，不猜画面外。\n5. 远处、遮挡、窗口边界或与你看到的其它窗口有歧义时 review=true。\n6. 车型按 large（重卡/半挂/长货厢）、medium（中卡）、small（轻卡/厢车）；不能确认写 unknown。\n\n只输出严格 JSON：\n{\"physical_vehicles\":[{\"group\":\"G1\",\"candidates\":[\"C1\",\"C3\"],\"size\":\"large|medium|small|unknown\",\"identity\":\"颜色/货厢/车头/文字等可复核证据\",\"reason\":\"为何这些窗口是同一物理车\",\"review\":false}],\"rejected_candidates\":[{\"candidate\":\"C5\",\"reason\":\"\"}],\"review_reasons\":[]}",
+  "run": {
+    "model": "aibox",
+    "model_id": "glm-5.3-flash",
+    "ok": true,
+    "latency_s": 37.849,
+    "request_id": "20b2f07534944481a529837f52400677",
+    "usage": {
+      "prompt_tokens": 2589,
+      "total_tokens": 3244,
+      "completion_tokens": 655,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "image_tokens": 2279
+      },
+      "reasoning_tokens": 308
+    },
+    "parsed": {
+      "physical_vehicles": [
+        {
+          "group": "G1",
+          "candidates": [
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6"
+          ],
+          "size": "large",
+          "identity": "红色重卡车头，深棕色/锈色货厢顶（S2/S5 可见），S5 车头带 TIE 字样",
+          "reason": "S2 为其货厢顶特写，S3/S4/S6 显示同一红色车头与货厢，S5 为同车头近景，位置连续重叠",
+          "review": false
+        },
+        {
+          "group": "G2",
+          "candidates": [
+            "S4",
+            "S6",
+            "S7"
+          ],
+          "size": "large",
+          "identity": "白色长货厢半挂/厢式货车，S7 可见白色车头及货厢文字",
+          "reason": "S4/S6 中红色卡车下方紧邻的白色货厢与 S7 的白色整车为同一车辆，窗口重叠",
+          "review": false
+        },
+        {
+          "group": "G3",
+          "candidates": [
+            "S1"
+          ],
+          "size": "unknown",
+          "identity": "S1 时间戳下方隐约可见红色车辆顶部",
+          "reason": "疑似 G1 红色卡车顶部，但窗口极小且被时间戳遮挡，无法确证",
+          "review": true
+        }
+      ],
+      "rejected_candidates": [
+        {
+          "candidate": "S8",
+          "reason": "GEO 窗口仅见地面、展台与人员，无车辆"
+        },
+        {
+          "candidate": "S9",
+          "reason": "远处白色车辆过小且模糊，无法与 G2 区分确证，按空窗/不可辨处理"
+        }
+      ],
+      "review_reasons": [
+        "S1 中疑似车辆被时间戳遮挡，需人工复核是否为 G1",
+        "S9 远处白色车辆可能是 G2 的另一视角，需复核"
+      ]
+    },
+    "raw_text": "{\"physical_vehicles\":[{\"group\":\"G1\",\"candidates\":[\"S2\",\"S3\",\"S4\",\"S5\",\"S6\"],\"size\":\"large\",\"identity\":\"红色重卡车头，深棕色/锈色货厢顶（S2/S5 可见），S5 车头带 TIE 字样\",\"reason\":\"S2 为其货厢顶特写，S3/S4/S6 显示同一红色车头与货厢，S5 为同车头近景，位置连续重叠\",\"review\":false},{\"group\":\"G2\",\"candidates\":[\"S4\",\"S6\",\"S7\"],\"size\":\"large\",\"identity\":\"白色长货厢半挂/厢式货车，S7 可见白色车头及货厢文字\",\"reason\":\"S4/S6 中红色卡车下方紧邻的白色货厢与 S7 的白色整车为同一车辆，窗口重叠\",\"review\":false},{\"group\":\"G3\",\"candidates\":[\"S1\"],\"size\":\"unknown\",\"identity\":\"S1 时间戳下方隐约可见红色车辆顶部\",\"reason\":\"疑似 G1 红色卡车顶部，但窗口极小且被时间戳遮挡，无法确证\",\"review\":true}],\"rejected_candidates\":[{\"candidate\":\"S8\",\"reason\":\"GEO 窗口仅见地面、展台与人员，无车辆\"},{\"candidate\":\"S9\",\"reason\":\"远处白色车辆过小且模糊，无法与 G2 区分确证，按空窗/不可辨处理\"}],\"review_reasons\":[\"S1 中疑似车辆被时间戳遮挡，需人工复核是否为 G1\",\"S9 远处白色车辆可能是 G2 的另一视角，需复核\"]}"
+  }
+}

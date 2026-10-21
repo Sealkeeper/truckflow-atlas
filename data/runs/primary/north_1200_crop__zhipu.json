@@ -1,0 +1,98 @@
+{
+  "observation": "north_1200",
+  "mode": "crop",
+  "images": [
+    "assets\\crops\\north_t1200_lane.jpg"
+  ],
+  "prompt": "这是同一机位的过道区域放大裁剪，四周展台已被裁掉。请只依据图中可见内容清点货车。\n\n重点检查远处小型、被柱子/车辆遮挡、只露出一部分的货车。计数单位必须是物理车辆：\n同一辆车的车头、底盘和货厢只算一辆；两个候选若是同一车的车头与货厢，必须合并。\n独立挂车/货厢算一辆。小汽车、面包车、叉车、手推车、人物不计。车型不确定写 unknown。\nbbox 是相对本裁剪图的 0-1 坐标。只输出严格 JSON，schema 与整帧清点相同：\n{\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"visible\":\"full|partial_top|partial_side|trailer_only\",\"is_truck\":true,\"identity_clues\":\"\",\"evidence\":\"\",\"uncertain\":false}],\"scene_notes\":\"\",\"uncertain_reasons\":[]}",
+  "run": {
+    "model": "zhipu",
+    "model_id": "glm-4.5v",
+    "ok": true,
+    "latency_s": 100.551,
+    "request_id": "2026102117041889158e3ae6534cff",
+    "usage": {
+      "completion_tokens": 3241,
+      "completion_tokens_details": {
+        "reasoning_tokens": 2757
+      },
+      "prompt_tokens": 3225,
+      "prompt_tokens_details": {
+        "cached_tokens": 3
+      },
+      "total_tokens": 6466
+    },
+    "parsed": {
+      "counts": {
+        "total": 4,
+        "large": 3,
+        "medium": 0,
+        "small": 1,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.408,
+            0.368,
+            0.569,
+            0.618
+          ],
+          "size": "large",
+          "visible": "partial_side",
+          "is_truck": true,
+          "identity_clues": "红色集装箱，箱体印有BSSU字样及黄色反光标识",
+          "evidence": "位于画面中央的标准40尺集装箱半挂车，车体完整可见，处于静止状态",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.274,
+            0.616,
+            0.568,
+            1.0
+          ],
+          "size": "large",
+          "visible": "partial_top",
+          "is_truck": true,
+          "identity_clues": "白色波纹金属顶厢式货车",
+          "evidence": "位于红色货车前方(画面下方)，仅露出完整车顶及部分侧壁，典型厢式货车轮廓",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.497,
+            0.158,
+            0.585,
+            0.298
+          ],
+          "size": "large",
+          "visible": "trailer_only",
+          "is_truck": true,
+          "identity_clues": "蓝色/深灰色集装箱或货厢",
+          "evidence": "位于红色货车后方(画面上方)，呈规则矩形，尺寸与标准集装箱一致，疑似独立挂车或货车货厢",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.521,
+            0.132,
+            0.573,
+            0.182
+          ],
+          "size": "small",
+          "visible": "partial_top",
+          "is_truck": true,
+          "identity_clues": "深色小型货车/面包车",
+          "evidence": "位于画面最顶端背景处，人群后方，体积明显小于前三者，因距离过远且分辨率低，车型细节模糊",
+          "uncertain": true
+        }
+      ],
+      "scene_notes": "室内展览馆布展现场，通道两侧为在建展台(CUORI、OLAMO等品牌标识)，地面散落包装材料。多辆货车沿通道纵向停放，呈一列纵队分布。",
+      "uncertain_reasons": [
+        "最远处小型车辆(第4辆)因距离过远、像素模糊，无法100%确认为货车，也可能是小型工程车或面包车，但形态符合小型货车特征。"
+      ]
+    },
+    "raw_text": "```json\n{\"counts\":{\"total\":4,\"large\":3,\"medium\":0,\"small\":1,\"unknown\":0},\"vehicles\":[{\"bbox\":[0.408,0.368,0.569,0.618],\"size\":\"large\",\"visible\":\"partial_side\",\"is_truck\":true,\"identity_clues\":\"红色集装箱，箱体印有BSSU字样及黄色反光标识\",\"evidence\":\"位于画面中央的标准40尺集装箱半挂车，车体完整可见，处于静止状态\",\"uncertain\":false},{\"bbox\":[0.274,0.616,0.568,1.000],\"size\":\"large\",\"visible\":\"partial_top\",\"is_truck\":true,\"identity_clues\":\"白色波纹金属顶厢式货车\",\"evidence\":\"位于红色货车前方(画面下方)，仅露出完整车顶及部分侧壁，典型厢式货车轮廓\",\"uncertain\":false},{\"bbox\":[0.497,0.158,0.585,0.298],\"size\":\"large\",\"visible\":\"trailer_only\",\"is_truck\":true,\"identity_clues\":\"蓝色/深灰色集装箱或货厢\",\"evidence\":\"位于红色货车后方(画面上方)，呈规则矩形，尺寸与标准集装箱一致，疑似独立挂车或货车货厢\",\"uncertain\":false},{\"bbox\":[0.521,0.132,0.573,0.182],\"size\":\"small\",\"visible\":\"partial_top\",\"is_truck\":true,\"identity_clues\":\"深色小型货车/面包车\",\"evidence\":\"位于画面最顶端背景处，人群后方，体积明显小于前三者，因距离过远且分辨率低，车型细节模糊\",\"uncertain\":true}],\"scene_notes\":\"室内展览馆布展现场，通道两侧为在建展台(CUORI、OLAMO等品牌标识)，地面散落包装材料。多辆货车沿通道纵向停放，呈一列纵队分布。\",\"uncertain_reasons\":[\"最远处小型车辆(第4辆)因距离过远、像素模糊，无法100%确认为货车，也可能是小型工程车或面包车，但形态符合小型货车特征。\"]}\n```"
+  }
+}

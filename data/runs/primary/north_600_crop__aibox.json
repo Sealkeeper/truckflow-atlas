@@ -1,0 +1,97 @@
+{
+  "observation": "north_600",
+  "mode": "crop",
+  "images": [
+    "assets\\crops\\north_t600_lane.jpg"
+  ],
+  "prompt": "这是同一机位的过道区域放大裁剪，四周展台已被裁掉。请只依据图中可见内容清点货车。\n\n重点检查远处小型、被柱子/车辆遮挡、只露出一部分的货车。计数单位必须是物理车辆：\n同一辆车的车头、底盘和货厢只算一辆；两个候选若是同一车的车头与货厢，必须合并。\n独立挂车/货厢算一辆。小汽车、面包车、叉车、手推车、人物不计。车型不确定写 unknown。\nbbox 是相对本裁剪图的 0-1 坐标。只输出严格 JSON，schema 与整帧清点相同：\n{\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"visible\":\"full|partial_top|partial_side|trailer_only\",\"is_truck\":true,\"identity_clues\":\"\",\"evidence\":\"\",\"uncertain\":false}],\"scene_notes\":\"\",\"uncertain_reasons\":[]}",
+  "run": {
+    "model": "aibox",
+    "model_id": "glm-5.3-flash",
+    "ok": true,
+    "latency_s": 19.08,
+    "request_id": "0ae3042cd224417aa5d7958f90cc2edc",
+    "usage": {
+      "prompt_tokens": 3345,
+      "total_tokens": 3721,
+      "completion_tokens": 376,
+      "prompt_tokens_details": {
+        "cached_tokens": 3328,
+        "image_tokens": 3105
+      },
+      "reasoning_tokens": 1
+    },
+    "parsed": {
+      "counts": {
+        "total": 4,
+        "large": 2,
+        "medium": 1,
+        "small": 1,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.55,
+            0.32,
+            0.72,
+            0.6
+          ],
+          "size": "large",
+          "visible": "full",
+          "is_truck": true,
+          "identity_clues": "红色货厢卡车，尾灯亮起，车牌区域可见",
+          "evidence": "完整可见红色厢式货车，位于过道中央",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.28,
+            0.62,
+            0.58,
+            1.0
+          ],
+          "size": "large",
+          "visible": "partial_side",
+          "is_truck": true,
+          "identity_clues": "白色厢式货车/集装箱车厢，顶部波纹结构",
+          "evidence": "画面下方白色长厢体，车头被裁掉，仅见货厢部分",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.46,
+            0.16,
+            0.58,
+            0.28
+          ],
+          "size": "medium",
+          "visible": "partial_top",
+          "is_truck": true,
+          "identity_clues": "蓝色顶棚货厢，侧面有编号文字",
+          "evidence": "远处蓝色顶货厢，车头被遮挡",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.46,
+            0.27,
+            0.57,
+            0.36
+          ],
+          "size": "small",
+          "visible": "partial_top",
+          "is_truck": true,
+          "identity_clues": "蓝色顶棚小型货厢/挂车",
+          "evidence": "中景蓝色顶货厢，仅见顶部，与下方货厢可能相连但按独立厢体计",
+          "uncertain": true
+        }
+      ],
+      "scene_notes": "展馆撤展/布展场景，过道内有叉车（不计）、多名工人和散落杂物",
+      "uncertain_reasons": [
+        "中景两个蓝色顶货厢可能是同一辆车的多节厢体或独立挂车，无法完全确认"
+      ]
+    },
+    "raw_text": "{\"counts\":{\"total\":4,\"large\":2,\"medium\":1,\"small\":1,\"unknown\":0},\"vehicles\":[{\"bbox\":[0.55,0.32,0.72,0.6],\"size\":\"large\",\"visible\":\"full\",\"is_truck\":true,\"identity_clues\":\"红色货厢卡车，尾灯亮起，车牌区域可见\",\"evidence\":\"完整可见红色厢式货车，位于过道中央\",\"uncertain\":false},{\"bbox\":[0.28,0.62,0.58,1.0],\"size\":\"large\",\"visible\":\"partial_side\",\"is_truck\":true,\"identity_clues\":\"白色厢式货车/集装箱车厢，顶部波纹结构\",\"evidence\":\"画面下方白色长厢体，车头被裁掉，仅见货厢部分\",\"uncertain\":false},{\"bbox\":[0.46,0.16,0.58,0.28],\"size\":\"medium\",\"visible\":\"partial_top\",\"is_truck\":true,\"identity_clues\":\"蓝色顶棚货厢，侧面有编号文字\",\"evidence\":\"远处蓝色顶货厢，车头被遮挡\",\"uncertain\":false},{\"bbox\":[0.46,0.27,0.57,0.36],\"size\":\"small\",\"visible\":\"partial_top\",\"is_truck\":true,\"identity_clues\":\"蓝色顶棚小型货厢/挂车\",\"evidence\":\"中景蓝色顶货厢，仅见顶部，与下方货厢可能相连但按独立厢体计\",\"uncertain\":true}],\"scene_notes\":\"展馆撤展/布展场景，过道内有叉车（不计）、多名工人和散落杂物\",\"uncertain_reasons\":[\"中景两个蓝色顶货厢可能是同一辆车的多节厢体或独立挂车，无法完全确认\"]}"
+  }
+}
