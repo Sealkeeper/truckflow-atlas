@@ -122,7 +122,7 @@ function updateCamera(camera) {
   card.querySelector("[data-timecode]").textContent = formatTime(seconds);
   card.querySelector("[data-camera-label]").textContent = `${cameraName} · ${currentView === "original" ? "原始画面" : "分析画面"}`;
   reviewLabel.classList.toggle("is-review", review);
-  reviewLabel.querySelector("span:last-child").textContent = review ? "通道边界待复核" : "人工计数已记录";
+  reviewLabel.querySelector("span:last-child").textContent = review ? "通道边界待复核" : "AI 初标已记录（待终审）";
 }
 
 function render(seconds, shouldToast = false) {

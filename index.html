@@ -146,6 +146,10 @@
             <span class="lock-line"></span>
             最近采样 <strong id="sampleLockText">00:10:00</strong>
           </span>
+          <button class="review-entry-btn" id="openReviewBtn" type="button">
+            <svg aria-hidden="true"><use href="#i-review"></use></svg>
+            复核画面
+          </button>
           <div class="segmented" role="group" aria-label="画面显示模式">
             <button class="segmented-btn is-active" type="button" data-view-mode="original" aria-pressed="true">原画面</button>
             <button class="segmented-btn" type="button" data-view-mode="analysis" aria-pressed="false">分析画面</button>
@@ -438,7 +442,7 @@
           <div><dt>距最近样本</dt><dd id="auditDelta">0 秒</dd></div>
           <div><dt>机位内计数</dt><dd id="auditCameraCounts">北 4 · 南 5</dd></div>
           <div><dt>数据状态</dt><dd><span class="tag tag--demo">开发集样帧</span></dd></div>
-          <div><dt>跨机位唯一数</dt><dd class="value-pending">待复核</dd></div>
+          <div><dt>跨机位唯一数</dt><dd class="value-pending" id="auditUniqueTotal">待复核</dd></div>
         </dl>
         <div class="audit-callout">
           <span class="audit-callout-icon">!</span>
@@ -446,7 +450,7 @@
         </div>
         <button class="btn btn--outline btn--full" id="openSampleReviewBtn" type="button">
           <svg aria-hidden="true"><use href="#i-review"></use></svg>
-          打开本帧复核队列
+          复核本帧 · 南北去重
         </button>
       </article>
     </section>
@@ -761,7 +765,7 @@
       <dl class="info-list">
         <div>
           <dt>计数来源</dt>
-          <dd>2025-10-19 21:59–22:43，A区天花北/南样帧，经全分辨率人工检查与 2× 通道裁剪复核。</dd>
+          <dd>2025-10-19 21:59–22:43，A区天花北/南视频抽帧，由 AI 中枢做单标注者目视初标；不是人工金标准，也未逐车确认。</dd>
         </div>
         <div>
           <dt>统计口径</dt>
@@ -781,8 +785,8 @@
         </div>
       </dl>
       <div class="info-review">
-        <span>仍需人工复核</span>
-        <p>南机位多帧底部红色货厢可能属于相邻通道；南 00:05 远处棕色货体是否为独立挂车也待确认。</p>
+        <span>等待你的终审</span>
+        <p>南机位多帧底部红色货厢可能属于相邻通道；南 00:05 远处棕色货体是否为独立挂车也待确认。复核画面会保留连续帧与视频证据。</p>
       </div>
     </div>
     <div class="modal-actions">
@@ -791,9 +795,176 @@
     </div>
   </dialog>
 
+  <dialog class="modal review-modal" id="reviewDialog" aria-labelledby="reviewTitle">
+    <form id="reviewForm" novalidate>
+      <div class="modal-head review-modal-head">
+        <div class="review-title-block">
+          <p class="section-kicker">HUMAN-IN-THE-LOOP</p>
+          <h2 id="reviewTitle">人工复核证据帧</h2>
+          <div class="review-time-line">
+            <span>视频时间 <strong id="reviewVideoTime">00:10:00</strong></span>
+            <span class="review-sample-meta" id="reviewSampleMeta">第 11 / 20 个采样时刻</span>
+            <span class="review-step">
+              <button class="review-step-btn" id="reviewPrevBtn" type="button" aria-label="上一个采样时刻">← 上一时刻</button>
+              <button class="review-step-btn" id="reviewNextBtn" type="button" aria-label="下一个采样时刻">下一时刻 →</button>
+            </span>
+          </div>
+        </div>
+        <div class="review-head-side">
+          <span class="review-draft-state" id="reviewDraftState">已暂存，待处理，共 0 次记录</span>
+          <button class="icon-button" type="button" data-close-review aria-label="关闭复核画面">
+            <svg aria-hidden="true"><use href="#i-close"></use></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-body review-modal-body">
+        <div class="review-evidence-grid">
+          <article class="review-evidence-card" data-review-camera="south">
+            <div class="review-evidence-head">
+              <div>
+                <strong>南机位</strong>
+                <span class="review-camera-code">CAM-S</span>
+              </div>
+              <button class="review-evidence-link" type="button" data-review-original="south">
+                查看原图 <span aria-hidden="true">↗</span>
+              </button>
+            </div>
+            <button class="review-evidence-stage" type="button" data-review-original="south" aria-label="放大南机位原图并查看连续证据">
+              <img id="reviewSouthCrop" src="review/crops/south_600.jpg" alt="南机位固定通道裁剪图" width="450" height="930">
+            </button>
+            <p class="review-evidence-caption">
+              <span id="reviewSouthCaption">南机位 · AI 初标 5 辆（待终审）</span>
+              <span>固定通道截图，原图可放大</span>
+            </p>
+          </article>
+
+          <article class="review-evidence-card" data-review-camera="north">
+            <div class="review-evidence-head">
+              <div>
+                <strong>北机位</strong>
+                <span class="review-camera-code">CAM-N</span>
+              </div>
+              <button class="review-evidence-link" type="button" data-review-original="north">
+                查看原图 <span aria-hidden="true">↗</span>
+              </button>
+            </div>
+            <button class="review-evidence-stage" type="button" data-review-original="north" aria-label="放大北机位原图并查看连续证据">
+              <img id="reviewNorthCrop" src="review/crops/north_600.jpg" alt="北机位固定通道裁剪图" width="470" height="930">
+            </button>
+            <p class="review-evidence-caption">
+              <span id="reviewNorthCaption">北机位 · AI 初标 4 辆（待终审）</span>
+              <span>固定通道截图，原图可放大</span>
+            </p>
+          </article>
+        </div>
+
+        <p class="review-provenance">
+          来源：数据底座两段视频抽帧 · AI 初标仅作导航参考，不预填为答案 · 连续帧与 30 秒视频在“查看原图”内
+        </p>
+
+        <section class="review-result-block" aria-labelledby="reviewResultTitle">
+          <div class="review-result-head">
+            <h3 id="reviewResultTitle">填写复核结果</h3>
+            <span>只填写能确认的数字，不确定的数量可以留空</span>
+          </div>
+          <div class="review-fields">
+            <label class="review-field">
+              <span class="review-field-label">南机位 <em>辆</em></span>
+              <input id="reviewSouthCount" type="number" min="0" max="99" step="1" inputmode="numeric" placeholder="留空" autocomplete="off">
+              <span class="review-field-note-label">说明（可选）</span>
+              <textarea id="reviewSouthNote" maxlength="240" placeholder="例如：远处还有一辆，只露出顶部"></textarea>
+            </label>
+            <label class="review-field">
+              <span class="review-field-label">北机位 <em>辆</em></span>
+              <input id="reviewNorthCount" type="number" min="0" max="99" step="1" inputmode="numeric" placeholder="留空" autocomplete="off">
+              <span class="review-field-note-label">说明（可选）</span>
+              <textarea id="reviewNorthNote" maxlength="240" placeholder="补充北机位的判断依据"></textarea>
+            </label>
+            <label class="review-field">
+              <span class="review-field-label">重合车辆 <em>辆</em></span>
+              <input id="reviewOverlapCount" type="number" min="0" max="99" step="1" inputmode="numeric" placeholder="留空" autocomplete="off">
+              <span class="review-field-note-label">说明（可选）</span>
+              <textarea id="reviewOverlapNote" maxlength="240" placeholder="哪些车同时出现在两个机位"></textarea>
+            </label>
+            <label class="review-field review-field--total">
+              <span class="review-field-label">
+                去重总数 <em>辆</em>
+                <span class="review-total-mode" id="reviewTotalMode">自动</span>
+              </span>
+              <input id="reviewTotalCount" type="number" min="0" max="99" step="1" inputmode="numeric" placeholder="留空" autocomplete="off">
+              <span class="review-field-note-label">说明（可选）</span>
+              <textarea id="reviewTotalNote" maxlength="240" placeholder="补充总数的判断依据"></textarea>
+            </label>
+          </div>
+          <div class="review-formula-row">
+            <p id="reviewFormula">去重总数 = 南 ? + 北 ? − 重合 ?（数量不全，暂不计算）</p>
+            <button class="review-formula-reset" id="reviewFormulaReset" type="button">按公式重算</button>
+          </div>
+          <p class="review-formula-warning" id="reviewFormulaWarning" hidden></p>
+        </section>
+
+        <label class="review-wide-field">
+          <span>补充说明（可选）</span>
+          <textarea id="reviewGeneralNote" maxlength="600" placeholder="例如：底边红色货厢属于相邻通道，本次不计；远处蓝白车辆只露出货厢顶部"></textarea>
+        </label>
+
+        <section class="review-attachment" aria-labelledby="reviewAttachmentTitle">
+          <div class="review-attachment-head">
+            <div>
+              <h3 id="reviewAttachmentTitle">补充标注图片</h3>
+              <span>可选</span>
+            </div>
+            <p>需要标出车辆时，可上传标记后的截图。</p>
+          </div>
+          <div class="review-dropzone" id="reviewDropzone">
+            <input id="reviewAttachmentInput" type="file" accept="image/png,image/jpeg,image/webp" hidden>
+            <button class="review-attachment-btn" id="reviewAttachmentBtn" type="button">＋ 选择图片</button>
+            <span>也可粘贴或拖入图片 · PNG / JPG / WebP</span>
+          </div>
+          <div class="review-attachment-preview" id="reviewAttachmentPreview" hidden>
+            <img id="reviewAttachmentImage" alt="已选择的本机标注图预览">
+            <div>
+              <strong id="reviewAttachmentName"></strong>
+              <span>仅在本页预览，不上传服务器；导出 JSON 只记录文件名。</span>
+            </div>
+            <button class="review-attachment-remove" id="reviewAttachmentRemove" type="button">移除</button>
+          </div>
+        </section>
+      </div>
+
+      <div class="modal-actions review-modal-actions">
+        <span class="review-save-note" id="reviewSaveNote">草稿自动保存在本机；点击保存后计入复核记录。</span>
+        <button class="btn btn--quiet" id="reviewExportBtn" type="button">
+          <svg aria-hidden="true"><use href="#i-download"></use></svg>
+          导出复核 JSON
+        </button>
+        <button class="btn btn--primary" id="reviewSaveBtn" type="submit">保存本次复核</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="modal review-evidence-modal" id="reviewEvidenceDialog" aria-labelledby="reviewEvidenceTitle">
+    <div class="modal-head">
+      <div>
+        <p class="section-kicker">ORIGINAL / CONTINUOUS EVIDENCE</p>
+        <h2 id="reviewEvidenceTitle">南机位 · 00:10:00</h2>
+      </div>
+      <button class="icon-button" type="button" data-close-evidence aria-label="关闭原图与连续证据">
+        <svg aria-hidden="true"><use href="#i-close"></use></svg>
+      </button>
+    </div>
+    <div class="review-evidence-body" id="reviewEvidenceBody"></div>
+    <div class="modal-actions">
+      <span class="review-evidence-note">原图 1280 × 960；连续帧覆盖 t−2s 到 t+2s。证据只帮助判断，不自动给出数量。</span>
+      <button class="btn btn--primary" type="button" data-close-evidence>返回复核</button>
+    </div>
+  </dialog>
+
   <div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="true"></div>
 
   <script src="data/demo_result.js"></script>
   <script src="app.js"></script>
+  <script src="review-modal.js"></script>
 </body>
 </html>

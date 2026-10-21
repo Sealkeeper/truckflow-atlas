@@ -6,18 +6,34 @@ from pathlib import Path
 from typing import Any
 
 
-def load_review(path: Path) -> dict[str, int]:
+def load_review(path: Path) -> tuple[dict[str, int], dict[str, int]]:
     payload = json.loads(path.read_text(encoding="utf-8"))
-    if payload.get("schema") != "truckflow-final-review-v1":
+    schema = payload.get("schema")
+    if schema not in {"truckflow-final-review-v1", "truckflow-final-review-v2"}:
         raise SystemExit("review file schema mismatch")
-    values: dict[str, int] = {}
+    per_camera: dict[str, int] = {}
+    unique_totals: dict[str, int] = {}
     for row in payload["samples"]:
-        if not row.get("reviewed"):
+        if schema == "truckflow-final-review-v1":
+            if not row.get("reviewed"):
+                continue
+            per_camera[row["key"]] = int(row["final_total"])
             continue
-        values[row["key"]] = int(row["final_total"])
-    if not values:
+
+        if not row.get("completed"):
+            continue
+        time_seconds = int(row["time"])
+        counts = row.get("camera_counts") or {}
+        for camera in ("north", "south"):
+            value = counts.get(camera)
+            if isinstance(value, int):
+                per_camera[f"{camera}_{time_seconds}"] = value
+        unique = row.get("unique_total")
+        if isinstance(unique, int):
+            unique_totals[str(time_seconds)] = unique
+    if not per_camera:
         raise SystemExit("review file has no confirmed samples")
-    return values
+    return per_camera, unique_totals
 
 
 def read_count(payload: dict[str, Any]) -> int | None:
@@ -85,9 +101,11 @@ def main() -> None:
     parser.add_argument("--json-out", type=Path)
     args = parser.parse_args()
 
-    truth = load_review(args.review)
+    truth, unique_totals = load_review(args.review)
     report: dict[str, Any] = {
-        "reviewed_samples": len(truth),
+        "reviewed_camera_samples": len(truth),
+        "reviewed_unique_times": len(unique_totals),
+        "unique_totals": unique_totals,
         "models": {},
     }
     for directory in args.runs:

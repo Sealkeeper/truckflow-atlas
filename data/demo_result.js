@@ -1,6 +1,6 @@
 /*
- * Static demo payload. Per-camera counts are copied from the human-reviewed
- * development sample set `camera-counts-v0`; they are not acceptance results.
+ * Static demo payload. Per-camera counts are copied from the AI single-annotator
+ * provisional sample set `camera-counts-v0`; they are not human gold or acceptance results.
  * No reliable vehicle boxes exist in that source, so every sample keeps
  * `boxes: []` and the UI must not invent vehicle positions.
  */

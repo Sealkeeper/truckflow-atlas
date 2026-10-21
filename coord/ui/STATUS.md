@@ -36,7 +36,7 @@ python -m http.server 4173 --bind 127.0.0.1
 
 ## 数据口径
 
-`data/demo_result.js` 使用公共只读数据 `data/gold/camera_counts_v0.json` 的逐机位人工计数：
+`data/demo_result.js` 使用公共只读数据 `data/gold/camera_counts_v0.json` 的逐机位 AI 初标（待终审）：
 
 - 北：`3,3,4,3,3,2,2,2,3,2`
 - 南：`3,4,5,5,5,5,4,4,3,3`

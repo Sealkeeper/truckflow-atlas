@@ -12,4 +12,6 @@ accuracy/runs/timeline_v1/probe_*.json
 *.log
 .DS_Store
 Thumbs.db
+review/_review-*.json
+review/review-modal-audit.json
 

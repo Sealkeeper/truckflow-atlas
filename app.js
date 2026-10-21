@@ -3,6 +3,7 @@
 
   const DEMO = window.TRUCKFLOW_DEMO;
   const REVIEW_KEY = "truckflow.workspace.reviews.v1";
+  const REVIEW_V2_KEY = "truckflow.workspace.review.v2";
   const CAPACITY_KEY = "truckflow.workspace.capacity.v1";
   const BUSINESS_TIME_ZONE_OFFSET_MS = 8 * 60 * 60 * 1000;
   const TYPE_META = {
@@ -96,6 +97,7 @@
     auditBusinessTime: $("#auditBusinessTime"),
     auditDelta: $("#auditDelta"),
     auditCameraCounts: $("#auditCameraCounts"),
+    auditUniqueTotal: $("#auditUniqueTotal"),
     auditCallout: $("#auditCallout"),
     statsBody: $("#statsBody"),
     statsMeta: $("#statsMeta"),
@@ -448,6 +450,10 @@
       const letter = camera.id.toLowerCase().startsWith("north") || camera.code?.endsWith("-N") ? "北" : "南";
       return `${letter} ${cameraState.absent ? "—" : cameraState.total}`;
     }).join(" · ");
+    const humanReview = readStorage(REVIEW_V2_KEY, {})[String(sample.time)];
+    const uniqueTotal = Number.isInteger(humanReview?.total) ? humanReview.total : null;
+    el.auditUniqueTotal.textContent = uniqueTotal == null ? "待复核" : `${uniqueTotal} 辆`;
+    el.auditUniqueTotal.classList.toggle("value-pending", uniqueTotal == null);
     el.auditCallout.textContent = sample.note || "该采样帧没有附加复核说明；跨机位唯一车辆数仍需另行确认。";
   }
 
@@ -1038,6 +1044,10 @@
     if (dialog?.open) dialog.close();
   }
 
+  function openHumanReview() {
+    document.dispatchEvent(new CustomEvent("truckflow:open-review"));
+  }
+
   function setFiles(files) {
     const accepted = Array.from(files).filter((file) => file.type.startsWith("video/") || /\.(mp4|mov|webm)$/i.test(file.name));
     const merged = [...uploadFiles, ...accepted].filter((file, index, list) => {
@@ -1433,16 +1443,8 @@
     $$("[data-evidence-filter]").forEach((button) => {
       button.addEventListener("click", () => setEvidenceFilter(button.dataset.evidenceFilter));
     });
-    $("#dedupReviewBtn").addEventListener("click", () => openEvidence(dedupEvidence()));
-    $("#openSampleReviewBtn").addEventListener("click", () => {
-      const sample = nearestSample();
-      const items = evidenceItems().filter((item) => evidenceFilterGroup(item.status) === "review");
-      if (items.length) {
-        openEvidence(items[0]);
-      } else {
-        openEvidence(dedupEvidence());
-      }
-    });
+    $("#dedupReviewBtn").addEventListener("click", openHumanReview);
+    $("#openSampleReviewBtn").addEventListener("click", openHumanReview);
 
     $$("[data-review-action]").forEach((button) => {
       button.addEventListener("click", () => applyReviewAction(button.dataset.reviewAction));
@@ -1520,7 +1522,13 @@
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") closeDrawers();
       const tag = document.activeElement?.tagName;
-      if (["INPUT", "TEXTAREA", "SELECT"].includes(tag) || el.uploadDialog.open || el.infoDialog.open) return;
+      if (
+        ["INPUT", "TEXTAREA", "SELECT"].includes(tag)
+        || el.uploadDialog.open
+        || el.infoDialog.open
+        || document.querySelector("#reviewDialog")?.open
+        || document.querySelector("#reviewEvidenceDialog")?.open
+      ) return;
       if (event.code === "Space") {
         event.preventDefault();
         el.playBtn.click();
@@ -1537,6 +1545,14 @@
   }
 
   function init() {
+    window.TRUCKFLOW_REVIEW_CONTEXT = {
+      getCurrentSample: () => nearestSample(),
+      getSamples: () => activeData.samples,
+      setSampleTime: (time) => setTime(time),
+      getCamera: (id) => activeData.cameras.find((camera) => camera.id === id),
+      getCameraState: (sample, id) => sampleCamera(sample, id),
+      formatVideoTime
+    };
     fillCapacityInputs();
     updateLocalSaveState();
     bindEvents();
