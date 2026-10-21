@@ -1,0 +1,828 @@
+{
+  "generatedAt": "2026-10-21T10:19:15.336Z",
+  "status": "ai-single-annotator-provisional-pending-final-human-review",
+  "warning": "初标来自 AI 对外部视频抽帧的目视计数，不是人工金标准，也没有逐车框。连续帧和视频只用于帮助终审，不改变这一事实。",
+  "countDefinition": "每张画面内独立可辨的货车车体；叉车、轿车、面包车、行人排除；牵引车与其挂车计一辆；明确独立且可辨的货厢单独计。",
+  "samples": [
+    {
+      "key": "north_5",
+      "camera": "north",
+      "time": 5,
+      "provisionalTotal": 3,
+      "provisionalTypes": {
+        "large": 3,
+        "medium": 0,
+        "small": 0
+      },
+      "reviewFlag": false,
+      "frames": [
+        {
+          "offset": -2,
+          "path": "frames/north_5_-2.jpg",
+          "exists": true
+        },
+        {
+          "offset": -1,
+          "path": "frames/north_5_-1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 0,
+          "path": "frames/north_5_0.jpg",
+          "exists": true
+        },
+        {
+          "offset": 1,
+          "path": "frames/north_5_+1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 2,
+          "path": "frames/north_5_+2.jpg",
+          "exists": true
+        }
+      ],
+      "clip": null,
+      "clipStart": 0
+    },
+    {
+      "key": "north_300",
+      "camera": "north",
+      "time": 300,
+      "provisionalTotal": 3,
+      "provisionalTypes": {
+        "large": 3,
+        "medium": 0,
+        "small": 0
+      },
+      "reviewFlag": false,
+      "frames": [
+        {
+          "offset": -2,
+          "path": "frames/north_300_-2.jpg",
+          "exists": true
+        },
+        {
+          "offset": -1,
+          "path": "frames/north_300_-1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 0,
+          "path": "frames/north_300_0.jpg",
+          "exists": true
+        },
+        {
+          "offset": 1,
+          "path": "frames/north_300_+1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 2,
+          "path": "frames/north_300_+2.jpg",
+          "exists": true
+        }
+      ],
+      "clip": "clips/north_300.mp4",
+      "clipStart": 285
+    },
+    {
+      "key": "north_600",
+      "camera": "north",
+      "time": 600,
+      "provisionalTotal": 4,
+      "provisionalTypes": {
+        "large": 4,
+        "medium": 0,
+        "small": 0
+      },
+      "reviewFlag": false,
+      "frames": [
+        {
+          "offset": -2,
+          "path": "frames/north_600_-2.jpg",
+          "exists": true
+        },
+        {
+          "offset": -1,
+          "path": "frames/north_600_-1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 0,
+          "path": "frames/north_600_0.jpg",
+          "exists": true
+        },
+        {
+          "offset": 1,
+          "path": "frames/north_600_+1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 2,
+          "path": "frames/north_600_+2.jpg",
+          "exists": true
+        }
+      ],
+      "clip": "clips/north_600.mp4",
+      "clipStart": 585
+    },
+    {
+      "key": "north_900",
+      "camera": "north",
+      "time": 900,
+      "provisionalTotal": 3,
+      "provisionalTypes": {
+        "large": 3,
+        "medium": 0,
+        "small": 0
+      },
+      "reviewFlag": false,
+      "frames": [
+        {
+          "offset": -2,
+          "path": "frames/north_900_-2.jpg",
+          "exists": true
+        },
+        {
+          "offset": -1,
+          "path": "frames/north_900_-1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 0,
+          "path": "frames/north_900_0.jpg",
+          "exists": true
+        },
+        {
+          "offset": 1,
+          "path": "frames/north_900_+1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 2,
+          "path": "frames/north_900_+2.jpg",
+          "exists": true
+        }
+      ],
+      "clip": null,
+      "clipStart": 885
+    },
+    {
+      "key": "north_1200",
+      "camera": "north",
+      "time": 1200,
+      "provisionalTotal": 3,
+      "provisionalTypes": {
+        "large": 3,
+        "medium": 0,
+        "small": 0
+      },
+      "reviewFlag": false,
+      "frames": [
+        {
+          "offset": -2,
+          "path": "frames/north_1200_-2.jpg",
+          "exists": true
+        },
+        {
+          "offset": -1,
+          "path": "frames/north_1200_-1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 0,
+          "path": "frames/north_1200_0.jpg",
+          "exists": true
+        },
+        {
+          "offset": 1,
+          "path": "frames/north_1200_+1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 2,
+          "path": "frames/north_1200_+2.jpg",
+          "exists": true
+        }
+      ],
+      "clip": "clips/north_1200.mp4",
+      "clipStart": 1185
+    },
+    {
+      "key": "north_1500",
+      "camera": "north",
+      "time": 1500,
+      "provisionalTotal": 2,
+      "provisionalTypes": {
+        "large": 2,
+        "medium": 0,
+        "small": 0
+      },
+      "reviewFlag": false,
+      "frames": [
+        {
+          "offset": -2,
+          "path": "frames/north_1500_-2.jpg",
+          "exists": true
+        },
+        {
+          "offset": -1,
+          "path": "frames/north_1500_-1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 0,
+          "path": "frames/north_1500_0.jpg",
+          "exists": true
+        },
+        {
+          "offset": 1,
+          "path": "frames/north_1500_+1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 2,
+          "path": "frames/north_1500_+2.jpg",
+          "exists": true
+        }
+      ],
+      "clip": null,
+      "clipStart": 1485
+    },
+    {
+      "key": "north_1800",
+      "camera": "north",
+      "time": 1800,
+      "provisionalTotal": 2,
+      "provisionalTypes": {
+        "large": 2,
+        "medium": 0,
+        "small": 0
+      },
+      "reviewFlag": false,
+      "frames": [
+        {
+          "offset": -2,
+          "path": "frames/north_1800_-2.jpg",
+          "exists": true
+        },
+        {
+          "offset": -1,
+          "path": "frames/north_1800_-1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 0,
+          "path": "frames/north_1800_0.jpg",
+          "exists": true
+        },
+        {
+          "offset": 1,
+          "path": "frames/north_1800_+1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 2,
+          "path": "frames/north_1800_+2.jpg",
+          "exists": true
+        }
+      ],
+      "clip": null,
+      "clipStart": 1785
+    },
+    {
+      "key": "north_2100",
+      "camera": "north",
+      "time": 2100,
+      "provisionalTotal": 2,
+      "provisionalTypes": {
+        "large": 2,
+        "medium": 0,
+        "small": 0
+      },
+      "reviewFlag": false,
+      "frames": [
+        {
+          "offset": -2,
+          "path": "frames/north_2100_-2.jpg",
+          "exists": true
+        },
+        {
+          "offset": -1,
+          "path": "frames/north_2100_-1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 0,
+          "path": "frames/north_2100_0.jpg",
+          "exists": true
+        },
+        {
+          "offset": 1,
+          "path": "frames/north_2100_+1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 2,
+          "path": "frames/north_2100_+2.jpg",
+          "exists": true
+        }
+      ],
+      "clip": null,
+      "clipStart": 2085
+    },
+    {
+      "key": "north_2400",
+      "camera": "north",
+      "time": 2400,
+      "provisionalTotal": 3,
+      "provisionalTypes": {
+        "large": 3,
+        "medium": 0,
+        "small": 0
+      },
+      "reviewFlag": false,
+      "frames": [
+        {
+          "offset": -2,
+          "path": "frames/north_2400_-2.jpg",
+          "exists": true
+        },
+        {
+          "offset": -1,
+          "path": "frames/north_2400_-1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 0,
+          "path": "frames/north_2400_0.jpg",
+          "exists": true
+        },
+        {
+          "offset": 1,
+          "path": "frames/north_2400_+1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 2,
+          "path": "frames/north_2400_+2.jpg",
+          "exists": true
+        }
+      ],
+      "clip": null,
+      "clipStart": 2385
+    },
+    {
+      "key": "north_2600",
+      "camera": "north",
+      "time": 2600,
+      "provisionalTotal": 2,
+      "provisionalTypes": {
+        "large": 2,
+        "medium": 0,
+        "small": 0
+      },
+      "reviewFlag": false,
+      "frames": [
+        {
+          "offset": -2,
+          "path": "frames/north_2600_-2.jpg",
+          "exists": true
+        },
+        {
+          "offset": -1,
+          "path": "frames/north_2600_-1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 0,
+          "path": "frames/north_2600_0.jpg",
+          "exists": true
+        },
+        {
+          "offset": 1,
+          "path": "frames/north_2600_+1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 2,
+          "path": "frames/north_2600_+2.jpg",
+          "exists": true
+        }
+      ],
+      "clip": null,
+      "clipStart": 2585
+    },
+    {
+      "key": "south_5",
+      "camera": "south",
+      "time": 5,
+      "provisionalTotal": 3,
+      "provisionalTypes": {
+        "large": 2,
+        "medium": 1,
+        "small": 0
+      },
+      "reviewFlag": true,
+      "frames": [
+        {
+          "offset": -2,
+          "path": "frames/south_5_-2.jpg",
+          "exists": true
+        },
+        {
+          "offset": -1,
+          "path": "frames/south_5_-1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 0,
+          "path": "frames/south_5_0.jpg",
+          "exists": true
+        },
+        {
+          "offset": 1,
+          "path": "frames/south_5_+1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 2,
+          "path": "frames/south_5_+2.jpg",
+          "exists": true
+        }
+      ],
+      "clip": "clips/south_5.mp4",
+      "clipStart": 0
+    },
+    {
+      "key": "south_300",
+      "camera": "south",
+      "time": 300,
+      "provisionalTotal": 4,
+      "provisionalTypes": {
+        "large": 3,
+        "medium": 1,
+        "small": 0
+      },
+      "reviewFlag": false,
+      "frames": [
+        {
+          "offset": -2,
+          "path": "frames/south_300_-2.jpg",
+          "exists": true
+        },
+        {
+          "offset": -1,
+          "path": "frames/south_300_-1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 0,
+          "path": "frames/south_300_0.jpg",
+          "exists": true
+        },
+        {
+          "offset": 1,
+          "path": "frames/south_300_+1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 2,
+          "path": "frames/south_300_+2.jpg",
+          "exists": true
+        }
+      ],
+      "clip": null,
+      "clipStart": 285
+    },
+    {
+      "key": "south_600",
+      "camera": "south",
+      "time": 600,
+      "provisionalTotal": 5,
+      "provisionalTypes": {
+        "large": 3,
+        "medium": 2,
+        "small": 0
+      },
+      "reviewFlag": true,
+      "frames": [
+        {
+          "offset": -2,
+          "path": "frames/south_600_-2.jpg",
+          "exists": true
+        },
+        {
+          "offset": -1,
+          "path": "frames/south_600_-1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 0,
+          "path": "frames/south_600_0.jpg",
+          "exists": true
+        },
+        {
+          "offset": 1,
+          "path": "frames/south_600_+1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 2,
+          "path": "frames/south_600_+2.jpg",
+          "exists": true
+        }
+      ],
+      "clip": "clips/south_600.mp4",
+      "clipStart": 585
+    },
+    {
+      "key": "south_900",
+      "camera": "south",
+      "time": 900,
+      "provisionalTotal": 5,
+      "provisionalTypes": {
+        "large": 3,
+        "medium": 2,
+        "small": 0
+      },
+      "reviewFlag": true,
+      "frames": [
+        {
+          "offset": -2,
+          "path": "frames/south_900_-2.jpg",
+          "exists": true
+        },
+        {
+          "offset": -1,
+          "path": "frames/south_900_-1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 0,
+          "path": "frames/south_900_0.jpg",
+          "exists": true
+        },
+        {
+          "offset": 1,
+          "path": "frames/south_900_+1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 2,
+          "path": "frames/south_900_+2.jpg",
+          "exists": true
+        }
+      ],
+      "clip": null,
+      "clipStart": 885
+    },
+    {
+      "key": "south_1200",
+      "camera": "south",
+      "time": 1200,
+      "provisionalTotal": 5,
+      "provisionalTypes": {
+        "large": 3,
+        "medium": 2,
+        "small": 0
+      },
+      "reviewFlag": true,
+      "frames": [
+        {
+          "offset": -2,
+          "path": "frames/south_1200_-2.jpg",
+          "exists": true
+        },
+        {
+          "offset": -1,
+          "path": "frames/south_1200_-1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 0,
+          "path": "frames/south_1200_0.jpg",
+          "exists": true
+        },
+        {
+          "offset": 1,
+          "path": "frames/south_1200_+1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 2,
+          "path": "frames/south_1200_+2.jpg",
+          "exists": true
+        }
+      ],
+      "clip": "clips/south_1200.mp4",
+      "clipStart": 1185
+    },
+    {
+      "key": "south_1500",
+      "camera": "south",
+      "time": 1500,
+      "provisionalTotal": 5,
+      "provisionalTypes": {
+        "large": 3,
+        "medium": 2,
+        "small": 0
+      },
+      "reviewFlag": true,
+      "frames": [
+        {
+          "offset": -2,
+          "path": "frames/south_1500_-2.jpg",
+          "exists": true
+        },
+        {
+          "offset": -1,
+          "path": "frames/south_1500_-1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 0,
+          "path": "frames/south_1500_0.jpg",
+          "exists": true
+        },
+        {
+          "offset": 1,
+          "path": "frames/south_1500_+1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 2,
+          "path": "frames/south_1500_+2.jpg",
+          "exists": true
+        }
+      ],
+      "clip": null,
+      "clipStart": 1485
+    },
+    {
+      "key": "south_1800",
+      "camera": "south",
+      "time": 1800,
+      "provisionalTotal": 4,
+      "provisionalTypes": {
+        "large": 2,
+        "medium": 2,
+        "small": 0
+      },
+      "reviewFlag": true,
+      "frames": [
+        {
+          "offset": -2,
+          "path": "frames/south_1800_-2.jpg",
+          "exists": true
+        },
+        {
+          "offset": -1,
+          "path": "frames/south_1800_-1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 0,
+          "path": "frames/south_1800_0.jpg",
+          "exists": true
+        },
+        {
+          "offset": 1,
+          "path": "frames/south_1800_+1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 2,
+          "path": "frames/south_1800_+2.jpg",
+          "exists": true
+        }
+      ],
+      "clip": null,
+      "clipStart": 1785
+    },
+    {
+      "key": "south_2100",
+      "camera": "south",
+      "time": 2100,
+      "provisionalTotal": 4,
+      "provisionalTypes": {
+        "large": 2,
+        "medium": 2,
+        "small": 0
+      },
+      "reviewFlag": true,
+      "frames": [
+        {
+          "offset": -2,
+          "path": "frames/south_2100_-2.jpg",
+          "exists": true
+        },
+        {
+          "offset": -1,
+          "path": "frames/south_2100_-1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 0,
+          "path": "frames/south_2100_0.jpg",
+          "exists": true
+        },
+        {
+          "offset": 1,
+          "path": "frames/south_2100_+1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 2,
+          "path": "frames/south_2100_+2.jpg",
+          "exists": true
+        }
+      ],
+      "clip": null,
+      "clipStart": 2085
+    },
+    {
+      "key": "south_2400",
+      "camera": "south",
+      "time": 2400,
+      "provisionalTotal": 3,
+      "provisionalTypes": {
+        "large": 2,
+        "medium": 1,
+        "small": 0
+      },
+      "reviewFlag": true,
+      "frames": [
+        {
+          "offset": -2,
+          "path": "frames/south_2400_-2.jpg",
+          "exists": true
+        },
+        {
+          "offset": -1,
+          "path": "frames/south_2400_-1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 0,
+          "path": "frames/south_2400_0.jpg",
+          "exists": true
+        },
+        {
+          "offset": 1,
+          "path": "frames/south_2400_+1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 2,
+          "path": "frames/south_2400_+2.jpg",
+          "exists": true
+        }
+      ],
+      "clip": null,
+      "clipStart": 2385
+    },
+    {
+      "key": "south_2600",
+      "camera": "south",
+      "time": 2600,
+      "provisionalTotal": 3,
+      "provisionalTypes": {
+        "large": 2,
+        "medium": 1,
+        "small": 0
+      },
+      "reviewFlag": true,
+      "frames": [
+        {
+          "offset": -2,
+          "path": "frames/south_2600_-2.jpg",
+          "exists": true
+        },
+        {
+          "offset": -1,
+          "path": "frames/south_2600_-1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 0,
+          "path": "frames/south_2600_0.jpg",
+          "exists": true
+        },
+        {
+          "offset": 1,
+          "path": "frames/south_2600_+1.jpg",
+          "exists": true
+        },
+        {
+          "offset": 2,
+          "path": "frames/south_2600_+2.jpg",
+          "exists": true
+        }
+      ],
+      "clip": "clips/south_2600.mp4",
+      "clipStart": 2585
+    }
+  ]
+}

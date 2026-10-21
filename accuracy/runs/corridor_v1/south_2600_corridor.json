@@ -1,0 +1,80 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\south_2600_corridor.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 10.12,
+      "usage": {
+        "completion_tokens": 1130,
+        "prompt_tokens": 1776,
+        "total_tokens": 2906,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 700
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.51,
+              0.15,
+              0.66,
+              0.39
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "White cab with Chinese text on front, white enclosed cargo box, facing down the central aisle",
+            "evidence": "Fully visible heavy-duty truck in the middle of the aisle, no occlusion",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.67,
+              0.16,
+              0.77,
+              0.28
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red cab, facing down the aisle, positioned behind the white truck",
+            "evidence": "Fully visible heavy truck behind the white truck, no occlusion",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.71,
+              0.33,
+              0.91,
+              0.69
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red cab, open cargo bed, facing towards the bottom of the image, on the right side of the aisle",
+            "evidence": "Fully visible heavy truck on the right side of the aisle, no occlusion",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "All three trucks are fully visible within the frame, no significant occlusion or boundary ambiguity",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.51, 0.15, 0.66, 0.39],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White cab with Chinese text on front, white enclosed cargo box, facing down the central aisle\",\n      \"evidence\": \"Fully visible heavy-duty truck in the middle of the aisle, no occlusion\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.67, 0.16, 0.77, 0.28],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, facing down the aisle, positioned behind the white truck\",\n      \"evidence\": \"Fully visible heavy truck behind the white truck, no occlusion\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.71, 0.33, 0.91, 0.69],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, open cargo bed, facing towards the bottom of the image, on the right side of the aisle\",\n      \"evidence\": \"Fully visible heavy truck on the right side of the aisle, no occlusion\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All three trucks are fully visible within the frame, no significant occlusion or boundary ambiguity\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\south_2600_corridor.jpg"
+    }
+  ]
+}

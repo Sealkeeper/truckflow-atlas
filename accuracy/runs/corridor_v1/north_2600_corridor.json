@@ -1,0 +1,66 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\north_2600_corridor.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 7.93,
+      "usage": {
+        "completion_tokens": 792,
+        "prompt_tokens": 1802,
+        "total_tokens": 2594,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 459
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.52,
+              0.4,
+              0.78,
+              0.73
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "棕色厢式货厢，车尾印有粤T73778编号，朝向画面下方，停放在展会通道内",
+            "evidence": "画面中间偏右位置，完整可见的重型厢式货车，符合大型货车特征",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.34,
+              0.87,
+              0.76,
+              0.99
+            ],
+            "size": "large",
+            "visible": "partial_top",
+            "is_truck": true,
+            "identity_clues": "红色货厢顶部，顶部放置有物品，位于画面底部",
+            "evidence": "画面底部仅露出顶部的货车，属于大型货车的局部可见部分",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面中共2辆可见货车，1辆完整呈现，1辆仅露出顶部局部，无其他遮挡或歧义情况",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.52, 0.40, 0.78, 0.73],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"棕色厢式货厢，车尾印有粤T73778编号，朝向画面下方，停放在展会通道内\",\n      \"evidence\": \"画面中间偏右位置，完整可见的重型厢式货车，符合大型货车特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.34, 0.87, 0.76, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货厢顶部，顶部放置有物品，位于画面底部\",\n      \"evidence\": \"画面底部仅露出顶部的货车，属于大型货车的局部可见部分\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中共2辆可见货车，1辆完整呈现，1辆仅露出顶部局部，无其他遮挡或歧义情况\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\north_2600_corridor.jpg"
+    }
+  ]
+}

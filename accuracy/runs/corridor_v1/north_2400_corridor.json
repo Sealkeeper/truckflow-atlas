@@ -1,0 +1,80 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\north_2400_corridor.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 12.1,
+      "usage": {
+        "completion_tokens": 1198,
+        "prompt_tokens": 1802,
+        "total_tokens": 3000,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 747
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.54,
+              0.64,
+              0.93,
+              0.99
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "灰色长厢式货车，车门开启，货厢为灰色，朝向画面下方",
+            "evidence": "画面下方偏右位置，完整可见的厢式货车，符合大型货车特征",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.61,
+              0.25,
+              0.83,
+              0.46
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "红色半挂货厢，尾部有反光标识，朝向画面下方",
+            "evidence": "画面中间偏右位置，单独可见的半挂货厢，属于货车范畴",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.65,
+              0.14,
+              0.88,
+              0.27
+            ],
+            "size": "large",
+            "visible": "partial_side",
+            "is_truck": true,
+            "identity_clues": "红色长货厢，位于画面上方，朝向画面下方",
+            "evidence": "画面上方偏右位置，部分可见的长货厢，符合大型货车特征",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面中共计3辆可见大型货车，其中2辆为单独的半挂货厢，1辆为完整厢式货车，无遮挡导致的歧义车辆",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.54, 0.64, 0.93, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"灰色长厢式货车，车门开启，货厢为灰色，朝向画面下方\",\n      \"evidence\": \"画面下方偏右位置，完整可见的厢式货车，符合大型货车特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.61, 0.25, 0.83, 0.46],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色半挂货厢，尾部有反光标识，朝向画面下方\",\n      \"evidence\": \"画面中间偏右位置，单独可见的半挂货厢，属于货车范畴\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.65, 0.14, 0.88, 0.27],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色长货厢，位于画面上方，朝向画面下方\",\n      \"evidence\": \"画面上方偏右位置，部分可见的长货厢，符合大型货车特征\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中共计3辆可见大型货车，其中2辆为单独的半挂货厢，1辆为完整厢式货车，无遮挡导致的歧义车辆\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\north_2400_corridor.jpg"
+    }
+  ]
+}

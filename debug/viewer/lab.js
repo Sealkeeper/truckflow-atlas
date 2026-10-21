@@ -155,7 +155,7 @@ function renderCompare(result) {
     root.append(row);
   }
   $("#compareFoot").textContent = rows
-    ? `同一帧、不同提示词/模型的实测结果；人工计数 ${result.gold} 辆。`
+    ? `同一帧、不同提示词/模型的实测结果；AI 初标 ${result.gold} 辆。`
     : "该样本暂无其他模型对照。";
 }
 
@@ -192,7 +192,7 @@ function renderDetail() {
     $("#deltaValue").textContent = delta > 0 ? `+${delta}` : String(delta);
     if (delta === 0) {
       note.classList.add("is-exact");
-      note.textContent = "与人工计数完全一致。框位置仅用于人工核对，本轮不计算 IoU。";
+      note.textContent = "与 AI 初标完全一致。框位置仅供核对，本轮不计算 IoU。";
     } else if (delta < 0) {
       note.textContent = `漏计 ${-delta} 辆。优先检查远端小目标与相邻货厢是否被合并。`;
     } else {
@@ -219,15 +219,15 @@ function renderDetail() {
   const finding = $("#findingText");
   if (state.sampleKey === "north_600" && aiboxRow?.ok && baseRow?.ok) {
     finding.textContent =
-      `人工计数 4 辆。整帧基线只找到 ${baseRow.count} 辆，Aibox 本轮为 ${aiboxRow.count} 辆。` +
-      "Aibox 曾在单次实验返回 4，但全量 20 帧只有 10/20 正确、9 帧多计，故该单次结果不可复现，不能升为主力。";
+      `AI 初标 4 辆。整帧基线只找到 ${baseRow.count} 辆，Aibox 本轮为 ${aiboxRow.count} 辆。` +
+      "Aibox 曾在单次实验返回 4，但全量 20 帧只有 10/20 与初标一致、9 帧多计，故该单次结果不可复现，不能升为主力。";
   } else if (state.sampleKey === "south_300" && aiboxRow?.ok && baseRow?.ok) {
     finding.textContent =
-      `人工计数 4 辆。整帧基线 ${baseRow.count} 辆，Aibox ${aiboxRow.count} 辆。` +
+      `AI 初标 4 辆。整帧基线 ${baseRow.count} 辆，Aibox ${aiboxRow.count} 辆。` +
       "近景多计是 Aibox 的系统性问题，复核时必须检查画面底边与相邻车体是否被拆成两辆。";
   } else {
     finding.textContent =
-      `当前模型在 ${result.key} 上预测 ${result.ok ? result.count : "失败"} 辆，人工 ${result.gold} 辆。` +
+      `当前模型在 ${result.key} 上预测 ${result.ok ? result.count : "失败"} 辆，AI 初标 ${result.gold} 辆。` +
       "差值可直接定位漏计与多计，最终以人工复核为准。";
   }
 }

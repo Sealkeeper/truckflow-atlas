@@ -1,0 +1,80 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\north_900_corridor.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 13.1,
+      "usage": {
+        "completion_tokens": 1380,
+        "prompt_tokens": 1802,
+        "total_tokens": 3182,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 933
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 2,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.55,
+              0.38,
+              0.795,
+              0.65
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色货厢，侧面有BL88 580编号，朝向画面下方",
+            "evidence": "画面中间偏右位置，完整可见的红色半挂货厢，属于货车",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.37,
+              0.64,
+              0.78,
+              0.998
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "白色波纹状厢式货厢，车头部分可见，朝向画面下方",
+            "evidence": "画面下方位置，完整可见的白色厢式货车，属于货车",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.685,
+              0.165,
+              0.815,
+              0.3
+            ],
+            "size": "medium",
+            "visible": "partial_side",
+            "is_truck": true,
+            "identity_clues": "蓝色顶的货厢，周围有工人，位于画面上方中间偏右",
+            "evidence": "画面上方中间偏右位置，可见蓝色顶的货车货厢部分，属于货车",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面上方的蓝色顶货车仅可见货厢部分，其余两辆货车完整可见，无被完全遮挡的车辆",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 2, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.55, 0.38, 0.795, 0.65],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货厢，侧面有BL88 580编号，朝向画面下方\",\n      \"evidence\": \"画面中间偏右位置，完整可见的红色半挂货厢，属于货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.37, 0.64, 0.78, 0.998],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹状厢式货厢，车头部分可见，朝向画面下方\",\n      \"evidence\": \"画面下方位置，完整可见的白色厢式货车，属于货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.685, 0.165, 0.815, 0.3],\n      \"size\": \"medium\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色顶的货厢，周围有工人，位于画面上方中间偏右\",\n      \"evidence\": \"画面上方中间偏右位置，可见蓝色顶的货车货厢部分，属于货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面上方的蓝色顶货车仅可见货厢部分，其余两辆货车完整可见，无被完全遮挡的车辆\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\north_900_corridor.jpg"
+    }
+  ]
+}

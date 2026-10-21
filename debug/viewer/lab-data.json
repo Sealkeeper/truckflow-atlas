@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-21T10:03:21.180Z",
-  "generatedAtLocal": "2026年10月21日 18:03",
+  "generatedAt": "2026-10-21T10:16:20.101Z",
+  "generatedAtLocal": "2026年10月21日 18:16",
   "dataset": {
-    "name": "人工开发集 v0",
+    "name": "AI 初标 v0 · 待终审",
     "scope": "per-camera visible truck count; cross-camera physical identity is deliberately NOT merged here",
     "countDefinition": "Every distinct truck body visible in the camera image, including trailer-only when clearly separate; forklifts, cars, vans and people excluded. A tractor and its trailer count once.",
     "reviewNotes": [

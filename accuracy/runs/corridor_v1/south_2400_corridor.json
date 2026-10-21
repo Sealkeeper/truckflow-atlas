@@ -1,0 +1,80 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\south_2400_corridor.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 3,
+      "ok": true,
+      "latency_s": 4011.72,
+      "usage": {
+        "completion_tokens": 1393,
+        "prompt_tokens": 1776,
+        "total_tokens": 3169,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 966
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.61,
+              0.45,
+              0.88,
+              0.95
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色重卡，车头带有SITRAK标识，货厢为灰色，驾驶室车门打开，朝向画面下方",
+            "evidence": "画面下方通道可见完整的红色重型货车",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.52,
+              0.16,
+              0.67,
+              0.39
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "白色厢式货车，车头带有中文标识，朝向画面下方",
+            "evidence": "画面中间通道可见完整的白色厢式货车",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.67,
+              0.15,
+              0.78,
+              0.28
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色货车，车头带有品牌标识，朝向画面下方",
+            "evidence": "画面上方通道可见完整的红色货车",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面为展会撤换展现场，三辆货车沿通道纵向排列，无被完全遮挡或无法确定属性的车辆，所有可见货车均已统计",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.61, 0.45, 0.88, 0.95],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重卡，车头带有SITRAK标识，货厢为灰色，驾驶室车门打开，朝向画面下方\",\n      \"evidence\": \"画面下方通道可见完整的红色重型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.52, 0.16, 0.67, 0.39],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色厢式货车，车头带有中文标识，朝向画面下方\",\n      \"evidence\": \"画面中间通道可见完整的白色厢式货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.67, 0.15, 0.78, 0.28],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货车，车头带有品牌标识，朝向画面下方\",\n      \"evidence\": \"画面上方通道可见完整的红色货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展会撤换展现场，三辆货车沿通道纵向排列，无被完全遮挡或无法确定属性的车辆，所有可见货车均已统计\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\south_2400_corridor.jpg"
+    }
+  ]
+}

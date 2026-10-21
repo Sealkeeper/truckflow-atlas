@@ -1,0 +1,66 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\north_1800_corridor.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 9.15,
+      "usage": {
+        "completion_tokens": 934,
+        "prompt_tokens": 1802,
+        "total_tokens": 2736,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 617
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.61,
+              0.26,
+              0.8,
+              0.47
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red metal cargo box with rear yellow reflectors, rear-facing position in the aisle",
+            "evidence": "Clearly visible as a complete truck cargo unit, no attached other vehicles",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.37,
+              0.64,
+              0.76,
+              0.98
+            ],
+            "size": "large",
+            "visible": "partial_top",
+            "is_truck": true,
+            "identity_clues": "White corrugated cargo box, side-facing, adjacent to a forklift",
+            "evidence": "Visible as a large truck cargo from overhead view, distinct shape confirms it is a truck",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "Two large trucks visible in the exhibition hall, no other trucks present; both are clearly identifiable as trucks",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.61, 0.26, 0.80, 0.47],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red metal cargo box with rear yellow reflectors, rear-facing position in the aisle\",\n      \"evidence\": \"Clearly visible as a complete truck cargo unit, no attached other vehicles\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.37, 0.64, 0.76, 0.98],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White corrugated cargo box, side-facing, adjacent to a forklift\",\n      \"evidence\": \"Visible as a large truck cargo from overhead view, distinct shape confirms it is a truck\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"Two large trucks visible in the exhibition hall, no other trucks present; both are clearly identifiable as trucks\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\north_1800_corridor.jpg"
+    }
+  ]
+}

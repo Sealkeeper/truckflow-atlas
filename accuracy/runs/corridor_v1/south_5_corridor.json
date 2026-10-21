@@ -1,0 +1,80 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\south_5_corridor.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 18.0,
+      "usage": {
+        "completion_tokens": 1740,
+        "prompt_tokens": 1776,
+        "total_tokens": 3516,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1300
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.68,
+              0.07,
+              0.81,
+              0.21
+            ],
+            "size": "large",
+            "visible": "partial_top",
+            "is_truck": true,
+            "identity_clues": "红色车头，棕色货厢，朝向画面上方",
+            "evidence": "位于画面上方通道，可见车头及部分货厢，符合重型货车特征",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.69,
+              0.2,
+              0.85,
+              0.45
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色车头，灰色厢式货厢，朝向画面下方",
+            "evidence": "完整可见的重型厢式货车，位于画面中间通道",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.72,
+              0.6,
+              0.99,
+              0.99
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "红色半挂车货厢，无配套车头可见，朝向画面下方",
+            "evidence": "单独可见的半挂车货厢，符合重型挂车特征",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面共可见3辆货车，其中1辆为单独半挂车货厢，1辆为完整厢式货车，1辆为部分可见的货车，无被完全遮挡或无法确定的车辆",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.68, 0.07, 0.81, 0.21],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，棕色货厢，朝向画面上方\",\n      \"evidence\": \"位于画面上方通道，可见车头及部分货厢，符合重型货车特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.69, 0.20, 0.85, 0.45],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，灰色厢式货厢，朝向画面下方\",\n      \"evidence\": \"完整可见的重型厢式货车，位于画面中间通道\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.72, 0.60, 0.99, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色半挂车货厢，无配套车头可见，朝向画面下方\",\n      \"evidence\": \"单独可见的半挂车货厢，符合重型挂车特征\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面共可见3辆货车，其中1辆为单独半挂车货厢，1辆为完整厢式货车，1辆为部分可见的货车，无被完全遮挡或无法确定的车辆\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\south_5_corridor.jpg"
+    }
+  ]
+}

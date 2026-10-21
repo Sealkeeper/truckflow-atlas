@@ -1,0 +1,66 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_300_far_door.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 13.49,
+      "usage": {
+        "completion_tokens": 1095,
+        "prompt_tokens": 1798,
+        "total_tokens": 2893,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 782
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 2,
+          "large": 1,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.55,
+              0.31,
+              0.71,
+              0.51
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "深色货厢，带有编号标识，朝向远离镜头方向",
+            "evidence": "画面中间偏上位置，为单独可见的货车货厢，符合计数口径",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.53,
+              0.5,
+              0.7,
+              0.93
+            ],
+            "size": "medium",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "蓝色货厢顶，深色车身，朝向镜头方向",
+            "evidence": "画面中间偏下位置，完整可见的货车，符合计数口径",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面中可见2辆货车，均位于展会通道区域，无被完全遮挡的车辆，无歧义",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 1, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.55, 0.31, 0.71, 0.51],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"深色货厢，带有编号标识，朝向远离镜头方向\",\n      \"evidence\": \"画面中间偏上位置，为单独可见的货车货厢，符合计数口径\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.53, 0.50, 0.70, 0.93],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色货厢顶，深色车身，朝向镜头方向\",\n      \"evidence\": \"画面中间偏下位置，完整可见的货车，符合计数口径\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中可见2辆货车，均位于展会通道区域，无被完全遮挡的车辆，无歧义\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_300_far_door.jpg"
+    }
+  ]
+}

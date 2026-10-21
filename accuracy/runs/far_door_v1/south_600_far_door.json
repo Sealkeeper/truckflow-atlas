@@ -1,0 +1,80 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\south_600_far_door.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 10.24,
+      "usage": {
+        "completion_tokens": 1155,
+        "prompt_tokens": 1798,
+        "total_tokens": 2953,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 717
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.51,
+              0.48,
+              0.62,
+              0.76
+            ],
+            "size": "large",
+            "visible": "partial_top",
+            "is_truck": true,
+            "identity_clues": "红色重型牵引车，货厢顶部覆盖蓝色物品，朝向画面底部",
+            "evidence": "画面中间通道内，可见完整红色车头及部分货厢，符合重型货车特征",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.63,
+              0.58,
+              0.8,
+              0.99
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色重型货车，车头带有白色图案，灰色封闭货厢，朝向画面顶部",
+            "evidence": "画面右侧下方，可见完整红色车头及完整灰色货厢，属于重型货车",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.62,
+              0.21,
+              0.73,
+              0.55
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色重型货车，棕色货厢，朝向画面底部",
+            "evidence": "画面右侧上方，可见完整红色车头及棕色货厢，属于重型货车",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面内共3辆重型货车，均位于通道内，无完全遮挡情况，所有可见部分均可确定为货车",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.51, 0.48, 0.62, 0.76],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重型牵引车，货厢顶部覆盖蓝色物品，朝向画面底部\",\n      \"evidence\": \"画面中间通道内，可见完整红色车头及部分货厢，符合重型货车特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.63, 0.58, 0.80, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重型货车，车头带有白色图案，灰色封闭货厢，朝向画面顶部\",\n      \"evidence\": \"画面右侧下方，可见完整红色车头及完整灰色货厢，属于重型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.62, 0.21, 0.73, 0.55],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重型货车，棕色货厢，朝向画面底部\",\n      \"evidence\": \"画面右侧上方，可见完整红色车头及棕色货厢，属于重型货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面内共3辆重型货车，均位于通道内，无完全遮挡情况，所有可见部分均可确定为货车\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\south_600_far_door.jpg"
+    }
+  ]
+}

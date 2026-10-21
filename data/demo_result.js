@@ -10,7 +10,7 @@ window.TRUCKFLOW_DEMO = {
     id: "camera-counts-v0",
     label: "广交会撤换展 · A区天花双机位",
     status: "DEMO / 未验收",
-    source: "2025-10-19 21:59–22:43 人工开发集样帧",
+    source: "2025-10-19 21:59–22:43 AI 初标样帧（待人工终审）",
     sourcePath: "data/gold/camera_counts_v0.json",
     durationSeconds: 2659,
     startTime: "2025-10-19T21:59:26+08:00",

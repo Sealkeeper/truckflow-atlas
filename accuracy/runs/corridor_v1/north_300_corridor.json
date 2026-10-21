@@ -1,0 +1,80 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\north_300_corridor.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 14.49,
+      "usage": {
+        "completion_tokens": 1663,
+        "prompt_tokens": 1802,
+        "total_tokens": 3465,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1225
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 1,
+          "medium": 2,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.35,
+              0.6,
+              0.78,
+              0.99
+            ],
+            "size": "large",
+            "visible": "partial_side",
+            "is_truck": true,
+            "identity_clues": "White corrugated container, dark lower chassis, partial side view",
+            "evidence": "Large freight truck visible in lower right area, only side and bottom sections are clearly seen",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.6,
+              0.26,
+              0.78,
+              0.47
+            ],
+            "size": "medium",
+            "visible": "partial_side",
+            "is_truck": true,
+            "identity_clues": "Blue flat roof, dark container body, medium-sized freight structure",
+            "evidence": "Medium truck with blue roof located above the white container truck, partial side view",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.65,
+              0.17,
+              0.78,
+              0.27
+            ],
+            "size": "medium",
+            "visible": "partial_side",
+            "is_truck": true,
+            "identity_clues": "Dark container with white number markings (8762619), separate trailer/medium truck",
+            "evidence": "Another medium truck behind the blue-roofed truck, clearly visible as a separate freight unit",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "All visible trucks are located on the right side of the image, no major occlusion affecting identification",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 1, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.35, 0.60, 0.78, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White corrugated container, dark lower chassis, partial side view\",\n      \"evidence\": \"Large freight truck visible in lower right area, only side and bottom sections are clearly seen\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.60, 0.26, 0.78, 0.47],\n      \"size\": \"medium\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Blue flat roof, dark container body, medium-sized freight structure\",\n      \"evidence\": \"Medium truck with blue roof located above the white container truck, partial side view\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.65, 0.17, 0.78, 0.27],\n      \"size\": \"medium\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Dark container with white number markings (8762619), separate trailer/medium truck\",\n      \"evidence\": \"Another medium truck behind the blue-roofed truck, clearly visible as a separate freight unit\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All visible trucks are located on the right side of the image, no major occlusion affecting identification\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\north_300_corridor.jpg"
+    }
+  ]
+}

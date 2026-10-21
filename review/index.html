@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>视频复核台 · 货车计数</title>
+  <style>
+    :root {
+      --bg: #071115;
+      --panel: #0d1c21;
+      --panel-2: #11262c;
+      --line: #1e3a42;
+      --text: #e7f4f2;
+      --muted: #8fa8ab;
+      --cyan: #35e0c1;
+      --amber: #f0b35b;
+      --red: #ff7a6e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 12% 0%, rgba(53, 224, 193, .12), transparent 34%),
+        radial-gradient(circle at 88% 8%, rgba(240, 179, 91, .08), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      font: 15px/1.55 "Microsoft YaHei", "Segoe UI", sans-serif;
+    }
+    .wrap { max-width: 1500px; margin: 0 auto; padding: 28px 20px 96px; }
+    h1 { margin: 6px 0 10px; font-size: clamp(28px, 3vw, 44px); letter-spacing: -.02em; }
+    .eyebrow { color: var(--cyan); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; }
+    .lede { max-width: 980px; color: #c4d8d8; margin: 0 0 16px; }
+    .warn {
+      border: 1px solid rgba(240, 179, 91, .36);
+      background: rgba(240, 179, 91, .08);
+      color: #f4d7a8;
+      padding: 12px 16px;
+      border-radius: 12px;
+      margin: 14px 0 24px;
+    }
+    .summary {
+      display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+      margin-bottom: 22px; color: var(--muted);
+    }
+    .pill {
+      border: 1px solid var(--line); background: var(--panel);
+      border-radius: 999px; padding: 6px 12px; color: var(--text); font-size: 13px;
+    }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .card {
+      background: linear-gradient(180deg, var(--panel), #0a171b);
+      border: 1px solid var(--line); border-radius: 16px; padding: 16px;
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    body.focus-review .card:not([data-review="true"]) { display: none; }
+    .card-head { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+    .card h2 { margin: 0; font-size: 21px; }
+    .meta { color: var(--muted); font-size: 12px; margin-top: 2px; }
+    .badge {
+      border: 1px solid rgba(53, 224, 193, .4); color: var(--cyan);
+      border-radius: 999px; padding: 4px 10px; font-size: 12px; white-space: nowrap;
+    }
+    .badge.review { border-color: rgba(240, 179, 91, .55); color: var(--amber); }
+    .strip { display: flex; gap: 4px; overflow: hidden; border-radius: 10px; background: #041012; }
+    .strip figure { margin: 0; flex: 1; min-width: 0; position: relative; cursor: zoom-in; }
+    .strip img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+    .strip figcaption {
+      position: absolute; left: 4px; bottom: 4px; font-size: 10px;
+      background: rgba(0, 0, 0, .72); padding: 1px 5px; border-radius: 4px; color: #d9eeee;
+    }
+    video { width: 100%; max-height: 320px; border-radius: 10px; background: #000; }
+    .ask { font-size: 13px; color: #c9dcdb; }
+    .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+    .controls label { color: var(--muted); font-size: 13px; }
+    input[type="number"] {
+      width: 76px; background: #061417; color: var(--text);
+      border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font-size: 16px;
+    }
+    .ghost {
+      background: transparent; color: var(--cyan); border: 1px solid rgba(53, 224, 193, .35);
+      border-radius: 8px; padding: 7px 11px; cursor: pointer; font: inherit; font-size: 13px;
+    }
+    .ghost:hover { background: rgba(53, 224, 193, .08); }
+    .check { display: flex; gap: 8px; align-items: center; color: #cfe3e1; font-size: 13px; }
+    textarea {
+      width: 100%; min-height: 56px; resize: vertical; background: #061417;
+      color: var(--text); border: 1px solid var(--line); border-radius: 8px;
+      padding: 9px 10px; font: inherit; font-size: 13px;
+    }
+    .done { accent-color: var(--cyan); }
+    .bar {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
+      background: rgba(7, 17, 21, .94); backdrop-filter: blur(10px);
+      border-top: 1px solid var(--line);
+    }
+    .bar-inner {
+      max-width: 1500px; margin: 0 auto; padding: 12px 20px;
+      display: flex; gap: 14px; align-items: center; justify-content: space-between; flex-wrap: wrap;
+    }
+    .bar strong { color: var(--cyan); }
+    .primary {
+      background: var(--cyan); color: #04211c; border: 0; border-radius: 9px;
+      padding: 10px 16px; font: inherit; font-weight: 700; cursor: pointer;
+    }
+    .lightbox {
+      position: fixed; inset: 0; background: rgba(2, 8, 10, .94); z-index: 40;
+      display: none; align-items: center; justify-content: center; padding: 24px;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: 96vw; max-height: 92vh; border-radius: 8px; }
+    @media (max-width: 980px) { .grid { grid-template-columns: 1fr; } }
+    @media (max-width: 560px) {
+      .wrap { padding: 18px 12px 110px; }
+      .strip { display: grid; grid-template-columns: repeat(3, 1fr); }
+      .strip figure:nth-child(n+4) { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="eyebrow">TRUCKFLOW · FINAL REVIEW</div>
+    <h1>视频复核台</h1>
+    <p class="lede">
+      每个时刻给出 <strong>t-2s / t-1s / t / t+1s / t+2s</strong> 五张连续帧；
+      有争议的时刻另附 ±15 秒连续视频。你的任务只有一件：确认“此刻画面内独立可辨的货车有几辆”，以及边界货厢是否属于统计通道。
+    </p>
+    <div class="warn">
+      当前数量是 <strong>AI 单标注者在抽帧上的初标</strong>，不是人工金标准，也没有逐车框。
+      连续帧与视频用于帮助你一次完成终审，不会自动生成结论。
+    </div>
+    <div class="summary">
+      <span class="pill" id="progressPill">已复核 0 / 20</span>
+      <button class="ghost" id="focus">只看待重点复核</button>
+      <span class="pill">口径：牵引车+挂车计一辆；明确独立的货厢单独计；叉车/轿车/面包车/行人不计</span>
+      <span class="pill">草稿自动保存在本机浏览器</span>
+    </div>
+    <section class="grid" id="grid"></section>
+  </main>
+  <div class="bar">
+    <div class="bar-inner">
+      <div><strong id="barProgress">0 / 20</strong> 个时刻已确认；未勾选“已复核”的样本会保留为待审。</div>
+      <button class="primary" id="export">导出复核 JSON</button>
+    </div>
+  </div>
+  <div class="lightbox" id="lightbox"><img alt="放大帧" id="lightboxImage"></div>
+  <script src="./review.js"></script>
+</body>
+</html>

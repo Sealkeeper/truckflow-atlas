@@ -1,0 +1,66 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\north_1500_corridor.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 31.51,
+      "usage": {
+        "completion_tokens": 1327,
+        "prompt_tokens": 1802,
+        "total_tokens": 3129,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 987
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.54,
+              0.37,
+              0.79,
+              0.66
+            ],
+            "size": "large",
+            "visible": "partial_side",
+            "is_truck": true,
+            "identity_clues": "红色高栏货厢，货厢侧面有编号“BL88 580”，朝向画面上方，车头部分在货厢下方露出",
+            "evidence": "画面中间偏右位置，符合重型货车特征，为完整的车头+货厢组合",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.36,
+              0.64,
+              0.78,
+              0.99
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "白色波纹顶长货厢，朝向画面上方，无可见车头",
+            "evidence": "画面下方单独可见的长货厢，属于货车挂车范畴",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面中仅可见2辆符合要求的货车，无其他类型车辆干扰，所有可见货车均已统计",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.54, 0.37, 0.79, 0.66],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色高栏货厢，货厢侧面有编号“BL88 580”，朝向画面上方，车头部分在货厢下方露出\",\n      \"evidence\": \"画面中间偏右位置，符合重型货车特征，为完整的车头+货厢组合\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.36, 0.64, 0.78, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹顶长货厢，朝向画面上方，无可见车头\",\n      \"evidence\": \"画面下方单独可见的长货厢，属于货车挂车范畴\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中仅可见2辆符合要求的货车，无其他类型车辆干扰，所有可见货车均已统计\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\north_1500_corridor.jpg"
+    }
+  ]
+}

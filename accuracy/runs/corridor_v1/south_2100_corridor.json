@@ -1,0 +1,94 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\south_2100_corridor.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 3,
+      "ok": true,
+      "latency_s": 4010.93,
+      "usage": {
+        "completion_tokens": 1294,
+        "prompt_tokens": 1776,
+        "total_tokens": 3070,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 774
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 4,
+          "large": 4,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.7,
+              0.45,
+              0.98,
+              0.95
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "White cab with '东风商用车' text on front, front-facing, white cargo box",
+            "evidence": "Fully visible heavy truck at bottom right of the image",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.68,
+              0.24,
+              0.88,
+              0.55
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red cab, gray cargo box, front-facing",
+            "evidence": "Fully visible heavy truck above the white truck",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.53,
+              0.16,
+              0.71,
+              0.39
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red cab, brown cargo box, front-facing, Chinese characters on cab front",
+            "evidence": "Fully visible heavy truck above the gray cargo truck",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.56,
+              0.07,
+              0.73,
+              0.21
+            ],
+            "size": "large",
+            "visible": "partial_top",
+            "is_truck": true,
+            "identity_clues": "Red cab, partially visible behind the brown cargo truck",
+            "evidence": "Partial front/top of a heavy truck in the upper middle of the image",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "All counted trucks are clearly visible, no obscured or ambiguous vehicles; no other trucks present in the frame",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 4, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.7, 0.45, 0.98, 0.95],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White cab with '东风商用车' text on front, front-facing, white cargo box\",\n      \"evidence\": \"Fully visible heavy truck at bottom right of the image\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.68, 0.24, 0.88, 0.55],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, gray cargo box, front-facing\",\n      \"evidence\": \"Fully visible heavy truck above the white truck\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.53, 0.16, 0.71, 0.39],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, brown cargo box, front-facing, Chinese characters on cab front\",\n      \"evidence\": \"Fully visible heavy truck above the gray cargo truck\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.56, 0.07, 0.73, 0.21],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, partially visible behind the brown cargo truck\",\n      \"evidence\": \"Partial front/top of a heavy truck in the upper middle of the image\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All counted trucks are clearly visible, no obscured or ambiguous vehicles; no other trucks present in the frame\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\south_2100_corridor.jpg"
+    }
+  ]
+}

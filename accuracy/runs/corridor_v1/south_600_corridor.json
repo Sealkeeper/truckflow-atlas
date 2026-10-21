@@ -1,0 +1,94 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\south_600_corridor.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 10.08,
+      "usage": {
+        "completion_tokens": 1174,
+        "prompt_tokens": 1776,
+        "total_tokens": 2950,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 665
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 4,
+          "large": 4,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.72,
+              0.44,
+              0.97,
+              0.94
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "白色车头印有'东风商用车'字样，白色封闭货厢，朝向镜头",
+            "evidence": "画面下方右侧完整可见的重型货车",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.69,
+              0.23,
+              0.86,
+              0.5
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色车头，灰色封闭货厢，朝向镜头",
+            "evidence": "白色货车上方完整可见的重型货车",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.57,
+              0.18,
+              0.69,
+              0.32
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色车头，货厢顶部有蓝色覆盖物，朝向镜头",
+            "evidence": "灰色货厢货车上方完整可见的重型货车",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.68,
+              0.05,
+              0.79,
+              0.2
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色车头，棕色货厢，朝向镜头",
+            "evidence": "蓝色覆盖物货车上方完整可见的重型货车",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "通道右侧共排列4辆大型货车，均完整可见，无被遮挡或无法判定的车辆",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 4, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.72, 0.44, 0.97, 0.94],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色车头印有'东风商用车'字样，白色封闭货厢，朝向镜头\",\n      \"evidence\": \"画面下方右侧完整可见的重型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.69, 0.23, 0.86, 0.50],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，灰色封闭货厢，朝向镜头\",\n      \"evidence\": \"白色货车上方完整可见的重型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.57, 0.18, 0.69, 0.32],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，货厢顶部有蓝色覆盖物，朝向镜头\",\n      \"evidence\": \"灰色货厢货车上方完整可见的重型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.68, 0.05, 0.79, 0.20],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，棕色货厢，朝向镜头\",\n      \"evidence\": \"蓝色覆盖物货车上方完整可见的重型货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"通道右侧共排列4辆大型货车，均完整可见，无被遮挡或无法判定的车辆\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\south_600_corridor.jpg"
+    }
+  ]
+}

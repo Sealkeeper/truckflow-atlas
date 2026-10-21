@@ -1,0 +1,94 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\south_1500_corridor.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 3,
+      "ok": true,
+      "latency_s": 4013.82,
+      "usage": {
+        "completion_tokens": 1176,
+        "prompt_tokens": 1776,
+        "total_tokens": 2952,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 660
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 4,
+          "large": 4,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.7,
+              0.44,
+              0.97,
+              0.95
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "White cab with '东风商用车' text, white enclosed cargo box, front-facing orientation",
+            "evidence": "Fully visible heavy truck at bottom right of the central lane",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.69,
+              0.24,
+              0.87,
+              0.49
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red cab, gray enclosed cargo box, front-facing orientation",
+            "evidence": "Fully visible above the white truck in the central lane",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.55,
+              0.18,
+              0.68,
+              0.32
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red cab, cargo area with stacked boxes, front-facing orientation",
+            "evidence": "Fully visible in the middle of the central lane",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.66,
+              0.05,
+              0.78,
+              0.2
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Dark red cab, brown cargo area, front-facing orientation",
+            "evidence": "Fully visible at the top of the central lane",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "All trucks are aligned in the central lane, no significant occlusion affecting visibility of the counted vehicles",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 4, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.70, 0.44, 0.97, 0.95],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White cab with '东风商用车' text, white enclosed cargo box, front-facing orientation\",\n      \"evidence\": \"Fully visible heavy truck at bottom right of the central lane\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.69, 0.24, 0.87, 0.49],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, gray enclosed cargo box, front-facing orientation\",\n      \"evidence\": \"Fully visible above the white truck in the central lane\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.55, 0.18, 0.68, 0.32],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, cargo area with stacked boxes, front-facing orientation\",\n      \"evidence\": \"Fully visible in the middle of the central lane\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.66, 0.05, 0.78, 0.20],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Dark red cab, brown cargo area, front-facing orientation\",\n      \"evidence\": \"Fully visible at the top of the central lane\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All trucks are aligned in the central lane, no significant occlusion affecting visibility of the counted vehicles\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\south_1500_corridor.jpg"
+    }
+  ]
+}

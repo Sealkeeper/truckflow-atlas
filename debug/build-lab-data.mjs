@@ -213,7 +213,7 @@ const payload = {
     timeZone: "Asia/Shanghai"
   }).format(new Date()),
   dataset: {
-    name: "人工开发集 v0",
+    name: "AI 初标 v0 · 待终审",
     scope: goldFile.scope,
     countDefinition: goldFile.count_definition,
     reviewNotes: goldFile.review_required || []

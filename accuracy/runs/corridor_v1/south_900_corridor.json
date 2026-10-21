@@ -1,0 +1,94 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\south_900_corridor.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 22.58,
+      "usage": {
+        "completion_tokens": 2068,
+        "prompt_tokens": 1776,
+        "total_tokens": 3844,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1526
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 4,
+          "large": 4,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.7,
+              0.45,
+              0.98,
+              0.95
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "White cab with '东风商用车' text, Dongfeng logo, front-facing heavy truck",
+            "evidence": "Fully visible at bottom right of the image, rightmost truck in the right aisle",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.68,
+              0.23,
+              0.88,
+              0.47
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red cab, gray closed cargo trailer, side-front view",
+            "evidence": "Fully visible between the white truck and upper red truck in the right aisle",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.55,
+              0.18,
+              0.68,
+              0.33
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red cab, blue load on top, front-facing heavy truck",
+            "evidence": "Fully visible in the middle of the right aisle, above the gray trailer truck",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.67,
+              0.05,
+              0.78,
+              0.2
+            ],
+            "size": "large",
+            "visible": "partial_top",
+            "is_truck": true,
+            "identity_clues": "Red cab, brown cargo container, partial upper view",
+            "evidence": "Partial view of upper portion, behind the middle red truck in the right aisle",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "All trucks are aligned along the right-side aisle; left side has exhibition structures with no trucks, no other vehicle types counted",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 4, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.70, 0.45, 0.98, 0.95],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White cab with '东风商用车' text, Dongfeng logo, front-facing heavy truck\",\n      \"evidence\": \"Fully visible at bottom right of the image, rightmost truck in the right aisle\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.68, 0.23, 0.88, 0.47],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, gray closed cargo trailer, side-front view\",\n      \"evidence\": \"Fully visible between the white truck and upper red truck in the right aisle\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.55, 0.18, 0.68, 0.33],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, blue load on top, front-facing heavy truck\",\n      \"evidence\": \"Fully visible in the middle of the right aisle, above the gray trailer truck\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.67, 0.05, 0.78, 0.20],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, brown cargo container, partial upper view\",\n      \"evidence\": \"Partial view of upper portion, behind the middle red truck in the right aisle\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All trucks are aligned along the right-side aisle; left side has exhibition structures with no trucks, no other vehicle types counted\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\south_900_corridor.jpg"
+    }
+  ]
+}

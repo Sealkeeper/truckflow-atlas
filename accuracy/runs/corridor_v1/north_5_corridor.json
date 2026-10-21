@@ -1,0 +1,94 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\north_5_corridor.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 21.61,
+      "usage": {
+        "completion_tokens": 2355,
+        "prompt_tokens": 1802,
+        "total_tokens": 4157,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1781
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 4,
+          "large": 2,
+          "medium": 2,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.5,
+              0.51,
+              0.77,
+              0.94
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色厢式半挂车，车尾有黄色反光标识，车牌粤L66002，车尾朝向镜头",
+            "evidence": "画面下方可见完整红色半挂车车尾，符合重型货车特征",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.66,
+              0.16,
+              0.79,
+              0.26
+            ],
+            "size": "medium",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "黑色厢式挂车，位于蓝色顶棚货车上方，仅货厢部分可见",
+            "evidence": "画面中间偏上位置，黑色货厢，属于货车挂车",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.62,
+              0.25,
+              0.78,
+              0.45
+            ],
+            "size": "medium",
+            "visible": "partial_side",
+            "is_truck": true,
+            "identity_clues": "蓝色顶棚厢式货车，货厢侧面和顶部可见，旁有货物",
+            "evidence": "画面中间位置，蓝色顶棚的货车货厢部分可见",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.81,
+              0.11,
+              0.95,
+              0.25
+            ],
+            "size": "large",
+            "visible": "partial_front",
+            "is_truck": true,
+            "identity_clues": "红色货车，车头部分可见，尾部有两个亮着的尾灯，朝向画面上方",
+            "evidence": "画面右上角，红色货车部分可见，符合大型货车特征",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "共可见4辆货车，1辆红色半挂车完整可见，1辆红色货车、1辆黑色挂车、1辆蓝色顶棚货车均为部分可见，无完全遮挡或无法判定的车辆",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 2, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.50, 0.51, 0.77, 0.94],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色厢式半挂车，车尾有黄色反光标识，车牌粤L66002，车尾朝向镜头\",\n      \"evidence\": \"画面下方可见完整红色半挂车车尾，符合重型货车特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.66, 0.16, 0.79, 0.26],\n      \"size\": \"medium\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"黑色厢式挂车，位于蓝色顶棚货车上方，仅货厢部分可见\",\n      \"evidence\": \"画面中间偏上位置，黑色货厢，属于货车挂车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.62, 0.25, 0.78, 0.45],\n      \"size\": \"medium\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色顶棚厢式货车，货厢侧面和顶部可见，旁有货物\",\n      \"evidence\": \"画面中间位置，蓝色顶棚的货车货厢部分可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.81, 0.11, 0.95, 0.25],\n      \"size\": \"large\",\n      \"visible\": \"partial_front\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货车，车头部分可见，尾部有两个亮着的尾灯，朝向画面上方\",\n      \"evidence\": \"画面右上角，红色货车部分可见，符合大型货车特征\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"共可见4辆货车，1辆红色半挂车完整可见，1辆红色货车、1辆黑色挂车、1辆蓝色顶棚货车均为部分可见，无完全遮挡或无法判定的车辆\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\north_5_corridor.jpg"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\north_1200_corridor.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 14.22,
+      "usage": {
+        "completion_tokens": 1639,
+        "prompt_tokens": 1802,
+        "total_tokens": 3441,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1186
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.34,
+              0.64,
+              0.79,
+              0.99
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "白色波纹金属厢式货车，完整可见，朝向画面底部",
+            "evidence": "画面底部区域可见完整的厢式货车结构，符合货车定义",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.52,
+              0.36,
+              0.79,
+              0.65
+            ],
+            "size": "large",
+            "visible": "partial_side",
+            "is_truck": true,
+            "identity_clues": "红色封闭货厢，带有编号，车头被下方白色厢式货车遮挡，为半挂货车",
+            "evidence": "画面中部可见红色货厢结构，属于货车范畴，虽车头被遮挡但货厢特征明确",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.65,
+              0.15,
+              0.82,
+              0.32
+            ],
+            "size": "large",
+            "visible": "partial_top",
+            "is_truck": true,
+            "identity_clues": "蓝色篷布覆盖的货厢，仅可见上部结构，为大型货车",
+            "evidence": "画面上部可见带篷布的货厢，符合货车特征",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "3辆均为大型货车，其中红色半挂车车头被下方白色厢式货车遮挡，蓝色篷布货车仅可见货厢部分，无歧义遮挡",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.34, 0.64, 0.79, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹金属厢式货车，完整可见，朝向画面底部\",\n      \"evidence\": \"画面底部区域可见完整的厢式货车结构，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.52, 0.36, 0.79, 0.65],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色封闭货厢，带有编号，车头被下方白色厢式货车遮挡，为半挂货车\",\n      \"evidence\": \"画面中部可见红色货厢结构，属于货车范畴，虽车头被遮挡但货厢特征明确\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.65, 0.15, 0.82, 0.32],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色篷布覆盖的货厢，仅可见上部结构，为大型货车\",\n      \"evidence\": \"画面上部可见带篷布的货厢，符合货车特征\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"3辆均为大型货车，其中红色半挂车车头被下方白色厢式货车遮挡，蓝色篷布货车仅可见货厢部分，无歧义遮挡\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\corridor_v1\\north_1200_corridor.jpg"
+    }
+  ]
+}

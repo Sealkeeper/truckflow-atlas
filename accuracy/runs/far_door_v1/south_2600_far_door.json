@@ -1,0 +1,80 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\south_2600_far_door.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 11.03,
+      "usage": {
+        "completion_tokens": 1231,
+        "prompt_tokens": 1760,
+        "total_tokens": 2991,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 797
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.36,
+              0.37,
+              0.53,
+              0.76
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "White heavy-duty truck cab, front orientation, visible text on front grille",
+            "evidence": "Fully visible heavy truck in the center of the image, no occlusion affecting identification",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.5,
+              0.39,
+              0.62,
+              0.58
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red heavy-duty truck cab, front orientation, blue item on top of the cab",
+            "evidence": "Visible behind the white truck, front portion fully visible, no major occlusion",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.56,
+              0.64,
+              0.76,
+              0.99
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "Red cargo trailer, rear orientation, no cab attached to this trailer",
+            "evidence": "Separate trailer in the lower right area, clearly visible as a truck component per counting rules",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "All three trucks are clearly visible, no complete occlusion; the third vehicle is a separate trailer counted per the rules",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.36, 0.37, 0.53, 0.76],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White heavy-duty truck cab, front orientation, visible text on front grille\",\n      \"evidence\": \"Fully visible heavy truck in the center of the image, no occlusion affecting identification\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.50, 0.39, 0.62, 0.58],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red heavy-duty truck cab, front orientation, blue item on top of the cab\",\n      \"evidence\": \"Visible behind the white truck, front portion fully visible, no major occlusion\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.56, 0.64, 0.76, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cargo trailer, rear orientation, no cab attached to this trailer\",\n      \"evidence\": \"Separate trailer in the lower right area, clearly visible as a truck component per counting rules\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All three trucks are clearly visible, no complete occlusion; the third vehicle is a separate trailer counted per the rules\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\south_2600_far_door.jpg"
+    }
+  ]
+}

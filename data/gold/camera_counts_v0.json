@@ -1,9 +1,21 @@
 {
   "version": "camera-counts-v0",
-  "status": "manual-development-set",
+  "status": "ai-single-annotator-provisional",
   "scope": "per-camera visible truck count; cross-camera physical identity is deliberately NOT merged here",
   "source": "2025-10-19 21:59-22:43, A区天花北/南 sample frames",
-  "annotation_method": "full-resolution visual inspection with 0.1 normalized grid; 2x aisle crops for distant/occluded vehicles",
+  "annotation_method": "AI (Codex hub) single-annotator visual inspection of single sample frames, using a 0.1 normalized grid and 2x aisle crops for distant or occluded vehicles. Not human-labeled and not independently adjudicated.",
+  "provenance": {
+    "created_commit": "126396c",
+    "created_at": "2026-10-21T17:07:25+08:00",
+    "created_in": "truckflow-atlas main worktree",
+    "source_videos": [
+      "D:/File/PROJECT/数据底座/数据底座-货车/视频/A区天花北.mp4",
+      "D:/File/PROJECT/数据底座/数据底座-货车/视频/A区天花南.mp4"
+    ],
+    "extracted_frames": "assets/frames/<camera>_<time>.jpg",
+    "copied_from_other_sessions": false,
+    "human_reviewed": false
+  },
   "count_definition": "Every distinct truck body visible in the camera image, including trailer-only when clearly separate; forklifts, cars, vans and people excluded. A tractor and its trailer count once.",
   "review_required": [
     "south_5: the far brown cargo body may be a trailer of the middle truck; counted as separate only because the two cargo bodies and cabs are spatially distinct.",
@@ -32,7 +44,8 @@
     {"camera": "south", "time": 2400, "total": 3, "large": 2, "medium": 1, "small": 0, "review": true},
     {"camera": "south", "time": 2600, "total": 3, "large": 2, "medium": 1, "small": 0, "review": true}
   ],
-  "confirmed_subset": {
+  "unverified_spot_checks": {
+    "note": "Earlier ad-hoc spot checks, not a two-annotator confirmation. Treat every value as provisional until final review.",
     "north_600": 4,
     "north_1200": 3,
     "south_600": 5,
