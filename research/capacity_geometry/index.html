@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>通道几何标定与容量建议</title>
+    <link rel="stylesheet" href="capacity.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">TRUCKFLOW · GEOMETRY LAB</p>
+        <h1>通道几何标定与容量建议</h1>
+        <p class="subtitle">
+          四角单应反投影 · 米制长宽 · 车型占位 · 不确定性区间
+        </p>
+      </div>
+      <div class="topbar-actions">
+        <label class="frame-picker">
+          <span>样帧</span>
+          <select id="frameSelect">
+            <option value="north">north_5.jpg</option>
+            <option value="south">south_5.jpg</option>
+          </select>
+        </label>
+        <span id="confirmBadge" class="badge badge-warn">建议值 · 待用户确认</span>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="panel stage-panel">
+        <div class="panel-head">
+          <div>
+            <h2>1. 点选通道边界</h2>
+            <p>
+              依次点击近左、近右、远右、远左四个地面角点。黄线为单应框，
+              青线仅用于目测中心线。
+            </p>
+          </div>
+          <div class="button-row">
+            <button id="undoPoint" class="btn btn-ghost" type="button">撤销点</button>
+            <button id="resetPoints" class="btn btn-ghost" type="button">重置</button>
+          </div>
+        </div>
+
+        <div class="image-wrap">
+          <canvas id="imageCanvas" width="1280" height="960"></canvas>
+          <div id="pointHint" class="point-hint">还需点击 4 个角点</div>
+        </div>
+
+        <div class="assumption-strip">
+          <span class="strip-label">样帧假设</span>
+          <span id="sampleAssumption">
+            通道宽按约 6.0 m、可见段长按约 55 m 估计；两项均可在右侧修改。
+          </span>
+        </div>
+
+        <div class="preview-block">
+          <div class="panel-head compact">
+            <div>
+              <h2>2. 俯视反投影预览</h2>
+              <p id="previewMeta">等待标定</p>
+            </div>
+            <span id="previewScaleLabel" class="badge badge-neutral">等比例</span>
+          </div>
+          <canvas id="topdownCanvas" width="720" height="120"></canvas>
+        </div>
+      </section>
+
+      <aside class="side">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>标定参数</h2>
+              <p>米制值必须来自量测或明确假设，不能从像素比例直接换算。</p>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <label>
+              <span>标定模式</span>
+              <select id="calibrationMode">
+                <option value="two-dim">宽度 + 长度（推荐）</option>
+                <option value="width-aspect">仅宽度 + 长宽比假设</option>
+                <option value="length-aspect">仅长度 + 长宽比假设</option>
+              </select>
+            </label>
+            <div class="field-pair" id="widthField">
+              <label>
+                <span>通道宽 / m</span>
+                <input id="widthInput" type="number" min="1" step="0.1" value="6.0" />
+              </label>
+              <label id="lengthField">
+                <span>可见段长 / m</span>
+                <input id="lengthInput" type="number" min="2" step="0.5" value="55" />
+              </label>
+            </div>
+            <label id="aspectField" hidden>
+              <span>长宽比（长度 / 宽度）</span>
+              <input id="aspectInput" type="number" min="1" step="0.1" value="9.2" />
+            </label>
+            <div id="identifiabilityNote" class="note note-info">
+              四角 + 两个米制尺寸可直接确定面积；若只给一个尺寸，另一维来自显式长宽比假设。
+            </div>
+          </div>
+
+          <div class="metric-grid">
+            <div class="metric">
+              <span>通道面积</span>
+              <strong id="areaValue">—</strong>
+              <small>米制输入，不是像素面积</small>
+            </div>
+            <div class="metric">
+              <span>回投 RMS</span>
+              <strong id="rmsValue">—</strong>
+              <small>四角约束残差</small>
+            </div>
+            <div class="metric">
+              <span>纵向消失点</span>
+              <strong id="vpValue">—</strong>
+              <small>检查是否落在画面内</small>
+            </div>
+            <div class="metric">
+              <span>像素面积</span>
+              <strong id="pixelAreaValue">—</strong>
+              <small>只作辅助，不能当 m²</small>
+            </div>
+          </div>
+          <div id="geometryWarnings" class="note note-warn" hidden></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>3. 车型占位模型</h2>
+              <p>以下尺寸为初始建议，可按现场车辆校正。</p>
+            </div>
+          </div>
+
+          <div class="vehicle-table">
+            <div class="vehicle-row vehicle-head">
+              <span>车型</span><span>长 × 宽</span><span>倒车余量</span>
+            </div>
+            <div class="vehicle-row">
+              <span>大型</span>
+              <span><input id="largeLength" type="number" value="16.5" step="0.1" /> × <input id="largeWidth" type="number" value="2.55" step="0.05" /></span>
+              <span><input id="largeReverse" type="number" value="12" step="0.5" /> m</span>
+            </div>
+            <div class="vehicle-row">
+              <span>中型</span>
+              <span><input id="mediumLength" type="number" value="9.0" step="0.1" /> × <input id="mediumWidth" type="number" value="2.5" step="0.05" /></span>
+              <span><input id="mediumReverse" type="number" value="8" step="0.5" /> m</span>
+            </div>
+            <div class="vehicle-row">
+              <span>小型</span>
+              <span><input id="smallLength" type="number" value="6.0" step="0.1" /> × <input id="smallWidth" type="number" value="2.2" step="0.05" /></span>
+              <span><input id="smallReverse" type="number" value="5" step="0.5" /> m</span>
+            </div>
+          </div>
+
+          <div class="form-grid compact-grid">
+            <label>
+              <span>通行方式</span>
+              <select id="trafficMode">
+                <option value="dead-end">尽端式（需倒车余量）</option>
+                <option value="through">直通式（无倒车余量）</option>
+              </select>
+            </label>
+            <label>
+              <span>纵向净距 / m</span>
+              <input id="longitudinalGap" type="number" min="0" step="0.1" value="2.0" />
+            </label>
+            <label>
+              <span>侧边净空 / m</span>
+              <input id="sideClearance" type="number" min="0" step="0.1" value="0.4" />
+            </label>
+            <label>
+              <span>面积填充率</span>
+              <input id="fillFactor" type="number" min="0.05" max="0.95" step="0.05" value="0.55" />
+            </label>
+          </div>
+        </section>
+
+        <section class="panel result-panel">
+          <div class="panel-head">
+            <div>
+              <h2>4. 容量建议</h2>
+              <p>纵向排布用于移动通道；面积法仅作理论上界参照。</p>
+            </div>
+          </div>
+
+          <div id="capacityCards" class="capacity-cards"></div>
+
+          <div class="formula-box">
+            <code>N纵向 = floor((L可用 + 净距) / (车长 + 净距))</code>
+            <code>N面积 = floor(W可用 × L可用 × 填充率 / (车长 × 车宽))</code>
+          </div>
+
+          <label class="confirm-row">
+            <input id="confirmCapacity" type="checkbox" />
+            <span>我已在现场核对，确认以上容量可作为本通道额定容量</span>
+          </label>
+          <p id="confirmationHint" class="note note-warn">
+            未确认前仅显示“建议值”，导出与工作台接口均标记 <code>confirmed: false</code>。
+          </p>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>5. 敏感性区间</h2>
+              <p>宽度 ±8%、长度 ±12%、车长 ±5%、净距 ±0.5 m，蒙特卡洛 20000 次。</p>
+            </div>
+            <button id="recalcUncertainty" class="btn btn-ghost" type="button">重算</button>
+          </div>
+          <div id="uncertaintyTable" class="uncertainty-table"></div>
+          <p class="note note-info">
+            容量取整数，区间可能只在楼层边界处变化。角点点击误差在“长宽均已知”时
+            不改变面积，只改变地面位置映射，因此不伪造面积误差。
+          </p>
+        </section>
+
+        <section class="panel load-panel">
+          <div class="panel-head">
+            <div>
+              <h2>6. 负载率核算</h2>
+              <p>严格采用 Σ(当前该型数量 / 该型容量)。</p>
+            </div>
+          </div>
+          <div class="count-inputs">
+            <label><span>大型</span><input id="countLarge" type="number" min="0" value="0" /></label>
+            <label><span>中型</span><input id="countMedium" type="number" min="0" value="0" /></label>
+            <label><span>小型</span><input id="countSmall" type="number" min="0" value="0" /></label>
+          </div>
+          <div id="loadResult" class="load-result">—</div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>嵌入接口</h2>
+              <p>几何与容量函数均在 <code>capacity.js</code>，无第三方依赖。</p>
+            </div>
+          </div>
+          <pre class="code-block"><code>const cal = TruckCapacity.calibrate({
+  imagePoints: [nearLeft, nearRight, farRight, farLeft],
+  widthM: 6.0, lengthM: 55,
+  imageSize: { width: 1280, height: 960 }
+});
+const cap = TruckCapacity.computeCapacities({
+  widthM: cal.widthM, lengthM: cal.lengthM,
+  model: { trafficMode: "dead-end" }
+});</code></pre>
+          <p class="note note-warn">
+            <code>capacity.js</code> 只给建议与区间，不替用户确认额定容量。
+          </p>
+        </section>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <span>研究模块 · 2026-10-21</span>
+      <span>几何静态容量 ≠ 吞吐量 ≠ 目标检测结果</span>
+    </footer>
+
+    <script src="capacity.js"></script>
+    <script>
+      (function () {
+        "use strict";
+
+        const TC = window.TruckCapacity;
+        const FRAMES = {
+          north: {
+            file: "../../assets/frames/north_5.jpg",
+            points: [
+              { x: 450, y: 935 },
+              { x: 785, y: 935 },
+              { x: 700, y: 110 },
+              { x: 600, y: 110 }
+            ],
+            widthM: 6.0,
+            lengthM: 55,
+            assumption:
+              "北侧机位：宽按 6.0 m（约两个 3 m 展位模数），可见段长按 55 m（目测约 9 个 6 m 地面模数段）；两项均为待校正假设。"
+          },
+          south: {
+            file: "../../assets/frames/south_5.jpg",
+            points: [
+              { x: 470, y: 935 },
+              { x: 770, y: 935 },
+              { x: 700, y: 110 },
+              { x: 588, y: 110 }
+            ],
+            widthM: 6.0,
+            lengthM: 55,
+            assumption:
+              "南侧机位：宽按 6.0 m、可见段长按 55 m 的同一组展位模数假设；画面远端有货车遮挡，长度区间应更宽。"
+          }
+        };
+
+        const state = {
+          frameName: "north",
+          image: null,
+          points: [],
+          calibration: null,
+          capacities: null,
+          uncertainty: null
+        };
+
+        const $ = (id) => document.getElementById(id);
+        const canvas = $("imageCanvas");
+        const context = canvas.getContext("2d");
+        const topdown = $("topdownCanvas");
+        const topdownContext = topdown.getContext("2d");
+
+        function readNumber(id, fallback) {
+          const value = Number($(id).value);
+          return Number.isFinite(value) && value > 0 ? value : fallback;
+        }
+
+        function vehicleOverrides() {
+          return {
+            large: {
+              lengthM: readNumber("largeLength", 16.5),
+              widthM: readNumber("largeWidth", 2.55),
+              reverseReserveM: Math.max(0, Number($("largeReverse").value) || 0)
+            },
+            medium: {
+              lengthM: readNumber("mediumLength", 9.0),
+              widthM: readNumber("mediumWidth", 2.5),
+              reverseReserveM: Math.max(0, Number($("mediumReverse").value) || 0)
+            },
+            small: {
+              lengthM: readNumber("smallLength", 6.0),
+              widthM: readNumber("smallWidth", 2.2),
+              reverseReserveM: Math.max(0, Number($("smallReverse").value) || 0)
+            }
+          };
+        }
+
+        function modelOptions() {
+          return {
+            trafficMode: $("trafficMode").value,
+            longitudinalGapM: Math.max(0, Number($("longitudinalGap").value) || 0),
+            sideClearanceM: Math.max(0, Number($("sideClearance").value) || 0),
+            endClearanceM: 0.5,
+            lateralGapM: 0.8,
+            laneCount: 1,
+            areaFillFactor: Math.min(0.95, Math.max(0.05, Number($("fillFactor").value) || 0.55))
+          };
+        }
+
+        function syncModeFields() {
+          const mode = $("calibrationMode").value;
+          $("lengthField").hidden = mode !== "two-dim";
+          $("aspectField").hidden = mode === "two-dim";
+          $("lengthField").style.display = mode === "two-dim" ? "" : "none";
+          $("aspectField").style.display = mode === "two-dim" ? "none" : "";
+          if (mode === "width-aspect") {
+            const width = readNumber("widthInput", 6);
+            $("aspectInput").value = (readNumber("lengthInput", 55) / width).toFixed(2);
+          } else if (mode === "length-aspect") {
+            const length = readNumber("lengthInput", 55);
+            const width = readNumber("widthInput", 6);
+            $("aspectInput").value = (length / width).toFixed(2);
+          }
+          $("identifiabilityNote").textContent =
+            mode === "two-dim"
+              ? "四角 + 两个米制尺寸可直接确定面积；单应矩阵只负责把路面映射到这个矩形。"
+              : "只给一个米制尺寸不足以同时确定长和宽。另一维来自右侧长宽比假设，结果必须标记为估计。";
+        }
+
+        function loadFrame(name, keepValues) {
+          state.frameName = name;
+          state.points = FRAMES[name].points.map((point) => ({ ...point }));
+          if (!keepValues) {
+            $("widthInput").value = FRAMES[name].widthM;
+            $("lengthInput").value = FRAMES[name].lengthM;
+          }
+          $("sampleAssumption").textContent = FRAMES[name].assumption;
+          const image = new Image();
+          image.onload = function () {
+            state.image = image;
+            canvas.width = image.naturalWidth;
+            canvas.height = image.naturalHeight;
+            redraw();
+            recalculate();
+          };
+          image.src = FRAMES[name].file;
+        }
+
+        function drawSquare(ctx, x, y, size, fill, stroke) {
+          ctx.fillStyle = fill;
+          ctx.strokeStyle = stroke;
+          ctx.lineWidth = 2;
+          ctx.fillRect(x - size / 2, y - size / 2, size, size);
+          ctx.strokeRect(x - size / 2, y - size / 2, size, size);
+        }
+
+        function drawLabel(ctx, text, x, y) {
+          ctx.save();
+          ctx.font = "600 17px 'Segoe UI', 'Microsoft YaHei', sans-serif";
+          const width = ctx.measureText(text).width + 12;
+          ctx.fillStyle = "rgba(7, 19, 32, 0.82)";
+          ctx.fillRect(x, y, width, 26);
+          ctx.fillStyle = "#f6d365";
+          ctx.fillText(text, x + 6, y + 19);
+          ctx.restore();
+        }
+
+        function redraw() {
+          if (!state.image) return;
+          context.clearRect(0, 0, canvas.width, canvas.height);
+          context.drawImage(state.image, 0, 0);
+          const points = state.points;
+          if (points.length) {
+            context.save();
+            context.strokeStyle = "#b9ff4f";
+            context.lineWidth = 4;
+            context.shadowColor = "rgba(0,0,0,0.7)";
+            context.shadowBlur = 8;
+            if (points.length === 4) {
+              context.beginPath();
+              context.moveTo(points[0].x, points[0].y);
+              for (let index = 1; index < 4; index += 1) {
+                context.lineTo(points[index].x, points[index].y);
+              }
+              context.closePath();
+              context.stroke();
+              context.setLineDash([10, 9]);
+              context.strokeStyle = "#1ee4e0";
+              context.lineWidth = 2;
+              context.beginPath();
+              context.moveTo(
+                (points[0].x + points[1].x) / 2,
+                (points[0].y + points[1].y) / 2
+              );
+              context.lineTo(
+                (points[2].x + points[3].x) / 2,
+                (points[2].y + points[3].y) / 2
+              );
+              context.stroke();
+            }
+            context.restore();
+            const labels = ["近左", "近右", "远右", "远左"];
+            points.forEach((point, index) => {
+              drawSquare(context, point.x, point.y, 18, "#ff5c5c", "#ffffff");
+              drawLabel(context, `${index + 1} ${labels[index]}`, point.x + 12, point.y - 30);
+            });
+          }
+          $("pointHint").textContent =
+            points.length === 4
+              ? "4 点已就绪；拖动参数可即时复核"
+              : `还需点击 ${4 - points.length} 个角点`;
+          $("pointHint").classList.toggle("ready", points.length === 4);
+        }
+
+        function pointerToImage(event) {
+          const rect = canvas.getBoundingClientRect();
+          return {
+            x: ((event.clientX - rect.left) / rect.width) * canvas.width,
+            y: ((event.clientY - rect.top) / rect.height) * canvas.height
+          };
+        }
+
+        canvas.addEventListener("click", function (event) {
+          if (!state.image) return;
+          if (state.points.length >= 4) state.points = [];
+          state.points.push(pointerToImage(event));
+          redraw();
+          recalculate();
+        });
+
+        $("undoPoint").addEventListener("click", function () {
+          state.points.pop();
+          redraw();
+          recalculate();
+        });
+
+        $("resetPoints").addEventListener("click", function () {
+          state.points = [];
+          redraw();
+          recalculate();
+        });
+
+        $("frameSelect").addEventListener("change", function (event) {
+          loadFrame(event.target.value, false);
+        });
+
+        $("calibrationMode").addEventListener("change", function () {
+          syncModeFields();
+          recalculate();
+        });
+
+        document.querySelectorAll("input, select").forEach((element) => {
+          element.addEventListener("change", recalculate);
+        });
+
+        $("confirmCapacity").addEventListener("change", function () {
+          updateConfirmationBadge();
+        });
+
+        $("recalcUncertainty").addEventListener("click", function () {
+          runUncertainty();
+        });
+
+        function calibrateNow() {
+          if (state.points.length !== 4) return null;
+          const mode = $("calibrationMode").value;
+          const imageSize = { width: canvas.width, height: canvas.height };
+          if (mode === "two-dim") {
+            return TC.calibrate({
+              imagePoints: state.points,
+              widthM: readNumber("widthInput", 6),
+              lengthM: readNumber("lengthInput", 55),
+              imageSize
+            });
+          }
+          return TC.calibrateFromReference({
+            imagePoints: state.points,
+            knownSide: mode === "width-aspect" ? "width" : "length",
+            knownM:
+              mode === "width-aspect"
+                ? readNumber("widthInput", 6)
+                : readNumber("lengthInput", 55),
+            aspectRatio: readNumber("aspectInput", 9.2),
+            imageSize
+          });
+        }
+
+        function recalculate() {
+          if (state.points.length !== 4) {
+            state.calibration = null;
+            $("areaValue").textContent = "—";
+            $("rmsValue").textContent = "—";
+            $("vpValue").textContent = "—";
+            $("pixelAreaValue").textContent = "—";
+            $("previewMeta").textContent = "等待 4 个角点";
+            $("geometryWarnings").hidden = true;
+            $("capacityCards").innerHTML = "";
+            $("uncertaintyTable").innerHTML = "";
+            return;
+          }
+          try {
+            state.calibration = calibrateNow();
+          } catch (error) {
+            state.calibration = null;
+            $("geometryWarnings").hidden = false;
+            $("geometryWarnings").textContent =
+              (error && error.message) || "标定失败，请检查角点。";
+            $("areaValue").textContent = "—";
+            return;
+          }
+          const calibration = state.calibration;
+          $("areaValue").textContent = calibration.areaM2.toFixed(1) + " m²";
+          $("rmsValue").textContent = calibration.reprojection.rms.toFixed(3) + " px";
+          const vp = calibration.vanishingPoints.longitudinal;
+          $("vpValue").textContent = vp.atInfinity
+            ? "平行/无穷远"
+            : `${vp.point.x.toFixed(0)}, ${vp.point.y.toFixed(0)}`;
+          $("pixelAreaValue").textContent =
+            Math.round(calibration.pixelArea).toLocaleString("zh-CN") + " px²";
+          const warnings = calibration.vanishingPoints.warnings.slice();
+          if (calibration.identifiability) warnings.push(calibration.identifiability.explanation);
+          if (warnings.length) {
+            $("geometryWarnings").hidden = false;
+            $("geometryWarnings").textContent = warnings.join(" ");
+          } else {
+            $("geometryWarnings").hidden = true;
+          }
+          state.capacities = TC.computeCapacities({
+            widthM: calibration.widthM,
+            lengthM: calibration.lengthM,
+            model: modelOptions(),
+            vehicles: vehicleOverrides()
+          });
+          renderCapacities();
+          renderTopdown(calibration);
+          runUncertainty();
+          updateLoad();
+        }
+
+        function renderTopdown(calibration) {
+          const width = calibration.widthM;
+          const length = calibration.lengthM;
+          const exaggeration = 2.5;
+          const previewLong = 720;
+          const previewShort = Math.max(26, Math.round((previewLong * width) / length * exaggeration));
+          topdown.width = previewLong;
+          topdown.height = previewShort;
+          topdownContext.clearRect(0, 0, previewLong, previewShort);
+          const sourceCanvas = document.createElement("canvas");
+          sourceCanvas.width = canvas.width;
+          sourceCanvas.height = canvas.height;
+          const sourceContext = sourceCanvas.getContext("2d");
+          sourceContext.drawImage(state.image, 0, 0);
+          let sourceData;
+          try {
+            sourceData = sourceContext.getImageData(0, 0, sourceCanvas.width, sourceCanvas.height);
+          } catch (error) {
+            topdownContext.fillStyle = "#16263a";
+            topdownContext.fillRect(0, 0, previewLong, previewShort);
+            topdownContext.fillStyle = "#f6d365";
+            topdownContext.fillText("浏览器阻止了本地图片采样，请通过 HTTP 服务打开本页。", 16, 28);
+            return;
+          }
+          const output = topdownContext.createImageData(previewLong, previewShort);
+          const src = sourceData.data;
+          const dst = output.data;
+          for (let py = 0; py < previewShort; py += 1) {
+            for (let px = 0; px < previewLong; px += 1) {
+              const world = {
+                x: width * (1 - py / previewShort),
+                y: length * (px / previewLong)
+              };
+              let imagePoint;
+              try {
+                imagePoint = TC.applyHomography(calibration.worldToImage, world);
+              } catch (error) {
+                continue;
+              }
+              const sx = Math.round(imagePoint.x);
+              const sy = Math.round(imagePoint.y);
+              const offset = (py * previewLong + px) * 4;
+              if (sx < 0 || sx >= canvas.width || sy < 0 || sy >= canvas.height) {
+                dst[offset] = 20;
+                dst[offset + 1] = 32;
+                dst[offset + 2] = 48;
+                dst[offset + 3] = 255;
+                continue;
+              }
+              const sourceOffset = (sy * canvas.width + sx) * 4;
+              dst[offset] = src[sourceOffset];
+              dst[offset + 1] = src[sourceOffset + 1];
+              dst[offset + 2] = src[sourceOffset + 2];
+              dst[offset + 3] = 255;
+            }
+          }
+          topdownContext.putImageData(output, 0, 0);
+          topdownContext.save();
+          topdownContext.strokeStyle = "rgba(30, 228, 224, 0.65)";
+          topdownContext.lineWidth = 1;
+          topdownContext.setLineDash([5, 5]);
+          topdownContext.beginPath();
+          topdownContext.moveTo(0, previewShort / 2);
+          topdownContext.lineTo(previewLong, previewShort / 2);
+          topdownContext.stroke();
+          const stepM = 10;
+          topdownContext.setLineDash([2, 5]);
+          topdownContext.font = "600 12px 'Segoe UI', sans-serif";
+          topdownContext.fillStyle = "#f6d365";
+          for (let m = 0; m <= length; m += stepM) {
+            const x = (m / length) * previewLong;
+            topdownContext.beginPath();
+            topdownContext.moveTo(x, 0);
+            topdownContext.lineTo(x, previewShort);
+            topdownContext.stroke();
+            if (m % 20 === 0) {
+              topdownContext.fillText(`${m}m`, x + 4, previewShort - 5);
+            }
+          }
+          topdownContext.restore();
+          $("previewMeta").textContent =
+            `${width.toFixed(1)} m × ${length.toFixed(1)} m · 面积 ${calibration.areaM2.toFixed(1)} m² · ` +
+            `横向（宽度）显示放大 ${exaggeration}×，面积按真实米制值计算`;
+          $("previewScaleLabel").textContent = `宽度方向 ${exaggeration}× 预览`;
+        }
+
+        function renderCapacities() {
+          const types = ["large", "medium", "small"];
+          $("capacityCards").innerHTML = types
+            .map((type) => {
+              const item = state.capacities.vehicles[type];
+              return `
+                <article class="capacity-card">
+                  <div class="capacity-head">
+                    <span>${item.label}</span>
+                    <strong>${item.longitudinalCapacity}</strong>
+                  </div>
+                  <p>纵向排布容量（单车道）</p>
+                  <div class="capacity-meta">
+                    <span>面积法 ${item.areaCapacity}</span>
+                    <span>可用长 ${item.usableLengthM.toFixed(1)} m</span>
+                  </div>
+                  <code>${item.formulas.longitudinal}</code>
+                </article>`;
+            })
+            .join("");
+        }
+
+        function runUncertainty() {
+          if (!state.calibration) return;
+          state.uncertainty = TC.monteCarloCapacity({
+            widthM: state.calibration.widthM,
+            lengthM: state.calibration.lengthM,
+            model: modelOptions(),
+            vehicles: vehicleOverrides(),
+            trials: 20000,
+            seed: 20251019
+          });
+          const types = ["large", "medium", "small"];
+          const labels = { large: "大型", medium: "中型", small: "小型" };
+          $("uncertaintyTable").innerHTML = `
+            <div class="uncertainty-row uncertainty-head">
+              <span>车型</span><span>纵向 P05–P95</span><span>面积 P05–P95</span>
+            </div>
+            ${types
+              .map((type) => {
+                const item = state.uncertainty.summary[type];
+                return `<div class="uncertainty-row">
+                  <span>${labels[type]}</span>
+                  <strong>${item.longitudinal.p05}–${item.longitudinal.p95}</strong>
+                  <span>${item.area.p05}–${item.area.p95}</span>
+                </div>`;
+              })
+              .join("")}`;
+        }
+
+        function updateLoad() {
+          if (!state.capacities) {
+            $("loadResult").textContent = "先完成标定";
+            return;
+          }
+          const counts = {
+            large: Math.max(0, Number($("countLarge").value) || 0),
+            medium: Math.max(0, Number($("countMedium").value) || 0),
+            small: Math.max(0, Number($("countSmall").value) || 0)
+          };
+          const caps = {
+            large: state.capacities.vehicles.large.longitudinalCapacity,
+            medium: state.capacities.vehicles.medium.longitudinalCapacity,
+            small: state.capacities.vehicles.small.longitudinalCapacity
+          };
+          const result = TC.loadSummary(counts, caps);
+          if (result.hasUnknown) {
+            $("loadResult").textContent = "存在 0 容量但当前有车，无法计算负载率";
+            return;
+          }
+          $("loadResult").innerHTML = `
+            <div><span>综合负载率</span><strong>${result.totalPercent.toFixed(1)}%</strong></div>
+            <code>${result.terms
+              .map((term) => `${term.count}/${term.capacity || "0"}`)
+              .join(" + ")} = ${result.totalRatio.toFixed(3)}</code>`;
+        }
+
+        ["countLarge", "countMedium", "countSmall"].forEach((id) => {
+          $(id).addEventListener("input", updateLoad);
+        });
+
+        function updateConfirmationBadge() {
+          const confirmed = $("confirmCapacity").checked;
+          $("confirmBadge").textContent = confirmed
+            ? "用户已确认（本地）"
+            : "建议值 · 待用户确认";
+          $("confirmBadge").className = confirmed
+            ? "badge badge-ok"
+            : "badge badge-warn";
+          $("confirmationHint").hidden = confirmed;
+        }
+
+        function readQuery() {
+          const params = new URLSearchParams(window.location.search);
+          const preset = params.get("preset");
+          if (preset === "south" || preset === "north") {
+            $("frameSelect").value = preset;
+            loadFrame(preset, true);
+          } else {
+            loadFrame("north", true);
+          }
+          if (params.has("width")) $("widthInput").value = params.get("width");
+          if (params.has("length")) $("lengthInput").value = params.get("length");
+          if (params.get("capture") === "1") {
+            document.body.classList.add("capture-mode");
+          }
+        }
+
+        syncModeFields();
+        updateConfirmationBadge();
+        readQuery();
+
+        window.capacityApp = {
+          state,
+          loadFrame,
+          recalculate,
+          TC
+        };
+      })();
+    </script>
+  </body>
+</html>
