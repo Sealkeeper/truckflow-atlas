@@ -1,0 +1,106 @@
+{
+  "sample_id": "south_066474",
+  "camera": "south",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花南.mp4",
+  "source_sha256": "eb75e31b2c638f7ea9faac0af25a13389738775f0bc8bf1c9bc45834acd777f3",
+  "frame_number": 66474,
+  "video_seconds": 2658.96,
+  "video_timecode": "00:44:18.960",
+  "business_time": "2025-10-19T22:43:44+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/south_046.jpg",
+  "image_sha256": "fda0f3515c175f6572d07a70557f7df6fc5a33cb6d57c74b739823e49e9fa80d",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:53:49+08:00",
+      "ok": true,
+      "latency_s": 32.46,
+      "usage": {
+        "completion_tokens": 3967,
+        "prompt_tokens": 1773,
+        "total_tokens": 5740,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3520
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 32.46,
+  "usage": {
+    "completion_tokens": 3967,
+    "prompt_tokens": 1773,
+    "total_tokens": 5740,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3520
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 2, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.39, 0.22, 0.47, 0.41],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White cab, white enclosed cargo box, front orientation\",\n      \"evidence\": \"Clearly visible in central left aisle, no occlusion, identifiable as a box truck\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.19, 0.50, 0.33],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red heavy-duty cab, front orientation, positioned behind the white truck\",\n      \"evidence\": \"Fully visible in central aisle, distinct red cab of a heavy truck\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.46, 0.36, 0.63, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab (side orientation) attached to red enclosed semi-trailer, along right side of central aisle\",\n      \"evidence\": \"Combined cab and trailer, fully visible, no occlusion, identifiable as a semi-truck\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All counted vehicles are located in the central aisle of the exhibition hall, no significant occlusion affecting identification. The red semi-truck is counted as one vehicle (cab + trailer, same unit).\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 2,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.39,
+          0.22,
+          0.47,
+          0.41
+        ],
+        "size": "medium",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "White cab, white enclosed cargo box, front orientation",
+        "evidence": "Clearly visible in central left aisle, no occlusion, identifiable as a box truck",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.44,
+          0.19,
+          0.5,
+          0.33
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red heavy-duty cab, front orientation, positioned behind the white truck",
+        "evidence": "Fully visible in central aisle, distinct red cab of a heavy truck",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.46,
+          0.36,
+          0.63,
+          0.99
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red cab (side orientation) attached to red enclosed semi-trailer, along right side of central aisle",
+        "evidence": "Combined cab and trailer, fully visible, no occlusion, identifiable as a semi-truck",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "All counted vehicles are located in the central aisle of the exhibition hall, no significant occlusion affecting identification. The red semi-truck is counted as one vehicle (cab + trailer, same unit).",
+    "uncertain_reasons": []
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "sample_id": "north_063000",
+  "camera": "north",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花北.mp4",
+  "source_sha256": "9222cffdf50f955794b4e10494a2c3a8f86c5179e4d106a4189c611cde454515",
+  "frame_number": 63000,
+  "video_seconds": 2520.0,
+  "video_timecode": "00:42:00.000",
+  "business_time": "2025-10-19T22:41:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/north_043.jpg",
+  "image_sha256": "ea2b59be920ab18d23ddd960cfc74800da60eece75ddcea001755ee8f5f1049c",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:33:51+08:00",
+      "ok": true,
+      "latency_s": 9.78,
+      "usage": {
+        "completion_tokens": 835,
+        "prompt_tokens": 1773,
+        "total_tokens": 2608,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 494
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 9.78,
+  "usage": {
+    "completion_tokens": 835,
+    "prompt_tokens": 1773,
+    "total_tokens": 2608,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 494
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.368, 0.452, 0.489, 0.828],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red rectangular cargo box, rear displays markings '9188 980', facing away from camera\",\n      \"evidence\": \"Fully visible large truck in the central aisle, no occlusion, clearly a heavy cargo vehicle\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.442, 0.171, 0.509, 0.329],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Brownish-red rectangular cargo box, rear has partial text markings, facing away from camera\",\n      \"evidence\": \"Fully visible large truck further along the central aisle, separate from the first truck, no occlusion\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"Both trucks are fully visible in the central aisle of the exhibition hall, no significant occlusion affecting their identification as trucks\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 2,
+      "large": 2,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.368,
+          0.452,
+          0.489,
+          0.828
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red rectangular cargo box, rear displays markings '9188 980', facing away from camera",
+        "evidence": "Fully visible large truck in the central aisle, no occlusion, clearly a heavy cargo vehicle",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.442,
+          0.171,
+          0.509,
+          0.329
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Brownish-red rectangular cargo box, rear has partial text markings, facing away from camera",
+        "evidence": "Fully visible large truck further along the central aisle, separate from the first truck, no occlusion",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "Both trucks are fully visible in the central aisle of the exhibition hall, no significant occlusion affecting their identification as trucks",
+    "uncertain_reasons": []
+  }
+}

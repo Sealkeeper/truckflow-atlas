@@ -1,0 +1,106 @@
+{
+  "sample_id": "north_013500",
+  "camera": "north",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花北.mp4",
+  "source_sha256": "9222cffdf50f955794b4e10494a2c3a8f86c5179e4d106a4189c611cde454515",
+  "frame_number": 13500,
+  "video_seconds": 540.0,
+  "video_timecode": "00:09:00.000",
+  "business_time": "2025-10-19T22:08:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/north_010.jpg",
+  "image_sha256": "a77ddf9cd72ae3e2ecdd2eec77c9c509bf73661c6dcdc1ed76afc62f5b2334d0",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:31:23+08:00",
+      "ok": true,
+      "latency_s": 23.09,
+      "usage": {
+        "completion_tokens": 2454,
+        "prompt_tokens": 1773,
+        "total_tokens": 4227,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2010
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 23.09,
+  "usage": {
+    "completion_tokens": 2454,
+    "prompt_tokens": 1773,
+    "total_tokens": 4227,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2010
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 2, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.47, 0.20, 0.56, 0.41],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red heavy truck, rear-facing, with illuminated rear lights, located in the central aisle\",\n      \"evidence\": \"Complete truck visible in the middle of the image, rear end facing the camera, distinct from other vehicles\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.41, 0.24, 0.48, 0.47],\n      \"size\": \"medium\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Blue-roofed trailer, no visible cab, adjacent to the red truck on its left\",\n      \"evidence\": \"Standalone trailer not attached to the red truck, meets the count criteria for separate vehicle\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.34, 0.60, 0.52, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White long厢式 truck, side door open, located in the lower central area\",\n      \"evidence\": \"Distinct vehicle with closed厢 body, open side door, clearly identifiable as a truck\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All visible trucks are in central and lower aisles, no severe occlusion affecting identification\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 2,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.47,
+          0.2,
+          0.56,
+          0.41
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red heavy truck, rear-facing, with illuminated rear lights, located in the central aisle",
+        "evidence": "Complete truck visible in the middle of the image, rear end facing the camera, distinct from other vehicles",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.41,
+          0.24,
+          0.48,
+          0.47
+        ],
+        "size": "medium",
+        "visible": "trailer_only",
+        "is_truck": true,
+        "identity_clues": "Blue-roofed trailer, no visible cab, adjacent to the red truck on its left",
+        "evidence": "Standalone trailer not attached to the red truck, meets the count criteria for separate vehicle",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.34,
+          0.6,
+          0.52,
+          0.99
+        ],
+        "size": "large",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "White long厢式 truck, side door open, located in the lower central area",
+        "evidence": "Distinct vehicle with closed厢 body, open side door, clearly identifiable as a truck",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "All visible trucks are in central and lower aisles, no severe occlusion affecting identification",
+    "uncertain_reasons": []
+  }
+}

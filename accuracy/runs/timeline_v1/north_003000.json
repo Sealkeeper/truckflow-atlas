@@ -1,0 +1,92 @@
+{
+  "sample_id": "north_003000",
+  "camera": "north",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花北.mp4",
+  "source_sha256": "9222cffdf50f955794b4e10494a2c3a8f86c5179e4d106a4189c611cde454515",
+  "frame_number": 3000,
+  "video_seconds": 120.0,
+  "video_timecode": "00:02:00.000",
+  "business_time": "2025-10-19T22:01:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/north_003.jpg",
+  "image_sha256": "822336f5a8e7c0109ebcdc77abec0fa84c8f3f9c9e85d61ac65688eed40923b3",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:30:48+08:00",
+      "ok": true,
+      "latency_s": 15.57,
+      "usage": {
+        "completion_tokens": 1649,
+        "prompt_tokens": 1773,
+        "total_tokens": 3422,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1334
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 15.57,
+  "usage": {
+    "completion_tokens": 1649,
+    "prompt_tokens": 1773,
+    "total_tokens": 3422,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1334
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 1, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.44, 0.07, 0.52, 0.17],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Rear section of a large truck with red taillight visible at the bottom rear\",\n      \"evidence\": \"Located at the far end of the central aisle, fully visible as a large truck\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.43, 0.24, 0.5, 0.44],\n      \"size\": \"medium\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Blue-roofed cargo trailer, no attached cab visible\",\n      \"evidence\": \"In the central aisle, distinct from the large truck at the back, appears as a separate trailer\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All counted vehicles are clearly visible in the central aisle area, no significant occlusion affecting identification\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 2,
+      "large": 1,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.44,
+          0.07,
+          0.52,
+          0.17
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Rear section of a large truck with red taillight visible at the bottom rear",
+        "evidence": "Located at the far end of the central aisle, fully visible as a large truck",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.43,
+          0.24,
+          0.5,
+          0.44
+        ],
+        "size": "medium",
+        "visible": "trailer_only",
+        "is_truck": true,
+        "identity_clues": "Blue-roofed cargo trailer, no attached cab visible",
+        "evidence": "In the central aisle, distinct from the large truck at the back, appears as a separate trailer",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "All counted vehicles are clearly visible in the central aisle area, no significant occlusion affecting identification",
+    "uncertain_reasons": []
+  }
+}

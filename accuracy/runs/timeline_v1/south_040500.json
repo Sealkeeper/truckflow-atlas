@@ -1,0 +1,120 @@
+{
+  "sample_id": "south_040500",
+  "camera": "south",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花南.mp4",
+  "source_sha256": "eb75e31b2c638f7ea9faac0af25a13389738775f0bc8bf1c9bc45834acd777f3",
+  "frame_number": 40500,
+  "video_seconds": 1620.0,
+  "video_timecode": "00:27:00.000",
+  "business_time": "2025-10-19T22:26:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/south_028.jpg",
+  "image_sha256": "a1818176ba0d38a44272cdf1010caeaac69f1d09c09021f0b3b11d3ab80cc203",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:36:24+08:00",
+      "ok": true,
+      "latency_s": 14.68,
+      "usage": {
+        "completion_tokens": 1361,
+        "prompt_tokens": 1773,
+        "total_tokens": 3134,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 851
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 14.68,
+  "usage": {
+    "completion_tokens": 1361,
+    "prompt_tokens": 1773,
+    "total_tokens": 3134,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 851
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 2, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.45, 0.66, 0.55, 0.89],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White Dongfeng commercial vehicle cab, white cargo box, facing camera\",\n      \"evidence\": \"Fully visible heavy truck in lower central aisle, clear cab and cargo box\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.29, 0.52, 0.47],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, gray semi-trailer, facing camera\",\n      \"evidence\": \"Fully visible heavy truck with semi-trailer in central aisle\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.41, 0.25, 0.46, 0.35],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, shorter than large trucks, facing camera\",\n      \"evidence\": \"Fully visible medium truck in central aisle\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.13, 0.49, 0.24],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, further up central aisle, facing camera\",\n      \"evidence\": \"Fully visible medium truck at top of central aisle\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All trucks are located in the central aisle of the exhibition hall, no partial or hidden vehicles counted\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 4,
+      "large": 2,
+      "medium": 2,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.45,
+          0.66,
+          0.55,
+          0.89
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "White Dongfeng commercial vehicle cab, white cargo box, facing camera",
+        "evidence": "Fully visible heavy truck in lower central aisle, clear cab and cargo box",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.45,
+          0.29,
+          0.52,
+          0.47
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red cab, gray semi-trailer, facing camera",
+        "evidence": "Fully visible heavy truck with semi-trailer in central aisle",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.41,
+          0.25,
+          0.46,
+          0.35
+        ],
+        "size": "medium",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red cab, shorter than large trucks, facing camera",
+        "evidence": "Fully visible medium truck in central aisle",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.44,
+          0.13,
+          0.49,
+          0.24
+        ],
+        "size": "medium",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red cab, further up central aisle, facing camera",
+        "evidence": "Fully visible medium truck at top of central aisle",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "All trucks are located in the central aisle of the exhibition hall, no partial or hidden vehicles counted",
+    "uncertain_reasons": []
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "sample_id": "north_061500",
+  "camera": "north",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花北.mp4",
+  "source_sha256": "9222cffdf50f955794b4e10494a2c3a8f86c5179e4d106a4189c611cde454515",
+  "frame_number": 61500,
+  "video_seconds": 2460.0,
+  "video_timecode": "00:41:00.000",
+  "business_time": "2025-10-19T22:40:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/north_042.jpg",
+  "image_sha256": "1c03e33cb0e354bcc509973ce6cd6f8cdf6b73fd0d29750698635eac6ed55328",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:33:45+08:00",
+      "ok": true,
+      "latency_s": 11.52,
+      "usage": {
+        "completion_tokens": 1215,
+        "prompt_tokens": 1773,
+        "total_tokens": 2988,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 789
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 11.52,
+  "usage": {
+    "completion_tokens": 1215,
+    "prompt_tokens": 1773,
+    "total_tokens": 2988,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 789
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.42, 0.26, 0.50, 0.46],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cargo truck, rear end facing camera, visible taillights and cargo structure\",\n      \"evidence\": \"Clearly visible as a heavy-duty truck in the central aisle, fully exposed without major occlusion\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.14, 0.49, 0.27],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Dark red/brown truck, upper cargo section visible behind the red truck\",\n      \"evidence\": \"Partially visible above the red truck, distinct truck shape confirmed\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.50, 0.21, 0.55, 0.40],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Gray cargo truck, rear end facing camera, visible rear structure\",\n      \"evidence\": \"Fully visible to the right of the red truck, heavy-duty truck form confirmed\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All visible trucks are located in the central aisle of the exhibition hall, no significant occlusion affecting identification\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 3,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.42,
+          0.26,
+          0.5,
+          0.46
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red cargo truck, rear end facing camera, visible taillights and cargo structure",
+        "evidence": "Clearly visible as a heavy-duty truck in the central aisle, fully exposed without major occlusion",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.45,
+          0.14,
+          0.49,
+          0.27
+        ],
+        "size": "large",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "Dark red/brown truck, upper cargo section visible behind the red truck",
+        "evidence": "Partially visible above the red truck, distinct truck shape confirmed",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.5,
+          0.21,
+          0.55,
+          0.4
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Gray cargo truck, rear end facing camera, visible rear structure",
+        "evidence": "Fully visible to the right of the red truck, heavy-duty truck form confirmed",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "All visible trucks are located in the central aisle of the exhibition hall, no significant occlusion affecting identification",
+    "uncertain_reasons": []
+  }
+}

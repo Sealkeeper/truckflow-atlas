@@ -1,0 +1,92 @@
+{
+  "sample_id": "north_033000",
+  "camera": "north",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花北.mp4",
+  "source_sha256": "9222cffdf50f955794b4e10494a2c3a8f86c5179e4d106a4189c611cde454515",
+  "frame_number": 33000,
+  "video_seconds": 1320.0,
+  "video_timecode": "00:22:00.000",
+  "business_time": "2025-10-19T22:21:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/north_023.jpg",
+  "image_sha256": "fe47e883e3b596ffcca3cbed5e995251de40c411dc607417b2c62c9a44fdf5a4",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:32:32+08:00",
+      "ok": true,
+      "latency_s": 15.71,
+      "usage": {
+        "completion_tokens": 1477,
+        "prompt_tokens": 1773,
+        "total_tokens": 3250,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1146
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 15.71,
+  "usage": {
+    "completion_tokens": 1477,
+    "prompt_tokens": 1773,
+    "total_tokens": 3250,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1146
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.405, 0.355, 0.490, 0.625],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货厢，带有编号标识，朝向画面上方通道深处\",\n      \"evidence\": \"画面中间通道内可见红色半挂货厢，属于货车范畴\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.345, 0.610, 0.485, 0.998],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹货厢，底部带有编号，朝向画面下方\",\n      \"evidence\": \"画面下方中间可见白色半挂货厢，属于货车范畴\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中可见2辆大型半挂货车，均为单独挂车形式，位于展会搭建区域的通道内，无遮挡或歧义导致的计数误差\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 2,
+      "large": 2,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.405,
+          0.355,
+          0.49,
+          0.625
+        ],
+        "size": "large",
+        "visible": "trailer_only",
+        "is_truck": true,
+        "identity_clues": "红色货厢，带有编号标识，朝向画面上方通道深处",
+        "evidence": "画面中间通道内可见红色半挂货厢，属于货车范畴",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.345,
+          0.61,
+          0.485,
+          0.998
+        ],
+        "size": "large",
+        "visible": "trailer_only",
+        "is_truck": true,
+        "identity_clues": "白色波纹货厢，底部带有编号，朝向画面下方",
+        "evidence": "画面下方中间可见白色半挂货厢，属于货车范畴",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面中可见2辆大型半挂货车，均为单独挂车形式，位于展会搭建区域的通道内，无遮挡或歧义导致的计数误差",
+    "uncertain_reasons": []
+  }
+}

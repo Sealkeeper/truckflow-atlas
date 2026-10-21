@@ -1,0 +1,92 @@
+{
+  "sample_id": "north_007500",
+  "camera": "north",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花北.mp4",
+  "source_sha256": "9222cffdf50f955794b4e10494a2c3a8f86c5179e4d106a4189c611cde454515",
+  "frame_number": 7500,
+  "video_seconds": 300.0,
+  "video_timecode": "00:05:00.000",
+  "business_time": "2025-10-19T22:04:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/north_006.jpg",
+  "image_sha256": "3132b760e662f0fde7f73b99f8d30513b7916c14483b4b95a8699259d59d8f2e",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:31:00+08:00",
+      "ok": true,
+      "latency_s": 11.34,
+      "usage": {
+        "completion_tokens": 1010,
+        "prompt_tokens": 1773,
+        "total_tokens": 2783,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 702
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 11.34,
+  "usage": {
+    "completion_tokens": 1010,
+    "prompt_tokens": 1773,
+    "total_tokens": 2783,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 702
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.36, 0.57, 0.48, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White corrugated side panel, gray rear door, parked in central lower aisle\",\n      \"evidence\": \"Fully visible large box truck in lower central area of the image\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.42, 0.16, 0.50, 0.46],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Blue roof, dark body, positioned in upper central aisle\",\n      \"evidence\": \"Visible large truck/trailer in upper central aisle, not fully obscured\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"Two large trucks visible in central aisle, no other trucks present; all vehicles clearly identifiable\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 2,
+      "large": 2,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.36,
+          0.57,
+          0.48,
+          0.99
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "White corrugated side panel, gray rear door, parked in central lower aisle",
+        "evidence": "Fully visible large box truck in lower central area of the image",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.42,
+          0.16,
+          0.5,
+          0.46
+        ],
+        "size": "large",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "Blue roof, dark body, positioned in upper central aisle",
+        "evidence": "Visible large truck/trailer in upper central aisle, not fully obscured",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "Two large trucks visible in central aisle, no other trucks present; all vehicles clearly identifiable",
+    "uncertain_reasons": []
+  }
+}

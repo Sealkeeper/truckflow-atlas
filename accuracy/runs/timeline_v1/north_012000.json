@@ -1,0 +1,115 @@
+{
+  "sample_id": "north_012000",
+  "camera": "north",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花北.mp4",
+  "source_sha256": "9222cffdf50f955794b4e10494a2c3a8f86c5179e4d106a4189c611cde454515",
+  "frame_number": 12000,
+  "video_seconds": 480.0,
+  "video_timecode": "00:08:00.000",
+  "business_time": "2025-10-19T22:07:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/north_009.jpg",
+  "image_sha256": "9eca5df3ff67153acc3846b73805c029609124c0216c1b703ef18e7e0ee0a45f",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:33:26+08:00",
+      "ok": false,
+      "latency_s": 150.47,
+      "usage": null,
+      "error": "ProxyError: HTTPSConnectionPool(host='ark.cn-beijing.volces.com', port=443): Max retries exceeded with url: /api/v3/chat/completions (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))",
+      "status": null
+    },
+    {
+      "attempt": 2,
+      "timestamp_utc": "2026-10-21T17:33:41+08:00",
+      "ok": true,
+      "latency_s": 12.82,
+      "usage": {
+        "completion_tokens": 1449,
+        "prompt_tokens": 1773,
+        "total_tokens": 3222,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1027
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 12.82,
+  "usage": {
+    "completion_tokens": 1449,
+    "prompt_tokens": 1773,
+    "total_tokens": 3222,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1027
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 2, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.48, 0.08, 0.54, 0.21],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重型半挂车，尾部朝向镜头，可见尾灯\",\n      \"evidence\": \"画面通道尽头的红色车辆，具备货车的半挂结构特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.16, 0.50, 0.45],\n      \"size\": \"medium\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色厢式货厢，位于中间通道，货厢侧面可见\",\n      \"evidence\": \"画面中间的蓝色货厢车辆，属于中型货车范畴\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.34, 0.60, 0.49, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹板长货厢，位于画面下方中间，货厢侧面可见\",\n      \"evidence\": \"画面下方的白色长货厢车辆，为大型货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中可见3辆货车，无完全遮挡或无法确定的车辆，均符合计数标准\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 2,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.48,
+          0.08,
+          0.54,
+          0.21
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色重型半挂车，尾部朝向镜头，可见尾灯",
+        "evidence": "画面通道尽头的红色车辆，具备货车的半挂结构特征",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.44,
+          0.16,
+          0.5,
+          0.45
+        ],
+        "size": "medium",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "蓝色厢式货厢，位于中间通道，货厢侧面可见",
+        "evidence": "画面中间的蓝色货厢车辆，属于中型货车范畴",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.34,
+          0.6,
+          0.49,
+          0.99
+        ],
+        "size": "large",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "白色波纹板长货厢，位于画面下方中间，货厢侧面可见",
+        "evidence": "画面下方的白色长货厢车辆，为大型货车",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面中可见3辆货车，无完全遮挡或无法确定的车辆，均符合计数标准",
+    "uncertain_reasons": []
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "sample_id": "north_054000",
+  "camera": "north",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花北.mp4",
+  "source_sha256": "9222cffdf50f955794b4e10494a2c3a8f86c5179e4d106a4189c611cde454515",
+  "frame_number": 54000,
+  "video_seconds": 2160.0,
+  "video_timecode": "00:36:00.000",
+  "business_time": "2025-10-19T22:35:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/north_037.jpg",
+  "image_sha256": "ccaec0b6b0126024c0255ad2de54f723b53b6e7ae00ac5cb2beb685b7d23f019",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:33:32+08:00",
+      "ok": true,
+      "latency_s": 17.76,
+      "usage": {
+        "completion_tokens": 2076,
+        "prompt_tokens": 1773,
+        "total_tokens": 3849,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1529
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 17.76,
+  "usage": {
+    "completion_tokens": 2076,
+    "prompt_tokens": 1773,
+    "total_tokens": 3849,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1529
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 3, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.42, 0.23, 0.50, 0.45],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色高栏货厢，位于画面中间通道，朝向画面下方\",\n      \"evidence\": \"画面中间通道内的红色高栏货车，整体完整可见，符合重型货车特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.34, 0.60, 0.49, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹厢式货厢，位于画面下方左侧\",\n      \"evidence\": \"画面下方左侧的白色厢式货车，整体完整可见，属于重型厢式货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.48, 0.56, 0.59, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"棕色平板货厢，位于画面下方右侧\",\n      \"evidence\": \"画面下方右侧的棕色货厢货车，整体完整可见，属于重型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.10, 0.52, 0.22],\n      \"size\": \"medium\",\n      \"visible\": \"partial\",\n      \"is_truck\": true,\n      \"identity_clues\": \"远处背景中间的货车，红色顶部，位于通道尽头\",\n      \"evidence\": \"画面最远处通道中间的货车，仅部分可见，属于中型货车范畴\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中可见4辆货车，其中3辆完整显示，1辆位于背景远处部分显示，无被完全遮挡或无法判定的车辆\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 4,
+      "large": 3,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.42,
+          0.23,
+          0.5,
+          0.45
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色高栏货厢，位于画面中间通道，朝向画面下方",
+        "evidence": "画面中间通道内的红色高栏货车，整体完整可见，符合重型货车特征",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.34,
+          0.6,
+          0.49,
+          0.99
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "白色波纹厢式货厢，位于画面下方左侧",
+        "evidence": "画面下方左侧的白色厢式货车，整体完整可见，属于重型厢式货车",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.48,
+          0.56,
+          0.59,
+          0.99
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "棕色平板货厢，位于画面下方右侧",
+        "evidence": "画面下方右侧的棕色货厢货车，整体完整可见，属于重型货车",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.45,
+          0.1,
+          0.52,
+          0.22
+        ],
+        "size": "medium",
+        "visible": "partial",
+        "is_truck": true,
+        "identity_clues": "远处背景中间的货车，红色顶部，位于通道尽头",
+        "evidence": "画面最远处通道中间的货车，仅部分可见，属于中型货车范畴",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面中可见4辆货车，其中3辆完整显示，1辆位于背景远处部分显示，无被完全遮挡或无法判定的车辆",
+    "uncertain_reasons": []
+  }
+}

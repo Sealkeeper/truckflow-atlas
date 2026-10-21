@@ -1,0 +1,134 @@
+{
+  "sample_id": "south_022500",
+  "camera": "south",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花南.mp4",
+  "source_sha256": "eb75e31b2c638f7ea9faac0af25a13389738775f0bc8bf1c9bc45834acd777f3",
+  "frame_number": 22500,
+  "video_seconds": 900.0,
+  "video_timecode": "00:15:00.000",
+  "business_time": "2025-10-19T22:14:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/south_016.jpg",
+  "image_sha256": "c86b8ba1407127bb0ae2b0a487ea5d020513c2c1f48226ac149462a66bb6f07c",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:35:28+08:00",
+      "ok": true,
+      "latency_s": 30.17,
+      "usage": {
+        "completion_tokens": 2829,
+        "prompt_tokens": 1773,
+        "total_tokens": 4602,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2186
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 30.17,
+  "usage": {
+    "completion_tokens": 2829,
+    "prompt_tokens": 1773,
+    "total_tokens": 4602,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2186
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 5, \"large\": 4, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.45, 0.46, 0.58, 0.89],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White cab with '东风商用车' text, front-facing, central lane bottom\",\n      \"evidence\": \"Fully visible truck in central aisle, no occlusion\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.28, 0.53, 0.55],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, gray trailer, front-facing, above white truck\",\n      \"evidence\": \"Part of truck (cab + upper trailer) visible in central lane\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.41, 0.25, 0.46, 0.36],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, front-facing, third from bottom in central lane\",\n      \"evidence\": \"Red truck cab fully visible, medium size\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.12, 0.50, 0.25],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, brown trailer, front-facing, top of central lane\",\n      \"evidence\": \"Topmost truck in central lane, red cab and partial trailer visible\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.48, 0.84, 0.60, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red enclosed trailer, standalone, no attached cab, bottom right\",\n      \"evidence\": \"Separate trailer not connected to any truck, meets counting criteria\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"Central aisle has 4 trucks, plus a standalone red trailer at bottom right; no fully occluded vehicles, all visible trucks meet the specified criteria\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 5,
+      "large": 4,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.45,
+          0.46,
+          0.58,
+          0.89
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "White cab with '东风商用车' text, front-facing, central lane bottom",
+        "evidence": "Fully visible truck in central aisle, no occlusion",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.45,
+          0.28,
+          0.53,
+          0.55
+        ],
+        "size": "large",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "Red cab, gray trailer, front-facing, above white truck",
+        "evidence": "Part of truck (cab + upper trailer) visible in central lane",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.41,
+          0.25,
+          0.46,
+          0.36
+        ],
+        "size": "medium",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red cab, front-facing, third from bottom in central lane",
+        "evidence": "Red truck cab fully visible, medium size",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.45,
+          0.12,
+          0.5,
+          0.25
+        ],
+        "size": "large",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "Red cab, brown trailer, front-facing, top of central lane",
+        "evidence": "Topmost truck in central lane, red cab and partial trailer visible",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.48,
+          0.84,
+          0.6,
+          0.99
+        ],
+        "size": "large",
+        "visible": "trailer_only",
+        "is_truck": true,
+        "identity_clues": "Red enclosed trailer, standalone, no attached cab, bottom right",
+        "evidence": "Separate trailer not connected to any truck, meets counting criteria",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "Central aisle has 4 trucks, plus a standalone red trailer at bottom right; no fully occluded vehicles, all visible trucks meet the specified criteria",
+    "uncertain_reasons": []
+  }
+}

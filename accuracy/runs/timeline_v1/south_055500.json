@@ -1,0 +1,106 @@
+{
+  "sample_id": "south_055500",
+  "camera": "south",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花南.mp4",
+  "source_sha256": "eb75e31b2c638f7ea9faac0af25a13389738775f0bc8bf1c9bc45834acd777f3",
+  "frame_number": 55500,
+  "video_seconds": 2220.0,
+  "video_timecode": "00:37:00.000",
+  "business_time": "2025-10-19T22:36:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/south_038.jpg",
+  "image_sha256": "e70bbd3eb458fd0e54de214b3f2138958350b94366f7e81eeaf5d04587b21e57",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:37:26+08:00",
+      "ok": true,
+      "latency_s": 11.97,
+      "usage": {
+        "completion_tokens": 1322,
+        "prompt_tokens": 1773,
+        "total_tokens": 3095,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 910
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 11.97,
+  "usage": {
+    "completion_tokens": 1322,
+    "prompt_tokens": 1773,
+    "total_tokens": 3095,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 910
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.395, 0.475, 0.515, 0.935],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White cab with '东风商用车' text, white box cargo, facing camera\",\n      \"evidence\": \"Heavy-duty truck fully visible in the lower central aisle\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.455, 0.295, 0.525, 0.525],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, dark gray flatbed behind, facing camera\",\n      \"evidence\": \"Heavy truck fully visible in the middle central aisle\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.195, 0.505, 0.305],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, cargo on top, facing camera\",\n      \"evidence\": \"Heavy truck fully visible in the rear central aisle\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All three trucks are fully visible in the central aisle, no partial occlusion or ambiguity in identification\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 3,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.395,
+          0.475,
+          0.515,
+          0.935
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "White cab with '东风商用车' text, white box cargo, facing camera",
+        "evidence": "Heavy-duty truck fully visible in the lower central aisle",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.455,
+          0.295,
+          0.525,
+          0.525
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red cab, dark gray flatbed behind, facing camera",
+        "evidence": "Heavy truck fully visible in the middle central aisle",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.45,
+          0.195,
+          0.505,
+          0.305
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red cab, cargo on top, facing camera",
+        "evidence": "Heavy truck fully visible in the rear central aisle",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "All three trucks are fully visible in the central aisle, no partial occlusion or ambiguity in identification",
+    "uncertain_reasons": []
+  }
+}

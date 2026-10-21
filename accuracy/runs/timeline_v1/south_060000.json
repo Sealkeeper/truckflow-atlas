@@ -1,0 +1,106 @@
+{
+  "sample_id": "south_060000",
+  "camera": "south",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花南.mp4",
+  "source_sha256": "eb75e31b2c638f7ea9faac0af25a13389738775f0bc8bf1c9bc45834acd777f3",
+  "frame_number": 60000,
+  "video_seconds": 2400.0,
+  "video_timecode": "00:40:00.000",
+  "business_time": "2025-10-19T22:39:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/south_041.jpg",
+  "image_sha256": "890cc70bd578d01b1a0a7e5a07dc0d36b22b783ff247f6317b939abc1feebeb2",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:37:51+08:00",
+      "ok": true,
+      "latency_s": 16.27,
+      "usage": {
+        "completion_tokens": 1407,
+        "prompt_tokens": 1773,
+        "total_tokens": 3180,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 977
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 16.27,
+  "usage": {
+    "completion_tokens": 1407,
+    "prompt_tokens": 1773,
+    "total_tokens": 3180,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 977
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 2, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.42, 0.45, 0.54, 0.88],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重卡，车头带有中国重汽字样，搭配灰色长货厢，车头朝向镜头方向\",\n      \"evidence\": \"画面中通道最前方的完整货车，可见车头与货厢全部结构\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.39, 0.22, 0.45, 0.41],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色厢式货车，车头为白色，货厢为白色厢体，位于红色重卡后方\",\n      \"evidence\": \"画面中通道中间的完整白色货车，无遮挡\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.20, 0.49, 0.32],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货车，位于白色厢式货车后方，车头朝向镜头方向\",\n      \"evidence\": \"画面中通道最远处的红色货车，完整可见\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中通道内共可见3辆货车，均无完全遮挡，清晰呈现\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 2,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.42,
+          0.45,
+          0.54,
+          0.88
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色重卡，车头带有中国重汽字样，搭配灰色长货厢，车头朝向镜头方向",
+        "evidence": "画面中通道最前方的完整货车，可见车头与货厢全部结构",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.39,
+          0.22,
+          0.45,
+          0.41
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "白色厢式货车，车头为白色，货厢为白色厢体，位于红色重卡后方",
+        "evidence": "画面中通道中间的完整白色货车，无遮挡",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.44,
+          0.2,
+          0.49,
+          0.32
+        ],
+        "size": "medium",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色货车，位于白色厢式货车后方，车头朝向镜头方向",
+        "evidence": "画面中通道最远处的红色货车，完整可见",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面中通道内共可见3辆货车，均无完全遮挡，清晰呈现",
+    "uncertain_reasons": []
+  }
+}

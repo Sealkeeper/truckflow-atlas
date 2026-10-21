@@ -1,0 +1,106 @@
+{
+  "sample_id": "north_019500",
+  "camera": "north",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花北.mp4",
+  "source_sha256": "9222cffdf50f955794b4e10494a2c3a8f86c5179e4d106a4189c611cde454515",
+  "frame_number": 19500,
+  "video_seconds": 780.0,
+  "video_timecode": "00:13:00.000",
+  "business_time": "2025-10-19T22:12:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/north_014.jpg",
+  "image_sha256": "ebfe0a97dca0e54dec0c45a4da3f4f04bcd805d073aca020ea8148adc275ee4d",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:31:39+08:00",
+      "ok": true,
+      "latency_s": 14.75,
+      "usage": {
+        "completion_tokens": 1516,
+        "prompt_tokens": 1773,
+        "total_tokens": 3289,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1106
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 14.75,
+  "usage": {
+    "completion_tokens": 1516,
+    "prompt_tokens": 1773,
+    "total_tokens": 3289,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1106
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 2, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.40, 0.35, 0.50, 0.65],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red closed cargo container, vertical in central aisle between LAMO and KONKA booths\",\n      \"evidence\": \"Clearly visible large truck with red cargo box, no occlusion\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.34, 0.60, 0.49, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White corrugated roof, positioned below red truck in central aisle\",\n      \"evidence\": \"Full visible large truck with white roof, no occlusion\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.17, 0.51, 0.35],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Blue roof, located at far end of central aisle\",\n      \"evidence\": \"Clearly visible medium truck at back of aisle, no occlusion\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All counted trucks are fully visible in the central aisle, no significant occlusion or boundary issues\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 2,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.4,
+          0.35,
+          0.5,
+          0.65
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red closed cargo container, vertical in central aisle between LAMO and KONKA booths",
+        "evidence": "Clearly visible large truck with red cargo box, no occlusion",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.34,
+          0.6,
+          0.49,
+          0.99
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "White corrugated roof, positioned below red truck in central aisle",
+        "evidence": "Full visible large truck with white roof, no occlusion",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.44,
+          0.17,
+          0.51,
+          0.35
+        ],
+        "size": "medium",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Blue roof, located at far end of central aisle",
+        "evidence": "Clearly visible medium truck at back of aisle, no occlusion",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "All counted trucks are fully visible in the central aisle, no significant occlusion or boundary issues",
+    "uncertain_reasons": []
+  }
+}

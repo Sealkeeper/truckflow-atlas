@@ -6,6 +6,9 @@ node_modules/
 data/jobs/
 data/uploads/
 data/*.mp4
+assets/timeline_frames/
+assets/timeline_review_crops/
+accuracy/runs/timeline_v1/probe_*.json
 *.log
 .DS_Store
 Thumbs.db
