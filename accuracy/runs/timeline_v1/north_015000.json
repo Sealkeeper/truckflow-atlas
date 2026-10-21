@@ -1,0 +1,92 @@
+{
+  "sample_id": "north_015000",
+  "camera": "north",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花北.mp4",
+  "source_sha256": "9222cffdf50f955794b4e10494a2c3a8f86c5179e4d106a4189c611cde454515",
+  "frame_number": 15000,
+  "video_seconds": 600.0,
+  "video_timecode": "00:10:00.000",
+  "business_time": "2025-10-19T22:09:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/north_011.jpg",
+  "image_sha256": "45413698ea1a381cfc03c9fcf1837448ef32b80286594d4905984c9ba8a4eeaf",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:31:18+08:00",
+      "ok": true,
+      "latency_s": 13.64,
+      "usage": {
+        "completion_tokens": 1216,
+        "prompt_tokens": 1773,
+        "total_tokens": 2989,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 887
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 13.64,
+  "usage": {
+    "completion_tokens": 1216,
+    "prompt_tokens": 1773,
+    "total_tokens": 2989,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 887
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.48, 0.32, 0.57, 0.58],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red heavy truck with closed cargo box, rear view, taillights visible, located in central aisle\",\n      \"evidence\": \"Fully visible heavy truck in the middle of the image, meets large truck criteria\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.35, 0.62, 0.48, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White ribbed cargo trailer, no attached cab, parked at bottom of image left of blue forklift\",\n      \"evidence\": \"Separate clear trailer as per counting rules, fully visible in lower central area\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"Both vehicles are clearly visible with no significant occlusion, located in the central aisle and lower section of the scene\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 2,
+      "large": 2,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.48,
+          0.32,
+          0.57,
+          0.58
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red heavy truck with closed cargo box, rear view, taillights visible, located in central aisle",
+        "evidence": "Fully visible heavy truck in the middle of the image, meets large truck criteria",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.35,
+          0.62,
+          0.48,
+          0.99
+        ],
+        "size": "large",
+        "visible": "trailer_only",
+        "is_truck": true,
+        "identity_clues": "White ribbed cargo trailer, no attached cab, parked at bottom of image left of blue forklift",
+        "evidence": "Separate clear trailer as per counting rules, fully visible in lower central area",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "Both vehicles are clearly visible with no significant occlusion, located in the central aisle and lower section of the scene",
+    "uncertain_reasons": []
+  }
+}

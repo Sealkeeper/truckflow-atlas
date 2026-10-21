@@ -1,0 +1,129 @@
+{
+  "sample_id": "south_049500",
+  "camera": "south",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花南.mp4",
+  "source_sha256": "eb75e31b2c638f7ea9faac0af25a13389738775f0bc8bf1c9bc45834acd777f3",
+  "frame_number": 49500,
+  "video_seconds": 1980.0,
+  "video_timecode": "00:33:00.000",
+  "business_time": "2025-10-19T22:32:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/south_034.jpg",
+  "image_sha256": "98b2e8030ae398cf0daa07944e53cfd774b3dd122c1aa1c65f19a057bc588539",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:39:13+08:00",
+      "ok": false,
+      "latency_s": 150.54,
+      "usage": null,
+      "error": "ProxyError: HTTPSConnectionPool(host='ark.cn-beijing.volces.com', port=443): Max retries exceeded with url: /api/v3/chat/completions (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))",
+      "status": null
+    },
+    {
+      "attempt": 2,
+      "timestamp_utc": "2026-10-21T17:39:26+08:00",
+      "ok": true,
+      "latency_s": 11.35,
+      "usage": {
+        "completion_tokens": 1081,
+        "prompt_tokens": 1773,
+        "total_tokens": 2854,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 557
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 11.35,
+  "usage": {
+    "completion_tokens": 1081,
+    "prompt_tokens": 1773,
+    "total_tokens": 2854,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 557
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 2, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.45, 0.45, 0.56, 0.88],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色东风商用车，车头有中文标识，白色长货厢\",\n      \"evidence\": \"画面中间偏下位置，完整可见车头与货厢，属于重型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.46, 0.29, 0.53, 0.55],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，灰色长货厢，位于白色东风商用车后方\",\n      \"evidence\": \"画面中间通道，完整可见车头与货厢，属于重型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.41, 0.25, 0.46, 0.37],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色中型货车，位于灰色货厢货车后方\",\n      \"evidence\": \"画面中间通道，完整可见车身，属于中型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.12, 0.49, 0.25],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货车，位于通道最内侧\",\n      \"evidence\": \"画面通道尽头，完整可见车身，属于中型货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中间通道内共4辆可见货车，无被完全遮挡或无法确定类型的车辆，均清晰可见\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 4,
+      "large": 2,
+      "medium": 2,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.45,
+          0.45,
+          0.56,
+          0.88
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "白色东风商用车，车头有中文标识，白色长货厢",
+        "evidence": "画面中间偏下位置，完整可见车头与货厢，属于重型货车",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.46,
+          0.29,
+          0.53,
+          0.55
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色车头，灰色长货厢，位于白色东风商用车后方",
+        "evidence": "画面中间通道，完整可见车头与货厢，属于重型货车",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.41,
+          0.25,
+          0.46,
+          0.37
+        ],
+        "size": "medium",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色中型货车，位于灰色货厢货车后方",
+        "evidence": "画面中间通道，完整可见车身，属于中型货车",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.45,
+          0.12,
+          0.49,
+          0.25
+        ],
+        "size": "medium",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色货车，位于通道最内侧",
+        "evidence": "画面通道尽头，完整可见车身，属于中型货车",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面中间通道内共4辆可见货车，无被完全遮挡或无法确定类型的车辆，均清晰可见",
+    "uncertain_reasons": []
+  }
+}

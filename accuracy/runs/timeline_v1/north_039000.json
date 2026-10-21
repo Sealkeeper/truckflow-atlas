@@ -1,0 +1,92 @@
+{
+  "sample_id": "north_039000",
+  "camera": "north",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花北.mp4",
+  "source_sha256": "9222cffdf50f955794b4e10494a2c3a8f86c5179e4d106a4189c611cde454515",
+  "frame_number": 39000,
+  "video_seconds": 1560.0,
+  "video_timecode": "00:26:00.000",
+  "business_time": "2025-10-19T22:25:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/north_027.jpg",
+  "image_sha256": "19b205e29fbde38c0405eedafae157658b246956bd2ba0320f32479ce0dcd8d6",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:32:51+08:00",
+      "ok": true,
+      "latency_s": 14.41,
+      "usage": {
+        "completion_tokens": 1395,
+        "prompt_tokens": 1773,
+        "total_tokens": 3168,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1054
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 14.41,
+  "usage": {
+    "completion_tokens": 1395,
+    "prompt_tokens": 1773,
+    "total_tokens": 3168,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1054
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.405, 0.355, 0.492, 0.626],\n      \"size\": \"large\",\n      \"visible\": \"partial\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色高栏货厢，带有编号标识，朝向画面上方通道\",\n      \"evidence\": \"位于画面中间通道，为单独可见的货车货厢，符合计数口径中单独挂车的判定\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.350, 0.612, 0.486, 0.999],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色厢式货车，车身带有编号，朝向画面上方\",\n      \"evidence\": \"位于红色高栏货车下方，完整可见的厢式货车，符合重型货车判定\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面内可见两辆大型货车，红色高栏挂车车头被白色厢式货车遮挡，无其他符合计数要求的车辆，所有车辆特征清晰可辨\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 2,
+      "large": 2,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.405,
+          0.355,
+          0.492,
+          0.626
+        ],
+        "size": "large",
+        "visible": "partial",
+        "is_truck": true,
+        "identity_clues": "红色高栏货厢，带有编号标识，朝向画面上方通道",
+        "evidence": "位于画面中间通道，为单独可见的货车货厢，符合计数口径中单独挂车的判定",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.35,
+          0.612,
+          0.486,
+          0.999
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "白色厢式货车，车身带有编号，朝向画面上方",
+        "evidence": "位于红色高栏货车下方，完整可见的厢式货车，符合重型货车判定",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面内可见两辆大型货车，红色高栏挂车车头被白色厢式货车遮挡，无其他符合计数要求的车辆，所有车辆特征清晰可辨",
+    "uncertain_reasons": []
+  }
+}

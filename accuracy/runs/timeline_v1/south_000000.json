@@ -1,0 +1,106 @@
+{
+  "sample_id": "south_000000",
+  "camera": "south",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花南.mp4",
+  "source_sha256": "eb75e31b2c638f7ea9faac0af25a13389738775f0bc8bf1c9bc45834acd777f3",
+  "frame_number": 0,
+  "video_seconds": 0.0,
+  "video_timecode": "00:00:00.000",
+  "business_time": "2025-10-19T21:59:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/south_001.jpg",
+  "image_sha256": "565452604edd8e71630411f4a446ae10010a9cbd47d20f6c4051608e8da29fa7",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:34:09+08:00",
+      "ok": true,
+      "latency_s": 17.51,
+      "usage": {
+        "completion_tokens": 2105,
+        "prompt_tokens": 1773,
+        "total_tokens": 3878,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1658
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 17.51,
+  "usage": {
+    "completion_tokens": 2105,
+    "prompt_tokens": 1773,
+    "total_tokens": 3878,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1658
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 2, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.45, 0.6, 0.58, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色半挂货车，车头带有'一汽青岛'标识，货厢为半挂结构\",\n      \"evidence\": \"画面下方通道内可见的红色货车，包含车头和部分货厢，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.25, 0.52, 0.47],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头、灰色货厢的货车，位于场馆中间通道\",\n      \"evidence\": \"画面中间通道内的红色货车，车头完整可见，货厢部分可见，属于货车范畴\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.15, 0.50, 0.26],\n      \"size\": \"medium\",\n      \"visible\": \"partial_front\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头、棕色货厢的货车，位于场馆通道远端\",\n      \"evidence\": \"画面上方通道尽头的红色货车，车头可见，货厢部分可见，属于货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"三辆货车均位于场馆中间通道，无完全遮挡，均为可见状态，无其他符合条件的车辆\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 2,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.45,
+          0.6,
+          0.58,
+          0.99
+        ],
+        "size": "large",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "红色半挂货车，车头带有'一汽青岛'标识，货厢为半挂结构",
+        "evidence": "画面下方通道内可见的红色货车，包含车头和部分货厢，符合货车定义",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.45,
+          0.25,
+          0.52,
+          0.47
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色车头、灰色货厢的货车，位于场馆中间通道",
+        "evidence": "画面中间通道内的红色货车，车头完整可见，货厢部分可见，属于货车范畴",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.45,
+          0.15,
+          0.5,
+          0.26
+        ],
+        "size": "medium",
+        "visible": "partial_front",
+        "is_truck": true,
+        "identity_clues": "红色车头、棕色货厢的货车，位于场馆通道远端",
+        "evidence": "画面上方通道尽头的红色货车，车头可见，货厢部分可见，属于货车",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "三辆货车均位于场馆中间通道，无完全遮挡，均为可见状态，无其他符合条件的车辆",
+    "uncertain_reasons": []
+  }
+}

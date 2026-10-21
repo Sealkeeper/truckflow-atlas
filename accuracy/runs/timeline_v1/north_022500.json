@@ -1,0 +1,106 @@
+{
+  "sample_id": "north_022500",
+  "camera": "north",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花北.mp4",
+  "source_sha256": "9222cffdf50f955794b4e10494a2c3a8f86c5179e4d106a4189c611cde454515",
+  "frame_number": 22500,
+  "video_seconds": 900.0,
+  "video_timecode": "00:15:00.000",
+  "business_time": "2025-10-19T22:14:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/north_016.jpg",
+  "image_sha256": "9ec7a3bfd929668aae80efbb721eddbbe8d96a50f2bfd9dc187b7aba3b0acc98",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:31:58+08:00",
+      "ok": true,
+      "latency_s": 18.36,
+      "usage": {
+        "completion_tokens": 2083,
+        "prompt_tokens": 1773,
+        "total_tokens": 3856,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1621
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 18.36,
+  "usage": {
+    "completion_tokens": 2083,
+    "prompt_tokens": 1773,
+    "total_tokens": 3856,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1621
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.34, 0.61, 0.49, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹金属厢式，车身带有模糊字符，沿通道纵向停放，朝向画面下方\",\n      \"evidence\": \"位于画面下方中间区域，车身完整可见，符合厢式货车特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.41, 0.36, 0.49, 0.63],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色封闭货厢挂车，尾部可见白色标识字符“BL56 580”，尾部朝向画面下方，无连接车头\",\n      \"evidence\": \"位于中间通道左侧，红色货厢清晰可见，为单独挂车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.16, 0.51, 0.32],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色平顶货厢，位于通道尽头，周围有施工人员，整体可见\",\n      \"evidence\": \"位于画面上方通道尽头，蓝色货厢完整可见，符合货车特征\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面内可见3辆货车，其中1辆为单独红色货厢挂车，2辆为完整厢式货车，均无完全遮挡，可明确判定\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 3,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.34,
+          0.61,
+          0.49,
+          0.99
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "白色波纹金属厢式，车身带有模糊字符，沿通道纵向停放，朝向画面下方",
+        "evidence": "位于画面下方中间区域，车身完整可见，符合厢式货车特征",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.41,
+          0.36,
+          0.49,
+          0.63
+        ],
+        "size": "large",
+        "visible": "trailer_only",
+        "is_truck": true,
+        "identity_clues": "红色封闭货厢挂车，尾部可见白色标识字符“BL56 580”，尾部朝向画面下方，无连接车头",
+        "evidence": "位于中间通道左侧，红色货厢清晰可见，为单独挂车",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.45,
+          0.16,
+          0.51,
+          0.32
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "蓝色平顶货厢，位于通道尽头，周围有施工人员，整体可见",
+        "evidence": "位于画面上方通道尽头，蓝色货厢完整可见，符合货车特征",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面内可见3辆货车，其中1辆为单独红色货厢挂车，2辆为完整厢式货车，均无完全遮挡，可明确判定",
+    "uncertain_reasons": []
+  }
+}

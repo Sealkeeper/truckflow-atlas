@@ -1,0 +1,78 @@
+{
+  "sample_id": "north_009000",
+  "camera": "north",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花北.mp4",
+  "source_sha256": "9222cffdf50f955794b4e10494a2c3a8f86c5179e4d106a4189c611cde454515",
+  "frame_number": 9000,
+  "video_seconds": 360.0,
+  "video_timecode": "00:06:00.000",
+  "business_time": "2025-10-19T22:05:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/north_007.jpg",
+  "image_sha256": "8b4c1ef35b75a47013c643a3acc07a1d110b00abf30d43797ee5f1b21d1a59e6",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:31:04+08:00",
+      "ok": true,
+      "latency_s": 13.66,
+      "usage": {
+        "completion_tokens": 1314,
+        "prompt_tokens": 1773,
+        "total_tokens": 3087,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1086
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 13.66,
+  "usage": {
+    "completion_tokens": 1314,
+    "prompt_tokens": 1773,
+    "total_tokens": 3087,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1086
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 1, \"large\": 1, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.34, 0.61, 0.48, 0.998],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹状长厢式货车，货厢完整，朝向画面下方，位于中间偏下区域\",\n      \"evidence\": \"画面下方中间位置可见完整的厢式货车，符合重型厢式货车的外形特征，属于统计范围内的货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中仅可见1辆完整的大型厢式货车，其余区域无符合要求的可见货车，无遮挡或边界导致的判定歧义\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 1,
+      "large": 1,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.34,
+          0.61,
+          0.48,
+          0.998
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "白色波纹状长厢式货车，货厢完整，朝向画面下方，位于中间偏下区域",
+        "evidence": "画面下方中间位置可见完整的厢式货车，符合重型厢式货车的外形特征，属于统计范围内的货车",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面中仅可见1辆完整的大型厢式货车，其余区域无符合要求的可见货车，无遮挡或边界导致的判定歧义",
+    "uncertain_reasons": []
+  }
+}

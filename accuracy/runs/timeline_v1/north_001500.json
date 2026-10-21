@@ -1,0 +1,106 @@
+{
+  "sample_id": "north_001500",
+  "camera": "north",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花北.mp4",
+  "source_sha256": "9222cffdf50f955794b4e10494a2c3a8f86c5179e4d106a4189c611cde454515",
+  "frame_number": 1500,
+  "video_seconds": 60.0,
+  "video_timecode": "00:01:00.000",
+  "business_time": "2025-10-19T22:00:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/north_002.jpg",
+  "image_sha256": "5fa097840a923e42a58dcb9eec38d0fcf854051bad1181bd62a48b96c6d005e2",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:30:54+08:00",
+      "ok": true,
+      "latency_s": 20.99,
+      "usage": {
+        "completion_tokens": 2232,
+        "prompt_tokens": 1773,
+        "total_tokens": 4005,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1816
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 20.99,
+  "usage": {
+    "completion_tokens": 2232,
+    "prompt_tokens": 1773,
+    "total_tokens": 4005,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1816
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 2, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.40, 0.63, 0.57, 1.0],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, open red semi-trailer, oriented towards bottom of frame\",\n      \"evidence\": \"Entire semi-trailer truck is visible in lower central area of the image\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.43, 0.25, 0.50, 0.45],\n      \"size\": \"medium\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Blue flat-roofed cargo structure, located in central aisle behind the red semi\",\n      \"evidence\": \"Blue cargo part of a truck is visible in middle lane upper portion\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.10, 0.51, 0.20],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Dark container-like structure in upper central background\",\n      \"evidence\": \"Upper part of a truck with containers is visible in background\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All visible trucks are in the central aisle of the exhibition hall, no critical occlusion affecting identification\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 2,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.4,
+          0.63,
+          0.57,
+          1.0
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red cab, open red semi-trailer, oriented towards bottom of frame",
+        "evidence": "Entire semi-trailer truck is visible in lower central area of the image",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.43,
+          0.25,
+          0.5,
+          0.45
+        ],
+        "size": "medium",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "Blue flat-roofed cargo structure, located in central aisle behind the red semi",
+        "evidence": "Blue cargo part of a truck is visible in middle lane upper portion",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.45,
+          0.1,
+          0.51,
+          0.2
+        ],
+        "size": "large",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "Dark container-like structure in upper central background",
+        "evidence": "Upper part of a truck with containers is visible in background",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "All visible trucks are in the central aisle of the exhibition hall, no critical occlusion affecting identification",
+    "uncertain_reasons": []
+  }
+}

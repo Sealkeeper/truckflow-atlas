@@ -1,0 +1,106 @@
+{
+  "sample_id": "south_057000",
+  "camera": "south",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花南.mp4",
+  "source_sha256": "eb75e31b2c638f7ea9faac0af25a13389738775f0bc8bf1c9bc45834acd777f3",
+  "frame_number": 57000,
+  "video_seconds": 2280.0,
+  "video_timecode": "00:38:00.000",
+  "business_time": "2025-10-19T22:37:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/south_039.jpg",
+  "image_sha256": "72d6ce84f92c731aa3ff385f846be32a5bd3bdeab15f4dd973bc06a09133fd86",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:37:35+08:00",
+      "ok": true,
+      "latency_s": 9.0,
+      "usage": {
+        "completion_tokens": 945,
+        "prompt_tokens": 1773,
+        "total_tokens": 2718,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 553
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 9.0,
+  "usage": {
+    "completion_tokens": 945,
+    "prompt_tokens": 1773,
+    "total_tokens": 2718,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 553
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [432, 355, 518, 655],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, gray long trailer, facing towards the camera\",\n      \"evidence\": \"Fully visible in the central aisle, complete heavy truck structure present\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [392, 222, 453, 428],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White cab and white box cargo, facing towards the camera\",\n      \"evidence\": \"Positioned behind the red semi-trailer, full box truck visible\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [448, 202, 493, 332],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, positioned behind the white box truck\",\n      \"evidence\": \"Located further down the central aisle, full heavy truck visible\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All counted trucks are fully visible in the central exhibition aisle, no significant occlusion affecting identification\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 3,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          432,
+          355,
+          518,
+          655
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red cab, gray long trailer, facing towards the camera",
+        "evidence": "Fully visible in the central aisle, complete heavy truck structure present",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          392,
+          222,
+          453,
+          428
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "White cab and white box cargo, facing towards the camera",
+        "evidence": "Positioned behind the red semi-trailer, full box truck visible",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          448,
+          202,
+          493,
+          332
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red cab, positioned behind the white box truck",
+        "evidence": "Located further down the central aisle, full heavy truck visible",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "All counted trucks are fully visible in the central exhibition aisle, no significant occlusion affecting identification",
+    "uncertain_reasons": []
+  }
+}

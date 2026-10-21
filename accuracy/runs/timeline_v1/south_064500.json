@@ -1,0 +1,106 @@
+{
+  "sample_id": "south_064500",
+  "camera": "south",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花南.mp4",
+  "source_sha256": "eb75e31b2c638f7ea9faac0af25a13389738775f0bc8bf1c9bc45834acd777f3",
+  "frame_number": 64500,
+  "video_seconds": 2580.0,
+  "video_timecode": "00:43:00.000",
+  "business_time": "2025-10-19T22:42:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/south_044.jpg",
+  "image_sha256": "6b76675b4dcbaf9492d6103357c7218f0594f23b4190b227341fb1e7957c3598",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:38:10+08:00",
+      "ok": true,
+      "latency_s": 18.29,
+      "usage": {
+        "completion_tokens": 1992,
+        "prompt_tokens": 1773,
+        "total_tokens": 3765,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1548
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 18.29,
+  "usage": {
+    "completion_tokens": 1992,
+    "prompt_tokens": 1773,
+    "total_tokens": 3765,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1548
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.38, 0.22, 0.46, 0.41],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White cab with '东风商用车' text on front, front-facing, positioned in upper central lane\",\n      \"evidence\": \"Clearly visible as a complete heavy truck in the middle upper area of the scene\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.20, 0.49, 0.33],\n      \"size\": \"large\",\n      \"visible\": \"partial_front\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, front-facing, located behind the white truck in the central lane\",\n      \"evidence\": \"Partial front portion of a heavy truck visible, distinct from adjacent white truck\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.46, 0.36, 0.55, 0.69],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab with front logo, front-facing, in lower central lane\",\n      \"evidence\": \"Complete heavy truck visible in the lower middle area of the scene\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"Three trucks are visible in the central lane of an exhibition hall; no other vehicle types (cars, vans, etc.) are present, all trucks are heavy-duty (large size)\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 3,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.38,
+          0.22,
+          0.46,
+          0.41
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "White cab with '东风商用车' text on front, front-facing, positioned in upper central lane",
+        "evidence": "Clearly visible as a complete heavy truck in the middle upper area of the scene",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.44,
+          0.2,
+          0.49,
+          0.33
+        ],
+        "size": "large",
+        "visible": "partial_front",
+        "is_truck": true,
+        "identity_clues": "Red cab, front-facing, located behind the white truck in the central lane",
+        "evidence": "Partial front portion of a heavy truck visible, distinct from adjacent white truck",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.46,
+          0.36,
+          0.55,
+          0.69
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red cab with front logo, front-facing, in lower central lane",
+        "evidence": "Complete heavy truck visible in the lower middle area of the scene",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "Three trucks are visible in the central lane of an exhibition hall; no other vehicle types (cars, vans, etc.) are present, all trucks are heavy-duty (large size)",
+    "uncertain_reasons": []
+  }
+}

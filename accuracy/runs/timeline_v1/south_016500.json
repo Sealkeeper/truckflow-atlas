@@ -1,0 +1,134 @@
+{
+  "sample_id": "south_016500",
+  "camera": "south",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花南.mp4",
+  "source_sha256": "eb75e31b2c638f7ea9faac0af25a13389738775f0bc8bf1c9bc45834acd777f3",
+  "frame_number": 16500,
+  "video_seconds": 660.0,
+  "video_timecode": "00:11:00.000",
+  "business_time": "2025-10-19T22:10:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/south_012.jpg",
+  "image_sha256": "f1aaf481154590fbf096b91b5741d0139b5c68207d0dd1d17dd0ecf3f39b466a",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:34:50+08:00",
+      "ok": true,
+      "latency_s": 18.74,
+      "usage": {
+        "completion_tokens": 2439,
+        "prompt_tokens": 1773,
+        "total_tokens": 4212,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1819
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 18.74,
+  "usage": {
+    "completion_tokens": 2439,
+    "prompt_tokens": 1773,
+    "total_tokens": 4212,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1819
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 5, \"large\": 3, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.36, 0.71, 0.48, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色空货厢，无车头，朝向镜头\",\n      \"evidence\": \"画面底部中间可见的单独红色挂车，无配套车头\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.44, 0.56, 0.87],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色车头，印有“东风商用车”字样，带白色货厢，朝向镜头\",\n      \"evidence\": \"画面中间偏下的完整白色货车，车头货厢一体\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.27, 0.51, 0.48],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，灰色长货厢，朝向镜头\",\n      \"evidence\": \"画面中间的红色货车，车头货厢完整可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.40, 0.22, 0.44, 0.35],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，尺寸小于上方大型货车，朝向镜头\",\n      \"evidence\": \"画面中间偏上的红色中型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.11, 0.48, 0.23],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，位于画面顶部，朝向镜头\",\n      \"evidence\": \"画面顶部中间的红色中型货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"展会撤展现场通道内可见5辆货车，无完全遮挡的车辆，部分车辆靠近两侧展位\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 5,
+      "large": 3,
+      "medium": 2,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.36,
+          0.71,
+          0.48,
+          0.99
+        ],
+        "size": "large",
+        "visible": "trailer_only",
+        "is_truck": true,
+        "identity_clues": "红色空货厢，无车头，朝向镜头",
+        "evidence": "画面底部中间可见的单独红色挂车，无配套车头",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.45,
+          0.44,
+          0.56,
+          0.87
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "白色车头，印有“东风商用车”字样，带白色货厢，朝向镜头",
+        "evidence": "画面中间偏下的完整白色货车，车头货厢一体",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.44,
+          0.27,
+          0.51,
+          0.48
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色车头，灰色长货厢，朝向镜头",
+        "evidence": "画面中间的红色货车，车头货厢完整可见",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.4,
+          0.22,
+          0.44,
+          0.35
+        ],
+        "size": "medium",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色车头，尺寸小于上方大型货车，朝向镜头",
+        "evidence": "画面中间偏上的红色中型货车",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.44,
+          0.11,
+          0.48,
+          0.23
+        ],
+        "size": "medium",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色车头，位于画面顶部，朝向镜头",
+        "evidence": "画面顶部中间的红色中型货车",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "展会撤展现场通道内可见5辆货车，无完全遮挡的车辆，部分车辆靠近两侧展位",
+    "uncertain_reasons": []
+  }
+}

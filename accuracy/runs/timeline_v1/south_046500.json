@@ -1,0 +1,120 @@
+{
+  "sample_id": "south_046500",
+  "camera": "south",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花南.mp4",
+  "source_sha256": "eb75e31b2c638f7ea9faac0af25a13389738775f0bc8bf1c9bc45834acd777f3",
+  "frame_number": 46500,
+  "video_seconds": 1860.0,
+  "video_timecode": "00:31:00.000",
+  "business_time": "2025-10-19T22:30:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/south_032.jpg",
+  "image_sha256": "938e8b5fde10d718fa39fe2904187d80918aa2014d613d170d628e1f85c4588f",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:36:42+08:00",
+      "ok": true,
+      "latency_s": 15.24,
+      "usage": {
+        "completion_tokens": 1342,
+        "prompt_tokens": 1773,
+        "total_tokens": 3115,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 796
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 15.24,
+  "usage": {
+    "completion_tokens": 1342,
+    "prompt_tokens": 1773,
+    "total_tokens": 3115,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 796
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 2, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.46, 0.46, 0.55, 0.88],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色东风商用车车头，带有‘东风商用车’字样，白色长货厢，朝向镜头\",\n      \"evidence\": \"完整可见的重型牵引车+厢式货厢，属于大型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.455, 0.3, 0.515, 0.5],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，灰色长半挂货厢，位于白色东风商用车后方\",\n      \"evidence\": \"完整可见的半挂式重型货车，属于大型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.41, 0.25, 0.455, 0.36],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头与红色货厢，位于半挂货车后方\",\n      \"evidence\": \"完整可见的中型货车，货厢长度短于半挂，属于中型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.12, 0.49, 0.24],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头与红色货厢，位于通道最深处\",\n      \"evidence\": \"完整可见的中型货车，无遮挡，属于中型货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面内通道区域共4辆可见货车，均无严重遮挡，边界车辆无歧义，未发现小型货车或不确定车辆\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 4,
+      "large": 2,
+      "medium": 2,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.46,
+          0.46,
+          0.55,
+          0.88
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "白色东风商用车车头，带有‘东风商用车’字样，白色长货厢，朝向镜头",
+        "evidence": "完整可见的重型牵引车+厢式货厢，属于大型货车",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.455,
+          0.3,
+          0.515,
+          0.5
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色车头，灰色长半挂货厢，位于白色东风商用车后方",
+        "evidence": "完整可见的半挂式重型货车，属于大型货车",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.41,
+          0.25,
+          0.455,
+          0.36
+        ],
+        "size": "medium",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色车头与红色货厢，位于半挂货车后方",
+        "evidence": "完整可见的中型货车，货厢长度短于半挂，属于中型货车",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.45,
+          0.12,
+          0.49,
+          0.24
+        ],
+        "size": "medium",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色车头与红色货厢，位于通道最深处",
+        "evidence": "完整可见的中型货车，无遮挡，属于中型货车",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面内通道区域共4辆可见货车，均无严重遮挡，边界车辆无歧义，未发现小型货车或不确定车辆",
+    "uncertain_reasons": []
+  }
+}

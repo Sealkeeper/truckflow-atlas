@@ -1,0 +1,200 @@
+{
+  "version": "manual-review-v1",
+  "scope": "24 per-camera sample points; not a second independent annotator and not a full-video gold standard",
+  "reviewer": "event-timeline agent visual inspection, 2026-10-21",
+  "method": "full-resolution frame inspection plus labelled contact sheets; north 05:00-10:00 also inspected with a 2x crop of the distant aisle",
+  "records": [
+    {
+      "camera": "north",
+      "video_seconds": 60,
+      "manual_total": 3,
+      "source": "visual_review_v1",
+      "evidence": "research/event_timeline/contact_sheets/01_north_opening.jpg",
+      "notes": "Three distinct visible truck bodies; no nearby-frame disagreement."
+    },
+    {
+      "camera": "north",
+      "video_seconds": 300,
+      "manual_total": 3,
+      "source": "gold_v0+visual_review_v1",
+      "evidence": "research/event_timeline/evidence/north_300_far.jpg",
+      "notes": "Near white trailer plus two distinct distant cargo bodies; model merges the distant pair."
+    },
+    {
+      "camera": "north",
+      "video_seconds": 360,
+      "manual_total": 3,
+      "source": "visual_review_v1",
+      "evidence": "research/event_timeline/evidence/north_360_far.jpg",
+      "notes": "The same two distant cargo bodies remain visible behind the near white trailer; model returns only the near trailer."
+    },
+    {
+      "camera": "north",
+      "video_seconds": 600,
+      "manual_total": 4,
+      "source": "gold_v0+visual_review_v1",
+      "evidence": "research/event_timeline/contact_sheets/02_north_midday.jpg",
+      "notes": "Near white trailer, central red trailer and two distant cargo bodies."
+    },
+    {
+      "camera": "north",
+      "video_seconds": 900,
+      "manual_total": 3,
+      "source": "gold_v0",
+      "evidence": "assets/frames/north_900.jpg",
+      "notes": "Existing frozen development-set label."
+    },
+    {
+      "camera": "north",
+      "video_seconds": 1200,
+      "manual_total": 3,
+      "source": "gold_v0",
+      "evidence": "assets/frames/north_1200.jpg",
+      "notes": "Existing frozen development-set label."
+    },
+    {
+      "camera": "north",
+      "video_seconds": 1500,
+      "manual_total": 2,
+      "source": "gold_v0",
+      "evidence": "assets/frames/north_1500.jpg",
+      "notes": "Existing frozen development-set label."
+    },
+    {
+      "camera": "north",
+      "video_seconds": 1800,
+      "manual_total": 2,
+      "source": "gold_v0",
+      "evidence": "assets/frames/north_1800.jpg",
+      "notes": "Existing frozen development-set label."
+    },
+    {
+      "camera": "north",
+      "video_seconds": 2100,
+      "manual_total": 2,
+      "source": "gold_v0+visual_review_v1",
+      "evidence": "assets/timeline_frames/north_036.jpg",
+      "notes": "Near white trailer and central red trailer; the forklift and loose cargo are excluded."
+    },
+    {
+      "camera": "north",
+      "video_seconds": 2160,
+      "manual_total": 4,
+      "source": "visual_review_v1",
+      "evidence": "assets/timeline_frames/north_037.jpg",
+      "notes": "Two near trailers, one central red trailer and one newly visible distant tractor/trailer; this is a plausible real entry event."
+    },
+    {
+      "camera": "north",
+      "video_seconds": 2400,
+      "manual_total": 3,
+      "source": "gold_v0",
+      "evidence": "assets/frames/north_2400.jpg",
+      "notes": "Existing frozen development-set label."
+    },
+    {
+      "camera": "north",
+      "video_seconds": 2640,
+      "manual_total": 2,
+      "source": "visual_review_v1",
+      "evidence": "research/event_timeline/contact_sheets/04_north_tail.jpg",
+      "notes": "Two distinct truck bodies remain at the final whole-minute sample."
+    },
+    {
+      "camera": "south",
+      "video_seconds": 60,
+      "manual_total": 3,
+      "source": "visual_review_v1",
+      "evidence": "assets/timeline_frames/south_002.jpg",
+      "notes": "Three distinct visible truck bodies."
+    },
+    {
+      "camera": "south",
+      "video_seconds": 300,
+      "manual_total": 4,
+      "source": "gold_v0",
+      "evidence": "assets/frames/south_300.jpg",
+      "notes": "Existing frozen development-set label; type breakdown is 3 large and 1 medium."
+    },
+    {
+      "camera": "south",
+      "video_seconds": 600,
+      "manual_total": 5,
+      "source": "gold_v0+visual_review_v1",
+      "evidence": "research/event_timeline/contact_sheets/05_south_opening.jpg",
+      "notes": "The distant brown cargo body is a separate visible body in the frozen label."
+    },
+    {
+      "camera": "south",
+      "video_seconds": 900,
+      "manual_total": 5,
+      "source": "gold_v0",
+      "evidence": "assets/frames/south_900.jpg",
+      "notes": "Existing frozen development-set label; type breakdown is 3 large and 2 medium."
+    },
+    {
+      "camera": "south",
+      "video_seconds": 1200,
+      "manual_total": 5,
+      "source": "gold_v0",
+      "evidence": "assets/frames/south_1200.jpg",
+      "notes": "Existing frozen development-set label."
+    },
+    {
+      "camera": "south",
+      "video_seconds": 1500,
+      "manual_total": 5,
+      "source": "gold_v0",
+      "evidence": "assets/frames/south_1500.jpg",
+      "notes": "Existing frozen development-set label."
+    },
+    {
+      "camera": "south",
+      "video_seconds": 1800,
+      "manual_total": 4,
+      "source": "gold_v0",
+      "evidence": "assets/frames/south_1800.jpg",
+      "notes": "Existing frozen development-set label."
+    },
+    {
+      "camera": "south",
+      "video_seconds": 2100,
+      "manual_total": 4,
+      "source": "gold_v0",
+      "evidence": "assets/frames/south_2100.jpg",
+      "notes": "Existing frozen development-set label; type breakdown is 2 large and 2 medium."
+    },
+    {
+      "camera": "south",
+      "video_seconds": 2400,
+      "manual_total": 3,
+      "source": "gold_v0",
+      "evidence": "assets/frames/south_2400.jpg",
+      "notes": "Existing frozen development-set label."
+    },
+    {
+      "camera": "south",
+      "video_seconds": 2640,
+      "manual_total": 4,
+      "source": "visual_review_v1",
+      "evidence": "assets/timeline_frames/south_045.jpg",
+      "notes": "The bottom-edge red trailer is clearly visible within the central aisle and is a separate body; its entry occurred between 43:00 and 44:00."
+    },
+    {
+      "camera": "north",
+      "video_seconds": 2659,
+      "manual_total": 3,
+      "source": "visual_review_v1",
+      "evidence": "assets/timeline_frames/north_046.jpg",
+      "notes": "Endpoint frame 66474: distant red truck, central red trailer and a new near truck entering at the bottom edge."
+    },
+    {
+      "camera": "south",
+      "video_seconds": 2659,
+      "manual_total": 4,
+      "source": "visual_review_v1",
+      "evidence": "assets/timeline_frames/south_046.jpg",
+      "notes": "Endpoint frame 66474: two distant trucks, central red tractor/trailer and the bottom red trailer remain distinct; model merges or omits one."
+    }
+  ]
+}

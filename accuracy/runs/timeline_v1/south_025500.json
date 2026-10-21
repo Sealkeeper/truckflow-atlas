@@ -1,0 +1,134 @@
+{
+  "sample_id": "south_025500",
+  "camera": "south",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花南.mp4",
+  "source_sha256": "eb75e31b2c638f7ea9faac0af25a13389738775f0bc8bf1c9bc45834acd777f3",
+  "frame_number": 25500,
+  "video_seconds": 1020.0,
+  "video_timecode": "00:17:00.000",
+  "business_time": "2025-10-19T22:16:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/south_018.jpg",
+  "image_sha256": "aa43ac9623c826e546b47a7b171fcfb113b976609489c4fd54e2dcc0bb113ebd",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:35:31+08:00",
+      "ok": true,
+      "latency_s": 20.29,
+      "usage": {
+        "completion_tokens": 2065,
+        "prompt_tokens": 1773,
+        "total_tokens": 3838,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1436
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 20.29,
+  "usage": {
+    "completion_tokens": 2065,
+    "prompt_tokens": 1773,
+    "total_tokens": 3838,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1436
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 5, \"large\": 4, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.45, 0.45, 0.55, 0.88],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White cab with '东风商用车' text, white trailer, front-facing\",\n      \"evidence\": \"Clearly visible in lower central area of the image, full vehicle shown\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.27, 0.52, 0.50],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, gray trailer top, front-facing\",\n      \"evidence\": \"Located above the white truck in central aisle, full vehicle visible\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.40, 0.21, 0.45, 0.35],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, front-facing, medium-sized truck\",\n      \"evidence\": \"Between the gray trailer truck and top red truck in central aisle\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.11, 0.50, 0.26],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, front-facing, large-sized truck\",\n      \"evidence\": \"Furthest up the central aisle, full vehicle visible\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.50, 0.84, 0.60, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red open trailer, no cab, separate unit\",\n      \"evidence\": \"Located at bottom right of image, separate trailer not attached to adjacent truck\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All trucks are in the central aisle of the exhibition hall, no fully obscured vehicles; all visible parts confirm they meet the truck definition\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 5,
+      "large": 4,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.45,
+          0.45,
+          0.55,
+          0.88
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "White cab with '东风商用车' text, white trailer, front-facing",
+        "evidence": "Clearly visible in lower central area of the image, full vehicle shown",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.44,
+          0.27,
+          0.52,
+          0.5
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red cab, gray trailer top, front-facing",
+        "evidence": "Located above the white truck in central aisle, full vehicle visible",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.4,
+          0.21,
+          0.45,
+          0.35
+        ],
+        "size": "medium",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red cab, front-facing, medium-sized truck",
+        "evidence": "Between the gray trailer truck and top red truck in central aisle",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.45,
+          0.11,
+          0.5,
+          0.26
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red cab, front-facing, large-sized truck",
+        "evidence": "Furthest up the central aisle, full vehicle visible",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.5,
+          0.84,
+          0.6,
+          0.99
+        ],
+        "size": "large",
+        "visible": "trailer_only",
+        "is_truck": true,
+        "identity_clues": "Red open trailer, no cab, separate unit",
+        "evidence": "Located at bottom right of image, separate trailer not attached to adjacent truck",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "All trucks are in the central aisle of the exhibition hall, no fully obscured vehicles; all visible parts confirm they meet the truck definition",
+    "uncertain_reasons": []
+  }
+}

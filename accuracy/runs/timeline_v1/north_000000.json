@@ -1,0 +1,106 @@
+{
+  "sample_id": "north_000000",
+  "camera": "north",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花北.mp4",
+  "source_sha256": "9222cffdf50f955794b4e10494a2c3a8f86c5179e4d106a4189c611cde454515",
+  "frame_number": 0,
+  "video_seconds": 0.0,
+  "video_timecode": "00:00:00.000",
+  "business_time": "2025-10-19T21:59:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/north_001.jpg",
+  "image_sha256": "4a090ec19e12793d4de17b0b83402edc3bc615d32464eb6abb242c9b45569447",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:30:51+08:00",
+      "ok": true,
+      "latency_s": 17.79,
+      "usage": {
+        "completion_tokens": 2090,
+        "prompt_tokens": 1773,
+        "total_tokens": 3863,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1653
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 17.79,
+  "usage": {
+    "completion_tokens": 2090,
+    "prompt_tokens": 1773,
+    "total_tokens": 3863,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1653
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 2, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.37, 0.49, 0.48, 0.92],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色厢式货车，车尾朝向镜头，车牌为粤L66002，位于画面下方中间通道\",\n      \"evidence\": \"画面下方中间可见完整红色厢式货车，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.43, 0.25, 0.49, 0.45],\n      \"size\": \"medium\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色厢式货车，货厢部分可见，位于中间通道，在红色厢式货车上方\",\n      \"evidence\": \"画面中间通道可见蓝色货车货厢，属于货车范畴\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.50, 0.11, 0.55, 0.25],\n      \"size\": \"large\",\n      \"visible\": \"partial\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色集装箱货车，位于通道尽头，货柜部分可见\",\n      \"evidence\": \"画面上方中间通道可见红色集装箱货车，属于重型货车范畴\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"所有货车均位于展会中间通道，部分被展台结构遮挡，无完全被遮挡或画面外的车辆\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 2,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.37,
+          0.49,
+          0.48,
+          0.92
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色厢式货车，车尾朝向镜头，车牌为粤L66002，位于画面下方中间通道",
+        "evidence": "画面下方中间可见完整红色厢式货车，符合货车定义",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.43,
+          0.25,
+          0.49,
+          0.45
+        ],
+        "size": "medium",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "蓝色厢式货车，货厢部分可见，位于中间通道，在红色厢式货车上方",
+        "evidence": "画面中间通道可见蓝色货车货厢，属于货车范畴",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.5,
+          0.11,
+          0.55,
+          0.25
+        ],
+        "size": "large",
+        "visible": "partial",
+        "is_truck": true,
+        "identity_clues": "红色集装箱货车，位于通道尽头，货柜部分可见",
+        "evidence": "画面上方中间通道可见红色集装箱货车，属于重型货车范畴",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "所有货车均位于展会中间通道，部分被展台结构遮挡，无完全被遮挡或画面外的车辆",
+    "uncertain_reasons": []
+  }
+}

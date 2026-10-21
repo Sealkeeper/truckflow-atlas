@@ -1,0 +1,92 @@
+{
+  "sample_id": "north_043500",
+  "camera": "north",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花北.mp4",
+  "source_sha256": "9222cffdf50f955794b4e10494a2c3a8f86c5179e4d106a4189c611cde454515",
+  "frame_number": 43500,
+  "video_seconds": 1740.0,
+  "video_timecode": "00:29:00.000",
+  "business_time": "2025-10-19T22:28:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/north_030.jpg",
+  "image_sha256": "5a92ed8fe17b3a69cec6d432ad06f13797a8fadc94dadc015cc5059aeb88f173",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:32:59+08:00",
+      "ok": true,
+      "latency_s": 10.11,
+      "usage": {
+        "completion_tokens": 1107,
+        "prompt_tokens": 1773,
+        "total_tokens": 2880,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 794
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 10.11,
+  "usage": {
+    "completion_tokens": 1107,
+    "prompt_tokens": 1773,
+    "total_tokens": 2880,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 794
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.43, 0.25, 0.50, 0.45],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色封闭货厢重型货车，车尾朝向观察者\",\n      \"evidence\": \"画面中上部通道内的红色货车，完整可见，符合重型货车特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.34, 0.61, 0.48, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色封闭厢式挂车，单独可见无配套车头\",\n      \"evidence\": \"画面中下部通道内的白色厢式挂车，单独清晰可见，属于货车类挂车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面内共可见2辆符合要求的货车，无被完全遮挡或无法判定的车辆\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 2,
+      "large": 2,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.43,
+          0.25,
+          0.5,
+          0.45
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色封闭货厢重型货车，车尾朝向观察者",
+        "evidence": "画面中上部通道内的红色货车，完整可见，符合重型货车特征",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.34,
+          0.61,
+          0.48,
+          0.99
+        ],
+        "size": "large",
+        "visible": "trailer_only",
+        "is_truck": true,
+        "identity_clues": "白色封闭厢式挂车，单独可见无配套车头",
+        "evidence": "画面中下部通道内的白色厢式挂车，单独清晰可见，属于货车类挂车",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面内共可见2辆符合要求的货车，无被完全遮挡或无法判定的车辆",
+    "uncertain_reasons": []
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "sample_id": "north_066474",
+  "camera": "north",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花北.mp4",
+  "source_sha256": "9222cffdf50f955794b4e10494a2c3a8f86c5179e4d106a4189c611cde454515",
+  "frame_number": 66474,
+  "video_seconds": 2658.96,
+  "video_timecode": "00:44:18.960",
+  "business_time": "2025-10-19T22:43:44+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/north_046.jpg",
+  "image_sha256": "3ef60d7de8a67990cf0aae1010f5a0a835b459c1281c97ae28f4f87c0af7d61b",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:53:38+08:00",
+      "ok": true,
+      "latency_s": 21.17,
+      "usage": {
+        "completion_tokens": 2369,
+        "prompt_tokens": 1773,
+        "total_tokens": 4142,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1913
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 21.17,
+  "usage": {
+    "completion_tokens": 2369,
+    "prompt_tokens": 1773,
+    "total_tokens": 4142,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1913
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.37, 0.44, 0.49, 0.83],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货厢，印有“粤T73778”字样，朝向镜头，位于通道左侧中间区域\",\n      \"evidence\": \"画面中清晰可见完整的红色货柜货车，具备明确的车牌标识，符合重型货车特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.32, 0.84, 0.48, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车身，仅露出上部结构，位于画面底部中间区域\",\n      \"evidence\": \"画面底部可见红色货车的上部，虽仅部分露出，但可确定为货车范畴\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.47, 0.8, 0.54, 0.19],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车身，位于画面上方通道尽头，具备车辆灯光，朝向镜头方向\",\n      \"evidence\": \"画面远处通道尽头可见完整的红色货车，符合重型货车特征\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面内共可见3辆大型货车，分别分布于通道中间、画面底部及通道尽头，无被完全遮挡或无法确定属性的车辆\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 3,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.37,
+          0.44,
+          0.49,
+          0.83
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色货厢，印有“粤T73778”字样，朝向镜头，位于通道左侧中间区域",
+        "evidence": "画面中清晰可见完整的红色货柜货车，具备明确的车牌标识，符合重型货车特征",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.32,
+          0.84,
+          0.48,
+          0.99
+        ],
+        "size": "large",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "红色车身，仅露出上部结构，位于画面底部中间区域",
+        "evidence": "画面底部可见红色货车的上部，虽仅部分露出，但可确定为货车范畴",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.47,
+          0.8,
+          0.54,
+          0.19
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色车身，位于画面上方通道尽头，具备车辆灯光，朝向镜头方向",
+        "evidence": "画面远处通道尽头可见完整的红色货车，符合重型货车特征",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面内共可见3辆大型货车，分别分布于通道中间、画面底部及通道尽头，无被完全遮挡或无法确定属性的车辆",
+    "uncertain_reasons": []
+  }
+}

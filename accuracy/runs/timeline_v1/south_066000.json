@@ -1,0 +1,120 @@
+{
+  "sample_id": "south_066000",
+  "camera": "south",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花南.mp4",
+  "source_sha256": "eb75e31b2c638f7ea9faac0af25a13389738775f0bc8bf1c9bc45834acd777f3",
+  "frame_number": 66000,
+  "video_seconds": 2640.0,
+  "video_timecode": "00:44:00.000",
+  "business_time": "2025-10-19T22:43:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/south_045.jpg",
+  "image_sha256": "232694e5e361739db9b8129a9c9cbebf88b2160dc94fd26377fc37c183e0b0e4",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:38:17+08:00",
+      "ok": true,
+      "latency_s": 15.41,
+      "usage": {
+        "completion_tokens": 1773,
+        "prompt_tokens": 1773,
+        "total_tokens": 3546,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1213
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 15.41,
+  "usage": {
+    "completion_tokens": 1773,
+    "prompt_tokens": 1773,
+    "total_tokens": 3546,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1213
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 2, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.385, 0.218, 0.457, 0.416],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White cab with Chinese text on front, box-shaped cargo area, front-facing\",\n      \"evidence\": \"Clearly visible in central aisle, no major occlusion, matches medium truck definition\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.452, 0.209, 0.497, 0.331],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, front-facing, positioned behind the white truck\",\n      \"evidence\": \"Visible in central aisle, no occlusion, medium truck\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.461, 0.363, 0.534, 0.667],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Large red heavy truck cab, front-facing, in central aisle\",\n      \"evidence\": \"Full cab visible, large size, qualifies as heavy truck\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.469, 0.639, 0.607, 0.997],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red corrugated cargo trailer, separate from the red cab above it\",\n      \"evidence\": \"Separate trailer unit, no adjacent matching cab, counted as per rule 2\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All counted vehicles are in the central exhibition aisle; the red trailer is a distinct unit from the red cab above it, so counted separately. No fully obscured or boundary vehicles are included.\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 4,
+      "large": 2,
+      "medium": 2,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.385,
+          0.218,
+          0.457,
+          0.416
+        ],
+        "size": "medium",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "White cab with Chinese text on front, box-shaped cargo area, front-facing",
+        "evidence": "Clearly visible in central aisle, no major occlusion, matches medium truck definition",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.452,
+          0.209,
+          0.497,
+          0.331
+        ],
+        "size": "medium",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red cab, front-facing, positioned behind the white truck",
+        "evidence": "Visible in central aisle, no occlusion, medium truck",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.461,
+          0.363,
+          0.534,
+          0.667
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Large red heavy truck cab, front-facing, in central aisle",
+        "evidence": "Full cab visible, large size, qualifies as heavy truck",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.469,
+          0.639,
+          0.607,
+          0.997
+        ],
+        "size": "large",
+        "visible": "trailer_only",
+        "is_truck": true,
+        "identity_clues": "Red corrugated cargo trailer, separate from the red cab above it",
+        "evidence": "Separate trailer unit, no adjacent matching cab, counted as per rule 2",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "All counted vehicles are in the central exhibition aisle; the red trailer is a distinct unit from the red cab above it, so counted separately. No fully obscured or boundary vehicles are included.",
+    "uncertain_reasons": []
+  }
+}

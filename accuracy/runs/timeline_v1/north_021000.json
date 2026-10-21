@@ -1,0 +1,106 @@
+{
+  "sample_id": "north_021000",
+  "camera": "north",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花北.mp4",
+  "source_sha256": "9222cffdf50f955794b4e10494a2c3a8f86c5179e4d106a4189c611cde454515",
+  "frame_number": 21000,
+  "video_seconds": 840.0,
+  "video_timecode": "00:14:00.000",
+  "business_time": "2025-10-19T22:13:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/north_015.jpg",
+  "image_sha256": "9767d9c8f778ee553ced939a9f9ab0faa934c390860d3bd511b67abfa732557d",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:31:50+08:00",
+      "ok": true,
+      "latency_s": 12.2,
+      "usage": {
+        "completion_tokens": 1226,
+        "prompt_tokens": 1773,
+        "total_tokens": 2999,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 794
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 12.2,
+  "usage": {
+    "completion_tokens": 1226,
+    "prompt_tokens": 1773,
+    "total_tokens": 2999,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 794
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.44, 0.15, 0.50, 0.30],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色货厢顶部，位于通道深处，朝向画面远端\",\n      \"evidence\": \"画面中通道内可见完整的货车，具备封闭货厢结构\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.40, 0.35, 0.49, 0.62],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色封闭货厢，带有编号标识，位于画面中部\",\n      \"evidence\": \"单独可见的货车货厢，具备半挂货厢特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.34, 0.60, 0.48, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹状厢式货厢，位于画面下部\",\n      \"evidence\": \"完整可见的厢式货车，具备封闭厢式结构\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面内共可见3辆货车，分别为通道深处蓝色顶货车、中部红色货厢挂车、下部白色厢式货车，无完全遮挡或无法确定类型的车辆\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 3,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.44,
+          0.15,
+          0.5,
+          0.3
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "蓝色货厢顶部，位于通道深处，朝向画面远端",
+        "evidence": "画面中通道内可见完整的货车，具备封闭货厢结构",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.4,
+          0.35,
+          0.49,
+          0.62
+        ],
+        "size": "large",
+        "visible": "trailer_only",
+        "is_truck": true,
+        "identity_clues": "红色封闭货厢，带有编号标识，位于画面中部",
+        "evidence": "单独可见的货车货厢，具备半挂货厢特征",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.34,
+          0.6,
+          0.48,
+          0.99
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "白色波纹状厢式货厢，位于画面下部",
+        "evidence": "完整可见的厢式货车，具备封闭厢式结构",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面内共可见3辆货车，分别为通道深处蓝色顶货车、中部红色货厢挂车、下部白色厢式货车，无完全遮挡或无法确定类型的车辆",
+    "uncertain_reasons": []
+  }
+}

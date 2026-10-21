@@ -1,0 +1,106 @@
+{
+  "sample_id": "north_030000",
+  "camera": "north",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花北.mp4",
+  "source_sha256": "9222cffdf50f955794b4e10494a2c3a8f86c5179e4d106a4189c611cde454515",
+  "frame_number": 30000,
+  "video_seconds": 1200.0,
+  "video_timecode": "00:20:00.000",
+  "business_time": "2025-10-19T22:19:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/north_021.jpg",
+  "image_sha256": "e0e65ed4d8f6149be6b07f09191211a49d09e2d1c3dad285ad999a4c0b1132ed",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:32:23+08:00",
+      "ok": true,
+      "latency_s": 14.17,
+      "usage": {
+        "completion_tokens": 1403,
+        "prompt_tokens": 1773,
+        "total_tokens": 3176,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 963
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 14.17,
+  "usage": {
+    "completion_tokens": 1403,
+    "prompt_tokens": 1773,
+    "total_tokens": 3176,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 963
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.435, 0.153, 0.503, 0.328],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Blue covered cargo truck, rear end visible, positioned at far end of central aisle\",\n      \"evidence\": \"Distinct truck cargo structure, no other vehicle type matches this form\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.402, 0.348, 0.497, 0.632],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red open-top cargo truck, rear has markings '9L86 980', rear facing\",\n      \"evidence\": \"Entire rear and side of truck visible, clear cargo structure\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.338, 0.618, 0.492, 0.995],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White corrugated roof truck, gray lower body, rear facing, text on lower rear\",\n      \"evidence\": \"Full visible truck with distinct roof and body features\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All trucks are rear-facing in the central exhibition aisle, no partial occlusion that hides core truck structure\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 3,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.435,
+          0.153,
+          0.503,
+          0.328
+        ],
+        "size": "large",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "Blue covered cargo truck, rear end visible, positioned at far end of central aisle",
+        "evidence": "Distinct truck cargo structure, no other vehicle type matches this form",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.402,
+          0.348,
+          0.497,
+          0.632
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red open-top cargo truck, rear has markings '9L86 980', rear facing",
+        "evidence": "Entire rear and side of truck visible, clear cargo structure",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.338,
+          0.618,
+          0.492,
+          0.995
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "White corrugated roof truck, gray lower body, rear facing, text on lower rear",
+        "evidence": "Full visible truck with distinct roof and body features",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "All trucks are rear-facing in the central exhibition aisle, no partial occlusion that hides core truck structure",
+    "uncertain_reasons": []
+  }
+}

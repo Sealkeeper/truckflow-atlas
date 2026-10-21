@@ -1,0 +1,106 @@
+{
+  "sample_id": "south_004500",
+  "camera": "south",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花南.mp4",
+  "source_sha256": "eb75e31b2c638f7ea9faac0af25a13389738775f0bc8bf1c9bc45834acd777f3",
+  "frame_number": 4500,
+  "video_seconds": 180.0,
+  "video_timecode": "00:03:00.000",
+  "business_time": "2025-10-19T22:02:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/south_004.jpg",
+  "image_sha256": "66ecd08f95b8f3603c68b29578d43d475bd426d7021f4dfe4537f978683aee70",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:34:22+08:00",
+      "ok": true,
+      "latency_s": 18.07,
+      "usage": {
+        "completion_tokens": 1719,
+        "prompt_tokens": 1773,
+        "total_tokens": 3492,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1286
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 18.07,
+  "usage": {
+    "completion_tokens": 1719,
+    "prompt_tokens": 1773,
+    "total_tokens": 3492,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1286
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.44, 0.24, 0.53, 0.47],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab with gray trailer, front-facing, located in central aisle\",\n      \"evidence\": \"Fully visible in the aisle, no occlusion, matches heavy truck definition\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.39, 0.20, 0.45, 0.38],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red closed cargo truck, front-facing, headlights illuminated, left of the first truck\",\n      \"evidence\": \"Fully visible, no part obscured, meets heavy truck criteria\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.12, 0.49, 0.24],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red truck cab, rear of central aisle, behind the second truck\",\n      \"evidence\": \"Visible in upper frame edge, clearly a truck cab, no ambiguity\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All three trucks are in the central exhibition aisle; the third truck is partially visible at the top edge of the frame. No other trucks are present in the image.\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 3,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.44,
+          0.24,
+          0.53,
+          0.47
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red cab with gray trailer, front-facing, located in central aisle",
+        "evidence": "Fully visible in the aisle, no occlusion, matches heavy truck definition",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.39,
+          0.2,
+          0.45,
+          0.38
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red closed cargo truck, front-facing, headlights illuminated, left of the first truck",
+        "evidence": "Fully visible, no part obscured, meets heavy truck criteria",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.45,
+          0.12,
+          0.49,
+          0.24
+        ],
+        "size": "large",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "Red truck cab, rear of central aisle, behind the second truck",
+        "evidence": "Visible in upper frame edge, clearly a truck cab, no ambiguity",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "All three trucks are in the central exhibition aisle; the third truck is partially visible at the top edge of the frame. No other trucks are present in the image.",
+    "uncertain_reasons": []
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "sample_id": "north_048000",
+  "camera": "north",
+  "source_video": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频\\A区天花北.mp4",
+  "source_sha256": "9222cffdf50f955794b4e10494a2c3a8f86c5179e4d106a4189c611cde454515",
+  "frame_number": 48000,
+  "video_seconds": 1920.0,
+  "video_timecode": "00:32:00.000",
+  "business_time": "2025-10-19T22:31:26+08:00",
+  "business_offset_seconds": 0,
+  "image": "assets/timeline_frames/north_033.jpg",
+  "image_sha256": "82d30128a6b73d20e1d9189fce53116a109164425d3c6f002e15e5a3e5ca87a4",
+  "prompt_version": "truck-count-v1",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "ok": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-21T17:33:11+08:00",
+      "ok": true,
+      "latency_s": 11.81,
+      "usage": {
+        "completion_tokens": 1063,
+        "prompt_tokens": 1773,
+        "total_tokens": 2836,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 743
+        }
+      },
+      "error": null,
+      "status": null
+    }
+  ],
+  "latency_s": 11.81,
+  "usage": {
+    "completion_tokens": 1063,
+    "prompt_tokens": 1773,
+    "total_tokens": 2836,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 743
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.42, 0.24, 0.50, 0.46],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red rectangular heavy-duty cargo box, rear view, located in central aisle between exhibition booths\",\n      \"evidence\": \"Clear large truck structure with full cargo area visible in the scene\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.34, 0.61, 0.48, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White corrugated metal long cargo box, located in lower central aisle left of red forklift\",\n      \"evidence\": \"Long heavy truck cargo area fully visible, cab partially visible at top of cargo\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"Two large trucks are clearly visible in the central aisle of the exhibition hall, no major occlusion affecting their identification\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 2,
+      "large": 2,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.42,
+          0.24,
+          0.5,
+          0.46
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red rectangular heavy-duty cargo box, rear view, located in central aisle between exhibition booths",
+        "evidence": "Clear large truck structure with full cargo area visible in the scene",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.34,
+          0.61,
+          0.48,
+          0.99
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "White corrugated metal long cargo box, located in lower central aisle left of red forklift",
+        "evidence": "Long heavy truck cargo area fully visible, cab partially visible at top of cargo",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "Two large trucks are clearly visible in the central aisle of the exhibition hall, no major occlusion affecting their identification",
+    "uncertain_reasons": []
+  }
+}
