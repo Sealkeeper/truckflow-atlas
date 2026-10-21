@@ -29,6 +29,7 @@
       "evidence": "The white cab is directly attached to the white trailer; the middle red cab is directly attached to the red trailer. Counting each cargo body separately gives 5, but the stated rule (tractor and trailer count once) gives 3 physical vehicles.",
       "hypotheses": {"vehicle_units": 3, "cargo_bodies": 5, "current_label": 5},
       "evidence_image": "accuracy/evidence/gold_audit/south_600_candidates.jpg",
+      "temporal_evidence": "accuracy/evidence/pairing/south_600_aisle_timeline.jpg",
       "status": "must_be_adjudicated"
     },
     {
