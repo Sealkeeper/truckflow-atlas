@@ -1,0 +1,86 @@
+{
+  "job": "north_1200_candidates",
+  "image": "assets\\sheets\\north_1200_candidates.jpg",
+  "prompt": "这是一个机位同一原始帧切出的候选联系表。每格 C1、C2... 是互相重叠的局部窗口，\n不是“一格必定一辆车”，同一格可能包含多辆，同一辆也可能出现在多格。\n\n请建立该帧的物理车辆集合：\n1. 每个物理车辆只列一次，并在 candidates 中列出显示它的所有窗口编号。\n2. 一个窗口可同时归入多个物理车辆；只有同一车头/货厢绝不能拆成两辆。\n3. 排除人物、叉车、轿车、展台、杂物；完全空窗也应 reject。\n4. 只按窗口中实际可见的车顶、货厢、车头、颜色、文字和比例判断，不猜画面外。\n5. 远处、遮挡、窗口边界或与你看到的其它窗口有歧义时 review=true。\n6. 车型按 large（重卡/半挂/长货厢）、medium（中卡）、small（轻卡/厢车）；不能确认写 unknown。\n\n只输出严格 JSON：\n{\"physical_vehicles\":[{\"group\":\"G1\",\"candidates\":[\"C1\",\"C3\"],\"size\":\"large|medium|small|unknown\",\"identity\":\"颜色/货厢/车头/文字等可复核证据\",\"reason\":\"为何这些窗口是同一物理车\",\"review\":false}],\"rejected_candidates\":[{\"candidate\":\"C5\",\"reason\":\"\"}],\"review_reasons\":[]}",
+  "run": {
+    "model": "doubao",
+    "model_id": "ep-20260828174616-dthpx",
+    "ok": true,
+    "latency_s": 14.077,
+    "request_id": "021792575263173c175de5f11b223efcc3ac4becea38bcfaa0d23",
+    "usage": {
+      "completion_tokens": 1522,
+      "prompt_tokens": 1634,
+      "total_tokens": 3156,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1218
+      }
+    },
+    "parsed": {
+      "physical_vehicles": [
+        {
+          "group": "G1",
+          "candidates": [
+            "N8",
+            "N10"
+          ],
+          "size": "large",
+          "identity": "白色长货厢卡车",
+          "reason": "N8和N10窗口显示同一辆白色长货厢的物理卡车，货厢形态、位置匹配",
+          "review": false
+        },
+        {
+          "group": "G2",
+          "candidates": [
+            "N7"
+          ],
+          "size": "large",
+          "identity": "红色货厢卡车",
+          "reason": "N7窗口显示红色货厢的物理卡车，无其他重叠窗口对应同一车辆",
+          "review": false
+        },
+        {
+          "group": "G3",
+          "candidates": [
+            "N4"
+          ],
+          "size": "medium",
+          "identity": "深色货厢卡车",
+          "reason": "N4窗口显示深色货厢的物理卡车，无其他重叠窗口对应同一车辆",
+          "review": false
+        }
+      ],
+      "rejected_candidates": [
+        {
+          "candidate": "N1",
+          "reason": "窗口为通道区域，无车辆"
+        },
+        {
+          "candidate": "N2",
+          "reason": "窗口为展台结构，无车辆"
+        },
+        {
+          "candidate": "N3",
+          "reason": "窗口为人物，无车辆"
+        },
+        {
+          "candidate": "N5",
+          "reason": "窗口为展台结构，无车辆"
+        },
+        {
+          "candidate": "N6",
+          "reason": "窗口为展台结构，无车辆"
+        },
+        {
+          "candidate": "N9",
+          "reason": "窗口为天花区域，无车辆"
+        }
+      ],
+      "review_reasons": []
+    },
+    "raw_text": "{\"physical_vehicles\": [\n    {\"group\":\"G1\",\"candidates\":[\"N8\",\"N10\"],\"size\":\"large\",\"identity\":\"白色长货厢卡车\",\"reason\":\"N8和N10窗口显示同一辆白色长货厢的物理卡车，货厢形态、位置匹配\",\"review\":false},\n    {\"group\":\"G2\",\"candidates\":[\"N7\"],\"size\":\"large\",\"identity\":\"红色货厢卡车\",\"reason\":\"N7窗口显示红色货厢的物理卡车，无其他重叠窗口对应同一车辆\",\"review\":false},\n    {\"group\":\"G3\",\"candidates\":[\"N4\"],\"size\":\"medium\",\"identity\":\"深色货厢卡车\",\"reason\":\"N4窗口显示深色货厢的物理卡车，无其他重叠窗口对应同一车辆\",\"review\":false}\n],\n\"rejected_candidates\": [\n    {\"candidate\":\"N1\",\"reason\":\"窗口为通道区域，无车辆\"},\n    {\"candidate\":\"N2\",\"reason\":\"窗口为展台结构，无车辆\"},\n    {\"candidate\":\"N3\",\"reason\":\"窗口为人物，无车辆\"},\n    {\"candidate\":\"N5\",\"reason\":\"窗口为展台结构，无车辆\"},\n    {\"candidate\":\"N6\",\"reason\":\"窗口为展台结构，无车辆\"},\n    {\"candidate\":\"N9\",\"reason\":\"窗口为天花区域，无车辆\"}\n],\n\"review_reasons\": []}"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "observation": "north_1500",
+  "mode": "crop",
+  "images": [
+    "assets\\crops\\north_t1500_lane.jpg"
+  ],
+  "prompt": "这是同一机位的过道区域放大裁剪，四周展台已被裁掉。请只依据图中可见内容清点货车。\n\n重点检查远处小型、被柱子/车辆遮挡、只露出一部分的货车。计数单位必须是物理车辆：\n同一辆车的车头、底盘和货厢只算一辆；两个候选若是同一车的车头与货厢，必须合并。\n独立挂车/货厢算一辆。小汽车、面包车、叉车、手推车、人物不计。车型不确定写 unknown。\nbbox 是相对本裁剪图的 0-1 坐标。只输出严格 JSON，schema 与整帧清点相同：\n{\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"visible\":\"full|partial_top|partial_side|trailer_only\",\"is_truck\":true,\"identity_clues\":\"\",\"evidence\":\"\",\"uncertain\":false}],\"scene_notes\":\"\",\"uncertain_reasons\":[]}",
+  "run": {
+    "model": "aibox",
+    "model_id": "glm-5.3-flash",
+    "ok": true,
+    "latency_s": 8.249,
+    "request_id": "43764661efea4a95ba1982740e937ca1",
+    "usage": {
+      "prompt_tokens": 3345,
+      "total_tokens": 3590,
+      "completion_tokens": 245,
+      "prompt_tokens_details": {
+        "cached_tokens": 3328,
+        "image_tokens": 3105
+      },
+      "reasoning_tokens": 64
+    },
+    "parsed": {
+      "counts": {
+        "total": 2,
+        "large": 2,
+        "medium": 0,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.28,
+            0.36,
+            0.58,
+            0.63
+          ],
+          "size": "large",
+          "visible": "full",
+          "is_truck": true,
+          "identity_clues": "红色栏板货车，货厢内载蓝色板材，沿过道停放",
+          "evidence": "",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.28,
+            0.62,
+            0.58,
+            1.0
+          ],
+          "size": "large",
+          "visible": "full",
+          "is_truck": true,
+          "identity_clues": "白色集装箱式货车，波纹箱体延伸至画面底部",
+          "evidence": "",
+          "uncertain": false
+        }
+      ],
+      "scene_notes": "展馆撤展/布展期间，过道两侧为展位桁架，多名工人佩戴安全帽作业",
+      "uncertain_reasons": []
+    },
+    "raw_text": "{\"counts\":{\"total\":2,\"large\":2,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0.28,0.36,0.58,0.63],\"size\":\"large\",\"visible\":\"full\",\"is_truck\":true,\"identity_clues\":\"红色栏板货车，货厢内载蓝色板材，沿过道停放\",\"evidence\":\"\",\"uncertain\":false},{\"bbox\":[0.28,0.62,0.58,1.0],\"size\":\"large\",\"visible\":\"full\",\"is_truck\":true,\"identity_clues\":\"白色集装箱式货车，波纹箱体延伸至画面底部\",\"evidence\":\"\",\"uncertain\":false}],\"scene_notes\":\"展馆撤展/布展期间，过道两侧为展位桁架，多名工人佩戴安全帽作业\",\"uncertain_reasons\":[]}"
+  }
+}

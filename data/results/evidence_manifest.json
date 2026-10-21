@@ -1,0 +1,382 @@
+{
+  "algorithm": "sha256",
+  "purpose": "immutable fingerprint of the frozen development evidence",
+  "files": {
+    "data/gold/temporal_gold.json": {
+      "sha256": "552b8081b3b734ada6401d502e65053ab4fd18c7a67cc8f5fd2947f412433095",
+      "bytes": 6594
+    },
+    "data/frame_manifest.json": {
+      "sha256": "66616ca849ee4f7ba39f6bb38a8d4e14e002f35392908e66aa8aca70c22a4395",
+      "bytes": 5077
+    },
+    "data/candidates.json": {
+      "sha256": "9a674e17a0e4b7c2d3e0f459e2996c10afeab31bdb948c85760f12a2e6226f02",
+      "bytes": 63950
+    },
+    "data/results/metrics.json": {
+      "sha256": "4d8d8d0d481c566e020cd9538a791e1c944a3ffad0afb7565aa155dcc115da39",
+      "bytes": 13566
+    },
+    "data/results/per_observation.csv": {
+      "sha256": "54f6ca9ddee5fd07edb284082873e3510e7b7d9b0d6c516c43cdf5c0565e984a",
+      "bytes": 8922
+    },
+    "data/runs/primary/north_1200_crop__aibox.json": {
+      "sha256": "f27af2164c99569c6afe0c64b9299b98da787f1eecad2bbf345a50988bd33cfb",
+      "bytes": 4342
+    },
+    "data/runs/primary/north_1200_crop__doubao.json": {
+      "sha256": "b764f7da09bf53d32b7941f0a494a47e0b4f79b995ea122d07df6b6c0966fde1",
+      "bytes": 3868
+    },
+    "data/runs/primary/north_1200_crop__zhipu.json": {
+      "sha256": "d3bd55819662af658670b5f36693340f2dbd655ef17fcf680c15a4cf18fea79b",
+      "bytes": 5782
+    },
+    "data/runs/primary/north_1200_strip__aibox.json": {
+      "sha256": "25fffa7e429fb027618ebe105f5d721bbc0a5d82f74cea199faf2f2819d1c5a8",
+      "bytes": 7467
+    },
+    "data/runs/primary/north_1200_strip__doubao.json": {
+      "sha256": "bced28d554e4d89957493b1de5c48ee60036ccf5ae6107337f50c73ce4dacc56",
+      "bytes": 8451
+    },
+    "data/runs/primary/north_1200_whole__aibox.json": {
+      "sha256": "ef5c6e7dab02b08bf4f23c35bd9346ea86e43e1349815bf683a1e3519335e94a",
+      "bytes": 4028
+    },
+    "data/runs/primary/north_1200_whole__doubao.json": {
+      "sha256": "da313937d1f127f4895031c68c241f48bb56d775ec72b53a0a3677395711c6b5",
+      "bytes": 4671
+    },
+    "data/runs/primary/north_1200_whole__zhipu.json": {
+      "sha256": "90bdda7042521e09bd6dc52cab1b6ad6bebe88a3761f04f4036ef4a7b01dd79c",
+      "bytes": 5739
+    },
+    "data/runs/primary/north_1500_crop__aibox.json": {
+      "sha256": "b21414baa207bf209499e8d79a88a9b6aab18c0a460e92ce9ea68e775e7b65a0",
+      "bytes": 3239
+    },
+    "data/runs/primary/north_1500_crop__doubao.json": {
+      "sha256": "27222932633e0695d2a1e33ec51c38769239a85eabf9cae6d39050efa0e20678",
+      "bytes": 3285
+    },
+    "data/runs/primary/north_1500_crop__zhipu.json": {
+      "sha256": "d16f93e4f02d524b893c4268f14e453bc4e66a1c78e795fc518ad45c04083bfc",
+      "bytes": 4424
+    },
+    "data/runs/primary/north_1500_strip__aibox.json": {
+      "sha256": "2d369aae16bcbb18056b0586ad1d4acbca160d5eb5e4d2c4ef4bfa12e25f0c01",
+      "bytes": 11461
+    },
+    "data/runs/primary/north_1500_strip__doubao.json": {
+      "sha256": "0a012f9bbdaab7e78b2f3a32b6edb03844c22d283a6f95fce69899542cc93dfc",
+      "bytes": 9296
+    },
+    "data/runs/primary/north_1500_whole__aibox.json": {
+      "sha256": "6c9aa23a8ec1c2bfacf453905952d9e207a0d17292e08249b1cfb80a2639b323",
+      "bytes": 3854
+    },
+    "data/runs/primary/north_1500_whole__doubao.json": {
+      "sha256": "55508b74cb881090b94d75d75d5c1090e749e8a3b946911aabc5b8974a3f9846",
+      "bytes": 3818
+    },
+    "data/runs/primary/north_1500_whole__zhipu.json": {
+      "sha256": "66291ad1b7e75944de31e16b9e77f0a39715cb272f102d6ce64a948da6bc4c5f",
+      "bytes": 4361
+    },
+    "data/runs/primary/north_600_crop__aibox.json": {
+      "sha256": "d589ef78d0b9b793edc63c705e4f7a059bd14b3ea90eb5af0571833711c28b69",
+      "bytes": 5024
+    },
+    "data/runs/primary/north_600_crop__doubao.json": {
+      "sha256": "8ed6609c07c798157a41f46a3b2999a1b51f421a5871c647fac511556846f09d",
+      "bytes": 3962
+    },
+    "data/runs/primary/north_600_crop__zhipu.json": {
+      "sha256": "bd3690aa3a445e18ad4d2a6e4ac57bb24199e36fb03cb222b6ab6b6aeab7a88e",
+      "bytes": 4030
+    },
+    "data/runs/primary/north_600_strip__aibox.json": {
+      "sha256": "35df0ffd4ec7a6d4ce209f037fc7355d747807caea37814a1a227193f4db2935",
+      "bytes": 11164
+    },
+    "data/runs/primary/north_600_strip__doubao.json": {
+      "sha256": "e425fa62dcacfc86accf198e9788d5617b50c68cc4cd7c921610ed6834048f1a",
+      "bytes": 10545
+    },
+    "data/runs/primary/north_600_whole__aibox.json": {
+      "sha256": "814685eeb5c4f9c44189d8616a1b66c5f66e3abc6a600e090011cfec7ea3e5f0",
+      "bytes": 4919
+    },
+    "data/runs/primary/north_600_whole__doubao.json": {
+      "sha256": "2c84bfd9656561f24f8f0c20fd72e5faf346ce1a6fc16b29b2f354c09916f8b9",
+      "bytes": 4479
+    },
+    "data/runs/primary/north_600_whole__zhipu.json": {
+      "sha256": "38aa6773b948d7c0e252be0d60e05275ac31eb2e11238f9c69d80607aeb1a9bb",
+      "bytes": 4506
+    },
+    "data/runs/primary/south_1200_crop__aibox.json": {
+      "sha256": "d179e9de3f2f72edbd5613447c8f0407f60b31a645523084f01845f681a47834",
+      "bytes": 6168
+    },
+    "data/runs/primary/south_1200_crop__doubao.json": {
+      "sha256": "bc18c039f4c215f2623032cfa33df09be6be92816d05778a14eff698ffb37740",
+      "bytes": 4988
+    },
+    "data/runs/primary/south_1200_crop__zhipu.json": {
+      "sha256": "dc1f91d022f898b143c132483140c65bcee0614e9cf15e991d7dfd035a548449",
+      "bytes": 5441
+    },
+    "data/runs/primary/south_1200_strip__aibox.json": {
+      "sha256": "ba03a8ac0082d9e9d8f2b71d82816195946d29f9116507d70eb897cff19978be",
+      "bytes": 14596
+    },
+    "data/runs/primary/south_1200_strip__doubao.json": {
+      "sha256": "a82e89f6443ba3c29803cab158a4524ffec026f3dfdc93678b493d88590d368e",
+      "bytes": 10670
+    },
+    "data/runs/primary/south_1200_whole__aibox.json": {
+      "sha256": "3f37d5d5160d25078f81cfd5f2b35ff8ddd9a328ea7e2d662eac8ec9522772f6",
+      "bytes": 7027
+    },
+    "data/runs/primary/south_1200_whole__doubao.json": {
+      "sha256": "dbdfa0177495d77c99df67cdca782819be2f7b026bd2d4609e807a36516e8d9a",
+      "bytes": 6141
+    },
+    "data/runs/primary/south_1200_whole__zhipu.json": {
+      "sha256": "a13972f67742b82a50b658b960eccc6c8ce0f7add5715f04666150e2fd2284dc",
+      "bytes": 5391
+    },
+    "data/runs/primary/south_600_crop__aibox.json": {
+      "sha256": "5a8e85b6f6629a36d78c03ba86ff24950e410b3ef282a41cf0de0401fcc99346",
+      "bytes": 4834
+    },
+    "data/runs/primary/south_600_crop__doubao.json": {
+      "sha256": "27cfde0eb4a3c3cc1e52680b83dccb98d5bb2357f689c763bcd0372458b64a50",
+      "bytes": 4723
+    },
+    "data/runs/primary/south_600_crop__zhipu.json": {
+      "sha256": "5fe7d3cb1c84298217c8ab356e24fb36667bccc9a89d3038b20b84a555866605",
+      "bytes": 1484
+    },
+    "data/runs/primary/south_600_strip__aibox.json": {
+      "sha256": "a5cfca4dd04d30d8628ff6a81d0e3a66da3fdbe2725feb6e44a54bfbe9a31d00",
+      "bytes": 11663
+    },
+    "data/runs/primary/south_600_strip__doubao.json": {
+      "sha256": "dac29884a8bbe38dce4aa26a0cd24cf0af9fe83efa16ab3d102fc7e84c937832",
+      "bytes": 12256
+    },
+    "data/runs/primary/south_600_whole__aibox.json": {
+      "sha256": "2d400357b4314a3adc7afb2a6a1c2a065d5c39cc598909f2e5beca37a58979f6",
+      "bytes": 6000
+    },
+    "data/runs/primary/south_600_whole__doubao.json": {
+      "sha256": "348f3f383f5b59d4a16a18fd2bb1986e6b73d3b0144ca48794286e8f6d8acbe7",
+      "bytes": 5225
+    },
+    "data/runs/primary/south_600_whole__zhipu.json": {
+      "sha256": "301f17449a5255e6dcaf147cc401bbedb6d3b4dbfa7dfb1c94d91bdd80bc21ea",
+      "bytes": 6226
+    },
+    "data/runs/primary/south_900_crop__aibox.json": {
+      "sha256": "73f19a09a467dc17f601595ef8212675747c920a6063144f35d0cde58d02c203",
+      "bytes": 5975
+    },
+    "data/runs/primary/south_900_crop__doubao.json": {
+      "sha256": "e6cc3dbb831a710da8790fd741f668877859cfc889400dddd87e4c898f696148",
+      "bytes": 5264
+    },
+    "data/runs/primary/south_900_crop__zhipu.json": {
+      "sha256": "141064001118b1897a1bc983b6aaac73d6c38b6c7cef644b0d95d1156ecfa677",
+      "bytes": 5681
+    },
+    "data/runs/primary/south_900_strip__aibox.json": {
+      "sha256": "024f52c38f685bc8a2d34154c2e26a01b01e389ad4a6b49034f33d269a086cf3",
+      "bytes": 14918
+    },
+    "data/runs/primary/south_900_strip__doubao.json": {
+      "sha256": "339130fc0aaf333c8c852b6d92a703f7b7d924065dee5e7914f1ce42021bf3de",
+      "bytes": 12372
+    },
+    "data/runs/primary/south_900_whole__aibox.json": {
+      "sha256": "ee952ff350081f3583d464e7b72a7f88ecdd60c9ce7a2ccc20e32f8710191347",
+      "bytes": 6277
+    },
+    "data/runs/primary/south_900_whole__doubao.json": {
+      "sha256": "097878c5203b2e564140d0740e9fa5732a844e86881916a5b291c6d0d800afa3",
+      "bytes": 5916
+    },
+    "data/runs/primary/south_900_whole__zhipu.json": {
+      "sha256": "d17578207b9a59de6cde2b88f0aedec73897f0a1b7e37a09a38696e36606baaf",
+      "bytes": 6647
+    },
+    "data/runs/confirm/north_1200_candidates__aibox.json": {
+      "sha256": "d4f0d1bbad14828ea31dabaa412af3ddf33714969d74338674b47bd92dd7fbc1",
+      "bytes": 5719
+    },
+    "data/runs/confirm/north_1200_candidates__doubao.json": {
+      "sha256": "057cc245dc24467776a364e314fbb000799363d742048b60bc1f21fa921dda34",
+      "bytes": 4832
+    },
+    "data/runs/confirm/north_1500_candidates__aibox.json": {
+      "sha256": "837e0ad639dc395dd1529c9a3e21927b7befd380e084bee47564ef175c92b3ed",
+      "bytes": 4158
+    },
+    "data/runs/confirm/north_1500_candidates__doubao.json": {
+      "sha256": "5ff10e38159337485efe9fcb6fcb88f5d972026eccde49d6facfb728169e52ef",
+      "bytes": 3511
+    },
+    "data/runs/confirm/north_600_candidates__aibox.json": {
+      "sha256": "e36e1cb2da9747a947c217ae91608e188b7ce13a02f2be570551094c72d2c139",
+      "bytes": 5020
+    },
+    "data/runs/confirm/north_600_candidates__doubao.json": {
+      "sha256": "b49a06a1660fd570752e6a3847a7eab96b6268c9c7d0c3cb73349675679c3c5e",
+      "bytes": 4024
+    },
+    "data/runs/confirm/pairs_1200__aibox.json": {
+      "sha256": "0925fa2b69b78d8a1f90ba730025ec8d2d73fc3432fea07e635ba2604aebcc6d",
+      "bytes": 8310
+    },
+    "data/runs/confirm/pairs_1200__doubao.json": {
+      "sha256": "3df6688aae7c79f515100e17bd150842040a19a969d1bda3ebdbe36e6ffacaae",
+      "bytes": 6329
+    },
+    "data/runs/confirm/pairs_600__aibox.json": {
+      "sha256": "5757a63e0eb99b6bce5d394db8507c0ff5e07f1949c0dc63b7a2459b1ed991e7",
+      "bytes": 9539
+    },
+    "data/runs/confirm/pairs_600__doubao.json": {
+      "sha256": "ab3b7e1032b51a3f1e1adbb3e33107ac3f9574519373334676623def268128ab",
+      "bytes": 4876
+    },
+    "data/runs/confirm/south_1200_candidates__aibox.json": {
+      "sha256": "16beae0af61cb9b134fdd42d714bc77d28c585d6fe9db640800ed78a984c2fdb",
+      "bytes": 4999
+    },
+    "data/runs/confirm/south_1200_candidates__doubao.json": {
+      "sha256": "56c5dd5157268519b90fe570e6e5354a4b722e391af4ef390d86117e6c20fa71",
+      "bytes": 4599
+    },
+    "data/runs/confirm/south_600_candidates__aibox.json": {
+      "sha256": "8344a28c15aca2ff42c66d261c5e1a5c097668c7c3862f0d0980ed0c87295bf2",
+      "bytes": 4961
+    },
+    "data/runs/confirm/south_600_candidates__doubao.json": {
+      "sha256": "da626f2810aee082b06133ae90b7657763454cf3600778dd94a3d47c8b2743f3",
+      "bytes": 5835
+    },
+    "data/runs/confirm/south_900_candidates__aibox.json": {
+      "sha256": "0eb7badf3f5a482c3f0b5384ce85fa594fa075776c010c430942412bead589e0",
+      "bytes": 6414
+    },
+    "data/runs/confirm/south_900_candidates__doubao.json": {
+      "sha256": "b12bbe77c4c5b7cf7c80d1af09be1ca1520c15ac0d623fb12bd0627598633041",
+      "bytes": 4855
+    },
+    "data/runs/pair_probes/t1200_blue_vs_far_red__aibox.json": {
+      "sha256": "83c36279c295bc6df0344a0d2731ab66c7d74c7c3e8f3b168d79e68f8f10600c",
+      "bytes": 2531
+    },
+    "data/runs/pair_probes/t1200_blue_vs_far_red__doubao.json": {
+      "sha256": "e36db81d7a96c91119ca8bafa2a9c1a3cf72db553d100ffb8f1de4d30034e0c3",
+      "bytes": 2218
+    },
+    "data/runs/pair_probes/t1200_red_positive__aibox.json": {
+      "sha256": "334942c255570daecda35be82b451ac3689f51ac1fa4618df79233fdba8abf03",
+      "bytes": 2452
+    },
+    "data/runs/pair_probes/t1200_red_positive__doubao.json": {
+      "sha256": "52853c010132044e5ceef0e787ef314879d132555a45ef3468fc65d9b68e3657",
+      "bytes": 2563
+    },
+    "data/runs/pair_probes/t1200_red_vs_red_cab__aibox.json": {
+      "sha256": "439578b90e1845accc99ef2b61361286c90e844b8572d620d9d9e947b8d19e33",
+      "bytes": 2357
+    },
+    "data/runs/pair_probes/t1200_red_vs_red_cab__doubao.json": {
+      "sha256": "f20bfe03c36b5bb3265d1ed8143d70f2dc481201a3fd097da3b872a173c19fa3",
+      "bytes": 2570
+    },
+    "data/runs/pair_probes/t1200_white_positive__aibox.json": {
+      "sha256": "5c2246008f253e78909f3244d784243cc20e6aba195fe9adb29df307ac554788",
+      "bytes": 2406
+    },
+    "data/runs/pair_probes/t1200_white_positive__doubao.json": {
+      "sha256": "2115c3e0eedc2ed01e5d432dbcbb8127bbead1c9bfcb254f7ae14a0cd80edea6",
+      "bytes": 2272
+    },
+    "data/runs/pair_probes/t600_blue_vs_far_red__aibox.json": {
+      "sha256": "aed9c9a53080b6d5cf2e173db8027d160c13d9a8944ad9528a6c855b148dd11e",
+      "bytes": 2538
+    },
+    "data/runs/pair_probes/t600_blue_vs_far_red__doubao.json": {
+      "sha256": "b1867ee013b703809d490361c4cc847d6c07813b1e9f856c16f874191d51dee7",
+      "bytes": 2448
+    },
+    "data/runs/pair_probes/t600_blue_vs_red_cab__aibox.json": {
+      "sha256": "71961e45162f20e69807428e9859b0496dbb86118c9645e2ac5cc5622f56e231",
+      "bytes": 2428
+    },
+    "data/runs/pair_probes/t600_blue_vs_red_cab__doubao.json": {
+      "sha256": "898cdbbac6548d4ae3e0d015df5fd802c73c11b2adaa6545bdf941979c7e2648",
+      "bytes": 2258
+    },
+    "data/runs/pair_probes/t600_red_positive__aibox.json": {
+      "sha256": "0c148219b3707274f66e3b180247c8be6dd14511c7b7d972edb33d0b08cc482a",
+      "bytes": 2470
+    },
+    "data/runs/pair_probes/t600_red_positive__doubao.json": {
+      "sha256": "8ff8ee52db8a2732b449dbc3290c1065f8245e0542d60e01a93f5a7b4b14a887",
+      "bytes": 2410
+    },
+    "data/runs/pair_probes/t600_white_positive__aibox.json": {
+      "sha256": "71280c706d5d4e3f0f3e93378c7dba3c52e73f6000655682ab30bcc067330891",
+      "bytes": 2282
+    },
+    "data/runs/pair_probes/t600_white_positive__doubao.json": {
+      "sha256": "27b3c1782f8961b0074e635926dd99ca8f660b35c606736d3c54f5028244fefd",
+      "bytes": 2198
+    },
+    "scripts/build_candidates.py": {
+      "sha256": "6612583b8bb34833c9ec840893b2d04244112890132821f6ceecdae19c0181ec",
+      "bytes": 12317
+    },
+    "scripts/evaluate.py": {
+      "sha256": "4a74b17a1cc1989459a95db0d11f990bd01c9554c24c65eea99488186d7adea6",
+      "bytes": 15805
+    },
+    "scripts/extract_frames.py": {
+      "sha256": "2d9cab650a30af5a299c5b85805ac96963de2d6612058881c55c1f6858a0d0de",
+      "bytes": 5650
+    },
+    "scripts/freeze_evidence.py": {
+      "sha256": "de82e0ef4a966f025f8335f89daad6b489ebc1e39814413b64fbf5d8ecc68728",
+      "bytes": 1575
+    },
+    "scripts/model_client.py": {
+      "sha256": "90c988755f8a544ab958451c7cf162d7840b91bb1802006bae9a2da137a52a44",
+      "bytes": 3714
+    },
+    "scripts/run_confirm.py": {
+      "sha256": "9d8f1a8e1c45285cb3bb0ecff715efdd291ca25505e3eec9b2690c885d3b08fb",
+      "bytes": 5423
+    },
+    "scripts/run_pair_probe.py": {
+      "sha256": "d24d2dd80feff2d7fdf582b9fc5b201f5c0490329231b9c718db661fe85dcf3b",
+      "bytes": 5841
+    },
+    "scripts/run_primary.py": {
+      "sha256": "354ae0a75af2c8390746480c346baadd0d265046605cc8f1b97e9ac8b4b5349f",
+      "bytes": 7636
+    },
+    "research/temporal_reid/ROUTE_REPORT.md": {
+      "sha256": "2d54f956ae7251f9a2e46aba9f9f547c5e431ebba8a5f75815526a24c2f2344a",
+      "bytes": 10384
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "job": "south_900_candidates",
+  "image": "assets\\sheets\\south_900_candidates.jpg",
+  "prompt": "这是一个机位同一原始帧切出的候选联系表。每格 C1、C2... 是互相重叠的局部窗口，\n不是“一格必定一辆车”，同一格可能包含多辆，同一辆也可能出现在多格。\n\n请建立该帧的物理车辆集合：\n1. 每个物理车辆只列一次，并在 candidates 中列出显示它的所有窗口编号。\n2. 一个窗口可同时归入多个物理车辆；只有同一车头/货厢绝不能拆成两辆。\n3. 排除人物、叉车、轿车、展台、杂物；完全空窗也应 reject。\n4. 只按窗口中实际可见的车顶、货厢、车头、颜色、文字和比例判断，不猜画面外。\n5. 远处、遮挡、窗口边界或与你看到的其它窗口有歧义时 review=true。\n6. 车型按 large（重卡/半挂/长货厢）、medium（中卡）、small（轻卡/厢车）；不能确认写 unknown。\n\n只输出严格 JSON：\n{\"physical_vehicles\":[{\"group\":\"G1\",\"candidates\":[\"C1\",\"C3\"],\"size\":\"large|medium|small|unknown\",\"identity\":\"颜色/货厢/车头/文字等可复核证据\",\"reason\":\"为何这些窗口是同一物理车\",\"review\":false}],\"rejected_candidates\":[{\"candidate\":\"C5\",\"reason\":\"\"}],\"review_reasons\":[]}",
+  "run": {
+    "model": "doubao",
+    "model_id": "ep-20260828174616-dthpx",
+    "ok": true,
+    "latency_s": 43.698,
+    "request_id": "021792575338862d3c2e618d7484aa1e725a14aca115cd7df9f51",
+    "usage": {
+      "completion_tokens": 4502,
+      "prompt_tokens": 1634,
+      "total_tokens": 6136,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 4191
+      }
+    },
+    "parsed": {
+      "physical_vehicles": [
+        {
+          "group": "G1",
+          "candidates": [
+            "C2",
+            "C3",
+            "C4",
+            "C5",
+            "C6"
+          ],
+          "size": "large",
+          "identity": "红色重卡车头",
+          "reason": "C2、C3、C4、C5、C6窗口显示的红色车头为同一物理车辆",
+          "review": true
+        },
+        {
+          "group": "G2",
+          "candidates": [
+            "C7",
+            "C8"
+          ],
+          "size": "large",
+          "identity": "红色车头配灰色货厢的重卡",
+          "reason": "C7和C8窗口显示的红色车头与灰色货厢为同一物理车辆",
+          "review": false
+        },
+        {
+          "group": "G3",
+          "candidates": [
+            "C9",
+            "C10",
+            "C12"
+          ],
+          "size": "large",
+          "identity": "白色东风商用车重卡",
+          "reason": "C9、C10、C12窗口显示的白色东风车头为同一物理车辆",
+          "review": false
+        },
+        {
+          "group": "G4",
+          "candidates": [
+            "C12"
+          ],
+          "size": "large",
+          "identity": "红色货厢",
+          "reason": "C12窗口显示的红色货厢为单独物理车辆",
+          "review": false
+        }
+      ],
+      "rejected_candidates": [
+        {
+          "candidate": "C1",
+          "reason": "为场景窗口，无有效车辆"
+        },
+        {
+          "candidate": "C11",
+          "reason": "为场景窗口，无有效车辆"
+        }
+      ],
+      "review_reasons": [
+        "G1中C4对应的红色车头是否与C2、C3、C5、C6的红色车头为同一车辆存在歧义，需复核"
+      ]
+    },
+    "raw_text": "{\"physical_vehicles\":[{\"group\":\"G1\",\"candidates\":[\"C2\",\"C3\",\"C4\",\"C5\",\"C6\"],\"size\":\"large\",\"identity\":\"红色重卡车头\",\"reason\":\"C2、C3、C4、C5、C6窗口显示的红色车头为同一物理车辆\",\"review\":true},{\"group\":\"G2\",\"candidates\":[\"C7\",\"C8\"],\"size\":\"large\",\"identity\":\"红色车头配灰色货厢的重卡\",\"reason\":\"C7和C8窗口显示的红色车头与灰色货厢为同一物理车辆\",\"review\":false},{\"group\":\"G3\",\"candidates\":[\"C9\",\"C10\",\"C12\"],\"size\":\"large\",\"identity\":\"白色东风商用车重卡\",\"reason\":\"C9、C10、C12窗口显示的白色东风车头为同一物理车辆\",\"review\":false},{\"group\":\"G4\",\"candidates\":[\"C12\"],\"size\":\"large\",\"identity\":\"红色货厢\",\"reason\":\"C12窗口显示的红色货厢为单独物理车辆\",\"review\":false}],\"rejected_candidates\":[{\"candidate\":\"C1\",\"reason\":\"为场景窗口，无有效车辆\"},{\"candidate\":\"C11\",\"reason\":\"为场景窗口，无有效车辆\"}],\"review_reasons\":[\"G1中C4对应的红色车头是否与C2、C3、C5、C6的红色车头为同一车辆存在歧义，需复核\"]}"
+  }
+}

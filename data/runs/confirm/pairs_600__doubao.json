@@ -1,0 +1,93 @@
+{
+  "job": "pairs_600",
+  "image": "assets\\sheets\\pairs_600.jpg",
+  "prompt": "这张联系表上排 N1... 是北机位在同一时刻的候选窗口，下排 S1... 是南机位的候选窗口。\n两机位存在重叠，但视角和尺度不同。每格是互相重叠的窗口，不是“一格必定一辆车”。\n\n请建立跨机位物理实体图：\n1. 全图每个物理车辆只列一次，members 写出所有显示它的 N/S 窗口。\n2. 只有当颜色、货厢结构、车头、文字、顶部特征等至少两个语义证据一致时，才判为跨机位同一车。\n3. 同一辆车的车头与货厢不得分开；一个窗口可归入多个物理车辆。\n4. 排除人物、叉车、轿车、空窗、展台。\n5. 视角改变导致无法确认时写 match=\"uncertain\" 且 review=true；不能为凑数强行配对。\n6. 车型 large/medium/small/unknown。\n\n输出严格 JSON：\n{\"physical_vehicles\":[{\"group\":\"G1\",\"members\":[\"N1\",\"S2\"],\"match\":\"north_only|south_only|same_across_cameras|uncertain\",\"size\":\"large|medium|small|unknown\",\"identity\":\"可复核的至少两个特征\",\"review\":false}],\"unique_total\":0,\"rejected_candidates\":[{\"candidate\":\"N4\",\"reason\":\"\"}],\"review_reasons\":[]}",
+  "run": {
+    "model": "doubao",
+    "model_id": "ep-20260828174616-dthpx",
+    "ok": true,
+    "latency_s": 24.365,
+    "request_id": "021792575405831ec6553b2bbb2bcb1bdf9627ab55f9f64bc7557",
+    "usage": {
+      "completion_tokens": 2563,
+      "prompt_tokens": 1631,
+      "total_tokens": 4194,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 2252
+      }
+    },
+    "parsed": {
+      "physical_vehicles": [
+        {
+          "group": "G1",
+          "members": [
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "N6"
+          ],
+          "match": "same_across_cameras",
+          "size": "large",
+          "identity": "红色大型货运卡车，颜色为红色，车型为大型货运卡车，跨南北机位视角不同但特征匹配",
+          "review": false
+        },
+        {
+          "group": "G2",
+          "members": [
+            "N8",
+            "S7"
+          ],
+          "match": "same_across_cameras",
+          "size": "large",
+          "identity": "白色大型货运卡车，颜色为白色，车型为大型货运卡车，跨南北机位特征匹配",
+          "review": false
+        }
+      ],
+      "unique_total": 2,
+      "rejected_candidates": [
+        {
+          "candidate": "N1",
+          "reason": "无有效车辆"
+        },
+        {
+          "candidate": "N2",
+          "reason": "无有效车辆"
+        },
+        {
+          "candidate": "N3",
+          "reason": "仅显示货厢，无车头，不符合车辆定义"
+        },
+        {
+          "candidate": "N4",
+          "reason": "仅显示货厢，无车头，不符合车辆定义"
+        },
+        {
+          "candidate": "N9",
+          "reason": "为叉车，属于排除项"
+        },
+        {
+          "candidate": "N10",
+          "reason": "为叉车，属于排除项"
+        },
+        {
+          "candidate": "S1",
+          "reason": "无有效车辆"
+        },
+        {
+          "candidate": "S8",
+          "reason": "无有效车辆"
+        },
+        {
+          "candidate": "S9",
+          "reason": "无有效车辆"
+        }
+      ],
+      "review_reasons": []
+    },
+    "raw_text": "{\"physical_vehicles\": [\n    {\"group\":\"G1\",\"members\":[\"S2\",\"S3\",\"S4\",\"S5\",\"N6\"],\"match\":\"same_across_cameras\",\"size\":\"large\",\"identity\":\"红色大型货运卡车，颜色为红色，车型为大型货运卡车，跨南北机位视角不同但特征匹配\",\"review\":false},\n    {\"group\":\"G2\",\"members\":[\"N8\",\"S7\"],\"match\":\"same_across_cameras\",\"size\":\"large\",\"identity\":\"白色大型货运卡车，颜色为白色，车型为大型货运卡车，跨南北机位特征匹配\",\"review\":false}\n],\"unique_total\":2,\"rejected_candidates\":[\n    {\"candidate\":\"N1\",\"reason\":\"无有效车辆\"},\n    {\"candidate\":\"N2\",\"reason\":\"无有效车辆\"},\n    {\"candidate\":\"N3\",\"reason\":\"仅显示货厢，无车头，不符合车辆定义\"},\n    {\"candidate\":\"N4\",\"reason\":\"仅显示货厢，无车头，不符合车辆定义\"},\n    {\"candidate\":\"N9\",\"reason\":\"为叉车，属于排除项\"},\n    {\"candidate\":\"N10\",\"reason\":\"为叉车，属于排除项\"},\n    {\"candidate\":\"S1\",\"reason\":\"无有效车辆\"},\n    {\"candidate\":\"S8\",\"reason\":\"无有效车辆\"},\n    {\"candidate\":\"S9\",\"reason\":\"无有效车辆\"}\n],\"review_reasons\":[]}"
+  }
+}

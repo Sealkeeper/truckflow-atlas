@@ -1,0 +1,320 @@
+{
+  "observation": "south_900",
+  "mode": "strip",
+  "images": [
+    "assets\\strips\\south_900_strip.jpg"
+  ],
+  "prompt": "这是一条同一机位在 t-10s、t、t+10s 的三个连续证据面板，从左到右排列。\n请分别清点每帧，并利用颜色、货厢、车头、文字、朝向等语义判断车辆是否跨帧为同一物理车。\n禁止用像素跟踪或根据上一帧数量填数；每帧计数必须有该帧可见证据。\n\n输出严格 JSON：\n{\"frames\":[{\"panel\":\"left|center|right\",\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"panel_index\":0,\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"identity_clues\":\"\",\"uncertain\":false}]}],\"links\":[{\"from\":\"left:0\",\"to\":\"center:1\",\"same_vehicle\":\"yes|no|uncertain\",\"evidence\":\"\"}],\"new_or_exited\":[{\"frame\":\"left|center|right\",\"vehicle\":\"panel_index\",\"event\":\"enter|exit|uncertain\",\"evidence\":\"\"}],\"review_reasons\":[]}\nbbox 是单个面板内的 0-1 坐标。",
+  "run": {
+    "model": "aibox",
+    "model_id": "glm-5.3-flash",
+    "ok": true,
+    "latency_s": 47.038,
+    "request_id": "c6caf51084e54172ada760b662ddf293",
+    "usage": {
+      "prompt_tokens": 1633,
+      "total_tokens": 3138,
+      "completion_tokens": 1505,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "image_tokens": 1380
+      },
+      "reasoning_tokens": 216
+    },
+    "parsed": {
+      "frames": [
+        {
+          "panel": "left",
+          "counts": {
+            "total": 5,
+            "large": 5,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.29,
+                0.53,
+                0.37,
+                0.97
+              ],
+              "size": "large",
+              "identity_clues": "白色厢式货车，车头朝向镜头下方，白色货厢带深色文字，位于通道中央",
+              "uncertain": false
+            },
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.3,
+                0.4,
+                0.36,
+                0.55
+              ],
+              "size": "large",
+              "identity_clues": "红色货车，紧贴白色货车后方，红色车头可见",
+              "uncertain": false
+            },
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.29,
+                0.27,
+                0.34,
+                0.38
+              ],
+              "size": "large",
+              "identity_clues": "红色货车，位于通道远端，红色车头朝向镜头",
+              "uncertain": false
+            },
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.28,
+                0.2,
+                0.33,
+                0.29
+              ],
+              "size": "large",
+              "identity_clues": "深色货车，位于Haier标牌下方通道最远端",
+              "uncertain": true
+            },
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.33,
+                0.85,
+                0.4,
+                1.0
+              ],
+              "size": "large",
+              "identity_clues": "红色集装箱/货厢，右下角，仅见厢体",
+              "uncertain": false
+            }
+          ]
+        },
+        {
+          "panel": "center",
+          "counts": {
+            "total": 5,
+            "large": 5,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.48,
+                0.55,
+                0.56,
+                0.99
+              ],
+              "size": "large",
+              "identity_clues": "白色厢式货车，车头朝下，货厢文字与左帧一致，位置略向画面下方移动",
+              "uncertain": false
+            },
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.49,
+                0.42,
+                0.55,
+                0.57
+              ],
+              "size": "large",
+              "identity_clues": "红色货车，白色货车正后方，红色车头",
+              "uncertain": false
+            },
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.48,
+                0.28,
+                0.53,
+                0.39
+              ],
+              "size": "large",
+              "identity_clues": "红色货车，通道远端，红色车头朝镜头",
+              "uncertain": false
+            },
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.47,
+                0.21,
+                0.52,
+                0.3
+              ],
+              "size": "large",
+              "identity_clues": "深色货车，Haier标牌下方最远端",
+              "uncertain": true
+            },
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.52,
+                0.87,
+                0.59,
+                1.0
+              ],
+              "size": "large",
+              "identity_clues": "红色集装箱/货厢，右下角",
+              "uncertain": false
+            }
+          ]
+        },
+        {
+          "panel": "right",
+          "counts": {
+            "total": 5,
+            "large": 5,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.8,
+                0.55,
+                0.88,
+                0.99
+              ],
+              "size": "large",
+              "identity_clues": "白色厢式货车，车头朝下，货厢文字与前两帧一致，位置继续向下移动",
+              "uncertain": false
+            },
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.81,
+                0.42,
+                0.87,
+                0.57
+              ],
+              "size": "large",
+              "identity_clues": "红色货车，白色货车正后方",
+              "uncertain": false
+            },
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.8,
+                0.28,
+                0.85,
+                0.39
+              ],
+              "size": "large",
+              "identity_clues": "红色货车，通道远端",
+              "uncertain": false
+            },
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.79,
+                0.21,
+                0.84,
+                0.3
+              ],
+              "size": "large",
+              "identity_clues": "深色货车，Haier标牌下方最远端",
+              "uncertain": true
+            },
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.84,
+                0.87,
+                0.91,
+                1.0
+              ],
+              "size": "large",
+              "identity_clues": "红色集装箱/货厢，右下角",
+              "uncertain": false
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "from": "left:0",
+          "to": "center:1",
+          "same_vehicle": "yes",
+          "evidence": "白色货厢及车头外观一致，位置沿通道向下小幅连续移动，符合10秒位移"
+        },
+        {
+          "from": "center:1",
+          "to": "right:2",
+          "same_vehicle": "yes",
+          "evidence": "同一白色货车继续向下移动，货厢文字与朝向一致"
+        },
+        {
+          "from": "left:1",
+          "to": "center:2",
+          "same_vehicle": "yes",
+          "evidence": "红色货车紧随白色货车，相对位置与外观一致"
+        },
+        {
+          "from": "center:2",
+          "to": "right:3",
+          "same_vehicle": "yes",
+          "evidence": "红色货车随队列继续下移，外观一致"
+        },
+        {
+          "from": "left:2",
+          "to": "center:3",
+          "same_vehicle": "yes",
+          "evidence": "远端红色货车位置与外观基本一致，位移极小"
+        },
+        {
+          "from": "center:3",
+          "to": "right:4",
+          "same_vehicle": "yes",
+          "evidence": "远端红色货车位置与外观基本一致"
+        },
+        {
+          "from": "left:3",
+          "to": "center:4",
+          "same_vehicle": "uncertain",
+          "evidence": "最远端深色货车被桁架遮挡，仅能凭位置推断"
+        },
+        {
+          "from": "center:4",
+          "to": "right:5",
+          "same_vehicle": "uncertain",
+          "evidence": "最远端深色货车被桁架遮挡，仅能凭位置推断"
+        },
+        {
+          "from": "left:4",
+          "to": "center:5",
+          "same_vehicle": "yes",
+          "evidence": "右下角红色货厢形状与位置一致，随镜头视角小幅移动"
+        },
+        {
+          "from": "center:5",
+          "to": "right:6",
+          "same_vehicle": "yes",
+          "evidence": "右下角红色货厢形状与位置连续一致"
+        }
+      ],
+      "new_or_exited": [
+        {
+          "frame": "right",
+          "vehicle": 3,
+          "event": "uncertain",
+          "evidence": "右帧通道中部出现戴安全帽人员，非车辆；无车辆进出证据"
+        }
+      ],
+      "review_reasons": [
+        "最远端深色货车被顶部桁架严重遮挡，身份确认置信度低",
+        "右下角红色物体仅见货厢部分，无法确认是否为独立车辆还是挂车"
+      ]
+    },
+    "raw_text": "{\"frames\":[{\"panel\":\"left\",\"counts\":{\"total\":5,\"large\":5,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"panel_index\":0,\"bbox\":[0.29,0.53,0.37,0.97],\"size\":\"large\",\"identity_clues\":\"白色厢式货车，车头朝向镜头下方，白色货厢带深色文字，位于通道中央\",\"uncertain\":false},{\"panel_index\":0,\"bbox\":[0.30,0.40,0.36,0.55],\"size\":\"large\",\"identity_clues\":\"红色货车，紧贴白色货车后方，红色车头可见\",\"uncertain\":false},{\"panel_index\":0,\"bbox\":[0.29,0.27,0.34,0.38],\"size\":\"large\",\"identity_clues\":\"红色货车，位于通道远端，红色车头朝向镜头\",\"uncertain\":false},{\"panel_index\":0,\"bbox\":[0.28,0.20,0.33,0.29],\"size\":\"large\",\"identity_clues\":\"深色货车，位于Haier标牌下方通道最远端\",\"uncertain\":true},{\"panel_index\":0,\"bbox\":[0.33,0.85,0.40,1.0],\"size\":\"large\",\"identity_clues\":\"红色集装箱/货厢，右下角，仅见厢体\",\"uncertain\":false}]},{\"panel\":\"center\",\"counts\":{\"total\":5,\"large\":5,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"panel_index\":1,\"bbox\":[0.48,0.55,0.56,0.99],\"size\":\"large\",\"identity_clues\":\"白色厢式货车，车头朝下，货厢文字与左帧一致，位置略向画面下方移动\",\"uncertain\":false},{\"panel_index\":1,\"bbox\":[0.49,0.42,0.55,0.57],\"size\":\"large\",\"identity_clues\":\"红色货车，白色货车正后方，红色车头\",\"uncertain\":false},{\"panel_index\":1,\"bbox\":[0.48,0.28,0.53,0.39],\"size\":\"large\",\"identity_clues\":\"红色货车，通道远端，红色车头朝镜头\",\"uncertain\":false},{\"panel_index\":1,\"bbox\":[0.47,0.21,0.52,0.30],\"size\":\"large\",\"identity_clues\":\"深色货车，Haier标牌下方最远端\",\"uncertain\":true},{\"panel_index\":1,\"bbox\":[0.52,0.87,0.59,1.0],\"size\":\"large\",\"identity_clues\":\"红色集装箱/货厢，右下角\",\"uncertain\":false}]},{\"panel\":\"right\",\"counts\":{\"total\":5,\"large\":5,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"panel_index\":2,\"bbox\":[0.80,0.55,0.88,0.99],\"size\":\"large\",\"identity_clues\":\"白色厢式货车，车头朝下，货厢文字与前两帧一致，位置继续向下移动\",\"uncertain\":false},{\"panel_index\":2,\"bbox\":[0.81,0.42,0.87,0.57],\"size\":\"large\",\"identity_clues\":\"红色货车，白色货车正后方\",\"uncertain\":false},{\"panel_index\":2,\"bbox\":[0.80,0.28,0.85,0.39],\"size\":\"large\",\"identity_clues\":\"红色货车，通道远端\",\"uncertain\":false},{\"panel_index\":2,\"bbox\":[0.79,0.21,0.84,0.30],\"size\":\"large\",\"identity_clues\":\"深色货车，Haier标牌下方最远端\",\"uncertain\":true},{\"panel_index\":2,\"bbox\":[0.84,0.87,0.91,1.0],\"size\":\"large\",\"identity_clues\":\"红色集装箱/货厢，右下角\",\"uncertain\":false}]}],\"links\":[{\"from\":\"left:0\",\"to\":\"center:1\",\"same_vehicle\":\"yes\",\"evidence\":\"白色货厢及车头外观一致，位置沿通道向下小幅连续移动，符合10秒位移\"},{\"from\":\"center:1\",\"to\":\"right:2\",\"same_vehicle\":\"yes\",\"evidence\":\"同一白色货车继续向下移动，货厢文字与朝向一致\"},{\"from\":\"left:1\",\"to\":\"center:2\",\"same_vehicle\":\"yes\",\"evidence\":\"红色货车紧随白色货车，相对位置与外观一致\"},{\"from\":\"center:2\",\"to\":\"right:3\",\"same_vehicle\":\"yes\",\"evidence\":\"红色货车随队列继续下移，外观一致\"},{\"from\":\"left:2\",\"to\":\"center:3\",\"same_vehicle\":\"yes\",\"evidence\":\"远端红色货车位置与外观基本一致，位移极小\"},{\"from\":\"center:3\",\"to\":\"right:4\",\"same_vehicle\":\"yes\",\"evidence\":\"远端红色货车位置与外观基本一致\"},{\"from\":\"left:3\",\"to\":\"center:4\",\"same_vehicle\":\"uncertain\",\"evidence\":\"最远端深色货车被桁架遮挡，仅能凭位置推断\"},{\"from\":\"center:4\",\"to\":\"right:5\",\"same_vehicle\":\"uncertain\",\"evidence\":\"最远端深色货车被桁架遮挡，仅能凭位置推断\"},{\"from\":\"left:4\",\"to\":\"center:5\",\"same_vehicle\":\"yes\",\"evidence\":\"右下角红色货厢形状与位置一致，随镜头视角小幅移动\"},{\"from\":\"center:5\",\"to\":\"right:6\",\"same_vehicle\":\"yes\",\"evidence\":\"右下角红色货厢形状与位置连续一致\"}],\"new_or_exited\":[{\"frame\":\"right\",\"vehicle\":3,\"event\":\"uncertain\",\"evidence\":\"右帧通道中部出现戴安全帽人员，非车辆；无车辆进出证据\"}],\"review_reasons\":[\"最远端深色货车被顶部桁架严重遮挡，身份确认置信度低\",\"右下角红色物体仅见货厢部分，无法确认是否为独立车辆还是挂车\"]}"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "observation": "north_1200",
+  "mode": "crop",
+  "images": [
+    "assets\\crops\\north_t1200_lane.jpg"
+  ],
+  "prompt": "这是同一机位的过道区域放大裁剪，四周展台已被裁掉。请只依据图中可见内容清点货车。\n\n重点检查远处小型、被柱子/车辆遮挡、只露出一部分的货车。计数单位必须是物理车辆：\n同一辆车的车头、底盘和货厢只算一辆；两个候选若是同一车的车头与货厢，必须合并。\n独立挂车/货厢算一辆。小汽车、面包车、叉车、手推车、人物不计。车型不确定写 unknown。\nbbox 是相对本裁剪图的 0-1 坐标。只输出严格 JSON，schema 与整帧清点相同：\n{\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"visible\":\"full|partial_top|partial_side|trailer_only\",\"is_truck\":true,\"identity_clues\":\"\",\"evidence\":\"\",\"uncertain\":false}],\"scene_notes\":\"\",\"uncertain_reasons\":[]}",
+  "run": {
+    "model": "doubao",
+    "model_id": "ep-20260828174616-dthpx",
+    "ok": true,
+    "latency_s": 7.709,
+    "request_id": "0217925734478204de2cf568a9a04a3957d59acb492788ba47c06",
+    "usage": {
+      "completion_tokens": 809,
+      "prompt_tokens": 1545,
+      "total_tokens": 2354,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 571
+      }
+    },
+    "parsed": {
+      "counts": {
+        "total": 3,
+        "large": 2,
+        "medium": 1,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            272,
+            621,
+            553,
+            997
+          ],
+          "size": "large",
+          "visible": "partial_side",
+          "is_truck": true,
+          "identity_clues": "white corrugated cargo truck",
+          "evidence": "visible white cargo body",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            401,
+            361,
+            563,
+            633
+          ],
+          "size": "large",
+          "visible": "partial_side",
+          "is_truck": true,
+          "identity_clues": "red cargo truck",
+          "evidence": "visible red cargo body with markings",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            491,
+            156,
+            583,
+            313
+          ],
+          "size": "medium",
+          "visible": "partial_side",
+          "is_truck": true,
+          "identity_clues": "blue covered cargo truck in distance",
+          "evidence": "visible blue top and cargo structure",
+          "uncertain": false
+        }
+      ],
+      "scene_notes": "过道区域内可见3辆货车，含2辆大型货厢货车、1辆远处中型货车",
+      "uncertain_reasons": []
+    },
+    "raw_text": "{\"counts\":{\"total\":3,\"large\":2,\"medium\":1,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[272,621,553,997],\"size\":\"large\",\"visible\":\"partial_side\",\"is_truck\":true,\"identity_clues\":\"white corrugated cargo truck\",\"evidence\":\"visible white cargo body\",\"uncertain\":false},{\"bbox\":[401,361,563,633],\"size\":\"large\",\"visible\":\"partial_side\",\"is_truck\":true,\"identity_clues\":\"red cargo truck\",\"evidence\":\"visible red cargo body with markings\",\"uncertain\":false},{\"bbox\":[491,156,583,313],\"size\":\"medium\",\"visible\":\"partial_side\",\"is_truck\":true,\"identity_clues\":\"blue covered cargo truck in distance\",\"evidence\":\"visible blue top and cargo structure\",\"uncertain\":false}],\"scene_notes\":\"过道区域内可见3辆货车，含2辆大型货厢货车、1辆远处中型货车\",\"uncertain_reasons\":[]}"
+  }
+}

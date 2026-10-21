@@ -1,0 +1,188 @@
+{
+  "source_video_modified": false,
+  "fps": 25,
+  "duration_s": 2659,
+  "source": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频",
+  "frames": [
+    {
+      "camera": "north",
+      "video_time_s": 590,
+      "wall_clock": "2025-10-19 22:09:16",
+      "file": "assets\\frames\\north_t590.jpg",
+      "target_seconds": 590,
+      "target_frame_index": 14750,
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "camera": "north",
+      "video_time_s": 600,
+      "wall_clock": "2025-10-19 22:09:26",
+      "file": "assets\\frames\\north_t600.jpg",
+      "target_seconds": 600,
+      "target_frame_index": 15000,
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "camera": "north",
+      "video_time_s": 610,
+      "wall_clock": "2025-10-19 22:09:36",
+      "file": "assets\\frames\\north_t610.jpg",
+      "target_seconds": 610,
+      "target_frame_index": 15250,
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "camera": "north",
+      "video_time_s": 1190,
+      "wall_clock": "2025-10-19 22:19:16",
+      "file": "assets\\frames\\north_t1190.jpg",
+      "target_seconds": 1190,
+      "target_frame_index": 29750,
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "camera": "north",
+      "video_time_s": 1200,
+      "wall_clock": "2025-10-19 22:19:26",
+      "file": "assets\\frames\\north_t1200.jpg",
+      "target_seconds": 1200,
+      "target_frame_index": 30000,
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "camera": "north",
+      "video_time_s": 1210,
+      "wall_clock": "2025-10-19 22:19:36",
+      "file": "assets\\frames\\north_t1210.jpg",
+      "target_seconds": 1210,
+      "target_frame_index": 30250,
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "camera": "north",
+      "video_time_s": 1490,
+      "wall_clock": "2025-10-19 22:24:16",
+      "file": "assets\\frames\\north_t1490.jpg",
+      "target_seconds": 1490,
+      "target_frame_index": 37250,
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "camera": "north",
+      "video_time_s": 1500,
+      "wall_clock": "2025-10-19 22:24:26",
+      "file": "assets\\frames\\north_t1500.jpg",
+      "target_seconds": 1500,
+      "target_frame_index": 37500,
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "camera": "north",
+      "video_time_s": 1510,
+      "wall_clock": "2025-10-19 22:24:36",
+      "file": "assets\\frames\\north_t1510.jpg",
+      "target_seconds": 1510,
+      "target_frame_index": 37750,
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "camera": "south",
+      "video_time_s": 590,
+      "wall_clock": "2025-10-19 22:09:16",
+      "file": "assets\\frames\\south_t590.jpg",
+      "target_seconds": 590,
+      "target_frame_index": 14750,
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "camera": "south",
+      "video_time_s": 600,
+      "wall_clock": "2025-10-19 22:09:26",
+      "file": "assets\\frames\\south_t600.jpg",
+      "target_seconds": 600,
+      "target_frame_index": 15000,
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "camera": "south",
+      "video_time_s": 610,
+      "wall_clock": "2025-10-19 22:09:36",
+      "file": "assets\\frames\\south_t610.jpg",
+      "target_seconds": 610,
+      "target_frame_index": 15250,
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "camera": "south",
+      "video_time_s": 890,
+      "wall_clock": "2025-10-19 22:14:16",
+      "file": "assets\\frames\\south_t890.jpg",
+      "target_seconds": 890,
+      "target_frame_index": 22250,
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "camera": "south",
+      "video_time_s": 900,
+      "wall_clock": "2025-10-19 22:14:26",
+      "file": "assets\\frames\\south_t900.jpg",
+      "target_seconds": 900,
+      "target_frame_index": 22500,
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "camera": "south",
+      "video_time_s": 910,
+      "wall_clock": "2025-10-19 22:14:36",
+      "file": "assets\\frames\\south_t910.jpg",
+      "target_seconds": 910,
+      "target_frame_index": 22750,
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "camera": "south",
+      "video_time_s": 1190,
+      "wall_clock": "2025-10-19 22:19:16",
+      "file": "assets\\frames\\south_t1190.jpg",
+      "target_seconds": 1190,
+      "target_frame_index": 29750,
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "camera": "south",
+      "video_time_s": 1200,
+      "wall_clock": "2025-10-19 22:19:26",
+      "file": "assets\\frames\\south_t1200.jpg",
+      "target_seconds": 1200,
+      "target_frame_index": 30000,
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "camera": "south",
+      "video_time_s": 1210,
+      "wall_clock": "2025-10-19 22:19:36",
+      "file": "assets\\frames\\south_t1210.jpg",
+      "target_seconds": 1210,
+      "target_frame_index": 30250,
+      "width": 1280,
+      "height": 960
+    }
+  ]
+}

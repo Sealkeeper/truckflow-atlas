@@ -1,0 +1,319 @@
+{
+  "observation": "south_1200",
+  "mode": "strip",
+  "images": [
+    "assets\\strips\\south_1200_strip.jpg"
+  ],
+  "prompt": "这是一条同一机位在 t-10s、t、t+10s 的三个连续证据面板，从左到右排列。\n请分别清点每帧，并利用颜色、货厢、车头、文字、朝向等语义判断车辆是否跨帧为同一物理车。\n禁止用像素跟踪或根据上一帧数量填数；每帧计数必须有该帧可见证据。\n\n输出严格 JSON：\n{\"frames\":[{\"panel\":\"left|center|right\",\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"panel_index\":0,\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"identity_clues\":\"\",\"uncertain\":false}]}],\"links\":[{\"from\":\"left:0\",\"to\":\"center:1\",\"same_vehicle\":\"yes|no|uncertain\",\"evidence\":\"\"}],\"new_or_exited\":[{\"frame\":\"left|center|right\",\"vehicle\":\"panel_index\",\"event\":\"enter|exit|uncertain\",\"evidence\":\"\"}],\"review_reasons\":[]}\nbbox 是单个面板内的 0-1 坐标。",
+  "run": {
+    "model": "aibox",
+    "model_id": "glm-5.3-flash",
+    "ok": true,
+    "latency_s": 26.031,
+    "request_id": "a4bb4a4a9c3142a19340161d93b52cc8",
+    "usage": {
+      "prompt_tokens": 1633,
+      "total_tokens": 3067,
+      "completion_tokens": 1434,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "image_tokens": 1380
+      },
+      "reasoning_tokens": 212
+    },
+    "parsed": {
+      "frames": [
+        {
+          "panel": "left",
+          "counts": {
+            "total": 5,
+            "large": 5,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.14,
+                0.5,
+                0.19,
+                0.92
+              ],
+              "size": "large",
+              "identity_clues": "白色厢式货车，货厢白色带文字，车头朝下（朝向镜头下方），位于中央通道",
+              "uncertain": false
+            },
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.14,
+                0.4,
+                0.18,
+                0.52
+              ],
+              "size": "large",
+              "identity_clues": "红色车头卡车，紧贴白色货车上方",
+              "uncertain": false
+            },
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.13,
+                0.27,
+                0.17,
+                0.4
+              ],
+              "size": "large",
+              "identity_clues": "红色货车，位于通道中上部",
+              "uncertain": false
+            },
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.14,
+                0.2,
+                0.17,
+                0.29
+              ],
+              "size": "large",
+              "identity_clues": "红色货车，位于通道顶部远处",
+              "uncertain": false
+            },
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.15,
+                0.86,
+                0.2,
+                1.0
+              ],
+              "size": "large",
+              "identity_clues": "深色/暗红色货车，画面底部边缘，部分被裁切",
+              "uncertain": true
+            }
+          ]
+        },
+        {
+          "panel": "center",
+          "counts": {
+            "total": 5,
+            "large": 5,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.48,
+                0.52,
+                0.53,
+                0.94
+              ],
+              "size": "large",
+              "identity_clues": "白色厢式货车，货厢白色带文字，车头朝下，位置较左帧略向下移动",
+              "uncertain": false
+            },
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.48,
+                0.42,
+                0.52,
+                0.54
+              ],
+              "size": "large",
+              "identity_clues": "红色车头卡车，位于白色货车上方",
+              "uncertain": false
+            },
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.47,
+                0.28,
+                0.51,
+                0.42
+              ],
+              "size": "large",
+              "identity_clues": "红色货车，通道中上部",
+              "uncertain": false
+            },
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.48,
+                0.2,
+                0.51,
+                0.29
+              ],
+              "size": "large",
+              "identity_clues": "红色货车，通道顶部远处",
+              "uncertain": false
+            },
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.49,
+                0.88,
+                0.54,
+                1.0
+              ],
+              "size": "large",
+              "identity_clues": "深色货车，画面底部边缘，部分被裁切",
+              "uncertain": true
+            }
+          ]
+        },
+        {
+          "panel": "right",
+          "counts": {
+            "total": 5,
+            "large": 5,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.82,
+                0.54,
+                0.87,
+                0.96
+              ],
+              "size": "large",
+              "identity_clues": "白色厢式货车，货厢白色带文字，车头朝下，继续向下移动",
+              "uncertain": false
+            },
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.82,
+                0.44,
+                0.86,
+                0.56
+              ],
+              "size": "large",
+              "identity_clues": "红色车头卡车，位于白色货车上方",
+              "uncertain": false
+            },
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.81,
+                0.3,
+                0.85,
+                0.44
+              ],
+              "size": "large",
+              "identity_clues": "红色货车，通道中上部",
+              "uncertain": false
+            },
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.82,
+                0.22,
+                0.85,
+                0.31
+              ],
+              "size": "large",
+              "identity_clues": "红色货车，通道顶部远处",
+              "uncertain": false
+            },
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.83,
+                0.9,
+                0.88,
+                1.0
+              ],
+              "size": "large",
+              "identity_clues": "深色货车，画面底部边缘，部分被裁切",
+              "uncertain": true
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "from": "left:0",
+          "to": "center:1",
+          "same_vehicle": "yes",
+          "evidence": "白色厢式货车货厢文字与车头朝向一致，位置沿通道向下小幅移动，符合10秒行驶距离"
+        },
+        {
+          "from": "left:1",
+          "to": "center:2",
+          "same_vehicle": "yes",
+          "evidence": "红色车头紧随白色货车，相对位置与朝向一致"
+        },
+        {
+          "from": "left:2",
+          "to": "center:3",
+          "same_vehicle": "yes",
+          "evidence": "红色货车外形与通道中位置一致，仅小幅移动"
+        },
+        {
+          "from": "left:3",
+          "to": "center:4",
+          "same_vehicle": "yes",
+          "evidence": "通道顶部红色货车位置基本不变，疑似排队等待"
+        },
+        {
+          "from": "left:4",
+          "to": "center:5",
+          "same_vehicle": "uncertain",
+          "evidence": "底部深色货车被画面边缘裁切，仅见局部，匹配度有限"
+        },
+        {
+          "from": "center:1",
+          "to": "right:2",
+          "same_vehicle": "yes",
+          "evidence": "白色货车继续沿通道下移，货厢特征一致"
+        },
+        {
+          "from": "center:2",
+          "to": "right:3",
+          "same_vehicle": "yes",
+          "evidence": "红色车头与白色货车相对位置保持一致"
+        },
+        {
+          "from": "center:3",
+          "to": "right:4",
+          "same_vehicle": "yes",
+          "evidence": "红色货车外形与位置连续"
+        },
+        {
+          "from": "center:4",
+          "to": "right:5",
+          "same_vehicle": "yes",
+          "evidence": "顶部红色货车位置几乎不变"
+        },
+        {
+          "from": "center:5",
+          "to": "right:6",
+          "same_vehicle": "uncertain",
+          "evidence": "底部深色货车仍被裁切，仅局部可见"
+        }
+      ],
+      "new_or_exited": [
+        {
+          "frame": "right",
+          "vehicle": 6,
+          "event": "uncertain",
+          "evidence": "底部深色货车持续处于画面边缘，无法确认是否为新进入车辆"
+        }
+      ],
+      "review_reasons": [
+        "底部深色货车在三个面板中均被画面边缘裁切，身份确认置信度低"
+      ]
+    },
+    "raw_text": "{\"frames\":[{\"panel\":\"left\",\"counts\":{\"total\":5,\"large\":5,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"panel_index\":0,\"bbox\":[0.14,0.5,0.19,0.92],\"size\":\"large\",\"identity_clues\":\"白色厢式货车，货厢白色带文字，车头朝下（朝向镜头下方），位于中央通道\",\"uncertain\":false},{\"panel_index\":0,\"bbox\":[0.14,0.4,0.18,0.52],\"size\":\"large\",\"identity_clues\":\"红色车头卡车，紧贴白色货车上方\",\"uncertain\":false},{\"panel_index\":0,\"bbox\":[0.13,0.27,0.17,0.4],\"size\":\"large\",\"identity_clues\":\"红色货车，位于通道中上部\",\"uncertain\":false},{\"panel_index\":0,\"bbox\":[0.14,0.2,0.17,0.29],\"size\":\"large\",\"identity_clues\":\"红色货车，位于通道顶部远处\",\"uncertain\":false},{\"panel_index\":0,\"bbox\":[0.15,0.86,0.2,1.0],\"size\":\"large\",\"identity_clues\":\"深色/暗红色货车，画面底部边缘，部分被裁切\",\"uncertain\":true}]},{\"panel\":\"center\",\"counts\":{\"total\":5,\"large\":5,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"panel_index\":1,\"bbox\":[0.48,0.52,0.53,0.94],\"size\":\"large\",\"identity_clues\":\"白色厢式货车，货厢白色带文字，车头朝下，位置较左帧略向下移动\",\"uncertain\":false},{\"panel_index\":1,\"bbox\":[0.48,0.42,0.52,0.54],\"size\":\"large\",\"identity_clues\":\"红色车头卡车，位于白色货车上方\",\"uncertain\":false},{\"panel_index\":1,\"bbox\":[0.47,0.28,0.51,0.42],\"size\":\"large\",\"identity_clues\":\"红色货车，通道中上部\",\"uncertain\":false},{\"panel_index\":1,\"bbox\":[0.48,0.2,0.51,0.29],\"size\":\"large\",\"identity_clues\":\"红色货车，通道顶部远处\",\"uncertain\":false},{\"panel_index\":1,\"bbox\":[0.49,0.88,0.54,1.0],\"size\":\"large\",\"identity_clues\":\"深色货车，画面底部边缘，部分被裁切\",\"uncertain\":true}]},{\"panel\":\"right\",\"counts\":{\"total\":5,\"large\":5,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"panel_index\":2,\"bbox\":[0.82,0.54,0.87,0.96],\"size\":\"large\",\"identity_clues\":\"白色厢式货车，货厢白色带文字，车头朝下，继续向下移动\",\"uncertain\":false},{\"panel_index\":2,\"bbox\":[0.82,0.44,0.86,0.56],\"size\":\"large\",\"identity_clues\":\"红色车头卡车，位于白色货车上方\",\"uncertain\":false},{\"panel_index\":2,\"bbox\":[0.81,0.3,0.85,0.44],\"size\":\"large\",\"identity_clues\":\"红色货车，通道中上部\",\"uncertain\":false},{\"panel_index\":2,\"bbox\":[0.82,0.22,0.85,0.31],\"size\":\"large\",\"identity_clues\":\"红色货车，通道顶部远处\",\"uncertain\":false},{\"panel_index\":2,\"bbox\":[0.83,0.9,0.88,1.0],\"size\":\"large\",\"identity_clues\":\"深色货车，画面底部边缘，部分被裁切\",\"uncertain\":true}]}],\"links\":[{\"from\":\"left:0\",\"to\":\"center:1\",\"same_vehicle\":\"yes\",\"evidence\":\"白色厢式货车货厢文字与车头朝向一致，位置沿通道向下小幅移动，符合10秒行驶距离\"},{\"from\":\"left:1\",\"to\":\"center:2\",\"same_vehicle\":\"yes\",\"evidence\":\"红色车头紧随白色货车，相对位置与朝向一致\"},{\"from\":\"left:2\",\"to\":\"center:3\",\"same_vehicle\":\"yes\",\"evidence\":\"红色货车外形与通道中位置一致，仅小幅移动\"},{\"from\":\"left:3\",\"to\":\"center:4\",\"same_vehicle\":\"yes\",\"evidence\":\"通道顶部红色货车位置基本不变，疑似排队等待\"},{\"from\":\"left:4\",\"to\":\"center:5\",\"same_vehicle\":\"uncertain\",\"evidence\":\"底部深色货车被画面边缘裁切，仅见局部，匹配度有限\"},{\"from\":\"center:1\",\"to\":\"right:2\",\"same_vehicle\":\"yes\",\"evidence\":\"白色货车继续沿通道下移，货厢特征一致\"},{\"from\":\"center:2\",\"to\":\"right:3\",\"same_vehicle\":\"yes\",\"evidence\":\"红色车头与白色货车相对位置保持一致\"},{\"from\":\"center:3\",\"to\":\"right:4\",\"same_vehicle\":\"yes\",\"evidence\":\"红色货车外形与位置连续\"},{\"from\":\"center:4\",\"to\":\"right:5\",\"same_vehicle\":\"yes\",\"evidence\":\"顶部红色货车位置几乎不变\"},{\"from\":\"center:5\",\"to\":\"right:6\",\"same_vehicle\":\"uncertain\",\"evidence\":\"底部深色货车仍被裁切，仅局部可见\"}],\"new_or_exited\":[{\"frame\":\"right\",\"vehicle\":6,\"event\":\"uncertain\",\"evidence\":\"底部深色货车持续处于画面边缘，无法确认是否为新进入车辆\"}],\"review_reasons\":[\"底部深色货车在三个面板中均被画面边缘裁切，身份确认置信度低\"]}"
+  }
+}

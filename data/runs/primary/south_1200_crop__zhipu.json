@@ -1,0 +1,110 @@
+{
+  "observation": "south_1200",
+  "mode": "crop",
+  "images": [
+    "assets\\crops\\south_t1200_lane.jpg"
+  ],
+  "prompt": "这是同一机位的过道区域放大裁剪，四周展台已被裁掉。请只依据图中可见内容清点货车。\n\n重点检查远处小型、被柱子/车辆遮挡、只露出一部分的货车。计数单位必须是物理车辆：\n同一辆车的车头、底盘和货厢只算一辆；两个候选若是同一车的车头与货厢，必须合并。\n独立挂车/货厢算一辆。小汽车、面包车、叉车、手推车、人物不计。车型不确定写 unknown。\nbbox 是相对本裁剪图的 0-1 坐标。只输出严格 JSON，schema 与整帧清点相同：\n{\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"visible\":\"full|partial_top|partial_side|trailer_only\",\"is_truck\":true,\"identity_clues\":\"\",\"evidence\":\"\",\"uncertain\":false}],\"scene_notes\":\"\",\"uncertain_reasons\":[]}",
+  "run": {
+    "model": "zhipu",
+    "model_id": "glm-4.5v",
+    "ok": true,
+    "latency_s": 111.212,
+    "request_id": "20261021171253205752e0cae340da",
+    "usage": {
+      "completion_tokens": 2595,
+      "completion_tokens_details": {
+        "reasoning_tokens": 2171
+      },
+      "prompt_tokens": 3225,
+      "prompt_tokens_details": {
+        "cached_tokens": 3
+      },
+      "total_tokens": 5820
+    },
+    "parsed": {
+      "counts": {
+        "total": 5,
+        "large": 5,
+        "medium": 0,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.418,
+            0.246,
+            0.497,
+            0.359
+          ],
+          "size": "large",
+          "visible": "partial_side",
+          "is_truck": true,
+          "identity_clues": "红色重卡车头",
+          "evidence": "通道远处可见红色驾驶室及部分货厢结构",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.505,
+            0.29,
+            0.613,
+            0.488
+          ],
+          "size": "large",
+          "visible": "partial_side",
+          "is_truck": true,
+          "identity_clues": "红色重卡车头",
+          "evidence": "中间位置红色驾驶室及货厢前部，旁有工作人员",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.5,
+            0.12,
+            0.567,
+            0.252
+          ],
+          "size": "large",
+          "visible": "partial_side",
+          "is_truck": true,
+          "identity_clues": "深红色/棕色重型货车",
+          "evidence": "位于第二辆红色卡车后方的深色大型车辆，仅露上部",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.519,
+            0.478,
+            0.723,
+            0.872
+          ],
+          "size": "large",
+          "visible": "full",
+          "is_truck": true,
+          "identity_clues": "东风商用车 白色厢式货车",
+          "evidence": "清晰可见白色驾驶室带'东风商用车'标识及完整白色货厢",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.571,
+            0.857,
+            0.789,
+            1.0
+          ],
+          "size": "large",
+          "visible": "trailer_only",
+          "is_truck": true,
+          "identity_clues": "红色/棕色货厢",
+          "evidence": "画面底部仅露出红色或棕色货厢部分，无车头",
+          "uncertain": false
+        }
+      ],
+      "scene_notes": "室内物流装卸通道高角度俯拍，两侧为金属桁架展台，地面有散落包装物，多名工人作业中",
+      "uncertain_reasons": []
+    },
+    "raw_text": "```json\n{\"counts\":{\"total\":5,\"large\":5,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0.418,0.246,0.497,0.359],\"size\":\"large\",\"visible\":\"partial_side\",\"is_truck\":true,\"identity_clues\":\"红色重卡车头\",\"evidence\":\"通道远处可见红色驾驶室及部分货厢结构\",\"uncertain\":false},{\"bbox\":[0.505,0.290,0.613,0.488],\"size\":\"large\",\"visible\":\"partial_side\",\"is_truck\":true,\"identity_clues\":\"红色重卡车头\",\"evidence\":\"中间位置红色驾驶室及货厢前部，旁有工作人员\",\"uncertain\":false},{\"bbox\":[0.500,0.120,0.567,0.252],\"size\":\"large\",\"visible\":\"partial_side\",\"is_truck\":true,\"identity_clues\":\"深红色/棕色重型货车\",\"evidence\":\"位于第二辆红色卡车后方的深色大型车辆，仅露上部\",\"uncertain\":false},{\"bbox\":[0.519,0.478,0.723,0.872],\"size\":\"large\",\"visible\":\"full\",\"is_truck\":true,\"identity_clues\":\"东风商用车 白色厢式货车\",\"evidence\":\"清晰可见白色驾驶室带'东风商用车'标识及完整白色货厢\",\"uncertain\":false},{\"bbox\":[0.571,0.857,0.789,1.000],\"size\":\"large\",\"visible\":\"trailer_only\",\"is_truck\":true,\"identity_clues\":\"红色/棕色货厢\",\"evidence\":\"画面底部仅露出红色或棕色货厢部分，无车头\",\"uncertain\":false}],\"scene_notes\":\"室内物流装卸通道高角度俯拍，两侧为金属桁架展台，地面有散落包装物，多名工人作业中\",\"uncertain_reasons\":[]}\n```"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "observation": "north_600",
+  "mode": "crop",
+  "images": [
+    "assets\\crops\\north_t600_lane.jpg"
+  ],
+  "prompt": "这是同一机位的过道区域放大裁剪，四周展台已被裁掉。请只依据图中可见内容清点货车。\n\n重点检查远处小型、被柱子/车辆遮挡、只露出一部分的货车。计数单位必须是物理车辆：\n同一辆车的车头、底盘和货厢只算一辆；两个候选若是同一车的车头与货厢，必须合并。\n独立挂车/货厢算一辆。小汽车、面包车、叉车、手推车、人物不计。车型不确定写 unknown。\nbbox 是相对本裁剪图的 0-1 坐标。只输出严格 JSON，schema 与整帧清点相同：\n{\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"visible\":\"full|partial_top|partial_side|trailer_only\",\"is_truck\":true,\"identity_clues\":\"\",\"evidence\":\"\",\"uncertain\":false}],\"scene_notes\":\"\",\"uncertain_reasons\":[]}",
+  "run": {
+    "model": "zhipu",
+    "model_id": "glm-4.5v",
+    "ok": true,
+    "latency_s": 38.058,
+    "request_id": "20261021170300cc4156cf4aac4f26",
+    "usage": {
+      "completion_tokens": 1884,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1594
+      },
+      "prompt_tokens": 3225,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 5109
+    },
+    "parsed": {
+      "counts": {
+        "total": 2,
+        "large": 2,
+        "medium": 0,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.564,
+            0.325,
+            0.699,
+            0.586
+          ],
+          "size": "large",
+          "visible": "full",
+          "is_truck": true,
+          "identity_clues": "红色厢式货车，尾部有反光标识及模糊编号，刹车灯亮起",
+          "evidence": "标准重型厢式货车外形，红色涂装，纵向停放于通道中央，车头朝向画面深处",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.275,
+            0.615,
+            0.55,
+            0.999
+          ],
+          "size": "large",
+          "visible": "partial_top",
+          "is_truck": true,
+          "identity_clues": "白色厢式货车，波纹金属货厢顶盖",
+          "evidence": "仅露出货厢顶部及部分侧面，白色波纹板材质，横向停放于前景位置，尺寸与红色货车相当",
+          "uncertain": false
+        }
+      ],
+      "scene_notes": "室内展览馆/仓库通道场景，两侧为带品牌标识（CUORI/GLAMO等）的展台或集装箱，地面散落包装材料，多名工人佩戴安全帽作业，右下角有蓝色叉车（已排除）。远处为场馆出口大门。",
+      "uncertain_reasons": []
+    },
+    "raw_text": "```json\n{\"counts\":{\"total\":2,\"large\":2,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0.564,0.325,0.699,0.586],\"size\":\"large\",\"visible\":\"full\",\"is_truck\":true,\"identity_clues\":\"红色厢式货车，尾部有反光标识及模糊编号，刹车灯亮起\",\"evidence\":\"标准重型厢式货车外形，红色涂装，纵向停放于通道中央，车头朝向画面深处\",\"uncertain\":false},{\"bbox\":[0.275,0.615,0.550,0.999],\"size\":\"large\",\"visible\":\"partial_top\",\"is_truck\":true,\"identity_clues\":\"白色厢式货车，波纹金属货厢顶盖\",\"evidence\":\"仅露出货厢顶部及部分侧面，白色波纹板材质，横向停放于前景位置，尺寸与红色货车相当\",\"uncertain\":false}],\"scene_notes\":\"室内展览馆/仓库通道场景，两侧为带品牌标识（CUORI/GLAMO等）的展台或集装箱，地面散落包装材料，多名工人佩戴安全帽作业，右下角有蓝色叉车（已排除）。远处为场馆出口大门。\",\"uncertain_reasons\":[]}\n```"
+  }
+}

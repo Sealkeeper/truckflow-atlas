@@ -1,0 +1,82 @@
+{
+  "observation": "south_1200",
+  "mode": "whole",
+  "images": [
+    "assets\\frames\\south_t1200.jpg"
+  ],
+  "prompt": "你是展会撤换展现场的货车清点专家。只依据这张整帧画面清点所有可见货车。\n\n口径：\n1. 同一辆车的车头、挂车和货厢只算一辆；与相邻车头分离的独立挂车算一辆。\n2. 小汽车、面包车、叉车、手推车、人物、工程机械不计。\n3. 只统计画面内实际可见车辆；远处或遮挡但仍能确定是货车时必须计入；完全看不见不猜。\n4. 按整车轮廓与比例分 large（重卡/半挂/长货厢）、medium（中卡）、small（轻卡/厢车）；不确定写 unknown。\n5. 对远处、边界、遮挡、疑似车头货厢拆分的候选设 uncertain=true。\n\nbbox 使用 0-1 归一化 [x0,y0,x1,y1]，框住整辆可见车辆的联合外接框。\n只输出严格 JSON：\n{\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"visible\":\"full|partial_top|partial_side|trailer_only\",\"is_truck\":true,\"identity_clues\":\"颜色、货厢、车头、文字等证据\",\"evidence\":\"画面位置与理由\",\"uncertain\":false}],\"scene_notes\":\"\",\"uncertain_reasons\":[]}",
+  "run": {
+    "model": "zhipu",
+    "model_id": "glm-4.5v",
+    "ok": true,
+    "latency_s": 58.431,
+    "request_id": "20261021171215a9031d82a4f0489a",
+    "usage": {
+      "completion_tokens": 2036,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1633
+      },
+      "prompt_tokens": 1892,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 3928
+    },
+    "parsed": {
+      "counts": {
+        "total": 3,
+        "large": 3,
+        "medium": 0,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.471,
+            0.48,
+            0.554,
+            0.881
+          ],
+          "size": "large",
+          "visible": "full",
+          "is_truck": true,
+          "identity_clues": "白色驾驶室，车头印有'东风商用车'文字，银白色厢式货厢",
+          "evidence": "位于画面下方中央通道最近处，整车轮廓完整清晰，可确认为重型厢式货车或半挂车",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.458,
+            0.288,
+            0.52,
+            0.493
+          ],
+          "size": "large",
+          "visible": "partial_top",
+          "is_truck": true,
+          "identity_clues": "红色涂装，重型卡车车头及货厢轮廓",
+          "evidence": "位于白色东风货车正后方（北侧），红色车身与地面人员形成对比，可确定为独立大型货车",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.42,
+            0.235,
+            0.462,
+            0.367
+          ],
+          "size": "large",
+          "visible": "partial_top",
+          "is_truck": true,
+          "identity_clues": "红色涂装，位于通道深处，具有典型重卡比例",
+          "evidence": "位于第二辆红色货车后方更远处，虽距离较远但车头及货厢轮廓符合大型货车特征，与相邻车辆有明显间距",
+          "uncertain": false
+        }
+      ],
+      "scene_notes": "展会撤展/换展现场夜间监控画面，时间戳显示2025年10月19日22:19。场地为室内展馆，两侧为在建或拆除中的品牌展台（可见Haier、CHANGHONG/长虹、Homa等标识）。中央通道停放货车进行装卸作业，地面有散落包装材料，多名工人（黄色安全帽）在车辆旁作业。",
+      "uncertain_reasons": []
+    },
+    "raw_text": "```json\n{\"counts\":{\"total\":3,\"large\":3,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0.471,0.480,0.554,0.881],\"size\":\"large\",\"visible\":\"full\",\"is_truck\":true,\"identity_clues\":\"白色驾驶室，车头印有'东风商用车'文字，银白色厢式货厢\",\"evidence\":\"位于画面下方中央通道最近处，整车轮廓完整清晰，可确认为重型厢式货车或半挂车\",\"uncertain\":false},{\"bbox\":[0.458,0.288,0.520,0.493],\"size\":\"large\",\"visible\":\"partial_top\",\"is_truck\":true,\"identity_clues\":\"红色涂装，重型卡车车头及货厢轮廓\",\"evidence\":\"位于白色东风货车正后方（北侧），红色车身与地面人员形成对比，可确定为独立大型货车\",\"uncertain\":false},{\"bbox\":[0.420,0.235,0.462,0.367],\"size\":\"large\",\"visible\":\"partial_top\",\"is_truck\":true,\"identity_clues\":\"红色涂装，位于通道深处，具有典型重卡比例\",\"evidence\":\"位于第二辆红色货车后方更远处，虽距离较远但车头及货厢轮廓符合大型货车特征，与相邻车辆有明显间距\",\"uncertain\":false}],\"scene_notes\":\"展会撤展/换展现场夜间监控画面，时间戳显示2025年10月19日22:19。场地为室内展馆，两侧为在建或拆除中的品牌展台（可见Haier、CHANGHONG/长虹、Homa等标识）。中央通道停放货车进行装卸作业，地面有散落包装材料，多名工人（黄色安全帽）在车辆旁作业。\",\"uncertain_reasons\":[]}\n```"
+  }
+}

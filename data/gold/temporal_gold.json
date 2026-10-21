@@ -1,0 +1,124 @@
+{
+  "version": "2026-10-21.temporal-reid.v1",
+  "frozen_before_route_comparison": true,
+  "scope": {
+    "camera_source": "D:\\File\\PROJECT\\数据底座\\数据底座-货车\\视频",
+    "video_fps": 25,
+    "observations": 6,
+    "note": "Counts are the delegated, independently verified values. Vehicle boxes are coarse evidence regions, and type labels are a single-annotator visual review; this file is not yet a charter-grade two-annotator + adjudicator gold set."
+  },
+  "provenance": {
+    "total_counts": "delegation-verified before this experiment; north600=4, north1200=3, north1500=2, south600=5, south900=5, south1200=5",
+    "vehicle_boxes": "coarse visual labels for evidence navigation only",
+    "vehicle_types": "provisional single-annotator review; all indexed vehicles are long-body heavy lorries/trailers, labelled large",
+    "cross_camera_overlap": "visual entity review at paired nominal times; pair hypotheses retained below for independent re-review"
+  },
+  "frames": [
+    {
+      "id": "north_600",
+      "camera": "north",
+      "video_time_s": 600,
+      "frame_index": 15000,
+      "wall_clock": "2025-10-19 22:09:26",
+      "counts": {"total": 4, "large": 4, "medium": 0, "small": 0, "unknown": 0},
+      "vehicles": [
+        {"id": "north_600:A", "bbox": [0.445, 0.167, 0.495, 0.267], "size": "large", "label": "far blue cargo body"},
+        {"id": "north_600:B", "bbox": [0.437, 0.270, 0.491, 0.360], "size": "large", "label": "near blue cargo body"},
+        {"id": "north_600:C", "bbox": [0.480, 0.310, 0.570, 0.600], "size": "large", "label": "red box lorry"},
+        {"id": "north_600:D", "bbox": [0.340, 0.615, 0.496, 1.000], "size": "large", "label": "white semi-trailer, cab below frame"}
+      ]
+    },
+    {
+      "id": "north_1200",
+      "camera": "north",
+      "video_time_s": 1200,
+      "frame_index": 30000,
+      "wall_clock": "2025-10-19 22:19:26",
+      "counts": {"total": 3, "large": 3, "medium": 0, "small": 0, "unknown": 0},
+      "vehicles": [
+        {"id": "north_1200:A", "bbox": [0.447, 0.152, 0.502, 0.335], "size": "large", "label": "blue cargo body near upper aisle"},
+        {"id": "north_1200:B", "bbox": [0.400, 0.350, 0.500, 0.630], "size": "large", "label": "red box lorry"},
+        {"id": "north_1200:C", "bbox": [0.342, 0.607, 0.491, 1.000], "size": "large", "label": "white semi-trailer"}
+      ]
+    },
+    {
+      "id": "north_1500",
+      "camera": "north",
+      "video_time_s": 1500,
+      "frame_index": 37500,
+      "wall_clock": "2025-10-19 22:24:26",
+      "counts": {"total": 2, "large": 2, "medium": 0, "small": 0, "unknown": 0},
+      "vehicles": [
+        {"id": "north_1500:A", "bbox": [0.349, 0.350, 0.500, 0.650], "size": "large", "label": "red box lorry"},
+        {"id": "north_1500:B", "bbox": [0.340, 0.608, 0.496, 1.000], "size": "large", "label": "white semi-trailer"}
+      ]
+    },
+    {
+      "id": "south_600",
+      "camera": "south",
+      "video_time_s": 600,
+      "frame_index": 15000,
+      "wall_clock": "2025-10-19 22:09:26",
+      "counts": {"total": 5, "large": 5, "medium": 0, "small": 0, "unknown": 0},
+      "vehicles": [
+        {"id": "south_600:A", "bbox": [0.450, 0.118, 0.500, 0.270], "size": "large", "label": "far red cargo lorry"},
+        {"id": "south_600:B", "bbox": [0.410, 0.228, 0.462, 0.365], "size": "large", "label": "red tractor/cab"},
+        {"id": "south_600:C", "bbox": [0.450, 0.280, 0.530, 0.620], "size": "large", "label": "red box lorry"},
+        {"id": "south_600:D", "bbox": [0.450, 0.450, 0.561, 0.900], "size": "large", "label": "white semi-trailer with white cab"},
+        {"id": "south_600:E", "bbox": [0.700, 0.820, 1.000, 1.000], "size": "large", "label": "partially visible red trailer at lower-right boundary"}
+      ]
+    },
+    {
+      "id": "south_900",
+      "camera": "south",
+      "video_time_s": 900,
+      "frame_index": 22500,
+      "wall_clock": "2025-10-19 22:14:26",
+      "counts": {"total": 5, "large": 5, "medium": 0, "small": 0, "unknown": 0},
+      "vehicles": [
+        {"id": "south_900:A", "bbox": [0.450, 0.110, 0.500, 0.280], "size": "large", "label": "far red cargo lorry"},
+        {"id": "south_900:B", "bbox": [0.410, 0.194, 0.467, 0.370], "size": "large", "label": "red tractor/cab"},
+        {"id": "south_900:C", "bbox": [0.440, 0.280, 0.530, 0.500], "size": "large", "label": "red box lorry"},
+        {"id": "south_900:D", "bbox": [0.450, 0.450, 0.560, 0.880], "size": "large", "label": "white semi-trailer with white cab"},
+        {"id": "south_900:E", "bbox": [0.480, 0.820, 0.620, 1.000], "size": "large", "label": "partially visible red trailer at lower boundary"}
+      ]
+    },
+    {
+      "id": "south_1200",
+      "camera": "south",
+      "video_time_s": 1200,
+      "frame_index": 30000,
+      "wall_clock": "2025-10-19 22:19:26",
+      "counts": {"total": 5, "large": 5, "medium": 0, "small": 0, "unknown": 0},
+      "vehicles": [
+        {"id": "south_1200:A", "bbox": [0.440, 0.118, 0.501, 0.260], "size": "large", "label": "far red cargo lorry"},
+        {"id": "south_1200:B", "bbox": [0.413, 0.235, 0.480, 0.370], "size": "large", "label": "red tractor/cab"},
+        {"id": "south_1200:C", "bbox": [0.450, 0.280, 0.530, 0.520], "size": "large", "label": "red box lorry"},
+        {"id": "south_1200:D", "bbox": [0.458, 0.452, 0.570, 0.900], "size": "large", "label": "white semi-trailer with white cab"},
+        {"id": "south_1200:E", "bbox": [0.472, 0.848, 0.660, 1.000], "size": "large", "label": "partially visible red trailer at lower boundary"}
+      ]
+    }
+  ],
+  "cross_camera": [
+    {
+      "time_s": 600,
+      "per_camera_total": {"north": 4, "south": 5},
+      "overlap_physical_vehicles": [
+        {"members": ["north_600:C", "south_600:C"], "evidence": "red corrugated box body and rear-door pattern"},
+        {"members": ["north_600:D", "south_600:D"], "evidence": "same white long trailer; cab is visible only in south"}
+      ],
+      "unique_total": 7,
+      "review_note": "Blue north-side cargo bodies appear red or are outside the south crop; they remain unpaired."
+    },
+    {
+      "time_s": 1200,
+      "per_camera_total": {"north": 3, "south": 5},
+      "overlap_physical_vehicles": [
+        {"members": ["north_1200:B", "south_1200:C"], "evidence": "red box body and rear-door layout"},
+        {"members": ["north_1200:C", "south_1200:D"], "evidence": "same white long trailer and white cab/box sequence"}
+      ],
+      "unique_total": 6,
+      "review_note": "The blue body at north is not paired; it is not represented in the south crops."
+    }
+  ]
+}

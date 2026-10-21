@@ -1,0 +1,166 @@
+{
+  "observation": "north_1200",
+  "mode": "strip",
+  "images": [
+    "assets\\strips\\north_1200_strip.jpg"
+  ],
+  "prompt": "这是一条同一机位在 t-10s、t、t+10s 的三个连续证据面板，从左到右排列。\n请分别清点每帧，并利用颜色、货厢、车头、文字、朝向等语义判断车辆是否跨帧为同一物理车。\n禁止用像素跟踪或根据上一帧数量填数；每帧计数必须有该帧可见证据。\n\n输出严格 JSON：\n{\"frames\":[{\"panel\":\"left|center|right\",\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"panel_index\":0,\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"identity_clues\":\"\",\"uncertain\":false}]}],\"links\":[{\"from\":\"left:0\",\"to\":\"center:1\",\"same_vehicle\":\"yes|no|uncertain\",\"evidence\":\"\"}],\"new_or_exited\":[{\"frame\":\"left|center|right\",\"vehicle\":\"panel_index\",\"event\":\"enter|exit|uncertain\",\"evidence\":\"\"}],\"review_reasons\":[]}\nbbox 是单个面板内的 0-1 坐标。",
+  "run": {
+    "model": "aibox",
+    "model_id": "glm-5.3-flash",
+    "ok": true,
+    "latency_s": 11.605,
+    "request_id": "34f353bbe2ea4cf9a4e6aeebb51b03ff",
+    "usage": {
+      "prompt_tokens": 1633,
+      "total_tokens": 2350,
+      "completion_tokens": 717,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "image_tokens": 1380
+      },
+      "reasoning_tokens": 154
+    },
+    "parsed": {
+      "frames": [
+        {
+          "panel": "left",
+          "counts": {
+            "total": 2,
+            "large": 2,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.12,
+                0.4,
+                0.18,
+                0.66
+              ],
+              "size": "large",
+              "identity_clues": "红色货厢集装箱卡车，静止停放于通道左侧，货厢带竖条纹",
+              "uncertain": false
+            },
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.09,
+                0.66,
+                0.17,
+                0.96
+              ],
+              "size": "large",
+              "identity_clues": "白色厢式货车，车尾朝向镜头，位于画面底部",
+              "uncertain": false
+            }
+          ]
+        },
+        {
+          "panel": "center",
+          "counts": {
+            "total": 2,
+            "large": 2,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.45,
+                0.4,
+                0.51,
+                0.68
+              ],
+              "size": "large",
+              "identity_clues": "红色货厢集装箱卡车，外观、位置与左帧一致",
+              "uncertain": false
+            },
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.43,
+                0.66,
+                0.51,
+                0.96
+              ],
+              "size": "large",
+              "identity_clues": "白色厢式货车，车尾朝镜头，与左帧同一位置",
+              "uncertain": false
+            }
+          ]
+        },
+        {
+          "panel": "right",
+          "counts": {
+            "total": 2,
+            "large": 2,
+            "medium": 0,
+            "small": 0,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.78,
+                0.4,
+                0.84,
+                0.68
+              ],
+              "size": "large",
+              "identity_clues": "红色货厢集装箱卡车，外观与位置延续",
+              "uncertain": false
+            },
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.76,
+                0.66,
+                0.84,
+                0.96
+              ],
+              "size": "large",
+              "identity_clues": "白色厢式货车，车尾朝镜头，位置延续",
+              "uncertain": false
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "from": "left:0",
+          "to": "center:1",
+          "same_vehicle": "yes",
+          "evidence": "红色货厢纹理、停放位置及周围展台（KONKA、长虹）完全对应，10秒内无位移"
+        },
+        {
+          "from": "left:1",
+          "to": "center:1",
+          "same_vehicle": "yes",
+          "evidence": "白色厢式货车车尾朝向、白色货厢及底部位置一致"
+        },
+        {
+          "from": "center:0",
+          "to": "right:0",
+          "same_vehicle": "yes",
+          "evidence": "红色货厢卡车位置与外观在t+10s帧完全延续"
+        },
+        {
+          "from": "center:1",
+          "to": "right:1",
+          "same_vehicle": "yes",
+          "evidence": "白色厢式货车位置与朝向延续，无变化"
+        }
+      ],
+      "new_or_exited": [],
+      "review_reasons": []
+    },
+    "raw_text": "{\"frames\":[{\"panel\":\"left\",\"counts\":{\"total\":2,\"large\":2,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"panel_index\":0,\"bbox\":[0.12,0.40,0.18,0.66],\"size\":\"large\",\"identity_clues\":\"红色货厢集装箱卡车，静止停放于通道左侧，货厢带竖条纹\",\"uncertain\":false},{\"panel_index\":0,\"bbox\":[0.09,0.66,0.17,0.96],\"size\":\"large\",\"identity_clues\":\"白色厢式货车，车尾朝向镜头，位于画面底部\",\"uncertain\":false}]},{\"panel\":\"center\",\"counts\":{\"total\":2,\"large\":2,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"panel_index\":1,\"bbox\":[0.45,0.40,0.51,0.68],\"size\":\"large\",\"identity_clues\":\"红色货厢集装箱卡车，外观、位置与左帧一致\",\"uncertain\":false},{\"panel_index\":1,\"bbox\":[0.43,0.66,0.51,0.96],\"size\":\"large\",\"identity_clues\":\"白色厢式货车，车尾朝镜头，与左帧同一位置\",\"uncertain\":false}]},{\"panel\":\"right\",\"counts\":{\"total\":2,\"large\":2,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"panel_index\":2,\"bbox\":[0.78,0.40,0.84,0.68],\"size\":\"large\",\"identity_clues\":\"红色货厢集装箱卡车，外观与位置延续\",\"uncertain\":false},{\"panel_index\":2,\"bbox\":[0.76,0.66,0.84,0.96],\"size\":\"large\",\"identity_clues\":\"白色厢式货车，车尾朝镜头，位置延续\",\"uncertain\":false}]}],\"links\":[{\"from\":\"left:0\",\"to\":\"center:1\",\"same_vehicle\":\"yes\",\"evidence\":\"红色货厢纹理、停放位置及周围展台（KONKA、长虹）完全对应，10秒内无位移\"},{\"from\":\"left:1\",\"to\":\"center:1\",\"same_vehicle\":\"yes\",\"evidence\":\"白色厢式货车车尾朝向、白色货厢及底部位置一致\"},{\"from\":\"center:0\",\"to\":\"right:0\",\"same_vehicle\":\"yes\",\"evidence\":\"红色货厢卡车位置与外观在t+10s帧完全延续\"},{\"from\":\"center:1\",\"to\":\"right:1\",\"same_vehicle\":\"yes\",\"evidence\":\"白色厢式货车位置与朝向延续，无变化\"}],\"new_or_exited\":[],\"review_reasons\":[]}"
+  }
+}

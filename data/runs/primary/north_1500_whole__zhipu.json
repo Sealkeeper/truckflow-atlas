@@ -1,0 +1,68 @@
+{
+  "observation": "north_1500",
+  "mode": "whole",
+  "images": [
+    "assets\\frames\\north_t1500.jpg"
+  ],
+  "prompt": "你是展会撤换展现场的货车清点专家。只依据这张整帧画面清点所有可见货车。\n\n口径：\n1. 同一辆车的车头、挂车和货厢只算一辆；与相邻车头分离的独立挂车算一辆。\n2. 小汽车、面包车、叉车、手推车、人物、工程机械不计。\n3. 只统计画面内实际可见车辆；远处或遮挡但仍能确定是货车时必须计入；完全看不见不猜。\n4. 按整车轮廓与比例分 large（重卡/半挂/长货厢）、medium（中卡）、small（轻卡/厢车）；不确定写 unknown。\n5. 对远处、边界、遮挡、疑似车头货厢拆分的候选设 uncertain=true。\n\nbbox 使用 0-1 归一化 [x0,y0,x1,y1]，框住整辆可见车辆的联合外接框。\n只输出严格 JSON：\n{\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"visible\":\"full|partial_top|partial_side|trailer_only\",\"is_truck\":true,\"identity_clues\":\"颜色、货厢、车头、文字等证据\",\"evidence\":\"画面位置与理由\",\"uncertain\":false}],\"scene_notes\":\"\",\"uncertain_reasons\":[]}",
+  "run": {
+    "model": "zhipu",
+    "model_id": "glm-4.5v",
+    "ok": true,
+    "latency_s": 53.895,
+    "request_id": "20261021170602204dafae33a7418c",
+    "usage": {
+      "completion_tokens": 1768,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1457
+      },
+      "prompt_tokens": 1892,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 3660
+    },
+    "parsed": {
+      "counts": {
+        "total": 2,
+        "large": 2,
+        "medium": 0,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.412,
+            0.368,
+            0.489,
+            0.627
+          ],
+          "size": "large",
+          "visible": "partial_top",
+          "is_truck": true,
+          "identity_clues": "红色封闭式货厢、矩形箱体、重型载货尺寸",
+          "evidence": "位于画面中央通道，红色厢体醒目，长度约等于两侧展位跨度，符合展品运输重卡特征",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.347,
+            0.628,
+            0.484,
+            0.999
+          ],
+          "size": "large",
+          "visible": "partial_side",
+          "is_trick": true,
+          "identity_clues": "白色/银色长条形货厢、波纹板侧壁、超长轴距",
+          "evidence": "紧邻红色货车前方（近景端），纵向贯穿画面下半部，表面有典型货车厢板纹理，长度显著超过红色货车",
+          "uncertain": false
+        }
+      ],
+      "scene_notes": "展会撤展期间（2025-10-19 22:24），H区3.2馆北421视角，中央主通道停放两辆大型货运车辆，周围展位处于搭建/拆除状态（可见KONIKA、CUORI、CHANGHONG等展位桁架），地面有施工人员及散落物料。",
+      "uncertain_reasons": []
+    },
+    "raw_text": "{\"counts\":{\"total\":2,\"large\":2,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0.412,0.368,0.489,0.627],\"size\":\"large\",\"visible\":\"partial_top\",\"is_truck\":true,\"identity_clues\":\"红色封闭式货厢、矩形箱体、重型载货尺寸\",\"evidence\":\"位于画面中央通道，红色厢体醒目，长度约等于两侧展位跨度，符合展品运输重卡特征\",\"uncertain\":false},{\"bbox\":[0.347,0.628,0.484,0.999],\"size\":\"large\",\"visible\":\"partial_side\",\"is_trick\":true,\"identity_clues\":\"白色/银色长条形货厢、波纹板侧壁、超长轴距\",\"evidence\":\"紧邻红色货车前方（近景端），纵向贯穿画面下半部，表面有典型货车厢板纹理，长度显著超过红色货车\",\"uncertain\":false}],\"scene_notes\":\"展会撤展期间（2025-10-19 22:24），H区3.2馆北421视角，中央主通道停放两辆大型货运车辆，周围展位处于搭建/拆除状态（可见KONIKA、CUORI、CHANGHONG等展位桁架），地面有施工人员及散落物料。\",\"uncertain_reasons\":[]}"
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "observation": "north_600",
+  "mode": "strip",
+  "images": [
+    "assets\\strips\\north_600_strip.jpg"
+  ],
+  "prompt": "这是一条同一机位在 t-10s、t、t+10s 的三个连续证据面板，从左到右排列。\n请分别清点每帧，并利用颜色、货厢、车头、文字、朝向等语义判断车辆是否跨帧为同一物理车。\n禁止用像素跟踪或根据上一帧数量填数；每帧计数必须有该帧可见证据。\n\n输出严格 JSON：\n{\"frames\":[{\"panel\":\"left|center|right\",\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"panel_index\":0,\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"identity_clues\":\"\",\"uncertain\":false}]}],\"links\":[{\"from\":\"left:0\",\"to\":\"center:1\",\"same_vehicle\":\"yes|no|uncertain\",\"evidence\":\"\"}],\"new_or_exited\":[{\"frame\":\"left|center|right\",\"vehicle\":\"panel_index\",\"event\":\"enter|exit|uncertain\",\"evidence\":\"\"}],\"review_reasons\":[]}\nbbox 是单个面板内的 0-1 坐标。",
+  "run": {
+    "model": "doubao",
+    "model_id": "ep-20260828174616-dthpx",
+    "ok": true,
+    "latency_s": 68.615,
+    "request_id": "021792573390271a9d3d132e652feb8a0dea50a67fd1a45c5d7ba",
+    "usage": {
+      "completion_tokens": 4084,
+      "prompt_tokens": 1580,
+      "total_tokens": 5664,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 3026
+      }
+    },
+    "parsed": {
+      "frames": [
+        {
+          "panel": "left",
+          "counts": {
+            "total": 3,
+            "large": 2,
+            "medium": 0,
+            "small": 1,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.15,
+                0.37,
+                0.19,
+                0.61
+              ],
+              "size": "large",
+              "identity_clues": "红色大型货车，货厢为红色，车头朝向镜头，位于中间通道",
+              "uncertain": false
+            },
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.11,
+                0.64,
+                0.18,
+                0.99
+              ],
+              "size": "large",
+              "identity_clues": "白色大型封闭货柜，位于左下方区域",
+              "uncertain": false
+            },
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.15,
+                0.77,
+                0.19,
+                0.97
+              ],
+              "size": "small",
+              "identity_clues": "蓝色车身橙色顶部的小型叉车，位于白色货柜右侧",
+              "uncertain": false
+            }
+          ]
+        },
+        {
+          "panel": "center",
+          "counts": {
+            "total": 3,
+            "large": 2,
+            "medium": 0,
+            "small": 1,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.49,
+                0.38,
+                0.53,
+                0.62
+              ],
+              "size": "large",
+              "identity_clues": "红色大型货车，货厢为红色，车头朝向镜头，位于中间通道",
+              "uncertain": false
+            },
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.45,
+                0.65,
+                0.52,
+                0.99
+              ],
+              "size": "large",
+              "identity_clues": "白色大型封闭货柜，位于左下方区域",
+              "uncertain": false
+            },
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.49,
+                0.78,
+                0.53,
+                0.97
+              ],
+              "size": "small",
+              "identity_clues": "蓝色车身橙色顶部的小型叉车，位于白色货柜右侧",
+              "uncertain": false
+            }
+          ]
+        },
+        {
+          "panel": "right",
+          "counts": {
+            "total": 3,
+            "large": 2,
+            "medium": 0,
+            "small": 1,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.83,
+                0.38,
+                0.87,
+                0.62
+              ],
+              "size": "large",
+              "identity_clues": "红色大型货车，货厢为红色，车头朝向镜头，位于中间通道",
+              "uncertain": false
+            },
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.79,
+                0.64,
+                0.86,
+                0.99
+              ],
+              "size": "large",
+              "identity_clues": "白色大型封闭货柜，位于左下方区域",
+              "uncertain": false
+            },
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.83,
+                0.77,
+                0.87,
+                0.97
+              ],
+              "size": "small",
+              "identity_clues": "蓝色车身橙色顶部的小型叉车，位于白色货柜右侧",
+              "uncertain": false
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "from": "left:0",
+          "to": "center:0",
+          "same_vehicle": "yes",
+          "evidence": "红色大型货车，货厢结构一致，在连续帧中沿通道向镜头方向移动，位置变化符合运动逻辑"
+        },
+        {
+          "from": "left:1",
+          "to": "center:1",
+          "same_vehicle": "yes",
+          "evidence": "白色大型封闭货柜，形状、位置（左下方）一致，无明显变化"
+        },
+        {
+          "from": "left:2",
+          "to": "center:2",
+          "same_vehicle": "yes",
+          "evidence": "蓝色车身橙色顶部的小型叉车，位置在白色货柜右侧，形状一致"
+        },
+        {
+          "from": "center:0",
+          "to": "right:0",
+          "same_vehicle": "yes",
+          "evidence": "红色大型货车，货厢结构一致，持续沿通道向镜头方向移动，位置变化符合运动逻辑"
+        },
+        {
+          "from": "center:1",
+          "to": "right:1",
+          "same_vehicle": "yes",
+          "evidence": "白色大型封闭货柜，形状、位置一致，无明显变化"
+        },
+        {
+          "from": "center:2",
+          "to": "right:2",
+          "same_vehicle": "yes",
+          "evidence": "蓝色车身橙色顶部的小型叉车，位置和形状一致"
+        }
+      ],
+      "new_or_exited": [],
+      "review_reasons": []
+    },
+    "raw_text": "{\n  \"frames\": [\n    {\n      \"panel\": \"left\",\n      \"counts\": {\"total\":3, \"large\":2, \"medium\":0, \"small\":1, \"unknown\":0},\n      \"vehicles\": [\n        {\"panel_index\":0, \"bbox\":[0.15, 0.37, 0.19, 0.61], \"size\":\"large\", \"identity_clues\":\"红色大型货车，货厢为红色，车头朝向镜头，位于中间通道\", \"uncertain\":false},\n        {\"panel_index\":1, \"bbox\":[0.11, 0.64, 0.18, 0.99], \"size\":\"large\", \"identity_clues\":\"白色大型封闭货柜，位于左下方区域\", \"uncertain\":false},\n        {\"panel_index\":2, \"bbox\":[0.15, 0.77, 0.19, 0.97], \"size\":\"small\", \"identity_clues\":\"蓝色车身橙色顶部的小型叉车，位于白色货柜右侧\", \"uncertain\":false}\n      ]\n    },\n    {\n      \"panel\": \"center\",\n      \"counts\": {\"total\":3, \"large\":2, \"medium\":0, \"small\":1, \"unknown\":0},\n      \"vehicles\": [\n        {\"panel_index\":0, \"bbox\":[0.49, 0.38, 0.53, 0.62], \"size\":\"large\", \"identity_clues\":\"红色大型货车，货厢为红色，车头朝向镜头，位于中间通道\", \"uncertain\":false},\n        {\"panel_index\":1, \"bbox\":[0.45, 0.65, 0.52, 0.99], \"size\":\"large\", \"identity_clues\":\"白色大型封闭货柜，位于左下方区域\", \"uncertain\":false},\n        {\"panel_index\":2, \"bbox\":[0.49, 0.78, 0.53, 0.97], \"size\":\"small\", \"identity_clues\":\"蓝色车身橙色顶部的小型叉车，位于白色货柜右侧\", \"uncertain\":false}\n      ]\n    },\n    {\n      \"panel\": \"right\",\n      \"counts\": {\"total\":3, \"large\":2, \"medium\":0, \"small\":1, \"unknown\":0},\n      \"vehicles\": [\n        {\"panel_index\":0, \"bbox\":[0.83, 0.38, 0.87, 0.62], \"size\":\"large\", \"identity_clues\":\"红色大型货车，货厢为红色，车头朝向镜头，位于中间通道\", \"uncertain\":false},\n        {\"panel_index\":1, \"bbox\":[0.79, 0.64, 0.86, 0.99], \"size\":\"large\", \"identity_clues\":\"白色大型封闭货柜，位于左下方区域\", \"uncertain\":false},\n        {\"panel_index\":2, \"bbox\":[0.83, 0.77, 0.87, 0.97], \"size\":\"small\", \"identity_clues\":\"蓝色车身橙色顶部的小型叉车，位于白色货柜右侧\", \"uncertain\":false}\n      ]\n    }\n  ],\n  \"links\": [\n    {\"from\":\"left:0\", \"to\":\"center:0\", \"same_vehicle\":\"yes\", \"evidence\":\"红色大型货车，货厢结构一致，在连续帧中沿通道向镜头方向移动，位置变化符合运动逻辑\"},\n    {\"from\":\"left:1\", \"to\":\"center:1\", \"same_vehicle\":\"yes\", \"evidence\":\"白色大型封闭货柜，形状、位置（左下方）一致，无明显变化\"},\n    {\"from\":\"left:2\", \"to\":\"center:2\", \"same_vehicle\":\"yes\", \"evidence\":\"蓝色车身橙色顶部的小型叉车，位置在白色货柜右侧，形状一致\"},\n    {\"from\":\"center:0\", \"to\":\"right:0\", \"same_vehicle\":\"yes\", \"evidence\":\"红色大型货车，货厢结构一致，持续沿通道向镜头方向移动，位置变化符合运动逻辑\"},\n    {\"from\":\"center:1\", \"to\":\"right:1\", \"same_vehicle\":\"yes\", \"evidence\":\"白色大型封闭货柜，形状、位置一致，无明显变化\"},\n    {\"from\":\"center:2\", \"to\":\"right:2\", \"same_vehicle\":\"yes\", \"evidence\":\"蓝色车身橙色顶部的小型叉车，位置和形状一致\"}\n  ],\n  \"new_or_exited\": [],\n  \"review_reasons\": []\n}"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "observation": "south_900",
+  "mode": "whole",
+  "images": [
+    "assets\\frames\\south_t900.jpg"
+  ],
+  "prompt": "你是展会撤换展现场的货车清点专家。只依据这张整帧画面清点所有可见货车。\n\n口径：\n1. 同一辆车的车头、挂车和货厢只算一辆；与相邻车头分离的独立挂车算一辆。\n2. 小汽车、面包车、叉车、手推车、人物、工程机械不计。\n3. 只统计画面内实际可见车辆；远处或遮挡但仍能确定是货车时必须计入；完全看不见不猜。\n4. 按整车轮廓与比例分 large（重卡/半挂/长货厢）、medium（中卡）、small（轻卡/厢车）；不确定写 unknown。\n5. 对远处、边界、遮挡、疑似车头货厢拆分的候选设 uncertain=true。\n\nbbox 使用 0-1 归一化 [x0,y0,x1,y1]，框住整辆可见车辆的联合外接框。\n只输出严格 JSON：\n{\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"visible\":\"full|partial_top|partial_side|trailer_only\",\"is_truck\":true,\"identity_clues\":\"颜色、货厢、车头、文字等证据\",\"evidence\":\"画面位置与理由\",\"uncertain\":false}],\"scene_notes\":\"\",\"uncertain_reasons\":[]}",
+  "run": {
+    "model": "aibox",
+    "model_id": "glm-5.3-flash",
+    "ok": true,
+    "latency_s": 23.125,
+    "request_id": "399d672d723743ee9f9dbe1e6b5c2390",
+    "usage": {
+      "prompt_tokens": 1925,
+      "total_tokens": 2546,
+      "completion_tokens": 621,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "image_tokens": 1610
+      },
+      "reasoning_tokens": 137
+    },
+    "parsed": {
+      "counts": {
+        "total": 5,
+        "large": 5,
+        "medium": 0,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.49,
+            0.85,
+            0.62,
+            1.0
+          ],
+          "size": "large",
+          "visible": "partial_top",
+          "is_truck": true,
+          "identity_clues": "红色货车货厢顶部，画面底部被裁切",
+          "evidence": "画面最下方中央通道，仅见货厢顶部，属排队货车队列末端",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.46,
+            0.45,
+            0.56,
+            0.88
+          ],
+          "size": "large",
+          "visible": "full",
+          "is_truck": true,
+          "identity_clues": "白色驾驶室，货厢印有'东风商用车'字样",
+          "evidence": "中央通道中下部，整车可见，白色长货厢重卡",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.45,
+            0.3,
+            0.53,
+            0.47
+          ],
+          "size": "large",
+          "visible": "full",
+          "is_truck": true,
+          "identity_clues": "红色车头，白色/浅色货厢",
+          "evidence": "中央通道中部，位于白色东风货车上方",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.45,
+            0.2,
+            0.51,
+            0.32
+          ],
+          "size": "large",
+          "visible": "partial_side",
+          "is_truck": true,
+          "identity_clues": "红色车头/货厢，蓝色帆布覆盖",
+          "evidence": "中央通道中上部，部分被上方车辆和桁架遮挡",
+          "uncertain": true
+        },
+        {
+          "bbox": [
+            0.45,
+            0.11,
+            0.5,
+            0.22
+          ],
+          "size": "large",
+          "visible": "partial_top",
+          "is_truck": true,
+          "identity_clues": "红色货车，远处较小",
+          "evidence": "中央通道远端靠近3.2号门处，距离远且部分遮挡",
+          "uncertain": true
+        }
+      ],
+      "scene_notes": "展会撤展期，中央主通道排满等待装货的重型货车，两侧为展位拆卸中的桁架结构，可见Haier、CHANGHONG、INSPIRE GREATNESS等展位标识，通道有工作人员走行。",
+      "uncertain_reasons": [
+        "远处车辆受距离和桁架遮挡，车头货厢边界难以精确区分",
+        "队列中相邻车辆前后紧贴，存在车头与货厢归属拆分的不确定性"
+      ]
+    },
+    "raw_text": "{\"counts\":{\"total\":5,\"large\":5,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0.49,0.85,0.62,1.0],\"size\":\"large\",\"visible\":\"partial_top\",\"is_truck\":true,\"identity_clues\":\"红色货车货厢顶部，画面底部被裁切\",\"evidence\":\"画面最下方中央通道，仅见货厢顶部，属排队货车队列末端\",\"uncertain\":false},{\"bbox\":[0.46,0.45,0.56,0.88],\"size\":\"large\",\"visible\":\"full\",\"is_truck\":true,\"identity_clues\":\"白色驾驶室，货厢印有'东风商用车'字样\",\"evidence\":\"中央通道中下部，整车可见，白色长货厢重卡\",\"uncertain\":false},{\"bbox\":[0.45,0.3,0.53,0.47],\"size\":\"large\",\"visible\":\"full\",\"is_truck\":true,\"identity_clues\":\"红色车头，白色/浅色货厢\",\"evidence\":\"中央通道中部，位于白色东风货车上方\",\"uncertain\":false},{\"bbox\":[0.45,0.2,0.51,0.32],\"size\":\"large\",\"visible\":\"partial_side\",\"is_truck\":true,\"identity_clues\":\"红色车头/货厢，蓝色帆布覆盖\",\"evidence\":\"中央通道中上部，部分被上方车辆和桁架遮挡\",\"uncertain\":true},{\"bbox\":[0.45,0.11,0.5,0.22],\"size\":\"large\",\"visible\":\"partial_top\",\"is_truck\":true,\"identity_clues\":\"红色货车，远处较小\",\"evidence\":\"中央通道远端靠近3.2号门处，距离远且部分遮挡\",\"uncertain\":true}],\"scene_notes\":\"展会撤展期，中央主通道排满等待装货的重型货车，两侧为展位拆卸中的桁架结构，可见Haier、CHANGHONG、INSPIRE GREATNESS等展位标识，通道有工作人员走行。\",\"uncertain_reasons\":[\"远处车辆受距离和桁架遮挡，车头货厢边界难以精确区分\",\"队列中相邻车辆前后紧贴，存在车头与货厢归属拆分的不确定性\"]}"
+  }
+}

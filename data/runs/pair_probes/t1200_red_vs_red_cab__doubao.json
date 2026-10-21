@@ -1,0 +1,42 @@
+{
+  "case": "t1200_red_vs_red_cab",
+  "north_candidate": [
+    "north_1200",
+    "N7"
+  ],
+  "south_candidate": [
+    "south_1200",
+    "S5"
+  ],
+  "gold_answer": "no",
+  "image": "assets\\sheets\\pair_t1200_red_vs_red_cab.jpg",
+  "prompt": "左格是北机位候选，右格是南机位同一时刻候选；两机位存在重叠，但视角不同。\n问题只有一项：它们是否同一物理车辆？\n\n判定规则：\n1. 至少两个语义特征一致才可判 yes，例如货厢颜色和结构、车头颜色和形状、文字/标识、车顶特征。\n2. 同色不是充分证据；红车与另一辆红车可能不同。\n3. 车头与货厢属于同一车时不要拆开；但两格裁片可能只显示局部。\n4. 视角、尺度变化导致无法确认时必须 answer=uncertain，不能猜。\n\n只输出严格 JSON：\n{\"answer\":\"yes|no|uncertain\",\"shared_features\":[\"至少两个\"],\"conflicting_features\":[\"\"],\"reason\":\"\",\"review\":true}",
+  "run": {
+    "model": "doubao",
+    "model_id": "ep-20260828174616-dthpx",
+    "ok": true,
+    "latency_s": 8.484,
+    "request_id": "0217925758240819e13d3b3ea5f02ecc58377d19143e38d23d33f",
+    "usage": {
+      "completion_tokens": 783,
+      "prompt_tokens": 1474,
+      "total_tokens": 2257,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 676
+      }
+    },
+    "parsed": {
+      "answer": "uncertain",
+      "shared_features": [],
+      "conflicting_features": [
+        "左图显示货车货厢部分，右图显示货车车头部分；左图货厢顶部无蓝色物品，右图车头顶部有蓝色物品；左图货厢尾部有白色标识，右图车头无对应标识"
+      ],
+      "reason": "两机位分别拍摄到车辆的不同部位，仅存在红色这一单一特征，未达到至少两个一致的语义特征要求，且视角差异导致无法确认是否为同一物理车辆",
+      "review": true
+    },
+    "raw_text": "{\"answer\":\"uncertain\",\"shared_features\":[],\"conflicting_features\":[\"左图显示货车货厢部分，右图显示货车车头部分；左图货厢顶部无蓝色物品，右图车头顶部有蓝色物品；左图货厢尾部有白色标识，右图车头无对应标识\"],\"reason\":\"两机位分别拍摄到车辆的不同部位，仅存在红色这一单一特征，未达到至少两个一致的语义特征要求，且视角差异导致无法确认是否为同一物理车辆\",\"review\":true}"
+  }
+}

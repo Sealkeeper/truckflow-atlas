@@ -1,0 +1,263 @@
+{
+  "observation": "south_600",
+  "mode": "strip",
+  "images": [
+    "assets\\strips\\south_600_strip.jpg"
+  ],
+  "prompt": "这是一条同一机位在 t-10s、t、t+10s 的三个连续证据面板，从左到右排列。\n请分别清点每帧，并利用颜色、货厢、车头、文字、朝向等语义判断车辆是否跨帧为同一物理车。\n禁止用像素跟踪或根据上一帧数量填数；每帧计数必须有该帧可见证据。\n\n输出严格 JSON：\n{\"frames\":[{\"panel\":\"left|center|right\",\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"panel_index\":0,\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"identity_clues\":\"\",\"uncertain\":false}]}],\"links\":[{\"from\":\"left:0\",\"to\":\"center:1\",\"same_vehicle\":\"yes|no|uncertain\",\"evidence\":\"\"}],\"new_or_exited\":[{\"frame\":\"left|center|right\",\"vehicle\":\"panel_index\",\"event\":\"enter|exit|uncertain\",\"evidence\":\"\"}],\"review_reasons\":[]}\nbbox 是单个面板内的 0-1 坐标。",
+  "run": {
+    "model": "doubao",
+    "model_id": "ep-20260828174616-dthpx",
+    "ok": true,
+    "latency_s": 35.296,
+    "request_id": "0217925737229198e05db81a26ab4b44637eb56f02aba9427e338",
+    "usage": {
+      "completion_tokens": 3347,
+      "prompt_tokens": 1580,
+      "total_tokens": 4927,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1982
+      }
+    },
+    "parsed": {
+      "frames": [
+        {
+          "panel": "left",
+          "counts": {
+            "total": 4,
+            "large": 1,
+            "medium": 3,
+            "small": 0,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.14,
+                0.22,
+                0.15,
+                0.39
+              ],
+              "size": "medium",
+              "identity_clues": "红色卡车，车头朝向前方，位于通道左侧",
+              "uncertain": false
+            },
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.15,
+                0.26,
+                0.16,
+                0.37
+              ],
+              "size": "medium",
+              "identity_clues": "红色卡车，位于更远处通道",
+              "uncertain": false
+            },
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.15,
+                0.41,
+                0.16,
+                0.54
+              ],
+              "size": "medium",
+              "identity_clues": "红色卡车，位于白色货车后方",
+              "uncertain": false
+            },
+            {
+              "panel_index": 3,
+              "bbox": [
+                0.16,
+                0.56,
+                0.17,
+                0.89
+              ],
+              "size": "large",
+              "identity_clues": "白色大型货车，车头朝向前方，位于通道最前方",
+              "uncertain": false
+            }
+          ]
+        },
+        {
+          "panel": "center",
+          "counts": {
+            "total": 4,
+            "large": 1,
+            "medium": 3,
+            "small": 0,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.46,
+                0.21,
+                0.47,
+                0.38
+              ],
+              "size": "medium",
+              "identity_clues": "红色卡车，对应左panel的第0号红车",
+              "uncertain": false
+            },
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.47,
+                0.25,
+                0.48,
+                0.37
+              ],
+              "size": "medium",
+              "identity_clues": "红色卡车，对应左panel的第1号红车",
+              "uncertain": false
+            },
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.47,
+                0.4,
+                0.48,
+                0.53
+              ],
+              "size": "medium",
+              "identity_clues": "红色卡车，对应左panel的第2号红车",
+              "uncertain": false
+            },
+            {
+              "panel_index": 3,
+              "bbox": [
+                0.48,
+                0.55,
+                0.49,
+                0.88
+              ],
+              "size": "large",
+              "identity_clues": "白色大型货车，对应左panel的第3号白色货车，位置更靠前",
+              "uncertain": false
+            }
+          ]
+        },
+        {
+          "panel": "right",
+          "counts": {
+            "total": 4,
+            "large": 1,
+            "medium": 3,
+            "small": 0,
+            "unknown": 0
+          },
+          "vehicles": [
+            {
+              "panel_index": 0,
+              "bbox": [
+                0.81,
+                0.2,
+                0.82,
+                0.39
+              ],
+              "size": "medium",
+              "identity_clues": "红色卡车，对应center panel的第0号红车",
+              "uncertain": false
+            },
+            {
+              "panel_index": 1,
+              "bbox": [
+                0.82,
+                0.24,
+                0.83,
+                0.36
+              ],
+              "size": "medium",
+              "identity_clues": "红色卡车，对应center panel的第1号红车",
+              "uncertain": false
+            },
+            {
+              "panel_index": 2,
+              "bbox": [
+                0.82,
+                0.4,
+                0.83,
+                0.52
+              ],
+              "size": "medium",
+              "identity_clues": "红色卡车，对应center panel的第2号红车",
+              "uncertain": false
+            },
+            {
+              "panel_index": 3,
+              "bbox": [
+                0.83,
+                0.55,
+                0.84,
+                0.88
+              ],
+              "size": "large",
+              "identity_clues": "白色大型货车，对应center panel的第3号白色货车，位置更靠前",
+              "uncertain": false
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "from": "left:0",
+          "to": "center:0",
+          "same_vehicle": "yes",
+          "evidence": "红色卡车，t-10s到t0s位置向前移动，外观一致"
+        },
+        {
+          "from": "left:1",
+          "to": "center:1",
+          "same_vehicle": "yes",
+          "evidence": "红色卡车，位置连续变化，语义匹配"
+        },
+        {
+          "from": "left:2",
+          "to": "center:2",
+          "same_vehicle": "yes",
+          "evidence": "红色卡车，位于白色货车后方，位置连续"
+        },
+        {
+          "from": "left:3",
+          "to": "center:3",
+          "same_vehicle": "yes",
+          "evidence": "白色大型货车，车头朝向一致，位置连续移动"
+        },
+        {
+          "from": "center:0",
+          "to": "right:0",
+          "same_vehicle": "yes",
+          "evidence": "红色卡车，t0s到t+10s位置向前移动，外观一致"
+        },
+        {
+          "from": "center:1",
+          "to": "right:1",
+          "same_vehicle": "yes",
+          "evidence": "红色卡车，位置连续变化，语义匹配"
+        },
+        {
+          "from": "center:2",
+          "to": "right:2",
+          "same_vehicle": "yes",
+          "evidence": "红色卡车，位置连续，外观一致"
+        },
+        {
+          "from": "center:3",
+          "to": "right:3",
+          "same_vehicle": "yes",
+          "evidence": "白色大型货车，车头朝向一致，位置连续移动"
+        }
+      ],
+      "new_or_exited": [],
+      "review_reasons": []
+    },
+    "raw_text": "{\"frames\": [\n  {\n    \"panel\": \"left\",\n    \"counts\": {\"total\": 4, \"large\": 1, \"medium\": 3, \"small\": 0, \"unknown\": 0},\n    \"vehicles\": [\n      {\"panel_index\": 0, \"bbox\": [0.14, 0.22, 0.15, 0.39], \"size\": \"medium\", \"identity_clues\": \"红色卡车，车头朝向前方，位于通道左侧\", \"uncertain\": false},\n      {\"panel_index\": 1, \"bbox\": [0.15, 0.26, 0.16, 0.37], \"size\": \"medium\", \"identity_clues\": \"红色卡车，位于更远处通道\", \"uncertain\": false},\n      {\"panel_index\": 2, \"bbox\": [0.15, 0.41, 0.16, 0.54], \"size\": \"medium\", \"identity_clues\": \"红色卡车，位于白色货车后方\", \"uncertain\": false},\n      {\"panel_index\": 3, \"bbox\": [0.16, 0.56, 0.17, 0.89], \"size\": \"large\", \"identity_clues\": \"白色大型货车，车头朝向前方，位于通道最前方\", \"uncertain\": false}\n    ]\n  },\n  {\n    \"panel\": \"center\",\n    \"counts\": {\"total\": 4, \"large\": 1, \"medium\": 3, \"small\": 0, \"unknown\": 0},\n    \"vehicles\": [\n      {\"panel_index\": 0, \"bbox\": [0.46, 0.21, 0.47, 0.38], \"size\": \"medium\", \"identity_clues\": \"红色卡车，对应左panel的第0号红车\", \"uncertain\": false},\n      {\"panel_index\": 1, \"bbox\": [0.47, 0.25, 0.48, 0.37], \"size\": \"medium\", \"identity_clues\": \"红色卡车，对应左panel的第1号红车\", \"uncertain\": false},\n      {\"panel_index\": 2, \"bbox\": [0.47, 0.4, 0.48, 0.53], \"size\": \"medium\", \"identity_clues\": \"红色卡车，对应左panel的第2号红车\", \"uncertain\": false},\n      {\"panel_index\": 3, \"bbox\": [0.48, 0.55, 0.49, 0.88], \"size\": \"large\", \"identity_clues\": \"白色大型货车，对应左panel的第3号白色货车，位置更靠前\", \"uncertain\": false}\n    ]\n  },\n  {\n    \"panel\": \"right\",\n    \"counts\": {\"total\": 4, \"large\": 1, \"medium\": 3, \"small\": 0, \"unknown\": 0},\n    \"vehicles\": [\n      {\"panel_index\": 0, \"bbox\": [0.81, 0.2, 0.82, 0.39], \"size\": \"medium\", \"identity_clues\": \"红色卡车，对应center panel的第0号红车\", \"uncertain\": false},\n      {\"panel_index\": 1, \"bbox\": [0.82, 0.24, 0.83, 0.36], \"size\": \"medium\", \"identity_clues\": \"红色卡车，对应center panel的第1号红车\", \"uncertain\": false},\n      {\"panel_index\": 2, \"bbox\": [0.82, 0.4, 0.83, 0.52], \"size\": \"medium\", \"identity_clues\": \"红色卡车，对应center panel的第2号红车\", \"uncertain\": false},\n      {\"panel_index\": 3, \"bbox\": [0.83, 0.55, 0.84, 0.88], \"size\": \"large\", \"identity_clues\": \"白色大型货车，对应center panel的第3号白色货车，位置更靠前\", \"uncertain\": false}\n    ]\n  }\n],\n\"links\": [\n  {\"from\": \"left:0\", \"to\": \"center:0\", \"same_vehicle\": \"yes\", \"evidence\": \"红色卡车，t-10s到t0s位置向前移动，外观一致\"},\n  {\"from\": \"left:1\", \"to\": \"center:1\", \"same_vehicle\": \"yes\", \"evidence\": \"红色卡车，位置连续变化，语义匹配\"},\n  {\"from\": \"left:2\", \"to\": \"center:2\", \"same_vehicle\": \"yes\", \"evidence\": \"红色卡车，位于白色货车后方，位置连续\"},\n  {\"from\": \"left:3\", \"to\": \"center:3\", \"same_vehicle\": \"yes\", \"evidence\": \"白色大型货车，车头朝向一致，位置连续移动\"},\n  {\"from\": \"center:0\", \"to\": \"right:0\", \"same_vehicle\": \"yes\", \"evidence\": \"红色卡车，t0s到t+10s位置向前移动，外观一致\"},\n  {\"from\": \"center:1\", \"to\": \"right:1\", \"same_vehicle\": \"yes\", \"evidence\": \"红色卡车，位置连续变化，语义匹配\"},\n  {\"from\": \"center:2\", \"to\": \"right:2\", \"same_vehicle\": \"yes\", \"evidence\": \"红色卡车，位置连续，外观一致\"},\n  {\"from\": \"center:3\", \"to\": \"right:3\", \"same_vehicle\": \"yes\", \"evidence\": \"白色大型货车，车头朝向一致，位置连续移动\"}\n],\n\"new_or_exited\": [],\n\"review_reasons\": []\n}"
+  }
+}

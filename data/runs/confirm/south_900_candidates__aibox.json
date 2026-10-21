@@ -1,0 +1,94 @@
+{
+  "job": "south_900_candidates",
+  "image": "assets\\sheets\\south_900_candidates.jpg",
+  "prompt": "这是一个机位同一原始帧切出的候选联系表。每格 C1、C2... 是互相重叠的局部窗口，\n不是“一格必定一辆车”，同一格可能包含多辆，同一辆也可能出现在多格。\n\n请建立该帧的物理车辆集合：\n1. 每个物理车辆只列一次，并在 candidates 中列出显示它的所有窗口编号。\n2. 一个窗口可同时归入多个物理车辆；只有同一车头/货厢绝不能拆成两辆。\n3. 排除人物、叉车、轿车、展台、杂物；完全空窗也应 reject。\n4. 只按窗口中实际可见的车顶、货厢、车头、颜色、文字和比例判断，不猜画面外。\n5. 远处、遮挡、窗口边界或与你看到的其它窗口有歧义时 review=true。\n6. 车型按 large（重卡/半挂/长货厢）、medium（中卡）、small（轻卡/厢车）；不能确认写 unknown。\n\n只输出严格 JSON：\n{\"physical_vehicles\":[{\"group\":\"G1\",\"candidates\":[\"C1\",\"C3\"],\"size\":\"large|medium|small|unknown\",\"identity\":\"颜色/货厢/车头/文字等可复核证据\",\"reason\":\"为何这些窗口是同一物理车\",\"review\":false}],\"rejected_candidates\":[{\"candidate\":\"C5\",\"reason\":\"\"}],\"review_reasons\":[]}",
+  "run": {
+    "model": "aibox",
+    "model_id": "glm-5.3-flash",
+    "ok": true,
+    "latency_s": 39.427,
+    "request_id": "5884f45d56714d2fb658e84739e42b0d",
+    "usage": {
+      "prompt_tokens": 2589,
+      "total_tokens": 3770,
+      "completion_tokens": 1181,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "image_tokens": 2279
+      },
+      "reasoning_tokens": 670
+    },
+    "parsed": {
+      "physical_vehicles": [
+        {
+          "group": "G1",
+          "candidates": [
+            "S2",
+            "S3",
+            "S5"
+          ],
+          "size": "large",
+          "identity": "红色重卡，深红/褐色货厢顶，车头朝下方向，位于通道上侧",
+          "reason": "S2/S3/S5 为同一辆红色货车车头与深色货厢的相邻重叠裁切，货厢纹理与位置连续",
+          "review": true
+        },
+        {
+          "group": "G2",
+          "candidates": [
+            "S4",
+            "S6"
+          ],
+          "size": "large",
+          "identity": "红色重卡，货厢顶盖蓝色篷布，白色车头字样",
+          "reason": "S4 与 S6 均显示蓝色篷布货厢顶与红色车头，为同一车的重叠窗口",
+          "review": true
+        },
+        {
+          "group": "G3",
+          "candidates": [
+            "S7",
+            "S8"
+          ],
+          "size": "large",
+          "identity": "红色车头 + 白色长箱式货厢（半挂），旁边有穿黄衣人员",
+          "reason": "S7/S8 显示同一红色牵引车头与白色长货厢，两窗口重叠",
+          "review": false
+        },
+        {
+          "group": "G4",
+          "candidates": [
+            "S9",
+            "S10"
+          ],
+          "size": "large",
+          "identity": "白色东风商用车车头（挡风玻璃下有'东风商用车'文字），白色货厢",
+          "reason": "S9 全景显示白色车头+白色长货厢，S10 为同一白色东风车头近景",
+          "review": true
+        },
+        {
+          "group": "G5",
+          "candidates": [
+            "S11",
+            "S12"
+          ],
+          "size": "medium",
+          "identity": "白色卡车车头（东风）后挂红色集装箱式货厢，位于画面底部",
+          "reason": "S12 显示白色车头+红色货厢，S11 广角底部可见同一白色车与红色货厢组合",
+          "review": true
+        }
+      ],
+      "rejected_candidates": [
+        {
+          "candidate": "S1",
+          "reason": "GEO 窗口，仅时间戳与远处场景，无可辨识车辆"
+        }
+      ],
+      "review_reasons": [
+        "G1 与 G2 均为红色货车，货厢外观不同（深色顶 vs 蓝色篷布），暂判两辆，但存在为同一车不同裁切角度的歧义",
+        "S10 底部露出红色物体，可能与 G5 的红色货厢为同一车，G4/G5 是否拆分需复核",
+        "S11 为 GEO 广角，车辆很小，归入 G5 仅为位置对应，需复核"
+      ]
+    },
+    "raw_text": "{\"physical_vehicles\":[\n{\"group\":\"G1\",\"candidates\":[\"S2\",\"S3\",\"S5\"],\"size\":\"large\",\"identity\":\"红色重卡，深红/褐色货厢顶，车头朝下方向，位于通道上侧\",\"reason\":\"S2/S3/S5 为同一辆红色货车车头与深色货厢的相邻重叠裁切，货厢纹理与位置连续\",\"review\":true},\n{\"group\":\"G2\",\"candidates\":[\"S4\",\"S6\"],\"size\":\"large\",\"identity\":\"红色重卡，货厢顶盖蓝色篷布，白色车头字样\",\"reason\":\"S4 与 S6 均显示蓝色篷布货厢顶与红色车头，为同一车的重叠窗口\",\"review\":true},\n{\"group\":\"G3\",\"candidates\":[\"S7\",\"S8\"],\"size\":\"large\",\"identity\":\"红色车头 + 白色长箱式货厢（半挂），旁边有穿黄衣人员\",\"reason\":\"S7/S8 显示同一红色牵引车头与白色长货厢，两窗口重叠\",\"review\":false},\n{\"group\":\"G4\",\"candidates\":[\"S9\",\"S10\"],\"size\":\"large\",\"identity\":\"白色东风商用车车头（挡风玻璃下有'东风商用车'文字），白色货厢\",\"reason\":\"S9 全景显示白色车头+白色长货厢，S10 为同一白色东风车头近景\",\"review\":true},\n{\"group\":\"G5\",\"candidates\":[\"S11\",\"S12\"],\"size\":\"medium\",\"identity\":\"白色卡车车头（东风）后挂红色集装箱式货厢，位于画面底部\",\"reason\":\"S12 显示白色车头+红色货厢，S11 广角底部可见同一白色车与红色货厢组合\",\"review\":true}\n],\n\"rejected_candidates\":[\n{\"candidate\":\"S1\",\"reason\":\"GEO 窗口，仅时间戳与远处场景，无可辨识车辆\"}\n],\n\"review_reasons\":[\n\"G1 与 G2 均为红色货车，货厢外观不同（深色顶 vs 蓝色篷布），暂判两辆，但存在为同一车不同裁切角度的歧义\",\n\"S10 底部露出红色物体，可能与 G5 的红色货厢为同一车，G4/G5 是否拆分需复核\",\n\"S11 为 GEO 广角，车辆很小，归入 G5 仅为位置对应，需复核\"\n]}"
+  }
+}

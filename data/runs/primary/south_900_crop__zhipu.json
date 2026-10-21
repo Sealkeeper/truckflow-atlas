@@ -1,0 +1,96 @@
+{
+  "observation": "south_900",
+  "mode": "crop",
+  "images": [
+    "assets\\crops\\south_t900_lane.jpg"
+  ],
+  "prompt": "这是同一机位的过道区域放大裁剪，四周展台已被裁掉。请只依据图中可见内容清点货车。\n\n重点检查远处小型、被柱子/车辆遮挡、只露出一部分的货车。计数单位必须是物理车辆：\n同一辆车的车头、底盘和货厢只算一辆；两个候选若是同一车的车头与货厢，必须合并。\n独立挂车/货厢算一辆。小汽车、面包车、叉车、手推车、人物不计。车型不确定写 unknown。\nbbox 是相对本裁剪图的 0-1 坐标。只输出严格 JSON，schema 与整帧清点相同：\n{\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"visible\":\"full|partial_top|partial_side|trailer_only\",\"is_truck\":true,\"identity_clues\":\"\",\"evidence\":\"\",\"uncertain\":false}],\"scene_notes\":\"\",\"uncertain_reasons\":[]}",
+  "run": {
+    "model": "zhipu",
+    "model_id": "glm-4.5v",
+    "ok": true,
+    "latency_s": 126.571,
+    "request_id": "2026102117102935878071e0374bb0",
+    "usage": {
+      "completion_tokens": 2421,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1944
+      },
+      "prompt_tokens": 3225,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 5646
+    },
+    "parsed": {
+      "counts": {
+        "total": 4,
+        "large": 4,
+        "medium": 0,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.412,
+            0.194,
+            0.497,
+            0.359
+          ],
+          "size": "large",
+          "visible": "full",
+          "is_truck": true,
+          "identity_clues": "红色重型卡车，车头朝向镜头",
+          "evidence": "位于图像最远处（顶部中央），红色驾驶室及底盘清晰可见，无明显遮挡",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.502,
+            0.289,
+            0.617,
+            0.476
+          ],
+          "size": "large",
+          "visible": "full",
+          "is_truck": true,
+          "identity_clues": "红色车头货车，深色货厢",
+          "evidence": "位于中间偏上位置，红色驾驶室配深色（黑色或深灰）货厢，与前后车辆有明显间距",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.52,
+            0.473,
+            0.691,
+            0.868
+          ],
+          "size": "large",
+          "visible": "partial_side",
+          "is_truck": true,
+          "identity_clues": "白色'东风商用车'牵引车头，红色半挂厢",
+          "evidence": "近景处白色Volvo/东风风格驾驶室，挡风玻璃上有'东风商用车'字样，后接红色集装箱式挂车",
+          "uncertain": false
+        },
+        {
+          "bbox": [
+            0.494,
+            0.124,
+            0.567,
+            0.278
+          ],
+          "size": "large",
+          "visible": "partial_top",
+          "is_truck": true,
+          "identity_clues": "暗红色/棕色货车，位于最远红色车后方",
+          "evidence": "在最远红色货车（第一辆）的后方（图像上方）可见另一辆暗色调货车，仅露出部分车顶和货厢前部，被前方车辆部分遮挡",
+          "uncertain": false
+        }
+      ],
+      "scene_notes": "室内高架库房/物流中心过道，两侧为高层货架（左侧可见'GREATNESS'等字样，右侧可见'Haier'、'BOUQUET'等标识）。过道内纵向停放4辆货车，地面有包装废弃物，两名工人（分别戴白/红安全帽）在近景处行走。",
+      "uncertain_reasons": []
+    },
+    "raw_text": "{\"counts\":{\"total\":4,\"large\":4,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0.412,0.194,0.497,0.359],\"size\":\"large\",\"visible\":\"full\",\"is_truck\":true,\"identity_clues\":\"红色重型卡车，车头朝向镜头\",\"evidence\":\"位于图像最远处（顶部中央），红色驾驶室及底盘清晰可见，无明显遮挡\",\"uncertain\":false},{\"bbox\":[0.502,0.289,0.617,0.476],\"size\":\"large\",\"visible\":\"full\",\"is_truck\":true,\"identity_clues\":\"红色车头货车，深色货厢\",\"evidence\":\"位于中间偏上位置，红色驾驶室配深色（黑色或深灰）货厢，与前后车辆有明显间距\",\"uncertain\":false},{\"bbox\":[0.520,0.473,0.691,0.868],\"size\":\"large\",\"visible\":\"partial_side\",\"is_truck\":true,\"identity_clues\":\"白色'东风商用车'牵引车头，红色半挂厢\",\"evidence\":\"近景处白色Volvo/东风风格驾驶室，挡风玻璃上有'东风商用车'字样，后接红色集装箱式挂车\",\"uncertain\":false},{\"bbox\":[0.494,0.124,0.567,0.278],\"size\":\"large\",\"visible\":\"partial_top\",\"is_truck\":true,\"identity_clues\":\"暗红色/棕色货车，位于最远红色车后方\",\"evidence\":\"在最远红色货车（第一辆）的后方（图像上方）可见另一辆暗色调货车，仅露出部分车顶和货厢前部，被前方车辆部分遮挡\",\"uncertain\":false}],\"scene_notes\":\"室内高架库房/物流中心过道，两侧为高层货架（左侧可见'GREATNESS'等字样，右侧可见'Haier'、'BOUQUET'等标识）。过道内纵向停放4辆货车，地面有包装废弃物，两名工人（分别戴白/红安全帽）在近景处行走。\",\"uncertain_reasons\":[]}"
+  }
+}
