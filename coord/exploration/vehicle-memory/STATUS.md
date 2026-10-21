@@ -2,6 +2,7 @@
 
 - 分支：`research/vehicle-passport`
 - 冻结调用提交：`0341a8c92acc3bb745a0c25af9095a5672efea48`
+- 证据发布提交：`e809725`；PR：https://github.com/Sealkeeper/truckflow-atlas/pull/13
 - 当前判定：证据/复核/回归 `conditional go`；自动计数、自动跨机位去重、把记忆当首次漏计修复 `no-go`。
 - 双尺度：20/20 请求成功，14/20 exact，MAE 0.35；修复 1、回归 3；当前形式淘汰。
 - 组件装配：8 次冻结但未启动；按中枢要求不追加付费调用。

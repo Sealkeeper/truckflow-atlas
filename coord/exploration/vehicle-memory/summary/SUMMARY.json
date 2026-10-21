@@ -3,6 +3,8 @@
   "updated_at": "2026-10-21",
   "branch": "research/vehicle-passport",
   "frozen_call_commit": "0341a8c92acc3bb745a0c25af9095a5672efea48",
+  "evidence_publish_commit": "e809725",
+  "pull_request": "https://github.com/Sealkeeper/truckflow-atlas/pull/13",
   "baseline": {
     "count_exact": 16,
     "N": 20,

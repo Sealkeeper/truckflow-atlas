@@ -2,9 +2,9 @@
 
 分支：`research/vehicle-passport`
 
-提交：创建 PR 后回填。
+提交：`e809725`；后续 PR 链接回填提交另行记录。
 
-PR：创建后回填；保持打开，不合并。
+PR：#13，https://github.com/Sealkeeper/truckflow-atlas/pull/13 ；保持打开，不合并。
 
 状态：身份分层、记忆缓存和双尺度无记忆消融已完成；组件装配冻结但未运行。结论仍为“复核/证据/回归有条件 go，自动计数和自动跨机位去重 no-go”。
 

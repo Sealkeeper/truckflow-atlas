@@ -1,6 +1,6 @@
 # 车辆身份记忆路线：最小机制与实测边界
 
-更新时间：2026-10-21（北京时间）。分支：`research/vehicle-passport`，冻结调用提交：`0341a8c92acc3bb745a0c25af9095a5672efea48`。
+更新时间：2026-10-21（北京时间）。分支：`research/vehicle-passport`，冻结调用提交：`0341a8c92acc3bb745a0c25af9095a5672efea48`；证据发布提交：`e809725`；PR：https://github.com/Sealkeeper/truckflow-atlas/pull/13 。
 
 ## 当前结论
 
