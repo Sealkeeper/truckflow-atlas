@@ -2,6 +2,8 @@
 
 分支：`research/temporal-reid`
 
+实验提交：`8d0c1c6`；PR：https://github.com/Sealkeeper/truckflow-atlas/pull/5（保持打开，不合并）。
+
 状态：实验完成，路线结论为“自动放行 no-go；复核辅助条件性 go”。
 
 ## 已完成
