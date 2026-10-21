@@ -1,0 +1,80 @@
+{
+  "checked_date": "2026-10-21",
+  "primary_sources_only": true,
+  "sources": [
+    {
+      "id": "qwen-training",
+      "url": "https://github.com/QwenLM/Qwen3-VL/blob/main/qwen-vl-finetune/README.md",
+      "verified": "Official SFT framework, LoRA parameters, image/video conversations, JSON or JSONL, grounding example, trainable LLM/vision/projector switches.",
+      "limit": "No project accuracy or exact 4B GPU minimum is established by this documentation."
+    },
+    {
+      "id": "qwen-grounding",
+      "url": "https://github.com/QwenLM/Qwen3-VL/blob/main/evaluation/ODinW-13/run_odinw.py",
+      "verified": "Official evaluation code maps bbox_2d coordinates from 0..1000 to source image pixels.",
+      "limit": "Grounding support does not establish this project's vehicle recall."
+    },
+    {
+      "id": "qwen-training-implementation",
+      "url": "https://github.com/QwenLM/Qwen3-VL/blob/main/qwen-vl-finetune/qwenvl/train/train_qwen.py",
+      "verified": "Read official source: Qwen3VLForConditionalGeneration branch and PEFT LoraConfig/get_peft_model are implemented. No code was executed."
+    },
+    {
+      "id": "qwen-4b",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct",
+      "revision_checked": "ebb281ec70b05090aa6165b016eac8ec08e71b17",
+      "license_metadata": "apache-2.0"
+    },
+    {
+      "id": "qwen-2b",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-2B-Instruct",
+      "revision_checked": "89644892e4d85e24eaac8bacfd4f463576704203",
+      "license_metadata": "apache-2.0"
+    },
+    {
+      "id": "qwen-8b-teacher",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct",
+      "revision_checked": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+      "license_metadata": "apache-2.0"
+    },
+    {
+      "id": "qwen-code-license",
+      "url": "https://github.com/QwenLM/Qwen3-VL/blob/main/LICENSE",
+      "verified": "Apache-2.0 repository license; retain attribution/license obligations. Dataset and external API output rights are separate."
+    },
+    {
+      "id": "ark-overview",
+      "url": "https://console.volcengine.com/ark/region:cn-beijing/docs/fine-tuning-overview",
+      "document_update": "2026-10-17",
+      "verified": "seed-2-0-mini/lite 260428 are listed for image SFT and LoRA, conditional on console availability. Training and tuned inference are billed; listed LoRA token inference is 2x base-model pricing.",
+      "limit": "This project's endpoint-to-base mapping, tenant training permission, price quote and data-upload consent are unverified."
+    },
+    {
+      "id": "ark-format",
+      "url": "https://docs.volcengine.com/docs/ark/multimodal-fine-tuning-data-format?lang=zh",
+      "verified": "Official indexed examples show JSONL messages with user text/image_url content and assistant text; image references include base64 data URLs and packaged local file forms.",
+      "limit": "Dynamic page did not fully render through the reader. No Ark exporter or upload was performed; revalidate the selected model's complete format in console before use."
+    },
+    {
+      "id": "internvl-training-reference",
+      "url": "https://internvl.readthedocs.io/en/latest/internvl3.0/finetune.html",
+      "verified": "Official custom-data training guide includes full SFT and LoRA; 2x32/40GB LoRA hardware is an example configuration, not a universal minimum."
+    },
+    {
+      "id": "internvl-grounding-format",
+      "url": "https://internvl.readthedocs.io/en/latest/get_started/chat_data_format.html",
+      "verified": "JSONL image/conversations format; grounding uses integer 0..1000 coordinates and ref/box tags."
+    },
+    {
+      "id": "internvl-license-hold",
+      "url": "https://huggingface.co/OpenGVLab/InternVL3-2B",
+      "verified": "License metadata says Apache-2.0 while the model-card prose says MIT for the project and Apache-2.0 for Qwen2.5. LICENSE file URL returned 404.",
+      "decision": "Not selected for the first pilot until exact checkpoint/component license obligations are resolved. InternVL3.5 tuning is not asserted from 3.0 documents."
+    }
+  ],
+  "model_metadata_method": "Read-only public Hugging Face /api/models/{id}; returned model revision/license metadata only, no tensor files downloaded.",
+  "paid_inference_calls": 0,
+  "training_jobs": 0,
+  "packages_installed": 0,
+  "weights_downloaded": 0
+}

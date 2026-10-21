@@ -1,0 +1,28 @@
+{
+  "route": "model-adaptation-v1",
+  "status": "data_preparation_go_training_not_authorized_or_ready",
+  "project_accuracy": null,
+  "accuracy_status": "unmeasured",
+  "inference_latency": null,
+  "training_latency": null,
+  "new_paid_inference_calls": 0,
+  "weights_downloaded": 0,
+  "packages_installed": 0,
+  "training_jobs": 0,
+  "real_training_records_exported": 0,
+  "prototype": "offline provenance/split/label gate and Qwen-style JSONL exporter",
+  "tests": {"synthetic_metadata_tests": 13, "passed": 13, "real_project_labels_used_as_training": false},
+  "candidates": [
+    {"id": "A", "model": "Qwen3-VL-4B-Instruct", "method": "scene grounding and composition LoRA/SFT", "official_training_support_verified": true},
+    {"id": "B", "teacher": "Qwen3-VL-8B-Instruct", "student": "Qwen3-VL-2B-Instruct", "method": "offline human-corrected response distillation through SFT", "official_sft_support_verified": true, "distillation_pipeline_run": false},
+    {"id": "C", "model": "doubao-seed-2-0-mini/lite-260428", "method": "managed visual SFT/LoRA", "official_product_support_verified": true, "tenant_training_access_verified": false}
+  ],
+  "blocking_decisions": [
+    "New training time periods and independent held-out capture permission",
+    "Second independent human reviewer or adjudicator for new object/type/identity labels",
+    "Training environment choice and explicit GPU-hour or money cap",
+    "For hosted training: frame upload, region/retention consent and tenant training/deployment permissions"
+  ],
+  "existing_review_policy": "20 current development frames remain regression; 9 red-box screenshots remain evaluation/explanation only, never model training inputs.",
+  "next_safe_step": "Freeze 20 new synchronized timestamps (40 clean original frames) for an annotation/schema pilot; not enough to claim training efficacy. No training or paid inference without further authorization."
+}

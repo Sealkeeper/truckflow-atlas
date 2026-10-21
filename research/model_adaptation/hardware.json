@@ -1,0 +1,19 @@
+{
+  "checked_date": "2026-10-21",
+  "method": "Read-only Win32_ComputerSystem, Win32_Processor, Win32_VideoController, nvidia-smi availability and D: drive metadata; no process or directory inventory",
+  "cpu": "Intel Core Ultra 5 125H",
+  "cores": 14,
+  "logical_processors": 18,
+  "physical_ram_bytes": 33945935872,
+  "physical_ram_gib_approx": 31.614,
+  "display_adapter": "Intel Arc Graphics",
+  "win32_adapter_ram_bytes_reported": 2147479552,
+  "adapter_ram_caveat": "This Win32 field is not an audited dedicated VRAM budget for the integrated GPU; shared system memory must not be treated as CUDA VRAM.",
+  "nvidia_smi_available": false,
+  "nvidia_cuda_gpu_observed": false,
+  "drive_d_free_bytes_at_check": 257165533184,
+  "standard_cuda_finetuning_ready": false,
+  "software_installed": false,
+  "weights_downloaded": false,
+  "training_started": false
+}
