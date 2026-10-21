@@ -1,0 +1,198 @@
+{
+  "window": "south_boundary_2580_2600",
+  "model": "ep-20260828174616-dthpx",
+  "image_count": 3,
+  "attempts": 1,
+  "ok": true,
+  "status": 200,
+  "raw_text": "{\"snapshots\":[{\"time_s\":2580.0,\"declared_total\":3,\"visible_vehicles\":[{\"id\":\"v1\",\"bbox\":[0.39,0.22,0.45,0.40],\"appearance\":\"White cab with '东风商用车' text on front, front-facing\",\"current_evidence\":\"Clearly visible in upper central lane, frontmost among the three trucks\"},{\"id\":\"v2\",\"bbox\":[0.45,0.20,0.49,0.32],\"appearance\":\"Red cab, front-facing, located behind the white truck\",\"current_evidence\":\"Visible behind the white truck in central lane\"},{\"id\":\"v3\",\"bbox\":[0.46,0.36,0.55,0.68],\"appearance\":\"Red cab with front logo, front-facing, in lower central lane\",\"current_evidence\":\"Clearly visible in lower central lane, front of the red cargo body\"}],\"events\":[{\"id\":\"v1\",\"type\":\"still_visible\",\"evidence\":\"Present in this frame, matches corrected identity from initial seed\"},{\"id\":\"v2\",\"type\":\"still_visible\",\"evidence\":\"Present in this frame, matches corrected identity from initial seed\"},{\"id\":\"v3\",\"type\":\"still_visible\",\"evidence\":\"Present in this frame, matches corrected identity from initial seed\"}],\"uncertainties\":[]},{\"time_s\":2590.0,\"declared_total\":3,\"visible_vehicles\":[{\"id\":\"v1\",\"bbox\":[0.39,0.22,0.45,0.40],\"appearance\":\"White cab with '东风商用车' text on front, front-facing\",\"current_evidence\":\"Still visible in upper central lane, unchanged position\"},{\"id\":\"v2\",\"bbox\":[0.45,0.20,0.49,0.32],\"appearance\":\"Red cab, front-facing, located behind the white truck\",\"current_evidence\":\"Still visible behind the white truck in central lane\"},{\"id\":\"v3\",\"bbox\":[0.46,0.36,0.55,0.68],\"appearance\":\"Red cab with front logo, front-facing, in lower central lane\",\"current_evidence\":\"Still visible in lower central lane, unchanged position\"}],\"events\":[{\"id\":\"v1\",\"type\":\"still_visible\",\"evidence\":\"Present in this frame, no movement or occlusion\"},{\"id\":\"v2\",\"type\":\"still_visible\",\"evidence\":\"Present in this frame, no movement or occlusion\"},{\"id\":\"v3\",\"type\":\"still_visible\",\"evidence\":\"Present in this frame, no movement or occlusion\"}],\"uncertainties\":[]},{\"time_s\":2600.0,\"declared_total\":3,\"visible_vehicles\":[{\"id\":\"v1\",\"bbox\":[0.39,0.22,0.45,0.40],\"appearance\":\"White cab with '东风商用车' text on front, front-facing\",\"current_evidence\":\"Visible in upper central lane, same as previous frames\"},{\"id\":\"v2\",\"bbox\":[0.45,0.20,0.49,0.32],\"appearance\":\"Red cab, front-facing, located behind the white truck\",\"current_evidence\":\"Visible behind the white truck in central lane, unchanged\"},{\"id\":\"v3\",\"bbox\":[0.46,0.36,0.55,0.68],\"appearance\":\"Red cab with front logo, front-facing, in lower central lane\",\"current_evidence\":\"Visible in lower central lane, unchanged position\"}],\"events\":[{\"id\":\"v1\",\"type\":\"still_visible\",\"evidence\":\"Present in this frame, no changes from prior\"},{\"id\":\"v2\",\"type\":\"still_visible\",\"evidence\":\"Present in this frame, no changes from prior\"},{\"id\":\"v3\",\"type\":\"still_visible\",\"evidence\":\"Present in this frame, no changes from prior\"}],\"uncertainties\":[]}],\"window_notes\":\"Indoor exhibition hall, three stationary trucks in central lane; no trucks entered/exited the frame across the three timestamps, all visible vehicles are correctly identified as trucks, excluding people and other non-target objects.\"}",
+  "usage": {
+    "completion_tokens": 3402,
+    "prompt_tokens": 4490,
+    "total_tokens": 7892,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2488
+    }
+  },
+  "finish_reason": "stop",
+  "parsed": {
+    "snapshots": [
+      {
+        "time_s": 2580.0,
+        "declared_total": 3,
+        "visible_vehicles": [
+          {
+            "id": "v1",
+            "bbox": [
+              0.39,
+              0.22,
+              0.45,
+              0.4
+            ],
+            "appearance": "White cab with '东风商用车' text on front, front-facing",
+            "current_evidence": "Clearly visible in upper central lane, frontmost among the three trucks"
+          },
+          {
+            "id": "v2",
+            "bbox": [
+              0.45,
+              0.2,
+              0.49,
+              0.32
+            ],
+            "appearance": "Red cab, front-facing, located behind the white truck",
+            "current_evidence": "Visible behind the white truck in central lane"
+          },
+          {
+            "id": "v3",
+            "bbox": [
+              0.46,
+              0.36,
+              0.55,
+              0.68
+            ],
+            "appearance": "Red cab with front logo, front-facing, in lower central lane",
+            "current_evidence": "Clearly visible in lower central lane, front of the red cargo body"
+          }
+        ],
+        "events": [
+          {
+            "id": "v1",
+            "type": "still_visible",
+            "evidence": "Present in this frame, matches corrected identity from initial seed"
+          },
+          {
+            "id": "v2",
+            "type": "still_visible",
+            "evidence": "Present in this frame, matches corrected identity from initial seed"
+          },
+          {
+            "id": "v3",
+            "type": "still_visible",
+            "evidence": "Present in this frame, matches corrected identity from initial seed"
+          }
+        ],
+        "uncertainties": []
+      },
+      {
+        "time_s": 2590.0,
+        "declared_total": 3,
+        "visible_vehicles": [
+          {
+            "id": "v1",
+            "bbox": [
+              0.39,
+              0.22,
+              0.45,
+              0.4
+            ],
+            "appearance": "White cab with '东风商用车' text on front, front-facing",
+            "current_evidence": "Still visible in upper central lane, unchanged position"
+          },
+          {
+            "id": "v2",
+            "bbox": [
+              0.45,
+              0.2,
+              0.49,
+              0.32
+            ],
+            "appearance": "Red cab, front-facing, located behind the white truck",
+            "current_evidence": "Still visible behind the white truck in central lane"
+          },
+          {
+            "id": "v3",
+            "bbox": [
+              0.46,
+              0.36,
+              0.55,
+              0.68
+            ],
+            "appearance": "Red cab with front logo, front-facing, in lower central lane",
+            "current_evidence": "Still visible in lower central lane, unchanged position"
+          }
+        ],
+        "events": [
+          {
+            "id": "v1",
+            "type": "still_visible",
+            "evidence": "Present in this frame, no movement or occlusion"
+          },
+          {
+            "id": "v2",
+            "type": "still_visible",
+            "evidence": "Present in this frame, no movement or occlusion"
+          },
+          {
+            "id": "v3",
+            "type": "still_visible",
+            "evidence": "Present in this frame, no movement or occlusion"
+          }
+        ],
+        "uncertainties": []
+      },
+      {
+        "time_s": 2600.0,
+        "declared_total": 3,
+        "visible_vehicles": [
+          {
+            "id": "v1",
+            "bbox": [
+              0.39,
+              0.22,
+              0.45,
+              0.4
+            ],
+            "appearance": "White cab with '东风商用车' text on front, front-facing",
+            "current_evidence": "Visible in upper central lane, same as previous frames"
+          },
+          {
+            "id": "v2",
+            "bbox": [
+              0.45,
+              0.2,
+              0.49,
+              0.32
+            ],
+            "appearance": "Red cab, front-facing, located behind the white truck",
+            "current_evidence": "Visible behind the white truck in central lane, unchanged"
+          },
+          {
+            "id": "v3",
+            "bbox": [
+              0.46,
+              0.36,
+              0.55,
+              0.68
+            ],
+            "appearance": "Red cab with front logo, front-facing, in lower central lane",
+            "current_evidence": "Visible in lower central lane, unchanged position"
+          }
+        ],
+        "events": [
+          {
+            "id": "v1",
+            "type": "still_visible",
+            "evidence": "Present in this frame, no changes from prior"
+          },
+          {
+            "id": "v2",
+            "type": "still_visible",
+            "evidence": "Present in this frame, no changes from prior"
+          },
+          {
+            "id": "v3",
+            "type": "still_visible",
+            "evidence": "Present in this frame, no changes from prior"
+          }
+        ],
+        "uncertainties": []
+      }
+    ],
+    "window_notes": "Indoor exhibition hall, three stationary trucks in central lane; no trucks entered/exited the frame across the three timestamps, all visible vehicles are correctly identified as trucks, excluding people and other non-target objects."
+  },
+  "latency_s": 94.273
+}

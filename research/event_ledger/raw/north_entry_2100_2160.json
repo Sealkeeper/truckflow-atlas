@@ -1,0 +1,166 @@
+{
+  "window": "north_entry_2100_2160",
+  "model": "ep-20260828174616-dthpx",
+  "image_count": 3,
+  "attempts": 1,
+  "ok": true,
+  "status": 200,
+  "raw_text": "{\"snapshots\":[{\"time_s\":2100.0,\"declared_total\":2,\"visible_vehicles\":[{\"id\":\"v1\",\"bbox\":[0.43,0.26,0.50,0.45],\"appearance\":\"Red cargo truck, rear orientation, metal grid rear\",\"current_evidence\":\"Visible in middle aisle, rear facing camera, no occlusion\"},{\"id\":\"v2\",\"bbox\":[0.355,0.62,0.485,0.998],\"appearance\":\"White corrugated long box trailer, front orientation, front panel with text\",\"current_evidence\":\"Visible at bottom center, front facing camera, fully visible\"}],\"events\":[{\"id\":\"v1\",\"type\":\"still_visible\",\"evidence\":\"Present in this frame, matches initial seed identity\"},{\"id\":\"v2\",\"type\":\"still_visible\",\"evidence\":\"Present in this frame, matches initial seed identity\"}],\"uncertainties\":[]},{\"time_s\":2130.0,\"declared_total\":2,\"visible_vehicles\":[{\"id\":\"v1\",\"bbox\":[0.43,0.26,0.50,0.45],\"appearance\":\"Red cargo truck, rear orientation, metal grid rear\",\"current_evidence\":\"Still present in middle aisle, rear facing, no change\"},{\"id\":\"v2\",\"bbox\":[0.355,0.62,0.485,0.998],\"appearance\":\"White corrugated long box trailer, front orientation, front panel with text\",\"current_evidence\":\"Still present at bottom center, fully visible\"}],\"events\":[{\"id\":\"v1\",\"type\":\"still_visible\",\"evidence\":\"Remains in frame from previous snapshot\"},{\"id\":\"v2\",\"type\":\"still_visible\",\"evidence\":\"Remains in frame from previous snapshot\"}],\"uncertainties\":[]},{\"time_s\":2160.0,\"declared_total\":3,\"visible_vehicles\":[{\"id\":\"v1\",\"bbox\":[0.43,0.26,0.50,0.45],\"appearance\":\"Red cargo truck, rear orientation, metal grid rear\",\"current_evidence\":\"Still present in middle aisle, rear facing\"},{\"id\":\"v2\",\"bbox\":[0.355,0.62,0.485,0.998],\"appearance\":\"White corrugated long box trailer, front orientation, front panel with text\",\"current_evidence\":\"Still present at bottom center, fully visible\"},{\"id\":\"v3\",\"bbox\":[0.50,0.58,0.64,0.99],\"appearance\":\"Brown roofed cargo truck, rear orientation, rear panel with text\",\"current_evidence\":\"Visible at bottom right, rear facing camera, fully visible\"}],\"events\":[{\"id\":\"v1\",\"type\":\"still_visible\",\"evidence\":\"Present in this frame, unchanged from prior\"},{\"id\":\"v2\",\"type\":\"still_visible\",\"evidence\":\"Present in this frame, unchanged from prior\"},{\"id\":\"v3\",\"type\":\"entered\",\"evidence\":\"Newly appeared in this frame, not present in 2130 snapshot\"}],\"uncertainties\":[]}],\"window_notes\":\"Exhibition hall interior aisle, trucks are stationary or moving slowly, no occlusions affecting visible trucks; forklift and personnel are not counted as vehicles.\"}",
+  "usage": {
+    "completion_tokens": 3768,
+    "prompt_tokens": 4439,
+    "total_tokens": 8207,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3034
+    }
+  },
+  "finish_reason": "stop",
+  "parsed": {
+    "snapshots": [
+      {
+        "time_s": 2100.0,
+        "declared_total": 2,
+        "visible_vehicles": [
+          {
+            "id": "v1",
+            "bbox": [
+              0.43,
+              0.26,
+              0.5,
+              0.45
+            ],
+            "appearance": "Red cargo truck, rear orientation, metal grid rear",
+            "current_evidence": "Visible in middle aisle, rear facing camera, no occlusion"
+          },
+          {
+            "id": "v2",
+            "bbox": [
+              0.355,
+              0.62,
+              0.485,
+              0.998
+            ],
+            "appearance": "White corrugated long box trailer, front orientation, front panel with text",
+            "current_evidence": "Visible at bottom center, front facing camera, fully visible"
+          }
+        ],
+        "events": [
+          {
+            "id": "v1",
+            "type": "still_visible",
+            "evidence": "Present in this frame, matches initial seed identity"
+          },
+          {
+            "id": "v2",
+            "type": "still_visible",
+            "evidence": "Present in this frame, matches initial seed identity"
+          }
+        ],
+        "uncertainties": []
+      },
+      {
+        "time_s": 2130.0,
+        "declared_total": 2,
+        "visible_vehicles": [
+          {
+            "id": "v1",
+            "bbox": [
+              0.43,
+              0.26,
+              0.5,
+              0.45
+            ],
+            "appearance": "Red cargo truck, rear orientation, metal grid rear",
+            "current_evidence": "Still present in middle aisle, rear facing, no change"
+          },
+          {
+            "id": "v2",
+            "bbox": [
+              0.355,
+              0.62,
+              0.485,
+              0.998
+            ],
+            "appearance": "White corrugated long box trailer, front orientation, front panel with text",
+            "current_evidence": "Still present at bottom center, fully visible"
+          }
+        ],
+        "events": [
+          {
+            "id": "v1",
+            "type": "still_visible",
+            "evidence": "Remains in frame from previous snapshot"
+          },
+          {
+            "id": "v2",
+            "type": "still_visible",
+            "evidence": "Remains in frame from previous snapshot"
+          }
+        ],
+        "uncertainties": []
+      },
+      {
+        "time_s": 2160.0,
+        "declared_total": 3,
+        "visible_vehicles": [
+          {
+            "id": "v1",
+            "bbox": [
+              0.43,
+              0.26,
+              0.5,
+              0.45
+            ],
+            "appearance": "Red cargo truck, rear orientation, metal grid rear",
+            "current_evidence": "Still present in middle aisle, rear facing"
+          },
+          {
+            "id": "v2",
+            "bbox": [
+              0.355,
+              0.62,
+              0.485,
+              0.998
+            ],
+            "appearance": "White corrugated long box trailer, front orientation, front panel with text",
+            "current_evidence": "Still present at bottom center, fully visible"
+          },
+          {
+            "id": "v3",
+            "bbox": [
+              0.5,
+              0.58,
+              0.64,
+              0.99
+            ],
+            "appearance": "Brown roofed cargo truck, rear orientation, rear panel with text",
+            "current_evidence": "Visible at bottom right, rear facing camera, fully visible"
+          }
+        ],
+        "events": [
+          {
+            "id": "v1",
+            "type": "still_visible",
+            "evidence": "Present in this frame, unchanged from prior"
+          },
+          {
+            "id": "v2",
+            "type": "still_visible",
+            "evidence": "Present in this frame, unchanged from prior"
+          },
+          {
+            "id": "v3",
+            "type": "entered",
+            "evidence": "Newly appeared in this frame, not present in 2130 snapshot"
+          }
+        ],
+        "uncertainties": []
+      }
+    ],
+    "window_notes": "Exhibition hall interior aisle, trucks are stationary or moving slowly, no occlusions affecting visible trucks; forklift and personnel are not counted as vehicles."
+  },
+  "latency_s": 30.202
+}

@@ -1,0 +1,198 @@
+{
+  "window": "north_far_540_600",
+  "model": "ep-20260828174616-dthpx",
+  "image_count": 3,
+  "attempts": 1,
+  "ok": true,
+  "status": 200,
+  "raw_text": "{\"snapshots\":[{\"time_s\":540.0,\"declared_total\":3,\"visible_vehicles\":[{\"id\":\"v1\",\"bbox\":[0.49,0.21,0.56,0.41],\"appearance\":\"Red heavy container truck, rear-facing, illuminated rear lights, located in central aisle\",\"current_evidence\":\"Clearly visible in the center of the aisle, rear lights are on\"},{\"id\":\"v2\",\"bbox\":[0.41,0.24,0.47,0.47],\"appearance\":\"Blue-roofed trailer, no visible cab, adjacent to the left of the red truck\",\"current_evidence\":\"Located left of the red truck, blue roof is distinct\"},{\"id\":\"v3\",\"bbox\":[0.34,0.6,0.52,0.99],\"appearance\":\"White long厢式 truck, side door open, in lower central area\",\"current_evidence\":\"Lower part of the image, white body, open side door is visible\"}],\"events\":[{\"id\":\"v1\",\"type\":\"still_visible\",\"evidence\":\"Present in this frame\"},{\"id\":\"v2\",\"type\":\"still_visible\",\"evidence\":\"Present in this frame\"},{\"id\":\"v3\",\"type\":\"still_visible\",\"evidence\":\"Present in this frame\"}],\"uncertainties\":[]},{\"time_s\":570.0,\"declared_total\":3,\"visible_vehicles\":[{\"id\":\"v1\",\"bbox\":[0.49,0.22,0.55,0.40],\"appearance\":\"Red heavy container truck, rear-facing, illuminated rear lights, central aisle\",\"current_evidence\":\"Still visible in the central aisle, rear lights remain on\"},{\"id\":\"v2\",\"bbox\":[0.41,0.25,0.47,0.46],\"appearance\":\"Blue-roofed trailer, no visible cab, left of red truck\",\"current_evidence\":\"Adjacent to the red truck's left, blue roof still visible\"},{\"id\":\"v3\",\"bbox\":[0.35,0.61,0.51,0.98],\"appearance\":\"White long厢式 truck, side door closed, lower central area\",\"current_evidence\":\"Lower central, white body, side door is now closed\"}],\"events\":[{\"id\":\"v1\",\"type\":\"still_visible\",\"evidence\":\"Present in this frame\"},{\"id\":\"v2\",\"type\":\"still_visible\",\"evidence\":\"Present in this frame\"},{\"id\":\"v3\",\"type\":\"still_visible\",\"evidence\":\"Present in this frame\"}],\"uncertainties\":[]},{\"time_s\":600.0,\"declared_total\":3,\"visible_vehicles\":[{\"id\":\"v1\",\"bbox\":[0.49,0.23,0.55,0.58],\"appearance\":\"Red heavy container truck, rear-facing, rear markings visible, central aisle\",\"current_evidence\":\"Still in central aisle, rear has distinct markings now\"},{\"id\":\"v2\",\"bbox\":[0.41,0.26,0.47,0.45],\"appearance\":\"Blue-roofed trailer, left of red truck\",\"current_evidence\":\"Adjacent to red truck's left, remains visible\"},{\"id\":\"v3\",\"bbox\":[0.35,0.62,0.51,0.99],\"appearance\":\"White long厢式 truck, lower central area\",\"current_evidence\":\"Lower central, white body, still present\"}],\"events\":[{\"id\":\"v1\",\"type\":\"still_visible\",\"evidence\":\"Present in this frame\"},{\"id\":\"v2\",\"type\":\"still_visible\",\"evidence\":\"Present in this frame\"},{\"id\":\"v3\",\"type\":\"still_visible\",\"evidence\":\"Present in this frame\"}],\"uncertainties\":[]}],\"window_notes\":\"Forklifts, personnel and non-vehicle objects are excluded; all visible trucks maintain stable identity across frames, no entry/exit events observed\"}",
+  "usage": {
+    "completion_tokens": 3810,
+    "prompt_tokens": 4488,
+    "total_tokens": 8298,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2942
+    }
+  },
+  "finish_reason": "stop",
+  "parsed": {
+    "snapshots": [
+      {
+        "time_s": 540.0,
+        "declared_total": 3,
+        "visible_vehicles": [
+          {
+            "id": "v1",
+            "bbox": [
+              0.49,
+              0.21,
+              0.56,
+              0.41
+            ],
+            "appearance": "Red heavy container truck, rear-facing, illuminated rear lights, located in central aisle",
+            "current_evidence": "Clearly visible in the center of the aisle, rear lights are on"
+          },
+          {
+            "id": "v2",
+            "bbox": [
+              0.41,
+              0.24,
+              0.47,
+              0.47
+            ],
+            "appearance": "Blue-roofed trailer, no visible cab, adjacent to the left of the red truck",
+            "current_evidence": "Located left of the red truck, blue roof is distinct"
+          },
+          {
+            "id": "v3",
+            "bbox": [
+              0.34,
+              0.6,
+              0.52,
+              0.99
+            ],
+            "appearance": "White long厢式 truck, side door open, in lower central area",
+            "current_evidence": "Lower part of the image, white body, open side door is visible"
+          }
+        ],
+        "events": [
+          {
+            "id": "v1",
+            "type": "still_visible",
+            "evidence": "Present in this frame"
+          },
+          {
+            "id": "v2",
+            "type": "still_visible",
+            "evidence": "Present in this frame"
+          },
+          {
+            "id": "v3",
+            "type": "still_visible",
+            "evidence": "Present in this frame"
+          }
+        ],
+        "uncertainties": []
+      },
+      {
+        "time_s": 570.0,
+        "declared_total": 3,
+        "visible_vehicles": [
+          {
+            "id": "v1",
+            "bbox": [
+              0.49,
+              0.22,
+              0.55,
+              0.4
+            ],
+            "appearance": "Red heavy container truck, rear-facing, illuminated rear lights, central aisle",
+            "current_evidence": "Still visible in the central aisle, rear lights remain on"
+          },
+          {
+            "id": "v2",
+            "bbox": [
+              0.41,
+              0.25,
+              0.47,
+              0.46
+            ],
+            "appearance": "Blue-roofed trailer, no visible cab, left of red truck",
+            "current_evidence": "Adjacent to the red truck's left, blue roof still visible"
+          },
+          {
+            "id": "v3",
+            "bbox": [
+              0.35,
+              0.61,
+              0.51,
+              0.98
+            ],
+            "appearance": "White long厢式 truck, side door closed, lower central area",
+            "current_evidence": "Lower central, white body, side door is now closed"
+          }
+        ],
+        "events": [
+          {
+            "id": "v1",
+            "type": "still_visible",
+            "evidence": "Present in this frame"
+          },
+          {
+            "id": "v2",
+            "type": "still_visible",
+            "evidence": "Present in this frame"
+          },
+          {
+            "id": "v3",
+            "type": "still_visible",
+            "evidence": "Present in this frame"
+          }
+        ],
+        "uncertainties": []
+      },
+      {
+        "time_s": 600.0,
+        "declared_total": 3,
+        "visible_vehicles": [
+          {
+            "id": "v1",
+            "bbox": [
+              0.49,
+              0.23,
+              0.55,
+              0.58
+            ],
+            "appearance": "Red heavy container truck, rear-facing, rear markings visible, central aisle",
+            "current_evidence": "Still in central aisle, rear has distinct markings now"
+          },
+          {
+            "id": "v2",
+            "bbox": [
+              0.41,
+              0.26,
+              0.47,
+              0.45
+            ],
+            "appearance": "Blue-roofed trailer, left of red truck",
+            "current_evidence": "Adjacent to red truck's left, remains visible"
+          },
+          {
+            "id": "v3",
+            "bbox": [
+              0.35,
+              0.62,
+              0.51,
+              0.99
+            ],
+            "appearance": "White long厢式 truck, lower central area",
+            "current_evidence": "Lower central, white body, still present"
+          }
+        ],
+        "events": [
+          {
+            "id": "v1",
+            "type": "still_visible",
+            "evidence": "Present in this frame"
+          },
+          {
+            "id": "v2",
+            "type": "still_visible",
+            "evidence": "Present in this frame"
+          },
+          {
+            "id": "v3",
+            "type": "still_visible",
+            "evidence": "Present in this frame"
+          }
+        ],
+        "uncertainties": []
+      }
+    ],
+    "window_notes": "Forklifts, personnel and non-vehicle objects are excluded; all visible trucks maintain stable identity across frames, no entry/exit events observed"
+  },
+  "latency_s": 27.68
+}

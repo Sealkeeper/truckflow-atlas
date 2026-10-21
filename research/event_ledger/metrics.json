@@ -1,0 +1,512 @@
+{
+  "experiment": "event-ledger-v1",
+  "new_calls": 3,
+  "new_images": 9,
+  "successful_windows": 3,
+  "failed_windows": 0,
+  "user_reviewed_points": 3,
+  "exact": 1,
+  "mae": 0.6666666666666666,
+  "under": 2,
+  "over": 0,
+  "review_required_points": 0,
+  "mean_latency_s": 50.718333333333334,
+  "p95_latency_s": 94.273,
+  "serial_latency_s": 152.155,
+  "total_tokens": 24397,
+  "bootstrap_calls_reused": 3,
+  "live_bootstrap_cost_included": false,
+  "calls_per_input_frame_new": 0.3333333333333333,
+  "event_truth_status": "not_user_labeled",
+  "id_truth_status": "not_user_labeled",
+  "unique_count_status": "not_evaluated_single_camera_windows",
+  "rows": [
+    {
+      "camera": "north",
+      "time_s": 600.0,
+      "visible_ids": [
+        "v1",
+        "v2",
+        "v3"
+      ],
+      "predicted_count": 3,
+      "events": [
+        {
+          "id": "v1",
+          "type": "still_visible",
+          "evidence": "Present in this frame"
+        },
+        {
+          "id": "v2",
+          "type": "still_visible",
+          "evidence": "Present in this frame"
+        },
+        {
+          "id": "v3",
+          "type": "still_visible",
+          "evidence": "Present in this frame"
+        }
+      ],
+      "states": {
+        "v1": "visible",
+        "v2": "visible",
+        "v3": "visible"
+      },
+      "review_required": false,
+      "review_reasons": [],
+      "truth": 4,
+      "error": -1,
+      "pure_aisle_baseline": 2,
+      "baseline_source": "accuracy\\runs\\aisle_doubao\\north_600_aisle.json",
+      "uses_future_frames": false,
+      "output_delay_from_target_s": 27.68
+    },
+    {
+      "camera": "north",
+      "time_s": 2100.0,
+      "visible_ids": [
+        "v1",
+        "v2"
+      ],
+      "predicted_count": 2,
+      "events": [
+        {
+          "id": "v1",
+          "type": "still_visible",
+          "evidence": "Present in this frame, matches initial seed identity"
+        },
+        {
+          "id": "v2",
+          "type": "still_visible",
+          "evidence": "Present in this frame, matches initial seed identity"
+        }
+      ],
+      "states": {
+        "v1": "visible",
+        "v2": "visible"
+      },
+      "review_required": false,
+      "review_reasons": [],
+      "truth": 2,
+      "error": 0,
+      "pure_aisle_baseline": 2,
+      "baseline_source": "accuracy\\runs\\aisle_doubao\\north_2100_aisle.json",
+      "uses_future_frames": true,
+      "output_delay_from_target_s": 90.202
+    },
+    {
+      "camera": "south",
+      "time_s": 2600.0,
+      "visible_ids": [
+        "v1",
+        "v2",
+        "v3"
+      ],
+      "predicted_count": 3,
+      "events": [
+        {
+          "id": "v1",
+          "type": "still_visible",
+          "evidence": "Present in this frame, no changes from prior"
+        },
+        {
+          "id": "v2",
+          "type": "still_visible",
+          "evidence": "Present in this frame, no changes from prior"
+        },
+        {
+          "id": "v3",
+          "type": "still_visible",
+          "evidence": "Present in this frame, no changes from prior"
+        }
+      ],
+      "states": {
+        "v1": "visible",
+        "v2": "visible",
+        "v3": "visible"
+      },
+      "review_required": false,
+      "review_reasons": [],
+      "truth": 4,
+      "error": -1,
+      "pure_aisle_baseline": 4,
+      "baseline_source": "accuracy\\runs\\aisle_doubao\\south_2600_aisle.json",
+      "uses_future_frames": false,
+      "output_delay_from_target_s": 94.273
+    }
+  ],
+  "windows": [
+    {
+      "name": "north_far_540_600",
+      "ok": true,
+      "snapshots": [
+        {
+          "camera": "north",
+          "time_s": 540.0,
+          "visible_ids": [
+            "v1",
+            "v2",
+            "v3"
+          ],
+          "predicted_count": 3,
+          "events": [
+            {
+              "id": "v1",
+              "type": "still_visible",
+              "evidence": "Present in this frame"
+            },
+            {
+              "id": "v2",
+              "type": "still_visible",
+              "evidence": "Present in this frame"
+            },
+            {
+              "id": "v3",
+              "type": "still_visible",
+              "evidence": "Present in this frame"
+            }
+          ],
+          "states": {
+            "v1": "visible",
+            "v2": "visible",
+            "v3": "visible"
+          },
+          "review_required": false,
+          "review_reasons": []
+        },
+        {
+          "camera": "north",
+          "time_s": 570.0,
+          "visible_ids": [
+            "v1",
+            "v2",
+            "v3"
+          ],
+          "predicted_count": 3,
+          "events": [
+            {
+              "id": "v1",
+              "type": "still_visible",
+              "evidence": "Present in this frame"
+            },
+            {
+              "id": "v2",
+              "type": "still_visible",
+              "evidence": "Present in this frame"
+            },
+            {
+              "id": "v3",
+              "type": "still_visible",
+              "evidence": "Present in this frame"
+            }
+          ],
+          "states": {
+            "v1": "visible",
+            "v2": "visible",
+            "v3": "visible"
+          },
+          "review_required": false,
+          "review_reasons": []
+        },
+        {
+          "camera": "north",
+          "time_s": 600.0,
+          "visible_ids": [
+            "v1",
+            "v2",
+            "v3"
+          ],
+          "predicted_count": 3,
+          "events": [
+            {
+              "id": "v1",
+              "type": "still_visible",
+              "evidence": "Present in this frame"
+            },
+            {
+              "id": "v2",
+              "type": "still_visible",
+              "evidence": "Present in this frame"
+            },
+            {
+              "id": "v3",
+              "type": "still_visible",
+              "evidence": "Present in this frame"
+            }
+          ],
+          "states": {
+            "v1": "visible",
+            "v2": "visible",
+            "v3": "visible"
+          },
+          "review_required": false,
+          "review_reasons": []
+        }
+      ],
+      "aggregation_wait_s": 60,
+      "latency_s": 27.68,
+      "usage": {
+        "completion_tokens": 3810,
+        "prompt_tokens": 4488,
+        "total_tokens": 8298,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2942
+        }
+      },
+      "offline_window_completion_delay_s": 87.68
+    },
+    {
+      "name": "north_entry_2100_2160",
+      "ok": true,
+      "snapshots": [
+        {
+          "camera": "north",
+          "time_s": 2100.0,
+          "visible_ids": [
+            "v1",
+            "v2"
+          ],
+          "predicted_count": 2,
+          "events": [
+            {
+              "id": "v1",
+              "type": "still_visible",
+              "evidence": "Present in this frame, matches initial seed identity"
+            },
+            {
+              "id": "v2",
+              "type": "still_visible",
+              "evidence": "Present in this frame, matches initial seed identity"
+            }
+          ],
+          "states": {
+            "v1": "visible",
+            "v2": "visible"
+          },
+          "review_required": false,
+          "review_reasons": []
+        },
+        {
+          "camera": "north",
+          "time_s": 2130.0,
+          "visible_ids": [
+            "v1",
+            "v2"
+          ],
+          "predicted_count": 2,
+          "events": [
+            {
+              "id": "v1",
+              "type": "still_visible",
+              "evidence": "Remains in frame from previous snapshot"
+            },
+            {
+              "id": "v2",
+              "type": "still_visible",
+              "evidence": "Remains in frame from previous snapshot"
+            }
+          ],
+          "states": {
+            "v1": "visible",
+            "v2": "visible"
+          },
+          "review_required": false,
+          "review_reasons": []
+        },
+        {
+          "camera": "north",
+          "time_s": 2160.0,
+          "visible_ids": [
+            "v1",
+            "v2",
+            "v3"
+          ],
+          "predicted_count": 3,
+          "events": [
+            {
+              "id": "v1",
+              "type": "still_visible",
+              "evidence": "Present in this frame, unchanged from prior"
+            },
+            {
+              "id": "v2",
+              "type": "still_visible",
+              "evidence": "Present in this frame, unchanged from prior"
+            },
+            {
+              "id": "v3",
+              "type": "entered",
+              "evidence": "Newly appeared in this frame, not present in 2130 snapshot"
+            }
+          ],
+          "states": {
+            "v1": "visible",
+            "v2": "visible",
+            "v3": "visible"
+          },
+          "review_required": false,
+          "review_reasons": []
+        }
+      ],
+      "aggregation_wait_s": 60,
+      "latency_s": 30.202,
+      "usage": {
+        "completion_tokens": 3768,
+        "prompt_tokens": 4439,
+        "total_tokens": 8207,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3034
+        }
+      },
+      "offline_window_completion_delay_s": 90.202
+    },
+    {
+      "name": "south_boundary_2580_2600",
+      "ok": true,
+      "snapshots": [
+        {
+          "camera": "south",
+          "time_s": 2580.0,
+          "visible_ids": [
+            "v1",
+            "v2",
+            "v3"
+          ],
+          "predicted_count": 3,
+          "events": [
+            {
+              "id": "v1",
+              "type": "still_visible",
+              "evidence": "Present in this frame, matches corrected identity from initial seed"
+            },
+            {
+              "id": "v2",
+              "type": "still_visible",
+              "evidence": "Present in this frame, matches corrected identity from initial seed"
+            },
+            {
+              "id": "v3",
+              "type": "still_visible",
+              "evidence": "Present in this frame, matches corrected identity from initial seed"
+            }
+          ],
+          "states": {
+            "v1": "visible",
+            "v2": "visible",
+            "v3": "visible"
+          },
+          "review_required": false,
+          "review_reasons": []
+        },
+        {
+          "camera": "south",
+          "time_s": 2590.0,
+          "visible_ids": [
+            "v1",
+            "v2",
+            "v3"
+          ],
+          "predicted_count": 3,
+          "events": [
+            {
+              "id": "v1",
+              "type": "still_visible",
+              "evidence": "Present in this frame, no movement or occlusion"
+            },
+            {
+              "id": "v2",
+              "type": "still_visible",
+              "evidence": "Present in this frame, no movement or occlusion"
+            },
+            {
+              "id": "v3",
+              "type": "still_visible",
+              "evidence": "Present in this frame, no movement or occlusion"
+            }
+          ],
+          "states": {
+            "v1": "visible",
+            "v2": "visible",
+            "v3": "visible"
+          },
+          "review_required": false,
+          "review_reasons": []
+        },
+        {
+          "camera": "south",
+          "time_s": 2600.0,
+          "visible_ids": [
+            "v1",
+            "v2",
+            "v3"
+          ],
+          "predicted_count": 3,
+          "events": [
+            {
+              "id": "v1",
+              "type": "still_visible",
+              "evidence": "Present in this frame, no changes from prior"
+            },
+            {
+              "id": "v2",
+              "type": "still_visible",
+              "evidence": "Present in this frame, no changes from prior"
+            },
+            {
+              "id": "v3",
+              "type": "still_visible",
+              "evidence": "Present in this frame, no changes from prior"
+            }
+          ],
+          "states": {
+            "v1": "visible",
+            "v2": "visible",
+            "v3": "visible"
+          },
+          "review_required": false,
+          "review_reasons": []
+        }
+      ],
+      "aggregation_wait_s": 20,
+      "latency_s": 94.273,
+      "usage": {
+        "completion_tokens": 3402,
+        "prompt_tokens": 4490,
+        "total_tokens": 7892,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2488
+        }
+      },
+      "offline_window_completion_delay_s": 114.273
+    }
+  ],
+  "fixed_planned_N": 3,
+  "valid_N": 3,
+  "evaluation_split": "reused_development_samples_not_independent_validation",
+  "truth_source": "accuracy/reviewed/user-final-review-v2-2026-10-21.json",
+  "automatic_acceptance": {
+    "accepted_N": 3,
+    "accepted_correct": 1,
+    "accepted_wrong": 2,
+    "coverage": 1.0,
+    "accepted_accuracy": 0.3333333333333333
+  },
+  "same_point_pure_aisle_baseline": {
+    "valid_N": 3,
+    "exact": 2,
+    "mae": 0.6666666666666666,
+    "under_units": 2,
+    "over_units": 0
+  },
+  "cost_caveat": "Seed candidates reuse 3 earlier model outputs; their calls/tokens/latency are excluded. Fewer HTTP requests does not establish lower image/token cost.",
+  "latency_caveat": "N=3 empirical p95 equals maximum. Aggregation wait and bootstrap inference must be added for live operation. north_2100 is retrospective because future frames are included."
+}

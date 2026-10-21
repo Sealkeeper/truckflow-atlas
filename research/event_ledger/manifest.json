@@ -1,0 +1,201 @@
+{
+  "experiment": "event-ledger-v1",
+  "selection": "three mechanism windows frozen before new inference",
+  "prompt_sha256": "1ed3b55e0ccc6b2b3898acb9fe02a8636628d176f19c735032b44e5ada6e49e3",
+  "windows": [
+    {
+      "name": "north_far_540_600",
+      "camera": "north",
+      "times": [
+        540,
+        570,
+        600
+      ],
+      "mechanism": "distant bodies missed/merged",
+      "user_target": 600,
+      "seed_source": "accuracy/runs/timeline_v1/north_013500.json",
+      "seed_count": 3,
+      "images": [
+        {
+          "time_s": 540,
+          "frame_number": 13500,
+          "path": "frames\\north_540.jpg",
+          "sha256": "a77ddf9cd72ae3e2ecdd2eec77c9c509bf73661c6dcdc1ed76afc62f5b2334d0"
+        },
+        {
+          "time_s": 570,
+          "frame_number": 14250,
+          "path": "frames\\north_570.jpg",
+          "sha256": "4f1c57335124862b82123157eaf77eb63dc7a5682cf554cef1ad2c380cc82361"
+        },
+        {
+          "time_s": 600,
+          "frame_number": 15000,
+          "path": "frames\\north_600.jpg",
+          "sha256": "45413698ea1a381cfc03c9fcf1837448ef32b80286594d4905984c9ba8a4eeaf"
+        }
+      ],
+      "seed": {
+        "time_s": 540.0,
+        "vehicles": [
+          {
+            "id": "seed_1",
+            "bbox": [
+              0.47,
+              0.2,
+              0.56,
+              0.41
+            ],
+            "identity_clues": "Red heavy truck, rear-facing, with illuminated rear lights, located in the central aisle"
+          },
+          {
+            "id": "seed_2",
+            "bbox": [
+              0.41,
+              0.24,
+              0.48,
+              0.47
+            ],
+            "identity_clues": "Blue-roofed trailer, no visible cab, adjacent to the red truck on its left"
+          },
+          {
+            "id": "seed_3",
+            "bbox": [
+              0.34,
+              0.6,
+              0.52,
+              0.99
+            ],
+            "identity_clues": "White long厢式 truck, side door open, located in the lower central area"
+          }
+        ]
+      }
+    },
+    {
+      "name": "north_entry_2100_2160",
+      "camera": "north",
+      "times": [
+        2100,
+        2130,
+        2160
+      ],
+      "mechanism": "visible entry candidate",
+      "user_target": 2100,
+      "seed_source": "accuracy/runs/timeline_v1/north_052500.json",
+      "seed_count": 2,
+      "images": [
+        {
+          "time_s": 2100,
+          "frame_number": 52500,
+          "path": "frames\\north_2100.jpg",
+          "sha256": "74f09d714c028fabd6084bbc6e7f5b00d0ab6196b90c267684fb50021376726d"
+        },
+        {
+          "time_s": 2130,
+          "frame_number": 53250,
+          "path": "frames\\north_2130.jpg",
+          "sha256": "435c92c27529e55f51d5f9250b60c72801c8129b9474ed5425ba23cc32f05d64"
+        },
+        {
+          "time_s": 2160,
+          "frame_number": 54000,
+          "path": "frames\\north_2160.jpg",
+          "sha256": "ccaec0b6b0126024c0255ad2de54f723b53b6e7ae00ac5cb2beb685b7d23f019"
+        }
+      ],
+      "seed": {
+        "time_s": 2100.0,
+        "vehicles": [
+          {
+            "id": "seed_1",
+            "bbox": [
+              0.428,
+              0.258,
+              0.502,
+              0.452
+            ],
+            "identity_clues": "Red box cargo truck, rear orientation, located in central aisle between exhibition booths"
+          },
+          {
+            "id": "seed_2",
+            "bbox": [
+              0.353,
+              0.618,
+              0.487,
+              0.998
+            ],
+            "identity_clues": "White corrugated long box trailer, front orientation along the lower central aisle"
+          }
+        ]
+      }
+    },
+    {
+      "name": "south_boundary_2580_2600",
+      "camera": "south",
+      "times": [
+        2580,
+        2590,
+        2600
+      ],
+      "mechanism": "partial cargo at image boundary",
+      "user_target": 2600,
+      "seed_source": "accuracy/runs/timeline_v1/south_064500.json",
+      "seed_count": 3,
+      "images": [
+        {
+          "time_s": 2580,
+          "frame_number": 64500,
+          "path": "frames\\south_2580.jpg",
+          "sha256": "6b76675b4dcbaf9492d6103357c7218f0594f23b4190b227341fb1e7957c3598"
+        },
+        {
+          "time_s": 2590,
+          "frame_number": 64750,
+          "path": "frames\\south_2590.jpg",
+          "sha256": "9af2a477f157a629fda04b2c088e22ab7c89ecef1349200ae51e13c88ca9132f"
+        },
+        {
+          "time_s": 2600,
+          "frame_number": 65000,
+          "path": "frames\\south_2600.jpg",
+          "sha256": "3c1988272698c39245ec7eab91f1ce85c60d0938001b8dc0c331dce904113456"
+        }
+      ],
+      "seed": {
+        "time_s": 2580.0,
+        "vehicles": [
+          {
+            "id": "seed_1",
+            "bbox": [
+              0.38,
+              0.22,
+              0.46,
+              0.41
+            ],
+            "identity_clues": "White cab with '东风商用车' text on front, front-facing, positioned in upper central lane"
+          },
+          {
+            "id": "seed_2",
+            "bbox": [
+              0.44,
+              0.2,
+              0.49,
+              0.33
+            ],
+            "identity_clues": "Red cab, front-facing, located behind the white truck in the central lane"
+          },
+          {
+            "id": "seed_3",
+            "bbox": [
+              0.46,
+              0.36,
+              0.55,
+              0.69
+            ],
+            "identity_clues": "Red cab with front logo, front-facing, in lower central lane"
+          }
+        ]
+      }
+    }
+  ]
+}
