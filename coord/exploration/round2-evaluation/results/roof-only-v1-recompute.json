@@ -1,0 +1,1082 @@
+{
+  "schema": "round2-roof-only-v1-independent-recompute-v1",
+  "evidence_scope": "roof_only",
+  "input_evidence_scope": "prompt_constrained_full_frame",
+  "pixel_masking_implemented": false,
+  "no_model_calls": true,
+  "independent": {
+    "schema": "round2-independent-evaluation-v1",
+    "route": {
+      "id": "roof-only-v1",
+      "owner": "new_doubao_benchmark_v2",
+      "mechanism": "one fresh structured observation per aisle image; prompt-only roof evidence",
+      "status": "rejected_candidate",
+      "evidence_scope": "roof_only",
+      "roof_constraint_eligible": true,
+      "prompt_sha256": "9e7a956ccfcd4078b4a13526d5e0f8fe8c856cc84ee42a73723eaa97ccfb9362",
+      "model": "doubao-seed-2-0-mini-260428"
+    },
+    "source": {
+      "output_path": "in-memory canonical reconstruction",
+      "output_sha256": null,
+      "truth_path": "repo://accuracy\\reviewed\\user-final-review-v2-2026-10-21.json",
+      "truth_working_tree_sha256": "c3fddc439da1574e74a6ceb7391297e1c65fedec109d3579da05cad05f34149d",
+      "truth_canonical_label_sha256": "78f255b1ae37463e2b36e15befb1ff8092ca87c2c6e946979d880f42cf0e5397"
+    },
+    "dataset": {
+      "split": "dev",
+      "n_camera_samples": 20,
+      "n_times": 10,
+      "truth": {
+        "path": "repo://accuracy\\reviewed\\user-final-review-v2-2026-10-21.json",
+        "split": "dev",
+        "declared_schema": "truckflow-final-review-v2",
+        "complete_declared": true,
+        "working_tree_sha256": "c3fddc439da1574e74a6ceb7391297e1c65fedec109d3579da05cad05f34149d",
+        "canonical_label_sha256": "78f255b1ae37463e2b36e15befb1ff8092ca87c2c6e946979d880f42cf0e5397",
+        "n_camera_slots": 20,
+        "camera_labels_present": 20,
+        "incomplete_camera_slots": [],
+        "n_times": 10,
+        "overlap_labels_present": 10,
+        "unique_labels_present": 10,
+        "incomplete_time_slots": [],
+        "truth_formula_errors": [],
+        "truth_formula_valid": true
+      }
+    },
+    "camera_count": {
+      "n_total": 20,
+      "valid_n": 13,
+      "failed": 7,
+      "refused": 0,
+      "missing": 0,
+      "label_missing": 0,
+      "scored_n": 13,
+      "exact": 6,
+      "headline": "6/20",
+      "exact_rate": 0.3,
+      "mae": 0.846154,
+      "under_units": 10,
+      "over_units": 1,
+      "under_frames": 6,
+      "over_frames": 1,
+      "truth_total": 39,
+      "predicted_total": 30,
+      "absolute_error_total": 11,
+      "errors": [
+        {
+          "sample_id": "north_5",
+          "camera": "north",
+          "time": 5,
+          "truth": 5,
+          "predicted": 4,
+          "error": -1
+        },
+        {
+          "sample_id": "north_300",
+          "camera": "north",
+          "time": 300,
+          "truth": 3,
+          "predicted": 1,
+          "error": -2
+        },
+        {
+          "sample_id": "south_300",
+          "camera": "south",
+          "time": 300,
+          "truth": 4,
+          "predicted": 2,
+          "error": -2
+        },
+        {
+          "sample_id": "north_600",
+          "camera": "north",
+          "time": 600,
+          "truth": 4,
+          "predicted": 2,
+          "error": -2
+        },
+        {
+          "sample_id": "north_1500",
+          "camera": "north",
+          "time": 1500,
+          "truth": 2,
+          "predicted": 0,
+          "error": -2
+        },
+        {
+          "sample_id": "south_2100",
+          "camera": "south",
+          "time": 2100,
+          "truth": 3,
+          "predicted": 4,
+          "error": 1
+        },
+        {
+          "sample_id": "north_2400",
+          "camera": "north",
+          "time": 2400,
+          "truth": 3,
+          "predicted": 2,
+          "error": -1
+        }
+      ]
+    },
+    "overlap": {
+      "n_total": 10,
+      "valid_n": 0,
+      "failed": 0,
+      "refused": 0,
+      "missing": 10,
+      "label_missing": 0,
+      "scored_n": 0,
+      "exact": 0,
+      "headline": "0/10",
+      "exact_rate": 0.0,
+      "mae": null,
+      "errors": []
+    },
+    "unique": {
+      "n_total": 10,
+      "valid_n": 0,
+      "failed": 0,
+      "refused": 0,
+      "missing": 10,
+      "label_missing": 0,
+      "scored_n": 0,
+      "exact": 0,
+      "headline": "0/10",
+      "exact_rate": 0.0,
+      "mae": null,
+      "errors": []
+    },
+    "release": {
+      "n_total": 20,
+      "auto_released": 0,
+      "correct": 0,
+      "errors": 0,
+      "coverage": 0.0,
+      "reviewed": 0,
+      "review_rate": 0.0,
+      "refused": 0,
+      "refusal_rate": 0.0,
+      "unreported": 20,
+      "false_release_rate": null,
+      "truth_error_frames": 7,
+      "error_frames_caught_by_review": 0,
+      "false_release_rows": []
+    },
+    "cost": {
+      "online_observed": {
+        "calls": 20,
+        "images": 20,
+        "tokens": 73983,
+        "latency_s_total": 308.703,
+        "latency_s_mean": 15.435,
+        "latency_s_p95_nearest_rank": 23.977,
+        "latency_samples": 20
+      },
+      "online_reported": {
+        "calls": 20,
+        "images": 20,
+        "tokens": 73983
+      },
+      "initialization": {
+        "calls": null,
+        "images": null,
+        "tokens": null,
+        "latency_s": null
+      },
+      "initialization_complete": false,
+      "initialization_note": "未提供时保持 null；不以 0 冒充免费初始化",
+      "combined_online_plus_initialization": null,
+      "concurrency": 2,
+      "peak_memory_mb": null
+    },
+    "identity": {
+      "status": "not measured",
+      "reason": "no complete instance-ID gold"
+    },
+    "roof_evidence": {
+      "scope": "roof_only",
+      "roof_observation_count": 73,
+      "physical_entity_count": 57,
+      "uncertain_group_count": 8,
+      "uncertain_observation_count": 12,
+      "status": "structure checked; semantic accuracy not measured"
+    },
+    "bbox": {
+      "status": "not measured",
+      "reason": "no complete per-instance bbox gold"
+    },
+    "attributes": {
+      "status": "not measured",
+      "reason": "no complete attribute gold"
+    },
+    "acceptance": {
+      "verdict": "FAIL_CONTRACT",
+      "checks": {
+        "no_duplicate_or_overwrite": {
+          "pass": true,
+          "detail": []
+        },
+        "truth_camera_labels_complete": {
+          "pass": true,
+          "detail": {
+            "present": 20,
+            "total": 20
+          }
+        },
+        "all_outputs_valid": {
+          "pass": false,
+          "detail": {
+            "valid": 13,
+            "failed": 7,
+            "refused": 0,
+            "missing": 0
+          }
+        },
+        "instance_counts_consistent": {
+          "pass": true,
+          "detail": {}
+        },
+        "cross_camera_formulas_consistent": {
+          "pass": true,
+          "detail": []
+        },
+        "unique_and_overlap_measured": {
+          "pass": false,
+          "detail": {
+            "overlap_scored": 0,
+            "overlap_total": 10,
+            "unique_scored": 0,
+            "unique_total": 10
+          }
+        },
+        "camera_not_worse_than_baseline": {
+          "pass": false,
+          "detail": {
+            "exact": 6,
+            "baseline_exact": 16,
+            "total": 20
+          }
+        },
+        "automatic_release_no_truth_errors": {
+          "pass": false,
+          "detail": {
+            "auto_released": 0,
+            "errors": 0,
+            "false_release_rate": null
+          }
+        },
+        "input_hashes_verified": {
+          "pass": true,
+          "detail": {
+            "all_match": true,
+            "input_manifest_match": true,
+            "raw_manifest_match": true,
+            "attempts_reconstructed": true,
+            "attempt_audit_match": true
+          }
+        },
+        "workflow_audit_complete_and_clean": {
+          "pass": true,
+          "detail": {
+            "human_boxes_used_as_model_input": {
+              "value": false,
+              "pass": true,
+              "reason": "explicit false"
+            },
+            "same_frame_annotations_exposed": {
+              "value": false,
+              "pass": true,
+              "reason": "explicit false"
+            },
+            "future_frames_exposed": {
+              "value": false,
+              "pass": true,
+              "reason": "explicit false"
+            },
+            "previous_count_carryover": {
+              "value": false,
+              "pass": true,
+              "reason": "explicit false"
+            },
+            "failures_skipped": {
+              "value": false,
+              "pass": true,
+              "reason": "explicit false"
+            },
+            "memory_retrieval_scope": {
+              "value": "none",
+              "pass": true
+            },
+            "failure_counted_in_denominator": {
+              "value": true,
+              "pass": true
+            },
+            "all_pass": true
+          }
+        },
+        "roof_only_contract": {
+          "pass": true,
+          "detail": {
+            "evidence_scope": "roof_only",
+            "applies": true,
+            "failures": {}
+          }
+        }
+      },
+      "generalization": "not_evaluated",
+      "identity_metrics": "not_measured",
+      "evidence_scope": "roof_only",
+      "new_roof_constraint_applies": true,
+      "note": "计数、列表长度和内部公式通过不等于框、属性、配对或身份正确；自报 confidence / checked / possible_miss 不作可靠门禁。旧整车口径不能追认为新 roof-only 结果。"
+    }
+  },
+  "roof_raw": {
+    "uncertain_sample_N": 6,
+    "uncertain_groups_total": 8,
+    "uncertain_roofs_total": 12,
+    "size_unknown_total": 16,
+    "roof_kind_unknown_total": 1,
+    "count_exact": 11,
+    "fully_resolved_count_exact": 11,
+    "schema_valid_count_exact": 6,
+    "schema_valid_fully_resolved_count_exact": 6,
+    "count_exact_with_schema_failure": 5,
+    "raw_count_consistent_N": 20
+  },
+  "sources": {
+    "roof_root": "repo://coord\\exploration\\roof-only-v1",
+    "single_pass_root": "repo://coord\\exploration\\single-pass",
+    "truth_path": "repo://accuracy\\reviewed\\user-final-review-v2-2026-10-21.json",
+    "truth": {
+      "path": "repo://accuracy\\reviewed\\user-final-review-v2-2026-10-21.json",
+      "split": "dev",
+      "declared_schema": "truckflow-final-review-v2",
+      "complete_declared": true,
+      "working_tree_sha256": "c3fddc439da1574e74a6ceb7391297e1c65fedec109d3579da05cad05f34149d",
+      "canonical_label_sha256": "78f255b1ae37463e2b36e15befb1ff8092ca87c2c6e946979d880f42cf0e5397",
+      "n_camera_slots": 20,
+      "camera_labels_present": 20,
+      "incomplete_camera_slots": [],
+      "n_times": 10,
+      "overlap_labels_present": 10,
+      "unique_labels_present": 10,
+      "incomplete_time_slots": [],
+      "truth_formula_errors": [],
+      "truth_formula_valid": true
+    },
+    "inputs": {
+      "schema": "round2-roof-only-input-audit-v1",
+      "manifest_sha256": "ebe082aabb971d3a296fa92346169a24cffbbe9327327445c9258b3c775ddeed",
+      "prompt_sha256": "9e7a956ccfcd4078b4a13526d5e0f8fe8c856cc84ee42a73723eaa97ccfb9362",
+      "prompt_expected_sha256": "9e7a956ccfcd4078b4a13526d5e0f8fe8c856cc84ee42a73723eaa97ccfb9362",
+      "prompt_match": true,
+      "manifest_model": "doubao-seed-2-0-mini-260428",
+      "manifest_temperature": 0,
+      "manifest_max_tokens": 2400,
+      "manifest_workers": 2,
+      "input_count": 20,
+      "unique_sample_ids": 20,
+      "duplicate_sample_ids": [],
+      "duplicate_time_camera": [],
+      "missing_camera_times": [],
+      "unexpected_camera_times": [],
+      "pixel_masking_implemented": false,
+      "evidence_restriction": "prompt only; entire aisle image supplied",
+      "labels_in_model_input": false,
+      "user_annotations_in_model_input": false,
+      "rows": [
+        {
+          "sample_id": "north_1200",
+          "camera": "north",
+          "time": 1200,
+          "image_exists": true,
+          "declared_image_sha256": "8972e5ff430149be4503adcbaa9bdd8e2ae00d60bf4e4a040865bd40e1a301ed",
+          "actual_image_sha256": "8972e5ff430149be4503adcbaa9bdd8e2ae00d60bf4e4a040865bd40e1a301ed",
+          "b_frozen_sha256": "8972e5ff430149be4503adcbaa9bdd8e2ae00d60bf4e4a040865bd40e1a301ed",
+          "b_inputs_aisle_sha256": "8972e5ff430149be4503adcbaa9bdd8e2ae00d60bf4e4a040865bd40e1a301ed",
+          "image_hash_match": true,
+          "b_frozen_match": true,
+          "b_inputs_match": true,
+          "reconstructed_request_sha256": "9c0d7a0781416f85c37bdaa6e073e4431837616f25ca046ef654622313559857"
+        },
+        {
+          "sample_id": "north_1500",
+          "camera": "north",
+          "time": 1500,
+          "image_exists": true,
+          "declared_image_sha256": "8f0d80d512222686ad287f456393c2e15320a46fa7acaa1907bb3695be6ea4e6",
+          "actual_image_sha256": "8f0d80d512222686ad287f456393c2e15320a46fa7acaa1907bb3695be6ea4e6",
+          "b_frozen_sha256": "8f0d80d512222686ad287f456393c2e15320a46fa7acaa1907bb3695be6ea4e6",
+          "b_inputs_aisle_sha256": "8f0d80d512222686ad287f456393c2e15320a46fa7acaa1907bb3695be6ea4e6",
+          "image_hash_match": true,
+          "b_frozen_match": true,
+          "b_inputs_match": true,
+          "reconstructed_request_sha256": "d178719650f48ad6b277dcf8102698bb68a7abad8903987d5bc90dec2807cc60"
+        },
+        {
+          "sample_id": "north_1800",
+          "camera": "north",
+          "time": 1800,
+          "image_exists": true,
+          "declared_image_sha256": "a6ebddee4622937ef052073efa38319b43d3a8f939ff64e4019f9297752970f7",
+          "actual_image_sha256": "a6ebddee4622937ef052073efa38319b43d3a8f939ff64e4019f9297752970f7",
+          "b_frozen_sha256": "a6ebddee4622937ef052073efa38319b43d3a8f939ff64e4019f9297752970f7",
+          "b_inputs_aisle_sha256": "a6ebddee4622937ef052073efa38319b43d3a8f939ff64e4019f9297752970f7",
+          "image_hash_match": true,
+          "b_frozen_match": true,
+          "b_inputs_match": true,
+          "reconstructed_request_sha256": "fa081f45ccaaa643fcebfea2adc8fcafa327a20dafc332b8e1cac8c7608b338a"
+        },
+        {
+          "sample_id": "north_2100",
+          "camera": "north",
+          "time": 2100,
+          "image_exists": true,
+          "declared_image_sha256": "6d8c3af2a44b2fee82fa042ed738922d0c40744f03faed38af26ff308ea5bad6",
+          "actual_image_sha256": "6d8c3af2a44b2fee82fa042ed738922d0c40744f03faed38af26ff308ea5bad6",
+          "b_frozen_sha256": "6d8c3af2a44b2fee82fa042ed738922d0c40744f03faed38af26ff308ea5bad6",
+          "b_inputs_aisle_sha256": "6d8c3af2a44b2fee82fa042ed738922d0c40744f03faed38af26ff308ea5bad6",
+          "image_hash_match": true,
+          "b_frozen_match": true,
+          "b_inputs_match": true,
+          "reconstructed_request_sha256": "af04528119ce8d7c2df960064cbc12795044723a918d3dfa91afc1a4b86bc4e9"
+        },
+        {
+          "sample_id": "north_2400",
+          "camera": "north",
+          "time": 2400,
+          "image_exists": true,
+          "declared_image_sha256": "72bc61b74fa631779befc82dcf5228144dbc50d5020db1ccab5bddd1e9cbfcf9",
+          "actual_image_sha256": "72bc61b74fa631779befc82dcf5228144dbc50d5020db1ccab5bddd1e9cbfcf9",
+          "b_frozen_sha256": "72bc61b74fa631779befc82dcf5228144dbc50d5020db1ccab5bddd1e9cbfcf9",
+          "b_inputs_aisle_sha256": "72bc61b74fa631779befc82dcf5228144dbc50d5020db1ccab5bddd1e9cbfcf9",
+          "image_hash_match": true,
+          "b_frozen_match": true,
+          "b_inputs_match": true,
+          "reconstructed_request_sha256": "f721bdd55f9fa486ff8996f2d8fedef384524012b5cbdd5ef6f8c4bdf8bdda41"
+        },
+        {
+          "sample_id": "north_2600",
+          "camera": "north",
+          "time": 2600,
+          "image_exists": true,
+          "declared_image_sha256": "2b1ecba43d6312d4dcbc6f32b061cb9d20069b7c6f55ef023f22222b073e15a0",
+          "actual_image_sha256": "2b1ecba43d6312d4dcbc6f32b061cb9d20069b7c6f55ef023f22222b073e15a0",
+          "b_frozen_sha256": "2b1ecba43d6312d4dcbc6f32b061cb9d20069b7c6f55ef023f22222b073e15a0",
+          "b_inputs_aisle_sha256": "2b1ecba43d6312d4dcbc6f32b061cb9d20069b7c6f55ef023f22222b073e15a0",
+          "image_hash_match": true,
+          "b_frozen_match": true,
+          "b_inputs_match": true,
+          "reconstructed_request_sha256": "2db3e67329435134931ab26b1b18e3f81e7eacb9accaf6703df678eb2c0c5818"
+        },
+        {
+          "sample_id": "north_300",
+          "camera": "north",
+          "time": 300,
+          "image_exists": true,
+          "declared_image_sha256": "d72bd31e5bbc6d9b25365897716407b9f872b6375f20f7407f4acf9a45480d31",
+          "actual_image_sha256": "d72bd31e5bbc6d9b25365897716407b9f872b6375f20f7407f4acf9a45480d31",
+          "b_frozen_sha256": "d72bd31e5bbc6d9b25365897716407b9f872b6375f20f7407f4acf9a45480d31",
+          "b_inputs_aisle_sha256": "d72bd31e5bbc6d9b25365897716407b9f872b6375f20f7407f4acf9a45480d31",
+          "image_hash_match": true,
+          "b_frozen_match": true,
+          "b_inputs_match": true,
+          "reconstructed_request_sha256": "df7a52899db5b9c20ae47a42c15ae78104166064f5fca70f3d2b97709e0d3304"
+        },
+        {
+          "sample_id": "north_5",
+          "camera": "north",
+          "time": 5,
+          "image_exists": true,
+          "declared_image_sha256": "80362e5b92d7d64da310ca845711e25252ea3794cb30259483f052b010cefb3f",
+          "actual_image_sha256": "80362e5b92d7d64da310ca845711e25252ea3794cb30259483f052b010cefb3f",
+          "b_frozen_sha256": "80362e5b92d7d64da310ca845711e25252ea3794cb30259483f052b010cefb3f",
+          "b_inputs_aisle_sha256": "80362e5b92d7d64da310ca845711e25252ea3794cb30259483f052b010cefb3f",
+          "image_hash_match": true,
+          "b_frozen_match": true,
+          "b_inputs_match": true,
+          "reconstructed_request_sha256": "2f4cece5d52295db9c300d6b8c79f8f21fd68592d5737e186a394bc4725f9ba5"
+        },
+        {
+          "sample_id": "north_600",
+          "camera": "north",
+          "time": 600,
+          "image_exists": true,
+          "declared_image_sha256": "e5dead0bf6d26d76456b95191b84f06bc33762889da3adcce16f75f3eee3163f",
+          "actual_image_sha256": "e5dead0bf6d26d76456b95191b84f06bc33762889da3adcce16f75f3eee3163f",
+          "b_frozen_sha256": "e5dead0bf6d26d76456b95191b84f06bc33762889da3adcce16f75f3eee3163f",
+          "b_inputs_aisle_sha256": "e5dead0bf6d26d76456b95191b84f06bc33762889da3adcce16f75f3eee3163f",
+          "image_hash_match": true,
+          "b_frozen_match": true,
+          "b_inputs_match": true,
+          "reconstructed_request_sha256": "8e41091570e08738ca054f402ee2abb655b34adb3b83edb9f040cb2c83841045"
+        },
+        {
+          "sample_id": "north_900",
+          "camera": "north",
+          "time": 900,
+          "image_exists": true,
+          "declared_image_sha256": "b22928cafac411ed6aede1898471ce8d007a6a0a109a8a8e89ee5d4e224bddd4",
+          "actual_image_sha256": "b22928cafac411ed6aede1898471ce8d007a6a0a109a8a8e89ee5d4e224bddd4",
+          "b_frozen_sha256": "b22928cafac411ed6aede1898471ce8d007a6a0a109a8a8e89ee5d4e224bddd4",
+          "b_inputs_aisle_sha256": "b22928cafac411ed6aede1898471ce8d007a6a0a109a8a8e89ee5d4e224bddd4",
+          "image_hash_match": true,
+          "b_frozen_match": true,
+          "b_inputs_match": true,
+          "reconstructed_request_sha256": "6e19c878b43abfa6cd065fc762fc04878bf7d1492a5179e7727edc191db01d7d"
+        },
+        {
+          "sample_id": "south_1200",
+          "camera": "south",
+          "time": 1200,
+          "image_exists": true,
+          "declared_image_sha256": "36adea231c5640636f5d8c651531b43772795fb345f14375f529e958cda19d59",
+          "actual_image_sha256": "36adea231c5640636f5d8c651531b43772795fb345f14375f529e958cda19d59",
+          "b_frozen_sha256": "36adea231c5640636f5d8c651531b43772795fb345f14375f529e958cda19d59",
+          "b_inputs_aisle_sha256": "36adea231c5640636f5d8c651531b43772795fb345f14375f529e958cda19d59",
+          "image_hash_match": true,
+          "b_frozen_match": true,
+          "b_inputs_match": true,
+          "reconstructed_request_sha256": "5dbb9b91cb8768676ff93048c2fd4fff24779621c6cd28161ed918ba39b274a5"
+        },
+        {
+          "sample_id": "south_1500",
+          "camera": "south",
+          "time": 1500,
+          "image_exists": true,
+          "declared_image_sha256": "a6b457b1cc7e51965943a1a8f563a68bd865c4ed2905e2749d4888b8b5182675",
+          "actual_image_sha256": "a6b457b1cc7e51965943a1a8f563a68bd865c4ed2905e2749d4888b8b5182675",
+          "b_frozen_sha256": "a6b457b1cc7e51965943a1a8f563a68bd865c4ed2905e2749d4888b8b5182675",
+          "b_inputs_aisle_sha256": "a6b457b1cc7e51965943a1a8f563a68bd865c4ed2905e2749d4888b8b5182675",
+          "image_hash_match": true,
+          "b_frozen_match": true,
+          "b_inputs_match": true,
+          "reconstructed_request_sha256": "246e60db348e979cc2bae50f3a7ce8a2033af358d10465747dfca4e73835c594"
+        },
+        {
+          "sample_id": "south_1800",
+          "camera": "south",
+          "time": 1800,
+          "image_exists": true,
+          "declared_image_sha256": "87f5f0f890b083db6cc700508514e038a3a16c2bcc52c62b6490d321a3985bfc",
+          "actual_image_sha256": "87f5f0f890b083db6cc700508514e038a3a16c2bcc52c62b6490d321a3985bfc",
+          "b_frozen_sha256": "87f5f0f890b083db6cc700508514e038a3a16c2bcc52c62b6490d321a3985bfc",
+          "b_inputs_aisle_sha256": "87f5f0f890b083db6cc700508514e038a3a16c2bcc52c62b6490d321a3985bfc",
+          "image_hash_match": true,
+          "b_frozen_match": true,
+          "b_inputs_match": true,
+          "reconstructed_request_sha256": "4a43172d5c202e0e68dd8407e56e4406c2d3bda749428f1ea202b95838432cbf"
+        },
+        {
+          "sample_id": "south_2100",
+          "camera": "south",
+          "time": 2100,
+          "image_exists": true,
+          "declared_image_sha256": "d6d067dc76bf0b7d24ca7993637c3fa88fa45a0e68aa602e98c6d7dd55ae6901",
+          "actual_image_sha256": "d6d067dc76bf0b7d24ca7993637c3fa88fa45a0e68aa602e98c6d7dd55ae6901",
+          "b_frozen_sha256": "d6d067dc76bf0b7d24ca7993637c3fa88fa45a0e68aa602e98c6d7dd55ae6901",
+          "b_inputs_aisle_sha256": "d6d067dc76bf0b7d24ca7993637c3fa88fa45a0e68aa602e98c6d7dd55ae6901",
+          "image_hash_match": true,
+          "b_frozen_match": true,
+          "b_inputs_match": true,
+          "reconstructed_request_sha256": "be6eac51202376ed3e30b46aca9617c3eb47548348fd436810b29cafb4657a0f"
+        },
+        {
+          "sample_id": "south_2400",
+          "camera": "south",
+          "time": 2400,
+          "image_exists": true,
+          "declared_image_sha256": "80db50ace44e25426e7dccb801fa8f95496c69f79829f6e8cfc5007a4107b280",
+          "actual_image_sha256": "80db50ace44e25426e7dccb801fa8f95496c69f79829f6e8cfc5007a4107b280",
+          "b_frozen_sha256": "80db50ace44e25426e7dccb801fa8f95496c69f79829f6e8cfc5007a4107b280",
+          "b_inputs_aisle_sha256": "80db50ace44e25426e7dccb801fa8f95496c69f79829f6e8cfc5007a4107b280",
+          "image_hash_match": true,
+          "b_frozen_match": true,
+          "b_inputs_match": true,
+          "reconstructed_request_sha256": "f71bdd0e8e0d952f1b891af11c0760a81346e3fea4664e9037bd5edebbcdfc0b"
+        },
+        {
+          "sample_id": "south_2600",
+          "camera": "south",
+          "time": 2600,
+          "image_exists": true,
+          "declared_image_sha256": "c93c33cc2185c65abe8f72c3bc3fb0c041dfbc12e19c967f38d22e395d0cfe3b",
+          "actual_image_sha256": "c93c33cc2185c65abe8f72c3bc3fb0c041dfbc12e19c967f38d22e395d0cfe3b",
+          "b_frozen_sha256": "c93c33cc2185c65abe8f72c3bc3fb0c041dfbc12e19c967f38d22e395d0cfe3b",
+          "b_inputs_aisle_sha256": "c93c33cc2185c65abe8f72c3bc3fb0c041dfbc12e19c967f38d22e395d0cfe3b",
+          "image_hash_match": true,
+          "b_frozen_match": true,
+          "b_inputs_match": true,
+          "reconstructed_request_sha256": "94bae1c0f5932f5a99090d9a6a482b197a37247f081221f21e43d06d7320b439"
+        },
+        {
+          "sample_id": "south_300",
+          "camera": "south",
+          "time": 300,
+          "image_exists": true,
+          "declared_image_sha256": "058c8b76e99edd8cf5a91286aeab311c0667062053a848c79fc7cd2382ac8cb4",
+          "actual_image_sha256": "058c8b76e99edd8cf5a91286aeab311c0667062053a848c79fc7cd2382ac8cb4",
+          "b_frozen_sha256": "058c8b76e99edd8cf5a91286aeab311c0667062053a848c79fc7cd2382ac8cb4",
+          "b_inputs_aisle_sha256": "058c8b76e99edd8cf5a91286aeab311c0667062053a848c79fc7cd2382ac8cb4",
+          "image_hash_match": true,
+          "b_frozen_match": true,
+          "b_inputs_match": true,
+          "reconstructed_request_sha256": "67bd2cc0cc51642e1849c4861d011e56e51ec72bd53fed69dded595bc8a39f36"
+        },
+        {
+          "sample_id": "south_5",
+          "camera": "south",
+          "time": 5,
+          "image_exists": true,
+          "declared_image_sha256": "78b40fbe1dd69c39f797b6da25e15750b2350652beb174bd472ae0cc6c9065a4",
+          "actual_image_sha256": "78b40fbe1dd69c39f797b6da25e15750b2350652beb174bd472ae0cc6c9065a4",
+          "b_frozen_sha256": "78b40fbe1dd69c39f797b6da25e15750b2350652beb174bd472ae0cc6c9065a4",
+          "b_inputs_aisle_sha256": "78b40fbe1dd69c39f797b6da25e15750b2350652beb174bd472ae0cc6c9065a4",
+          "image_hash_match": true,
+          "b_frozen_match": true,
+          "b_inputs_match": true,
+          "reconstructed_request_sha256": "7bf8d06a636aa12943cc2725593b62f7e581688a95ea903f34cebe765753045a"
+        },
+        {
+          "sample_id": "south_600",
+          "camera": "south",
+          "time": 600,
+          "image_exists": true,
+          "declared_image_sha256": "e841ae3fefba7e4efdb8844b75a8640a84896cfca2565c62e8b5625a3c123b51",
+          "actual_image_sha256": "e841ae3fefba7e4efdb8844b75a8640a84896cfca2565c62e8b5625a3c123b51",
+          "b_frozen_sha256": "e841ae3fefba7e4efdb8844b75a8640a84896cfca2565c62e8b5625a3c123b51",
+          "b_inputs_aisle_sha256": "e841ae3fefba7e4efdb8844b75a8640a84896cfca2565c62e8b5625a3c123b51",
+          "image_hash_match": true,
+          "b_frozen_match": true,
+          "b_inputs_match": true,
+          "reconstructed_request_sha256": "d05773635daf4713d1a899676d56e3971fcab4ec5b8b2e8527a09a27b7defa72"
+        },
+        {
+          "sample_id": "south_900",
+          "camera": "south",
+          "time": 900,
+          "image_exists": true,
+          "declared_image_sha256": "46785cb75d19904c1996b6955576191819118c4c03580f074f7c67107cc7b58f",
+          "actual_image_sha256": "46785cb75d19904c1996b6955576191819118c4c03580f074f7c67107cc7b58f",
+          "b_frozen_sha256": "46785cb75d19904c1996b6955576191819118c4c03580f074f7c67107cc7b58f",
+          "b_inputs_aisle_sha256": "46785cb75d19904c1996b6955576191819118c4c03580f074f7c67107cc7b58f",
+          "image_hash_match": true,
+          "b_frozen_match": true,
+          "b_inputs_match": true,
+          "reconstructed_request_sha256": "42f820a350d5c424d73abbd858626bbbd159cb92faced22e0fc3a218512841b7"
+        }
+      ],
+      "all_match": true
+    },
+    "raw_manifest": {
+      "schema": "round2-roof-only-raw-manifest-audit-v1",
+      "manifest_sha256": "c9baf97d4ff3eaaccc247ab3af0ad9b0f9a70434512848b5bf3a73bd3d826396",
+      "file_count": 80,
+      "matches": 80,
+      "mismatches": [],
+      "all_match": true
+    },
+    "attempts": {
+      "schema": "round2-roof-only-attempt-audit-v1",
+      "sample_count": 20,
+      "http_attempts": 20,
+      "all_requests_reconstructed": true,
+      "all_single_attempts": true,
+      "all_transport_clean": true,
+      "token_totals": {
+        "prompt_tokens": 36680,
+        "completion_tokens": 37303,
+        "total_tokens": 73983
+      },
+      "forbidden_evidence_term_hits": [
+        {
+          "sample_id": "north_2400",
+          "source": "reasoning",
+          "term": "车牌",
+          "context": "ount是2。\n\n现在检查有没有符合要求：没有用车牌、侧面等，都是顶部证据，分组正确，没有重复。\n\n",
+          "negative_instruction_mention": true
+        },
+        {
+          "sample_id": "north_2400",
+          "source": "reasoning",
+          "term": "侧面",
+          "context": "t是2。\n\n现在检查有没有符合要求：没有用车牌、侧面等，都是顶部证据，分组正确，没有重复。\n\n对，这",
+          "negative_instruction_mention": true
+        },
+        {
+          "sample_id": "north_2600",
+          "source": "reasoning",
+          "term": "车牌",
+          "context": "550]。\n\n检查是否符合要求：只看顶部，没有用车牌等，都是可见顶部，独立的，所以没问题。\n\n现在输",
+          "negative_instruction_mention": true
+        },
+        {
+          "sample_id": "north_600",
+          "source": "reasoning",
+          "term": "车牌",
+          "context": "格式，要严格按照要求。\n等下，再检查要求：不能用车牌、文字、车灯、轮胎、侧面、底盘，只能顶部。所以R",
+          "negative_instruction_mention": true
+        },
+        {
+          "sample_id": "north_600",
+          "source": "reasoning",
+          "term": "轮胎",
+          "context": "求。\n等下，再检查要求：不能用车牌、文字、车灯、轮胎、侧面、底盘，只能顶部。所以R1的证据是“可见红",
+          "negative_instruction_mention": true
+        },
+        {
+          "sample_id": "north_600",
+          "source": "reasoning",
+          "term": "车灯",
+          "context": "按照要求。\n等下，再检查要求：不能用车牌、文字、车灯、轮胎、侧面、底盘，只能顶部。所以R1的证据是“",
+          "negative_instruction_mention": true
+        },
+        {
+          "sample_id": "north_600",
+          "source": "reasoning",
+          "term": "侧面",
+          "context": "等下，再检查要求：不能用车牌、文字、车灯、轮胎、侧面、底盘，只能顶部。所以R1的证据是“可见红色封闭",
+          "negative_instruction_mention": true
+        },
+        {
+          "sample_id": "north_600",
+          "source": "reasoning",
+          "term": "底盘",
+          "context": "再检查要求：不能用车牌、文字、车灯、轮胎、侧面、底盘，只能顶部。所以R1的证据是“可见红色封闭货厢顶",
+          "negative_instruction_mention": true
+        },
+        {
+          "sample_id": "north_900",
+          "source": "reasoning",
+          "term": "车牌",
+          "context": "\"count\":3}\n\n对吗？再检查要求：不能用车牌、侧面等，只看顶部，每个候选有可见顶部，分组正确",
+          "negative_instruction_mention": true
+        },
+        {
+          "sample_id": "north_900",
+          "source": "reasoning",
+          "term": "侧面",
+          "context": "是不是被挡住了？不对，用户说只看可见顶部，不能看侧面。那最下方的那个，可见的顶部是白色的厢式顶，是一",
+          "negative_instruction_mention": true
+        },
+        {
+          "sample_id": "north_900",
+          "source": "reasoning",
+          "term": "侧面",
+          "context": "unt\":3}\n\n对吗？再检查要求：不能用车牌、侧面等，只看顶部，每个候选有可见顶部，分组正确，co",
+          "negative_instruction_mention": true
+        },
+        {
+          "sample_id": "south_1800",
+          "source": "reasoning",
+          "term": "车牌",
+          "context": "吗？再检查用户的要求：\n- 只算可见顶部，不能用车牌等。\n- 牵引车和挂车合算一辆，所以如果有货厢顶",
+          "negative_instruction_mention": true
+        },
+        {
+          "sample_id": "south_2400",
+          "source": "reasoning",
+          "term": "车牌",
+          "context": "对，这样应该符合要求，检查有没有违反规则：没有用车牌等，都是顶部证据，三个都确认，没有uncerta",
+          "negative_instruction_mention": true
+        }
+      ],
+      "forbidden_term_positive_use_suspects": [],
+      "rows": [
+        {
+          "sample_id": "north_1200",
+          "attempt_file": "raw\\north_1200.attempt1.json",
+          "valid": true,
+          "schema_errors": [],
+          "invalid_kind_indices": [],
+          "request_sha256_matches_reconstruction": true,
+          "issues": []
+        },
+        {
+          "sample_id": "north_1500",
+          "attempt_file": "raw\\north_1500.attempt1.json",
+          "valid": true,
+          "schema_errors": [],
+          "invalid_kind_indices": [],
+          "request_sha256_matches_reconstruction": true,
+          "issues": []
+        },
+        {
+          "sample_id": "north_1800",
+          "attempt_file": "raw\\north_1800.attempt1.json",
+          "valid": true,
+          "schema_errors": [],
+          "invalid_kind_indices": [],
+          "request_sha256_matches_reconstruction": true,
+          "issues": []
+        },
+        {
+          "sample_id": "north_2100",
+          "attempt_file": "raw\\north_2100.attempt1.json",
+          "valid": true,
+          "schema_errors": [],
+          "invalid_kind_indices": [],
+          "request_sha256_matches_reconstruction": true,
+          "issues": []
+        },
+        {
+          "sample_id": "north_2400",
+          "attempt_file": "raw\\north_2400.attempt1.json",
+          "valid": true,
+          "schema_errors": [],
+          "invalid_kind_indices": [],
+          "request_sha256_matches_reconstruction": true,
+          "issues": []
+        },
+        {
+          "sample_id": "north_2600",
+          "attempt_file": "raw\\north_2600.attempt1.json",
+          "valid": true,
+          "schema_errors": [],
+          "invalid_kind_indices": [],
+          "request_sha256_matches_reconstruction": true,
+          "issues": []
+        },
+        {
+          "sample_id": "north_300",
+          "attempt_file": "raw\\north_300.attempt1.json",
+          "valid": true,
+          "schema_errors": [],
+          "invalid_kind_indices": [],
+          "request_sha256_matches_reconstruction": true,
+          "issues": []
+        },
+        {
+          "sample_id": "north_5",
+          "attempt_file": "raw\\north_5.attempt1.json",
+          "valid": true,
+          "schema_errors": [],
+          "invalid_kind_indices": [],
+          "request_sha256_matches_reconstruction": true,
+          "issues": []
+        },
+        {
+          "sample_id": "north_600",
+          "attempt_file": "raw\\north_600.attempt1.json",
+          "valid": true,
+          "schema_errors": [],
+          "invalid_kind_indices": [],
+          "request_sha256_matches_reconstruction": true,
+          "issues": []
+        },
+        {
+          "sample_id": "north_900",
+          "attempt_file": "raw\\north_900.attempt1.json",
+          "valid": true,
+          "schema_errors": [],
+          "invalid_kind_indices": [],
+          "request_sha256_matches_reconstruction": true,
+          "issues": []
+        },
+        {
+          "sample_id": "south_1200",
+          "attempt_file": "raw\\south_1200.attempt1.json",
+          "valid": false,
+          "schema_errors": [
+            "roof_0_invalid_kind",
+            "roof_1_invalid_kind"
+          ],
+          "invalid_kind_indices": [
+            0,
+            1
+          ],
+          "request_sha256_matches_reconstruction": true,
+          "issues": []
+        },
+        {
+          "sample_id": "south_1500",
+          "attempt_file": "raw\\south_1500.attempt1.json",
+          "valid": false,
+          "schema_errors": [
+            "roof_0_invalid_kind",
+            "roof_1_invalid_kind",
+            "roof_2_invalid_kind",
+            "roof_3_invalid_kind"
+          ],
+          "invalid_kind_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "request_sha256_matches_reconstruction": true,
+          "issues": []
+        },
+        {
+          "sample_id": "south_1800",
+          "attempt_file": "raw\\south_1800.attempt1.json",
+          "valid": false,
+          "schema_errors": [
+            "roof_0_invalid_kind",
+            "roof_1_invalid_kind"
+          ],
+          "invalid_kind_indices": [
+            0,
+            1
+          ],
+          "request_sha256_matches_reconstruction": true,
+          "issues": []
+        },
+        {
+          "sample_id": "south_2100",
+          "attempt_file": "raw\\south_2100.attempt1.json",
+          "valid": true,
+          "schema_errors": [],
+          "invalid_kind_indices": [],
+          "request_sha256_matches_reconstruction": true,
+          "issues": []
+        },
+        {
+          "sample_id": "south_2400",
+          "attempt_file": "raw\\south_2400.attempt1.json",
+          "valid": false,
+          "schema_errors": [
+            "roof_0_invalid_kind",
+            "roof_1_invalid_kind",
+            "roof_2_invalid_kind"
+          ],
+          "invalid_kind_indices": [
+            0,
+            1,
+            2
+          ],
+          "request_sha256_matches_reconstruction": true,
+          "issues": []
+        },
+        {
+          "sample_id": "south_2600",
+          "attempt_file": "raw\\south_2600.attempt1.json",
+          "valid": false,
+          "schema_errors": [
+            "roof_0_invalid_kind",
+            "roof_1_invalid_kind",
+            "roof_2_invalid_kind"
+          ],
+          "invalid_kind_indices": [
+            0,
+            1,
+            2
+          ],
+          "request_sha256_matches_reconstruction": true,
+          "issues": []
+        },
+        {
+          "sample_id": "south_300",
+          "attempt_file": "raw\\south_300.attempt1.json",
+          "valid": true,
+          "schema_errors": [],
+          "invalid_kind_indices": [],
+          "request_sha256_matches_reconstruction": true,
+          "issues": []
+        },
+        {
+          "sample_id": "south_5",
+          "attempt_file": "raw\\south_5.attempt1.json",
+          "valid": true,
+          "schema_errors": [],
+          "invalid_kind_indices": [],
+          "request_sha256_matches_reconstruction": true,
+          "issues": []
+        },
+        {
+          "sample_id": "south_600",
+          "attempt_file": "raw\\south_600.attempt1.json",
+          "valid": false,
+          "schema_errors": [
+            "roof_0_invalid_kind",
+            "roof_1_invalid_kind",
+            "roof_2_invalid_kind",
+            "roof_3_invalid_kind"
+          ],
+          "invalid_kind_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "request_sha256_matches_reconstruction": true,
+          "issues": []
+        },
+        {
+          "sample_id": "south_900",
+          "attempt_file": "raw\\south_900.attempt1.json",
+          "valid": false,
+          "schema_errors": [
+            "roof_0_invalid_kind"
+          ],
+          "invalid_kind_indices": [
+            0
+          ],
+          "request_sha256_matches_reconstruction": true,
+          "issues": []
+        }
+      ],
+      "all_match": true
+    },
+    "summary_json_sha256": "7e75c722d2680f5aa58da3e4b7fbb877c333713b11e22c8770b237f9a01ed76f",
+    "summary_resolved_sha256": "9addbb458fd0cde39e781206ee355655514e945f23b9b132db6338a191763fba",
+    "manifest_sha256": "ebe082aabb971d3a296fa92346169a24cffbbe9327327445c9258b3c775ddeed",
+    "run_completed_sha256": "265824b5209be2d17d6d01f9102de2eb65ec2587d975af27b31bd78024353b73"
+  },
+  "declared_comparison": {
+    "checks": {
+      "valid_N": true,
+      "failures": true,
+      "exact": true,
+      "mae": true,
+      "undercount": true,
+      "overcount": true,
+      "refusals": true,
+      "http_attempts": true,
+      "http_successes": true,
+      "transport_retries": true,
+      "tokens": true,
+      "count_exact": true,
+      "fully_resolved_count_exact": true,
+      "schema_valid_count_exact": true,
+      "schema_valid_fully_resolved_count_exact": true,
+      "count_exact_with_schema_failure": true,
+      "uncertain_samples": true,
+      "uncertain_groups": true,
+      "uncertain_roofs": true,
+      "size_unknown": true,
+      "roof_kind_unknown": true,
+      "raw_count_consistency": true,
+      "mean_http_latency": true,
+      "p95_http_latency": true,
+      "mean_sample_e2e": true,
+      "p95_sample_e2e": true,
+      "wall_clock": true
+    },
+    "all_match": true
+  },
+  "performance": {
+    "online": {
+      "calls": 20,
+      "successes": 20,
+      "retries": 0,
+      "images": 20,
+      "tokens": 73983,
+      "latency_mean_s": 15.427,
+      "latency_p95_s": 23.967,
+      "sample_e2e_mean_s": 15.435,
+      "sample_e2e_p95_s": 23.977,
+      "serial_equivalent_s": 308.703,
+      "concurrency": 2,
+      "wall_clock_s": 160.229027
+    },
+    "initialization": null,
+    "peak_memory_mb": null,
+    "note": "Initialization memory/time was not published; null is retained rather than imputed as free."
+  }
+}

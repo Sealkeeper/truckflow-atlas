@@ -1,0 +1,832 @@
+{
+  "schema": "round2-b-input-audit-v1",
+  "inputs_json_sha256": "e8775b0acaa1ee809c90517f5383f5065df5652f15f9709753ce24cfb9726e79",
+  "prompt_path": "repo://coord\\exploration\\single-pass\\prompt_aisle.txt",
+  "prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "prompt_expected_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "prompt_match": true,
+  "sample_count": 20,
+  "unique_sample_count": 20,
+  "duplicate_sample_ids": [],
+  "aisle_hash_matches": 20,
+  "aisle_all_match": true,
+  "all_variant_hash_matches": 1,
+  "mismatches": [
+    {
+      "sample_id": "north_1200",
+      "variant": "full",
+      "expected": "e0e65ed4d8f6149be6b07f09191211a49d09e2d1c3dad285ad999a4c0b1132ed",
+      "actual": null
+    },
+    {
+      "sample_id": "north_1200",
+      "variant": "far",
+      "expected": "bc9b8180b1855a523a13ba288293597f124b0352899a5de209cfc72cc368710a",
+      "actual": null
+    },
+    {
+      "sample_id": "north_1500",
+      "variant": "full",
+      "expected": "d816efbe3418ca6902153e71cf1200f08b03d6c5d192e2f7fd5e6e836ee0cd13",
+      "actual": null
+    },
+    {
+      "sample_id": "north_1500",
+      "variant": "far",
+      "expected": "4383d47c8359642dd4db0a0c34ef131f0b06ac4e210a7ef60e569d419032a564",
+      "actual": null
+    },
+    {
+      "sample_id": "north_1800",
+      "variant": "full",
+      "expected": "9af3f7dc80dfb8e620d972f1c032c5f4bea07a93f80275e0fed2c5557ed3ed45",
+      "actual": null
+    },
+    {
+      "sample_id": "north_1800",
+      "variant": "far",
+      "expected": "1e0d210600891480d875be94bd3672c40d7a26e3bdbf9ec622d830b5c993df44",
+      "actual": null
+    },
+    {
+      "sample_id": "north_2100",
+      "variant": "full",
+      "expected": "74f09d714c028fabd6084bbc6e7f5b00d0ab6196b90c267684fb50021376726d",
+      "actual": null
+    },
+    {
+      "sample_id": "north_2100",
+      "variant": "far",
+      "expected": "f89840834d8ed86713b05e328acf68788d1a39fc4ea4847072abd7e3a1410706",
+      "actual": null
+    },
+    {
+      "sample_id": "north_2400",
+      "variant": "full",
+      "expected": "42950932ebe813c1668123146b8415fba52b8d0b9124c48e7e2f1709d213ce8a",
+      "actual": null
+    },
+    {
+      "sample_id": "north_2400",
+      "variant": "far",
+      "expected": "4fd9cf348e38c588cdfccbe5c0042463611e8d38b13ad9f9f374f257ff18e97a",
+      "actual": null
+    },
+    {
+      "sample_id": "north_2600",
+      "variant": "full",
+      "expected": "69c436c3f59975f8bafb174bc0e2c6f7b30edf060f8fedf3374383099d0a2a16",
+      "actual": null
+    },
+    {
+      "sample_id": "north_2600",
+      "variant": "far",
+      "expected": "82fc6ca1f33d2b0d8d9b761c8879fd7d9722406a35e1765a26b661dfbd835e91",
+      "actual": null
+    },
+    {
+      "sample_id": "north_300",
+      "variant": "full",
+      "expected": "3132b760e662f0fde7f73b99f8d30513b7916c14483b4b95a8699259d59d8f2e",
+      "actual": null
+    },
+    {
+      "sample_id": "north_300",
+      "variant": "far",
+      "expected": "7a26280c62ffb399d2ee7e770639132d490b325f73267fb8de00109cf54166a9",
+      "actual": null
+    },
+    {
+      "sample_id": "north_600",
+      "variant": "far",
+      "expected": "5ce83cda309af21c99a1dfe7ae4eff6c91743b42f0a749d8942ee42f4cb86a16",
+      "actual": null
+    },
+    {
+      "sample_id": "north_900",
+      "variant": "full",
+      "expected": "9ec7a3bfd929668aae80efbb721eddbbe8d96a50f2bfd9dc187b7aba3b0acc98",
+      "actual": null
+    },
+    {
+      "sample_id": "north_900",
+      "variant": "far",
+      "expected": "5fafb9b1534939c11fb2222c89bb66ac89241d8d03e4a865675a77ecd7419b4f",
+      "actual": null
+    },
+    {
+      "sample_id": "south_1200",
+      "variant": "full",
+      "expected": "aff6dbb883f84ab293856fcab97926763493813f2764ede7b934466c50cb3465",
+      "actual": null
+    },
+    {
+      "sample_id": "south_1200",
+      "variant": "far",
+      "expected": "b9e7be4cbe32bb9a1015126a8c9c52c32e3cb49c477d9a98843bfcc2f9dd3f7d",
+      "actual": null
+    },
+    {
+      "sample_id": "south_1500",
+      "variant": "full",
+      "expected": "6a67e533424b3b882bccbf90fc79c0af12184235398b961a519844c0b0919049",
+      "actual": null
+    },
+    {
+      "sample_id": "south_1500",
+      "variant": "far",
+      "expected": "92d885d7fdc77bce34a43969d63d931488258ddb5a74a1be784a4d7c43aec301",
+      "actual": null
+    },
+    {
+      "sample_id": "south_1800",
+      "variant": "full",
+      "expected": "2d574e3e63f4efad033d73fc83c6dbe9c7947f7000f812573aaa8492f91a4d17",
+      "actual": null
+    },
+    {
+      "sample_id": "south_1800",
+      "variant": "far",
+      "expected": "069a8cb29626e64d02de7d9822727c08be628582ee215226d0c3563f3cda201d",
+      "actual": null
+    },
+    {
+      "sample_id": "south_2100",
+      "variant": "far",
+      "expected": "557cf41d6f4efb8f60397cbba949d3179074de163af4ae1e04e1309edc02e891",
+      "actual": null
+    },
+    {
+      "sample_id": "south_2400",
+      "variant": "full",
+      "expected": "890cc70bd578d01b1a0a7e5a07dc0d36b22b783ff247f6317b939abc1feebeb2",
+      "actual": null
+    },
+    {
+      "sample_id": "south_2400",
+      "variant": "far",
+      "expected": "9937252ef3657cc0abd2973a8fd0e8070fc24b16566a35f849a9a2ec04ab3723",
+      "actual": null
+    },
+    {
+      "sample_id": "south_2600",
+      "variant": "full",
+      "expected": "3c1988272698c39245ec7eab91f1ce85c60d0938001b8dc0c331dce904113456",
+      "actual": null
+    },
+    {
+      "sample_id": "south_2600",
+      "variant": "far",
+      "expected": "fe4a50b1508acaa1eea473131d613607f491a166aad5aee0ab4d61317faaef87",
+      "actual": null
+    },
+    {
+      "sample_id": "south_300",
+      "variant": "full",
+      "expected": "6744ad54937839fa76db357ca6b6e3a3ac9cb953981df27c95817d5007ae6c8f",
+      "actual": null
+    },
+    {
+      "sample_id": "south_300",
+      "variant": "far",
+      "expected": "6794a6c9b06b7163c9cea10474ed9c54b6754ab8bff970ce04acf0063d8b6d3b",
+      "actual": null
+    },
+    {
+      "sample_id": "south_5",
+      "variant": "full",
+      "expected": "05fbf1dd60bdee2ac86e60fb05e81e06a252f2bc6a661120b40c136e99f3b174",
+      "actual": null
+    },
+    {
+      "sample_id": "south_5",
+      "variant": "far",
+      "expected": "6c99cccd8a39a692522ddee5e9ba61dc2a6977a40294aad910a243321046baa9",
+      "actual": null
+    },
+    {
+      "sample_id": "south_600",
+      "variant": "full",
+      "expected": "7ff985fa5daeef57a41e7e6e7d09183a3a04d385cf04b5c9d28d9d7eefa5c694",
+      "actual": null
+    },
+    {
+      "sample_id": "south_600",
+      "variant": "far",
+      "expected": "ac68f7b45c5dd32e12975050140737e8198ebb4bf02a98fd8e817d0c08928c53",
+      "actual": null
+    },
+    {
+      "sample_id": "south_900",
+      "variant": "full",
+      "expected": "c86b8ba1407127bb0ae2b0a487ea5d020513c2c1f48226ac149462a66bb6f07c",
+      "actual": null
+    },
+    {
+      "sample_id": "south_900",
+      "variant": "far",
+      "expected": "2827f3d22ad2149140af1d9f7beedd35bc7ebde3cfdf03649dd87c60fd58c6ac",
+      "actual": null
+    }
+  ],
+  "truth": {
+    "path": "repo://accuracy\\reviewed\\user-final-review-v2-2026-10-21.json",
+    "split": "dev",
+    "declared_schema": "truckflow-final-review-v2",
+    "complete_declared": true,
+    "working_tree_sha256": "c3fddc439da1574e74a6ceb7391297e1c65fedec109d3579da05cad05f34149d",
+    "canonical_label_sha256": "78f255b1ae37463e2b36e15befb1ff8092ca87c2c6e946979d880f42cf0e5397",
+    "n_camera_slots": 20,
+    "camera_labels_present": 20,
+    "incomplete_camera_slots": [],
+    "n_times": 10,
+    "overlap_labels_present": 10,
+    "unique_labels_present": 10,
+    "incomplete_time_slots": [],
+    "truth_formula_errors": [],
+    "truth_formula_valid": true
+  },
+  "rows": [
+    {
+      "sample_id": "north_1200",
+      "camera": "north",
+      "time": 1200,
+      "truth": 3,
+      "variants": {
+        "aisle": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\aisle\\north_1200.jpg",
+          "exists": true,
+          "expected_sha256": "8972e5ff430149be4503adcbaa9bdd8e2ae00d60bf4e4a040865bd40e1a301ed",
+          "actual_sha256": "8972e5ff430149be4503adcbaa9bdd8e2ae00d60bf4e4a040865bd40e1a301ed",
+          "match": true
+        },
+        "full": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\full\\north_1200.jpg",
+          "exists": false,
+          "expected_sha256": "e0e65ed4d8f6149be6b07f09191211a49d09e2d1c3dad285ad999a4c0b1132ed",
+          "actual_sha256": null,
+          "match": false
+        },
+        "far": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\far\\north_1200.jpg",
+          "exists": false,
+          "expected_sha256": "bc9b8180b1855a523a13ba288293597f124b0352899a5de209cfc72cc368710a",
+          "actual_sha256": null,
+          "match": false
+        }
+      }
+    },
+    {
+      "sample_id": "north_1500",
+      "camera": "north",
+      "time": 1500,
+      "truth": 2,
+      "variants": {
+        "aisle": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\aisle\\north_1500.jpg",
+          "exists": true,
+          "expected_sha256": "8f0d80d512222686ad287f456393c2e15320a46fa7acaa1907bb3695be6ea4e6",
+          "actual_sha256": "8f0d80d512222686ad287f456393c2e15320a46fa7acaa1907bb3695be6ea4e6",
+          "match": true
+        },
+        "full": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\full\\north_1500.jpg",
+          "exists": false,
+          "expected_sha256": "d816efbe3418ca6902153e71cf1200f08b03d6c5d192e2f7fd5e6e836ee0cd13",
+          "actual_sha256": null,
+          "match": false
+        },
+        "far": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\far\\north_1500.jpg",
+          "exists": false,
+          "expected_sha256": "4383d47c8359642dd4db0a0c34ef131f0b06ac4e210a7ef60e569d419032a564",
+          "actual_sha256": null,
+          "match": false
+        }
+      }
+    },
+    {
+      "sample_id": "north_1800",
+      "camera": "north",
+      "time": 1800,
+      "truth": 2,
+      "variants": {
+        "aisle": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\aisle\\north_1800.jpg",
+          "exists": true,
+          "expected_sha256": "a6ebddee4622937ef052073efa38319b43d3a8f939ff64e4019f9297752970f7",
+          "actual_sha256": "a6ebddee4622937ef052073efa38319b43d3a8f939ff64e4019f9297752970f7",
+          "match": true
+        },
+        "full": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\full\\north_1800.jpg",
+          "exists": false,
+          "expected_sha256": "9af3f7dc80dfb8e620d972f1c032c5f4bea07a93f80275e0fed2c5557ed3ed45",
+          "actual_sha256": null,
+          "match": false
+        },
+        "far": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\far\\north_1800.jpg",
+          "exists": false,
+          "expected_sha256": "1e0d210600891480d875be94bd3672c40d7a26e3bdbf9ec622d830b5c993df44",
+          "actual_sha256": null,
+          "match": false
+        }
+      }
+    },
+    {
+      "sample_id": "north_2100",
+      "camera": "north",
+      "time": 2100,
+      "truth": 2,
+      "variants": {
+        "aisle": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\aisle\\north_2100.jpg",
+          "exists": true,
+          "expected_sha256": "6d8c3af2a44b2fee82fa042ed738922d0c40744f03faed38af26ff308ea5bad6",
+          "actual_sha256": "6d8c3af2a44b2fee82fa042ed738922d0c40744f03faed38af26ff308ea5bad6",
+          "match": true
+        },
+        "full": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\full\\north_2100.jpg",
+          "exists": false,
+          "expected_sha256": "74f09d714c028fabd6084bbc6e7f5b00d0ab6196b90c267684fb50021376726d",
+          "actual_sha256": null,
+          "match": false
+        },
+        "far": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\far\\north_2100.jpg",
+          "exists": false,
+          "expected_sha256": "f89840834d8ed86713b05e328acf68788d1a39fc4ea4847072abd7e3a1410706",
+          "actual_sha256": null,
+          "match": false
+        }
+      }
+    },
+    {
+      "sample_id": "north_2400",
+      "camera": "north",
+      "time": 2400,
+      "truth": 3,
+      "variants": {
+        "aisle": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\aisle\\north_2400.jpg",
+          "exists": true,
+          "expected_sha256": "72bc61b74fa631779befc82dcf5228144dbc50d5020db1ccab5bddd1e9cbfcf9",
+          "actual_sha256": "72bc61b74fa631779befc82dcf5228144dbc50d5020db1ccab5bddd1e9cbfcf9",
+          "match": true
+        },
+        "full": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\full\\north_2400.jpg",
+          "exists": false,
+          "expected_sha256": "42950932ebe813c1668123146b8415fba52b8d0b9124c48e7e2f1709d213ce8a",
+          "actual_sha256": null,
+          "match": false
+        },
+        "far": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\far\\north_2400.jpg",
+          "exists": false,
+          "expected_sha256": "4fd9cf348e38c588cdfccbe5c0042463611e8d38b13ad9f9f374f257ff18e97a",
+          "actual_sha256": null,
+          "match": false
+        }
+      }
+    },
+    {
+      "sample_id": "north_2600",
+      "camera": "north",
+      "time": 2600,
+      "truth": 2,
+      "variants": {
+        "aisle": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\aisle\\north_2600.jpg",
+          "exists": true,
+          "expected_sha256": "2b1ecba43d6312d4dcbc6f32b061cb9d20069b7c6f55ef023f22222b073e15a0",
+          "actual_sha256": "2b1ecba43d6312d4dcbc6f32b061cb9d20069b7c6f55ef023f22222b073e15a0",
+          "match": true
+        },
+        "full": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\full\\north_2600.jpg",
+          "exists": false,
+          "expected_sha256": "69c436c3f59975f8bafb174bc0e2c6f7b30edf060f8fedf3374383099d0a2a16",
+          "actual_sha256": null,
+          "match": false
+        },
+        "far": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\far\\north_2600.jpg",
+          "exists": false,
+          "expected_sha256": "82fc6ca1f33d2b0d8d9b761c8879fd7d9722406a35e1765a26b661dfbd835e91",
+          "actual_sha256": null,
+          "match": false
+        }
+      }
+    },
+    {
+      "sample_id": "north_300",
+      "camera": "north",
+      "time": 300,
+      "truth": 3,
+      "variants": {
+        "aisle": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\aisle\\north_300.jpg",
+          "exists": true,
+          "expected_sha256": "d72bd31e5bbc6d9b25365897716407b9f872b6375f20f7407f4acf9a45480d31",
+          "actual_sha256": "d72bd31e5bbc6d9b25365897716407b9f872b6375f20f7407f4acf9a45480d31",
+          "match": true
+        },
+        "full": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\full\\north_300.jpg",
+          "exists": false,
+          "expected_sha256": "3132b760e662f0fde7f73b99f8d30513b7916c14483b4b95a8699259d59d8f2e",
+          "actual_sha256": null,
+          "match": false
+        },
+        "far": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\far\\north_300.jpg",
+          "exists": false,
+          "expected_sha256": "7a26280c62ffb399d2ee7e770639132d490b325f73267fb8de00109cf54166a9",
+          "actual_sha256": null,
+          "match": false
+        }
+      }
+    },
+    {
+      "sample_id": "north_5",
+      "camera": "north",
+      "time": 5,
+      "truth": 5,
+      "variants": {
+        "aisle": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\aisle\\north_5.jpg",
+          "exists": true,
+          "expected_sha256": "80362e5b92d7d64da310ca845711e25252ea3794cb30259483f052b010cefb3f",
+          "actual_sha256": "80362e5b92d7d64da310ca845711e25252ea3794cb30259483f052b010cefb3f",
+          "match": true
+        },
+        "full": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\full\\north_5.jpg",
+          "exists": true,
+          "expected_sha256": "aba361d1b6b3bc83ff0813cefa3772ab0379d66435e0f1fdd82a17ba79bf5866",
+          "actual_sha256": "aba361d1b6b3bc83ff0813cefa3772ab0379d66435e0f1fdd82a17ba79bf5866",
+          "match": true
+        },
+        "far": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\far\\north_5.jpg",
+          "exists": true,
+          "expected_sha256": "4cf3ee67fa9e2c00ce82480d139af7b7dbfeab77ee21e38d8186d46a48f8e5ef",
+          "actual_sha256": "4cf3ee67fa9e2c00ce82480d139af7b7dbfeab77ee21e38d8186d46a48f8e5ef",
+          "match": true
+        }
+      }
+    },
+    {
+      "sample_id": "north_600",
+      "camera": "north",
+      "time": 600,
+      "truth": 4,
+      "variants": {
+        "aisle": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\aisle\\north_600.jpg",
+          "exists": true,
+          "expected_sha256": "e5dead0bf6d26d76456b95191b84f06bc33762889da3adcce16f75f3eee3163f",
+          "actual_sha256": "e5dead0bf6d26d76456b95191b84f06bc33762889da3adcce16f75f3eee3163f",
+          "match": true
+        },
+        "full": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\full\\north_600.jpg",
+          "exists": true,
+          "expected_sha256": "45413698ea1a381cfc03c9fcf1837448ef32b80286594d4905984c9ba8a4eeaf",
+          "actual_sha256": "45413698ea1a381cfc03c9fcf1837448ef32b80286594d4905984c9ba8a4eeaf",
+          "match": true
+        },
+        "far": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\far\\north_600.jpg",
+          "exists": false,
+          "expected_sha256": "5ce83cda309af21c99a1dfe7ae4eff6c91743b42f0a749d8942ee42f4cb86a16",
+          "actual_sha256": null,
+          "match": false
+        }
+      }
+    },
+    {
+      "sample_id": "north_900",
+      "camera": "north",
+      "time": 900,
+      "truth": 3,
+      "variants": {
+        "aisle": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\aisle\\north_900.jpg",
+          "exists": true,
+          "expected_sha256": "b22928cafac411ed6aede1898471ce8d007a6a0a109a8a8e89ee5d4e224bddd4",
+          "actual_sha256": "b22928cafac411ed6aede1898471ce8d007a6a0a109a8a8e89ee5d4e224bddd4",
+          "match": true
+        },
+        "full": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\full\\north_900.jpg",
+          "exists": false,
+          "expected_sha256": "9ec7a3bfd929668aae80efbb721eddbbe8d96a50f2bfd9dc187b7aba3b0acc98",
+          "actual_sha256": null,
+          "match": false
+        },
+        "far": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\far\\north_900.jpg",
+          "exists": false,
+          "expected_sha256": "5fafb9b1534939c11fb2222c89bb66ac89241d8d03e4a865675a77ecd7419b4f",
+          "actual_sha256": null,
+          "match": false
+        }
+      }
+    },
+    {
+      "sample_id": "south_1200",
+      "camera": "south",
+      "time": 1200,
+      "truth": 5,
+      "variants": {
+        "aisle": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\aisle\\south_1200.jpg",
+          "exists": true,
+          "expected_sha256": "36adea231c5640636f5d8c651531b43772795fb345f14375f529e958cda19d59",
+          "actual_sha256": "36adea231c5640636f5d8c651531b43772795fb345f14375f529e958cda19d59",
+          "match": true
+        },
+        "full": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\full\\south_1200.jpg",
+          "exists": false,
+          "expected_sha256": "aff6dbb883f84ab293856fcab97926763493813f2764ede7b934466c50cb3465",
+          "actual_sha256": null,
+          "match": false
+        },
+        "far": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\far\\south_1200.jpg",
+          "exists": false,
+          "expected_sha256": "b9e7be4cbe32bb9a1015126a8c9c52c32e3cb49c477d9a98843bfcc2f9dd3f7d",
+          "actual_sha256": null,
+          "match": false
+        }
+      }
+    },
+    {
+      "sample_id": "south_1500",
+      "camera": "south",
+      "time": 1500,
+      "truth": 5,
+      "variants": {
+        "aisle": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\aisle\\south_1500.jpg",
+          "exists": true,
+          "expected_sha256": "a6b457b1cc7e51965943a1a8f563a68bd865c4ed2905e2749d4888b8b5182675",
+          "actual_sha256": "a6b457b1cc7e51965943a1a8f563a68bd865c4ed2905e2749d4888b8b5182675",
+          "match": true
+        },
+        "full": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\full\\south_1500.jpg",
+          "exists": false,
+          "expected_sha256": "6a67e533424b3b882bccbf90fc79c0af12184235398b961a519844c0b0919049",
+          "actual_sha256": null,
+          "match": false
+        },
+        "far": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\far\\south_1500.jpg",
+          "exists": false,
+          "expected_sha256": "92d885d7fdc77bce34a43969d63d931488258ddb5a74a1be784a4d7c43aec301",
+          "actual_sha256": null,
+          "match": false
+        }
+      }
+    },
+    {
+      "sample_id": "south_1800",
+      "camera": "south",
+      "time": 1800,
+      "truth": 4,
+      "variants": {
+        "aisle": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\aisle\\south_1800.jpg",
+          "exists": true,
+          "expected_sha256": "87f5f0f890b083db6cc700508514e038a3a16c2bcc52c62b6490d321a3985bfc",
+          "actual_sha256": "87f5f0f890b083db6cc700508514e038a3a16c2bcc52c62b6490d321a3985bfc",
+          "match": true
+        },
+        "full": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\full\\south_1800.jpg",
+          "exists": false,
+          "expected_sha256": "2d574e3e63f4efad033d73fc83c6dbe9c7947f7000f812573aaa8492f91a4d17",
+          "actual_sha256": null,
+          "match": false
+        },
+        "far": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\far\\south_1800.jpg",
+          "exists": false,
+          "expected_sha256": "069a8cb29626e64d02de7d9822727c08be628582ee215226d0c3563f3cda201d",
+          "actual_sha256": null,
+          "match": false
+        }
+      }
+    },
+    {
+      "sample_id": "south_2100",
+      "camera": "south",
+      "time": 2100,
+      "truth": 3,
+      "variants": {
+        "aisle": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\aisle\\south_2100.jpg",
+          "exists": true,
+          "expected_sha256": "d6d067dc76bf0b7d24ca7993637c3fa88fa45a0e68aa602e98c6d7dd55ae6901",
+          "actual_sha256": "d6d067dc76bf0b7d24ca7993637c3fa88fa45a0e68aa602e98c6d7dd55ae6901",
+          "match": true
+        },
+        "full": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\full\\south_2100.jpg",
+          "exists": true,
+          "expected_sha256": "f15fc0084ddf467f4ef522be9f51692ece8cdc1664949cf0dac6c846f3abf2a5",
+          "actual_sha256": "f15fc0084ddf467f4ef522be9f51692ece8cdc1664949cf0dac6c846f3abf2a5",
+          "match": true
+        },
+        "far": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\far\\south_2100.jpg",
+          "exists": false,
+          "expected_sha256": "557cf41d6f4efb8f60397cbba949d3179074de163af4ae1e04e1309edc02e891",
+          "actual_sha256": null,
+          "match": false
+        }
+      }
+    },
+    {
+      "sample_id": "south_2400",
+      "camera": "south",
+      "time": 2400,
+      "truth": 3,
+      "variants": {
+        "aisle": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\aisle\\south_2400.jpg",
+          "exists": true,
+          "expected_sha256": "80db50ace44e25426e7dccb801fa8f95496c69f79829f6e8cfc5007a4107b280",
+          "actual_sha256": "80db50ace44e25426e7dccb801fa8f95496c69f79829f6e8cfc5007a4107b280",
+          "match": true
+        },
+        "full": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\full\\south_2400.jpg",
+          "exists": false,
+          "expected_sha256": "890cc70bd578d01b1a0a7e5a07dc0d36b22b783ff247f6317b939abc1feebeb2",
+          "actual_sha256": null,
+          "match": false
+        },
+        "far": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\far\\south_2400.jpg",
+          "exists": false,
+          "expected_sha256": "9937252ef3657cc0abd2973a8fd0e8070fc24b16566a35f849a9a2ec04ab3723",
+          "actual_sha256": null,
+          "match": false
+        }
+      }
+    },
+    {
+      "sample_id": "south_2600",
+      "camera": "south",
+      "time": 2600,
+      "truth": 4,
+      "variants": {
+        "aisle": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\aisle\\south_2600.jpg",
+          "exists": true,
+          "expected_sha256": "c93c33cc2185c65abe8f72c3bc3fb0c041dfbc12e19c967f38d22e395d0cfe3b",
+          "actual_sha256": "c93c33cc2185c65abe8f72c3bc3fb0c041dfbc12e19c967f38d22e395d0cfe3b",
+          "match": true
+        },
+        "full": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\full\\south_2600.jpg",
+          "exists": false,
+          "expected_sha256": "3c1988272698c39245ec7eab91f1ce85c60d0938001b8dc0c331dce904113456",
+          "actual_sha256": null,
+          "match": false
+        },
+        "far": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\far\\south_2600.jpg",
+          "exists": false,
+          "expected_sha256": "fe4a50b1508acaa1eea473131d613607f491a166aad5aee0ab4d61317faaef87",
+          "actual_sha256": null,
+          "match": false
+        }
+      }
+    },
+    {
+      "sample_id": "south_300",
+      "camera": "south",
+      "time": 300,
+      "truth": 4,
+      "variants": {
+        "aisle": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\aisle\\south_300.jpg",
+          "exists": true,
+          "expected_sha256": "058c8b76e99edd8cf5a91286aeab311c0667062053a848c79fc7cd2382ac8cb4",
+          "actual_sha256": "058c8b76e99edd8cf5a91286aeab311c0667062053a848c79fc7cd2382ac8cb4",
+          "match": true
+        },
+        "full": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\full\\south_300.jpg",
+          "exists": false,
+          "expected_sha256": "6744ad54937839fa76db357ca6b6e3a3ac9cb953981df27c95817d5007ae6c8f",
+          "actual_sha256": null,
+          "match": false
+        },
+        "far": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\far\\south_300.jpg",
+          "exists": false,
+          "expected_sha256": "6794a6c9b06b7163c9cea10474ed9c54b6754ab8bff970ce04acf0063d8b6d3b",
+          "actual_sha256": null,
+          "match": false
+        }
+      }
+    },
+    {
+      "sample_id": "south_5",
+      "camera": "south",
+      "time": 5,
+      "truth": 3,
+      "variants": {
+        "aisle": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\aisle\\south_5.jpg",
+          "exists": true,
+          "expected_sha256": "78b40fbe1dd69c39f797b6da25e15750b2350652beb174bd472ae0cc6c9065a4",
+          "actual_sha256": "78b40fbe1dd69c39f797b6da25e15750b2350652beb174bd472ae0cc6c9065a4",
+          "match": true
+        },
+        "full": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\full\\south_5.jpg",
+          "exists": false,
+          "expected_sha256": "05fbf1dd60bdee2ac86e60fb05e81e06a252f2bc6a661120b40c136e99f3b174",
+          "actual_sha256": null,
+          "match": false
+        },
+        "far": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\far\\south_5.jpg",
+          "exists": false,
+          "expected_sha256": "6c99cccd8a39a692522ddee5e9ba61dc2a6977a40294aad910a243321046baa9",
+          "actual_sha256": null,
+          "match": false
+        }
+      }
+    },
+    {
+      "sample_id": "south_600",
+      "camera": "south",
+      "time": 600,
+      "truth": 4,
+      "variants": {
+        "aisle": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\aisle\\south_600.jpg",
+          "exists": true,
+          "expected_sha256": "e841ae3fefba7e4efdb8844b75a8640a84896cfca2565c62e8b5625a3c123b51",
+          "actual_sha256": "e841ae3fefba7e4efdb8844b75a8640a84896cfca2565c62e8b5625a3c123b51",
+          "match": true
+        },
+        "full": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\full\\south_600.jpg",
+          "exists": false,
+          "expected_sha256": "7ff985fa5daeef57a41e7e6e7d09183a3a04d385cf04b5c9d28d9d7eefa5c694",
+          "actual_sha256": null,
+          "match": false
+        },
+        "far": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\far\\south_600.jpg",
+          "exists": false,
+          "expected_sha256": "ac68f7b45c5dd32e12975050140737e8198ebb4bf02a98fd8e817d0c08928c53",
+          "actual_sha256": null,
+          "match": false
+        }
+      }
+    },
+    {
+      "sample_id": "south_900",
+      "camera": "south",
+      "time": 900,
+      "truth": 5,
+      "variants": {
+        "aisle": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\aisle\\south_900.jpg",
+          "exists": true,
+          "expected_sha256": "46785cb75d19904c1996b6955576191819118c4c03580f074f7c67107cc7b58f",
+          "actual_sha256": "46785cb75d19904c1996b6955576191819118c4c03580f074f7c67107cc7b58f",
+          "match": true
+        },
+        "full": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\full\\south_900.jpg",
+          "exists": false,
+          "expected_sha256": "c86b8ba1407127bb0ae2b0a487ea5d020513c2c1f48226ac149462a66bb6f07c",
+          "actual_sha256": null,
+          "match": false
+        },
+        "far": {
+          "path": "repo://coord\\exploration\\single-pass\\inputs\\far\\south_900.jpg",
+          "exists": false,
+          "expected_sha256": "2827f3d22ad2149140af1d9f7beedd35bc7ebde3cfdf03649dd87c60fd58c6ac",
+          "actual_sha256": null,
+          "match": false
+        }
+      }
+    }
+  ],
+  "all_match": false
+}

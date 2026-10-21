@@ -1,0 +1,98 @@
+{
+  "schema": "round2-b-evidence-manifest-audit-v1",
+  "manifest_sha256": "ad61f82edac70aac07022c059d59f475875f56174d31ff9cc63e694ba4339663",
+  "rows": [
+    {
+      "sample_id": "north_5",
+      "run": "r1",
+      "raw_sha256_matches": true,
+      "predicted_count_matches": true,
+      "truth_matches": true,
+      "manifest_truth": 5,
+      "vehicles_equal": true,
+      "call_count_matches": true
+    },
+    {
+      "sample_id": "north_5",
+      "run": "r2",
+      "raw_sha256_matches": true,
+      "predicted_count_matches": true,
+      "truth_matches": true,
+      "manifest_truth": 5,
+      "vehicles_equal": true,
+      "call_count_matches": true
+    },
+    {
+      "sample_id": "north_5",
+      "run": "r3",
+      "raw_sha256_matches": true,
+      "predicted_count_matches": true,
+      "truth_matches": true,
+      "manifest_truth": 5,
+      "vehicles_equal": true,
+      "call_count_matches": true
+    },
+    {
+      "sample_id": "north_600",
+      "run": "r1",
+      "raw_sha256_matches": true,
+      "predicted_count_matches": true,
+      "truth_matches": true,
+      "manifest_truth": 4,
+      "vehicles_equal": true,
+      "call_count_matches": true
+    },
+    {
+      "sample_id": "north_600",
+      "run": "r2",
+      "raw_sha256_matches": true,
+      "predicted_count_matches": true,
+      "truth_matches": true,
+      "manifest_truth": 4,
+      "vehicles_equal": true,
+      "call_count_matches": true
+    },
+    {
+      "sample_id": "north_600",
+      "run": "r3",
+      "raw_sha256_matches": true,
+      "predicted_count_matches": true,
+      "truth_matches": true,
+      "manifest_truth": 4,
+      "vehicles_equal": true,
+      "call_count_matches": true
+    },
+    {
+      "sample_id": "south_2100",
+      "run": "r1",
+      "raw_sha256_matches": true,
+      "predicted_count_matches": true,
+      "truth_matches": true,
+      "manifest_truth": 3,
+      "vehicles_equal": true,
+      "call_count_matches": true
+    },
+    {
+      "sample_id": "south_2100",
+      "run": "r2",
+      "raw_sha256_matches": true,
+      "predicted_count_matches": true,
+      "truth_matches": true,
+      "manifest_truth": 3,
+      "vehicles_equal": true,
+      "call_count_matches": true
+    },
+    {
+      "sample_id": "south_2100",
+      "run": "r3",
+      "raw_sha256_matches": true,
+      "predicted_count_matches": true,
+      "truth_matches": true,
+      "manifest_truth": 3,
+      "vehicles_equal": true,
+      "call_count_matches": true
+    }
+  ],
+  "all_match": true,
+  "row_count": 9
+}

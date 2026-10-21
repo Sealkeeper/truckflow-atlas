@@ -1,0 +1,48 @@
+{
+  "schema": "round2-b-raw-manifest-audit-v1",
+  "manifest_sha256": "bbb9c5338a8839a561e2a15f3ac595f100b77f83df19f373231424fb7406f153",
+  "declared_files": null,
+  "observed_files": 180,
+  "hash_matches": 180,
+  "missing": [],
+  "hash_mismatches": [],
+  "source_destination_hash_mismatches": [],
+  "by_config": {
+    "A_full": {
+      "files": 60,
+      "hash_matches": 60
+    },
+    "B_aisle": {
+      "files": 60,
+      "hash_matches": 60
+    },
+    "C_adaptive": {
+      "files": 60,
+      "hash_matches": 60
+    }
+  },
+  "fallback_embedded": [
+    {
+      "config": "C_adaptive",
+      "run": "r2",
+      "sample_id": "north_1800"
+    },
+    {
+      "config": "C_adaptive",
+      "run": "r2",
+      "sample_id": "north_5"
+    },
+    {
+      "config": "C_adaptive",
+      "run": "r2",
+      "sample_id": "south_1200"
+    },
+    {
+      "config": "C_adaptive",
+      "run": "r3",
+      "sample_id": "north_2600"
+    }
+  ],
+  "evidence_manifest_prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "all_match": true
+}

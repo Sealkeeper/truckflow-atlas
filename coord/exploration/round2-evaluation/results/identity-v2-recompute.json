@@ -1,0 +1,698 @@
+{
+  "schema": "round2-identity-v2-independent-recompute-v1",
+  "evidence_scope": "legacy_whole_vehicle",
+  "roof_constraint_eligible": false,
+  "no_model_calls": true,
+  "independent": {
+    "schema": "round2-independent-evaluation-v1",
+    "route": {
+      "id": "identity-assembly-v2-legacy-whole-vehicle",
+      "owner": "identity_assembly_v2",
+      "mechanism": "one cross-camera matrix over frozen B r1 whole-vehicle candidates",
+      "status": "rejected_candidate",
+      "evidence_scope": "legacy_whole_vehicle",
+      "roof_constraint_eligible": false,
+      "model": "doubao-seed-2-0-mini-260428"
+    },
+    "source": {
+      "output_path": "in-memory canonical reconstruction",
+      "output_sha256": null,
+      "truth_path": "repo://accuracy\\reviewed\\user-final-review-v2-2026-10-21.json",
+      "truth_working_tree_sha256": "c3fddc439da1574e74a6ceb7391297e1c65fedec109d3579da05cad05f34149d",
+      "truth_canonical_label_sha256": "78f255b1ae37463e2b36e15befb1ff8092ca87c2c6e946979d880f42cf0e5397"
+    },
+    "dataset": {
+      "split": "dev",
+      "n_camera_samples": 20,
+      "n_times": 10,
+      "truth": {
+        "path": "repo://accuracy\\reviewed\\user-final-review-v2-2026-10-21.json",
+        "split": "dev",
+        "declared_schema": "truckflow-final-review-v2",
+        "complete_declared": true,
+        "working_tree_sha256": "c3fddc439da1574e74a6ceb7391297e1c65fedec109d3579da05cad05f34149d",
+        "canonical_label_sha256": "78f255b1ae37463e2b36e15befb1ff8092ca87c2c6e946979d880f42cf0e5397",
+        "n_camera_slots": 20,
+        "camera_labels_present": 20,
+        "incomplete_camera_slots": [],
+        "n_times": 10,
+        "overlap_labels_present": 10,
+        "unique_labels_present": 10,
+        "incomplete_time_slots": [],
+        "truth_formula_errors": [],
+        "truth_formula_valid": true
+      }
+    },
+    "camera_count": {
+      "n_total": 20,
+      "valid_n": 20,
+      "failed": 0,
+      "refused": 0,
+      "missing": 0,
+      "label_missing": 0,
+      "scored_n": 20,
+      "exact": 18,
+      "headline": "18/20",
+      "exact_rate": 0.9,
+      "mae": 0.1,
+      "under_units": 0,
+      "over_units": 2,
+      "under_frames": 0,
+      "over_frames": 2,
+      "truth_total": 69,
+      "predicted_total": 71,
+      "absolute_error_total": 2,
+      "errors": [
+        {
+          "sample_id": "south_300",
+          "camera": "south",
+          "time": 300,
+          "truth": 4,
+          "predicted": 5,
+          "error": 1
+        },
+        {
+          "sample_id": "south_2100",
+          "camera": "south",
+          "time": 2100,
+          "truth": 3,
+          "predicted": 4,
+          "error": 1
+        }
+      ]
+    },
+    "overlap": {
+      "n_total": 10,
+      "valid_n": 10,
+      "failed": 0,
+      "refused": 0,
+      "missing": 0,
+      "label_missing": 0,
+      "scored_n": 10,
+      "exact": 3,
+      "headline": "3/10",
+      "exact_rate": 0.3,
+      "mae": 1.1,
+      "errors": [
+        {
+          "time": 5,
+          "truth": 1,
+          "predicted": 0,
+          "error": -1
+        },
+        {
+          "time": 600,
+          "truth": 1,
+          "predicted": 0,
+          "error": -1
+        },
+        {
+          "time": 900,
+          "truth": 2,
+          "predicted": 0,
+          "error": -2
+        },
+        {
+          "time": 1200,
+          "truth": 2,
+          "predicted": 0,
+          "error": -2
+        },
+        {
+          "time": 1500,
+          "truth": 2,
+          "predicted": 0,
+          "error": -2
+        },
+        {
+          "time": 2100,
+          "truth": 1,
+          "predicted": 0,
+          "error": -1
+        },
+        {
+          "time": 2600,
+          "truth": 2,
+          "predicted": 0,
+          "error": -2
+        }
+      ]
+    },
+    "unique": {
+      "n_total": 10,
+      "valid_n": 10,
+      "failed": 0,
+      "refused": 0,
+      "missing": 0,
+      "label_missing": 0,
+      "scored_n": 10,
+      "exact": 2,
+      "headline": "2/10",
+      "exact_rate": 0.2,
+      "mae": 1.3,
+      "errors": [
+        {
+          "time": 5,
+          "truth": 7,
+          "predicted": 8,
+          "error": 1
+        },
+        {
+          "time": 300,
+          "truth": 6,
+          "predicted": 7,
+          "error": 1
+        },
+        {
+          "time": 600,
+          "truth": 7,
+          "predicted": 8,
+          "error": 1
+        },
+        {
+          "time": 900,
+          "truth": 6,
+          "predicted": 8,
+          "error": 2
+        },
+        {
+          "time": 1200,
+          "truth": 6,
+          "predicted": 8,
+          "error": 2
+        },
+        {
+          "time": 1500,
+          "truth": 5,
+          "predicted": 7,
+          "error": 2
+        },
+        {
+          "time": 2100,
+          "truth": 4,
+          "predicted": 6,
+          "error": 2
+        },
+        {
+          "time": 2600,
+          "truth": 4,
+          "predicted": 6,
+          "error": 2
+        }
+      ]
+    },
+    "release": {
+      "n_total": 10,
+      "auto_released": 6,
+      "correct": 1,
+      "errors": 5,
+      "coverage": 0.6,
+      "reviewed": 4,
+      "review_rate": 0.4,
+      "refused": 0,
+      "refusal_rate": 0.0,
+      "unreported": 0,
+      "false_release_rate": 0.833333,
+      "truth_error_frames": 8,
+      "error_frames_caught_by_review": 3,
+      "false_release_rows": [
+        {
+          "time": 5,
+          "truth": {
+            "north": 5,
+            "south": 3,
+            "overlap": 1,
+            "unique": 7
+          },
+          "predicted": {
+            "overlap": 0,
+            "unique": 8,
+            "north": 5,
+            "south": 3
+          }
+        },
+        {
+          "time": 300,
+          "truth": {
+            "north": 3,
+            "south": 4,
+            "overlap": 1,
+            "unique": 6
+          },
+          "predicted": {
+            "overlap": 1,
+            "unique": 7,
+            "north": 3,
+            "south": 5
+          }
+        },
+        {
+          "time": 600,
+          "truth": {
+            "north": 4,
+            "south": 4,
+            "overlap": 1,
+            "unique": 7
+          },
+          "predicted": {
+            "overlap": 0,
+            "unique": 8,
+            "north": 4,
+            "south": 4
+          }
+        },
+        {
+          "time": 1500,
+          "truth": {
+            "north": 2,
+            "south": 5,
+            "overlap": 2,
+            "unique": 5
+          },
+          "predicted": {
+            "overlap": 0,
+            "unique": 7,
+            "north": 2,
+            "south": 5
+          }
+        },
+        {
+          "time": 2100,
+          "truth": {
+            "north": 2,
+            "south": 3,
+            "overlap": 1,
+            "unique": 4
+          },
+          "predicted": {
+            "overlap": 0,
+            "unique": 6,
+            "north": 2,
+            "south": 4
+          }
+        }
+      ],
+      "release_unit": "time"
+    },
+    "cost": {
+      "online_observed": {
+        "calls": 10,
+        "images": 40,
+        "tokens": 93819,
+        "latency_s_total": 286.219,
+        "latency_s_mean": 28.622,
+        "latency_s_p95_nearest_rank": 44.437,
+        "latency_samples": 10
+      },
+      "online_reported": {
+        "calls": 10,
+        "images": 40,
+        "tokens": 93819
+      },
+      "initialization": {
+        "calls": 20,
+        "images": 20,
+        "tokens": 94168,
+        "latency_s": 392.73,
+        "source": "frozen B r1 candidate bootstrap"
+      },
+      "initialization_complete": true,
+      "initialization_note": "未提供时保持 null；不以 0 冒充免费初始化",
+      "combined_online_plus_initialization": {
+        "calls": 30,
+        "images": 60,
+        "tokens": 187987,
+        "latency_s_total": 678.949
+      },
+      "concurrency": 2,
+      "peak_memory_mb": null
+    },
+    "identity": {
+      "status": "not measured",
+      "reason": "no complete instance-ID gold"
+    },
+    "roof_evidence": {
+      "scope": "legacy_whole_vehicle",
+      "roof_observation_count": 0,
+      "physical_entity_count": 0,
+      "uncertain_group_count": 0,
+      "uncertain_observation_count": 0,
+      "status": "not measured"
+    },
+    "bbox": {
+      "status": "not measured",
+      "reason": "no complete per-instance bbox gold"
+    },
+    "attributes": {
+      "status": "not measured",
+      "reason": "no complete attribute gold"
+    },
+    "acceptance": {
+      "verdict": "LEGACY_REFERENCE_ONLY",
+      "checks": {
+        "no_duplicate_or_overwrite": {
+          "pass": true,
+          "detail": []
+        },
+        "truth_camera_labels_complete": {
+          "pass": true,
+          "detail": {
+            "present": 20,
+            "total": 20
+          }
+        },
+        "all_outputs_valid": {
+          "pass": true,
+          "detail": {
+            "valid": 20,
+            "failed": 0,
+            "refused": 0,
+            "missing": 0
+          }
+        },
+        "instance_counts_consistent": {
+          "pass": true,
+          "detail": {}
+        },
+        "cross_camera_formulas_consistent": {
+          "pass": true,
+          "detail": []
+        },
+        "unique_and_overlap_measured": {
+          "pass": true,
+          "detail": {
+            "overlap_scored": 10,
+            "overlap_total": 10,
+            "unique_scored": 10,
+            "unique_total": 10
+          }
+        },
+        "camera_not_worse_than_baseline": {
+          "pass": true,
+          "detail": {
+            "exact": 18,
+            "baseline_exact": 16,
+            "total": 20
+          }
+        },
+        "automatic_release_no_truth_errors": {
+          "pass": false,
+          "detail": {
+            "auto_released": 6,
+            "errors": 5,
+            "false_release_rate": 0.833333
+          }
+        },
+        "input_hashes_verified": {
+          "pass": true,
+          "detail": {
+            "all_match": true,
+            "identity_evidence_manifest_match": true,
+            "raw_times_valid": 10
+          }
+        },
+        "workflow_audit_complete_and_clean": {
+          "pass": true,
+          "detail": {
+            "human_boxes_used_as_model_input": {
+              "value": false,
+              "pass": true,
+              "reason": "explicit false"
+            },
+            "same_frame_annotations_exposed": {
+              "value": false,
+              "pass": true,
+              "reason": "explicit false"
+            },
+            "future_frames_exposed": {
+              "value": false,
+              "pass": true,
+              "reason": "explicit false"
+            },
+            "previous_count_carryover": {
+              "value": false,
+              "pass": true,
+              "reason": "explicit false"
+            },
+            "failures_skipped": {
+              "value": false,
+              "pass": true,
+              "reason": "explicit false"
+            },
+            "memory_retrieval_scope": {
+              "value": "none",
+              "pass": true
+            },
+            "failure_counted_in_denominator": {
+              "value": true,
+              "pass": true
+            },
+            "all_pass": true
+          }
+        },
+        "roof_only_contract": {
+          "pass": true,
+          "detail": {
+            "evidence_scope": "legacy_whole_vehicle",
+            "applies": false,
+            "failures": {}
+          }
+        }
+      },
+      "generalization": "not_evaluated",
+      "identity_metrics": "not_measured",
+      "evidence_scope": "legacy_whole_vehicle",
+      "new_roof_constraint_applies": false,
+      "note": "计数、列表长度和内部公式通过不等于框、属性、配对或身份正确；自报 confidence / checked / possible_miss 不作可靠门禁。旧整车口径不能追认为新 roof-only 结果。"
+    },
+    "matrix_pair_count": 119,
+    "decision_counts": {
+      "different": 109,
+      "same": 3,
+      "unknown": 7
+    },
+    "time_audits": [
+      {
+        "time": 5,
+        "matrix_pair_count": 15,
+        "expected_pair_count": 15,
+        "match_count": 0,
+        "unknown_pair_count": 0,
+        "same_pair_count": 0,
+        "different_pair_count": 15,
+        "gate_candidate": true,
+        "issues": [],
+        "release_audit_issues": [],
+        "release_decision_matches_recomputed": true,
+        "request_sha256": "1bfbc2e67be30110529527ff45356dfc3f2cb84965f63dd7ca4a1bb726b3501d"
+      },
+      {
+        "time": 300,
+        "matrix_pair_count": 15,
+        "expected_pair_count": 15,
+        "match_count": 1,
+        "unknown_pair_count": 0,
+        "same_pair_count": 1,
+        "different_pair_count": 14,
+        "gate_candidate": true,
+        "issues": [],
+        "release_audit_issues": [],
+        "release_decision_matches_recomputed": true,
+        "request_sha256": "03c25f93170ffd60700a3512f5d7a5d0099197d13f8337d034f0d9c992029d99"
+      },
+      {
+        "time": 600,
+        "matrix_pair_count": 16,
+        "expected_pair_count": 16,
+        "match_count": 0,
+        "unknown_pair_count": 0,
+        "same_pair_count": 0,
+        "different_pair_count": 16,
+        "gate_candidate": true,
+        "issues": [],
+        "release_audit_issues": [],
+        "release_decision_matches_recomputed": true,
+        "request_sha256": "5c791bcf506219e5b52ba25aace595d510bab111ffc4390fa85f534f1587e98c"
+      },
+      {
+        "time": 900,
+        "matrix_pair_count": 15,
+        "expected_pair_count": 15,
+        "match_count": 0,
+        "unknown_pair_count": 5,
+        "same_pair_count": 0,
+        "different_pair_count": 10,
+        "gate_candidate": false,
+        "issues": [],
+        "release_audit_issues": [],
+        "release_decision_matches_recomputed": true,
+        "request_sha256": "7cfe9135bd912025aad6e3a6ba639a818a4147a9768ed3d8cb3a1a8546acf230"
+      },
+      {
+        "time": 1200,
+        "matrix_pair_count": 15,
+        "expected_pair_count": 15,
+        "match_count": 0,
+        "unknown_pair_count": 1,
+        "same_pair_count": 0,
+        "different_pair_count": 14,
+        "gate_candidate": false,
+        "issues": [],
+        "release_audit_issues": [],
+        "release_decision_matches_recomputed": true,
+        "request_sha256": "baaa33e4b874f50e3d9f58c62d162650f4260ff836ad1627eeac750f8f653dbf"
+      },
+      {
+        "time": 1500,
+        "matrix_pair_count": 10,
+        "expected_pair_count": 10,
+        "match_count": 0,
+        "unknown_pair_count": 0,
+        "same_pair_count": 0,
+        "different_pair_count": 10,
+        "gate_candidate": true,
+        "issues": [],
+        "release_audit_issues": [],
+        "release_decision_matches_recomputed": true,
+        "request_sha256": "00466a7f8508626ad500b8d432076e7ba2d8e92d5032d1ac0ab993673d8495db"
+      },
+      {
+        "time": 1800,
+        "matrix_pair_count": 8,
+        "expected_pair_count": 8,
+        "match_count": 1,
+        "unknown_pair_count": 0,
+        "same_pair_count": 1,
+        "different_pair_count": 7,
+        "gate_candidate": true,
+        "issues": [],
+        "release_audit_issues": [
+          "reported auto_released=False != independent gate candidate True"
+        ],
+        "release_decision_matches_recomputed": false,
+        "request_sha256": "25be30576deb53a84b1e05051a0bd1e4d70fb2555e1770e4db769ca3d60ce730"
+      },
+      {
+        "time": 2100,
+        "matrix_pair_count": 8,
+        "expected_pair_count": 8,
+        "match_count": 0,
+        "unknown_pair_count": 0,
+        "same_pair_count": 0,
+        "different_pair_count": 8,
+        "gate_candidate": true,
+        "issues": [],
+        "release_audit_issues": [],
+        "release_decision_matches_recomputed": true,
+        "request_sha256": "d7fb375e88bd48070f99266a6eb309f0c11273802f27b4f237010e5259afe7c9"
+      },
+      {
+        "time": 2400,
+        "matrix_pair_count": 9,
+        "expected_pair_count": 9,
+        "match_count": 1,
+        "unknown_pair_count": 0,
+        "same_pair_count": 1,
+        "different_pair_count": 8,
+        "gate_candidate": true,
+        "issues": [],
+        "release_audit_issues": [],
+        "release_decision_matches_recomputed": true,
+        "request_sha256": "760b639e4337506ad5478364502e95fd5ed0dd6cd5ce2c7b79ea914a46f4dc2c"
+      },
+      {
+        "time": 2600,
+        "matrix_pair_count": 8,
+        "expected_pair_count": 8,
+        "match_count": 0,
+        "unknown_pair_count": 1,
+        "same_pair_count": 0,
+        "different_pair_count": 7,
+        "gate_candidate": false,
+        "issues": [],
+        "release_audit_issues": [],
+        "release_decision_matches_recomputed": true,
+        "request_sha256": "b30106815bd5ca8595b8f8331d80e5184fc5ee5069b4e6fbacc1e0b6fa48e50e"
+      }
+    ],
+    "release_gate_audit": {
+      "reported_released": 6,
+      "reported_reviewed": 4,
+      "independent_gate_candidates": 7,
+      "decision_differences": [
+        {
+          "time": 1800,
+          "reported_auto_released": false,
+          "recomputed_gate_candidate": true,
+          "issues": [
+            "reported auto_released=False != independent gate candidate True"
+          ]
+        }
+      ],
+      "note": "Overlap/unique and release safety are separate. The route's reported false decision remains a review; independent gate differences are diagnostic, not a structural schema failure."
+    }
+  },
+  "sources": {
+    "identity_root": "repo://coord\\exploration\\identity-assembly-v2",
+    "single_pass_root": "repo://coord\\exploration\\single-pass",
+    "truth_path": "repo://accuracy\\reviewed\\user-final-review-v2-2026-10-21.json",
+    "evidence_manifest": {
+      "schema": "round2-identity-evidence-audit-v1",
+      "manifest_sha256": "013879b3873bba66dd6c8df3bd59747bc50e1a4b9885576bea85f8f6d22e003b",
+      "file_count": 133,
+      "matches": 133,
+      "mismatches": [],
+      "all_match": true
+    },
+    "inputs_sha256": "d831cebad8d79b1a2ef40742c670f976bcc3ae35e99a8d71eb2800ebfd1ef1b7",
+    "metrics_sha256": "2ceb10a09a7bcb6e8915da871bd4f8ff65949f34536d1ad00417d0106ef09b18",
+    "summary_sha256": "ffbb31d5d6ad64394e7bb1bcfbdf7faf4cbf2f4ed9bea15aaeb42144524909ff",
+    "run_timing_sha256": "02839c35a55c836ed971790731d3e6de5a66aac164783595c5f3c59e44d638e0"
+  },
+  "declared_comparison": {
+    "checks": {
+      "camera_exact": true,
+      "camera_valid": true,
+      "overlap_exact": true,
+      "overlap_mae": true,
+      "unique_exact": true,
+      "unique_mae": true,
+      "release_errors": true,
+      "release_correct": true,
+      "reported_auto_released": true,
+      "reviewed": true,
+      "matrix_pairs": true,
+      "all_matrix_complete": true,
+      "all_matches_valid": true
+    },
+    "all_match": true
+  },
+  "performance": {
+    "online": {
+      "calls": 10,
+      "images": 40,
+      "tokens": 93819,
+      "latency_mean_s": 28.622,
+      "latency_p95_s": 44.43699999997625,
+      "serial_equivalent_s": 286.219,
+      "concurrency": 2
+    },
+    "initialization": {
+      "calls": 20,
+      "images": 20,
+      "tokens": 94168,
+      "latency_s": 392.73,
+      "note": "previously paid B r1 bootstrap; required on a fresh video"
+    },
+    "combined": {
+      "calls": 30,
+      "images": 60,
+      "tokens": 187987,
+      "latency_s": 678.949,
+      "note": "online serial equivalent plus historical bootstrap; no fresh-video e2e measurement"
+    },
+    "preparation_s": 4.217999999993481,
+    "peak_memory_mb": 59.87109375,
+    "wall_clock_online_s": 158.89100000000326
+  }
+}
