@@ -12,10 +12,24 @@ from pathlib import Path
 from typing import Any
 
 
-VM_ROOT = Path(__file__).resolve().parent
-REPO_ROOT = VM_ROOT.parents[1]
-GENERATED = VM_ROOT / "generated"
 IDENTITY_KEYS = {"cargo_id", "tractor_id", "vehicle_session_id"}
+
+
+def find_repo_root(start: Path) -> Path:
+    for candidate in (start, *start.parents):
+        if (candidate / "accuracy" / "reviewed").is_dir():
+            return candidate
+    raise RuntimeError("could not locate repository root")
+
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO_ROOT = find_repo_root(SCRIPT_DIR)
+VM_ROOT = (
+    SCRIPT_DIR
+    if (SCRIPT_DIR / "generated").is_dir()
+    else REPO_ROOT / "research" / "vehicle_memory"
+)
+GENERATED = VM_ROOT / "generated"
 
 
 def read_json(path: Path) -> Any:
