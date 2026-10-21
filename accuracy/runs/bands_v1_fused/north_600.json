@@ -1,0 +1,120 @@
+{
+  "sample_id": "north_600",
+  "camera": "north",
+  "time": 600,
+  "counts": {
+    "total": 4,
+    "large": 2,
+    "medium": 2,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "bbox": [
+        0.34,
+        0.6136,
+        0.485,
+        0.9958
+      ],
+      "size": "large",
+      "sources": [
+        "C_near:V1"
+      ],
+      "evidence": "该货厢为独立运输单元，无可见车头，停放于通道内，属于一辆独立的运输车辆"
+    },
+    {
+      "bbox": [
+        0.47,
+        0.3268,
+        0.555,
+        0.5852
+      ],
+      "size": "large",
+      "sources": [
+        "B_mid:V1"
+      ],
+      "evidence": "仅可见货厢主体，无可见车头，为通道内独立停放的运输车辆"
+    },
+    {
+      "bbox": [
+        0.43,
+        0.2479,
+        0.495,
+        0.3649
+      ],
+      "size": "medium",
+      "sources": [
+        "A_far:V2"
+      ],
+      "evidence": "U2为独立停放的无车头货厢，属于独立运输车辆"
+    },
+    {
+      "bbox": [
+        0.435,
+        0.1504,
+        0.495,
+        0.2596
+      ],
+      "size": "medium",
+      "sources": [
+        "A_far:V1"
+      ],
+      "evidence": "U1为独立停放的无车头货厢，属于独立运输车辆"
+    }
+  ],
+  "raw_candidate_count": 4,
+  "merged_away": 0,
+  "calls": [
+    {
+      "band": "A_far",
+      "latency_s": 22.72,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 3041,
+        "prompt_tokens": 2148,
+        "total_tokens": 5189,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2273
+        }
+      }
+    },
+    {
+      "band": "B_mid",
+      "latency_s": 14.52,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 1630,
+        "prompt_tokens": 2179,
+        "total_tokens": 3809,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1282
+        }
+      }
+    },
+    {
+      "band": "C_near",
+      "latency_s": 19.78,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 2011,
+        "prompt_tokens": 2139,
+        "total_tokens": 4150,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1658
+        }
+      }
+    }
+  ],
+  "failures": [],
+  "size_review": []
+}

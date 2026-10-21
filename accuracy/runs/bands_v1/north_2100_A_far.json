@@ -1,0 +1,71 @@
+{
+  "sample_id": "north_2100",
+  "band": "A_far",
+  "outputs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 17.07,
+      "usage": {
+        "completion_tokens": 1523,
+        "prompt_tokens": 2148,
+        "total_tokens": 3671,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1201
+        }
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "cargo_box",
+            "bbox": [
+              0.37,
+              0.58,
+              0.49,
+              0.99
+            ],
+            "center_inside_core": true,
+            "color": "red",
+            "evidence": "位于通道内，具备独立货厢结构，有运输单元特征，不属于展台、建筑或杂物",
+            "uncertain": false
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U1"
+            ],
+            "bbox": [
+              0.37,
+              0.58,
+              0.49,
+              0.99
+            ],
+            "vehicle_type": "trailer_only",
+            "size": "large",
+            "evidence": "该运输单元为独立停放的货厢，未连接其他运输单元，属于独立车辆",
+            "uncertain": false
+          }
+        ],
+        "counts": {
+          "total": 1,
+          "large": 1,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "outside_core_units": [],
+        "scene_notes": "无明显遮挡，核心矩形内仅1个符合条件的运输单元，无边界车辆歧义",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"cargo_box\",\n      \"bbox\": [0.37, 0.58, 0.49, 0.99],\n      \"center_inside_core\": true,\n      \"color\": \"red\",\n      \"evidence\": \"位于通道内，具备独立货厢结构，有运输单元特征，不属于展台、建筑或杂物\",\n      \"uncertain\": false\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U1\"],\n      \"bbox\": [0.37, 0.58, 0.49, 0.99],\n      \"vehicle_type\": \"trailer_only\",\n      \"size\": \"large\",\n      \"evidence\": \"该运输单元为独立停放的货厢，未连接其他运输单元，属于独立车辆\",\n      \"uncertain\": false\n    }\n  ],\n  \"counts\": {\"total\": 1, \"large\": 1, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"outside_core_units\": [],\n  \"scene_notes\": \"无明显遮挡，核心矩形内仅1个符合条件的运输单元，无边界车辆歧义\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

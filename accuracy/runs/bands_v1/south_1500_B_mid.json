@@ -1,0 +1,101 @@
+{
+  "sample_id": "south_1500",
+  "band": "B_mid",
+  "outputs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 31.75,
+      "usage": {
+        "completion_tokens": 3666,
+        "prompt_tokens": 2148,
+        "total_tokens": 5814,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3089
+        }
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "tractor_cab",
+            "bbox": [
+              0.35,
+              0.15,
+              0.52,
+              0.45
+            ],
+            "center_inside_core": true,
+            "color": "red",
+            "evidence": "Visible red truck cab located in the channel within the green rectangle, not part of a booth or architectural structure",
+            "uncertain": false
+          },
+          {
+            "unit_id": "U2",
+            "kind": "cargo_box",
+            "bbox": [
+              0.38,
+              0.4,
+              0.58,
+              0.9
+            ],
+            "center_inside_core": true,
+            "color": "white",
+            "evidence": "Large rectangular white cargo unit in the channel, with flat top, independent transport unit not belonging to a booth",
+            "uncertain": false
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U2"
+            ],
+            "bbox": [
+              0.38,
+              0.4,
+              0.58,
+              0.9
+            ],
+            "vehicle_type": "trailer_only",
+            "size": "large",
+            "evidence": "Independent cargo trailer with no visible cab, located in the channel, separate from other units in the green rectangle",
+            "uncertain": false
+          },
+          {
+            "vehicle_id": "V2",
+            "unit_ids": [
+              "U1"
+            ],
+            "bbox": [
+              0.35,
+              0.15,
+              0.52,
+              0.45
+            ],
+            "vehicle_type": "unknown",
+            "size": "medium",
+            "evidence": "Truck cab in the channel, no connected trailer visible within the green rectangle, counted as a separate transport unit",
+            "uncertain": false
+          }
+        ],
+        "counts": {
+          "total": 2,
+          "large": 1,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "outside_core_units": "Red truck cab at the top of the image, center outside the green rectangle, only for context reference",
+        "scene_notes": "White cargo box is partially cropped at the bottom of the green rectangle; red truck cab is partially cropped at the top. No visible coupling between the two units in the green rectangle.",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"tractor_cab\",\n      \"bbox\": [0.35, 0.15, 0.52, 0.45],\n      \"center_inside_core\": true,\n      \"color\": \"red\",\n      \"evidence\": \"Visible red truck cab located in the channel within the green rectangle, not part of a booth or architectural structure\",\n      \"uncertain\": false\n    },\n    {\n      \"unit_id\": \"U2\",\n      \"kind\": \"cargo_box\",\n      \"bbox\": [0.38, 0.4, 0.58, 0.9],\n      \"center_inside_core\": true,\n      \"color\": \"white\",\n      \"evidence\": \"Large rectangular white cargo unit in the channel, with flat top, independent transport unit not belonging to a booth\",\n      \"uncertain\": false\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U2\"],\n      \"bbox\": [0.38, 0.4, 0.58, 0.9],\n      \"vehicle_type\": \"trailer_only\",\n      \"size\": \"large\",\n      \"evidence\": \"Independent cargo trailer with no visible cab, located in the channel, separate from other units in the green rectangle\",\n      \"uncertain\": false\n    },\n    {\n      \"vehicle_id\": \"V2\",\n      \"unit_ids\": [\"U1\"],\n      \"bbox\": [0.35, 0.15, 0.52, 0.45],\n      \"vehicle_type\": \"unknown\",\n      \"size\": \"medium\",\n      \"evidence\": \"Truck cab in the channel, no connected trailer visible within the green rectangle, counted as a separate transport unit\",\n      \"uncertain\": false\n    }\n  ],\n  \"counts\": {\"total\": 2, \"large\": 1, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"outside_core_units\": \"Red truck cab at the top of the image, center outside the green rectangle, only for context reference\",\n  \"scene_notes\": \"White cargo box is partially cropped at the bottom of the green rectangle; red truck cab is partially cropped at the top. No visible coupling between the two units in the green rectangle.\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

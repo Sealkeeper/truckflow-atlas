@@ -1,0 +1,73 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\core_region_v1\\north_600_near.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 14.65,
+      "usage": {
+        "completion_tokens": 1540,
+        "prompt_tokens": 2019,
+        "total_tokens": 3559,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1090
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "sequence": 1,
+            "bbox": [
+              0.45,
+              0.0,
+              0.58,
+              0.28
+            ],
+            "center_inside_core": true,
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色封闭式货厢，尾门带有白色标识，朝向画面下方，位于通道远端",
+            "distinct_from_previous": "无（第一辆）",
+            "evidence": "车辆主体完全位于绿色矩形内部，为独立完整的货车",
+            "uncertain": false
+          },
+          {
+            "sequence": 2,
+            "bbox": [
+              0.18,
+              0.35,
+              0.45,
+              0.98
+            ],
+            "center_inside_core": true,
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "白色长条形货厢，表面有平行纹理，无可见牵引车头，位于通道近段左侧",
+            "distinct_from_previous": "与上一辆红色货车有明显间隙，独立停放，无连接关系，属于不同车辆",
+            "evidence": "货厢主体位于绿色矩形内部，无牵引车头，为独立挂车",
+            "uncertain": false
+          }
+        ],
+        "outside_core_vehicles": "中心在绿色矩形外的车辆共2辆，分别位于绿色矩形左侧边缘和右侧边缘，仅露出部分车身，作为上下文参考",
+        "scene_notes": "画面中无完全被遮挡的货车，边界车辆均在绿色矩形内，无歧义车辆，叉车、人物不计入统计",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.45, 0.0, 0.58, 0.28],\n      \"center_inside_core\": true,\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色封闭式货厢，尾门带有白色标识，朝向画面下方，位于通道远端\",\n      \"distinct_from_previous\": \"无（第一辆）\",\n      \"evidence\": \"车辆主体完全位于绿色矩形内部，为独立完整的货车\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.18, 0.35, 0.45, 0.98],\n      \"center_inside_core\": true,\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色长条形货厢，表面有平行纹理，无可见牵引车头，位于通道近段左侧\",\n      \"distinct_from_previous\": \"与上一辆红色货车有明显间隙，独立停放，无连接关系，属于不同车辆\",\n      \"evidence\": \"货厢主体位于绿色矩形内部，无牵引车头，为独立挂车\",\n      \"uncertain\": false\n    }\n  ],\n  \"outside_core_vehicles\": \"中心在绿色矩形外的车辆共2辆，分别位于绿色矩形左侧边缘和右侧边缘，仅露出部分车身，作为上下文参考\",\n  \"scene_notes\": \"画面中无完全被遮挡的货车，边界车辆均在绿色矩形内，无歧义车辆，叉车、人物不计入统计\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\core_region_v1\\north_600_near.jpg"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "sample_id": "north_2400",
+  "band": "C_near",
+  "outputs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 8.33,
+      "usage": {
+        "completion_tokens": 885,
+        "prompt_tokens": 2139,
+        "total_tokens": 3024,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 555
+        }
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "box_truck",
+            "bbox": [
+              0.31,
+              0.1,
+              0.55,
+              0.99
+            ],
+            "center_inside_core": true,
+            "color": "gray (roof), red (rear)",
+            "evidence": "Visible cargo box and rear of a truck, located in the channel within the green rectangle, not a booth, structure, or debris",
+            "uncertain": false
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U1"
+            ],
+            "bbox": [
+              0.31,
+              0.1,
+              0.55,
+              0.99
+            ],
+            "vehicle_type": "rigid_truck",
+            "size": "large",
+            "evidence": "Single rigid box truck, no separate trailer or other transport units attached to it",
+            "uncertain": false
+          }
+        ],
+        "counts": {
+          "total": 1,
+          "large": 1,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "outside_core_units": [],
+        "scene_notes": "Only one transport unit (box truck) in the green core rectangle, its center is within the core area",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"box_truck\",\n      \"bbox\": [0.31, 0.1, 0.55, 0.99],\n      \"center_inside_core\": true,\n      \"color\": \"gray (roof), red (rear)\",\n      \"evidence\": \"Visible cargo box and rear of a truck, located in the channel within the green rectangle, not a booth, structure, or debris\",\n      \"uncertain\": false\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U1\"],\n      \"bbox\": [0.31, 0.1, 0.55, 0.99],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"evidence\": \"Single rigid box truck, no separate trailer or other transport units attached to it\",\n      \"uncertain\": false\n    }\n  ],\n  \"counts\": {\"total\": 1, \"large\": 1, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"outside_core_units\": [],\n  \"scene_notes\": \"Only one transport unit (box truck) in the green core rectangle, its center is within the core area\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

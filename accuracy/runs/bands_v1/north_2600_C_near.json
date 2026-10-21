@@ -1,0 +1,101 @@
+{
+  "sample_id": "north_2600",
+  "band": "C_near",
+  "outputs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 13.11,
+      "usage": {
+        "completion_tokens": 1561,
+        "prompt_tokens": 2139,
+        "total_tokens": 3700,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1018
+        }
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "cargo_box",
+            "bbox": [
+              0.29,
+              0.0,
+              0.46,
+              0.24
+            ],
+            "center_inside_core": true,
+            "color": "dark gray",
+            "evidence": "It is the rear section of a truck located within the green rectangle, has the structure of a transport vehicle, not a booth, building or debris.",
+            "uncertain": false
+          },
+          {
+            "unit_id": "U2",
+            "kind": "box_truck",
+            "bbox": [
+              0.17,
+              0.61,
+              0.44,
+              0.99
+            ],
+            "center_inside_core": true,
+            "color": "red",
+            "evidence": "It is the cargo body of a red truck located within the green rectangle, has the form of a transport vehicle, not a booth or structure.",
+            "uncertain": false
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U1"
+            ],
+            "bbox": [
+              0.29,
+              0.0,
+              0.46,
+              0.24
+            ],
+            "vehicle_type": "rigid_truck",
+            "size": "large",
+            "evidence": "This is an independent truck in the channel, no connection to other transport units.",
+            "uncertain": false
+          },
+          {
+            "vehicle_id": "V2",
+            "unit_ids": [
+              "U2"
+            ],
+            "bbox": [
+              0.17,
+              0.61,
+              0.44,
+              0.99
+            ],
+            "vehicle_type": "rigid_truck",
+            "size": "large",
+            "evidence": "This is another independent truck in the channel, separate from V1.",
+            "uncertain": false
+          }
+        ],
+        "counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "outside_core_units": [],
+        "scene_notes": "Two trucks are present in the channel within the green rectangle, no other transport units are visible.",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"cargo_box\",\n      \"bbox\": [0.29, 0.0, 0.46, 0.24],\n      \"center_inside_core\": true,\n      \"color\": \"dark gray\",\n      \"evidence\": \"It is the rear section of a truck located within the green rectangle, has the structure of a transport vehicle, not a booth, building or debris.\",\n      \"uncertain\": false\n    },\n    {\n      \"unit_id\": \"U2\",\n      \"kind\": \"box_truck\",\n      \"bbox\": [0.17, 0.61, 0.44, 0.99],\n      \"center_inside_core\": true,\n      \"color\": \"red\",\n      \"evidence\": \"It is the cargo body of a red truck located within the green rectangle, has the form of a transport vehicle, not a booth or structure.\",\n      \"uncertain\": false\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U1\"],\n      \"bbox\": [0.29, 0.0, 0.46, 0.24],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"evidence\": \"This is an independent truck in the channel, no connection to other transport units.\",\n      \"uncertain\": false\n    },\n    {\n      \"vehicle_id\": \"V2\",\n      \"unit_ids\": [\"U2\"],\n      \"bbox\": [0.17, 0.61, 0.44, 0.99],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"evidence\": \"This is another independent truck in the channel, separate from V1.\",\n      \"uncertain\": false\n    }\n  ],\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"outside_core_units\": [],\n  \"scene_notes\": \"Two trucks are present in the channel within the green rectangle, no other transport units are visible.\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

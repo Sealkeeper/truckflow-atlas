@@ -1,0 +1,56 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\core_region_v1\\north_600_far.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 6.43,
+      "usage": {
+        "completion_tokens": 650,
+        "prompt_tokens": 2044,
+        "total_tokens": 2694,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 399
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 1,
+          "large": 1,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "sequence": 1,
+            "bbox": [
+              0.43,
+              0.58,
+              0.59,
+              0.99
+            ],
+            "center_inside_core": true,
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red metal cargo box, visible rear section with markings, long cargo body",
+            "distinct_from_previous": "N/A (first counted vehicle)",
+            "evidence": "Centered within the green rectangle, clearly identifiable as a large cargo truck, no other vehicles in the core area",
+            "uncertain": false
+          }
+        ],
+        "outside_core_vehicles": 0,
+        "scene_notes": "Only one valid truck in the green core area; other structures are exhibition booths not vehicles",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 1, \"large\": 1, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.43, 0.58, 0.59, 0.99],\n      \"center_inside_core\": true,\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red metal cargo box, visible rear section with markings, long cargo body\",\n      \"distinct_from_previous\": \"N/A (first counted vehicle)\",\n      \"evidence\": \"Centered within the green rectangle, clearly identifiable as a large cargo truck, no other vehicles in the core area\",\n      \"uncertain\": false\n    }\n  ],\n  \"outside_core_vehicles\": 0,\n  \"scene_notes\": \"Only one valid truck in the green core area; other structures are exhibition booths not vehicles\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\core_region_v1\\north_600_far.jpg"
+    }
+  ]
+}

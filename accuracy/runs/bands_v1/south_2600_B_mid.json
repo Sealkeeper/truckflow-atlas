@@ -1,0 +1,101 @@
+{
+  "sample_id": "south_2600",
+  "band": "B_mid",
+  "outputs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 18.45,
+      "usage": {
+        "completion_tokens": 2136,
+        "prompt_tokens": 2148,
+        "total_tokens": 4284,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1611
+        }
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "tractor_cab",
+            "bbox": [
+              0.23,
+              0.0,
+              0.36,
+              0.27
+            ],
+            "center_inside_core": true,
+            "color": "白色",
+            "evidence": "位于通道内，具备货车车头结构，属于运输单元，非展台、建筑或杂物",
+            "uncertain": false
+          },
+          {
+            "unit_id": "U2",
+            "kind": "box_truck",
+            "bbox": [
+              0.39,
+              0.12,
+              0.55,
+              0.99
+            ],
+            "center_inside_core": true,
+            "color": "红色",
+            "evidence": "位于通道内，具备完整的车头与货厢结构，属于运输单元，非展台、建筑或杂物",
+            "uncertain": false
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U1"
+            ],
+            "bbox": [
+              0.23,
+              0.0,
+              0.36,
+              0.27
+            ],
+            "vehicle_type": "unknown",
+            "size": "large",
+            "evidence": "U1为独立的运输单元，构成一辆独立车辆",
+            "uncertain": false
+          },
+          {
+            "vehicle_id": "V2",
+            "unit_ids": [
+              "U2"
+            ],
+            "bbox": [
+              0.39,
+              0.12,
+              0.55,
+              0.99
+            ],
+            "vehicle_type": "rigid_truck",
+            "size": "large",
+            "evidence": "U2为带完整车头与货厢的整体式货车，构成一辆独立车辆",
+            "uncertain": false
+          }
+        ],
+        "counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "outside_core_units": [],
+        "scene_notes": "无明显遮挡，所有车辆均在绿色矩形内，边界车辆无歧义",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"tractor_cab\",\n      \"bbox\": [0.23, 0.0, 0.36, 0.27],\n      \"center_inside_core\": true,\n      \"color\": \"白色\",\n      \"evidence\": \"位于通道内，具备货车车头结构，属于运输单元，非展台、建筑或杂物\",\n      \"uncertain\": false\n    },\n    {\n      \"unit_id\": \"U2\",\n      \"kind\": \"box_truck\",\n      \"bbox\": [0.39, 0.12, 0.55, 0.99],\n      \"center_inside_core\": true,\n      \"color\": \"红色\",\n      \"evidence\": \"位于通道内，具备完整的车头与货厢结构，属于运输单元，非展台、建筑或杂物\",\n      \"uncertain\": false\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U1\"],\n      \"bbox\": [0.23, 0.0, 0.36, 0.27],\n      \"vehicle_type\": \"unknown\",\n      \"size\": \"large\",\n      \"evidence\": \"U1为独立的运输单元，构成一辆独立车辆\",\n      \"uncertain\": false\n    },\n    {\n      \"vehicle_id\": \"V2\",\n      \"unit_ids\": [\"U2\"],\n      \"bbox\": [0.39, 0.12, 0.55, 0.99],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"evidence\": \"U2为带完整车头与货厢的整体式货车，构成一辆独立车辆\",\n      \"uncertain\": false\n    }\n  ],\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"outside_core_units\": [],\n  \"scene_notes\": \"无明显遮挡，所有车辆均在绿色矩形内，边界车辆无歧义\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

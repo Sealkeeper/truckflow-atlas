@@ -1,0 +1,39 @@
+{
+  "sample_id": "north_1500",
+  "band": "A_far",
+  "outputs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 10.41,
+      "usage": {
+        "completion_tokens": 945,
+        "prompt_tokens": 2148,
+        "total_tokens": 3093,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 815
+        }
+      },
+      "parsed": {
+        "units": [],
+        "vehicles": [],
+        "counts": {
+          "total": 0,
+          "large": 0,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "outside_core_units": "A red truck-like vehicle is partially visible at the bottom edge, its center is outside the green rectangle, serving as context.",
+        "scene_notes": "No transport units (vehicles) with centers inside the green rectangle; the green area contains only people, booth structures, and debris.",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"units\": [],\n  \"vehicles\": [],\n  \"counts\": {\"total\": 0, \"large\": 0, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"outside_core_units\": \"A red truck-like vehicle is partially visible at the bottom edge, its center is outside the green rectangle, serving as context.\",\n  \"scene_notes\": \"No transport units (vehicles) with centers inside the green rectangle; the green area contains only people, booth structures, and debris.\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

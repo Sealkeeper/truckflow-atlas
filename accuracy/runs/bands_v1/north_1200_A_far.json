@@ -1,0 +1,73 @@
+{
+  "sample_id": "north_1200",
+  "band": "A_far",
+  "outputs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 12.42,
+      "usage": {
+        "completion_tokens": 1197,
+        "prompt_tokens": 2148,
+        "total_tokens": 3345,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 860
+        }
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "cargo_box",
+            "bbox": [
+              0.37,
+              0.37,
+              0.53,
+              0.79
+            ],
+            "center_inside_core": true,
+            "color": "灰色",
+            "evidence": "位于展会通道内，具备运输单元的底盘结构，不属于展台、建筑或杂物",
+            "uncertain": false
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U1"
+            ],
+            "bbox": [
+              0.37,
+              0.37,
+              0.53,
+              0.79
+            ],
+            "vehicle_type": "trailer_only",
+            "size": "medium",
+            "evidence": "该运输单元独立停放于通道，无可见连接的车头，为独立挂车类运输单元",
+            "uncertain": false
+          }
+        ],
+        "counts": {
+          "total": 1,
+          "large": 0,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "outside_core_units": [
+          "下方红色货车（中心点在绿色矩形外，仅作上下文参考）"
+        ],
+        "scene_notes": "中间运输单元被多名施工人员部分遮挡，无可见车头，边界处有未计入的车辆",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"cargo_box\",\n      \"bbox\": [0.37, 0.37, 0.53, 0.79],\n      \"center_inside_core\": true,\n      \"color\": \"灰色\",\n      \"evidence\": \"位于展会通道内，具备运输单元的底盘结构，不属于展台、建筑或杂物\",\n      \"uncertain\": false\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U1\"],\n      \"bbox\": [0.37, 0.37, 0.53, 0.79],\n      \"vehicle_type\": \"trailer_only\",\n      \"size\": \"medium\",\n      \"evidence\": \"该运输单元独立停放于通道，无可见连接的车头，为独立挂车类运输单元\",\n      \"uncertain\": false\n    }\n  ],\n  \"counts\": {\"total\": 1, \"large\": 0, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"outside_core_units\": [\"下方红色货车（中心点在绿色矩形外，仅作上下文参考）\"],\n  \"scene_notes\": \"中间运输单元被多名施工人员部分遮挡，无可见车头，边界处有未计入的车辆\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

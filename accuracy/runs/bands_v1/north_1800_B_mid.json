@@ -1,0 +1,71 @@
+{
+  "sample_id": "north_1800",
+  "band": "B_mid",
+  "outputs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 15.29,
+      "usage": {
+        "completion_tokens": 1838,
+        "prompt_tokens": 2179,
+        "total_tokens": 4017,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1505
+        }
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "box_truck",
+            "bbox": [
+              0.36,
+              0.0,
+              0.48,
+              0.37
+            ],
+            "center_inside_core": true,
+            "color": "red",
+            "evidence": "位于绿色矩形内的通道中，是带封闭货厢的厢式货车，属于运输单元，非展台、建筑或杂物",
+            "uncertain": false
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U1"
+            ],
+            "bbox": [
+              0.36,
+              0.0,
+              0.48,
+              0.37
+            ],
+            "vehicle_type": "rigid_truck",
+            "size": "large",
+            "evidence": "该运输单元为完整的厢式货车，无其他连接单元，是独立的物理车辆",
+            "uncertain": false
+          }
+        ],
+        "counts": {
+          "total": 1,
+          "large": 1,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "outside_core_units": "无",
+        "scene_notes": "红色厢式货车货厢底部接近绿色矩形上边界，其余主体在矩形内，无明显遮挡",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"box_truck\",\n      \"bbox\": [0.36, 0.0, 0.48, 0.37],\n      \"center_inside_core\": true,\n      \"color\": \"red\",\n      \"evidence\": \"位于绿色矩形内的通道中，是带封闭货厢的厢式货车，属于运输单元，非展台、建筑或杂物\",\n      \"uncertain\": false\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U1\"],\n      \"bbox\": [0.36, 0.0, 0.48, 0.37],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"evidence\": \"该运输单元为完整的厢式货车，无其他连接单元，是独立的物理车辆\",\n      \"uncertain\": false\n    }\n  ],\n  \"counts\": {\"total\": 1, \"large\": 1, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"outside_core_units\": \"无\",\n  \"scene_notes\": \"红色厢式货车货厢底部接近绿色矩形上边界，其余主体在矩形内，无明显遮挡\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

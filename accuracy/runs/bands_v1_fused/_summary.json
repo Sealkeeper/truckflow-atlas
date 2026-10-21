@@ -1,0 +1,2534 @@
+{
+  "exact": 7,
+  "total": 20,
+  "mae": 1.0,
+  "errors": {
+    "north_5": 4,
+    "north_1200": 1,
+    "north_2600": 2,
+    "south_5": 1,
+    "south_300": 2,
+    "south_600": 2,
+    "south_900": 1,
+    "south_1200": 1,
+    "south_1500": 2,
+    "south_1800": 1,
+    "south_2100": 1,
+    "south_2400": 1,
+    "south_2600": 1
+  },
+  "rows": [
+    {
+      "sample_id": "north_5",
+      "camera": "north",
+      "time": 5,
+      "counts": {
+        "total": 7,
+        "large": 2,
+        "medium": 5,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.38,
+            0.58,
+            0.485,
+            0.8992
+          ],
+          "size": "large",
+          "sources": [
+            "C_near:V1"
+          ],
+          "evidence": "该货厢为独立停放的运输单元，无连接的车头，属于一辆独立的挂车"
+        },
+        {
+          "bbox": [
+            0.405,
+            0.4968,
+            0.485,
+            0.6498
+          ],
+          "size": "medium",
+          "sources": [
+            "B_mid:V1"
+          ],
+          "evidence": "该厢式货厢独立停放于通道内，无可见连接的车头，为独立运输车辆"
+        },
+        {
+          "bbox": [
+            0.41,
+            0.3574,
+            0.48,
+            0.4594
+          ],
+          "size": "medium",
+          "sources": [
+            "B_mid:V2"
+          ],
+          "evidence": "该平板挂车独立停放于通道内，无可见连接的车头，为独立运输车辆"
+        },
+        {
+          "bbox": [
+            0.49,
+            0.1075,
+            0.545,
+            0.2362
+          ],
+          "size": "large",
+          "sources": [
+            "A_far:V1"
+          ],
+          "evidence": "U1为带车头的厢式货车，独立停放于通道内，为完整车辆"
+        },
+        {
+          "bbox": [
+            0.43,
+            0.2479,
+            0.49,
+            0.3376
+          ],
+          "size": "medium",
+          "sources": [
+            "A_far:V4"
+          ],
+          "evidence": "U4为独立货厢，无连接车头，属于通道内运输车辆"
+        },
+        {
+          "bbox": [
+            0.44,
+            0.1621,
+            0.49,
+            0.2596
+          ],
+          "size": "medium",
+          "sources": [
+            "A_far:V3"
+          ],
+          "evidence": "U3为独立货厢，无连接车头，属于通道内运输车辆"
+        },
+        {
+          "bbox": [
+            0.445,
+            0.088,
+            0.49,
+            0.1816
+          ],
+          "size": "medium",
+          "sources": [
+            "A_far:V2"
+          ],
+          "evidence": "U2为独立货厢，无连接车头，属于通道内运输车辆"
+        }
+      ],
+      "raw_candidate_count": 7,
+      "merged_away": 0,
+      "calls": [
+        {
+          "band": "A_far",
+          "latency_s": 34.22,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 4636,
+            "prompt_tokens": 2148,
+            "total_tokens": 6784,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 3669
+            }
+          }
+        },
+        {
+          "band": "B_mid",
+          "latency_s": 18.22,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 2269,
+            "prompt_tokens": 2179,
+            "total_tokens": 4448,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1722
+            }
+          }
+        },
+        {
+          "band": "C_near",
+          "latency_s": 12.42,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1284,
+            "prompt_tokens": 2139,
+            "total_tokens": 3423,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 955
+            }
+          }
+        }
+      ],
+      "failures": [],
+      "size_review": []
+    },
+    {
+      "sample_id": "north_300",
+      "camera": "north",
+      "time": 300,
+      "counts": {
+        "total": 3,
+        "large": 1,
+        "medium": 2,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.3,
+            0.58,
+            0.49,
+            0.9958
+          ],
+          "size": "large",
+          "sources": [
+            "C_near:V1",
+            "B_mid:V1"
+          ],
+          "evidence": "该运输单元为独立停放的集装箱挂车，无连接车头，属于通道内独立车辆"
+        },
+        {
+          "bbox": [
+            0.43,
+            0.2479,
+            0.5,
+            0.3844
+          ],
+          "size": "medium",
+          "sources": [
+            "A_far:V2"
+          ],
+          "evidence": "U2为独立停放于通道的运输单元，与U1有明显间隙，无连接车头，属于独立车辆"
+        },
+        {
+          "bbox": [
+            0.435,
+            0.1543,
+            0.5,
+            0.2596
+          ],
+          "size": "medium",
+          "sources": [
+            "A_far:V1"
+          ],
+          "evidence": "U1为独立停放于通道的运输单元，无连接车头，属于独立车辆"
+        }
+      ],
+      "raw_candidate_count": 4,
+      "merged_away": 1,
+      "calls": [
+        {
+          "band": "A_far",
+          "latency_s": 15.35,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1790,
+            "prompt_tokens": 2148,
+            "total_tokens": 3938,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1226
+            }
+          }
+        },
+        {
+          "band": "B_mid",
+          "latency_s": 15.15,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1561,
+            "prompt_tokens": 2179,
+            "total_tokens": 3740,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1221
+            }
+          }
+        },
+        {
+          "band": "C_near",
+          "latency_s": 9.08,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1069,
+            "prompt_tokens": 2139,
+            "total_tokens": 3208,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 749
+            }
+          }
+        }
+      ],
+      "failures": [],
+      "size_review": []
+    },
+    {
+      "sample_id": "north_600",
+      "camera": "north",
+      "time": 600,
+      "counts": {
+        "total": 4,
+        "large": 2,
+        "medium": 2,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.34,
+            0.6136,
+            0.485,
+            0.9958
+          ],
+          "size": "large",
+          "sources": [
+            "C_near:V1"
+          ],
+          "evidence": "该货厢为独立运输单元，无可见车头，停放于通道内，属于一辆独立的运输车辆"
+        },
+        {
+          "bbox": [
+            0.47,
+            0.3268,
+            0.555,
+            0.5852
+          ],
+          "size": "large",
+          "sources": [
+            "B_mid:V1"
+          ],
+          "evidence": "仅可见货厢主体，无可见车头，为通道内独立停放的运输车辆"
+        },
+        {
+          "bbox": [
+            0.43,
+            0.2479,
+            0.495,
+            0.3649
+          ],
+          "size": "medium",
+          "sources": [
+            "A_far:V2"
+          ],
+          "evidence": "U2为独立停放的无车头货厢，属于独立运输车辆"
+        },
+        {
+          "bbox": [
+            0.435,
+            0.1504,
+            0.495,
+            0.2596
+          ],
+          "size": "medium",
+          "sources": [
+            "A_far:V1"
+          ],
+          "evidence": "U1为独立停放的无车头货厢，属于独立运输车辆"
+        }
+      ],
+      "raw_candidate_count": 4,
+      "merged_away": 0,
+      "calls": [
+        {
+          "band": "A_far",
+          "latency_s": 22.72,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 3041,
+            "prompt_tokens": 2148,
+            "total_tokens": 5189,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 2273
+            }
+          }
+        },
+        {
+          "band": "B_mid",
+          "latency_s": 14.52,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1630,
+            "prompt_tokens": 2179,
+            "total_tokens": 3809,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1282
+            }
+          }
+        },
+        {
+          "band": "C_near",
+          "latency_s": 19.78,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 2011,
+            "prompt_tokens": 2139,
+            "total_tokens": 4150,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1658
+            }
+          }
+        }
+      ],
+      "failures": [],
+      "size_review": []
+    },
+    {
+      "sample_id": "north_900",
+      "camera": "north",
+      "time": 900,
+      "counts": {
+        "total": 3,
+        "large": 2,
+        "medium": 1,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.335,
+            0.6094,
+            0.48,
+            0.9916
+          ],
+          "size": "large",
+          "sources": [
+            "C_near:V1"
+          ],
+          "evidence": "U1为厢式货车，车头与货厢一体，构成完整的物理车辆"
+        },
+        {
+          "bbox": [
+            0.405,
+            0.3574,
+            0.49,
+            0.6192
+          ],
+          "size": "large",
+          "sources": [
+            "B_mid:V1"
+          ],
+          "evidence": "This is an independent cargo container (trailer only) in the channel, no connected cab is within the core green rectangle."
+        },
+        {
+          "bbox": [
+            0.44,
+            0.1582,
+            0.495,
+            0.3415
+          ],
+          "size": "medium",
+          "sources": [
+            "A_far:V1"
+          ],
+          "evidence": "该运输单元为独立的厢式货车，无其他连接的运输单元，属于单独的车辆"
+        }
+      ],
+      "raw_candidate_count": 3,
+      "merged_away": 0,
+      "calls": [
+        {
+          "band": "A_far",
+          "latency_s": 10.63,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1242,
+            "prompt_tokens": 2148,
+            "total_tokens": 3390,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 881
+            }
+          }
+        },
+        {
+          "band": "B_mid",
+          "latency_s": 20.53,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 2519,
+            "prompt_tokens": 2179,
+            "total_tokens": 4698,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 2175
+            }
+          }
+        },
+        {
+          "band": "C_near",
+          "latency_s": 20.37,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 2527,
+            "prompt_tokens": 2139,
+            "total_tokens": 4666,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1978
+            }
+          }
+        }
+      ],
+      "failures": [],
+      "size_review": []
+    },
+    {
+      "sample_id": "north_1200",
+      "camera": "north",
+      "time": 1200,
+      "counts": {
+        "total": 4,
+        "large": 2,
+        "medium": 2,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.34,
+            0.6136,
+            0.485,
+            0.9958
+          ],
+          "size": "large",
+          "sources": [
+            "C_near:V1"
+          ],
+          "evidence": "U1为独立的刚性厢式货车，无其他连接单元，属于一辆完整车辆"
+        },
+        {
+          "bbox": [
+            0.395,
+            0.354,
+            0.5,
+            0.6158
+          ],
+          "size": "large",
+          "sources": [
+            "B_mid:V1"
+          ],
+          "evidence": "U1为完整厢式货车单元，属于独立车辆"
+        },
+        {
+          "bbox": [
+            0.435,
+            0.1543,
+            0.515,
+            0.3181
+          ],
+          "size": "medium",
+          "sources": [
+            "A_far:V1"
+          ],
+          "evidence": "该运输单元独立停放于通道，无可见连接的车头，为独立挂车类运输单元"
+        },
+        {
+          "bbox": [
+            0.6,
+            0.4322,
+            0.715,
+            0.507
+          ],
+          "size": "medium",
+          "sources": [
+            "B_mid:V2"
+          ],
+          "evidence": "U2为通道内独立运输单元，属于车辆"
+        }
+      ],
+      "raw_candidate_count": 4,
+      "merged_away": 0,
+      "calls": [
+        {
+          "band": "A_far",
+          "latency_s": 12.42,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1197,
+            "prompt_tokens": 2148,
+            "total_tokens": 3345,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 860
+            }
+          }
+        },
+        {
+          "band": "B_mid",
+          "latency_s": 14.11,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1587,
+            "prompt_tokens": 2179,
+            "total_tokens": 3766,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 993
+            }
+          }
+        },
+        {
+          "band": "C_near",
+          "latency_s": 10.74,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1331,
+            "prompt_tokens": 2139,
+            "total_tokens": 3470,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 974
+            }
+          }
+        }
+      ],
+      "failures": [],
+      "size_review": []
+    },
+    {
+      "sample_id": "north_1500",
+      "camera": "north",
+      "time": 1500,
+      "counts": {
+        "total": 2,
+        "large": 2,
+        "medium": 0,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.335,
+            0.6094,
+            0.485,
+            0.9916
+          ],
+          "size": "large",
+          "sources": [
+            "C_near:V1"
+          ],
+          "evidence": "This is an independent cargo unit in the channel, no connected tractor is visible, so it is a standalone trailer."
+        },
+        {
+          "bbox": [
+            0.39,
+            0.3608,
+            0.495,
+            0.6566
+          ],
+          "size": "large",
+          "sources": [
+            "B_mid:V1"
+          ],
+          "evidence": "U1（货厢）与U2（车头）直接连接，构成完整的运输车辆"
+        }
+      ],
+      "raw_candidate_count": 2,
+      "merged_away": 0,
+      "calls": [
+        {
+          "band": "A_far",
+          "latency_s": 10.41,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 945,
+            "prompt_tokens": 2148,
+            "total_tokens": 3093,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 815
+            }
+          }
+        },
+        {
+          "band": "B_mid",
+          "latency_s": 11.48,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1405,
+            "prompt_tokens": 2179,
+            "total_tokens": 3584,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 969
+            }
+          }
+        },
+        {
+          "band": "C_near",
+          "latency_s": 14.17,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1409,
+            "prompt_tokens": 2139,
+            "total_tokens": 3548,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1041
+            }
+          }
+        }
+      ],
+      "failures": [],
+      "size_review": []
+    },
+    {
+      "sample_id": "north_1800",
+      "camera": "north",
+      "time": 1800,
+      "counts": {
+        "total": 2,
+        "large": 2,
+        "medium": 0,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.34,
+            0.6136,
+            0.485,
+            0.9958
+          ],
+          "size": "large",
+          "sources": [
+            "C_near:V1"
+          ],
+          "evidence": "该运输单元为独立停放的货厢，无可见连接的车头，属于通道内的运输车辆"
+        },
+        {
+          "bbox": [
+            0.43,
+            0.2323,
+            0.495,
+            0.3961
+          ],
+          "size": "large",
+          "sources": [
+            "A_far:V1",
+            "B_mid:V1"
+          ],
+          "evidence": "该运输单元为独立停放的货厢，无连接车头，属于通道内的独立运输车辆"
+        }
+      ],
+      "raw_candidate_count": 3,
+      "merged_away": 1,
+      "calls": [
+        {
+          "band": "A_far",
+          "latency_s": 12.91,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1377,
+            "prompt_tokens": 2148,
+            "total_tokens": 3525,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1052
+            }
+          }
+        },
+        {
+          "band": "B_mid",
+          "latency_s": 15.29,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1838,
+            "prompt_tokens": 2179,
+            "total_tokens": 4017,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1505
+            }
+          }
+        },
+        {
+          "band": "C_near",
+          "latency_s": 13.94,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1615,
+            "prompt_tokens": 2139,
+            "total_tokens": 3754,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1268
+            }
+          }
+        }
+      ],
+      "failures": [],
+      "size_review": []
+    },
+    {
+      "sample_id": "north_2100",
+      "camera": "north",
+      "time": 2100,
+      "counts": {
+        "total": 2,
+        "large": 2,
+        "medium": 0,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.3,
+            0.622,
+            0.48,
+            0.9916
+          ],
+          "size": "large",
+          "sources": [
+            "C_near:V1"
+          ],
+          "evidence": "该货厢独立停放于通道，无连接的车头，属于独立运输挂车"
+        },
+        {
+          "bbox": [
+            0.435,
+            0.2362,
+            0.495,
+            0.3961
+          ],
+          "size": "large",
+          "sources": [
+            "A_far:V1",
+            "B_mid:V1"
+          ],
+          "evidence": "该运输单元为独立停放的货厢，未连接其他运输单元，属于独立车辆"
+        }
+      ],
+      "raw_candidate_count": 3,
+      "merged_away": 1,
+      "calls": [
+        {
+          "band": "A_far",
+          "latency_s": 17.07,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1523,
+            "prompt_tokens": 2148,
+            "total_tokens": 3671,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1201
+            }
+          }
+        },
+        {
+          "band": "B_mid",
+          "latency_s": 11.83,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1245,
+            "prompt_tokens": 2179,
+            "total_tokens": 3424,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 898
+            }
+          }
+        },
+        {
+          "band": "C_near",
+          "latency_s": 16.44,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1476,
+            "prompt_tokens": 2139,
+            "total_tokens": 3615,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1158
+            }
+          }
+        }
+      ],
+      "failures": [],
+      "size_review": []
+    },
+    {
+      "sample_id": "north_2400",
+      "camera": "north",
+      "time": 2400,
+      "counts": {
+        "total": 3,
+        "large": 3,
+        "medium": 0,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.405,
+            0.622,
+            0.525,
+            0.9958
+          ],
+          "size": "large",
+          "sources": [
+            "C_near:V1"
+          ],
+          "evidence": "Single rigid box truck, no separate trailer or other transport units attached to it"
+        },
+        {
+          "bbox": [
+            0.435,
+            0.2518,
+            0.505,
+            0.3961
+          ],
+          "size": "large",
+          "sources": [
+            "A_far:V2",
+            "B_mid:V1"
+          ],
+          "evidence": "U2为独立货厢，无可见车头，位于通道队列中，为独立运输单元"
+        },
+        {
+          "bbox": [
+            0.44,
+            0.1465,
+            0.525,
+            0.2635
+          ],
+          "size": "large",
+          "sources": [
+            "A_far:V1"
+          ],
+          "evidence": "U1为完整厢式货车，独立位于通道内，无连接其他运输单元"
+        }
+      ],
+      "raw_candidate_count": 4,
+      "merged_away": 1,
+      "calls": [
+        {
+          "band": "A_far",
+          "latency_s": 14.75,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1670,
+            "prompt_tokens": 2148,
+            "total_tokens": 3818,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1121
+            }
+          }
+        },
+        {
+          "band": "B_mid",
+          "latency_s": 12.37,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1403,
+            "prompt_tokens": 2179,
+            "total_tokens": 3582,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1079
+            }
+          }
+        },
+        {
+          "band": "C_near",
+          "latency_s": 8.33,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 885,
+            "prompt_tokens": 2139,
+            "total_tokens": 3024,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 555
+            }
+          }
+        }
+      ],
+      "failures": [],
+      "size_review": []
+    },
+    {
+      "sample_id": "north_2600",
+      "camera": "north",
+      "time": 2600,
+      "counts": {
+        "total": 4,
+        "large": 4,
+        "medium": 0,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.4,
+            0.3812,
+            0.49,
+            0.6566
+          ],
+          "size": "large",
+          "sources": [
+            "B_mid:V1"
+          ],
+          "evidence": "该运输单元为独立厢式货厢，未与其他运输单元连接，仅可见货厢部分，属于通道内的独立运输车辆"
+        },
+        {
+          "bbox": [
+            0.335,
+            0.8362,
+            0.47,
+            0.9958
+          ],
+          "size": "large",
+          "sources": [
+            "C_near:V2"
+          ],
+          "evidence": "This is another independent truck in the channel, separate from V1."
+        },
+        {
+          "bbox": [
+            0.395,
+            0.58,
+            0.48,
+            0.6808
+          ],
+          "size": "large",
+          "sources": [
+            "C_near:V1"
+          ],
+          "evidence": "This is an independent truck in the channel, no connection to other transport units."
+        },
+        {
+          "bbox": [
+            0.47,
+            0.1114,
+            0.53,
+            0.1699
+          ],
+          "size": "large",
+          "sources": [
+            "A_far:V1"
+          ],
+          "evidence": "Only one transport unit is present in the green core rectangle, forming an independent vehicle."
+        }
+      ],
+      "raw_candidate_count": 4,
+      "merged_away": 0,
+      "calls": [
+        {
+          "band": "A_far",
+          "latency_s": 12.09,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1328,
+            "prompt_tokens": 2148,
+            "total_tokens": 3476,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 997
+            }
+          }
+        },
+        {
+          "band": "B_mid",
+          "latency_s": 18.93,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 2146,
+            "prompt_tokens": 2179,
+            "total_tokens": 4325,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1775
+            }
+          }
+        },
+        {
+          "band": "C_near",
+          "latency_s": 13.11,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1561,
+            "prompt_tokens": 2139,
+            "total_tokens": 3700,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1018
+            }
+          }
+        }
+      ],
+      "failures": [],
+      "size_review": []
+    },
+    {
+      "sample_id": "south_5",
+      "camera": "south",
+      "time": 5,
+      "counts": {
+        "total": 4,
+        "large": 3,
+        "medium": 1,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.4565,
+            0.601,
+            0.5735,
+            0.9958
+          ],
+          "size": "large",
+          "sources": [
+            "C_near:V1"
+          ],
+          "evidence": "U1（车头）与U2（货厢）直接连接，构成同一辆完整的货车，属于通道内的运输车辆"
+        },
+        {
+          "bbox": [
+            0.4565,
+            0.32,
+            0.542,
+            0.6566
+          ],
+          "size": "large",
+          "sources": [
+            "B_mid:V1"
+          ],
+          "evidence": "U1为牵引车，U2为其直接连接的货厢，属于同一辆运输车辆"
+        },
+        {
+          "bbox": [
+            0.461,
+            0.2479,
+            0.5195,
+            0.3922
+          ],
+          "size": "large",
+          "sources": [
+            "A_far:V2"
+          ],
+          "evidence": "U2为带完整车头与货厢的厢式货车，属于独立运输车辆"
+        },
+        {
+          "bbox": [
+            0.452,
+            0.1348,
+            0.5015,
+            0.2557
+          ],
+          "size": "medium",
+          "sources": [
+            "A_far:V1"
+          ],
+          "evidence": "U1为独立货厢，无可见车头，停在通道内，为独立运输车辆"
+        }
+      ],
+      "raw_candidate_count": 4,
+      "merged_away": 0,
+      "calls": [
+        {
+          "band": "A_far",
+          "latency_s": 16.86,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 2065,
+            "prompt_tokens": 2155,
+            "total_tokens": 4220,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1484
+            }
+          }
+        },
+        {
+          "band": "B_mid",
+          "latency_s": 12.11,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1447,
+            "prompt_tokens": 2148,
+            "total_tokens": 3595,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1009
+            }
+          }
+        },
+        {
+          "band": "C_near",
+          "latency_s": 11.9,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1316,
+            "prompt_tokens": 2169,
+            "total_tokens": 3485,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 880
+            }
+          }
+        }
+      ],
+      "failures": [],
+      "size_review": []
+    },
+    {
+      "sample_id": "south_300",
+      "camera": "south",
+      "time": 300,
+      "counts": {
+        "total": 6,
+        "large": 5,
+        "medium": 1,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.461,
+            0.58,
+            0.551,
+            0.937
+          ],
+          "size": "large",
+          "sources": [
+            "C_near:V1"
+          ],
+          "evidence": "U1为完整的厢式货车，车头与货厢直接连接，属于同一物理车辆"
+        },
+        {
+          "bbox": [
+            0.461,
+            0.49,
+            0.551,
+            0.6566
+          ],
+          "size": "large",
+          "sources": [
+            "B_mid:V3"
+          ],
+          "evidence": "该单元为独立货厢，无可见车头，属于通道队列中的运输单元，为独立车辆"
+        },
+        {
+          "bbox": [
+            0.4025,
+            0.1777,
+            0.4655,
+            0.3532
+          ],
+          "size": "large",
+          "sources": [
+            "A_far:V1"
+          ],
+          "evidence": "This is a single rigid box truck, no attached trailer visible in the channel."
+        },
+        {
+          "bbox": [
+            0.452,
+            0.354,
+            0.515,
+            0.507
+          ],
+          "size": "large",
+          "sources": [
+            "B_mid:V2"
+          ],
+          "evidence": "该单元为单独的牵引车，与前方白色货厢有明显间隙，为独立车辆"
+        },
+        {
+          "bbox": [
+            0.4475,
+            0.2752,
+            0.515,
+            0.3922
+          ],
+          "size": "large",
+          "sources": [
+            "A_far:V3"
+          ],
+          "evidence": "This is an independent trailer, no connected cab present, located in the channel."
+        },
+        {
+          "bbox": [
+            0.443,
+            0.1114,
+            0.4925,
+            0.2635
+          ],
+          "size": "medium",
+          "sources": [
+            "A_far:V2"
+          ],
+          "evidence": "This is an independent trailer, no connected cab present, located in the channel."
+        }
+      ],
+      "raw_candidate_count": 6,
+      "merged_away": 0,
+      "calls": [
+        {
+          "band": "A_far",
+          "latency_s": 28.53,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 3530,
+            "prompt_tokens": 2155,
+            "total_tokens": 5685,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 2782
+            }
+          }
+        },
+        {
+          "band": "B_mid",
+          "latency_s": 35.48,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 4157,
+            "prompt_tokens": 2148,
+            "total_tokens": 6305,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 3370
+            }
+          }
+        },
+        {
+          "band": "C_near",
+          "latency_s": 10.18,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1180,
+            "prompt_tokens": 2169,
+            "total_tokens": 3349,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 855
+            }
+          }
+        }
+      ],
+      "failures": [],
+      "size_review": []
+    },
+    {
+      "sample_id": "south_600",
+      "camera": "south",
+      "time": 600,
+      "counts": {
+        "total": 7,
+        "large": 5,
+        "medium": 1,
+        "small": 1,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.4655,
+            0.6556,
+            0.5555,
+            0.8824
+          ],
+          "size": "large",
+          "sources": [
+            "C_near:V1"
+          ],
+          "evidence": "This is a complete large truck in the channel, no connection to other units inside the core area"
+        },
+        {
+          "bbox": [
+            0.4655,
+            0.456,
+            0.551,
+            0.6532
+          ],
+          "size": "large",
+          "sources": [
+            "B_mid:V2"
+          ],
+          "evidence": "U3为独立停放的货厢，无连接的车头，位于通道队列中，属于独立的运输车辆"
+        },
+        {
+          "bbox": [
+            0.4475,
+            0.354,
+            0.524,
+            0.49
+          ],
+          "size": "large",
+          "sources": [
+            "B_mid:V1"
+          ],
+          "evidence": "U1（牵引车）与U2（货厢）直接连接，构成完整的牵引车挂车车辆，属于同一物理车辆"
+        },
+        {
+          "bbox": [
+            0.443,
+            0.1153,
+            0.497,
+            0.2674
+          ],
+          "size": "large",
+          "sources": [
+            "A_far:V1"
+          ],
+          "evidence": "U1为完整的厢式货车，是独立的运输车辆"
+        },
+        {
+          "bbox": [
+            0.452,
+            0.2791,
+            0.5195,
+            0.3961
+          ],
+          "size": "medium",
+          "sources": [
+            "A_far:V3"
+          ],
+          "evidence": "U3为独立的货厢，无连接车头，属于通道内的独立运输车辆"
+        },
+        {
+          "bbox": [
+            0.389,
+            0.6514,
+            0.4295,
+            0.8236
+          ],
+          "size": "small",
+          "sources": [
+            "C_near:V2"
+          ],
+          "evidence": "This is a separate small transport unit in the channel, independent of other counted units"
+        },
+        {
+          "bbox": [
+            0.407,
+            0.2323,
+            0.461,
+            0.3571
+          ],
+          "size": "large",
+          "sources": [
+            "A_far:V2"
+          ],
+          "evidence": "U2为完整的厢式货车，是独立的运输车辆"
+        }
+      ],
+      "raw_candidate_count": 7,
+      "merged_away": 0,
+      "calls": [
+        {
+          "band": "A_far",
+          "latency_s": 17.72,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 2113,
+            "prompt_tokens": 2155,
+            "total_tokens": 4268,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1344
+            }
+          }
+        },
+        {
+          "band": "B_mid",
+          "latency_s": 23.53,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 2906,
+            "prompt_tokens": 2148,
+            "total_tokens": 5054,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 2200
+            }
+          }
+        },
+        {
+          "band": "C_near",
+          "latency_s": 17.17,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 2061,
+            "prompt_tokens": 2169,
+            "total_tokens": 4230,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1527
+            }
+          }
+        }
+      ],
+      "failures": [],
+      "size_review": []
+    },
+    {
+      "sample_id": "south_900",
+      "camera": "south",
+      "time": 900,
+      "counts": {
+        "total": 6,
+        "large": 6,
+        "medium": 0,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.4565,
+            0.3744,
+            0.551,
+            0.6566
+          ],
+          "size": "large",
+          "sources": [
+            "B_mid:V1"
+          ],
+          "evidence": "The red tractor cab (U1) is directly connected to the white cargo box (U2), forming a single tractor-trailer vehicle in the channel"
+        },
+        {
+          "bbox": [
+            0.461,
+            0.58,
+            0.551,
+            0.874
+          ],
+          "size": "large",
+          "sources": [
+            "C_near:V1"
+          ],
+          "evidence": "U1为完整的一体货车，是独立的运输车辆"
+        },
+        {
+          "bbox": [
+            0.4835,
+            0.853,
+            0.596,
+            0.9958
+          ],
+          "size": "large",
+          "sources": [
+            "C_near:V2"
+          ],
+          "evidence": "U2为独立停放的无车头货厢，属于通道内的独立运输单元"
+        },
+        {
+          "bbox": [
+            0.4475,
+            0.2752,
+            0.5195,
+            0.3961
+          ],
+          "size": "large",
+          "sources": [
+            "A_far:V3"
+          ],
+          "evidence": "U3 is a standalone trailer with no visible attached cab, located in the channel between V1 and right structures."
+        },
+        {
+          "bbox": [
+            0.4025,
+            0.2323,
+            0.461,
+            0.361
+          ],
+          "size": "large",
+          "sources": [
+            "A_far:V1"
+          ],
+          "evidence": "U1 is a complete rigid truck, no other units attached to it."
+        },
+        {
+          "bbox": [
+            0.4475,
+            0.1153,
+            0.4925,
+            0.2635
+          ],
+          "size": "large",
+          "sources": [
+            "A_far:V2"
+          ],
+          "evidence": "U2 is a complete rigid truck, separate from other units, positioned behind V1."
+        }
+      ],
+      "raw_candidate_count": 6,
+      "merged_away": 0,
+      "calls": [
+        {
+          "band": "A_far",
+          "latency_s": 18.76,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 2367,
+            "prompt_tokens": 2155,
+            "total_tokens": 4522,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1554
+            }
+          }
+        },
+        {
+          "band": "B_mid",
+          "latency_s": 14.4,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1527,
+            "prompt_tokens": 2148,
+            "total_tokens": 3675,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1037
+            }
+          }
+        },
+        {
+          "band": "C_near",
+          "latency_s": 17.78,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1839,
+            "prompt_tokens": 2169,
+            "total_tokens": 4008,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1285
+            }
+          }
+        }
+      ],
+      "failures": [],
+      "size_review": []
+    },
+    {
+      "sample_id": "south_1200",
+      "camera": "south",
+      "time": 1200,
+      "counts": {
+        "total": 6,
+        "large": 5,
+        "medium": 1,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.452,
+            0.3744,
+            0.5465,
+            0.6532
+          ],
+          "size": "large",
+          "sources": [
+            "B_mid:V1"
+          ],
+          "evidence": "U1（牵引车）与U2（货厢）直接连接，构成完整的牵引挂车车辆，属于通道内的运输车辆"
+        },
+        {
+          "bbox": [
+            0.4655,
+            0.58,
+            0.551,
+            0.8824
+          ],
+          "size": "large",
+          "sources": [
+            "C_near:V1"
+          ],
+          "evidence": "This is an independent tractor vehicle located in the channel, not connected to other transport units."
+        },
+        {
+          "bbox": [
+            0.4925,
+            0.853,
+            0.596,
+            0.9958
+          ],
+          "size": "large",
+          "sources": [
+            "C_near:V2"
+          ],
+          "evidence": "This is an independent cargo trailer located in the channel, with no attached tractor, so it is a trailer-only transport unit."
+        },
+        {
+          "bbox": [
+            0.434,
+            0.1192,
+            0.488,
+            0.2518
+          ],
+          "size": "large",
+          "sources": [
+            "A_far:V1"
+          ],
+          "evidence": "U1为带连接货厢的牵引车，构成完整的牵引挂车车辆"
+        },
+        {
+          "bbox": [
+            0.4565,
+            0.283,
+            0.5105,
+            0.3961
+          ],
+          "size": "medium",
+          "sources": [
+            "A_far:V3"
+          ],
+          "evidence": "U3为通道内独立停放的货厢，无可见车头，属于单独的运输单元车辆"
+        },
+        {
+          "bbox": [
+            0.416,
+            0.244,
+            0.461,
+            0.3532
+          ],
+          "size": "large",
+          "sources": [
+            "A_far:V2"
+          ],
+          "evidence": "U2为带车头与货厢的厢式货车，构成完整的刚性货车车辆"
+        }
+      ],
+      "raw_candidate_count": 6,
+      "merged_away": 0,
+      "calls": [
+        {
+          "band": "A_far",
+          "latency_s": 23.6,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 2834,
+            "prompt_tokens": 2155,
+            "total_tokens": 4989,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1953
+            }
+          }
+        },
+        {
+          "band": "B_mid",
+          "latency_s": 12.0,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1429,
+            "prompt_tokens": 2148,
+            "total_tokens": 3577,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 915
+            }
+          }
+        },
+        {
+          "band": "C_near",
+          "latency_s": 26.02,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 2763,
+            "prompt_tokens": 2169,
+            "total_tokens": 4932,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 2190
+            }
+          }
+        }
+      ],
+      "failures": [],
+      "size_review": []
+    },
+    {
+      "sample_id": "south_1500",
+      "camera": "south",
+      "time": 1500,
+      "counts": {
+        "total": 7,
+        "large": 3,
+        "medium": 4,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.4655,
+            0.58,
+            0.5555,
+            0.8782
+          ],
+          "size": "large",
+          "sources": [
+            "C_near:V1"
+          ],
+          "evidence": "U1是完整的刚性货车，为独立车辆"
+        },
+        {
+          "bbox": [
+            0.4835,
+            0.853,
+            0.596,
+            0.9958
+          ],
+          "size": "large",
+          "sources": [
+            "C_near:V2"
+          ],
+          "evidence": "U2是独立的货厢，无可见车头，为通道内的独立运输车辆"
+        },
+        {
+          "bbox": [
+            0.461,
+            0.456,
+            0.551,
+            0.626
+          ],
+          "size": "large",
+          "sources": [
+            "B_mid:V1"
+          ],
+          "evidence": "Independent cargo trailer with no visible cab, located in the channel, separate from other units in the green rectangle"
+        },
+        {
+          "bbox": [
+            0.4475,
+            0.2791,
+            0.5195,
+            0.3922
+          ],
+          "size": "medium",
+          "sources": [
+            "A_far:V3"
+          ],
+          "evidence": "Trailer only (no cab visible in green rectangle), located in the channel, independent unit."
+        },
+        {
+          "bbox": [
+            0.4475,
+            0.371,
+            0.524,
+            0.473
+          ],
+          "size": "medium",
+          "sources": [
+            "B_mid:V2"
+          ],
+          "evidence": "Truck cab in the channel, no connected trailer visible within the green rectangle, counted as a separate transport unit"
+        },
+        {
+          "bbox": [
+            0.443,
+            0.1153,
+            0.4925,
+            0.2596
+          ],
+          "size": "medium",
+          "sources": [
+            "A_far:V1"
+          ],
+          "evidence": "Single tractor cab, no trailer connected within the green rectangle, independent transport unit."
+        },
+        {
+          "bbox": [
+            0.407,
+            0.2206,
+            0.452,
+            0.3493
+          ],
+          "size": "medium",
+          "sources": [
+            "A_far:V2"
+          ],
+          "evidence": "Rigid box truck with cab and cargo box, independent in the channel."
+        }
+      ],
+      "raw_candidate_count": 7,
+      "merged_away": 0,
+      "calls": [
+        {
+          "band": "A_far",
+          "latency_s": 29.05,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 3321,
+            "prompt_tokens": 2155,
+            "total_tokens": 5476,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 2550
+            }
+          }
+        },
+        {
+          "band": "B_mid",
+          "latency_s": 31.75,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 3666,
+            "prompt_tokens": 2148,
+            "total_tokens": 5814,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 3089
+            }
+          }
+        },
+        {
+          "band": "C_near",
+          "latency_s": 13.84,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1767,
+            "prompt_tokens": 2169,
+            "total_tokens": 3936,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1236
+            }
+          }
+        }
+      ],
+      "failures": [],
+      "size_review": []
+    },
+    {
+      "sample_id": "south_1800",
+      "camera": "south",
+      "time": 1800,
+      "counts": {
+        "total": 5,
+        "large": 2,
+        "medium": 3,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.4565,
+            0.58,
+            0.5555,
+            0.8866
+          ],
+          "size": "large",
+          "sources": [
+            "C_near:V1"
+          ],
+          "evidence": "U1为完整的厢式货车，车头与货厢直接连接，属于同一物理车辆"
+        },
+        {
+          "bbox": [
+            0.452,
+            0.371,
+            0.5465,
+            0.6566
+          ],
+          "size": "large",
+          "sources": [
+            "B_mid:V1"
+          ],
+          "evidence": "红色牵引车与白色货厢直接连接，构成完整的牵引挂车车辆，位于通道内"
+        },
+        {
+          "bbox": [
+            0.452,
+            0.2791,
+            0.533,
+            0.3922
+          ],
+          "size": "medium",
+          "sources": [
+            "A_far:V3"
+          ],
+          "evidence": "U3为独立货厢，无可见车头，位于通道队列中，是独立运输单元"
+        },
+        {
+          "bbox": [
+            0.443,
+            0.1153,
+            0.506,
+            0.2401
+          ],
+          "size": "medium",
+          "sources": [
+            "A_far:V1"
+          ],
+          "evidence": "U1为完整的带车头厢式货车，是独立车辆"
+        },
+        {
+          "bbox": [
+            0.407,
+            0.2362,
+            0.4655,
+            0.3571
+          ],
+          "size": "medium",
+          "sources": [
+            "A_far:V2"
+          ],
+          "evidence": "U2为完整的带车头厢式货车，与V1独立"
+        }
+      ],
+      "raw_candidate_count": 5,
+      "merged_away": 0,
+      "calls": [
+        {
+          "band": "A_far",
+          "latency_s": 19.81,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 2611,
+            "prompt_tokens": 2155,
+            "total_tokens": 4766,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1828
+            }
+          }
+        },
+        {
+          "band": "B_mid",
+          "latency_s": 15.31,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1807,
+            "prompt_tokens": 2148,
+            "total_tokens": 3955,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1298
+            }
+          }
+        },
+        {
+          "band": "C_near",
+          "latency_s": 12.1,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1299,
+            "prompt_tokens": 2169,
+            "total_tokens": 3468,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 960
+            }
+          }
+        }
+      ],
+      "failures": [],
+      "size_review": []
+    },
+    {
+      "sample_id": "south_2100",
+      "camera": "south",
+      "time": 2100,
+      "counts": {
+        "total": 5,
+        "large": 5,
+        "medium": 0,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.4565,
+            0.3778,
+            0.551,
+            0.6566
+          ],
+          "size": "large",
+          "sources": [
+            "B_mid:V2"
+          ],
+          "evidence": "U2（牵引车）与U3（货厢）直接连接，构成完整车辆，位于通道内"
+        },
+        {
+          "bbox": [
+            0.47,
+            0.58,
+            0.551,
+            0.874
+          ],
+          "size": "large",
+          "sources": [
+            "C_near:V1"
+          ],
+          "evidence": "U1的车头与货厢直接连接，构成一辆完整的厢式货车，无独立货厢或车头拆分情况"
+        },
+        {
+          "bbox": [
+            0.4025,
+            0.2128,
+            0.461,
+            0.3922
+          ],
+          "size": "large",
+          "sources": [
+            "A_far:V2",
+            "B_mid:V1"
+          ],
+          "evidence": "U3为完整的厢式货车，车头与货厢固定连接，是独立的刚性车辆"
+        },
+        {
+          "bbox": [
+            0.4115,
+            0.1465,
+            0.47,
+            0.2674
+          ],
+          "size": "large",
+          "sources": [
+            "A_far:V1"
+          ],
+          "evidence": "U1为牵引车，U2为其连接的货厢，二者属于同一辆牵引车挂车组合，位于通道内"
+        },
+        {
+          "bbox": [
+            0.4565,
+            0.283,
+            0.5105,
+            0.3961
+          ],
+          "size": "large",
+          "sources": [
+            "A_far:V3"
+          ],
+          "evidence": "U4为独立停放的货厢，无可见车头，属于通道内的独立运输单元"
+        }
+      ],
+      "raw_candidate_count": 6,
+      "merged_away": 1,
+      "calls": [
+        {
+          "band": "A_far",
+          "latency_s": 30.07,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 4009,
+            "prompt_tokens": 2155,
+            "total_tokens": 6164,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 3097
+            }
+          }
+        },
+        {
+          "band": "B_mid",
+          "latency_s": 20.52,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 2670,
+            "prompt_tokens": 2148,
+            "total_tokens": 4818,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 2015
+            }
+          }
+        },
+        {
+          "band": "C_near",
+          "latency_s": 11.95,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1182,
+            "prompt_tokens": 2169,
+            "total_tokens": 3351,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 846
+            }
+          }
+        }
+      ],
+      "failures": [],
+      "size_review": []
+    },
+    {
+      "sample_id": "south_2400",
+      "camera": "south",
+      "time": 2400,
+      "counts": {
+        "total": 4,
+        "large": 4,
+        "medium": 0,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.425,
+            0.58,
+            0.5375,
+            0.874
+          ],
+          "size": "large",
+          "sources": [
+            "C_near:V1"
+          ],
+          "evidence": "Unit U1 is a complete rigid truck, with cab and cargo integrated as a single vehicle, no separate transport units needed."
+        },
+        {
+          "bbox": [
+            0.4295,
+            0.4628,
+            0.5195,
+            0.6566
+          ],
+          "size": "large",
+          "sources": [
+            "B_mid:V2"
+          ],
+          "evidence": "该货厢为通道内独立停放的运输单元，无可见车头，属于独立车辆"
+        },
+        {
+          "bbox": [
+            0.398,
+            0.2128,
+            0.4565,
+            0.3961
+          ],
+          "size": "large",
+          "sources": [
+            "A_far:V1",
+            "B_mid:V1"
+          ],
+          "evidence": "独立完整的厢式货车，车头与货厢直接连接，为单个物理车辆"
+        },
+        {
+          "bbox": [
+            0.4475,
+            0.205,
+            0.4925,
+            0.3142
+          ],
+          "size": "large",
+          "sources": [
+            "A_far:V2"
+          ],
+          "evidence": "独立完整的厢式货车，车头与货厢直接连接，为单个物理车辆"
+        }
+      ],
+      "raw_candidate_count": 5,
+      "merged_away": 1,
+      "calls": [
+        {
+          "band": "A_far",
+          "latency_s": 19.81,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 2114,
+            "prompt_tokens": 2155,
+            "total_tokens": 4269,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1578
+            }
+          }
+        },
+        {
+          "band": "B_mid",
+          "latency_s": 17.47,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1919,
+            "prompt_tokens": 2148,
+            "total_tokens": 4067,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1377
+            }
+          }
+        },
+        {
+          "band": "C_near",
+          "latency_s": 15.83,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1791,
+            "prompt_tokens": 2169,
+            "total_tokens": 3960,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1460
+            }
+          }
+        }
+      ],
+      "failures": [],
+      "size_review": []
+    },
+    {
+      "sample_id": "south_2600",
+      "camera": "south",
+      "time": 2600,
+      "counts": {
+        "total": 4,
+        "large": 4,
+        "medium": 0,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox": [
+            0.4835,
+            0.7984,
+            0.596,
+            1.0
+          ],
+          "size": "large",
+          "sources": [
+            "C_near:V2"
+          ],
+          "evidence": "U2为独立货厢，无可见连接的牵引车，属于完整运输车辆"
+        },
+        {
+          "bbox": [
+            0.4655,
+            0.3608,
+            0.5375,
+            0.6566
+          ],
+          "size": "large",
+          "sources": [
+            "B_mid:V2",
+            "C_near:V1"
+          ],
+          "evidence": "U2为带完整车头与货厢的整体式货车，构成一辆独立车辆"
+        },
+        {
+          "bbox": [
+            0.389,
+            0.2167,
+            0.452,
+            0.3961
+          ],
+          "size": "large",
+          "sources": [
+            "A_far:V2",
+            "B_mid:V1"
+          ],
+          "evidence": "U2为独立带车头厢式货车，是完整独立车辆"
+        },
+        {
+          "bbox": [
+            0.443,
+            0.2089,
+            0.497,
+            0.3298
+          ],
+          "size": "large",
+          "sources": [
+            "A_far:V1"
+          ],
+          "evidence": "U1为独立带车头货车，无连接其他单元，是完整独立车辆"
+        }
+      ],
+      "raw_candidate_count": 6,
+      "merged_away": 2,
+      "calls": [
+        {
+          "band": "A_far",
+          "latency_s": 14.67,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 1622,
+            "prompt_tokens": 2155,
+            "total_tokens": 3777,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1063
+            }
+          }
+        },
+        {
+          "band": "B_mid",
+          "latency_s": 18.45,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 2136,
+            "prompt_tokens": 2148,
+            "total_tokens": 4284,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1611
+            }
+          }
+        },
+        {
+          "band": "C_near",
+          "latency_s": 24.33,
+          "attempts": 1,
+          "usage": {
+            "completion_tokens": 2923,
+            "prompt_tokens": 2169,
+            "total_tokens": 5092,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 2370
+            }
+          }
+        }
+      ],
+      "failures": [],
+      "size_review": []
+    }
+  ]
+}

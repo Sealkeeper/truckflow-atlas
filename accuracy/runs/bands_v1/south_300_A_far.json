@@ -1,0 +1,131 @@
+{
+  "sample_id": "south_300",
+  "band": "A_far",
+  "outputs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 28.53,
+      "usage": {
+        "completion_tokens": 3530,
+        "prompt_tokens": 2155,
+        "total_tokens": 5685,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2782
+        }
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "box_truck",
+            "bbox": [
+              0.25,
+              0.43,
+              0.39,
+              0.88
+            ],
+            "center_inside_core": true,
+            "color": "red",
+            "evidence": "This is a rigid box truck located in the channel area, distinct from surrounding booth structures and architectural elements.",
+            "uncertain": false
+          },
+          {
+            "unit_id": "U2",
+            "kind": "cargo_box",
+            "bbox": [
+              0.34,
+              0.26,
+              0.45,
+              0.65
+            ],
+            "center_inside_core": true,
+            "color": "red",
+            "evidence": "This is a red independent cargo trailer in the channel, with visible chassis/wheels, not part of the exhibition booths.",
+            "uncertain": false
+          },
+          {
+            "unit_id": "U3",
+            "kind": "cargo_box",
+            "bbox": [
+              0.35,
+              0.68,
+              0.5,
+              0.98
+            ],
+            "center_inside_core": true,
+            "color": "gray",
+            "evidence": "This is a gray independent cargo trailer in the channel, positioned at the bottom of the green rectangle, with visible chassis.",
+            "uncertain": false
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U1"
+            ],
+            "bbox": [
+              0.25,
+              0.43,
+              0.39,
+              0.88
+            ],
+            "vehicle_type": "rigid_truck",
+            "size": "large",
+            "evidence": "This is a single rigid box truck, no attached trailer visible in the channel.",
+            "uncertain": false
+          },
+          {
+            "vehicle_id": "V2",
+            "unit_ids": [
+              "U2"
+            ],
+            "bbox": [
+              0.34,
+              0.26,
+              0.45,
+              0.65
+            ],
+            "vehicle_type": "trailer_only",
+            "size": "medium",
+            "evidence": "This is an independent trailer, no connected cab present, located in the channel.",
+            "uncertain": false
+          },
+          {
+            "vehicle_id": "V3",
+            "unit_ids": [
+              "U3"
+            ],
+            "bbox": [
+              0.35,
+              0.68,
+              0.5,
+              0.98
+            ],
+            "vehicle_type": "trailer_only",
+            "size": "large",
+            "evidence": "This is an independent trailer, no connected cab present, located in the channel.",
+            "uncertain": false
+          }
+        ],
+        "counts": {
+          "total": 3,
+          "large": 2,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "outside_core_units": "",
+        "scene_notes": "All identified transport units are within the green core rectangle, no significant occlusions affecting the count.",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"box_truck\",\n      \"bbox\": [0.25, 0.43, 0.39, 0.88],\n      \"center_inside_core\": true,\n      \"color\": \"red\",\n      \"evidence\": \"This is a rigid box truck located in the channel area, distinct from surrounding booth structures and architectural elements.\",\n      \"uncertain\": false\n    },\n    {\n      \"unit_id\": \"U2\",\n      \"kind\": \"cargo_box\",\n      \"bbox\": [0.34, 0.26, 0.45, 0.65],\n      \"center_inside_core\": true,\n      \"color\": \"red\",\n      \"evidence\": \"This is a red independent cargo trailer in the channel, with visible chassis/wheels, not part of the exhibition booths.\",\n      \"uncertain\": false\n    },\n    {\n      \"unit_id\": \"U3\",\n      \"kind\": \"cargo_box\",\n      \"bbox\": [0.35, 0.68, 0.50, 0.98],\n      \"center_inside_core\": true,\n      \"color\": \"gray\",\n      \"evidence\": \"This is a gray independent cargo trailer in the channel, positioned at the bottom of the green rectangle, with visible chassis.\",\n      \"uncertain\": false\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U1\"],\n      \"bbox\": [0.25, 0.43, 0.39, 0.88],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"evidence\": \"This is a single rigid box truck, no attached trailer visible in the channel.\",\n      \"uncertain\": false\n    },\n    {\n      \"vehicle_id\": \"V2\",\n      \"unit_ids\": [\"U2\"],\n      \"bbox\": [0.34, 0.26, 0.45, 0.65],\n      \"vehicle_type\": \"trailer_only\",\n      \"size\": \"medium\",\n      \"evidence\": \"This is an independent trailer, no connected cab present, located in the channel.\",\n      \"uncertain\": false\n    },\n    {\n      \"vehicle_id\": \"V3\",\n      \"unit_ids\": [\"U3\"],\n      \"bbox\": [0.35, 0.68, 0.50, 0.98],\n      \"vehicle_type\": \"trailer_only\",\n      \"size\": \"large\",\n      \"evidence\": \"This is an independent trailer, no connected cab present, located in the channel.\",\n      \"uncertain\": false\n    }\n  ],\n  \"counts\": {\"total\": 3, \"large\": 2, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"outside_core_units\": \"\",\n  \"scene_notes\": \"All identified transport units are within the green core rectangle, no significant occlusions affecting the count.\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

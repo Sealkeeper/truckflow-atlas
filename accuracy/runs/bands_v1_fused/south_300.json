@@ -1,0 +1,146 @@
+{
+  "sample_id": "south_300",
+  "camera": "south",
+  "time": 300,
+  "counts": {
+    "total": 6,
+    "large": 5,
+    "medium": 1,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "bbox": [
+        0.461,
+        0.58,
+        0.551,
+        0.937
+      ],
+      "size": "large",
+      "sources": [
+        "C_near:V1"
+      ],
+      "evidence": "U1为完整的厢式货车，车头与货厢直接连接，属于同一物理车辆"
+    },
+    {
+      "bbox": [
+        0.461,
+        0.49,
+        0.551,
+        0.6566
+      ],
+      "size": "large",
+      "sources": [
+        "B_mid:V3"
+      ],
+      "evidence": "该单元为独立货厢，无可见车头，属于通道队列中的运输单元，为独立车辆"
+    },
+    {
+      "bbox": [
+        0.4025,
+        0.1777,
+        0.4655,
+        0.3532
+      ],
+      "size": "large",
+      "sources": [
+        "A_far:V1"
+      ],
+      "evidence": "This is a single rigid box truck, no attached trailer visible in the channel."
+    },
+    {
+      "bbox": [
+        0.452,
+        0.354,
+        0.515,
+        0.507
+      ],
+      "size": "large",
+      "sources": [
+        "B_mid:V2"
+      ],
+      "evidence": "该单元为单独的牵引车，与前方白色货厢有明显间隙，为独立车辆"
+    },
+    {
+      "bbox": [
+        0.4475,
+        0.2752,
+        0.515,
+        0.3922
+      ],
+      "size": "large",
+      "sources": [
+        "A_far:V3"
+      ],
+      "evidence": "This is an independent trailer, no connected cab present, located in the channel."
+    },
+    {
+      "bbox": [
+        0.443,
+        0.1114,
+        0.4925,
+        0.2635
+      ],
+      "size": "medium",
+      "sources": [
+        "A_far:V2"
+      ],
+      "evidence": "This is an independent trailer, no connected cab present, located in the channel."
+    }
+  ],
+  "raw_candidate_count": 6,
+  "merged_away": 0,
+  "calls": [
+    {
+      "band": "A_far",
+      "latency_s": 28.53,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 3530,
+        "prompt_tokens": 2155,
+        "total_tokens": 5685,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2782
+        }
+      }
+    },
+    {
+      "band": "B_mid",
+      "latency_s": 35.48,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 4157,
+        "prompt_tokens": 2148,
+        "total_tokens": 6305,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3370
+        }
+      }
+    },
+    {
+      "band": "C_near",
+      "latency_s": 10.18,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 1180,
+        "prompt_tokens": 2169,
+        "total_tokens": 3349,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 855
+        }
+      }
+    }
+  ],
+  "failures": [],
+  "size_review": []
+}

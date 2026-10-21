@@ -1,0 +1,101 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\core_region_v1\\north_300_bandA.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 15.72,
+      "usage": {
+        "completion_tokens": 1983,
+        "prompt_tokens": 2175,
+        "total_tokens": 4158,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1416
+        }
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "trailer_chassis",
+            "bbox": [
+              0.34,
+              0.62,
+              0.47,
+              0.96
+            ],
+            "center_inside_core": true,
+            "color": "blue (roof) and dark gray (body)",
+            "evidence": "This is a container transport unit located in the channel within the green rectangle, with visible chassis structure, not part of exhibition booths or buildings.",
+            "uncertain": false
+          },
+          {
+            "unit_id": "U2",
+            "kind": "cargo_box",
+            "bbox": [
+              0.36,
+              0.39,
+              0.48,
+              0.66
+            ],
+            "center_inside_core": true,
+            "color": "dark gray",
+            "evidence": "This is a container transport unit in the channel with number plate markings, not an exhibition booth or building structure.",
+            "uncertain": false
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U1"
+            ],
+            "bbox": [
+              0.34,
+              0.62,
+              0.47,
+              0.96
+            ],
+            "vehicle_type": "trailer_only",
+            "size": "medium",
+            "evidence": "This is an independent trailer transport unit in the channel with no connected head, so it is a trailer-only vehicle.",
+            "uncertain": false
+          },
+          {
+            "vehicle_id": "V2",
+            "unit_ids": [
+              "U2"
+            ],
+            "bbox": [
+              0.36,
+              0.39,
+              0.48,
+              0.66
+            ],
+            "vehicle_type": "trailer_only",
+            "size": "medium",
+            "evidence": "This is an independent trailer transport unit in the channel, separate from V1, so it is an independent vehicle.",
+            "uncertain": false
+          }
+        ],
+        "counts": {
+          "total": 2,
+          "large": 0,
+          "medium": 2,
+          "small": 0,
+          "unknown": 0
+        },
+        "outside_core_units": "None, all transport units are within the green rectangle core area.",
+        "scene_notes": "No significant occlusion, all units are clearly within the counting range.",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"trailer_chassis\",\n      \"bbox\": [0.34, 0.62, 0.47, 0.96],\n      \"center_inside_core\": true,\n      \"color\": \"blue (roof) and dark gray (body)\",\n      \"evidence\": \"This is a container transport unit located in the channel within the green rectangle, with visible chassis structure, not part of exhibition booths or buildings.\",\n      \"uncertain\": false\n    },\n    {\n      \"unit_id\": \"U2\",\n      \"kind\": \"cargo_box\",\n      \"bbox\": [0.36, 0.39, 0.48, 0.66],\n      \"center_inside_core\": true,\n      \"color\": \"dark gray\",\n      \"evidence\": \"This is a container transport unit in the channel with number plate markings, not an exhibition booth or building structure.\",\n      \"uncertain\": false\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U1\"],\n      \"bbox\": [0.34, 0.62, 0.47, 0.96],\n      \"vehicle_type\": \"trailer_only\",\n      \"size\": \"medium\",\n      \"evidence\": \"This is an independent trailer transport unit in the channel with no connected head, so it is a trailer-only vehicle.\",\n      \"uncertain\": false\n    },\n    {\n      \"vehicle_id\": \"V2\",\n      \"unit_ids\": [\"U2\"],\n      \"bbox\": [0.36, 0.39, 0.48, 0.66],\n      \"vehicle_type\": \"trailer_only\",\n      \"size\": \"medium\",\n      \"evidence\": \"This is an independent trailer transport unit in the channel, separate from V1, so it is an independent vehicle.\",\n      \"uncertain\": false\n    }\n  ],\n  \"counts\": {\"total\": 2, \"large\": 0, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"outside_core_units\": \"None, all transport units are within the green rectangle core area.\",\n  \"scene_notes\": \"No significant occlusion, all units are clearly within the counting range.\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\core_region_v1\\north_300_bandA.jpg"
+    }
+  ]
+}

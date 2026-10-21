@@ -1,0 +1,71 @@
+{
+  "sample_id": "south_2100",
+  "band": "C_near",
+  "outputs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 11.95,
+      "usage": {
+        "completion_tokens": 1182,
+        "prompt_tokens": 2169,
+        "total_tokens": 3351,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 846
+        }
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "box_truck",
+            "bbox": [
+              0.4,
+              0.0,
+              0.58,
+              0.7
+            ],
+            "center_inside_core": true,
+            "color": "白色",
+            "evidence": "该单元为带车头的厢式货车，位于绿色矩形内部，具备完整的车头与货厢结构，属于通道内的运输车辆",
+            "uncertain": false
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U1"
+            ],
+            "bbox": [
+              0.4,
+              0.0,
+              0.58,
+              0.7
+            ],
+            "vehicle_type": "rigid_truck",
+            "size": "large",
+            "evidence": "U1的车头与货厢直接连接，构成一辆完整的厢式货车，无独立货厢或车头拆分情况",
+            "uncertain": false
+          }
+        ],
+        "counts": {
+          "total": 1,
+          "large": 1,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "outside_core_units": [],
+        "scene_notes": "绿色矩形内仅存在1辆符合条件的运输车辆，其余为展台设备、人员等非运输单元",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"box_truck\",\n      \"bbox\": [0.4, 0.0, 0.58, 0.7],\n      \"center_inside_core\": true,\n      \"color\": \"白色\",\n      \"evidence\": \"该单元为带车头的厢式货车，位于绿色矩形内部，具备完整的车头与货厢结构，属于通道内的运输车辆\",\n      \"uncertain\": false\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U1\"],\n      \"bbox\": [0.4, 0.0, 0.58, 0.7],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"evidence\": \"U1的车头与货厢直接连接，构成一辆完整的厢式货车，无独立货厢或车头拆分情况\",\n      \"uncertain\": false\n    }\n  ],\n  \"counts\": {\"total\": 1, \"large\": 1, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"outside_core_units\": [],\n  \"scene_notes\": \"绿色矩形内仅存在1辆符合条件的运输车辆，其余为展台设备、人员等非运输单元\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

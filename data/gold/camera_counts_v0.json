@@ -22,6 +22,36 @@
     "All south frames: bottom-edge red cargo body may belong to the adjacent aisle rather than the counted corridor; corridor polygon must be confirmed by the user.",
     "Boxes are not yet part of this gold file; do not report box IoU against it."
   ],
+  "definition_blockers": [
+    {
+      "sample": "south_600",
+      "issue": "Tractor-trailer pairing conflicts with count_definition.",
+      "evidence": "The white cab is directly attached to the white trailer; the middle red cab is directly attached to the red trailer. Counting each cargo body separately gives 5, but the stated rule (tractor and trailer count once) gives 3 physical vehicles.",
+      "hypotheses": {"vehicle_units": 3, "cargo_bodies": 5, "current_label": 5},
+      "evidence_image": "accuracy/evidence/gold_audit/south_600_candidates.jpg",
+      "status": "must_be_adjudicated"
+    },
+    {
+      "sample": "south_900,south_1200,south_1500",
+      "issue": "Same five-body pattern as south_600; pairing rule not applied consistently.",
+      "evidence": "Annotated candidates show one white tractor+trailer, one red tractor+trailer, and one far red truck, while the label totals 5.",
+      "evidence_image": "accuracy/evidence/gold_audit/south_1200_candidates.jpg",
+      "status": "must_be_adjudicated"
+    },
+    {
+      "sample": "north_5",
+      "issue": "Corridor membership of a side row of blue cargo containers is undefined.",
+      "evidence": "The frame shows a side row of three blue roofed cargo bodies, one brown/red truck, and one near red truck. The label totals 3; the model finds 5 distinct cargo bodies after removing one slice duplicate.",
+      "evidence_image": "accuracy/evidence/gold_audit/north_5_candidates.jpg",
+      "status": "must_be_adjudicated"
+    },
+    {
+      "sample": "south_2600",
+      "issue": "Bottom-edge red cargo body is outside the aisle but a rectangular corridor includes it.",
+      "evidence": "Whole-frame baseline reports 4; fixed corridor reports 3. The extra candidate is the bottom-edge red cargo body.",
+      "status": "corridor_polygon_required"
+    }
+  ],
   "samples": [
     {"camera": "north", "time": 5, "total": 3, "large": 3, "medium": 0, "small": 0, "review": false},
     {"camera": "north", "time": 300, "total": 3, "large": 3, "medium": 0, "small": 0, "review": false},

@@ -1,0 +1,133 @@
+{
+  "sample_id": "south_1800",
+  "camera": "south",
+  "time": 1800,
+  "counts": {
+    "total": 5,
+    "large": 2,
+    "medium": 3,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "bbox": [
+        0.4565,
+        0.58,
+        0.5555,
+        0.8866
+      ],
+      "size": "large",
+      "sources": [
+        "C_near:V1"
+      ],
+      "evidence": "U1为完整的厢式货车，车头与货厢直接连接，属于同一物理车辆"
+    },
+    {
+      "bbox": [
+        0.452,
+        0.371,
+        0.5465,
+        0.6566
+      ],
+      "size": "large",
+      "sources": [
+        "B_mid:V1"
+      ],
+      "evidence": "红色牵引车与白色货厢直接连接，构成完整的牵引挂车车辆，位于通道内"
+    },
+    {
+      "bbox": [
+        0.452,
+        0.2791,
+        0.533,
+        0.3922
+      ],
+      "size": "medium",
+      "sources": [
+        "A_far:V3"
+      ],
+      "evidence": "U3为独立货厢，无可见车头，位于通道队列中，是独立运输单元"
+    },
+    {
+      "bbox": [
+        0.443,
+        0.1153,
+        0.506,
+        0.2401
+      ],
+      "size": "medium",
+      "sources": [
+        "A_far:V1"
+      ],
+      "evidence": "U1为完整的带车头厢式货车，是独立车辆"
+    },
+    {
+      "bbox": [
+        0.407,
+        0.2362,
+        0.4655,
+        0.3571
+      ],
+      "size": "medium",
+      "sources": [
+        "A_far:V2"
+      ],
+      "evidence": "U2为完整的带车头厢式货车，与V1独立"
+    }
+  ],
+  "raw_candidate_count": 5,
+  "merged_away": 0,
+  "calls": [
+    {
+      "band": "A_far",
+      "latency_s": 19.81,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 2611,
+        "prompt_tokens": 2155,
+        "total_tokens": 4766,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1828
+        }
+      }
+    },
+    {
+      "band": "B_mid",
+      "latency_s": 15.31,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 1807,
+        "prompt_tokens": 2148,
+        "total_tokens": 3955,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1298
+        }
+      }
+    },
+    {
+      "band": "C_near",
+      "latency_s": 12.1,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 1299,
+        "prompt_tokens": 2169,
+        "total_tokens": 3468,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 960
+        }
+      }
+    }
+  ],
+  "failures": [],
+  "size_review": []
+}

@@ -1,0 +1,131 @@
+{
+  "sample_id": "south_1500",
+  "band": "A_far",
+  "outputs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 29.05,
+      "usage": {
+        "completion_tokens": 3321,
+        "prompt_tokens": 2155,
+        "total_tokens": 5476,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2550
+        }
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "tractor_cab",
+            "bbox": [
+              0.34,
+              0.27,
+              0.45,
+              0.64
+            ],
+            "center_inside_core": true,
+            "color": "red",
+            "evidence": "Visible truck cab located in the channel within the green rectangle, has wheels, part of the vehicle queue, not a booth or structure.",
+            "uncertain": false
+          },
+          {
+            "unit_id": "U2",
+            "kind": "box_truck",
+            "bbox": [
+              0.26,
+              0.54,
+              0.36,
+              0.87
+            ],
+            "center_inside_core": true,
+            "color": "red",
+            "evidence": "Complete box truck (cab and cargo box) in the channel within green rectangle, has wheels, part of the queue.",
+            "uncertain": false
+          },
+          {
+            "unit_id": "U3",
+            "kind": "cargo_box",
+            "bbox": [
+              0.35,
+              0.69,
+              0.51,
+              0.98
+            ],
+            "center_inside_core": true,
+            "color": "gray",
+            "evidence": "Cargo box trailer located in the channel within green rectangle, no cab visible in this area, has a flat top, part of the queue.",
+            "uncertain": false
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U1"
+            ],
+            "bbox": [
+              0.34,
+              0.27,
+              0.45,
+              0.64
+            ],
+            "vehicle_type": "unknown",
+            "size": "medium",
+            "evidence": "Single tractor cab, no trailer connected within the green rectangle, independent transport unit.",
+            "uncertain": false
+          },
+          {
+            "vehicle_id": "V2",
+            "unit_ids": [
+              "U2"
+            ],
+            "bbox": [
+              0.26,
+              0.54,
+              0.36,
+              0.87
+            ],
+            "vehicle_type": "rigid_truck",
+            "size": "medium",
+            "evidence": "Rigid box truck with cab and cargo box, independent in the channel.",
+            "uncertain": false
+          },
+          {
+            "vehicle_id": "V3",
+            "unit_ids": [
+              "U3"
+            ],
+            "bbox": [
+              0.35,
+              0.69,
+              0.51,
+              0.98
+            ],
+            "vehicle_type": "trailer_only",
+            "size": "medium",
+            "evidence": "Trailer only (no cab visible in green rectangle), located in the channel, independent unit.",
+            "uncertain": false
+          }
+        ],
+        "counts": {
+          "total": 3,
+          "large": 0,
+          "medium": 2,
+          "small": 0,
+          "unknown": 1
+        },
+        "outside_core_units": [],
+        "scene_notes": "The gray trailer's cab is partially outside the green rectangle, only the cargo box is within the core. The far red tractor cab is fully within the core.",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"tractor_cab\",\n      \"bbox\": [0.34, 0.27, 0.45, 0.64],\n      \"center_inside_core\": true,\n      \"color\": \"red\",\n      \"evidence\": \"Visible truck cab located in the channel within the green rectangle, has wheels, part of the vehicle queue, not a booth or structure.\",\n      \"uncertain\": false\n    },\n    {\n      \"unit_id\": \"U2\",\n      \"kind\": \"box_truck\",\n      \"bbox\": [0.26, 0.54, 0.36, 0.87],\n      \"center_inside_core\": true,\n      \"color\": \"red\",\n      \"evidence\": \"Complete box truck (cab and cargo box) in the channel within green rectangle, has wheels, part of the queue.\",\n      \"uncertain\": false\n    },\n    {\n      \"unit_id\": \"U3\",\n      \"kind\": \"cargo_box\",\n      \"bbox\": [0.35, 0.69, 0.51, 0.98],\n      \"center_inside_core\": true,\n      \"color\": \"gray\",\n      \"evidence\": \"Cargo box trailer located in the channel within green rectangle, no cab visible in this area, has a flat top, part of the queue.\",\n      \"uncertain\": false\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U1\"],\n      \"bbox\": [0.34, 0.27, 0.45, 0.64],\n      \"vehicle_type\": \"unknown\",\n      \"size\": \"medium\",\n      \"evidence\": \"Single tractor cab, no trailer connected within the green rectangle, independent transport unit.\",\n      \"uncertain\": false\n    },\n    {\n      \"vehicle_id\": \"V2\",\n      \"unit_ids\": [\"U2\"],\n      \"bbox\": [0.26, 0.54, 0.36, 0.87],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"medium\",\n      \"evidence\": \"Rigid box truck with cab and cargo box, independent in the channel.\",\n      \"uncertain\": false\n    },\n    {\n      \"vehicle_id\": \"V3\",\n      \"unit_ids\": [\"U3\"],\n      \"bbox\": [0.35, 0.69, 0.51, 0.98],\n      \"vehicle_type\": \"trailer_only\",\n      \"size\": \"medium\",\n      \"evidence\": \"Trailer only (no cab visible in green rectangle), located in the channel, independent unit.\",\n      \"uncertain\": false\n    }\n  ],\n  \"counts\": {\"total\": 3, \"large\": 0, \"medium\": 2, \"small\": 0, \"unknown\": 1},\n  \"outside_core_units\": [],\n  \"scene_notes\": \"The gray trailer's cab is partially outside the green rectangle, only the cargo box is within the core. The far red tractor cab is fully within the core.\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

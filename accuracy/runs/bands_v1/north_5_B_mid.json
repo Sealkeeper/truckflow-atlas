@@ -1,0 +1,101 @@
+{
+  "sample_id": "north_5",
+  "band": "B_mid",
+  "outputs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 18.22,
+      "usage": {
+        "completion_tokens": 2269,
+        "prompt_tokens": 2179,
+        "total_tokens": 4448,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1722
+        }
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "cargo_box",
+            "bbox": [
+              0.31,
+              0.52,
+              0.47,
+              0.97
+            ],
+            "center_inside_core": true,
+            "color": "red",
+            "evidence": "位于通道通行面，为厢式货厢结构，具备运输单元特征，不属于展台、建筑或杂物",
+            "uncertain": false
+          },
+          {
+            "unit_id": "U2",
+            "kind": "trailer_chassis",
+            "bbox": [
+              0.32,
+              0.11,
+              0.46,
+              0.41
+            ],
+            "center_inside_core": true,
+            "color": "beige",
+            "evidence": "位于通道内，为平板挂车底盘结构，具备运输单元特征，不属于展台、建筑或杂物",
+            "uncertain": false
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U1"
+            ],
+            "bbox": [
+              0.31,
+              0.52,
+              0.47,
+              0.97
+            ],
+            "vehicle_type": "trailer_only",
+            "size": "medium",
+            "evidence": "该厢式货厢独立停放于通道内，无可见连接的车头，为独立运输车辆",
+            "uncertain": false
+          },
+          {
+            "vehicle_id": "V2",
+            "unit_ids": [
+              "U2"
+            ],
+            "bbox": [
+              0.32,
+              0.11,
+              0.46,
+              0.41
+            ],
+            "vehicle_type": "trailer_only",
+            "size": "medium",
+            "evidence": "该平板挂车独立停放于通道内，无可见连接的车头，为独立运输车辆",
+            "uncertain": false
+          }
+        ],
+        "counts": {
+          "total": 2,
+          "large": 0,
+          "medium": 2,
+          "small": 0,
+          "unknown": 0
+        },
+        "outside_core_units": "无",
+        "scene_notes": "通道内有施工人员，部分运输单元被画面边缘裁剪，无遮挡导致的识别歧义",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"cargo_box\",\n      \"bbox\": [0.31, 0.52, 0.47, 0.97],\n      \"center_inside_core\": true,\n      \"color\": \"red\",\n      \"evidence\": \"位于通道通行面，为厢式货厢结构，具备运输单元特征，不属于展台、建筑或杂物\",\n      \"uncertain\": false\n    },\n    {\n      \"unit_id\": \"U2\",\n      \"kind\": \"trailer_chassis\",\n      \"bbox\": [0.32, 0.11, 0.46, 0.41],\n      \"center_inside_core\": true,\n      \"color\": \"beige\",\n      \"evidence\": \"位于通道内，为平板挂车底盘结构，具备运输单元特征，不属于展台、建筑或杂物\",\n      \"uncertain\": false\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U1\"],\n      \"bbox\": [0.31, 0.52, 0.47, 0.97],\n      \"vehicle_type\": \"trailer_only\",\n      \"size\": \"medium\",\n      \"evidence\": \"该厢式货厢独立停放于通道内，无可见连接的车头，为独立运输车辆\",\n      \"uncertain\": false\n    },\n    {\n      \"vehicle_id\": \"V2\",\n      \"unit_ids\": [\"U2\"],\n      \"bbox\": [0.32, 0.11, 0.46, 0.41],\n      \"vehicle_type\": \"trailer_only\",\n      \"size\": \"medium\",\n      \"evidence\": \"该平板挂车独立停放于通道内，无可见连接的车头，为独立运输车辆\",\n      \"uncertain\": false\n    }\n  ],\n  \"counts\": {\"total\": 2, \"large\": 0, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"outside_core_units\": \"无\",\n  \"scene_notes\": \"通道内有施工人员，部分运输单元被画面边缘裁剪，无遮挡导致的识别歧义\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

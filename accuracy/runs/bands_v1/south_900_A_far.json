@@ -1,0 +1,131 @@
+{
+  "sample_id": "south_900",
+  "band": "A_far",
+  "outputs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 18.76,
+      "usage": {
+        "completion_tokens": 2367,
+        "prompt_tokens": 2155,
+        "total_tokens": 4522,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1554
+        }
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "box_truck",
+            "bbox": [
+              0.25,
+              0.57,
+              0.38,
+              0.9
+            ],
+            "center_inside_core": true,
+            "color": "red",
+            "evidence": "This is a complete box truck with visible cab and cargo box, located in the channel within the green rectangle, has wheels and chassis, not a booth or structure.",
+            "uncertain": false
+          },
+          {
+            "unit_id": "U2",
+            "kind": "box_truck",
+            "bbox": [
+              0.35,
+              0.27,
+              0.45,
+              0.65
+            ],
+            "center_inside_core": true,
+            "color": "red",
+            "evidence": "This is another box truck positioned further back in the channel, within the green rectangle, has visible cab and cargo, part of the vehicle queue.",
+            "uncertain": false
+          },
+          {
+            "unit_id": "U3",
+            "kind": "trailer_chassis",
+            "bbox": [
+              0.35,
+              0.68,
+              0.51,
+              0.99
+            ],
+            "center_inside_core": true,
+            "color": "gray",
+            "evidence": "This is a flatbed trailer with visible chassis, located in the channel within the green rectangle, no attached cab, part of the vehicle queue.",
+            "uncertain": false
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U1"
+            ],
+            "bbox": [
+              0.25,
+              0.57,
+              0.38,
+              0.9
+            ],
+            "vehicle_type": "rigid_truck",
+            "size": "large",
+            "evidence": "U1 is a complete rigid truck, no other units attached to it.",
+            "uncertain": false
+          },
+          {
+            "vehicle_id": "V2",
+            "unit_ids": [
+              "U2"
+            ],
+            "bbox": [
+              0.35,
+              0.27,
+              0.45,
+              0.65
+            ],
+            "vehicle_type": "rigid_truck",
+            "size": "large",
+            "evidence": "U2 is a complete rigid truck, separate from other units, positioned behind V1.",
+            "uncertain": false
+          },
+          {
+            "vehicle_id": "V3",
+            "unit_ids": [
+              "U3"
+            ],
+            "bbox": [
+              0.35,
+              0.68,
+              0.51,
+              0.99
+            ],
+            "vehicle_type": "trailer_only",
+            "size": "large",
+            "evidence": "U3 is a standalone trailer with no visible attached cab, located in the channel between V1 and right structures.",
+            "uncertain": false
+          }
+        ],
+        "counts": {
+          "total": 3,
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "outside_core_units": "None, all transport units are within the green rectangle.",
+        "scene_notes": "The rear truck (U2) is partially cropped by the top edge of the green rectangle, the gray trailer (U3) is partially cropped by the bottom edge, but their centers are within the green rectangle.",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"box_truck\",\n      \"bbox\": [0.25, 0.57, 0.38, 0.9],\n      \"center_inside_core\": true,\n      \"color\": \"red\",\n      \"evidence\": \"This is a complete box truck with visible cab and cargo box, located in the channel within the green rectangle, has wheels and chassis, not a booth or structure.\",\n      \"uncertain\": false\n    },\n    {\n      \"unit_id\": \"U2\",\n      \"kind\": \"box_truck\",\n      \"bbox\": [0.35, 0.27, 0.45, 0.65],\n      \"center_inside_core\": true,\n      \"color\": \"red\",\n      \"evidence\": \"This is another box truck positioned further back in the channel, within the green rectangle, has visible cab and cargo, part of the vehicle queue.\",\n      \"uncertain\": false\n    },\n    {\n      \"unit_id\": \"U3\",\n      \"kind\": \"trailer_chassis\",\n      \"bbox\": [0.35, 0.68, 0.51, 0.99],\n      \"center_inside_core\": true,\n      \"color\": \"gray\",\n      \"evidence\": \"This is a flatbed trailer with visible chassis, located in the channel within the green rectangle, no attached cab, part of the vehicle queue.\",\n      \"uncertain\": false\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U1\"],\n      \"bbox\": [0.25, 0.57, 0.38, 0.9],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"evidence\": \"U1 is a complete rigid truck, no other units attached to it.\",\n      \"uncertain\": false\n    },\n    {\n      \"vehicle_id\": \"V2\",\n      \"unit_ids\": [\"U2\"],\n      \"bbox\": [0.35, 0.27, 0.45, 0.65],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"evidence\": \"U2 is a complete rigid truck, separate from other units, positioned behind V1.\",\n      \"uncertain\": false\n    },\n    {\n      \"vehicle_id\": \"V3\",\n      \"unit_ids\": [\"U3\"],\n      \"bbox\": [0.35, 0.68, 0.51, 0.99],\n      \"vehicle_type\": \"trailer_only\",\n      \"size\": \"large\",\n      \"evidence\": \"U3 is a standalone trailer with no visible attached cab, located in the channel between V1 and right structures.\",\n      \"uncertain\": false\n    }\n  ],\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"outside_core_units\": \"None, all transport units are within the green rectangle.\",\n  \"scene_notes\": \"The rear truck (U2) is partially cropped by the top edge of the green rectangle, the gray trailer (U3) is partially cropped by the bottom edge, but their centers are within the green rectangle.\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

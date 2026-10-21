@@ -1,0 +1,97 @@
+{
+  "sample_id": "south_1200",
+  "band": "B_mid",
+  "outputs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 12.0,
+      "usage": {
+        "completion_tokens": 1429,
+        "prompt_tokens": 2148,
+        "total_tokens": 3577,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 915
+        }
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "tractor_cab",
+            "bbox": [
+              0.36,
+              0.16,
+              0.48,
+              0.44
+            ],
+            "center_inside_core": true,
+            "color": "红色",
+            "evidence": "位于通道通行面内，是带车头的运输单元，不属于展台、建筑或杂物",
+            "uncertain": false
+          },
+          {
+            "unit_id": "U2",
+            "kind": "cargo_box",
+            "bbox": [
+              0.39,
+              0.41,
+              0.57,
+              0.98
+            ],
+            "center_inside_core": true,
+            "color": "白色",
+            "evidence": "位于通道通行面内，与前方车头直接连接的货厢，具备运输单元特征",
+            "uncertain": false
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U1",
+              "U2"
+            ],
+            "bbox": [
+              0.36,
+              0.16,
+              0.57,
+              0.98
+            ],
+            "vehicle_type": "tractor_trailer",
+            "size": "large",
+            "evidence": "U1（牵引车）与U2（货厢）直接连接，构成完整的牵引挂车车辆，属于通道内的运输车辆",
+            "uncertain": false
+          }
+        ],
+        "counts": {
+          "total": 1,
+          "large": 1,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "outside_core_units": [
+          {
+            "unit_id": "O1",
+            "bbox": [
+              0.29,
+              0.0,
+              0.37,
+              0.11
+            ],
+            "evidence": "红色牵引车车头，中心点在绿色矩形外，仅作上下文参考"
+          }
+        ],
+        "scene_notes": "绿色矩形内仅存在1辆运输车辆，车头与货厢均在矩形范围内，无遮挡或歧义",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"tractor_cab\",\n      \"bbox\": [0.36, 0.16, 0.48, 0.44],\n      \"center_inside_core\": true,\n      \"color\": \"红色\",\n      \"evidence\": \"位于通道通行面内，是带车头的运输单元，不属于展台、建筑或杂物\",\n      \"uncertain\": false\n    },\n    {\n      \"unit_id\": \"U2\",\n      \"kind\": \"cargo_box\",\n      \"bbox\": [0.39, 0.41, 0.57, 0.98],\n      \"center_inside_core\": true,\n      \"color\": \"白色\",\n      \"evidence\": \"位于通道通行面内，与前方车头直接连接的货厢，具备运输单元特征\",\n      \"uncertain\": false\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U1\", \"U2\"],\n      \"bbox\": [0.36, 0.16, 0.57, 0.98],\n      \"vehicle_type\": \"tractor_trailer\",\n      \"size\": \"large\",\n      \"evidence\": \"U1（牵引车）与U2（货厢）直接连接，构成完整的牵引挂车车辆，属于通道内的运输车辆\",\n      \"uncertain\": false\n    }\n  ],\n  \"counts\": {\"total\": 1, \"large\": 1, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"outside_core_units\": [\n    {\n      \"unit_id\": \"O1\",\n      \"bbox\": [0.29, 0.0, 0.37, 0.11],\n      \"evidence\": \"红色牵引车车头，中心点在绿色矩形外，仅作上下文参考\"\n    }\n  ],\n  \"scene_notes\": \"绿色矩形内仅存在1辆运输车辆，车头与货厢均在矩形范围内，无遮挡或歧义\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

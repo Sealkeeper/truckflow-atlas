@@ -1,0 +1,101 @@
+{
+  "sample_id": "south_2400",
+  "band": "B_mid",
+  "outputs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 17.47,
+      "usage": {
+        "completion_tokens": 1919,
+        "prompt_tokens": 2148,
+        "total_tokens": 4067,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1377
+        }
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "tractor_cab",
+            "bbox": [
+              0.24,
+              0.0,
+              0.35,
+              0.25
+            ],
+            "center_inside_core": true,
+            "color": "white",
+            "evidence": "该单元为通道内的白色货车车头，属于运输单元，位于绿色矩形内部",
+            "uncertain": false
+          },
+          {
+            "unit_id": "U2",
+            "kind": "cargo_box",
+            "bbox": [
+              0.31,
+              0.42,
+              0.51,
+              0.99
+            ],
+            "center_inside_core": true,
+            "color": "gray",
+            "evidence": "该单元为通道内的灰色平板货厢，位于绿色矩形内部，属于运输单元",
+            "uncertain": false
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U1"
+            ],
+            "bbox": [
+              0.24,
+              0.0,
+              0.35,
+              0.25
+            ],
+            "vehicle_type": "tractor_cab",
+            "size": "large",
+            "evidence": "该牵引车为独立运输单元，无连接其他货厢，属于独立车辆",
+            "uncertain": false
+          },
+          {
+            "vehicle_id": "V2",
+            "unit_ids": [
+              "U2"
+            ],
+            "bbox": [
+              0.31,
+              0.42,
+              0.51,
+              0.99
+            ],
+            "vehicle_type": "trailer_only",
+            "size": "large",
+            "evidence": "该货厢为通道内独立停放的运输单元，无可见车头，属于独立车辆",
+            "uncertain": false
+          }
+        ],
+        "counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "outside_core_units": "",
+        "scene_notes": "绿色矩形内有两个独立运输单元，分别为上方的货车车头和下方的平板货厢，两者无连接，均位于通道通行面",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"tractor_cab\",\n      \"bbox\": [0.24, 0.0, 0.35, 0.25],\n      \"center_inside_core\": true,\n      \"color\": \"white\",\n      \"evidence\": \"该单元为通道内的白色货车车头，属于运输单元，位于绿色矩形内部\",\n      \"uncertain\": false\n    },\n    {\n      \"unit_id\": \"U2\",\n      \"kind\": \"cargo_box\",\n      \"bbox\": [0.31, 0.42, 0.51, 0.99],\n      \"center_inside_core\": true,\n      \"color\": \"gray\",\n      \"evidence\": \"该单元为通道内的灰色平板货厢，位于绿色矩形内部，属于运输单元\",\n      \"uncertain\": false\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U1\"],\n      \"bbox\": [0.24, 0.0, 0.35, 0.25],\n      \"vehicle_type\": \"tractor_cab\",\n      \"size\": \"large\",\n      \"evidence\": \"该牵引车为独立运输单元，无连接其他货厢，属于独立车辆\",\n      \"uncertain\": false\n    },\n    {\n      \"vehicle_id\": \"V2\",\n      \"unit_ids\": [\"U2\"],\n      \"bbox\": [0.31, 0.42, 0.51, 0.99],\n      \"vehicle_type\": \"trailer_only\",\n      \"size\": \"large\",\n      \"evidence\": \"该货厢为通道内独立停放的运输单元，无可见车头，属于独立车辆\",\n      \"uncertain\": false\n    }\n  ],\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"outside_core_units\": \"\",\n  \"scene_notes\": \"绿色矩形内有两个独立运输单元，分别为上方的货车车头和下方的平板货厢，两者无连接，均位于通道通行面\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

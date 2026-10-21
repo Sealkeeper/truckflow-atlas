@@ -1,0 +1,131 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\core_region_v1\\north_600_bandA.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 15.51,
+      "usage": {
+        "completion_tokens": 1913,
+        "prompt_tokens": 2175,
+        "total_tokens": 4088,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1159
+        }
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "cargo_box",
+            "bbox": [
+              0.37,
+              0.38,
+              0.49,
+              0.65
+            ],
+            "center_inside_core": true,
+            "color": "灰色",
+            "evidence": "位于通道内，为带编号的独立货厢，属于运输单元，非展台或建筑结构",
+            "uncertain": false
+          },
+          {
+            "unit_id": "U2",
+            "kind": "cargo_box",
+            "bbox": [
+              0.35,
+              0.62,
+              0.48,
+              0.88
+            ],
+            "center_inside_core": true,
+            "color": "蓝色",
+            "evidence": "位于通道内，为带顶棚的独立货厢，属于运输单元，非展台或杂物",
+            "uncertain": false
+          },
+          {
+            "unit_id": "U3",
+            "kind": "cargo_box",
+            "bbox": [
+              0.46,
+              0.8,
+              0.59,
+              0.99
+            ],
+            "center_inside_core": true,
+            "color": "红色",
+            "evidence": "位于通道内，为红色货厢结构，属于运输单元，非展台或建筑",
+            "uncertain": false
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U1"
+            ],
+            "bbox": [
+              0.37,
+              0.38,
+              0.49,
+              0.65
+            ],
+            "vehicle_type": "trailer_only",
+            "size": "medium",
+            "evidence": "U1为独立停放的通道货厢，无连接车头，为独立运输车辆",
+            "uncertain": false
+          },
+          {
+            "vehicle_id": "V2",
+            "unit_ids": [
+              "U2"
+            ],
+            "bbox": [
+              0.35,
+              0.62,
+              0.48,
+              0.88
+            ],
+            "vehicle_type": "trailer_only",
+            "size": "medium",
+            "evidence": "U2为独立停放的通道货厢，与其他货厢有明显间隙，为独立运输车辆",
+            "uncertain": false
+          },
+          {
+            "vehicle_id": "V3",
+            "unit_ids": [
+              "U3"
+            ],
+            "bbox": [
+              0.46,
+              0.8,
+              0.59,
+              0.99
+            ],
+            "vehicle_type": "trailer_only",
+            "size": "medium",
+            "evidence": "U3为独立停放的通道货厢，无连接车头，为独立运输车辆",
+            "uncertain": false
+          }
+        ],
+        "counts": {
+          "total": 3,
+          "large": 0,
+          "medium": 3,
+          "small": 0,
+          "unknown": 0
+        },
+        "outside_core_units": [],
+        "scene_notes": "三个运输单元均位于绿色矩形内，无遮挡或歧义，均为通道内独立货厢",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"cargo_box\",\n      \"bbox\": [0.37, 0.38, 0.49, 0.65],\n      \"center_inside_core\": true,\n      \"color\": \"灰色\",\n      \"evidence\": \"位于通道内，为带编号的独立货厢，属于运输单元，非展台或建筑结构\",\n      \"uncertain\": false\n    },\n    {\n      \"unit_id\": \"U2\",\n      \"kind\": \"cargo_box\",\n      \"bbox\": [0.35, 0.62, 0.48, 0.88],\n      \"center_inside_core\": true,\n      \"color\": \"蓝色\",\n      \"evidence\": \"位于通道内，为带顶棚的独立货厢，属于运输单元，非展台或杂物\",\n      \"uncertain\": false\n    },\n    {\n      \"unit_id\": \"U3\",\n      \"kind\": \"cargo_box\",\n      \"bbox\": [0.46, 0.80, 0.59, 0.99],\n      \"center_inside_core\": true,\n      \"color\": \"红色\",\n      \"evidence\": \"位于通道内，为红色货厢结构，属于运输单元，非展台或建筑\",\n      \"uncertain\": false\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U1\"],\n      \"bbox\": [0.37, 0.38, 0.49, 0.65],\n      \"vehicle_type\": \"trailer_only\",\n      \"size\": \"medium\",\n      \"evidence\": \"U1为独立停放的通道货厢，无连接车头，为独立运输车辆\",\n      \"uncertain\": false\n    },\n    {\n      \"vehicle_id\": \"V2\",\n      \"unit_ids\": [\"U2\"],\n      \"bbox\": [0.35, 0.62, 0.48, 0.88],\n      \"vehicle_type\": \"trailer_only\",\n      \"size\": \"medium\",\n      \"evidence\": \"U2为独立停放的通道货厢，与其他货厢有明显间隙，为独立运输车辆\",\n      \"uncertain\": false\n    },\n    {\n      \"vehicle_id\": \"V3\",\n      \"unit_ids\": [\"U3\"],\n      \"bbox\": [0.46, 0.80, 0.59, 0.99],\n      \"vehicle_type\": \"trailer_only\",\n      \"size\": \"medium\",\n      \"evidence\": \"U3为独立停放的通道货厢，无连接车头，为独立运输车辆\",\n      \"uncertain\": false\n    }\n  ],\n  \"counts\": {\"total\": 3, \"large\": 0, \"medium\": 3, \"small\": 0, \"unknown\": 0},\n  \"outside_core_units\": [],\n  \"scene_notes\": \"三个运输单元均位于绿色矩形内，无遮挡或歧义，均为通道内独立货厢\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\core_region_v1\\north_600_bandA.jpg"
+    }
+  ]
+}

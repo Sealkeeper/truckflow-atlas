@@ -1,0 +1,95 @@
+{
+  "sample_id": "north_1800",
+  "camera": "north",
+  "time": 1800,
+  "counts": {
+    "total": 2,
+    "large": 2,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "bbox": [
+        0.34,
+        0.6136,
+        0.485,
+        0.9958
+      ],
+      "size": "large",
+      "sources": [
+        "C_near:V1"
+      ],
+      "evidence": "该运输单元为独立停放的货厢，无可见连接的车头，属于通道内的运输车辆"
+    },
+    {
+      "bbox": [
+        0.43,
+        0.2323,
+        0.495,
+        0.3961
+      ],
+      "size": "large",
+      "sources": [
+        "A_far:V1",
+        "B_mid:V1"
+      ],
+      "evidence": "该运输单元为独立停放的货厢，无连接车头，属于通道内的独立运输车辆"
+    }
+  ],
+  "raw_candidate_count": 3,
+  "merged_away": 1,
+  "calls": [
+    {
+      "band": "A_far",
+      "latency_s": 12.91,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 1377,
+        "prompt_tokens": 2148,
+        "total_tokens": 3525,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1052
+        }
+      }
+    },
+    {
+      "band": "B_mid",
+      "latency_s": 15.29,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 1838,
+        "prompt_tokens": 2179,
+        "total_tokens": 4017,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1505
+        }
+      }
+    },
+    {
+      "band": "C_near",
+      "latency_s": 13.94,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 1615,
+        "prompt_tokens": 2139,
+        "total_tokens": 3754,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1268
+        }
+      }
+    }
+  ],
+  "failures": [],
+  "size_review": []
+}

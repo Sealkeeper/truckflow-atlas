@@ -1,0 +1,73 @@
+{
+  "sample_id": "north_1800",
+  "band": "C_near",
+  "outputs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 13.94,
+      "usage": {
+        "completion_tokens": 1615,
+        "prompt_tokens": 2139,
+        "total_tokens": 3754,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1268
+        }
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "box_truck",
+            "bbox": [
+              0.18,
+              0.08,
+              0.47,
+              0.99
+            ],
+            "center_inside_core": true,
+            "color": "白色",
+            "evidence": "位于通道通行区域，为厢式货厢结构，具备运输单元特征，不属于展台、建筑或杂物",
+            "uncertain": false
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U1"
+            ],
+            "bbox": [
+              0.18,
+              0.08,
+              0.47,
+              0.99
+            ],
+            "vehicle_type": "trailer_only",
+            "size": "large",
+            "evidence": "该运输单元为独立停放的货厢，无可见连接的车头，属于通道内的运输车辆",
+            "uncertain": false
+          }
+        ],
+        "counts": {
+          "total": 1,
+          "large": 1,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "outside_core_units": [
+          "顶部露出绿色矩形外的叉车（仅部分结构可见）"
+        ],
+        "scene_notes": "白色厢式货厢的底部被绿色矩形下边界截断，仍符合计入条件；绿色矩形内无其他运输单元",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"box_truck\",\n      \"bbox\": [0.18, 0.08, 0.47, 0.99],\n      \"center_inside_core\": true,\n      \"color\": \"白色\",\n      \"evidence\": \"位于通道通行区域，为厢式货厢结构，具备运输单元特征，不属于展台、建筑或杂物\",\n      \"uncertain\": false\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U1\"],\n      \"bbox\": [0.18, 0.08, 0.47, 0.99],\n      \"vehicle_type\": \"trailer_only\",\n      \"size\": \"large\",\n      \"evidence\": \"该运输单元为独立停放的货厢，无可见连接的车头，属于通道内的运输车辆\",\n      \"uncertain\": false\n    }\n  ],\n  \"counts\": {\"total\": 1, \"large\": 1, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"outside_core_units\": [\"顶部露出绿色矩形外的叉车（仅部分结构可见）\"],\n  \"scene_notes\": \"白色厢式货厢的底部被绿色矩形下边界截断，仍符合计入条件；绿色矩形内无其他运输单元\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

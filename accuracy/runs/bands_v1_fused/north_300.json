@@ -1,0 +1,108 @@
+{
+  "sample_id": "north_300",
+  "camera": "north",
+  "time": 300,
+  "counts": {
+    "total": 3,
+    "large": 1,
+    "medium": 2,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "bbox": [
+        0.3,
+        0.58,
+        0.49,
+        0.9958
+      ],
+      "size": "large",
+      "sources": [
+        "C_near:V1",
+        "B_mid:V1"
+      ],
+      "evidence": "该运输单元为独立停放的集装箱挂车，无连接车头，属于通道内独立车辆"
+    },
+    {
+      "bbox": [
+        0.43,
+        0.2479,
+        0.5,
+        0.3844
+      ],
+      "size": "medium",
+      "sources": [
+        "A_far:V2"
+      ],
+      "evidence": "U2为独立停放于通道的运输单元，与U1有明显间隙，无连接车头，属于独立车辆"
+    },
+    {
+      "bbox": [
+        0.435,
+        0.1543,
+        0.5,
+        0.2596
+      ],
+      "size": "medium",
+      "sources": [
+        "A_far:V1"
+      ],
+      "evidence": "U1为独立停放于通道的运输单元，无连接车头，属于独立车辆"
+    }
+  ],
+  "raw_candidate_count": 4,
+  "merged_away": 1,
+  "calls": [
+    {
+      "band": "A_far",
+      "latency_s": 15.35,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 1790,
+        "prompt_tokens": 2148,
+        "total_tokens": 3938,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1226
+        }
+      }
+    },
+    {
+      "band": "B_mid",
+      "latency_s": 15.15,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 1561,
+        "prompt_tokens": 2179,
+        "total_tokens": 3740,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1221
+        }
+      }
+    },
+    {
+      "band": "C_near",
+      "latency_s": 9.08,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 1069,
+        "prompt_tokens": 2139,
+        "total_tokens": 3208,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 749
+        }
+      }
+    }
+  ],
+  "failures": [],
+  "size_review": []
+}

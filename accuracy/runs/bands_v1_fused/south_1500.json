@@ -1,0 +1,159 @@
+{
+  "sample_id": "south_1500",
+  "camera": "south",
+  "time": 1500,
+  "counts": {
+    "total": 7,
+    "large": 3,
+    "medium": 4,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "bbox": [
+        0.4655,
+        0.58,
+        0.5555,
+        0.8782
+      ],
+      "size": "large",
+      "sources": [
+        "C_near:V1"
+      ],
+      "evidence": "U1是完整的刚性货车，为独立车辆"
+    },
+    {
+      "bbox": [
+        0.4835,
+        0.853,
+        0.596,
+        0.9958
+      ],
+      "size": "large",
+      "sources": [
+        "C_near:V2"
+      ],
+      "evidence": "U2是独立的货厢，无可见车头，为通道内的独立运输车辆"
+    },
+    {
+      "bbox": [
+        0.461,
+        0.456,
+        0.551,
+        0.626
+      ],
+      "size": "large",
+      "sources": [
+        "B_mid:V1"
+      ],
+      "evidence": "Independent cargo trailer with no visible cab, located in the channel, separate from other units in the green rectangle"
+    },
+    {
+      "bbox": [
+        0.4475,
+        0.2791,
+        0.5195,
+        0.3922
+      ],
+      "size": "medium",
+      "sources": [
+        "A_far:V3"
+      ],
+      "evidence": "Trailer only (no cab visible in green rectangle), located in the channel, independent unit."
+    },
+    {
+      "bbox": [
+        0.4475,
+        0.371,
+        0.524,
+        0.473
+      ],
+      "size": "medium",
+      "sources": [
+        "B_mid:V2"
+      ],
+      "evidence": "Truck cab in the channel, no connected trailer visible within the green rectangle, counted as a separate transport unit"
+    },
+    {
+      "bbox": [
+        0.443,
+        0.1153,
+        0.4925,
+        0.2596
+      ],
+      "size": "medium",
+      "sources": [
+        "A_far:V1"
+      ],
+      "evidence": "Single tractor cab, no trailer connected within the green rectangle, independent transport unit."
+    },
+    {
+      "bbox": [
+        0.407,
+        0.2206,
+        0.452,
+        0.3493
+      ],
+      "size": "medium",
+      "sources": [
+        "A_far:V2"
+      ],
+      "evidence": "Rigid box truck with cab and cargo box, independent in the channel."
+    }
+  ],
+  "raw_candidate_count": 7,
+  "merged_away": 0,
+  "calls": [
+    {
+      "band": "A_far",
+      "latency_s": 29.05,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 3321,
+        "prompt_tokens": 2155,
+        "total_tokens": 5476,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2550
+        }
+      }
+    },
+    {
+      "band": "B_mid",
+      "latency_s": 31.75,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 3666,
+        "prompt_tokens": 2148,
+        "total_tokens": 5814,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3089
+        }
+      }
+    },
+    {
+      "band": "C_near",
+      "latency_s": 13.84,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 1767,
+        "prompt_tokens": 2169,
+        "total_tokens": 3936,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1236
+        }
+      }
+    }
+  ],
+  "failures": [],
+  "size_review": []
+}

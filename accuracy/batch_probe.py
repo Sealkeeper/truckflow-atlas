@@ -16,15 +16,21 @@ def main() -> None:
     parser.add_argument("pattern", default="assets/frames/*.jpg")
     parser.add_argument("--models", default="doubao,aibox")
     parser.add_argument("--workers", type=int, default=4)
+    parser.add_argument("--prompt-file", type=Path)
+    parser.add_argument("--max-tokens", type=int, default=3000)
     parser.add_argument("--out-dir", type=Path, default=ROOT / "accuracy" / "runs" / "batch")
     args = parser.parse_args()
     load_env(ENV_PATH)
+    prompt = args.prompt_file.read_text(encoding="utf-8") if args.prompt_file else PROMPT
     images = sorted(ROOT.glob(args.pattern))
     args.out_dir.mkdir(parents=True, exist_ok=True)
     tasks = [(image, model) for image in images for model in args.models.split(",")]
     results: dict[str, dict] = {str(image): {"image": str(image), "runs": []} for image in images}
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
-        futures = {pool.submit(probe, model, image, PROMPT, 3000): (image, model) for image, model in tasks}
+        futures = {
+            pool.submit(probe, model, image, prompt, args.max_tokens): (image, model)
+            for image, model in tasks
+        }
         for future in as_completed(futures):
             image, model = futures[future]
             try:

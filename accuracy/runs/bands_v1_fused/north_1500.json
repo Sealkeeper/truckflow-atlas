@@ -1,0 +1,94 @@
+{
+  "sample_id": "north_1500",
+  "camera": "north",
+  "time": 1500,
+  "counts": {
+    "total": 2,
+    "large": 2,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "bbox": [
+        0.335,
+        0.6094,
+        0.485,
+        0.9916
+      ],
+      "size": "large",
+      "sources": [
+        "C_near:V1"
+      ],
+      "evidence": "This is an independent cargo unit in the channel, no connected tractor is visible, so it is a standalone trailer."
+    },
+    {
+      "bbox": [
+        0.39,
+        0.3608,
+        0.495,
+        0.6566
+      ],
+      "size": "large",
+      "sources": [
+        "B_mid:V1"
+      ],
+      "evidence": "U1（货厢）与U2（车头）直接连接，构成完整的运输车辆"
+    }
+  ],
+  "raw_candidate_count": 2,
+  "merged_away": 0,
+  "calls": [
+    {
+      "band": "A_far",
+      "latency_s": 10.41,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 945,
+        "prompt_tokens": 2148,
+        "total_tokens": 3093,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 815
+        }
+      }
+    },
+    {
+      "band": "B_mid",
+      "latency_s": 11.48,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 1405,
+        "prompt_tokens": 2179,
+        "total_tokens": 3584,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 969
+        }
+      }
+    },
+    {
+      "band": "C_near",
+      "latency_s": 14.17,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 1409,
+        "prompt_tokens": 2139,
+        "total_tokens": 3548,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1041
+        }
+      }
+    }
+  ],
+  "failures": [],
+  "size_review": []
+}

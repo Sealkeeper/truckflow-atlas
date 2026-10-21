@@ -1,0 +1,71 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\core_region_v1\\north_300_bandC.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 12.52,
+      "usage": {
+        "completion_tokens": 1295,
+        "prompt_tokens": 2139,
+        "total_tokens": 3434,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 946
+        }
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "box_truck",
+            "bbox": [
+              0.17,
+              0.04,
+              0.46,
+              0.98
+            ],
+            "center_inside_core": true,
+            "color": "白色（货厢）+深色（尾门）",
+            "evidence": "该单元是位于通道内的厢式货车，主体部分在绿色矩形内，具备运输单元的货厢结构，不属于展台、建筑或杂物",
+            "uncertain": false
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U1"
+            ],
+            "bbox": [
+              0.17,
+              0.04,
+              0.46,
+              0.98
+            ],
+            "vehicle_type": "rigid_truck",
+            "size": "large",
+            "evidence": "U1为完整的厢式货车，无其他连接单元，属于独立的物理车辆",
+            "uncertain": false
+          }
+        ],
+        "counts": {
+          "total": 1,
+          "large": 1,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "outside_core_units": "无",
+        "scene_notes": "该车辆货厢部分被绿色矩形边缘截断，但运输单元的中心点位于绿色矩形内部，符合统计要求",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"box_truck\",\n      \"bbox\": [0.17, 0.04, 0.46, 0.98],\n      \"center_inside_core\": true,\n      \"color\": \"白色（货厢）+深色（尾门）\",\n      \"evidence\": \"该单元是位于通道内的厢式货车，主体部分在绿色矩形内，具备运输单元的货厢结构，不属于展台、建筑或杂物\",\n      \"uncertain\": false\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U1\"],\n      \"bbox\": [0.17, 0.04, 0.46, 0.98],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"evidence\": \"U1为完整的厢式货车，无其他连接单元，属于独立的物理车辆\",\n      \"uncertain\": false\n    }\n  ],\n  \"counts\": {\"total\": 1, \"large\": 1, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"outside_core_units\": \"无\",\n  \"scene_notes\": \"该车辆货厢部分被绿色矩形边缘截断，但运输单元的中心点位于绿色矩形内部，符合统计要求\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\core_region_v1\\north_300_bandC.jpg"
+    }
+  ]
+}

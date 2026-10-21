@@ -1,0 +1,56 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\core_region_v1\\north_600_farpair.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 13.1,
+      "usage": {
+        "completion_tokens": 1413,
+        "prompt_tokens": 1992,
+        "total_tokens": 3405,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1144
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 1,
+          "large": 1,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "sequence": 1,
+            "bbox": [
+              0.44,
+              0.74,
+              0.63,
+              0.99
+            ],
+            "center_inside_core": true,
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "红色长货厢，位于画面中间通道，周围有施工人员，无可见车头，仅货厢部分可见",
+            "distinct_from_previous": "无（为当前计数范围内唯一车辆）",
+            "evidence": "该车辆主体中心点在绿色矩形内部，属于货车类，符合计数规则",
+            "uncertain": false
+          }
+        ],
+        "outside_core_vehicles": 0,
+        "scene_notes": "绿色矩形内仅可见1辆红色货车货厢，无其他符合条件的车辆，无遮挡或边界导致的计数歧义",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 1, \"large\": 1, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.44, 0.74, 0.63, 0.99],\n      \"center_inside_core\": true,\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色长货厢，位于画面中间通道，周围有施工人员，无可见车头，仅货厢部分可见\",\n      \"distinct_from_previous\": \"无（为当前计数范围内唯一车辆）\",\n      \"evidence\": \"该车辆主体中心点在绿色矩形内部，属于货车类，符合计数规则\",\n      \"uncertain\": false\n    }\n  ],\n  \"outside_core_vehicles\": 0,\n  \"scene_notes\": \"绿色矩形内仅可见1辆红色货车货厢，无其他符合条件的车辆，无遮挡或边界导致的计数歧义\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\core_region_v1\\north_600_farpair.jpg"
+    }
+  ]
+}

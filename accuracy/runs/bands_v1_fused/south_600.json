@@ -1,0 +1,159 @@
+{
+  "sample_id": "south_600",
+  "camera": "south",
+  "time": 600,
+  "counts": {
+    "total": 7,
+    "large": 5,
+    "medium": 1,
+    "small": 1,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "bbox": [
+        0.4655,
+        0.6556,
+        0.5555,
+        0.8824
+      ],
+      "size": "large",
+      "sources": [
+        "C_near:V1"
+      ],
+      "evidence": "This is a complete large truck in the channel, no connection to other units inside the core area"
+    },
+    {
+      "bbox": [
+        0.4655,
+        0.456,
+        0.551,
+        0.6532
+      ],
+      "size": "large",
+      "sources": [
+        "B_mid:V2"
+      ],
+      "evidence": "U3为独立停放的货厢，无连接的车头，位于通道队列中，属于独立的运输车辆"
+    },
+    {
+      "bbox": [
+        0.4475,
+        0.354,
+        0.524,
+        0.49
+      ],
+      "size": "large",
+      "sources": [
+        "B_mid:V1"
+      ],
+      "evidence": "U1（牵引车）与U2（货厢）直接连接，构成完整的牵引车挂车车辆，属于同一物理车辆"
+    },
+    {
+      "bbox": [
+        0.443,
+        0.1153,
+        0.497,
+        0.2674
+      ],
+      "size": "large",
+      "sources": [
+        "A_far:V1"
+      ],
+      "evidence": "U1为完整的厢式货车，是独立的运输车辆"
+    },
+    {
+      "bbox": [
+        0.452,
+        0.2791,
+        0.5195,
+        0.3961
+      ],
+      "size": "medium",
+      "sources": [
+        "A_far:V3"
+      ],
+      "evidence": "U3为独立的货厢，无连接车头，属于通道内的独立运输车辆"
+    },
+    {
+      "bbox": [
+        0.389,
+        0.6514,
+        0.4295,
+        0.8236
+      ],
+      "size": "small",
+      "sources": [
+        "C_near:V2"
+      ],
+      "evidence": "This is a separate small transport unit in the channel, independent of other counted units"
+    },
+    {
+      "bbox": [
+        0.407,
+        0.2323,
+        0.461,
+        0.3571
+      ],
+      "size": "large",
+      "sources": [
+        "A_far:V2"
+      ],
+      "evidence": "U2为完整的厢式货车，是独立的运输车辆"
+    }
+  ],
+  "raw_candidate_count": 7,
+  "merged_away": 0,
+  "calls": [
+    {
+      "band": "A_far",
+      "latency_s": 17.72,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 2113,
+        "prompt_tokens": 2155,
+        "total_tokens": 4268,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1344
+        }
+      }
+    },
+    {
+      "band": "B_mid",
+      "latency_s": 23.53,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 2906,
+        "prompt_tokens": 2148,
+        "total_tokens": 5054,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2200
+        }
+      }
+    },
+    {
+      "band": "C_near",
+      "latency_s": 17.17,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 2061,
+        "prompt_tokens": 2169,
+        "total_tokens": 4230,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1527
+        }
+      }
+    }
+  ],
+  "failures": [],
+  "size_review": []
+}

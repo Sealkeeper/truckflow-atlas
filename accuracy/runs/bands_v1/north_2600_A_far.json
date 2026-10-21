@@ -1,0 +1,71 @@
+{
+  "sample_id": "north_2600",
+  "band": "A_far",
+  "outputs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 12.09,
+      "usage": {
+        "completion_tokens": 1328,
+        "prompt_tokens": 2148,
+        "total_tokens": 3476,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 997
+        }
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "tractor_cab",
+            "bbox": [
+              0.44,
+              0.26,
+              0.56,
+              0.41
+            ],
+            "center_inside_core": true,
+            "color": "black",
+            "evidence": "It is a vehicle with illuminated headlights, located within the green rectangular channel, has a vehicle chassis, not a booth, person, or other non-transport object.",
+            "uncertain": false
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U1"
+            ],
+            "bbox": [
+              0.44,
+              0.26,
+              0.56,
+              0.41
+            ],
+            "vehicle_type": "unknown",
+            "size": "large",
+            "evidence": "Only one transport unit is present in the green core rectangle, forming an independent vehicle.",
+            "uncertain": false
+          }
+        ],
+        "counts": {
+          "total": 1,
+          "large": 1,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "outside_core_units": [],
+        "scene_notes": "The vehicle is partially visible at the far end of the green channel, but its center is within the core rectangle.",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"tractor_cab\",\n      \"bbox\": [0.44, 0.26, 0.56, 0.41],\n      \"center_inside_core\": true,\n      \"color\": \"black\",\n      \"evidence\": \"It is a vehicle with illuminated headlights, located within the green rectangular channel, has a vehicle chassis, not a booth, person, or other non-transport object.\",\n      \"uncertain\": false\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U1\"],\n      \"bbox\": [0.44, 0.26, 0.56, 0.41],\n      \"vehicle_type\": \"unknown\",\n      \"size\": \"large\",\n      \"evidence\": \"Only one transport unit is present in the green core rectangle, forming an independent vehicle.\",\n      \"uncertain\": false\n    }\n  ],\n  \"counts\": {\"total\": 1, \"large\": 1, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"outside_core_units\": [],\n  \"scene_notes\": \"The vehicle is partially visible at the far end of the green channel, but its center is within the core rectangle.\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

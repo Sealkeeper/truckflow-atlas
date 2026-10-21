@@ -1,0 +1,71 @@
+{
+  "sample_id": "north_1200",
+  "band": "C_near",
+  "outputs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 10.74,
+      "usage": {
+        "completion_tokens": 1331,
+        "prompt_tokens": 2139,
+        "total_tokens": 3470,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 974
+        }
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "box_truck",
+            "bbox": [
+              0.18,
+              0.08,
+              0.47,
+              0.99
+            ],
+            "center_inside_core": true,
+            "color": "white",
+            "evidence": "位于绿色矩形内，是通道内的厢式运输车辆，具备完整货厢结构，属于运输单元，非展台或杂物",
+            "uncertain": false
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U1"
+            ],
+            "bbox": [
+              0.18,
+              0.08,
+              0.47,
+              0.99
+            ],
+            "vehicle_type": "rigid_truck",
+            "size": "large",
+            "evidence": "U1为独立的刚性厢式货车，无其他连接单元，属于一辆完整车辆",
+            "uncertain": false
+          }
+        ],
+        "counts": {
+          "total": 1,
+          "large": 1,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "outside_core_units": "红色货车，仅部分可见于绿色矩形上方，中心点在矩形外，作为上下文参考",
+        "scene_notes": "白色厢式货车的部分车身被绿色矩形边界裁剪，右侧为人物、手推车及展台结构，均不属于运输单元",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"box_truck\",\n      \"bbox\": [0.18, 0.08, 0.47, 0.99],\n      \"center_inside_core\": true,\n      \"color\": \"white\",\n      \"evidence\": \"位于绿色矩形内，是通道内的厢式运输车辆，具备完整货厢结构，属于运输单元，非展台或杂物\",\n      \"uncertain\": false\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U1\"],\n      \"bbox\": [0.18, 0.08, 0.47, 0.99],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"evidence\": \"U1为独立的刚性厢式货车，无其他连接单元，属于一辆完整车辆\",\n      \"uncertain\": false\n    }\n  ],\n  \"counts\": {\"total\": 1, \"large\": 1, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"outside_core_units\": \"红色货车，仅部分可见于绿色矩形上方，中心点在矩形外，作为上下文参考\",\n  \"scene_notes\": \"白色厢式货车的部分车身被绿色矩形边界裁剪，右侧为人物、手推车及展台结构，均不属于运输单元\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

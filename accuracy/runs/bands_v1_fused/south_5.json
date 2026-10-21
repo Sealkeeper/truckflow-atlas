@@ -1,0 +1,120 @@
+{
+  "sample_id": "south_5",
+  "camera": "south",
+  "time": 5,
+  "counts": {
+    "total": 4,
+    "large": 3,
+    "medium": 1,
+    "small": 0,
+    "unknown": 0
+  },
+  "vehicles": [
+    {
+      "bbox": [
+        0.4565,
+        0.601,
+        0.5735,
+        0.9958
+      ],
+      "size": "large",
+      "sources": [
+        "C_near:V1"
+      ],
+      "evidence": "U1（车头）与U2（货厢）直接连接，构成同一辆完整的货车，属于通道内的运输车辆"
+    },
+    {
+      "bbox": [
+        0.4565,
+        0.32,
+        0.542,
+        0.6566
+      ],
+      "size": "large",
+      "sources": [
+        "B_mid:V1"
+      ],
+      "evidence": "U1为牵引车，U2为其直接连接的货厢，属于同一辆运输车辆"
+    },
+    {
+      "bbox": [
+        0.461,
+        0.2479,
+        0.5195,
+        0.3922
+      ],
+      "size": "large",
+      "sources": [
+        "A_far:V2"
+      ],
+      "evidence": "U2为带完整车头与货厢的厢式货车，属于独立运输车辆"
+    },
+    {
+      "bbox": [
+        0.452,
+        0.1348,
+        0.5015,
+        0.2557
+      ],
+      "size": "medium",
+      "sources": [
+        "A_far:V1"
+      ],
+      "evidence": "U1为独立货厢，无可见车头，停在通道内，为独立运输车辆"
+    }
+  ],
+  "raw_candidate_count": 4,
+  "merged_away": 0,
+  "calls": [
+    {
+      "band": "A_far",
+      "latency_s": 16.86,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 2065,
+        "prompt_tokens": 2155,
+        "total_tokens": 4220,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1484
+        }
+      }
+    },
+    {
+      "band": "B_mid",
+      "latency_s": 12.11,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 1447,
+        "prompt_tokens": 2148,
+        "total_tokens": 3595,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1009
+        }
+      }
+    },
+    {
+      "band": "C_near",
+      "latency_s": 11.9,
+      "attempts": 1,
+      "usage": {
+        "completion_tokens": 1316,
+        "prompt_tokens": 2169,
+        "total_tokens": 3485,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 880
+        }
+      }
+    }
+  ],
+  "failures": [],
+  "size_review": []
+}

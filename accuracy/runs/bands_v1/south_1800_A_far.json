@@ -1,0 +1,131 @@
+{
+  "sample_id": "south_1800",
+  "band": "A_far",
+  "outputs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 19.81,
+      "usage": {
+        "completion_tokens": 2611,
+        "prompt_tokens": 2155,
+        "total_tokens": 4766,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1828
+        }
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "box_truck",
+            "bbox": [
+              0.34,
+              0.27,
+              0.48,
+              0.59
+            ],
+            "center_inside_core": true,
+            "color": "红色",
+            "evidence": "该单元为带车头的厢式货车，位于绿色矩形内的通道中，不属于展台、建筑或杂物",
+            "uncertain": false
+          },
+          {
+            "unit_id": "U2",
+            "kind": "box_truck",
+            "bbox": [
+              0.26,
+              0.58,
+              0.39,
+              0.89
+            ],
+            "center_inside_core": true,
+            "color": "红色",
+            "evidence": "该单元为带车头的厢式货车，位于绿色矩形内的通道中，与U1为独立车辆",
+            "uncertain": false
+          },
+          {
+            "unit_id": "U3",
+            "kind": "cargo_box",
+            "bbox": [
+              0.36,
+              0.69,
+              0.54,
+              0.98
+            ],
+            "center_inside_core": true,
+            "color": "灰色",
+            "evidence": "该单元为独立货厢，位于绿色矩形内的通道中，有底盘结构，属于运输单元",
+            "uncertain": false
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U1"
+            ],
+            "bbox": [
+              0.34,
+              0.27,
+              0.48,
+              0.59
+            ],
+            "vehicle_type": "rigid_truck",
+            "size": "medium",
+            "evidence": "U1为完整的带车头厢式货车，是独立车辆",
+            "uncertain": false
+          },
+          {
+            "vehicle_id": "V2",
+            "unit_ids": [
+              "U2"
+            ],
+            "bbox": [
+              0.26,
+              0.58,
+              0.39,
+              0.89
+            ],
+            "vehicle_type": "rigid_truck",
+            "size": "medium",
+            "evidence": "U2为完整的带车头厢式货车，与V1独立",
+            "uncertain": false
+          },
+          {
+            "vehicle_id": "V3",
+            "unit_ids": [
+              "U3"
+            ],
+            "bbox": [
+              0.36,
+              0.69,
+              0.54,
+              0.98
+            ],
+            "vehicle_type": "trailer_only",
+            "size": "medium",
+            "evidence": "U3为独立货厢，无可见车头，位于通道队列中，是独立运输单元",
+            "uncertain": false
+          }
+        ],
+        "counts": {
+          "total": 3,
+          "large": 0,
+          "medium": 3,
+          "small": 0,
+          "unknown": 0
+        },
+        "outside_core_units": "绿色矩形外的单元：最下方的红色货车车头（中心点在框外），仅作上下文参考",
+        "scene_notes": "U3的底部部分超出绿色矩形边界，仍计入；所有车辆均位于通道内，无歧义",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"box_truck\",\n      \"bbox\": [0.34, 0.27, 0.48, 0.59],\n      \"center_inside_core\": true,\n      \"color\": \"红色\",\n      \"evidence\": \"该单元为带车头的厢式货车，位于绿色矩形内的通道中，不属于展台、建筑或杂物\",\n      \"uncertain\": false\n    },\n    {\n      \"unit_id\": \"U2\",\n      \"kind\": \"box_truck\",\n      \"bbox\": [0.26, 0.58, 0.39, 0.89],\n      \"center_inside_core\": true,\n      \"color\": \"红色\",\n      \"evidence\": \"该单元为带车头的厢式货车，位于绿色矩形内的通道中，与U1为独立车辆\",\n      \"uncertain\": false\n    },\n    {\n      \"unit_id\": \"U3\",\n      \"kind\": \"cargo_box\",\n      \"bbox\": [0.36, 0.69, 0.54, 0.98],\n      \"center_inside_core\": true,\n      \"color\": \"灰色\",\n      \"evidence\": \"该单元为独立货厢，位于绿色矩形内的通道中，有底盘结构，属于运输单元\",\n      \"uncertain\": false\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U1\"],\n      \"bbox\": [0.34, 0.27, 0.48, 0.59],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"medium\",\n      \"evidence\": \"U1为完整的带车头厢式货车，是独立车辆\",\n      \"uncertain\": false\n    },\n    {\n      \"vehicle_id\": \"V2\",\n      \"unit_ids\": [\"U2\"],\n      \"bbox\": [0.26, 0.58, 0.39, 0.89],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"medium\",\n      \"evidence\": \"U2为完整的带车头厢式货车，与V1独立\",\n      \"uncertain\": false\n    },\n    {\n      \"vehicle_id\": \"V3\",\n      \"unit_ids\": [\"U3\"],\n      \"bbox\": [0.36, 0.69, 0.54, 0.98],\n      \"vehicle_type\": \"trailer_only\",\n      \"size\": \"medium\",\n      \"evidence\": \"U3为独立货厢，无可见车头，位于通道队列中，是独立运输单元\",\n      \"uncertain\": false\n    }\n  ],\n  \"counts\": {\"total\": 3, \"large\": 0, \"medium\": 3, \"small\": 0, \"unknown\": 0},\n  \"outside_core_units\": \"绿色矩形外的单元：最下方的红色货车车头（中心点在框外），仅作上下文参考\",\n  \"scene_notes\": \"U3的底部部分超出绿色矩形边界，仍计入；所有车辆均位于通道内，无歧义\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

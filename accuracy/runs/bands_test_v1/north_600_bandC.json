@@ -1,0 +1,86 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\core_region_v1\\north_600_bandC.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 16.12,
+      "usage": {
+        "completion_tokens": 1690,
+        "prompt_tokens": 2139,
+        "total_tokens": 3829,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1237
+        }
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "tractor_cab",
+            "bbox": [
+              0.3,
+              0.11,
+              0.43,
+              0.17
+            ],
+            "center_inside_core": true,
+            "color": "白色",
+            "evidence": "位于通道内，是牵引车，具备运输单元特征，非展台、杂物或设备",
+            "uncertain": false
+          },
+          {
+            "unit_id": "U2",
+            "kind": "cargo_box",
+            "bbox": [
+              0.17,
+              0.13,
+              0.45,
+              0.99
+            ],
+            "center_inside_core": true,
+            "color": "白色",
+            "evidence": "位于通道内，是厢式货厢，带底盘结构，属于运输单元，非展台、杂物或设备",
+            "uncertain": false
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U1",
+              "U2"
+            ],
+            "bbox": [
+              0.17,
+              0.11,
+              0.45,
+              0.99
+            ],
+            "vehicle_type": "tractor_trailer",
+            "size": "large",
+            "evidence": "牵引车U1与货厢U2直接连接，构成同一辆完整运输车辆",
+            "uncertain": false
+          }
+        ],
+        "counts": {
+          "total": 1,
+          "large": 1,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "outside_core_units": "红色车辆（仅部分在绿色矩形上方外，为上下文参考）",
+        "scene_notes": "白色货厢部分边缘超出绿色矩形边界，仍计入；蓝色叉车为作业设备，不计入运输单元",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"tractor_cab\",\n      \"bbox\": [0.3, 0.11, 0.43, 0.17],\n      \"center_inside_core\": true,\n      \"color\": \"白色\",\n      \"evidence\": \"位于通道内，是牵引车，具备运输单元特征，非展台、杂物或设备\",\n      \"uncertain\": false\n    },\n    {\n      \"unit_id\": \"U2\",\n      \"kind\": \"cargo_box\",\n      \"bbox\": [0.17, 0.13, 0.45, 0.99],\n      \"center_inside_core\": true,\n      \"color\": \"白色\",\n      \"evidence\": \"位于通道内，是厢式货厢，带底盘结构，属于运输单元，非展台、杂物或设备\",\n      \"uncertain\": false\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U1\", \"U2\"],\n      \"bbox\": [0.17, 0.11, 0.45, 0.99],\n      \"vehicle_type\": \"tractor_trailer\",\n      \"size\": \"large\",\n      \"evidence\": \"牵引车U1与货厢U2直接连接，构成同一辆完整运输车辆\",\n      \"uncertain\": false\n    }\n  ],\n  \"counts\": {\"total\": 1, \"large\": 1, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"outside_core_units\": \"红色车辆（仅部分在绿色矩形上方外，为上下文参考）\",\n  \"scene_notes\": \"白色货厢部分边缘超出绿色矩形边界，仍计入；蓝色叉车为作业设备，不计入运输单元\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\core_region_v1\\north_600_bandC.jpg"
+    }
+  ]
+}

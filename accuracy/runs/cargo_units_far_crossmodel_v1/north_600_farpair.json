@@ -1,0 +1,198 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\core_region_v1\\north_600_farpair.jpg",
+  "prompt_version": "truck-count-v1",
+  "runs": [
+    {
+      "model": "zhipu",
+      "model_id": "glm-4.5v",
+      "attempts": 3,
+      "ok": true,
+      "latency_s": 244.74,
+      "usage": {
+        "completion_tokens": 3739,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2439
+        },
+        "prompt_tokens": 2901,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6640
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "cargo_box",
+            "bbox": [
+              0.0,
+              0.28,
+              0.34,
+              0.65
+            ],
+            "color": "white",
+            "evidence": "位于通道左侧，呈长方体厢式结构，表面平整有门缝线条，与左侧'UORI卓力'展台墙面分离，具备典型厢式货车货厢或独立挂车特征",
+            "uncertain": false
+          },
+          {
+            "unit_id": "U2",
+            "kind": "cargo_box",
+            "bbox": [
+              0.33,
+              0.59,
+              0.46,
+              0.79
+            ],
+            "color": "blue",
+            "evidence": "位于通道中部偏左，蓝色波纹顶板结构，独立停放于通道面，与周边车辆保持安全间距，外形符合小型货厢或集装箱挂车特征",
+            "uncertain": false
+          },
+          {
+            "unit_id": "U3",
+            "kind": "cargo_box",
+            "bbox": [
+              0.46,
+              0.77,
+              0.61,
+              1.0
+            ],
+            "color": "red",
+            "evidence": "位于通道下部中央，标准红色海运集装箱外形，垂直棱角分明，波纹侧板，独立停放在通道通行区域内",
+            "uncertain": false
+          },
+          {
+            "unit_id": "U4",
+            "kind": "cargo_box",
+            "bbox": [
+              0.64,
+              0.51,
+              1.0,
+              0.89
+            ],
+            "color": "black",
+            "evidence": "位于通道右侧，黑色箱体侧面印有白色'KU'字样（疑似物流公司标识），具备框架结构和标准货厢比例，独立于通道队列中",
+            "uncertain": false
+          },
+          {
+            "unit_id": "U5",
+            "kind": "box_truck",
+            "bbox": [
+              0.6,
+              0.3,
+              1.0,
+              0.53
+            ],
+            "color": "white",
+            "evidence": "位于通道右上部，白色厢式结构，长度横跨右侧大部分宽度，顶部平整，具备完整货厢外形，与下方黑色货厢(U4)有明显间隙分隔",
+            "uncertain": false
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U1"
+            ],
+            "bbox": [
+              0.0,
+              0.28,
+              0.34,
+              0.65
+            ],
+            "vehicle_type": "trailer_only",
+            "size": "large",
+            "evidence": "仅观察到货厢部分，未见连接车头；独立停放于左侧通道，与相邻蓝色货厢(U2)间距大于1米，判定为独立车辆",
+            "uncertain": false
+          },
+          {
+            "vehicle_id": "V2",
+            "unit_ids": [
+              "U2"
+            ],
+            "bbox": [
+              0.33,
+              0.59,
+              0.46,
+              0.79
+            ],
+            "vehicle_type": "trailer_only",
+            "size": "medium",
+            "evidence": "小型蓝色货厢，独立停放于U1与U3之间，尺寸明显小于标准集装箱，未见牵引车头，判定为独立中小型挂车",
+            "uncertain": false
+          },
+          {
+            "vehicle_id": "V3",
+            "unit_ids": [
+              "U3"
+            ],
+            "bbox": [
+              0.46,
+              0.77,
+              0.61,
+              1.0
+            ],
+            "vehicle_type": "trailer_only",
+            "size": "large",
+            "evidence": "标准20尺或40尺红色集装箱，独立停放于通道前景，底部虽超出画面但可见其完整宽度，属典型集装箱半挂车或拖车",
+            "uncertain": false
+          },
+          {
+            "vehicle_id": "V4",
+            "unit_ids": [
+              "U4"
+            ],
+            "bbox": [
+              0.64,
+              0.51,
+              1.0,
+              0.89
+            ],
+            "vehicle_type": "trailer_only",
+            "size": "large",
+            "evidence": "黑色大型货厢/集装箱，独立停放于右侧通道，与上方白色厢车(U5)及左侧红色集装箱(U3)均有明显物理间隔",
+            "uncertain": false
+          },
+          {
+            "vehicle_id": "V5",
+            "unit_ids": [
+              "U5"
+            ],
+            "bbox": [
+              0.6,
+              0.3,
+              1.0,
+              0.53
+            ],
+            "vehicle_type": "trailer_only",
+            "size": "large",
+            "evidence": "白色大型厢式单元，位于右上部通道区域，与下方黑色货厢(U4)非同一物体（颜色、高度、间隙均不同），独立计算为一车",
+            "uncertain": false
+          }
+        ],
+        "counts": {
+          "total": 5,
+          "large": 4,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "scene_notes": "夜间/室内灯光环境（22:09），俯视监控视角；通道内有数名佩戴安全帽的工作人员在巡视；红色集装箱(V3)底部被画面截断；左上角存在金属网格结构，性质存疑（可能为展架或车辆顶部货架，未计入）；所有车辆均未见明显车头，可能车头朝向画面外或处于盲区",
+        "uncertain_reasons": [
+          "无法确认各货厢前部是否连接有牵引车头（均按无车头挂车处理）",
+          "左上角(0.00,0.18至0.35,0.35)的金属网格结构无法确定是车辆部件还是展会展架"
+        ]
+      },
+      "raw_text": "```json\n{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"cargo_box\",\n      \"bbox\": [0.00, 0.28, 0.34, 0.65],\n      \"color\": \"white\",\n      \"evidence\": \"位于通道左侧，呈长方体厢式结构，表面平整有门缝线条，与左侧'UORI卓力'展台墙面分离，具备典型厢式货车货厢或独立挂车特征\",\n      \"uncertain\": false\n    },\n    {\n      \"unit_id\": \"U2\",\n      \"kind\": \"cargo_box\",\n      \"bbox\": [0.33, 0.59, 0.46, 0.79],\n      \"color\": \"blue\",\n      \"evidence\": \"位于通道中部偏左，蓝色波纹顶板结构，独立停放于通道面，与周边车辆保持安全间距，外形符合小型货厢或集装箱挂车特征\",\n      \"uncertain\": false\n    },\n    {\n      \"unit_id\": \"U3\",\n      \"kind\": \"cargo_box\",\n      \"bbox\": [0.46, 0.77, 0.61, 1.00],\n      \"color\": \"red\",\n      \"evidence\": \"位于通道下部中央，标准红色海运集装箱外形，垂直棱角分明，波纹侧板，独立停放在通道通行区域内\",\n      \"uncertain\": false\n    },\n    {\n      \"unit_id\": \"U4\",\n      \"kind\": \"cargo_box\",\n      \"bbox\": [0.64, 0.51, 1.00, 0.89],\n      \"color\": \"black\",\n      \"evidence\": \"位于通道右侧，黑色箱体侧面印有白色'KU'字样（疑似物流公司标识），具备框架结构和标准货厢比例，独立于通道队列中\",\n      \"uncertain\": false\n    },\n    {\n      \"unit_id\": \"U5\",\n      \"kind\": \"box_truck\",\n      \"bbox\": [0.60, 0.30, 1.00, 0.53],\n      \"color\": \"white\",\n      \"evidence\": \"位于通道右上部，白色厢式结构，长度横跨右侧大部分宽度，顶部平整，具备完整货厢外形，与下方黑色货厢(U4)有明显间隙分隔\",\n      \"uncertain\": false\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U1\"],\n      \"bbox\": [0.00, 0.28, 0.34, 0.65],\n      \"vehicle_type\": \"trailer_only\",\n      \"size\": \"large\",\n      \"evidence\": \"仅观察到货厢部分，未见连接车头；独立停放于左侧通道，与相邻蓝色货厢(U2)间距大于1米，判定为独立车辆\",\n      \"uncertain\": false\n    },\n    {\n      \"vehicle_id\": \"V2\",\n      \"unit_ids\": [\"U2\"],\n      \"bbox\": [0.33, 0.59, 0.46, 0.79],\n      \"vehicle_type\": \"trailer_only\",\n      \"size\": \"medium\",\n      \"evidence\": \"小型蓝色货厢，独立停放于U1与U3之间，尺寸明显小于标准集装箱，未见牵引车头，判定为独立中小型挂车\",\n      \"uncertain\": false\n    },\n    {\n      \"vehicle_id\": \"V3\",\n      \"unit_ids\": [\"U3\"],\n      \"bbox\": [0.46, 0.77, 0.61, 1.00],\n      \"vehicle_type\": \"trailer_only\",\n      \"size\": \"large\",\n      \"evidence\": \"标准20尺或40尺红色集装箱，独立停放于通道前景，底部虽超出画面但可见其完整宽度，属典型集装箱半挂车或拖车\",\n      \"uncertain\": false\n    },\n    {\n      \"vehicle_id\": \"V4\",\n      \"unit_ids\": [\"U4\"],\n      \"bbox\": [0.64, 0.51, 1.00, 0.89],\n      \"vehicle_type\": \"trailer_only\",\n      \"size\": \"large\",\n      \"evidence\": \"黑色大型货厢/集装箱，独立停放于右侧通道，与上方白色厢车(U5)及左侧红色集装箱(U3)均有明显物理间隔\",\n      \"uncertain\": false\n    },\n    {\n      \"vehicle_id\": \"V5\",\n      \"unit_ids\": [\"U5\"],\n      \"bbox\": [0.60, 0.30, 1.00, 0.53],\n      \"vehicle_type\": \"trailer_only\",\n      \"size\": \"large\",\n      \"evidence\": \"白色大型厢式单元，位于右上部通道区域，与下方黑色货厢(U4)非同一物体（颜色、高度、间隙均不同），独立计算为一车\",\n      \"uncertain\": false\n    }\n  ],\n  \"counts\": {\"total\": 5, \"large\": 4, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"scene_notes\": \"夜间/室内灯光环境（22:09），俯视监控视角；通道内有数名佩戴安全帽的工作人员在巡视；红色集装箱(V3)底部被画面截断；左上角存在金属网格结构，性质存疑（可能为展架或车辆顶部货架，未计入）；所有车辆均未见明显车头，可能车头朝向画面外或处于盲区\",\n  \"uncertain_reasons\": [\"无法确认各货厢前部是否连接有牵引车头（均按无车头挂车处理）\", \"左上角(0.00,0.18至0.35,0.35)的金属网格结构无法确定是车辆部件还是展会展架\"]\n}\n```"
+    },
+    {
+      "model": "aibox",
+      "model_id": "glm-5.3",
+      "attempts": 3,
+      "ok": false,
+      "latency_s": 3.48,
+      "status": 503,
+      "error": "HTTPError: 503 Server Error: Service Unavailable for url: https://aibox.richaibox.com:2078/v1/chat/completions",
+      "response_text": "{\"error\":{\"code\":\"model_not_found\",\"message\":\"No available channel for model glm-5.3 under group default (distributor) (request id: 202610211147358948099148268d9d6awqY5cqo)\",\"type\":\"new_api_error\"}}"
+    }
+  ]
+}

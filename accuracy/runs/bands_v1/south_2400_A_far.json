@@ -1,0 +1,101 @@
+{
+  "sample_id": "south_2400",
+  "band": "A_far",
+  "outputs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 19.81,
+      "usage": {
+        "completion_tokens": 2114,
+        "prompt_tokens": 2155,
+        "total_tokens": 4269,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1578
+        }
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "box_truck",
+            "bbox": [
+              0.35,
+              0.5,
+              0.45,
+              0.78
+            ],
+            "center_inside_core": true,
+            "color": "red",
+            "evidence": "位于通道内，有完整的车头与货厢结构，带车轮，属于运输单元，非展台或杂物",
+            "uncertain": false
+          },
+          {
+            "unit_id": "U2",
+            "kind": "box_truck",
+            "bbox": [
+              0.24,
+              0.52,
+              0.37,
+              0.99
+            ],
+            "center_inside_core": true,
+            "color": "white",
+            "evidence": "位于通道内，完整厢式货车，带车头与货厢，带车轮，属于运输单元",
+            "uncertain": false
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U2"
+            ],
+            "bbox": [
+              0.24,
+              0.52,
+              0.37,
+              0.99
+            ],
+            "vehicle_type": "rigid_truck",
+            "size": "large",
+            "evidence": "独立完整的厢式货车，车头与货厢直接连接，为单个物理车辆",
+            "uncertain": false
+          },
+          {
+            "vehicle_id": "V2",
+            "unit_ids": [
+              "U1"
+            ],
+            "bbox": [
+              0.35,
+              0.5,
+              0.45,
+              0.78
+            ],
+            "vehicle_type": "rigid_truck",
+            "size": "large",
+            "evidence": "独立完整的厢式货车，车头与货厢直接连接，为单个物理车辆",
+            "uncertain": false
+          }
+        ],
+        "counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "outside_core_units": "",
+        "scene_notes": "无遮挡，所有运输单元均在绿色矩形内，无边界车辆歧义",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"box_truck\",\n      \"bbox\": [0.35, 0.5, 0.45, 0.78],\n      \"center_inside_core\": true,\n      \"color\": \"red\",\n      \"evidence\": \"位于通道内，有完整的车头与货厢结构，带车轮，属于运输单元，非展台或杂物\",\n      \"uncertain\": false\n    },\n    {\n      \"unit_id\": \"U2\",\n      \"kind\": \"box_truck\",\n      \"bbox\": [0.24, 0.52, 0.37, 0.99],\n      \"center_inside_core\": true,\n      \"color\": \"white\",\n      \"evidence\": \"位于通道内，完整厢式货车，带车头与货厢，带车轮，属于运输单元\",\n      \"uncertain\": false\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U2\"],\n      \"bbox\": [0.24, 0.52, 0.37, 0.99],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"evidence\": \"独立完整的厢式货车，车头与货厢直接连接，为单个物理车辆\",\n      \"uncertain\": false\n    },\n    {\n      \"vehicle_id\": \"V2\",\n      \"unit_ids\": [\"U1\"],\n      \"bbox\": [0.35, 0.5, 0.45, 0.78],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"evidence\": \"独立完整的厢式货车，车头与货厢直接连接，为单个物理车辆\",\n      \"uncertain\": false\n    }\n  ],\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"outside_core_units\": \"\",\n  \"scene_notes\": \"无遮挡，所有运输单元均在绿色矩形内，无边界车辆歧义\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

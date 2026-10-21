@@ -1,0 +1,86 @@
+{
+  "sample_id": "south_900",
+  "band": "B_mid",
+  "outputs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 14.4,
+      "usage": {
+        "completion_tokens": 1527,
+        "prompt_tokens": 2148,
+        "total_tokens": 3675,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1037
+        }
+      },
+      "parsed": {
+        "units": [
+          {
+            "unit_id": "U1",
+            "kind": "tractor_cab",
+            "bbox": [
+              0.37,
+              0.16,
+              0.5,
+              0.46
+            ],
+            "center_inside_core": true,
+            "color": "red",
+            "evidence": "Red tractor cab located in the channel within green rectangle, has distinct cab shape, not part of surrounding booths or structures",
+            "uncertain": false
+          },
+          {
+            "unit_id": "U2",
+            "kind": "cargo_box",
+            "bbox": [
+              0.38,
+              0.4,
+              0.58,
+              0.99
+            ],
+            "center_inside_core": true,
+            "color": "white",
+            "evidence": "White cargo box located in the channel within green rectangle, connected to the red tractor cab above it, part of a transport vehicle",
+            "uncertain": false
+          }
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "V1",
+            "unit_ids": [
+              "U1",
+              "U2"
+            ],
+            "bbox": [
+              0.37,
+              0.16,
+              0.58,
+              0.99
+            ],
+            "vehicle_type": "tractor_trailer",
+            "size": "large",
+            "evidence": "The red tractor cab (U1) is directly connected to the white cargo box (U2), forming a single tractor-trailer vehicle in the channel",
+            "uncertain": false
+          }
+        ],
+        "counts": {
+          "total": 1,
+          "large": 1,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "outside_core_units": "The red truck located above the green rectangle, its center is outside the green rectangle, only serves as context",
+        "scene_notes": "The white cargo box is partially truncated at the bottom edge of the green rectangle, but its center is within the core area. No other transport units are present inside the green rectangle.",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"tractor_cab\",\n      \"bbox\": [0.37, 0.16, 0.5, 0.46],\n      \"center_inside_core\": true,\n      \"color\": \"red\",\n      \"evidence\": \"Red tractor cab located in the channel within green rectangle, has distinct cab shape, not part of surrounding booths or structures\",\n      \"uncertain\": false\n    },\n    {\n      \"unit_id\": \"U2\",\n      \"kind\": \"cargo_box\",\n      \"bbox\": [0.38, 0.4, 0.58, 0.99],\n      \"center_inside_core\": true,\n      \"color\": \"white\",\n      \"evidence\": \"White cargo box located in the channel within green rectangle, connected to the red tractor cab above it, part of a transport vehicle\",\n      \"uncertain\": false\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U1\", \"U2\"],\n      \"bbox\": [0.37, 0.16, 0.58, 0.99],\n      \"vehicle_type\": \"tractor_trailer\",\n      \"size\": \"large\",\n      \"evidence\": \"The red tractor cab (U1) is directly connected to the white cargo box (U2), forming a single tractor-trailer vehicle in the channel\",\n      \"uncertain\": false\n    }\n  ],\n  \"counts\": {\"total\": 1, \"large\": 1, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"outside_core_units\": \"The red truck located above the green rectangle, its center is outside the green rectangle, only serves as context\",\n  \"scene_notes\": \"The white cargo box is partially truncated at the bottom edge of the green rectangle, but its center is within the core area. No other transport units are present inside the green rectangle.\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}
