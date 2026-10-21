@@ -1,0 +1,30 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\assets\\frames\\north_600.jpg",
+  "out": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\core_region_v1\\north_600_farpair.jpg",
+  "source_size": [
+    1280,
+    960
+  ],
+  "core_normalized": [
+    0.34,
+    0.06,
+    0.68,
+    0.38
+  ],
+  "crop_normalized": [
+    0.30000000000000004,
+    0.019999999999999997,
+    0.7200000000000001,
+    0.42
+  ],
+  "crop_pixels": [
+    384,
+    19,
+    922,
+    403
+  ],
+  "output_size": [
+    1600,
+    1142
+  ]
+}

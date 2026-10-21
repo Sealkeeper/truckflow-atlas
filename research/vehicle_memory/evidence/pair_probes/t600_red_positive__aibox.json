@@ -1,0 +1,45 @@
+{
+  "case": "t600_red_positive",
+  "north_candidate": [
+    "north_600",
+    "N6"
+  ],
+  "south_candidate": [
+    "south_600",
+    "S6"
+  ],
+  "gold_answer": "yes",
+  "image": "assets\\sheets\\pair_t600_red_positive.jpg",
+  "prompt": "左格是北机位候选，右格是南机位同一时刻候选；两机位存在重叠，但视角不同。\n问题只有一项：它们是否同一物理车辆？\n\n判定规则：\n1. 至少两个语义特征一致才可判 yes，例如货厢颜色和结构、车头颜色和形状、文字/标识、车顶特征。\n2. 同色不是充分证据；红车与另一辆红车可能不同。\n3. 车头与货厢属于同一车时不要拆开；但两格裁片可能只显示局部。\n4. 视角、尺度变化导致无法确认时必须 answer=uncertain，不能猜。\n\n只输出严格 JSON：\n{\"answer\":\"yes|no|uncertain\",\"shared_features\":[\"至少两个\"],\"conflicting_features\":[\"\"],\"reason\":\"\",\"review\":true}",
+  "run": {
+    "model": "aibox",
+    "model_id": "glm-5.3-flash",
+    "ok": true,
+    "latency_s": 11.602,
+    "request_id": "0ae747530b9546e19efcd874902e2e27",
+    "usage": {
+      "prompt_tokens": 1042,
+      "total_tokens": 1273,
+      "completion_tokens": 231,
+      "prompt_tokens_details": {
+        "cached_tokens": 1024,
+        "image_tokens": 855
+      },
+      "reasoning_tokens": 129
+    },
+    "parsed": {
+      "answer": "uncertain",
+      "shared_features": [
+        "红色车体",
+        "重型卡车结构"
+      ],
+      "conflicting_features": [
+        "南格红色车头后连接白色货厢，北格为红色货厢尾部",
+        "南格未见北格货厢的尾部灯光/文字特征"
+      ],
+      "reason": "北格显示红色货厢尾部，南格显示红色车头牵引白色货厢，二者可能是同一列车的不同局部，也可能是不同车辆；视角与裁剪导致无法确认匹配。",
+      "review": true
+    },
+    "raw_text": "{\"answer\":\"uncertain\",\"shared_features\":[\"红色车体\",\"重型卡车结构\"],\"conflicting_features\":[\"南格红色车头后连接白色货厢，北格为红色货厢尾部\",\"南格未见北格货厢的尾部灯光/文字特征\"],\"reason\":\"北格显示红色货厢尾部，南格显示红色车头牵引白色货厢，二者可能是同一列车的不同局部，也可能是不同车辆；视角与裁剪导致无法确认匹配。\",\"review\":true}"
+  }
+}

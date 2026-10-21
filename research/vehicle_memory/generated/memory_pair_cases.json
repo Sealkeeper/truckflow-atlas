@@ -1,0 +1,134 @@
+{
+  "metrics": {
+    "cases": 8,
+    "exact": 3,
+    "exact_rate": 0.375,
+    "tp": 0,
+    "fp": 0,
+    "fn": 4,
+    "tn": 3,
+    "precision_committed_yes": 0.0,
+    "recall_committed_yes": 0.0,
+    "review_count": 5,
+    "review_rate": 0.625
+  },
+  "rows": [
+    {
+      "case": "t600_red_positive",
+      "gold": "yes",
+      "answer": "uncertain",
+      "score": 0.51,
+      "decision": "review",
+      "matched_categories": [
+        "body_type",
+        "cargo_colour"
+      ],
+      "conflicts": [],
+      "exact": false,
+      "review": true
+    },
+    {
+      "case": "t600_white_positive",
+      "gold": "yes",
+      "answer": "uncertain",
+      "score": 0.51,
+      "decision": "review",
+      "matched_categories": [
+        "body_type",
+        "cargo_colour"
+      ],
+      "conflicts": [],
+      "exact": false,
+      "review": true
+    },
+    {
+      "case": "t600_blue_vs_far_red",
+      "gold": "no",
+      "answer": "uncertain",
+      "score": 0.26,
+      "decision": "review",
+      "matched_categories": [
+        "cargo_colour"
+      ],
+      "conflicts": [],
+      "exact": false,
+      "review": true
+    },
+    {
+      "case": "t600_blue_vs_red_cab",
+      "gold": "no",
+      "answer": "no",
+      "score": 0.46,
+      "decision": "reject",
+      "matched_categories": [
+        "cargo_colour",
+        "roof_colour",
+        "texture"
+      ],
+      "conflicts": [
+        "body_roles_disagree",
+        "size_disagrees"
+      ],
+      "exact": true,
+      "review": false
+    },
+    {
+      "case": "t1200_red_positive",
+      "gold": "yes",
+      "answer": "uncertain",
+      "score": 0.63,
+      "decision": "review",
+      "matched_categories": [
+        "body_type",
+        "cargo_colour",
+        "texture"
+      ],
+      "conflicts": [],
+      "exact": false,
+      "review": true
+    },
+    {
+      "case": "t1200_white_positive",
+      "gold": "yes",
+      "answer": "uncertain",
+      "score": 0.63,
+      "decision": "review",
+      "matched_categories": [
+        "body_type",
+        "cargo_colour",
+        "texture"
+      ],
+      "conflicts": [],
+      "exact": false,
+      "review": true
+    },
+    {
+      "case": "t1200_blue_vs_far_red",
+      "gold": "no",
+      "answer": "no",
+      "score": 0.1,
+      "decision": "reject",
+      "matched_categories": [],
+      "conflicts": [
+        "body_roles_disagree"
+      ],
+      "exact": true,
+      "review": false
+    },
+    {
+      "case": "t1200_red_vs_red_cab",
+      "gold": "no",
+      "answer": "no",
+      "score": 0.42,
+      "decision": "reject",
+      "matched_categories": [
+        "cargo_colour"
+      ],
+      "conflicts": [
+        "body_roles_disagree"
+      ],
+      "exact": true,
+      "review": false
+    }
+  ]
+}

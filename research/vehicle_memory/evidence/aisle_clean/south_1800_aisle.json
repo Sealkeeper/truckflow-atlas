@@ -1,0 +1,93 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\south_1800_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 15.87,
+      "usage": {
+        "completion_tokens": 1735,
+        "prompt_tokens": 1776,
+        "total_tokens": 3511,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1198
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 4,
+          "large": 4,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.46,
+              0.45,
+              0.68,
+              0.88
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "White cab with '东风商用车' text, white cargo box, front-facing at bottom of frame",
+            "evidence": "Fully visible heavy truck in central lower aisle",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.45,
+              0.29,
+              0.58,
+              0.51
+            ],
+            "size": "large",
+            "visible": "partial_side",
+            "is_truck": true,
+            "identity_clues": "Red cab with white logo, red cargo area, positioned above the white truck",
+            "evidence": "Partially visible heavy truck in central aisle, between white and upper red trucks",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.34,
+              0.25,
+              0.44,
+              0.36
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red cab, red cargo box, front-facing, with blue load on top",
+            "evidence": "Fully visible heavy truck in central middle aisle",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.43,
+              0.12,
+              0.53,
+              0.24
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red cab, front-facing, at the top of the central aisle",
+            "evidence": "Fully visible heavy truck in central upper aisle",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "All counted trucks are in the central exhibition aisle, no fully occluded vehicles; no small/medium trucks or non-truck vehicles counted",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 4, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.46, 0.45, 0.68, 0.88],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White cab with '东风商用车' text, white cargo box, front-facing at bottom of frame\",\n      \"evidence\": \"Fully visible heavy truck in central lower aisle\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.29, 0.58, 0.51],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab with white logo, red cargo area, positioned above the white truck\",\n      \"evidence\": \"Partially visible heavy truck in central aisle, between white and upper red trucks\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.34, 0.25, 0.44, 0.36],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, red cargo box, front-facing, with blue load on top\",\n      \"evidence\": \"Fully visible heavy truck in central middle aisle\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.43, 0.12, 0.53, 0.24],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, front-facing, at the top of the central aisle\",\n      \"evidence\": \"Fully visible heavy truck in central upper aisle\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All counted trucks are in the central exhibition aisle, no fully occluded vehicles; no small/medium trucks or non-truck vehicles counted\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\south_1800_aisle.jpg"
+    }
+  ]
+}

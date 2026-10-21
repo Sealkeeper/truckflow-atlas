@@ -1,0 +1,110 @@
+{
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "attempts": 1,
+  "latency_s": 23.55,
+  "usage": {
+    "completion_tokens": 2332,
+    "prompt_tokens": 1776,
+    "total_tokens": 4108,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1874
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 2, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.51, 0.32, 0.68, 0.59],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色封闭厢式货车，车尾朝向观察者，尾部有黄色反光条和编号\",\n      \"evidence\": \"位于画面中间通道，完整可见，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.18, 0.61, 0.51, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色长条形封闭厢式货车，货厢侧面可见，车头被画面底部截断\",\n      \"evidence\": \"位于画面下方偏左，可见完整货厢，属于大型货车范畴\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.42, 0.17, 0.54, 0.35],\n      \"size\": \"medium\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色顶部封闭货厢挂车，无对应车头，单独放置在通道中\",\n      \"evidence\": \"位于画面中间偏上，红色货车后方，单独清晰可见的挂车，与相邻车辆非同一整体\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面共可见3辆货车，其中2辆大型、1辆中型；白色货车底部被画面边界截断，蓝色顶为单独挂车，无遮挡导致的歧义车辆\",\n  \"uncertain_reasons\": []\n}",
+  "reasoning_text": "\n用户现在需要处理这张展会撤展的货车清点，首先得仔细看画面里的货车。首先找可见的：\n第一个，中间偏上的红色厢式货车，是完整的？不对，看，红色的那个，是大型的，属于large，可见是full？然后左下角的白色厢式货车，是大型的？不对，白色的那个，货厢很长，是large？还有没有？哦，还有那个蓝色的叉车不算，然后还有没有单独的挂车？不对，再数：\n1. 红色的货车：在画面中间，从下到上，是完整的厢式货车，large，visible是full，identity是红色厢式，车尾朝镜头，有尾灯。\n2. 左下角的白色厢式货车：货厢是白色的，很长，在画面下方偏左，是large，visible是partial？不对，看，它的车头部分被挡住了？不，画面里它的货厢是完整露出的，车头在下方？不对，坐标的话，白色的那个，bbox大概是[0.18, 0.61, 0.51, 0.99]，对，是大型的，厢式货车。\n3. 还有没有？哦，上方的那个蓝色顶的？不对，那个是小的？不，看，中间偏上，红色货车左边，有个蓝色顶的，是单独的货厢？不对，那个是挂车？不对，再看，还有没有其他货车？哦，不对，刚才的红色是一个，白色是第二个，还有吗？等下，画面里的货车：\n再仔细看：\n- 第一辆：红色厢式货车，位置在中间，y轴大概0.3到0.58，x0.5到0.67，是large，visible full，is_truck true，identity是红色封闭厢式，车尾朝向观察者，有尾灯和编号。\n- 第二辆：白色长厢式货车，位置在下方偏左，x0.18到0.51，y0.6到0.99，large，visible partial？不对，它的货厢是完整的，车头部分在画面外？所以visible是partial_front？不对，看，它的车头被画面底部截断了，所以visible是partial_bottom？\n- 第三辆？哦，上方的那个，红色货车后面，有个带蓝色顶的，是单独的货厢？不对，那个是挂车？x0.42到0.54，y0.17到0.35，那个是trailer_only，属于货车，size？那个看起来是medium？不对，那个是蓝色顶的，封闭货厢，是trailer_only，所以算一辆。\n等下，不对，我是不是数多了？再看规则：同一辆车的车头和货厢算一辆，单独清晰的挂车算一辆。那现在看：\n1. 红色的那辆，是完整的货车，有车头和货厢？不对，画面里红色的只有货厢部分？哦，不对，红色的那个，是半挂车的货厢？还是整个货车？看，它的顶部是封闭的，车尾有门，所以是一辆大型货车，large，visible full。\n2. 左下角的白色厢式，是一辆大型货车，large，visible partial（因为底部被截断）。\n3. 中间偏上，红色货车后方，那个蓝色顶的，是单独的挂车，trailer_only，size？那个看起来是medium？不对，那个的高度，比红色的矮，所以可能是medium？\n还有吗？有没有其他的？比如，画面里的其他车辆？叉车不算，人物不算，所以总共3辆？\n不对，再仔细看：\n哦，不对，那个蓝色顶的，是不是和红色的是同一辆？不对，红色的在下方，蓝色顶的在红色的上方，中间有通道，所以是单独的。\n那现在counts的total是3，large是2，medium是1，small是0，unknown是0。\n然后每个车辆的信息：\n第一个：红色货车，bbox [0.51, 0.32, 0.68, 0.59]，size large，visible full，is_truck true，identity：红色封闭厢式货车，车尾朝向镜头，尾部有黄色反光条和编号，evidence：画面中间通道内，完整可见的大型厢式货车，符合货车定义，uncertain false。\n第二个：白色厢式货车，bbox [0.18, 0.61, 0.51, 0.99]，size large，visible partial_bottom，is_truck true，identity：白色长条形封闭厢式货车，货厢完整，车头部分被画面底部截断，evidence：画面下方偏左，可见完整货厢，属于大型货车，uncertain false。\n第三个：蓝色顶挂车，bbox [0.42, 0.17, 0.54, 0.35]，size medium，visible trailer_only，is_truck true，identity：蓝色顶部的封闭货厢挂车，单独放置在通道中，无对应车头，evidence：画面中间偏上，红色货车后方，单独可见的挂车，属于货车范畴，uncertain false。\n然后scene_notes：画面中可见3辆货车，其中2辆为大型，1辆为中型，无遮挡导致的歧义车辆，边界车辆为白色货车（底部截断），蓝色顶挂车为单独可见的挂车。\nuncertain_reasons：[]\n等下，有没有错？再检查规则：\n规则2：单独清晰可见的挂车/货厢，如果和相邻车头不是同一辆，算一辆。对，那个蓝色顶的，没有车头，所以算一辆。\n那现在整理成JSON，注意格式正确，不要有多余的东西。\n哦，等下，那个蓝色顶的，是不是货车？是的，因为是封闭货厢，属于货车的一部分，单独的挂车算。\n那现在counts的total是3，large是2，medium是1，small是0，unknown是0。\n然后vehicles数组里的三个对象。\n再确认坐标：\n红色货车：x0.5到0.68，y0.32到0.59，对，框住它。\n白色货车：x0.18到0.51，y0.61到0.99，对，从左下方到中间下方。\n蓝色顶挂车：x0.42到0.54，y0.17到0.35，对，在红色货车的上方，通道里。\n那现在写JSON，注意所有的字段都要正确，比如visible的取值是full、partial_top、partial_side、trailer_only，所以蓝色顶的是trailer_only，白色的是partial_bottom？不对，规则里的visible选项是\"full|partial_top|partial_side|trailer_only\"，哦，规则5说：\"车身只露出局部但仍能确定是货车时计入，并在 visible 字段说明；\"，所以白色货车的车头在画面外，所以露出的是货厢，底部被截断，所以visible是partial_side？不对，看规则里的visible选项，有partial_top、partial_side，partial_bottom？不对，规则里的visible字段说明是\"full|partial_top|partial_side|trailer_only\"，所以可能我理解错，白色货车是partial_side，因为侧面可见，底部被截断，所以visible是partial_side？\n然后identity_clues：红色的是\"红色封闭厢式货车，车尾朝向观察者，尾部有黄色反光标识和编号\"，白色的是\"白色长厢式货车，货厢侧面可见，车头被画面底部截断\"，蓝色顶的是\"蓝色顶部封闭货厢挂车，无对应车头，单独放置在通道内\"。\nevidence：红色的是\"位于画面中间通道，完整可见，符合货车定义\"，白色的是\"位于画面下方偏左，可见完整货厢，属于大型货车\"，蓝色顶的是\"位于画面中间偏上，红色货车后方，单独可见的挂车，无对应车头\"。\nuncertain都是false。\n然后scene_notes：\"画面共可见3辆货车，其中2辆大型，1辆中型；白色货车底部被画面边界截断，蓝色顶为单独挂车，无遮挡导致的歧义车辆\"。\nuncertain_reasons：[]\n现在把这些整理成严格的JSON，不要有任何markdown，就是纯JSON。",
+  "raw_body": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "{\n  \"counts\": {\"total\": 3, \"large\": 2, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.51, 0.32, 0.68, 0.59],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色封闭厢式货车，车尾朝向观察者，尾部有黄色反光条和编号\",\n      \"evidence\": \"位于画面中间通道，完整可见，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.18, 0.61, 0.51, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色长条形封闭厢式货车，货厢侧面可见，车头被画面底部截断\",\n      \"evidence\": \"位于画面下方偏左，可见完整货厢，属于大型货车范畴\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.42, 0.17, 0.54, 0.35],\n      \"size\": \"medium\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色顶部封闭货厢挂车，无对应车头，单独放置在通道中\",\n      \"evidence\": \"位于画面中间偏上，红色货车后方，单独清晰可见的挂车，与相邻车辆非同一整体\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面共可见3辆货车，其中2辆大型、1辆中型；白色货车底部被画面边界截断，蓝色顶为单独挂车，无遮挡导致的歧义车辆\",\n  \"uncertain_reasons\": []\n}",
+          "reasoning_content": "\n用户现在需要处理这张展会撤展的货车清点，首先得仔细看画面里的货车。首先找可见的：\n第一个，中间偏上的红色厢式货车，是完整的？不对，看，红色的那个，是大型的，属于large，可见是full？然后左下角的白色厢式货车，是大型的？不对，白色的那个，货厢很长，是large？还有没有？哦，还有那个蓝色的叉车不算，然后还有没有单独的挂车？不对，再数：\n1. 红色的货车：在画面中间，从下到上，是完整的厢式货车，large，visible是full，identity是红色厢式，车尾朝镜头，有尾灯。\n2. 左下角的白色厢式货车：货厢是白色的，很长，在画面下方偏左，是large，visible是partial？不对，看，它的车头部分被挡住了？不，画面里它的货厢是完整露出的，车头在下方？不对，坐标的话，白色的那个，bbox大概是[0.18, 0.61, 0.51, 0.99]，对，是大型的，厢式货车。\n3. 还有没有？哦，上方的那个蓝色顶的？不对，那个是小的？不，看，中间偏上，红色货车左边，有个蓝色顶的，是单独的货厢？不对，那个是挂车？不对，再看，还有没有其他货车？哦，不对，刚才的红色是一个，白色是第二个，还有吗？等下，画面里的货车：\n再仔细看：\n- 第一辆：红色厢式货车，位置在中间，y轴大概0.3到0.58，x0.5到0.67，是large，visible full，is_truck true，identity是红色封闭厢式，车尾朝向观察者，有尾灯和编号。\n- 第二辆：白色长厢式货车，位置在下方偏左，x0.18到0.51，y0.6到0.99，large，visible partial？不对，它的货厢是完整的，车头部分在画面外？所以visible是partial_front？不对，看，它的车头被画面底部截断了，所以visible是partial_bottom？\n- 第三辆？哦，上方的那个，红色货车后面，有个带蓝色顶的，是单独的货厢？不对，那个是挂车？x0.42到0.54，y0.17到0.35，那个是trailer_only，属于货车，size？那个看起来是medium？不对，那个是蓝色顶的，封闭货厢，是trailer_only，所以算一辆。\n等下，不对，我是不是数多了？再看规则：同一辆车的车头和货厢算一辆，单独清晰的挂车算一辆。那现在看：\n1. 红色的那辆，是完整的货车，有车头和货厢？不对，画面里红色的只有货厢部分？哦，不对，红色的那个，是半挂车的货厢？还是整个货车？看，它的顶部是封闭的，车尾有门，所以是一辆大型货车，large，visible full。\n2. 左下角的白色厢式，是一辆大型货车，large，visible partial（因为底部被截断）。\n3. 中间偏上，红色货车后方，那个蓝色顶的，是单独的挂车，trailer_only，size？那个看起来是medium？不对，那个的高度，比红色的矮，所以可能是medium？\n还有吗？有没有其他的？比如，画面里的其他车辆？叉车不算，人物不算，所以总共3辆？\n不对，再仔细看：\n哦，不对，那个蓝色顶的，是不是和红色的是同一辆？不对，红色的在下方，蓝色顶的在红色的上方，中间有通道，所以是单独的。\n那现在counts的total是3，large是2，medium是1，small是0，unknown是0。\n然后每个车辆的信息：\n第一个：红色货车，bbox [0.51, 0.32, 0.68, 0.59]，size large，visible full，is_truck true，identity：红色封闭厢式货车，车尾朝向镜头，尾部有黄色反光条和编号，evidence：画面中间通道内，完整可见的大型厢式货车，符合货车定义，uncertain false。\n第二个：白色厢式货车，bbox [0.18, 0.61, 0.51, 0.99]，size large，visible partial_bottom，is_truck true，identity：白色长条形封闭厢式货车，货厢完整，车头部分被画面底部截断，evidence：画面下方偏左，可见完整货厢，属于大型货车，uncertain false。\n第三个：蓝色顶挂车，bbox [0.42, 0.17, 0.54, 0.35]，size medium，visible trailer_only，is_truck true，identity：蓝色顶部的封闭货厢挂车，单独放置在通道中，无对应车头，evidence：画面中间偏上，红色货车后方，单独可见的挂车，属于货车范畴，uncertain false。\n然后scene_notes：画面中可见3辆货车，其中2辆为大型，1辆为中型，无遮挡导致的歧义车辆，边界车辆为白色货车（底部截断），蓝色顶挂车为单独可见的挂车。\nuncertain_reasons：[]\n等下，有没有错？再检查规则：\n规则2：单独清晰可见的挂车/货厢，如果和相邻车头不是同一辆，算一辆。对，那个蓝色顶的，没有车头，所以算一辆。\n那现在整理成JSON，注意格式正确，不要有多余的东西。\n哦，等下，那个蓝色顶的，是不是货车？是的，因为是封闭货厢，属于货车的一部分，单独的挂车算。\n那现在counts的total是3，large是2，medium是1，small是0，unknown是0。\n然后vehicles数组里的三个对象。\n再确认坐标：\n红色货车：x0.5到0.68，y0.32到0.59，对，框住它。\n白色货车：x0.18到0.51，y0.61到0.99，对，从左下方到中间下方。\n蓝色顶挂车：x0.42到0.54，y0.17到0.35，对，在红色货车的上方，通道里。\n那现在写JSON，注意所有的字段都要正确，比如visible的取值是full、partial_top、partial_side、trailer_only，所以蓝色顶的是trailer_only，白色的是partial_bottom？不对，规则里的visible选项是\"full|partial_top|partial_side|trailer_only\"，哦，规则5说：\"车身只露出局部但仍能确定是货车时计入，并在 visible 字段说明；\"，所以白色货车的车头在画面外，所以露出的是货厢，底部被截断，所以visible是partial_side？不对，看规则里的visible选项，有partial_top、partial_side，partial_bottom？不对，规则里的visible字段说明是\"full|partial_top|partial_side|trailer_only\"，所以可能我理解错，白色货车是partial_side，因为侧面可见，底部被截断，所以visible是partial_side？\n然后identity_clues：红色的是\"红色封闭厢式货车，车尾朝向观察者，尾部有黄色反光标识和编号\"，白色的是\"白色长厢式货车，货厢侧面可见，车头被画面底部截断\"，蓝色顶的是\"蓝色顶部封闭货厢挂车，无对应车头，单独放置在通道内\"。\nevidence：红色的是\"位于画面中间通道，完整可见，符合货车定义\"，白色的是\"位于画面下方偏左，可见完整货厢，属于大型货车\"，蓝色顶的是\"位于画面中间偏上，红色货车后方，单独可见的挂车，无对应车头\"。\nuncertain都是false。\n然后scene_notes：\"画面共可见3辆货车，其中2辆大型，1辆中型；白色货车底部被画面边界截断，蓝色顶为单独挂车，无遮挡导致的歧义车辆\"。\nuncertain_reasons：[]\n现在把这些整理成严格的JSON，不要有任何markdown，就是纯JSON。",
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1792586139,
+    "id": "02179258611562238521d8aeb1173234c174f01c4d2f3c11f0368",
+    "model": "doubao-seed-2-0-mini-260428",
+    "service_tier": "default",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 2332,
+      "prompt_tokens": 1776,
+      "total_tokens": 4108,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1874
+      }
+    }
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 2,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.51,
+          0.32,
+          0.68,
+          0.59
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色封闭厢式货车，车尾朝向观察者，尾部有黄色反光条和编号",
+        "evidence": "位于画面中间通道，完整可见，符合货车定义",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.18,
+          0.61,
+          0.51,
+          0.99
+        ],
+        "size": "large",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "白色长条形封闭厢式货车，货厢侧面可见，车头被画面底部截断",
+        "evidence": "位于画面下方偏左，可见完整货厢，属于大型货车范畴",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.42,
+          0.17,
+          0.54,
+          0.35
+        ],
+        "size": "medium",
+        "visible": "trailer_only",
+        "is_truck": true,
+        "identity_clues": "蓝色顶部封闭货厢挂车，无对应车头，单独放置在通道中",
+        "evidence": "位于画面中间偏上，红色货车后方，单独清晰可见的挂车，与相邻车辆非同一整体",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面共可见3辆货车，其中2辆大型、1辆中型；白色货车底部被画面边界截断，蓝色顶为单独挂车，无遮挡导致的歧义车辆",
+    "uncertain_reasons": []
+  },
+  "sample_id": "north_600",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\north_600_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:35:39+0800"
+}

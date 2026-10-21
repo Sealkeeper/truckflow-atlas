@@ -1,0 +1,126 @@
+{
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "attempts": 1,
+  "latency_s": 15.37,
+  "usage": {
+    "completion_tokens": 1836,
+    "prompt_tokens": 1776,
+    "total_tokens": 3612,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1276
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 2, \"medium\": 1, \"small\": 0, \"unknown\": 1},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.45, 0.45, 0.68, 0.88],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色车头印有'东风商用车'字样，白色厢式货厢，朝向镜头\",\n      \"evidence\": \"画面中下部通道内完整可见的重型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.28, 0.60, 0.55],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，灰色厢式货厢，位于白色货车后方\",\n      \"evidence\": \"通道内完整可见的重型货车，货厢为灰色\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.33, 0.21, 0.47, 0.42],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，棕色厢式货厢，位于灰色货厢货车后方\",\n      \"evidence\": \"通道内完整可见的中型货车，货厢为棕色\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.35, 0.14, 0.48, 0.25],\n      \"size\": \"unknown\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车身，仅露出上部部分结构，位于棕色货厢货车后方\",\n      \"evidence\": \"画面上部通道内仅露出部分的车辆，无法确认完整尺寸与车型\",\n      \"uncertain\": true\n    }\n  ],\n  \"scene_notes\": \"画面内共4辆可见货车，其中1辆仅露出上部部分，其余3辆完整可见，无被完全遮挡的货车\",\n  \"uncertain_reasons\": [\"最远处的货车仅露出上部部分，无法确定其完整尺寸与车型\"]\n}",
+  "reasoning_text": "\n用户现在需要处理这个货车清点的任务，首先看图片里的货车，先数清楚每一辆。首先看画面里的：\n1. 最前面的白色东风商用车，是完整的，属于large，visible是full，identity是白色车头写东风商用车，货厢白色，朝向前方（镜头方向？不对，看车头是对着我们的，所以是停在通道里的，第一辆。\n2. 它后面的红色车头的货车，货厢是灰色的，这个是第二辆，large，visible full，identity红色车头，灰色货厢。\n3. 再后面的红色货车，货厢是棕色的，第三辆，medium？不对，看大小，棕色货厢的那个，是中卡？或者large？然后再后面还有一辆红色的，只露出部分，第四辆？不对，仔细看：\n数一下可见的：\n第一辆：白色东风，完整，bbox大概是[0.47, 470/...不对，归一化坐标，x从0到1，y从0到1，所以白色的那个，x0≈0.45，y0≈0.45，x1≈0.68，y1≈0.88，这个是large，visible full，is_truck true，identity是白色东风商用车，车头朝镜头，货厢白色。\n第二辆：红色车头，灰色货厢，在白色的后面，x0≈0.45，y0≈0.28，x1≈0.6，y1≈0.55，这个是large，visible full，identity红色车头，灰色货厢。\n第三辆：棕色货厢的红色车头，在第二辆后面，x0≈0.33，y0≈0.21，x1≈0.47，y1≈0.42，这个是medium？或者large？看长度，比前面的短一点？\n第四辆：最远处的红色货车，只露出部分，x0≈0.35，y0≈0.14，x1≈0.48，y1≈0.25，这个是partial，visible partial，identity红色，部分可见。\n还有吗？再看，有没有其他的？比如右边的？不对，右边的是展位，没有货车。左边的展位也没有。那总共是4辆？\n然后size：第一辆large，第二large，第三medium，第四？不确定？不对，第四辆只露出部分，所以size可能unknown？\n然后visible：第一full，第二full，第三full，第四partial_top？\n然后counts：total是4，large是2，medium是1，unknown是1？不对，第三辆的棕色货厢，是完整的，所以size是medium？第四辆是部分，所以size unknown？\n然后scene_notes：画面中有4辆可见货车，其中最远处的一辆仅露出部分，其余三辆完整可见，无被完全遮挡的货车。\nuncertain_reasons：最远处的货车仅露出部分，无法确定完整类型。\n现在整理成严格的JSON格式，注意所有字段正确。\n等下，再确认每一辆：\n1. 白色东风：bbox [0.45, 0.45, 0.68, 0.88]，size large，visible full，is_truck true，identity \"白色车头印有'东风商用车'字样，白色厢式货厢，朝向镜头\"，evidence \"画面中下部通道内完整可见的白色货车\"，uncertain false。\n2. 红色车头灰色货厢：bbox [0.45, 0.28, 0.6, 0.55]，size large，visible full，is_truck true，identity \"红色车头，灰色厢式货厢，位于白色货车后方\"，evidence \"通道内完整可见的红色货车，货厢为灰色\"，uncertain false。\n3. 红色车头棕色货厢：bbox [0.33, 0.21, 0.47, 0.42]，size medium，visible full，is_truck true，identity \"红色车头，棕色厢式货厢，位于灰色货厢货车后方\"，evidence \"通道内完整可见的货车，货厢为棕色，尺寸较前后的长货车略小\"，uncertain false。\n4. 最远处红色货车：bbox [0.35, 0.14, 0.48, 0.25]，size unknown，visible partial_top，is_truck true，identity \"红色车身，仅露出上部部分结构，位于棕色货厢货车后方\"，evidence \"画面上部通道内仅露出部分的红色车辆，无法确认完整尺寸与类型\"，uncertain true。\n那counts的total是4，large是2，medium是1，small是0，unknown是1。\n对，这样。然后scene_notes：\"画面内共4辆可见货车，其中1辆仅露出上部部分，其余3辆完整可见，无被完全遮挡或无法识别的货车\"。\nuncertain_reasons：[\"最远处的货车仅露出上部部分，无法确定其完整尺寸与车型\"]。\n现在把这些整理成正确的JSON，注意坐标是归一化的，所以数值要在0到1之间，比如y从0是顶部，1是底部，所以白色货车的y0是0.45，y1是0.88，没错。\n等下，再检查有没有漏的，有没有多的。画面里的货车就是这四辆，对吗？是的，中间通道里的四辆，从近到远：白色、红灰、红棕、最远处红的部分。\n那现在输出JSON，严格按照要求，不要有多余的东西。",
+  "raw_body": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "{\n  \"counts\": {\"total\": 4, \"large\": 2, \"medium\": 1, \"small\": 0, \"unknown\": 1},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.45, 0.45, 0.68, 0.88],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色车头印有'东风商用车'字样，白色厢式货厢，朝向镜头\",\n      \"evidence\": \"画面中下部通道内完整可见的重型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.28, 0.60, 0.55],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，灰色厢式货厢，位于白色货车后方\",\n      \"evidence\": \"通道内完整可见的重型货车，货厢为灰色\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.33, 0.21, 0.47, 0.42],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，棕色厢式货厢，位于灰色货厢货车后方\",\n      \"evidence\": \"通道内完整可见的中型货车，货厢为棕色\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.35, 0.14, 0.48, 0.25],\n      \"size\": \"unknown\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车身，仅露出上部部分结构，位于棕色货厢货车后方\",\n      \"evidence\": \"画面上部通道内仅露出部分的车辆，无法确认完整尺寸与车型\",\n      \"uncertain\": true\n    }\n  ],\n  \"scene_notes\": \"画面内共4辆可见货车，其中1辆仅露出上部部分，其余3辆完整可见，无被完全遮挡的货车\",\n  \"uncertain_reasons\": [\"最远处的货车仅露出上部部分，无法确定其完整尺寸与车型\"]\n}",
+          "reasoning_content": "\n用户现在需要处理这个货车清点的任务，首先看图片里的货车，先数清楚每一辆。首先看画面里的：\n1. 最前面的白色东风商用车，是完整的，属于large，visible是full，identity是白色车头写东风商用车，货厢白色，朝向前方（镜头方向？不对，看车头是对着我们的，所以是停在通道里的，第一辆。\n2. 它后面的红色车头的货车，货厢是灰色的，这个是第二辆，large，visible full，identity红色车头，灰色货厢。\n3. 再后面的红色货车，货厢是棕色的，第三辆，medium？不对，看大小，棕色货厢的那个，是中卡？或者large？然后再后面还有一辆红色的，只露出部分，第四辆？不对，仔细看：\n数一下可见的：\n第一辆：白色东风，完整，bbox大概是[0.47, 470/...不对，归一化坐标，x从0到1，y从0到1，所以白色的那个，x0≈0.45，y0≈0.45，x1≈0.68，y1≈0.88，这个是large，visible full，is_truck true，identity是白色东风商用车，车头朝镜头，货厢白色。\n第二辆：红色车头，灰色货厢，在白色的后面，x0≈0.45，y0≈0.28，x1≈0.6，y1≈0.55，这个是large，visible full，identity红色车头，灰色货厢。\n第三辆：棕色货厢的红色车头，在第二辆后面，x0≈0.33，y0≈0.21，x1≈0.47，y1≈0.42，这个是medium？或者large？看长度，比前面的短一点？\n第四辆：最远处的红色货车，只露出部分，x0≈0.35，y0≈0.14，x1≈0.48，y1≈0.25，这个是partial，visible partial，identity红色，部分可见。\n还有吗？再看，有没有其他的？比如右边的？不对，右边的是展位，没有货车。左边的展位也没有。那总共是4辆？\n然后size：第一辆large，第二large，第三medium，第四？不确定？不对，第四辆只露出部分，所以size可能unknown？\n然后visible：第一full，第二full，第三full，第四partial_top？\n然后counts：total是4，large是2，medium是1，unknown是1？不对，第三辆的棕色货厢，是完整的，所以size是medium？第四辆是部分，所以size unknown？\n然后scene_notes：画面中有4辆可见货车，其中最远处的一辆仅露出部分，其余三辆完整可见，无被完全遮挡的货车。\nuncertain_reasons：最远处的货车仅露出部分，无法确定完整类型。\n现在整理成严格的JSON格式，注意所有字段正确。\n等下，再确认每一辆：\n1. 白色东风：bbox [0.45, 0.45, 0.68, 0.88]，size large，visible full，is_truck true，identity \"白色车头印有'东风商用车'字样，白色厢式货厢，朝向镜头\"，evidence \"画面中下部通道内完整可见的白色货车\"，uncertain false。\n2. 红色车头灰色货厢：bbox [0.45, 0.28, 0.6, 0.55]，size large，visible full，is_truck true，identity \"红色车头，灰色厢式货厢，位于白色货车后方\"，evidence \"通道内完整可见的红色货车，货厢为灰色\"，uncertain false。\n3. 红色车头棕色货厢：bbox [0.33, 0.21, 0.47, 0.42]，size medium，visible full，is_truck true，identity \"红色车头，棕色厢式货厢，位于灰色货厢货车后方\"，evidence \"通道内完整可见的货车，货厢为棕色，尺寸较前后的长货车略小\"，uncertain false。\n4. 最远处红色货车：bbox [0.35, 0.14, 0.48, 0.25]，size unknown，visible partial_top，is_truck true，identity \"红色车身，仅露出上部部分结构，位于棕色货厢货车后方\"，evidence \"画面上部通道内仅露出部分的红色车辆，无法确认完整尺寸与类型\"，uncertain true。\n那counts的total是4，large是2，medium是1，small是0，unknown是1。\n对，这样。然后scene_notes：\"画面内共4辆可见货车，其中1辆仅露出上部部分，其余3辆完整可见，无被完全遮挡或无法识别的货车\"。\nuncertain_reasons：[\"最远处的货车仅露出上部部分，无法确定其完整尺寸与车型\"]。\n现在把这些整理成正确的JSON，注意坐标是归一化的，所以数值要在0到1之间，比如y从0是顶部，1是底部，所以白色货车的y0是0.45，y1是0.88，没错。\n等下，再检查有没有漏的，有没有多的。画面里的货车就是这四辆，对吗？是的，中间通道里的四辆，从近到远：白色、红灰、红棕、最远处红的部分。\n那现在输出JSON，严格按照要求，不要有多余的东西。",
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1792586148,
+    "id": "021792586133504b7d8c272fa1fe35aa5baeadeea4f72cc532795",
+    "model": "doubao-seed-2-0-mini-260428",
+    "service_tier": "default",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 1836,
+      "prompt_tokens": 1776,
+      "total_tokens": 3612,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1276
+      }
+    }
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 4,
+      "large": 2,
+      "medium": 1,
+      "small": 0,
+      "unknown": 1
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.45,
+          0.45,
+          0.68,
+          0.88
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "白色车头印有'东风商用车'字样，白色厢式货厢，朝向镜头",
+        "evidence": "画面中下部通道内完整可见的重型货车",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.45,
+          0.28,
+          0.6,
+          0.55
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色车头，灰色厢式货厢，位于白色货车后方",
+        "evidence": "通道内完整可见的重型货车，货厢为灰色",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.33,
+          0.21,
+          0.47,
+          0.42
+        ],
+        "size": "medium",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色车头，棕色厢式货厢，位于灰色货厢货车后方",
+        "evidence": "通道内完整可见的中型货车，货厢为棕色",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.35,
+          0.14,
+          0.48,
+          0.25
+        ],
+        "size": "unknown",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "红色车身，仅露出上部部分结构，位于棕色货厢货车后方",
+        "evidence": "画面上部通道内仅露出部分的车辆，无法确认完整尺寸与车型",
+        "uncertain": true
+      }
+    ],
+    "scene_notes": "画面内共4辆可见货车，其中1辆仅露出上部部分，其余3辆完整可见，无被完全遮挡的货车",
+    "uncertain_reasons": [
+      "最远处的货车仅露出上部部分，无法确定其完整尺寸与车型"
+    ]
+  },
+  "sample_id": "south_2100",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\south_2100_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:35:49+0800"
+}

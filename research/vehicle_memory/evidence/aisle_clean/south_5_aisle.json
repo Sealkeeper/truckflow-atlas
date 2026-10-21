@@ -1,0 +1,79 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\south_5_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 20.58,
+      "usage": {
+        "completion_tokens": 2193,
+        "prompt_tokens": 1776,
+        "total_tokens": 3969,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1747
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.44,
+              0.14,
+              0.55,
+              0.26
+            ],
+            "size": "large",
+            "visible": "partial_top",
+            "is_truck": true,
+            "identity_clues": "红色厢式货车，朝向画面上方，位于中间通道远端，Haier展位左侧",
+            "evidence": "画面中间通道最上方区域，可见该货车的上部车身",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.45,
+              0.25,
+              0.58,
+              0.47
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色重卡，车头朝向画面下方，封闭式货厢，位于中间通道中部",
+            "evidence": "画面中间通道中部，该货车的车头与货厢均完整可见",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.47,
+              0.59,
+              0.73,
+              0.99
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色半挂车，车头标注“一汽青岛”，开放式货厢，位于中间通道近景",
+            "evidence": "画面中间通道最下方区域，该货车的车头与货厢均完整可见",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "三辆大型货车均位于画面中间通道，无完全遮挡或边界模糊导致的歧义，所有车辆均清晰可辨",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.44, 0.14, 0.55, 0.26],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色厢式货车，朝向画面上方，位于中间通道远端，Haier展位左侧\",\n      \"evidence\": \"画面中间通道最上方区域，可见该货车的上部车身\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.25, 0.58, 0.47],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重卡，车头朝向画面下方，封闭式货厢，位于中间通道中部\",\n      \"evidence\": \"画面中间通道中部，该货车的车头与货厢均完整可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.47, 0.59, 0.73, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色半挂车，车头标注“一汽青岛”，开放式货厢，位于中间通道近景\",\n      \"evidence\": \"画面中间通道最下方区域，该货车的车头与货厢均完整可见\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"三辆大型货车均位于画面中间通道，无完全遮挡或边界模糊导致的歧义，所有车辆均清晰可辨\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\south_5_aisle.jpg"
+    }
+  ]
+}

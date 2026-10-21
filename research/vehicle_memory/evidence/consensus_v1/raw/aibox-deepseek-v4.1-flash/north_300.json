@@ -1,0 +1,132 @@
+{
+  "model": "aibox-deepseek-v4.1-flash",
+  "model_id": "deepseek-v4.1-flash",
+  "attempts": 1,
+  "latency_s": 6.37,
+  "usage": {
+    "prompt_tokens": 1459,
+    "total_tokens": 1944,
+    "completion_tokens": 485,
+    "prompt_tokens_details": {
+      "cached_tokens": 1408,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": {
+        "image": 1011
+      }
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "{\n  \"counts\": {\n    \"total\": 3,\n    \"large\": 3,\n    \"medium\": 0,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [\n        0.18,\n        0.58,\n        0.53,\n        0.99\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色平顶长货厢，尾部可见深色箱体及黄色反光板，朝向画面下方\",\n      \"evidence\": \"画面正下方占据大面积的白色长货厢，仅可见顶部及部分尾部，符合半挂/重卡货厢特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.39,\n        0.25,\n        0.53,\n        0.48\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色平顶货厢，侧面有白色文字/标识，朝向画面上方\",\n      \"evidence\": \"画面中上部偏左的蓝色长货厢，仅可见顶部及部分侧面，符合重卡货厢特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.43,\n        0.16,\n        0.53,\n        0.26\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"深灰色/黑色平顶货厢，侧面有白色标识，朝向画面上方\",\n      \"evidence\": \"画面中上部、蓝色货厢前方的深色长货厢，仅可见顶部及部分侧面，符合重卡货厢特征\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展会撤换展通道，两侧为展位结构。可见三辆大型货车货厢，均只露出顶部或部分侧面，无完整车头。通道内有人员走动及散落杂物，未发现其他可明确判定为货车的车辆。\",\n  \"uncertain_reasons\": []\n}",
+  "reasoning_text": null,
+  "raw_body": {
+    "id": "chatcmpl-a4950703a9356da3",
+    "object": "chat.completion",
+    "created": 1792586091,
+    "model": "deepseek-v4.1-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"counts\": {\n    \"total\": 3,\n    \"large\": 3,\n    \"medium\": 0,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [\n        0.18,\n        0.58,\n        0.53,\n        0.99\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色平顶长货厢，尾部可见深色箱体及黄色反光板，朝向画面下方\",\n      \"evidence\": \"画面正下方占据大面积的白色长货厢，仅可见顶部及部分尾部，符合半挂/重卡货厢特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.39,\n        0.25,\n        0.53,\n        0.48\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色平顶货厢，侧面有白色文字/标识，朝向画面上方\",\n      \"evidence\": \"画面中上部偏左的蓝色长货厢，仅可见顶部及部分侧面，符合重卡货厢特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.43,\n        0.16,\n        0.53,\n        0.26\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"深灰色/黑色平顶货厢，侧面有白色标识，朝向画面上方\",\n      \"evidence\": \"画面中上部、蓝色货厢前方的深色长货厢，仅可见顶部及部分侧面，符合重卡货厢特征\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展会撤换展通道，两侧为展位结构。可见三辆大型货车货厢，均只露出顶部或部分侧面，无完整车头。通道内有人员走动及散落杂物，未发现其他可明确判定为货车的车辆。\",\n  \"uncertain_reasons\": []\n}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "reasoning": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null,
+        "routed_experts": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev20904+g179dd0fa9-tp8-ep-4471a5ba",
+    "usage": {
+      "prompt_tokens": 1459,
+      "total_tokens": 1944,
+      "completion_tokens": 485,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": {
+          "image": 1011
+        }
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 3,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.18,
+          0.58,
+          0.53,
+          0.99
+        ],
+        "size": "large",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "白色平顶长货厢，尾部可见深色箱体及黄色反光板，朝向画面下方",
+        "evidence": "画面正下方占据大面积的白色长货厢，仅可见顶部及部分尾部，符合半挂/重卡货厢特征",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.39,
+          0.25,
+          0.53,
+          0.48
+        ],
+        "size": "large",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "蓝色平顶货厢，侧面有白色文字/标识，朝向画面上方",
+        "evidence": "画面中上部偏左的蓝色长货厢，仅可见顶部及部分侧面，符合重卡货厢特征",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.43,
+          0.16,
+          0.53,
+          0.26
+        ],
+        "size": "large",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "深灰色/黑色平顶货厢，侧面有白色标识，朝向画面上方",
+        "evidence": "画面中上部、蓝色货厢前方的深色长货厢，仅可见顶部及部分侧面，符合重卡货厢特征",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面为展会撤换展通道，两侧为展位结构。可见三辆大型货车货厢，均只露出顶部或部分侧面，无完整车头。通道内有人员走动及散落杂物，未发现其他可明确判定为货车的车辆。",
+    "uncertain_reasons": []
+  },
+  "sample_id": "north_300",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\north_300_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:34:55+0800"
+}

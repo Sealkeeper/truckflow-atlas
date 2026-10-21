@@ -1,0 +1,96 @@
+{
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "attempts": 1,
+  "latency_s": 13.76,
+  "usage": {
+    "completion_tokens": 1214,
+    "prompt_tokens": 1776,
+    "total_tokens": 2990,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 903
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.4, 0.25, 0.55, 0.45],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色栏板式货厢，朝向画面下方，位于中间通道\",\n      \"evidence\": \"画面中间通道可见单独的红色货车货厢，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.18, 0.6, 0.52, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹厢式货车，朝向画面上方，车身有部分车牌可见，位于左下方通道\",\n      \"evidence\": \"画面左下方可见完整的白色厢式货车，符合货车定义\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中可见两辆货车，无被完全遮挡或无法确定的车辆\",\n  \"uncertain_reasons\": []\n}",
+  "reasoning_text": "\n我现在要处理用户的请求，就是从给定的监控画面里清点可见的货车，按照要求输出JSON。首先，先仔细看画面里的货车：\n\n首先，第一辆：画面中间偏上的红色货厢的货车，是完整的？不对，看，红色的那个是货厢，有没有车头？不对，画面里中间上方的红色的是一个货车的货厢？然后下方偏左的是一个白色的厢式货车，是完整的？还有吗？\n\n等下，数一下：\n1. 中间上方的红色货厢：是单独的挂车？不对，看，那个红色的是一个货车的货厢，有没有车头？画面里没看到车头，所以是trailer_only？然后它的大小是large？\n2. 下方偏左的白色厢式货车：是完整的，full可见，大小large？\n还有吗？再看，有没有其他？比如，有没有第三辆？不对，画面里的：\n- 第一辆：红色的货厢，位置大概是x0=0.4, y0=0.25, x1=0.55, y1=0.45，这个是trailer_only，large，因为是重型的货厢。\n- 第二辆：下方的白色厢式货车，x0=0.18, y0=0.6, x1=0.52, y1=0.99，full可见，large，厢式的，属于货车。\n还有吗？有没有其他货车？比如，有没有被遮挡的？再看，画面里的叉车不算，人物不算，其他的？比如，右边有没有？没有，右边是展位。那总共有2辆？\n\n等下，再确认：\n第一辆：红色的那个，是货车的货厢，单独的，所以算，visible是trailer_only，size large。\n第二辆：白色的厢式货车，完整的，visible full，size large。\n那total是2，large是2，medium和small是0，unknown是0。\n\n然后identity_clues：第一辆红色货厢，特征是红色，栏板式货厢，朝向画面下方；第二辆白色厢式货车，白色波纹状货厢，朝向画面上方，车牌部分可见（粤A...）。\nevidence：画面中可见的两辆货车，第一辆在中间通道，第二辆在左下方通道。\nscene_notes：无明显遮挡导致的歧义，所有车辆均清晰可见。\nuncertain_reasons：空。\n\n现在整理成严格的JSON格式，注意所有字段都要正确，不要有多余的。\n\n等下，再检查计数口径：同一辆车的车头和货厢算一辆，单独的挂车算一辆。那红色的那个是单独的挂车，所以算一辆，白色的是完整的货车，算一辆，总共2辆，都是large。\n\n对，没错。那现在写JSON：\n\n首先counts部分：total=2，large=2，其他medium、small、unknown都是0。\n\nvehicles数组里两个元素：\n\n第一个：\nbbox是[0.4, 0.25, 0.55, 0.45]，size是large，visible是trailer_only，is_truck=true，identity_clues=\"红色栏板式货厢，朝向画面下方，位于中间通道\"，evidence=\"画面中间通道可见单独的红色货车货厢，符合货车定义\"，uncertain=false。\n\n第二个：\nbbox是[0.18, 0.6, 0.52, 0.99]，size是large，visible是full，is_truck=true，identity_clues=\"白色波纹厢式货车，朝向画面上方，车身有部分车牌可见，位于左下方通道\"，evidence=\"画面左下方可见完整的白色厢式货车，符合货车定义\"，uncertain=false。\n\nscene_notes：\"画面中可见两辆货车，无被完全遮挡或无法确定的车辆\"，uncertain_reasons是[]。\n\n现在把这些写成正确的JSON，注意符号都是英文的，数组和对象的格式正确，没有多余的逗号。",
+  "raw_body": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.4, 0.25, 0.55, 0.45],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色栏板式货厢，朝向画面下方，位于中间通道\",\n      \"evidence\": \"画面中间通道可见单独的红色货车货厢，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.18, 0.6, 0.52, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹厢式货车，朝向画面上方，车身有部分车牌可见，位于左下方通道\",\n      \"evidence\": \"画面左下方可见完整的白色厢式货车，符合货车定义\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中可见两辆货车，无被完全遮挡或无法确定的车辆\",\n  \"uncertain_reasons\": []\n}",
+          "reasoning_content": "\n我现在要处理用户的请求，就是从给定的监控画面里清点可见的货车，按照要求输出JSON。首先，先仔细看画面里的货车：\n\n首先，第一辆：画面中间偏上的红色货厢的货车，是完整的？不对，看，红色的那个是货厢，有没有车头？不对，画面里中间上方的红色的是一个货车的货厢？然后下方偏左的是一个白色的厢式货车，是完整的？还有吗？\n\n等下，数一下：\n1. 中间上方的红色货厢：是单独的挂车？不对，看，那个红色的是一个货车的货厢，有没有车头？画面里没看到车头，所以是trailer_only？然后它的大小是large？\n2. 下方偏左的白色厢式货车：是完整的，full可见，大小large？\n还有吗？再看，有没有其他？比如，有没有第三辆？不对，画面里的：\n- 第一辆：红色的货厢，位置大概是x0=0.4, y0=0.25, x1=0.55, y1=0.45，这个是trailer_only，large，因为是重型的货厢。\n- 第二辆：下方的白色厢式货车，x0=0.18, y0=0.6, x1=0.52, y1=0.99，full可见，large，厢式的，属于货车。\n还有吗？有没有其他货车？比如，有没有被遮挡的？再看，画面里的叉车不算，人物不算，其他的？比如，右边有没有？没有，右边是展位。那总共有2辆？\n\n等下，再确认：\n第一辆：红色的那个，是货车的货厢，单独的，所以算，visible是trailer_only，size large。\n第二辆：白色的厢式货车，完整的，visible full，size large。\n那total是2，large是2，medium和small是0，unknown是0。\n\n然后identity_clues：第一辆红色货厢，特征是红色，栏板式货厢，朝向画面下方；第二辆白色厢式货车，白色波纹状货厢，朝向画面上方，车牌部分可见（粤A...）。\nevidence：画面中可见的两辆货车，第一辆在中间通道，第二辆在左下方通道。\nscene_notes：无明显遮挡导致的歧义，所有车辆均清晰可见。\nuncertain_reasons：空。\n\n现在整理成严格的JSON格式，注意所有字段都要正确，不要有多余的。\n\n等下，再检查计数口径：同一辆车的车头和货厢算一辆，单独的挂车算一辆。那红色的那个是单独的挂车，所以算一辆，白色的是完整的货车，算一辆，总共2辆，都是large。\n\n对，没错。那现在写JSON：\n\n首先counts部分：total=2，large=2，其他medium、small、unknown都是0。\n\nvehicles数组里两个元素：\n\n第一个：\nbbox是[0.4, 0.25, 0.55, 0.45]，size是large，visible是trailer_only，is_truck=true，identity_clues=\"红色栏板式货厢，朝向画面下方，位于中间通道\"，evidence=\"画面中间通道可见单独的红色货车货厢，符合货车定义\"，uncertain=false。\n\n第二个：\nbbox是[0.18, 0.6, 0.52, 0.99]，size是large，visible是full，is_truck=true，identity_clues=\"白色波纹厢式货车，朝向画面上方，车身有部分车牌可见，位于左下方通道\"，evidence=\"画面左下方可见完整的白色厢式货车，符合货车定义\"，uncertain=false。\n\nscene_notes：\"画面中可见两辆货车，无被完全遮挡或无法确定的车辆\"，uncertain_reasons是[]。\n\n现在把这些写成正确的JSON，注意符号都是英文的，数组和对象的格式正确，没有多余的逗号。",
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1792586117,
+    "id": "021792586103598ca1998c53fd4b023b15de25487e65f32628495",
+    "model": "doubao-seed-2-0-mini-260428",
+    "service_tier": "default",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 1214,
+      "prompt_tokens": 1776,
+      "total_tokens": 2990,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 903
+      }
+    }
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 2,
+      "large": 2,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.4,
+          0.25,
+          0.55,
+          0.45
+        ],
+        "size": "large",
+        "visible": "trailer_only",
+        "is_truck": true,
+        "identity_clues": "红色栏板式货厢，朝向画面下方，位于中间通道",
+        "evidence": "画面中间通道可见单独的红色货车货厢，符合货车定义",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.18,
+          0.6,
+          0.52,
+          0.99
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "白色波纹厢式货车，朝向画面上方，车身有部分车牌可见，位于左下方通道",
+        "evidence": "画面左下方可见完整的白色厢式货车，符合货车定义",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面中可见两辆货车，无被完全遮挡或无法确定的车辆",
+    "uncertain_reasons": []
+  },
+  "sample_id": "north_1800",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\north_1800_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:35:17+0800"
+}

@@ -1,0 +1,65 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_600_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 10.91,
+      "usage": {
+        "completion_tokens": 1163,
+        "prompt_tokens": 1776,
+        "total_tokens": 2939,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 840
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.52,
+              0.32,
+              0.68,
+              0.58
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red closed cargo box, rear lights and markings visible, facing away from camera",
+            "evidence": "Fully visible large truck in the central aisle, rear-facing",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.18,
+              0.62,
+              0.52,
+              0.99
+            ],
+            "size": "large",
+            "visible": "partial_side",
+            "is_truck": true,
+            "identity_clues": "White corrugated cargo area, partial text '粤A...' on lower section, positioned at bottom left",
+            "evidence": "Visible as a large truck's cargo body, only top and side exposed, identifiable as a truck",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "Two large trucks are visible; forklift, workers, and exhibition structures are excluded from count",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.52, 0.32, 0.68, 0.58],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red closed cargo box, rear lights and markings visible, facing away from camera\",\n      \"evidence\": \"Fully visible large truck in the central aisle, rear-facing\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.18, 0.62, 0.52, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White corrugated cargo area, partial text '粤A...' on lower section, positioned at bottom left\",\n      \"evidence\": \"Visible as a large truck's cargo body, only top and side exposed, identifiable as a truck\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"Two large trucks are visible; forklift, workers, and exhibition structures are excluded from count\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_600_aisle.jpg"
+    }
+  ]
+}

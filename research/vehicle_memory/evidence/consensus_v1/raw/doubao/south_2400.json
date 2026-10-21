@@ -1,0 +1,110 @@
+{
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "attempts": 1,
+  "latency_s": 10.3,
+  "usage": {
+    "completion_tokens": 1022,
+    "prompt_tokens": 1776,
+    "total_tokens": 2798,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 565
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.36, 0.46, 0.65, 0.90],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red heavy truck with open right door, front cab marked with 'SINOTRUK' and Chinese characters, long gray cargo box\",\n      \"evidence\": \"Fully visible in the foreground of the image, occupying the lower central area of the scene\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.31, 0.21, 0.44, 0.42],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White heavy truck with closed cargo box, front cab marked with Chinese characters, positioned left of the middle lane\",\n      \"evidence\": \"Fully visible in the middle left area of the scene, no major occlusion\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.43, 0.19, 0.56, 0.32],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red heavy truck with cargo box on top, positioned behind the white truck in the middle lane\",\n      \"evidence\": \"Fully visible in the upper central area of the scene, no major occlusion\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All counted trucks are fully visible, no partial or obscured vehicles that meet the truck criteria; no ambiguous cases in the frame\",\n  \"uncertain_reasons\": []\n}",
+  "reasoning_text": "Okay, let's count the visible trucks in the image. First, look at the red truck in the foreground: that's a large truck, full visible. Then the white truck behind it, also full, large. Then the red truck further back, another large one. Wait, let's check each:\n\n1. The red truck at the bottom: bbox approx [0.37, 0.47, 0.64, 0.89], size large, visible full, is truck.\n2. The white truck in the middle left: [0.32, 0.22, 0.43, 0.41], size large, full visible.\n3. The red truck behind the white one: [0.44, 0.20, 0.55, 0.33], size large, full visible.\n\nWait, is that all? Let's confirm. Are there any others? Let's see the image again. The three trucks: red front, white middle, red back. So total 3 large trucks. Let's structure the JSON properly.\n\nWait, let's make sure each is a truck. All are heavy trucks, so large. Let's list them:\n\nFirst vehicle: red truck, full visible, large. Second: white truck, full, large. Third: red truck behind white, full, large. So total 3, large=3, others 0.\n\nNow, the scene notes: all trucks are fully visible, no partial or uncertain. Uncertain reasons empty.\n\nWait, let's check the coordinates. Let's get accurate bboxes:\n\n1. Red truck (front): x from ~0.36 to 0.65, y from ~0.46 to 0.90. Correct.\n2. White truck: x ~0.31 to 0.44, y ~0.21 to 0.42. Correct.\n3. Red truck (back): x ~0.43 to 0.56, y ~0.19 to 0.32. Correct.\n\nYes, three trucks, all large, full visible. So the counts: total=3, large=3, medium=0, small=0, unknown=0.\n\nNow, the identity clues: for each, like first is red Sinotruk (HOWO) truck, second is white Dongfeng truck, third is red truck behind white.\n\nEvidence: each is a heavy truck, fully visible in the image, no occlusion that hides the whole vehicle.\n\nSo putting it all into the JSON as required.",
+  "raw_body": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.36, 0.46, 0.65, 0.90],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red heavy truck with open right door, front cab marked with 'SINOTRUK' and Chinese characters, long gray cargo box\",\n      \"evidence\": \"Fully visible in the foreground of the image, occupying the lower central area of the scene\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.31, 0.21, 0.44, 0.42],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White heavy truck with closed cargo box, front cab marked with Chinese characters, positioned left of the middle lane\",\n      \"evidence\": \"Fully visible in the middle left area of the scene, no major occlusion\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.43, 0.19, 0.56, 0.32],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red heavy truck with cargo box on top, positioned behind the white truck in the middle lane\",\n      \"evidence\": \"Fully visible in the upper central area of the scene, no major occlusion\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All counted trucks are fully visible, no partial or obscured vehicles that meet the truck criteria; no ambiguous cases in the frame\",\n  \"uncertain_reasons\": []\n}",
+          "reasoning_content": "Okay, let's count the visible trucks in the image. First, look at the red truck in the foreground: that's a large truck, full visible. Then the white truck behind it, also full, large. Then the red truck further back, another large one. Wait, let's check each:\n\n1. The red truck at the bottom: bbox approx [0.37, 0.47, 0.64, 0.89], size large, visible full, is truck.\n2. The white truck in the middle left: [0.32, 0.22, 0.43, 0.41], size large, full visible.\n3. The red truck behind the white one: [0.44, 0.20, 0.55, 0.33], size large, full visible.\n\nWait, is that all? Let's confirm. Are there any others? Let's see the image again. The three trucks: red front, white middle, red back. So total 3 large trucks. Let's structure the JSON properly.\n\nWait, let's make sure each is a truck. All are heavy trucks, so large. Let's list them:\n\nFirst vehicle: red truck, full visible, large. Second: white truck, full, large. Third: red truck behind white, full, large. So total 3, large=3, others 0.\n\nNow, the scene notes: all trucks are fully visible, no partial or uncertain. Uncertain reasons empty.\n\nWait, let's check the coordinates. Let's get accurate bboxes:\n\n1. Red truck (front): x from ~0.36 to 0.65, y from ~0.46 to 0.90. Correct.\n2. White truck: x ~0.31 to 0.44, y ~0.21 to 0.42. Correct.\n3. Red truck (back): x ~0.43 to 0.56, y ~0.19 to 0.32. Correct.\n\nYes, three trucks, all large, full visible. So the counts: total=3, large=3, medium=0, small=0, unknown=0.\n\nNow, the identity clues: for each, like first is red Sinotruk (HOWO) truck, second is white Dongfeng truck, third is red truck behind white.\n\nEvidence: each is a heavy truck, fully visible in the image, no occlusion that hides the whole vehicle.\n\nSo putting it all into the JSON as required.",
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1792586145,
+    "id": "02179258613531285f36e5500b1e72470cfcfcd79be288a37549a",
+    "model": "doubao-seed-2-0-mini-260428",
+    "service_tier": "default",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 1022,
+      "prompt_tokens": 1776,
+      "total_tokens": 2798,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 565
+      }
+    }
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 3,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.36,
+          0.46,
+          0.65,
+          0.9
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red heavy truck with open right door, front cab marked with 'SINOTRUK' and Chinese characters, long gray cargo box",
+        "evidence": "Fully visible in the foreground of the image, occupying the lower central area of the scene",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.31,
+          0.21,
+          0.44,
+          0.42
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "White heavy truck with closed cargo box, front cab marked with Chinese characters, positioned left of the middle lane",
+        "evidence": "Fully visible in the middle left area of the scene, no major occlusion",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.43,
+          0.19,
+          0.56,
+          0.32
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red heavy truck with cargo box on top, positioned behind the white truck in the middle lane",
+        "evidence": "Fully visible in the upper central area of the scene, no major occlusion",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "All counted trucks are fully visible, no partial or obscured vehicles that meet the truck criteria; no ambiguous cases in the frame",
+    "uncertain_reasons": []
+  },
+  "sample_id": "south_2400",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\south_2400_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:35:45+0800"
+}

@@ -1,0 +1,584 @@
+{
+  "schema": "truckflow-consensus-coverage-2frames-v1",
+  "annotation_source": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\review\\user-attachments-20261021\\manifest.json",
+  "scope": "diagnostic on 2 user-annotated frames only; not 20-frame accuracy",
+  "coordinate_mode": "normalized bbox x de-letterboxed from square input: x_crop=(x_model-0.22917)/(1040/1920)",
+  "frames": {
+    "north_600": {
+      "file": "1000_2.png",
+      "marked": 4,
+      "user_boxes": [
+        [
+          0.32558139534883723,
+          0.1411764705882353,
+          0.4108527131782946,
+          0.1803921568627451
+        ],
+        [
+          0.29069767441860467,
+          0.22941176470588234,
+          0.42248062015503873,
+          0.307843137254902
+        ],
+        [
+          0.4108527131782946,
+          0.30980392156862746,
+          0.5813953488372093,
+          0.4372549019607843
+        ],
+        [
+          0.07751937984496124,
+          0.6098039215686275,
+          0.375968992248062,
+          0.9411764705882353
+        ]
+      ],
+      "models": {
+        "doubao": {
+          "covered": 2,
+          "marked": 4,
+          "candidate_boxes": 3,
+          "vehicles": [
+            {
+              "vehicle": 1,
+              "covered": false,
+              "best_iou": 0.014
+            },
+            {
+              "vehicle": 2,
+              "covered": true,
+              "best_iou": 0.123
+            },
+            {
+              "vehicle": 3,
+              "covered": false,
+              "best_iou": 0.119
+            },
+            {
+              "vehicle": 4,
+              "covered": true,
+              "best_iou": 0.502
+            }
+          ]
+        },
+        "aibox-deepseek-v4.1-flash": {
+          "covered": 3,
+          "marked": 4,
+          "candidate_boxes": 3,
+          "vehicles": [
+            {
+              "vehicle": 1,
+              "covered": true,
+              "best_iou": 0.062
+            },
+            {
+              "vehicle": 2,
+              "covered": true,
+              "best_iou": 0.172
+            },
+            {
+              "vehicle": 3,
+              "covered": false,
+              "best_iou": 0.053
+            },
+            {
+              "vehicle": 4,
+              "covered": true,
+              "best_iou": 0.475
+            }
+          ]
+        },
+        "aibox-glm-5.3-flash": {
+          "covered": 3,
+          "marked": 4,
+          "candidate_boxes": 4,
+          "vehicles": [
+            {
+              "vehicle": 1,
+              "covered": true,
+              "best_iou": 0.043
+            },
+            {
+              "vehicle": 2,
+              "covered": true,
+              "best_iou": 0.208
+            },
+            {
+              "vehicle": 3,
+              "covered": false,
+              "best_iou": 0.05
+            },
+            {
+              "vehicle": 4,
+              "covered": true,
+              "best_iou": 0.475
+            }
+          ]
+        },
+        "zhipu": {
+          "covered": 3,
+          "marked": 4,
+          "candidate_boxes": 3,
+          "vehicles": [
+            {
+              "vehicle": 1,
+              "covered": false,
+              "best_iou": 0.0
+            },
+            {
+              "vehicle": 2,
+              "covered": true,
+              "best_iou": 0.109
+            },
+            {
+              "vehicle": 3,
+              "covered": true,
+              "best_iou": 0.439
+            },
+            {
+              "vehicle": 4,
+              "covered": true,
+              "best_iou": 0.476
+            }
+          ]
+        }
+      }
+    },
+    "north_5": {
+      "file": "0005_1.png",
+      "marked": 5,
+      "user_boxes": [
+        [
+          0.35714285714285715,
+          0.06500691562932227,
+          0.4312169312169312,
+          0.1037344398340249
+        ],
+        [
+          0.4656084656084656,
+          0.08990318118948824,
+          0.5476190476190477,
+          0.1272475795297372
+        ],
+        [
+          0.3201058201058201,
+          0.1313969571230982,
+          0.42592592592592593,
+          0.18533886583679116
+        ],
+        [
+          0.2857142857142857,
+          0.22544951590594745,
+          0.41798941798941797,
+          0.29737206085753803
+        ],
+        [
+          0.1931216931216931,
+          0.49930843706777317,
+          0.41005291005291006,
+          0.6984785615491009
+        ]
+      ],
+      "models": {
+        "doubao": {
+          "covered": 2,
+          "marked": 5,
+          "candidate_boxes": 4,
+          "vehicles": [
+            {
+              "vehicle": 1,
+              "covered": false,
+              "best_iou": 0.0
+            },
+            {
+              "vehicle": 2,
+              "covered": false,
+              "best_iou": 0.0
+            },
+            {
+              "vehicle": 3,
+              "covered": false,
+              "best_iou": 0.036
+            },
+            {
+              "vehicle": 4,
+              "covered": true,
+              "best_iou": 0.151
+            },
+            {
+              "vehicle": 5,
+              "covered": true,
+              "best_iou": 0.209
+            }
+          ]
+        },
+        "aibox-deepseek-v4.1-flash": {
+          "covered": 3,
+          "marked": 5,
+          "candidate_boxes": 4,
+          "vehicles": [
+            {
+              "vehicle": 1,
+              "covered": false,
+              "best_iou": 0.026
+            },
+            {
+              "vehicle": 2,
+              "covered": true,
+              "best_iou": 0.153
+            },
+            {
+              "vehicle": 3,
+              "covered": false,
+              "best_iou": 0.075
+            },
+            {
+              "vehicle": 4,
+              "covered": true,
+              "best_iou": 0.08
+            },
+            {
+              "vehicle": 5,
+              "covered": true,
+              "best_iou": 0.233
+            }
+          ]
+        },
+        "aibox-glm-5.3-flash": {
+          "covered": 2,
+          "marked": 5,
+          "candidate_boxes": 4,
+          "vehicles": [
+            {
+              "vehicle": 1,
+              "covered": false,
+              "best_iou": 0.016
+            },
+            {
+              "vehicle": 2,
+              "covered": true,
+              "best_iou": 0.167
+            },
+            {
+              "vehicle": 3,
+              "covered": false,
+              "best_iou": 0.038
+            },
+            {
+              "vehicle": 4,
+              "covered": false,
+              "best_iou": 0.088
+            },
+            {
+              "vehicle": 5,
+              "covered": true,
+              "best_iou": 0.233
+            }
+          ]
+        },
+        "zhipu": {
+          "covered": 2,
+          "marked": 5,
+          "candidate_boxes": 5,
+          "vehicles": [
+            {
+              "vehicle": 1,
+              "covered": false,
+              "best_iou": 0.0
+            },
+            {
+              "vehicle": 2,
+              "covered": false,
+              "best_iou": 0.0
+            },
+            {
+              "vehicle": 3,
+              "covered": false,
+              "best_iou": 0.028
+            },
+            {
+              "vehicle": 4,
+              "covered": true,
+              "best_iou": 0.078
+            },
+            {
+              "vehicle": 5,
+              "covered": true,
+              "best_iou": 0.224
+            }
+          ]
+        }
+      }
+    }
+  },
+  "per_model": {
+    "doubao": {
+      "covered": 4,
+      "marked": 9,
+      "frames": {
+        "north_600": {
+          "covered": 2,
+          "marked": 4,
+          "candidate_boxes": 3,
+          "vehicles": [
+            {
+              "vehicle": 1,
+              "covered": false,
+              "best_iou": 0.014
+            },
+            {
+              "vehicle": 2,
+              "covered": true,
+              "best_iou": 0.123
+            },
+            {
+              "vehicle": 3,
+              "covered": false,
+              "best_iou": 0.119
+            },
+            {
+              "vehicle": 4,
+              "covered": true,
+              "best_iou": 0.502
+            }
+          ]
+        },
+        "north_5": {
+          "covered": 2,
+          "marked": 5,
+          "candidate_boxes": 4,
+          "vehicles": [
+            {
+              "vehicle": 1,
+              "covered": false,
+              "best_iou": 0.0
+            },
+            {
+              "vehicle": 2,
+              "covered": false,
+              "best_iou": 0.0
+            },
+            {
+              "vehicle": 3,
+              "covered": false,
+              "best_iou": 0.036
+            },
+            {
+              "vehicle": 4,
+              "covered": true,
+              "best_iou": 0.151
+            },
+            {
+              "vehicle": 5,
+              "covered": true,
+              "best_iou": 0.209
+            }
+          ]
+        }
+      },
+      "candidate_boxes": 7,
+      "recall": 44.4
+    },
+    "aibox-deepseek-v4.1-flash": {
+      "covered": 6,
+      "marked": 9,
+      "frames": {
+        "north_600": {
+          "covered": 3,
+          "marked": 4,
+          "candidate_boxes": 3,
+          "vehicles": [
+            {
+              "vehicle": 1,
+              "covered": true,
+              "best_iou": 0.062
+            },
+            {
+              "vehicle": 2,
+              "covered": true,
+              "best_iou": 0.172
+            },
+            {
+              "vehicle": 3,
+              "covered": false,
+              "best_iou": 0.053
+            },
+            {
+              "vehicle": 4,
+              "covered": true,
+              "best_iou": 0.475
+            }
+          ]
+        },
+        "north_5": {
+          "covered": 3,
+          "marked": 5,
+          "candidate_boxes": 4,
+          "vehicles": [
+            {
+              "vehicle": 1,
+              "covered": false,
+              "best_iou": 0.026
+            },
+            {
+              "vehicle": 2,
+              "covered": true,
+              "best_iou": 0.153
+            },
+            {
+              "vehicle": 3,
+              "covered": false,
+              "best_iou": 0.075
+            },
+            {
+              "vehicle": 4,
+              "covered": true,
+              "best_iou": 0.08
+            },
+            {
+              "vehicle": 5,
+              "covered": true,
+              "best_iou": 0.233
+            }
+          ]
+        }
+      },
+      "candidate_boxes": 7,
+      "recall": 66.7
+    },
+    "aibox-glm-5.3-flash": {
+      "covered": 5,
+      "marked": 9,
+      "frames": {
+        "north_600": {
+          "covered": 3,
+          "marked": 4,
+          "candidate_boxes": 4,
+          "vehicles": [
+            {
+              "vehicle": 1,
+              "covered": true,
+              "best_iou": 0.043
+            },
+            {
+              "vehicle": 2,
+              "covered": true,
+              "best_iou": 0.208
+            },
+            {
+              "vehicle": 3,
+              "covered": false,
+              "best_iou": 0.05
+            },
+            {
+              "vehicle": 4,
+              "covered": true,
+              "best_iou": 0.475
+            }
+          ]
+        },
+        "north_5": {
+          "covered": 2,
+          "marked": 5,
+          "candidate_boxes": 4,
+          "vehicles": [
+            {
+              "vehicle": 1,
+              "covered": false,
+              "best_iou": 0.016
+            },
+            {
+              "vehicle": 2,
+              "covered": true,
+              "best_iou": 0.167
+            },
+            {
+              "vehicle": 3,
+              "covered": false,
+              "best_iou": 0.038
+            },
+            {
+              "vehicle": 4,
+              "covered": false,
+              "best_iou": 0.088
+            },
+            {
+              "vehicle": 5,
+              "covered": true,
+              "best_iou": 0.233
+            }
+          ]
+        }
+      },
+      "candidate_boxes": 8,
+      "recall": 55.6
+    },
+    "zhipu": {
+      "covered": 5,
+      "marked": 9,
+      "frames": {
+        "north_600": {
+          "covered": 3,
+          "marked": 4,
+          "candidate_boxes": 3,
+          "vehicles": [
+            {
+              "vehicle": 1,
+              "covered": false,
+              "best_iou": 0.0
+            },
+            {
+              "vehicle": 2,
+              "covered": true,
+              "best_iou": 0.109
+            },
+            {
+              "vehicle": 3,
+              "covered": true,
+              "best_iou": 0.439
+            },
+            {
+              "vehicle": 4,
+              "covered": true,
+              "best_iou": 0.476
+            }
+          ]
+        },
+        "north_5": {
+          "covered": 2,
+          "marked": 5,
+          "candidate_boxes": 5,
+          "vehicles": [
+            {
+              "vehicle": 1,
+              "covered": false,
+              "best_iou": 0.0
+            },
+            {
+              "vehicle": 2,
+              "covered": false,
+              "best_iou": 0.0
+            },
+            {
+              "vehicle": 3,
+              "covered": false,
+              "best_iou": 0.028
+            },
+            {
+              "vehicle": 4,
+              "covered": true,
+              "best_iou": 0.078
+            },
+            {
+              "vehicle": 5,
+              "covered": true,
+              "best_iou": 0.224
+            }
+          ]
+        }
+      },
+      "candidate_boxes": 8,
+      "recall": 55.6
+    }
+  }
+}

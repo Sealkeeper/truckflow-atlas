@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://truckflow.local/schemas/memory-cache-v1.json",
+  "title": "TruckFlow Layered Memory Cache",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "created_at_utc",
+    "identity_policy",
+    "entries"
+  ],
+  "properties": {
+    "schema": {
+      "const": "truckflow-memory-cache-v1"
+    },
+    "created_at_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "identity_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "container_number_is_vehicle_id",
+        "cargo_id_scope",
+        "tractor_id_scope",
+        "vehicle_session_requires_current_attachment_or_continuity_evidence",
+        "unclear_ocr_may_merge",
+        "trailer_swap_creates_new_session"
+      ],
+      "properties": {
+        "container_number_is_vehicle_id": {
+          "const": false
+        },
+        "cargo_id_scope": {
+          "const": "cargo_only"
+        },
+        "tractor_id_scope": {
+          "const": "tractor_only"
+        },
+        "vehicle_session_requires_current_attachment_or_continuity_evidence": {
+          "const": true
+        },
+        "unclear_ocr_may_merge": {
+          "const": false
+        },
+        "trailer_swap_creates_new_session": {
+          "const": true
+        }
+      }
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/entry"
+      }
+    }
+  },
+  "$defs": {
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "memory_id",
+        "layer",
+        "memory_type",
+        "key",
+        "summary",
+        "payload_ref",
+        "source",
+        "observed_at_video_s",
+        "created_at_utc",
+        "version",
+        "ttl_s",
+        "expires_at_utc",
+        "state",
+        "conflicts",
+        "supersedes"
+      ],
+      "properties": {
+        "memory_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "layer": {
+          "enum": [
+            "L1",
+            "L2",
+            "L3"
+          ]
+        },
+        "memory_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "key": {
+          "type": "string",
+          "minLength": 1
+        },
+        "summary": {
+          "type": "string"
+        },
+        "payload_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observed_at_video_s": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "created_at_utc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ttl_s": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "expires_at_utc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "state": {
+          "enum": [
+            "fresh",
+            "expired",
+            "conflicted",
+            "retired"
+          ]
+        },
+        "conflicts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "supersedes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "truckflow-vision-experiment-config-v1",
+  "experiment_id": "dualscale_v1",
+  "mechanism": "one model call with the current global aisle view plus a fixed same-frame far-detail view",
+  "model": "doubao",
+  "temperature": 0,
+  "max_tokens": 5000,
+  "concurrency": 2,
+  "retry_policy": "none; every HTTP attempt counts",
+  "new_call_budget": 20,
+  "prompt_file": "experiments/dualscale_v1/prompt.txt",
+  "input_manifest": "experiments/dualscale_v1/inputs.json",
+  "samples": [
+    "north_5",
+    "south_5",
+    "north_300",
+    "south_300",
+    "north_600",
+    "south_600",
+    "north_900",
+    "south_900",
+    "north_1200",
+    "south_1200",
+    "north_1500",
+    "south_1500",
+    "north_1800",
+    "south_1800",
+    "north_2100",
+    "south_2100",
+    "north_2400",
+    "south_2400",
+    "north_2600",
+    "south_2600"
+  ],
+  "forbidden_inputs": [
+    "previous or future frames",
+    "user red-box images",
+    "user counts or answers",
+    "other-camera frames"
+  ]
+}

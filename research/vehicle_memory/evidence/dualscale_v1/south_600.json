@@ -1,0 +1,131 @@
+{
+  "schema": "truckflow-vision-experiment-run-v1",
+  "experiment_id": "dualscale_v1",
+  "sample_id": "south_600",
+  "mechanism": "one model call with the current global aisle view plus a fixed same-frame far-detail view",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "temperature": 0,
+  "max_tokens": 5000,
+  "attempts": 1,
+  "retry_policy": "none; every HTTP attempt counts",
+  "request_count": 1,
+  "started_at_utc": "2026-10-21T13:16:41.102924+00:00",
+  "frozen_commit": "0341a8c92acc3bb745a0c25af9095a5672efea48",
+  "worktree_status_at_start": "",
+  "config_sha256": "aebe71ff750e6b46ee646f8f6c11a1afa5f5aeaa8fb18e6324caced986c96064",
+  "prompt_sha256": "1d72b8b8afde082063d2d63618c23a2510d6e0068f94cc09264f1f5963807357",
+  "input_files": [
+    "accuracy/crops/south_600_aisle.jpg",
+    "research/vehicle_memory/experiments/dualscale_v1/inputs/south_600_far.jpg"
+  ],
+  "input_sha256": [
+    "32a41e95620f5e4cb39c5deff8c9cc4c9e452a633631ca9eca2049e69bbac3d7",
+    "56c1eb82897f3642d1bab6e138f0288df51d0e897d67e64b34cc0731dc087a7b"
+  ],
+  "status_code": 200,
+  "latency_s": 19.917,
+  "ok": true,
+  "usage": {
+    "completion_tokens": 2489,
+    "prompt_tokens": 3209,
+    "total_tokens": 5698,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1729
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 2, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"local_id\": \"v1\",\n      \"bbox_global\": [0.46, 0.66, 0.69, 0.88],\n      \"evidence_views\": [\"global_only\"],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"identity_clues\": \"White cab with black text '东风商用车', black grille, yellow license plate, Dongfeng logo\",\n      \"far_detail_clue\": \"\",\n      \"evidence\": \"Located in lower central area of Figure1, within count range, independent rigid truck, no overlap with other vehicles\",\n      \"uncertain\": false\n    },\n    {\n      \"local_id\": \"v2\",\n      \"bbox_global\": [0.45, 0.28, 0.58, 0.52],\n      \"evidence_views\": [\"global_and_far_detail\"],\n      \"vehicle_type\": \"tractor_trailer\",\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"identity_clues\": \"Red cab, gray metal cargo trailer, red cab front with white markings\",\n      \"far_detail_clue\": \"Figure2 confirms the red cab and gray trailer match Figure1's vehicle\",\n      \"evidence\": \"Between v1 and v3, independent tractor-trailer, separate from adjacent vehicles\",\n      \"uncertain\": false\n    },\n    {\n      \"local_id\": \"v3\",\n      \"bbox_global\": [0.34, 0.24, 0.44, 0.36],\n      \"evidence_views\": [\"global_and_far_detail\"],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"identity_clues\": \"Red cab, blue cover on cargo area, yellow license plate\",\n      \"far_detail_clue\": \"Figure2 shows the red cab with blue cover matches Figure1's vehicle\",\n      \"evidence\": \"Between v2 and v4, independent rigid truck, separate from adjacent vehicles\",\n      \"uncertain\": false\n    },\n    {\n      \"local_id\": \"v4\",\n      \"bbox_global\": [0.43, 0.11, 0.53, 0.26],\n      \"evidence_views\": [\"global_and_far_detail\"],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"medium\",\n      \"visible\": \"partial\",\n      \"identity_clues\": \"Red cab, red cargo box, dark markings on cargo\",\n      \"far_detail_clue\": \"Figure2 shows the far red truck matches Figure1's vehicle\",\n      \"evidence\": \"At top of Figure1, independent rigid truck, within count range\",\n      \"uncertain\": false\n    }\n  ],\n  \"dedupe_notes\": \"All four vehicles are unique, no duplicates between Figure1 and Figure2, each counted once\",\n  \"scene_notes\": \"Indoor exhibition hall,撤展现场, multiple trucks parked along central aisle\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 4,
+      "large": 2,
+      "medium": 2,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "local_id": "v1",
+        "bbox_global": [
+          0.46,
+          0.66,
+          0.69,
+          0.88
+        ],
+        "evidence_views": [
+          "global_only"
+        ],
+        "vehicle_type": "rigid_truck",
+        "size": "large",
+        "visible": "full",
+        "identity_clues": "White cab with black text '东风商用车', black grille, yellow license plate, Dongfeng logo",
+        "far_detail_clue": "",
+        "evidence": "Located in lower central area of Figure1, within count range, independent rigid truck, no overlap with other vehicles",
+        "uncertain": false
+      },
+      {
+        "local_id": "v2",
+        "bbox_global": [
+          0.45,
+          0.28,
+          0.58,
+          0.52
+        ],
+        "evidence_views": [
+          "global_and_far_detail"
+        ],
+        "vehicle_type": "tractor_trailer",
+        "size": "large",
+        "visible": "partial_side",
+        "identity_clues": "Red cab, gray metal cargo trailer, red cab front with white markings",
+        "far_detail_clue": "Figure2 confirms the red cab and gray trailer match Figure1's vehicle",
+        "evidence": "Between v1 and v3, independent tractor-trailer, separate from adjacent vehicles",
+        "uncertain": false
+      },
+      {
+        "local_id": "v3",
+        "bbox_global": [
+          0.34,
+          0.24,
+          0.44,
+          0.36
+        ],
+        "evidence_views": [
+          "global_and_far_detail"
+        ],
+        "vehicle_type": "rigid_truck",
+        "size": "medium",
+        "visible": "full",
+        "identity_clues": "Red cab, blue cover on cargo area, yellow license plate",
+        "far_detail_clue": "Figure2 shows the red cab with blue cover matches Figure1's vehicle",
+        "evidence": "Between v2 and v4, independent rigid truck, separate from adjacent vehicles",
+        "uncertain": false
+      },
+      {
+        "local_id": "v4",
+        "bbox_global": [
+          0.43,
+          0.11,
+          0.53,
+          0.26
+        ],
+        "evidence_views": [
+          "global_and_far_detail"
+        ],
+        "vehicle_type": "rigid_truck",
+        "size": "medium",
+        "visible": "partial",
+        "identity_clues": "Red cab, red cargo box, dark markings on cargo",
+        "far_detail_clue": "Figure2 shows the far red truck matches Figure1's vehicle",
+        "evidence": "At top of Figure1, independent rigid truck, within count range",
+        "uncertain": false
+      }
+    ],
+    "dedupe_notes": "All four vehicles are unique, no duplicates between Figure1 and Figure2, each counted once",
+    "scene_notes": "Indoor exhibition hall,撤展现场, multiple trucks parked along central aisle",
+    "uncertain_reasons": []
+  }
+}

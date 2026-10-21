@@ -1,0 +1,131 @@
+{
+  "schema": "truckflow-vision-experiment-run-v1",
+  "experiment_id": "dualscale_v1",
+  "sample_id": "south_1800",
+  "mechanism": "one model call with the current global aisle view plus a fixed same-frame far-detail view",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "temperature": 0,
+  "max_tokens": 5000,
+  "attempts": 1,
+  "retry_policy": "none; every HTTP attempt counts",
+  "request_count": 1,
+  "started_at_utc": "2026-10-21T13:18:08.336721+00:00",
+  "frozen_commit": "0341a8c92acc3bb745a0c25af9095a5672efea48",
+  "worktree_status_at_start": "",
+  "config_sha256": "aebe71ff750e6b46ee646f8f6c11a1afa5f5aeaa8fb18e6324caced986c96064",
+  "prompt_sha256": "1d72b8b8afde082063d2d63618c23a2510d6e0068f94cc09264f1f5963807357",
+  "input_files": [
+    "accuracy/crops/south_1800_aisle.jpg",
+    "research/vehicle_memory/experiments/dualscale_v1/inputs/south_1800_far.jpg"
+  ],
+  "input_sha256": [
+    "26deb1af7e5dd15b6baa4f684f821135dacc734516aa3cd1d7754e9d5f530c7f",
+    "cb785e577e892d9a8050e076307e2cbb9dadb7a51c362c3c5ed19c31df39a231"
+  ],
+  "status_code": 200,
+  "latency_s": 19.153,
+  "ok": true,
+  "usage": {
+    "completion_tokens": 2112,
+    "prompt_tokens": 3209,
+    "total_tokens": 5321,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1385
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 4, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"local_id\": \"v1\",\n      \"bbox_global\": [0.47, 0.46, 0.67, 0.88],\n      \"evidence_views\": [\"global_only\"],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"identity_clues\": \"白色车头，印有“东风商用车”字样，黄色车牌，完整可见\",\n      \"far_detail_clue\": \"\",\n      \"evidence\": \"位于图1中央下方，是独立的完整货车，在计数范围内\",\n      \"uncertain\": false\n    },\n    {\n      \"local_id\": \"v2\",\n      \"bbox_global\": [0.44, 0.28, 0.57, 0.54],\n      \"evidence_views\": [\"global_only\"],\n      \"vehicle_type\": \"tractor_trailer\",\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"identity_clues\": \"红色车头带有白色标识，灰色货厢，车头完整可见，货厢部分可见\",\n      \"far_detail_clue\": \"\",\n      \"evidence\": \"位于图1中央，是独立的货车，在计数范围内\",\n      \"uncertain\": false\n    },\n    {\n      \"local_id\": \"v3\",\n      \"bbox_global\": [0.34, 0.24, 0.45, 0.36],\n      \"evidence_views\": [\"global_only\"],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"identity_clues\": \"红色车头，车头有标识，完整可见\",\n      \"far_detail_clue\": \"\",\n      \"evidence\": \"位于图1中央偏左，是独立的完整货车，在计数范围内\",\n      \"uncertain\": false\n    },\n    {\n      \"local_id\": \"v4\",\n      \"bbox_global\": [0.43, 0.12, 0.52, 0.24],\n      \"evidence_views\": [\"global_and_far_detail\"],\n      \"vehicle_type\": \"tractor_trailer\",\n      \"size\": \"large\",\n      \"visible\": \"partial_front\",\n      \"identity_clues\": \"红色车头，棕色货厢，车头部分可见\",\n      \"far_detail_clue\": \"图2确认该远端车辆的位置和外观，与图1对应\",\n      \"evidence\": \"位于图1最上方，是独立的货车，在计数范围内，图2补充细节确认\",\n      \"uncertain\": false\n    }\n  ],\n  \"dedupe_notes\": \"四辆货车均在图1中唯一识别，图2仅补充远端车辆v4的细节，无重复计数\",\n  \"scene_notes\": \"展会撤展现场，中央通道内有四辆独立货车\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 4,
+      "large": 4,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "local_id": "v1",
+        "bbox_global": [
+          0.47,
+          0.46,
+          0.67,
+          0.88
+        ],
+        "evidence_views": [
+          "global_only"
+        ],
+        "vehicle_type": "rigid_truck",
+        "size": "large",
+        "visible": "full",
+        "identity_clues": "白色车头，印有“东风商用车”字样，黄色车牌，完整可见",
+        "far_detail_clue": "",
+        "evidence": "位于图1中央下方，是独立的完整货车，在计数范围内",
+        "uncertain": false
+      },
+      {
+        "local_id": "v2",
+        "bbox_global": [
+          0.44,
+          0.28,
+          0.57,
+          0.54
+        ],
+        "evidence_views": [
+          "global_only"
+        ],
+        "vehicle_type": "tractor_trailer",
+        "size": "large",
+        "visible": "partial_side",
+        "identity_clues": "红色车头带有白色标识，灰色货厢，车头完整可见，货厢部分可见",
+        "far_detail_clue": "",
+        "evidence": "位于图1中央，是独立的货车，在计数范围内",
+        "uncertain": false
+      },
+      {
+        "local_id": "v3",
+        "bbox_global": [
+          0.34,
+          0.24,
+          0.45,
+          0.36
+        ],
+        "evidence_views": [
+          "global_only"
+        ],
+        "vehicle_type": "rigid_truck",
+        "size": "large",
+        "visible": "full",
+        "identity_clues": "红色车头，车头有标识，完整可见",
+        "far_detail_clue": "",
+        "evidence": "位于图1中央偏左，是独立的完整货车，在计数范围内",
+        "uncertain": false
+      },
+      {
+        "local_id": "v4",
+        "bbox_global": [
+          0.43,
+          0.12,
+          0.52,
+          0.24
+        ],
+        "evidence_views": [
+          "global_and_far_detail"
+        ],
+        "vehicle_type": "tractor_trailer",
+        "size": "large",
+        "visible": "partial_front",
+        "identity_clues": "红色车头，棕色货厢，车头部分可见",
+        "far_detail_clue": "图2确认该远端车辆的位置和外观，与图1对应",
+        "evidence": "位于图1最上方，是独立的货车，在计数范围内，图2补充细节确认",
+        "uncertain": false
+      }
+    ],
+    "dedupe_notes": "四辆货车均在图1中唯一识别，图2仅补充远端车辆v4的细节，无重复计数",
+    "scene_notes": "展会撤展现场，中央通道内有四辆独立货车",
+    "uncertain_reasons": []
+  }
+}

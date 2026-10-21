@@ -1,0 +1,150 @@
+{
+  "schema": "truckflow-vision-experiment-run-v1",
+  "experiment_id": "dualscale_v1",
+  "sample_id": "south_1200",
+  "mechanism": "one model call with the current global aisle view plus a fixed same-frame far-detail view",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "temperature": 0,
+  "max_tokens": 5000,
+  "attempts": 1,
+  "retry_policy": "none; every HTTP attempt counts",
+  "request_count": 1,
+  "started_at_utc": "2026-10-21T13:17:28.093114+00:00",
+  "frozen_commit": "0341a8c92acc3bb745a0c25af9095a5672efea48",
+  "worktree_status_at_start": "",
+  "config_sha256": "aebe71ff750e6b46ee646f8f6c11a1afa5f5aeaa8fb18e6324caced986c96064",
+  "prompt_sha256": "1d72b8b8afde082063d2d63618c23a2510d6e0068f94cc09264f1f5963807357",
+  "input_files": [
+    "accuracy/crops/south_1200_aisle.jpg",
+    "research/vehicle_memory/experiments/dualscale_v1/inputs/south_1200_far.jpg"
+  ],
+  "input_sha256": [
+    "9b1e5e54d55d1197598b070647f65b25c20d57cbcb7b0d841ba4aeac97d5161a",
+    "dd2f95bbc70e6a41627ed9cf2c2833fba2809fa9e5fa6ddfda8c0ea135a92af0"
+  ],
+  "status_code": 200,
+  "latency_s": 20.527,
+  "ok": true,
+  "usage": {
+    "completion_tokens": 2638,
+    "prompt_tokens": 3209,
+    "total_tokens": 5847,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1754
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 5, \"large\": 4, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"local_id\": \"v1\",\n      \"bbox_global\": [0.48, 0.69, 0.67, 0.89],\n      \"evidence_views\": [\"global_only\"],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"identity_clues\": \"white body, '东风商用车' text on front, yellow helmet inside cab\",\n      \"far_detail_clue\": \"\",\n      \"evidence\": \"Independent rigid truck within global count range, present only in image1\",\n      \"uncertain\": false\n    },\n    {\n      \"local_id\": \"v2\",\n      \"bbox_global\": [0.45, 0.29, 0.59, 0.52],\n      \"evidence_views\": [\"global_and_far_detail\"],\n      \"vehicle_type\": \"tractor_trailer\",\n      \"size\": \"large\",\n      \"visible\": \"partial_front\",\n      \"identity_clues\": \"red tractor cab, gray rectangular trailer, white markings on cab\",\n      \"far_detail_clue\": \"Confirms red cab and gray trailer structure from image2\",\n      \"evidence\": \"Independent tractor-trailer within global count range, present in both images\",\n      \"uncertain\": false\n    },\n    {\n      \"local_id\": \"v3\",\n      \"bbox_global\": [0.35, 0.25, 0.47, 0.37],\n      \"evidence_views\": [\"global_and_far_detail\"],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"visible\": \"full_front\",\n      \"identity_clues\": \"red body, front grille, text on top of cab\",\n      \"far_detail_clue\": \"Confirms red truck front details from image2\",\n      \"evidence\": \"Independent rigid truck within global count range, present in both images\",\n      \"uncertain\": false\n    },\n    {\n      \"local_id\": \"v4\",\n      \"bbox_global\": [0.44, 0.13, 0.55, 0.27],\n      \"evidence_views\": [\"global_and_far_detail\"],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"visible\": \"partial_front\",\n      \"identity_clues\": \"red cab, dark trailer, text on front\",\n      \"far_detail_clue\": \"Confirms far red truck front from image2\",\n      \"evidence\": \"Independent rigid truck within global count range, present in both images\",\n      \"uncertain\": false\n    },\n    {\n      \"local_id\": \"v5\",\n      \"bbox_global\": [0.54, 0.88, 0.78, 0.99],\n      \"evidence_views\": [\"global_only\"],\n      \"vehicle_type\": \"trailer_only\",\n      \"size\": \"medium\",\n      \"visible\": \"partial_side\",\n      \"identity_clues\": \"red open cargo area, metal frame, no attached cab\",\n      \"far_detail_clue\": \"\",\n      \"evidence\": \"Independent trailer with own chassis within global count range, present only in image1\",\n      \"uncertain\": false\n    }\n  ],\n  \"dedupe_notes\": \"The three trucks (v2, v3, v4) appear in both images, counted once; v1 and v5 only exist in image1, no duplication\",\n  \"scene_notes\": \"Exhibition hall dismantling site, with booth structures and workers around\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 5,
+      "large": 4,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "local_id": "v1",
+        "bbox_global": [
+          0.48,
+          0.69,
+          0.67,
+          0.89
+        ],
+        "evidence_views": [
+          "global_only"
+        ],
+        "vehicle_type": "rigid_truck",
+        "size": "large",
+        "visible": "full",
+        "identity_clues": "white body, '东风商用车' text on front, yellow helmet inside cab",
+        "far_detail_clue": "",
+        "evidence": "Independent rigid truck within global count range, present only in image1",
+        "uncertain": false
+      },
+      {
+        "local_id": "v2",
+        "bbox_global": [
+          0.45,
+          0.29,
+          0.59,
+          0.52
+        ],
+        "evidence_views": [
+          "global_and_far_detail"
+        ],
+        "vehicle_type": "tractor_trailer",
+        "size": "large",
+        "visible": "partial_front",
+        "identity_clues": "red tractor cab, gray rectangular trailer, white markings on cab",
+        "far_detail_clue": "Confirms red cab and gray trailer structure from image2",
+        "evidence": "Independent tractor-trailer within global count range, present in both images",
+        "uncertain": false
+      },
+      {
+        "local_id": "v3",
+        "bbox_global": [
+          0.35,
+          0.25,
+          0.47,
+          0.37
+        ],
+        "evidence_views": [
+          "global_and_far_detail"
+        ],
+        "vehicle_type": "rigid_truck",
+        "size": "large",
+        "visible": "full_front",
+        "identity_clues": "red body, front grille, text on top of cab",
+        "far_detail_clue": "Confirms red truck front details from image2",
+        "evidence": "Independent rigid truck within global count range, present in both images",
+        "uncertain": false
+      },
+      {
+        "local_id": "v4",
+        "bbox_global": [
+          0.44,
+          0.13,
+          0.55,
+          0.27
+        ],
+        "evidence_views": [
+          "global_and_far_detail"
+        ],
+        "vehicle_type": "rigid_truck",
+        "size": "large",
+        "visible": "partial_front",
+        "identity_clues": "red cab, dark trailer, text on front",
+        "far_detail_clue": "Confirms far red truck front from image2",
+        "evidence": "Independent rigid truck within global count range, present in both images",
+        "uncertain": false
+      },
+      {
+        "local_id": "v5",
+        "bbox_global": [
+          0.54,
+          0.88,
+          0.78,
+          0.99
+        ],
+        "evidence_views": [
+          "global_only"
+        ],
+        "vehicle_type": "trailer_only",
+        "size": "medium",
+        "visible": "partial_side",
+        "identity_clues": "red open cargo area, metal frame, no attached cab",
+        "far_detail_clue": "",
+        "evidence": "Independent trailer with own chassis within global count range, present only in image1",
+        "uncertain": false
+      }
+    ],
+    "dedupe_notes": "The three trucks (v2, v3, v4) appear in both images, counted once; v1 and v5 only exist in image1, no duplication",
+    "scene_notes": "Exhibition hall dismantling site, with booth structures and workers around",
+    "uncertain_reasons": []
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schema": "truckflow-clean-run-set-v1",
+  "view": "aisle",
+  "source_run_directory": "accuracy/runs/aisle_doubao",
+  "sample_count": 20,
+  "samples_per_view": 1,
+  "rejected_views": [
+    "grid_aisle",
+    "grid_grid_aisle"
+  ],
+  "copied_successes": 19,
+  "rerun_samples": [
+    "south_1200"
+  ],
+  "crop_geometry": {
+    "source_image_size": [
+      1280,
+      960
+    ],
+    "crop_pixels": [
+      350,
+      0,
+      870,
+      960
+    ],
+    "crop_width": 520,
+    "scale": 2,
+    "output_size": [
+      1040,
+      1920
+    ]
+  },
+  "south_1200_source_failure": {
+    "model": "doubao",
+    "model_id": "ep-20260828174616-dthpx",
+    "ok": false,
+    "attempts": 1,
+    "latency_s": 150.5,
+    "error": "ProxyError: HTTPSConnectionPool(host='ark.cn-beijing.volces.com', port=443): Max retries exceeded with url: /api/v3/chat/completions (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
+  },
+  "south_1200_rerun": {
+    "model": "doubao",
+    "model_id": "ep-20260828174616-dthpx",
+    "ok": true,
+    "attempts": 1,
+    "latency_s": 13.96,
+    "predicted_total": 5,
+    "command": "python accuracy/model_probe.py accuracy/crops/south_1200_aisle.jpg --models doubao --out accuracy/runs/aisle_clean/south_1200_aisle.json --max-tokens 3000"
+  },
+  "notes": [
+    "The 19 successful files are byte-for-byte copies of the pure *_aisle.json runs.",
+    "The grid_aisle and grid_grid_aisle files are deliberately excluded.",
+    "eval_clean.py ignores files beginning with an underscore; this provenance file is not a sample."
+  ]
+}

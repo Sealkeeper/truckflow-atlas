@@ -1,0 +1,179 @@
+{
+  "metrics": {
+    "decisions": 16,
+    "exact": 4,
+    "exact_rate": 0.25,
+    "tp": 2,
+    "fp": 0,
+    "fn": 6,
+    "tn": 2,
+    "precision_committed_yes": 1.0,
+    "recall_committed_yes": 0.25,
+    "review_count": 16,
+    "review_rate": 1.0,
+    "latency_s_sum": 239.898,
+    "total_tokens": 29701
+  },
+  "rows": [
+    {
+      "case": "t1200_blue_vs_far_red",
+      "model": "aibox",
+      "gold": "no",
+      "answer": "no",
+      "exact": true,
+      "review": true,
+      "latency_s": 8.06,
+      "total_tokens": 1190
+    },
+    {
+      "case": "t1200_blue_vs_far_red",
+      "model": "doubao",
+      "gold": "no",
+      "answer": "uncertain",
+      "exact": false,
+      "review": true,
+      "latency_s": 7.116,
+      "total_tokens": 2125
+    },
+    {
+      "case": "t1200_red_positive",
+      "model": "aibox",
+      "gold": "yes",
+      "answer": "no",
+      "exact": false,
+      "review": true,
+      "latency_s": 11.649,
+      "total_tokens": 1218
+    },
+    {
+      "case": "t1200_red_positive",
+      "model": "doubao",
+      "gold": "yes",
+      "answer": "uncertain",
+      "exact": false,
+      "review": true,
+      "latency_s": 12.62,
+      "total_tokens": 2630
+    },
+    {
+      "case": "t1200_red_vs_red_cab",
+      "model": "aibox",
+      "gold": "no",
+      "answer": "uncertain",
+      "exact": false,
+      "review": true,
+      "latency_s": 26.497,
+      "total_tokens": 1156
+    },
+    {
+      "case": "t1200_red_vs_red_cab",
+      "model": "doubao",
+      "gold": "no",
+      "answer": "uncertain",
+      "exact": false,
+      "review": true,
+      "latency_s": 8.484,
+      "total_tokens": 2257
+    },
+    {
+      "case": "t1200_white_positive",
+      "model": "aibox",
+      "gold": "yes",
+      "answer": "uncertain",
+      "exact": false,
+      "review": true,
+      "latency_s": 23.316,
+      "total_tokens": 1188
+    },
+    {
+      "case": "t1200_white_positive",
+      "model": "doubao",
+      "gold": "yes",
+      "answer": "yes",
+      "exact": true,
+      "review": true,
+      "latency_s": 11.002,
+      "total_tokens": 2393
+    },
+    {
+      "case": "t600_blue_vs_far_red",
+      "model": "aibox",
+      "gold": "no",
+      "answer": "no",
+      "exact": true,
+      "review": true,
+      "latency_s": 30.862,
+      "total_tokens": 1173
+    },
+    {
+      "case": "t600_blue_vs_far_red",
+      "model": "doubao",
+      "gold": "no",
+      "answer": "uncertain",
+      "exact": false,
+      "review": true,
+      "latency_s": 8.298,
+      "total_tokens": 2235
+    },
+    {
+      "case": "t600_blue_vs_red_cab",
+      "model": "aibox",
+      "gold": "no",
+      "answer": "uncertain",
+      "exact": false,
+      "review": true,
+      "latency_s": 8.662,
+      "total_tokens": 1237
+    },
+    {
+      "case": "t600_blue_vs_red_cab",
+      "model": "doubao",
+      "gold": "no",
+      "answer": "uncertain",
+      "exact": false,
+      "review": true,
+      "latency_s": 13.991,
+      "total_tokens": 2498
+    },
+    {
+      "case": "t600_red_positive",
+      "model": "aibox",
+      "gold": "yes",
+      "answer": "uncertain",
+      "exact": false,
+      "review": true,
+      "latency_s": 11.602,
+      "total_tokens": 1273
+    },
+    {
+      "case": "t600_red_positive",
+      "model": "doubao",
+      "gold": "yes",
+      "answer": "uncertain",
+      "exact": false,
+      "review": true,
+      "latency_s": 16.329,
+      "total_tokens": 2987
+    },
+    {
+      "case": "t600_white_positive",
+      "model": "aibox",
+      "gold": "yes",
+      "answer": "uncertain",
+      "exact": false,
+      "review": true,
+      "latency_s": 26.084,
+      "total_tokens": 1157
+    },
+    {
+      "case": "t600_white_positive",
+      "model": "doubao",
+      "gold": "yes",
+      "answer": "yes",
+      "exact": true,
+      "review": true,
+      "latency_s": 15.326,
+      "total_tokens": 2984
+    }
+  ]
+}

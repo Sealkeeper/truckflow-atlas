@@ -1,0 +1,112 @@
+{
+  "schema": "truckflow-vision-experiment-run-v1",
+  "experiment_id": "dualscale_v1",
+  "sample_id": "north_2600",
+  "mechanism": "one model call with the current global aisle view plus a fixed same-frame far-detail view",
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "temperature": 0,
+  "max_tokens": 5000,
+  "attempts": 1,
+  "retry_policy": "none; every HTTP attempt counts",
+  "request_count": 1,
+  "started_at_utc": "2026-10-21T13:18:50.047431+00:00",
+  "frozen_commit": "0341a8c92acc3bb745a0c25af9095a5672efea48",
+  "worktree_status_at_start": "",
+  "config_sha256": "aebe71ff750e6b46ee646f8f6c11a1afa5f5aeaa8fb18e6324caced986c96064",
+  "prompt_sha256": "1d72b8b8afde082063d2d63618c23a2510d6e0068f94cc09264f1f5963807357",
+  "input_files": [
+    "accuracy/crops/north_2600_aisle.jpg",
+    "research/vehicle_memory/experiments/dualscale_v1/inputs/north_2600_far.jpg"
+  ],
+  "input_sha256": [
+    "3e5e42b9fbed905f751defcbbdeecf7f62686dec44677f586126b7619bdeec22",
+    "acdcf18111f76d1c670528890eb6dd68052a51585912bc93f86fd7c69f8de2b9"
+  ],
+  "status_code": 200,
+  "latency_s": 18.717,
+  "ok": true,
+  "usage": {
+    "completion_tokens": 2334,
+    "prompt_tokens": 3209,
+    "total_tokens": 5543,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1749
+    }
+  },
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 1, \"medium\": 1, \"small\": 1, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"local_id\": \"v1\",\n      \"bbox_global\": [0.31, 0.37, 0.54, 0.68],\n      \"evidence_views\": [\"global_and_far_detail\"],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"identity_clues\": \"红色集装箱，车尾有粤T73778字样，黑色车尾带黄色标识\",\n      \"far_detail_clue\": \"图2显示该集装箱的顶部，确认是同一车辆\",\n      \"evidence\": \"位于图1中间通道，独立的集装箱货车，在计数范围内\",\n      \"uncertain\": false\n    },\n    {\n      \"local_id\": \"v2\",\n      \"bbox_global\": [0.16, 0.84, 0.48, 0.99],\n      \"evidence_views\": [\"global_only\"],\n      \"vehicle_type\": \"rigid_truck\",\n      \"size\": \"medium\",\n      \"visible\": \"partial_top\",\n      \"identity_clues\": \"红色货厢，顶部放置有蓝色和白色物品，位于图1底部\",\n      \"far_detail_clue\": \"\",\n      \"evidence\": \"位于图1底部，独立的货车，在计数范围内\",\n      \"uncertain\": false\n    },\n    {\n      \"local_id\": \"v3\",\n      \"bbox_global\": [0.56, 0.11, 0.64, 0.15],\n      \"evidence_views\": [\"global_and_far_detail\"],\n      \"vehicle_type\": \"tractor_trailer\",\n      \"size\": \"small\",\n      \"visible\": \"partial_rear\",\n      \"identity_clues\": \"远处的货车，有两个红色尾灯，位于图1通道尽头\",\n      \"far_detail_clue\": \"图2显示该货车的尾灯，确认是同一车辆\",\n      \"evidence\": \"位于图1通道尽头，独立的货车，在计数范围内\",\n      \"uncertain\": false\n    }\n  ],\n  \"dedupe_notes\": \"所有车辆均在两张图中对应，无重复目标，各计一次\",\n  \"scene_notes\": \"展会撤展现场，通道内有工作人员，两侧为展位结构\",\n  \"uncertain_reasons\": []\n}",
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 1,
+      "medium": 1,
+      "small": 1,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "local_id": "v1",
+        "bbox_global": [
+          0.31,
+          0.37,
+          0.54,
+          0.68
+        ],
+        "evidence_views": [
+          "global_and_far_detail"
+        ],
+        "vehicle_type": "rigid_truck",
+        "size": "large",
+        "visible": "full",
+        "identity_clues": "红色集装箱，车尾有粤T73778字样，黑色车尾带黄色标识",
+        "far_detail_clue": "图2显示该集装箱的顶部，确认是同一车辆",
+        "evidence": "位于图1中间通道，独立的集装箱货车，在计数范围内",
+        "uncertain": false
+      },
+      {
+        "local_id": "v2",
+        "bbox_global": [
+          0.16,
+          0.84,
+          0.48,
+          0.99
+        ],
+        "evidence_views": [
+          "global_only"
+        ],
+        "vehicle_type": "rigid_truck",
+        "size": "medium",
+        "visible": "partial_top",
+        "identity_clues": "红色货厢，顶部放置有蓝色和白色物品，位于图1底部",
+        "far_detail_clue": "",
+        "evidence": "位于图1底部，独立的货车，在计数范围内",
+        "uncertain": false
+      },
+      {
+        "local_id": "v3",
+        "bbox_global": [
+          0.56,
+          0.11,
+          0.64,
+          0.15
+        ],
+        "evidence_views": [
+          "global_and_far_detail"
+        ],
+        "vehicle_type": "tractor_trailer",
+        "size": "small",
+        "visible": "partial_rear",
+        "identity_clues": "远处的货车，有两个红色尾灯，位于图1通道尽头",
+        "far_detail_clue": "图2显示该货车的尾灯，确认是同一车辆",
+        "evidence": "位于图1通道尽头，独立的货车，在计数范围内",
+        "uncertain": false
+      }
+    ],
+    "dedupe_notes": "所有车辆均在两张图中对应，无重复目标，各计一次",
+    "scene_notes": "展会撤展现场，通道内有工作人员，两侧为展位结构",
+    "uncertain_reasons": []
+  }
+}

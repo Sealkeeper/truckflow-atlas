@@ -1,0 +1,30 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\assets\\frames\\north_5.jpg",
+  "out": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\core_region_v1\\north_5_farzoom.jpg",
+  "source_size": [
+    1280,
+    960
+  ],
+  "core_normalized": [
+    0.33,
+    0.06,
+    0.65,
+    0.38
+  ],
+  "crop_normalized": [
+    0.30000000000000004,
+    0.03,
+    0.68,
+    0.41000000000000003
+  ],
+  "crop_pixels": [
+    384,
+    29,
+    870,
+    394
+  ],
+  "output_size": [
+    1800,
+    1352
+  ]
+}
