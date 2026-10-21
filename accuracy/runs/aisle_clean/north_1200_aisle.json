@@ -1,0 +1,79 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_1200_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 18.87,
+      "usage": {
+        "completion_tokens": 1980,
+        "prompt_tokens": 1776,
+        "total_tokens": 3756,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1513
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.16,
+              0.6,
+              0.53,
+              0.99
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "白色波纹状货厢，车身带有模糊字符，朝向画面下方，位于画面左下方",
+            "evidence": "画面左下方，完整可见的大型厢式货车，无明显遮挡",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.31,
+              0.35,
+              0.53,
+              0.62
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色封闭货厢，底部带有黄色反光标识，下方连接白色车头，位于画面中间偏左",
+            "evidence": "画面中间偏左，货厢完整，车头部分可见，为同一辆大型货车",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.42,
+              0.14,
+              0.55,
+              0.31
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "蓝色平顶货厢，位于画面上方中间，被展台部分遮挡，无可见车头",
+            "evidence": "画面上方中间，仅可见货厢部分，属于大型挂车",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面中共3辆可见大型货车，其中1辆完整可见，1辆货厢完整车头部分可见，1辆仅可见货厢（挂车），无被完全遮挡或无法确定的车辆",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.16, 0.60, 0.53, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹状货厢，车身带有模糊字符，朝向画面下方，位于画面左下方\",\n      \"evidence\": \"画面左下方，完整可见的大型厢式货车，无明显遮挡\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.31, 0.35, 0.53, 0.62],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色封闭货厢，底部带有黄色反光标识，下方连接白色车头，位于画面中间偏左\",\n      \"evidence\": \"画面中间偏左，货厢完整，车头部分可见，为同一辆大型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.42, 0.14, 0.55, 0.31],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色平顶货厢，位于画面上方中间，被展台部分遮挡，无可见车头\",\n      \"evidence\": \"画面上方中间，仅可见货厢部分，属于大型挂车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中共3辆可见大型货车，其中1辆完整可见，1辆货厢完整车头部分可见，1辆仅可见货厢（挂车），无被完全遮挡或无法确定的车辆\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_1200_aisle.jpg"
+    }
+  ]
+}

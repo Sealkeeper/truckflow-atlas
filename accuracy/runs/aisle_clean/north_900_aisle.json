@@ -1,0 +1,79 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_900_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 19.2,
+      "usage": {
+        "completion_tokens": 2005,
+        "prompt_tokens": 1776,
+        "total_tokens": 3781,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1556
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 2,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.17,
+              0.61,
+              0.53,
+              0.99
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "白色波纹状厢式货厢，车身下部有模糊字符，朝向画面下方，位于左下方区域",
+            "evidence": "画面左下方完整可见的大型厢式货车，符合货车定义",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.32,
+              0.36,
+              0.54,
+              0.62
+            ],
+            "size": "large",
+            "visible": "partial_side",
+            "is_truck": true,
+            "identity_clues": "红色封闭货厢，货厢侧面有编号标识，朝向画面下方，位于中间通道左侧",
+            "evidence": "中间通道左侧的红色货厢车辆，货厢完整可见，属于货车范畴",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.43,
+              0.15,
+              0.55,
+              0.29
+            ],
+            "size": "medium",
+            "visible": "partial_top",
+            "is_truck": true,
+            "identity_clues": "蓝色顶棚的厢式货车，位于中间通道远端，周围有工作人员",
+            "evidence": "画面中间远处的蓝色顶车辆，可见部分车身，属于货车",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面内共3辆可见货车，均为不同位置的厢式货车，无完全遮挡或无法识别的车辆",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 2, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.17, 0.61, 0.53, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹状厢式货厢，车身下部有模糊字符，朝向画面下方，位于左下方区域\",\n      \"evidence\": \"画面左下方完整可见的大型厢式货车，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.32, 0.36, 0.54, 0.62],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色封闭货厢，货厢侧面有编号标识，朝向画面下方，位于中间通道左侧\",\n      \"evidence\": \"中间通道左侧的红色货厢车辆，货厢完整可见，属于货车范畴\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.43, 0.15, 0.55, 0.29],\n      \"size\": \"medium\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色顶棚的厢式货车，位于中间通道远端，周围有工作人员\",\n      \"evidence\": \"画面中间远处的蓝色顶车辆，可见部分车身，属于货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面内共3辆可见货车，均为不同位置的厢式货车，无完全遮挡或无法识别的车辆\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_900_aisle.jpg"
+    }
+  ]
+}

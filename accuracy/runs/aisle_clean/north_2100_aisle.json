@@ -1,0 +1,65 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_2100_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 8.71,
+      "usage": {
+        "completion_tokens": 966,
+        "prompt_tokens": 1776,
+        "total_tokens": 2742,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 662
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.41,
+              0.25,
+              0.54,
+              0.45
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red metal enclosed cargo truck, rear-facing, central aisle position",
+            "evidence": "Heavy-duty truck with enclosed cargo area, no non-truck features present",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.17,
+              0.62,
+              0.51,
+              0.99
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Long white corrugated cargo container truck, left side of image",
+            "evidence": "Large cargo container mounted on a truck chassis, qualifies as heavy truck",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "Both trucks are fully visible with no significant occlusion; no other trucks present in the frame",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.41, 0.25, 0.54, 0.45],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red metal enclosed cargo truck, rear-facing, central aisle position\",\n      \"evidence\": \"Heavy-duty truck with enclosed cargo area, no non-truck features present\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.17, 0.62, 0.51, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Long white corrugated cargo container truck, left side of image\",\n      \"evidence\": \"Large cargo container mounted on a truck chassis, qualifies as heavy truck\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"Both trucks are fully visible with no significant occlusion; no other trucks present in the frame\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_2100_aisle.jpg"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_5_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 21.27,
+      "usage": {
+        "completion_tokens": 2159,
+        "prompt_tokens": 1776,
+        "total_tokens": 3935,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1629
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 4,
+          "large": 1,
+          "medium": 3,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.27,
+              0.5,
+              0.56,
+              0.9
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red cargo truck, rear marked with 'QL66002', facing away from the camera",
+            "evidence": "Fully visible large truck in lower central area of the image",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.4,
+              0.25,
+              0.55,
+              0.45
+            ],
+            "size": "medium",
+            "visible": "partial_side",
+            "is_truck": true,
+            "identity_clues": "Truck with blue roof, boxes placed on its platform",
+            "evidence": "Partial side view of a medium truck between lower red truck and upper trucks",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.43,
+              0.17,
+              0.54,
+              0.26
+            ],
+            "size": "medium",
+            "visible": "partial_top",
+            "is_truck": true,
+            "identity_clues": "Dark-colored truck located above the blue roof truck",
+            "evidence": "Partial top/rear view of a medium truck in upper central area",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.56,
+              0.11,
+              0.67,
+              0.25
+            ],
+            "size": "medium",
+            "visible": "partial_rear",
+            "is_truck": true,
+            "identity_clues": "Red truck at top rear, rear lights visible",
+            "evidence": "Partial rear view of a red truck in upper background",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "All trucks are in the central aisle of the exhibition hall, some partially visible due to distance or adjacent booth structures; no fully obscured trucks",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 1, \"medium\": 3, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.27, 0.5, 0.56, 0.9],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cargo truck, rear marked with 'QL66002', facing away from the camera\",\n      \"evidence\": \"Fully visible large truck in lower central area of the image\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.4, 0.25, 0.55, 0.45],\n      \"size\": \"medium\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Truck with blue roof, boxes placed on its platform\",\n      \"evidence\": \"Partial side view of a medium truck between lower red truck and upper trucks\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.43, 0.17, 0.54, 0.26],\n      \"size\": \"medium\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Dark-colored truck located above the blue roof truck\",\n      \"evidence\": \"Partial top/rear view of a medium truck in upper central area\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.56, 0.11, 0.67, 0.25],\n      \"size\": \"medium\",\n      \"visible\": \"partial_rear\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red truck at top rear, rear lights visible\",\n      \"evidence\": \"Partial rear view of a red truck in upper background\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All trucks are in the central aisle of the exhibition hall, some partially visible due to distance or adjacent booth structures; no fully obscured trucks\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_5_aisle.jpg"
+    }
+  ]
+}
