@@ -1,0 +1,125 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\all-sessions-can-see\\assets\\frames\\south_1200.jpg",
+  "prompt_version": "truck-count-v1",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 25.4,
+      "usage": {
+        "completion_tokens": 3237,
+        "prompt_tokens": 1773,
+        "total_tokens": 5010,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2578
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 5,
+          "large": 3,
+          "medium": 2,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.45,
+              0.6,
+              0.58,
+              0.88
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "白色车头，印有“东风商用车”字样，朝向画面下方，完整可见",
+            "evidence": "位于画面中间偏下的通道内，车头和货厢均清晰可见，为重型货车",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.45,
+              0.3,
+              0.53,
+              0.55
+            ],
+            "size": "large",
+            "visible": "partial_side",
+            "is_truck": true,
+            "identity_clues": "红色车头，灰色封闭半挂货厢，位于白色东风车正上方",
+            "evidence": "通道内的半挂货车，部分被上方展台钢结构遮挡，可见车头和部分货厢",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.41,
+              0.22,
+              0.46,
+              0.38
+            ],
+            "size": "medium",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色车头，货厢为蓝色，位于半挂货车上方的通道内",
+            "evidence": "通道内的中型货车，无明显遮挡，完整可见",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.45,
+              0.14,
+              0.49,
+              0.27
+            ],
+            "size": "medium",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色车头，棕色货厢，位于通道最远处",
+            "evidence": "通道尽头的中型货车，完整可见",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.48,
+              0.85,
+              0.59,
+              1.0
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "红色空货厢，无车头，位于画面下方中间",
+            "evidence": "单独放置的挂车，无连接车头，属于货车范畴",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "展会撤换展现场，通道内排列多辆货车，部分车辆被上方展台钢结构遮挡，下方可见单独的空挂车",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 5, \"large\": 3, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.45, 0.6, 0.58, 0.88],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色车头，印有“东风商用车”字样，朝向画面下方，完整可见\",\n      \"evidence\": \"位于画面中间偏下的通道内，车头和货厢均清晰可见，为重型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.3, 0.53, 0.55],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，灰色封闭半挂货厢，位于白色东风车正上方\",\n      \"evidence\": \"通道内的半挂货车，部分被上方展台钢结构遮挡，可见车头和部分货厢\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.41, 0.22, 0.46, 0.38],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，货厢为蓝色，位于半挂货车上方的通道内\",\n      \"evidence\": \"通道内的中型货车，无明显遮挡，完整可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.14, 0.49, 0.27],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，棕色货厢，位于通道最远处\",\n      \"evidence\": \"通道尽头的中型货车，完整可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.48, 0.85, 0.59, 1.0],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色空货厢，无车头，位于画面下方中间\",\n      \"evidence\": \"单独放置的挂车，无连接车头，属于货车范畴\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"展会撤换展现场，通道内排列多辆货车，部分车辆被上方展台钢结构遮挡，下方可见单独的空挂车\",\n  \"uncertain_reasons\": []\n}"
+    },
+    {
+      "model": "zhipu",
+      "model_id": "glm-4.7",
+      "ok": false,
+      "latency_s": 0.21,
+      "status": 400,
+      "error": "HTTPError: 400 Client Error: Bad Request for url: https://open.bigmodel.cn/api/paas/v4/chat/completions",
+      "response_text": "{\"error\":{\"code\":\"1210\",\"message\":\"messages.content.type 参数非法，取值范围 ['text']\"}}"
+    },
+    {
+      "model": "aibox",
+      "model_id": "glm-5.3",
+      "ok": false,
+      "latency_s": 0.18,
+      "status": 503,
+      "error": "HTTPError: 503 Server Error: Service Unavailable for url: https://aibox.richaibox.com:2078/v1/chat/completions",
+      "response_text": "{\"error\":{\"code\":\"model_not_found\",\"message\":\"No available channel for model glm-5.3 under group default (distributor) (request id: 202610210837096357535558268d9d60xoGHq0n)\",\"type\":\"new_api_error\"}}"
+    }
+  ]
+}

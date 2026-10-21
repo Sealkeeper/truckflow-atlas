@@ -1,0 +1,78 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\all-sessions-can-see\\assets\\frames\\north_600.jpg",
+  "prompt_version": "truck-count-v1",
+  "runs": [
+    {
+      "model": "aibox",
+      "model_id": "glm-5.3-flash",
+      "ok": true,
+      "latency_s": 30.5,
+      "usage": {
+        "prompt_tokens": 2067,
+        "total_tokens": 2620,
+        "completion_tokens": 553,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "image_tokens": 1610
+        },
+        "reasoning_tokens": 84
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.485,
+              0.315,
+              0.565,
+              0.6
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色重型货车/厢式货车，车尾朝向镜头，尾灯亮红光，位于主通道中央",
+            "evidence": "画面中央通道上整车可见，红色货厢与车尾清晰，尾灯发光",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.435,
+              0.235,
+              0.505,
+              0.4
+            ],
+            "size": "large",
+            "visible": "partial_side",
+            "is_truck": true,
+            "identity_clues": "蓝色集装箱式货厢，位于红色货车左后方，车头被遮挡",
+            "evidence": "通道左侧可见蓝色集装箱货厢，与红色货车非同一辆，车头部分被遮挡",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.345,
+              0.615,
+              0.495,
+              0.95
+            ],
+            "size": "large",
+            "visible": "partial_top",
+            "is_truck": true,
+            "identity_clues": "白色集装箱货厢，位于画面下方通道左侧，车头朝下被画面边缘截断",
+            "evidence": "画面底部可见白色长货厢顶部及侧面，比例符合大型集装箱货车，车头超出画面",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面为展馆撤展期，通道内还有一辆蓝色叉车（不计入）。红色货车位于通道中央，蓝色集装箱货车在其左后方，两者为不同车辆。白色货厢车仅露出货厢部分，车头在画面外。远处通道有人员和小型车辆，无法确认为货车，未计入。",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.485, 0.315, 0.565, 0.60],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重型货车/厢式货车，车尾朝向镜头，尾灯亮红光，位于主通道中央\",\n      \"evidence\": \"画面中央通道上整车可见，红色货厢与车尾清晰，尾灯发光\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.435, 0.235, 0.505, 0.40],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色集装箱式货厢，位于红色货车左后方，车头被遮挡\",\n      \"evidence\": \"通道左侧可见蓝色集装箱货厢，与红色货车非同一辆，车头部分被遮挡\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.345, 0.615, 0.495, 0.95],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色集装箱货厢，位于画面下方通道左侧，车头朝下被画面边缘截断\",\n      \"evidence\": \"画面底部可见白色长货厢顶部及侧面，比例符合大型集装箱货车，车头超出画面\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展馆撤展期，通道内还有一辆蓝色叉车（不计入）。红色货车位于通道中央，蓝色集装箱货车在其左后方，两者为不同车辆。白色货厢车仅露出货厢部分，车头在画面外。远处通道有人员和小型车辆，无法确认为货车，未计入。\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

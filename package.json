@@ -1,13 +1,14 @@
 {
-  "name": "truckflow-workspace-ui",
-  "version": "2.0.0",
+  "name": "truckflow-debug-experience",
   "private": true,
-  "description": "Static dual-camera truck counting workspace demo",
+  "version": "0.1.0",
   "scripts": {
-    "serve": "python -m http.server 4173 --bind 127.0.0.1",
+    "capture": "node debug/capture.mjs",
+    "serve": "node debug/capture.mjs --serve-only",
+    "ui:serve": "python -m http.server 4173 --bind 127.0.0.1",
     "ui:check": "node tools/ui-check.cjs"
   },
   "devDependencies": {
-    "playwright": "^1.64.1"
+    "playwright-core": "1.55.0"
   }
 }

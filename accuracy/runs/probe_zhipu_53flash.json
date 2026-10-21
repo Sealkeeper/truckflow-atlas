@@ -1,0 +1,15 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\all-sessions-can-see\\assets\\frames\\north_1200.jpg",
+  "prompt_version": "truck-count-v1",
+  "runs": [
+    {
+      "model": "zhipu",
+      "model_id": "glm-5.3-flash",
+      "ok": false,
+      "latency_s": 49.94,
+      "status": null,
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "response_text": ""
+    }
+  ]
+}

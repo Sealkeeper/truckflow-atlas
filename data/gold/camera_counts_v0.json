@@ -1,0 +1,43 @@
+{
+  "version": "camera-counts-v0",
+  "status": "manual-development-set",
+  "scope": "per-camera visible truck count; cross-camera physical identity is deliberately NOT merged here",
+  "source": "2025-10-19 21:59-22:43, A区天花北/南 sample frames",
+  "annotation_method": "full-resolution visual inspection with 0.1 normalized grid; 2x aisle crops for distant/occluded vehicles",
+  "count_definition": "Every distinct truck body visible in the camera image, including trailer-only when clearly separate; forklifts, cars, vans and people excluded. A tractor and its trailer count once.",
+  "review_required": [
+    "south_5: the far brown cargo body may be a trailer of the middle truck; counted as separate only because the two cargo bodies and cabs are spatially distinct.",
+    "All south frames: bottom-edge red cargo body may belong to the adjacent aisle rather than the counted corridor; corridor polygon must be confirmed by the user.",
+    "Boxes are not yet part of this gold file; do not report box IoU against it."
+  ],
+  "samples": [
+    {"camera": "north", "time": 5, "total": 3, "large": 3, "medium": 0, "small": 0, "review": false},
+    {"camera": "north", "time": 300, "total": 3, "large": 3, "medium": 0, "small": 0, "review": false},
+    {"camera": "north", "time": 600, "total": 4, "large": 4, "medium": 0, "small": 0, "review": false},
+    {"camera": "north", "time": 900, "total": 3, "large": 3, "medium": 0, "small": 0, "review": false},
+    {"camera": "north", "time": 1200, "total": 3, "large": 3, "medium": 0, "small": 0, "review": false},
+    {"camera": "north", "time": 1500, "total": 2, "large": 2, "medium": 0, "small": 0, "review": false},
+    {"camera": "north", "time": 1800, "total": 2, "large": 2, "medium": 0, "small": 0, "review": false},
+    {"camera": "north", "time": 2100, "total": 2, "large": 2, "medium": 0, "small": 0, "review": false},
+    {"camera": "north", "time": 2400, "total": 3, "large": 3, "medium": 0, "small": 0, "review": false},
+    {"camera": "north", "time": 2600, "total": 2, "large": 2, "medium": 0, "small": 0, "review": false},
+    {"camera": "south", "time": 5, "total": 3, "large": 2, "medium": 1, "small": 0, "review": true},
+    {"camera": "south", "time": 300, "total": 4, "large": 3, "medium": 1, "small": 0, "review": false},
+    {"camera": "south", "time": 600, "total": 5, "large": 3, "medium": 2, "small": 0, "review": true},
+    {"camera": "south", "time": 900, "total": 5, "large": 3, "medium": 2, "small": 0, "review": true},
+    {"camera": "south", "time": 1200, "total": 5, "large": 3, "medium": 2, "small": 0, "review": true},
+    {"camera": "south", "time": 1500, "total": 5, "large": 3, "medium": 2, "small": 0, "review": true},
+    {"camera": "south", "time": 1800, "total": 4, "large": 2, "medium": 2, "small": 0, "review": true},
+    {"camera": "south", "time": 2100, "total": 4, "large": 2, "medium": 2, "small": 0, "review": true},
+    {"camera": "south", "time": 2400, "total": 3, "large": 2, "medium": 1, "small": 0, "review": true},
+    {"camera": "south", "time": 2600, "total": 3, "large": 2, "medium": 1, "small": 0, "review": true}
+  ],
+  "confirmed_subset": {
+    "north_600": 4,
+    "north_1200": 3,
+    "south_600": 5,
+    "south_1200": 5,
+    "south_900": 5,
+    "north_1500": 2
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\all-sessions-can-see\\assets\\frames\\north_600.jpg",
+  "prompt_version": "truck-count-v1",
+  "runs": [
+    {
+      "model": "zhipu",
+      "model_id": "glm-4.5v",
+      "ok": true,
+      "latency_s": 88.74,
+      "usage": {
+        "completion_tokens": 2098,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1650
+        },
+        "prompt_tokens": 2034,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4132
+      },
+      "parsed": {
+        "counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.492,
+              0.325,
+              0.558,
+              0.59
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色厢式货车/集装箱半挂车，车尾正对镜头，双开门货厢，位于主通道中段",
+            "evidence": "画面中央偏上位置的红色大型车辆，具备典型重型厢式货车或集装箱车的长方体外形与比例，车尾灯及后门结构清晰可见，周围有工作人员进行装卸作业",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.348,
+              0.62,
+              0.485,
+              0.998
+            ],
+            "size": "large",
+            "visible": "partial_side",
+            "is_truck": true,
+            "identity_clues": "白色长条形厢式货柜/货车，纵向停放于通道近景处，左侧紧邻展位",
+            "evidence": "画面下方中央的白色长型物体，具有标准货车货厢或集装箱挂车的矩形截面与长度比例，表面有波纹板结构，旁侧有蓝色叉车配合作业，确认为货车本体或独立挂车",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "室内展馆撤展现场高角度俯拍，主通道狭窄，两辆货车呈前后纵向排列。红色货车位于中远景，白色货车位于近景并延伸至画面底边。通道两侧为展位桁架结构（可见KONIKA、CUORI、CHANGHONG等品牌标识）。画面中有叉车及多名工作人员，均不计入货车统计。",
+        "uncertain_reasons": []
+      },
+      "raw_text": "```json\n{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.492, 0.325, 0.558, 0.590],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色厢式货车/集装箱半挂车，车尾正对镜头，双开门货厢，位于主通道中段\",\n      \"evidence\": \"画面中央偏上位置的红色大型车辆，具备典型重型厢式货车或集装箱车的长方体外形与比例，车尾灯及后门结构清晰可见，周围有工作人员进行装卸作业\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.348, 0.620, 0.485, 0.998],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色长条形厢式货柜/货车，纵向停放于通道近景处，左侧紧邻展位\",\n      \"evidence\": \"画面下方中央的白色长型物体，具有标准货车货厢或集装箱挂车的矩形截面与长度比例，表面有波纹板结构，旁侧有蓝色叉车配合作业，确认为货车本体或独立挂车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"室内展馆撤展现场高角度俯拍，主通道狭窄，两辆货车呈前后纵向排列。红色货车位于中远景，白色货车位于近景并延伸至画面底边。通道两侧为展位桁架结构（可见KONIKA、CUORI、CHANGHONG等品牌标识）。画面中有叉车及多名工作人员，均不计入货车统计。\",\n  \"uncertain_reasons\": []\n}\n```"
+    }
+  ]
+}

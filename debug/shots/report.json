@@ -1,0 +1,107 @@
+{
+  "generatedAt": "2026-10-21T09:24:33.822Z",
+  "generatedAtLocal": "2026年10月21日 GMT+8 17:24:33",
+  "pageVersion": "debug-viewer@0.1.0",
+  "sourceUrl": "http://127.0.0.1:11025/debug/viewer/",
+  "chromePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "publicLiveDir": "D:\\File\\PROJECT\\codex\\codex-货车\\all-sessions-can-see\\assets\\live",
+  "screenshots": [
+    {
+      "name": "desktop",
+      "screenshotPath": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\debug_experience\\debug\\shots\\latest-desktop.png",
+      "interactions": {
+        "afterSampleClick": {
+          "time": "00:10:00",
+          "north": "4",
+          "south": "5",
+          "northFrame": "/assets/frames/north_600.jpg",
+          "southFrame": "/assets/frames/south_600.jpg"
+        },
+        "analysisMode": {
+          "activeTab": "分析画面",
+          "overlayDisplay": "flex",
+          "caption": "天花北 · 分析画面"
+        },
+        "resetToDefault": {
+          "time": "00:20:00",
+          "north": "3",
+          "south": "5",
+          "activeTab": "原画面"
+        }
+      },
+      "audit": {
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "document": {
+          "width": 1440,
+          "height": 1000,
+          "hasHorizontalScroll": false
+        },
+        "requiredElements": {
+          ".camera-workspace": true,
+          ".snapshot-card": true,
+          ".load-card": true,
+          ".timeline-panel": true,
+          "[data-camera='north'] [data-frame]": true,
+          "[data-camera='south'] [data-frame]": true,
+          ".analysis-empty": true
+        },
+        "counts": {
+          "north": "3",
+          "south": "5",
+          "load": "120"
+        },
+        "horizontalOverflow": [],
+        "clippedText": [],
+        "failedImages": [],
+        "consoleErrors": [],
+        "httpNotFounds": []
+      },
+      "outputSize": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "name": "mobile",
+      "screenshotPath": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\debug_experience\\debug\\shots\\latest-mobile.png",
+      "interactions": {},
+      "audit": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 1430,
+          "hasHorizontalScroll": false
+        },
+        "requiredElements": {
+          ".camera-workspace": true,
+          ".snapshot-card": true,
+          ".load-card": true,
+          ".timeline-panel": true,
+          "[data-camera='north'] [data-frame]": true,
+          "[data-camera='south'] [data-frame]": true,
+          ".analysis-empty": true
+        },
+        "counts": {
+          "north": "3",
+          "south": "5",
+          "load": "120"
+        },
+        "horizontalOverflow": [],
+        "clippedText": [],
+        "failedImages": [],
+        "consoleErrors": [],
+        "httpNotFounds": []
+      },
+      "outputSize": {
+        "width": 390,
+        "height": 844
+      }
+    }
+  ]
+}

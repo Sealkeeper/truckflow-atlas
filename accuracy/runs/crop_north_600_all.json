@@ -1,0 +1,255 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_600_lane.jpg",
+  "prompt_version": "truck-count-v1",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 22.03,
+      "usage": {
+        "completion_tokens": 1652,
+        "prompt_tokens": 1762,
+        "total_tokens": 3414,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1235
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.46,
+              0.28,
+              0.61,
+              0.57
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色封闭货厢，车尾朝向镜头，带有尾灯标识",
+            "evidence": "位于画面中间通道，完整可见的半挂货车",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.17,
+              0.6,
+              0.46,
+              0.99
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "白色波纹状厢式货厢，位于画面下方左侧",
+            "evidence": "完整可见的厢式货车",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.37,
+              0.21,
+              0.48,
+              0.44
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "蓝色顶的封闭货厢，为单独挂车，位于红色半挂车后方",
+            "evidence": "单独清晰可见的挂车，符合计数口径",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面内共可见3辆货车，其中2辆为完整整车，1辆为单独挂车，无被完全遮挡或无法确定的车辆",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.46, 0.28, 0.61, 0.57],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色封闭货厢，车尾朝向镜头，带有尾灯标识\",\n      \"evidence\": \"位于画面中间通道，完整可见的半挂货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.17, 0.60, 0.46, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹状厢式货厢，位于画面下方左侧\",\n      \"evidence\": \"完整可见的厢式货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.37, 0.21, 0.48, 0.44],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色顶的封闭货厢，为单独挂车，位于红色半挂车后方\",\n      \"evidence\": \"单独清晰可见的挂车，符合计数口径\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面内共可见3辆货车，其中2辆为完整整车，1辆为单独挂车，无被完全遮挡或无法确定的车辆\",\n  \"uncertain_reasons\": []\n}"
+    },
+    {
+      "model": "zhipu",
+      "model_id": "glm-4.5v",
+      "ok": true,
+      "latency_s": 141.13,
+      "usage": {
+        "completion_tokens": 2706,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2045
+        },
+        "prompt_tokens": 3266,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5972
+      },
+      "parsed": {
+        "counts": {
+          "total": 4,
+          "large": 3,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.477,
+              0.301,
+              0.612,
+              0.58
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色厢式货柜/集装箱，车尾朝向镜头，双尾灯点亮，货厢后部有白色标识与黄色警示条纹",
+            "evidence": "位于画面中央通道，具有典型重型厢式货车或集装箱半挂车的外形比例，车尾完整清晰可见",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.193,
+              0.615,
+              0.468,
+              1.0
+            ],
+            "size": "large",
+            "visible": "partial_side",
+            "is_truck": true,
+            "identity_clues": "白色波纹板长货厢，纵向占据画面左下半部，车头部分超出画面下边界或被截断",
+            "evidence": "具有大型厢式货车或集装箱挂车的特征尺寸，侧面大面积可见，与红色货车形成并行停放格局",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.376,
+              0.226,
+              0.486,
+              0.442
+            ],
+            "size": "medium",
+            "visible": "partial_top",
+            "is_truck": true,
+            "identity_clues": "蓝色平顶或蓬布顶棚的中型货厢，位于红色货车左前方，旁有多名戴安全帽工作人员",
+            "evidence": "外形尺寸小于两侧大型货车，符合中型厢式货车或轻型卡车的货厢特征，顶部蓝色覆盖物明显",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.401,
+              0.128,
+              0.489,
+              0.234
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "深灰色/黑色标准集装箱或货柜，位于蓝色顶棚车辆后方（图像上方），独立放置于通道左侧",
+            "evidence": "具有标准集装箱的矩形外观与尺寸比例，与前方蓝色顶棚车辆有明显间隔，判定为独立挂车/货厢",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面为高角度俯拍展会撤展现场，中央通道停放多辆货车；右下角有蓝色叉车（已排除）；左侧展位结构（CUORI、LAMO）与右侧展位（KOL等）形成夹道；地面有撤展杂物；时间戳显示22:09夜间作业。",
+        "uncertain_reasons": []
+      },
+      "raw_text": "```json\n{\n  \"counts\": {\"total\": 4, \"large\": 3, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.477, 0.301, 0.612, 0.580],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色厢式货柜/集装箱，车尾朝向镜头，双尾灯点亮，货厢后部有白色标识与黄色警示条纹\",\n      \"evidence\": \"位于画面中央通道，具有典型重型厢式货车或集装箱半挂车的外形比例，车尾完整清晰可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.193, 0.615, 0.468, 1.000],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹板长货厢，纵向占据画面左下半部，车头部分超出画面下边界或被截断\",\n      \"evidence\": \"具有大型厢式货车或集装箱挂车的特征尺寸，侧面大面积可见，与红色货车形成并行停放格局\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.376, 0.226, 0.486, 0.442],\n      \"size\": \"medium\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色平顶或蓬布顶棚的中型货厢，位于红色货车左前方，旁有多名戴安全帽工作人员\",\n      \"evidence\": \"外形尺寸小于两侧大型货车，符合中型厢式货车或轻型卡车的货厢特征，顶部蓝色覆盖物明显\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.401, 0.128, 0.489, 0.234],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"深灰色/黑色标准集装箱或货柜，位于蓝色顶棚车辆后方（图像上方），独立放置于通道左侧\",\n      \"evidence\": \"具有标准集装箱的矩形外观与尺寸比例，与前方蓝色顶棚车辆有明显间隔，判定为独立挂车/货厢\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为高角度俯拍展会撤展现场，中央通道停放多辆货车；右下角有蓝色叉车（已排除）；左侧展位结构（CUORI、LAMO）与右侧展位（KOL等）形成夹道；地面有撤展杂物；时间戳显示22:09夜间作业。\",\n  \"uncertain_reasons\": []\n}\n```"
+    },
+    {
+      "model": "aibox",
+      "model_id": "glm-5.3-flash",
+      "ok": true,
+      "latency_s": 12.93,
+      "usage": {
+        "prompt_tokens": 3447,
+        "total_tokens": 4255,
+        "completion_tokens": 808,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "image_tokens": 2990
+        },
+        "reasoning_tokens": 144
+      },
+      "parsed": {
+        "counts": {
+          "total": 4,
+          "large": 4,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.47,
+              0.3,
+              0.62,
+              0.58
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色重型货车/厢式货车，车头朝向画面上方（远离镜头），尾部尾灯亮红光，货厢为红色带后门",
+            "evidence": "画面中央通道上完整可见的红色货车，车头与货厢连为一体，正在通道内行驶",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.38,
+              0.12,
+              0.5,
+              0.23
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "蓝色集装箱式货厢，位于通道左侧，未见牵引车头",
+            "evidence": "上方通道左侧可见蓝色集装箱货厢，仅货厢部分入画，车头被遮挡或未进入画面",
+            "uncertain": true
+          },
+          {
+            "bbox": [
+              0.37,
+              0.22,
+              0.5,
+              0.34
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "蓝色集装箱式货厢，位于上一蓝色货厢下方（更近镜头），未见车头",
+            "evidence": "通道左侧第二个蓝色集装箱货厢，与上方蓝色货厢为两个独立箱体，车头不可见",
+            "uncertain": true
+          },
+          {
+            "bbox": [
+              0.19,
+              0.6,
+              0.47,
+              1.0
+            ],
+            "size": "large",
+            "visible": "partial_side",
+            "is_truck": true,
+            "identity_clues": "白色波纹板集装箱式货厢，纵向停放于左侧展位旁，向画面底部延伸出画",
+            "evidence": "左下角长条形白色货厢，仅见货厢侧面及顶部，车头在画面外或被遮挡",
+            "uncertain": true
+          }
+        ],
+        "scene_notes": "画面为展会撤展期的高位俯拍通道场景。中央红色货车完整可见；通道左侧上下排列两个蓝色集装箱货厢，均未见牵引车头，无法确认是否与画面外车头相连，存在与相邻帧重复计数的风险；左下角白色长货厢延伸出画面底部，仅部分可见。画面下方的蓝色叉车按口径不计入。",
+        "uncertain_reasons": [
+          "两个蓝色集装箱货厢未见牵引车头，无法确认是否为独立挂车或与画面外车头相连",
+          "白色货厢仅部分入画，车头不可见，无法确认整车形态"
+        ]
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 4, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.47, 0.30, 0.62, 0.58],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重型货车/厢式货车，车头朝向画面上方（远离镜头），尾部尾灯亮红光，货厢为红色带后门\",\n      \"evidence\": \"画面中央通道上完整可见的红色货车，车头与货厢连为一体，正在通道内行驶\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.38, 0.12, 0.50, 0.23],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色集装箱式货厢，位于通道左侧，未见牵引车头\",\n      \"evidence\": \"上方通道左侧可见蓝色集装箱货厢，仅货厢部分入画，车头被遮挡或未进入画面\",\n      \"uncertain\": true\n    },\n    {\n      \"bbox\": [0.37, 0.22, 0.50, 0.34],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色集装箱式货厢，位于上一蓝色货厢下方（更近镜头），未见车头\",\n      \"evidence\": \"通道左侧第二个蓝色集装箱货厢，与上方蓝色货厢为两个独立箱体，车头不可见\",\n      \"uncertain\": true\n    },\n    {\n      \"bbox\": [0.19, 0.60, 0.47, 1.0],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹板集装箱式货厢，纵向停放于左侧展位旁，向画面底部延伸出画\",\n      \"evidence\": \"左下角长条形白色货厢，仅见货厢侧面及顶部，车头在画面外或被遮挡\",\n      \"uncertain\": true\n    }\n  ],\n  \"scene_notes\": \"画面为展会撤展期的高位俯拍通道场景。中央红色货车完整可见；通道左侧上下排列两个蓝色集装箱货厢，均未见牵引车头，无法确认是否与画面外车头相连，存在与相邻帧重复计数的风险；左下角白色长货厢延伸出画面底部，仅部分可见。画面下方的蓝色叉车按口径不计入。\",\n  \"uncertain_reasons\": [\n    \"两个蓝色集装箱货厢未见牵引车头，无法确认是否为独立挂车或与画面外车头相连\",\n    \"白色货厢仅部分入画，车头不可见，无法确认整车形态\"\n  ]\n}"
+    }
+  ]
+}

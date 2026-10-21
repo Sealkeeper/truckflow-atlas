@@ -1,0 +1,107 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\all-sessions-can-see\\assets\\frames\\south_1200.jpg",
+  "prompt_version": "truck-count-v1",
+  "runs": [
+    {
+      "model": "zhipu",
+      "model_id": "glm-4.5v",
+      "ok": true,
+      "latency_s": 81.01,
+      "usage": {
+        "completion_tokens": 2132,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1370
+        },
+        "prompt_tokens": 2034,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4166
+      },
+      "parsed": {
+        "counts": {
+          "total": 5,
+          "large": 5,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.421,
+              0.242,
+              0.456,
+              0.366
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "深红色/酒红色重型卡车头，位于通道最远端（队列首位），朝向镜头",
+            "evidence": "在通道顶端中央位置，红色驾驶室清晰可见，处于队列最前方",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.456,
+              0.122,
+              0.498,
+              0.258
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色重型卡车/厢式货车，位于第2位，车身略高于第1辆",
+            "evidence": "在第1辆红色卡车后方（图像中更靠上位置），红色车身完整可见",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.458,
+              0.288,
+              0.514,
+              0.482
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色重型牵引车或厢式货车，位于第3位，与第4辆白色车间距较小",
+            "evidence": "在白色货车正后方，红色车头及部分货厢可见，体型较大",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.47,
+              0.486,
+              0.556,
+              0.878
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "白色驾驶室配白色长货厢，车头印有'东风商用车'字样及奔驰标志，位于第4位",
+            "evidence": "画面中央偏下位置的白色半挂车/厢式货车，车身修长，'东风商用车'标识清晰可辨",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.494,
+              0.858,
+              0.6,
+              1.0
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "红色集装箱式货厢/挂车，无可见车头，位于画面最下方（最近处）",
+            "evidence": "在白色货车正前方（图像底部），仅露出红色货厢主体部分，无驾驶室可见，判定为独立挂车或货车尾部",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "所有货车均位于展厅中央主通道内，呈纵向单列停放；车辆间距较小，疑似等待装卸或依次撤离；最前方车辆（最近处）仅露出货厢部分；通道两侧为正在搭建/拆除的展位结构（可见Haier、Homa、CHANGHONG等品牌标识）；地面有少量施工人员及散落物料。",
+        "uncertain_reasons": []
+      },
+      "raw_text": "```json\n{\n  \"counts\": {\"total\": 5, \"large\": 5, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.421, 0.242, 0.456, 0.366],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"深红色/酒红色重型卡车头，位于通道最远端（队列首位），朝向镜头\",\n      \"evidence\": \"在通道顶端中央位置，红色驾驶室清晰可见，处于队列最前方\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.456, 0.122, 0.498, 0.258],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重型卡车/厢式货车，位于第2位，车身略高于第1辆\",\n      \"evidence\": \"在第1辆红色卡车后方（图像中更靠上位置），红色车身完整可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.458, 0.288, 0.514, 0.482],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重型牵引车或厢式货车，位于第3位，与第4辆白色车间距较小\",\n      \"evidence\": \"在白色货车正后方，红色车头及部分货厢可见，体型较大\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.470, 0.486, 0.556, 0.878],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色驾驶室配白色长货厢，车头印有'东风商用车'字样及奔驰标志，位于第4位\",\n      \"evidence\": \"画面中央偏下位置的白色半挂车/厢式货车，车身修长，'东风商用车'标识清晰可辨\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.494, 0.858, 0.600, 1.000],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色集装箱式货厢/挂车，无可见车头，位于画面最下方（最近处）\",\n      \"evidence\": \"在白色货车正前方（图像底部），仅露出红色货厢主体部分，无驾驶室可见，判定为独立挂车或货车尾部\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"所有货车均位于展厅中央主通道内，呈纵向单列停放；车辆间距较小，疑似等待装卸或依次撤离；最前方车辆（最近处）仅露出货厢部分；通道两侧为正在搭建/拆除的展位结构（可见Haier、Homa、CHANGHONG等品牌标识）；地面有少量施工人员及散落物料。\",\n  \"uncertain_reasons\": []\n}\n```"
+    }
+  ]
+}

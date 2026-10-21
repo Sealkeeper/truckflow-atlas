@@ -1,0 +1,106 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\all-sessions-can-see\\assets\\frames\\south_1200.jpg",
+  "prompt_version": "truck-count-v1",
+  "runs": [
+    {
+      "model": "aibox",
+      "model_id": "glm-5.3-flash",
+      "ok": true,
+      "latency_s": 32.21,
+      "usage": {
+        "prompt_tokens": 2067,
+        "total_tokens": 2997,
+        "completion_tokens": 930,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "image_tokens": 1610
+        },
+        "reasoning_tokens": 224
+      },
+      "parsed": {
+        "counts": {
+          "total": 5,
+          "large": 5,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.44,
+              0.12,
+              0.5,
+              0.27
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色重卡车头，朝向镜头（朝南/朝下），位于通道最北端靠近3.2馆门口",
+            "evidence": "通道最上方可见红色卡车车头及部分货厢，位于展馆入口附近",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.41,
+              0.26,
+              0.47,
+              0.38
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色重卡车头，车顶有蓝色/白色标识，朝向镜头",
+            "evidence": "通道中上部的红色卡车，车头完整可见",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.45,
+              0.36,
+              0.53,
+              0.48
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色车头+深色货厢/挂车，朝向镜头",
+            "evidence": "通道中部红色卡车牵引深色货厢，车头与货厢连为一体",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.46,
+              0.47,
+              0.56,
+              0.9
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "白色长厢式货车/半挂，车头印有'东风商用车'字样，白色货厢，朝向镜头",
+            "evidence": "通道中下部最清晰的一辆白色长厢货车，车头朝下（朝南），货厢延伸至画面中部",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.49,
+              0.85,
+              0.62,
+              1.0
+            ],
+            "size": "large",
+            "visible": "partial_top",
+            "is_truck": true,
+            "identity_clues": "红色货厢/车身，位于白色东风货车正后方（画面更近处）",
+            "evidence": "画面底部边缘露出的红色货车局部（货厢顶部及部分车体），车头被画面下边界裁切",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面为展馆3.2区撤展现场，中央通道内货车排成一列朝向镜头方向。最下方红色货车仅露出局部，被画面底边裁切；最上方红色卡车靠近馆门口，与远处人群和展具混杂但可辨认。通道两侧为展位桁架和搭建材料，无其他车辆混入。各车之间有明显间距，无重复计数风险。",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 5, \"large\": 5, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.44, 0.12, 0.50, 0.27],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重卡车头，朝向镜头（朝南/朝下），位于通道最北端靠近3.2馆门口\",\n      \"evidence\": \"通道最上方可见红色卡车车头及部分货厢，位于展馆入口附近\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.41, 0.26, 0.47, 0.38],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重卡车头，车顶有蓝色/白色标识，朝向镜头\",\n      \"evidence\": \"通道中上部的红色卡车，车头完整可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.36, 0.53, 0.48],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头+深色货厢/挂车，朝向镜头\",\n      \"evidence\": \"通道中部红色卡车牵引深色货厢，车头与货厢连为一体\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.46, 0.47, 0.56, 0.90],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色长厢式货车/半挂，车头印有'东风商用车'字样，白色货厢，朝向镜头\",\n      \"evidence\": \"通道中下部最清晰的一辆白色长厢货车，车头朝下（朝南），货厢延伸至画面中部\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.49, 0.85, 0.62, 1.00],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货厢/车身，位于白色东风货车正后方（画面更近处）\",\n      \"evidence\": \"画面底部边缘露出的红色货车局部（货厢顶部及部分车体），车头被画面下边界裁切\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展馆3.2区撤展现场，中央通道内货车排成一列朝向镜头方向。最下方红色货车仅露出局部，被画面底边裁切；最上方红色卡车靠近馆门口，与远处人群和展具混杂但可辨认。通道两侧为展位桁架和搭建材料，无其他车辆混入。各车之间有明显间距，无重复计数风险。\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

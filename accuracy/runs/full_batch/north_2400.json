@@ -1,0 +1,89 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\assets\\frames\\north_2400.jpg",
+  "runs": [
+    {
+      "model": "aibox",
+      "model_id": "glm-5.3",
+      "ok": false,
+      "latency_s": 0.24,
+      "status": 503,
+      "error": "HTTPError: 503 Server Error: Service Unavailable for url: https://aibox.richaibox.com:2078/v1/chat/completions",
+      "response_text": "{\"error\":{\"code\":\"model_not_found\",\"message\":\"No available channel for model glm-5.3 under group default (distributor) (request id: 202610210851034530477928268d9d6wAQt4ykh)\",\"type\":\"new_api_error\"}}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\assets\\frames\\north_2400.jpg"
+    },
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 17.41,
+      "usage": {
+        "completion_tokens": 2034,
+        "prompt_tokens": 1773,
+        "total_tokens": 3807,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1605
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.4,
+              0.61,
+              0.56,
+              0.99
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "灰色厢式货厢，红色车尾，车尾朝向画面下方",
+            "evidence": "画面下方中间位置，完整可见的厢式货车，符合货车定义",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.42,
+              0.26,
+              0.51,
+              0.45
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "红色高栏货厢，无配套车头可见，位于中间通道",
+            "evidence": "画面中间通道处，单独的红色高栏挂车，属于货车范畴",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.44,
+              0.16,
+              0.52,
+              0.27
+            ],
+            "size": "large",
+            "visible": "partial_top",
+            "is_truck": true,
+            "identity_clues": "红色货车（含车头与货厢），位于中间挂车后方，顶部被画面边缘截断",
+            "evidence": "画面后方中间位置，红色货车部分可见，属于货车",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "共3辆大型货车，均清晰可见，无完全遮挡或无法判定的车辆",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.40, 0.61, 0.56, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"灰色厢式货厢，红色车尾，车尾朝向画面下方\",\n      \"evidence\": \"画面下方中间位置，完整可见的厢式货车，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.42, 0.26, 0.51, 0.45],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色高栏货厢，无配套车头可见，位于中间通道\",\n      \"evidence\": \"画面中间通道处，单独的红色高栏挂车，属于货车范畴\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.16, 0.52, 0.27],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货车（含车头与货厢），位于中间挂车后方，顶部被画面边缘截断\",\n      \"evidence\": \"画面后方中间位置，红色货车部分可见，属于货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"共3辆大型货车，均清晰可见，无完全遮挡或无法判定的车辆\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\assets\\frames\\north_2400.jpg"
+    }
+  ]
+}

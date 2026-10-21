@@ -1,0 +1,117 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\assets\\frames\\south_1200.jpg",
+  "runs": [
+    {
+      "model": "aibox",
+      "model_id": "glm-5.3",
+      "ok": false,
+      "latency_s": 0.19,
+      "status": 503,
+      "error": "HTTPError: 503 Server Error: Service Unavailable for url: https://aibox.richaibox.com:2078/v1/chat/completions",
+      "response_text": "{\"error\":{\"code\":\"model_not_found\",\"message\":\"No available channel for model glm-5.3 under group default (distributor) (request id: 202610210851271399623358268d9d69KuFhd56)\",\"type\":\"new_api_error\"}}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\assets\\frames\\south_1200.jpg"
+    },
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 25.04,
+      "usage": {
+        "completion_tokens": 3298,
+        "prompt_tokens": 1773,
+        "total_tokens": 5071,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2659
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 5,
+          "large": 3,
+          "medium": 2,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.455,
+              0.46,
+              0.575,
+              0.875
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "白色东风商用车头，带有‘东风商用车’字样，白色货厢，车头朝向画面下方",
+            "evidence": "位于中间通道最下方，完整可见的重型货车",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.45,
+              0.29,
+              0.53,
+              0.51
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色车头，灰色货厢的半挂货车，车头朝向画面上方",
+            "evidence": "位于白色东风货车后方，中间通道内",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.41,
+              0.23,
+              0.47,
+              0.36
+            ],
+            "size": "medium",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色车头，蓝色货厢的中型货车，车头朝向画面上方",
+            "evidence": "位于半挂货车后方，中间通道内",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.45,
+              0.12,
+              0.5,
+              0.26
+            ],
+            "size": "medium",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色货车，车头朝向画面上方，位于中间通道最远端",
+            "evidence": "中间通道最上方的红色货车，完整可见",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.48,
+              0.85,
+              0.6,
+              0.99
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "红色空货厢挂车，无车头，位于白色东风货车下方",
+            "evidence": "画面最下方中间偏右，单独可见的挂车",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "中间通道排列多辆货车，部分被展位桁架轻微遮挡，底部存在单独的挂车",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 5, \"large\": 3, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.455, 0.46, 0.575, 0.875],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色东风商用车头，带有‘东风商用车’字样，白色货厢，车头朝向画面下方\",\n      \"evidence\": \"位于中间通道最下方，完整可见的重型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.29, 0.53, 0.51],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，灰色货厢的半挂货车，车头朝向画面上方\",\n      \"evidence\": \"位于白色东风货车后方，中间通道内\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.41, 0.23, 0.47, 0.36],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，蓝色货厢的中型货车，车头朝向画面上方\",\n      \"evidence\": \"位于半挂货车后方，中间通道内\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.12, 0.50, 0.26],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货车，车头朝向画面上方，位于中间通道最远端\",\n      \"evidence\": \"中间通道最上方的红色货车，完整可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.48, 0.85, 0.60, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色空货厢挂车，无车头，位于白色东风货车下方\",\n      \"evidence\": \"画面最下方中间偏右，单独可见的挂车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"中间通道排列多辆货车，部分被展位桁架轻微遮挡，底部存在单独的挂车\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\assets\\frames\\south_1200.jpg"
+    }
+  ]
+}
