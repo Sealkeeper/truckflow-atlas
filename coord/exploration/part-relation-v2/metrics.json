@@ -1,0 +1,1311 @@
+{
+  "schema": "roof-relation-v2-metrics",
+  "generated_at": "2026-10-21T22:36:24+08:00",
+  "model": "doubao-seed-2-1-lite-260915",
+  "thinking": null,
+  "prompt_sha256": "00a5f55a95043fd41e136cdf832f4769a627f16d46cc304ee379d78936a91745",
+  "sample_count_fixed": 4,
+  "valid_count": 4,
+  "resolved_count": 1,
+  "resolved_coverage": 0.25,
+  "exact_point_count": 0,
+  "exact_point_rate_resolved": 0.0,
+  "mae_resolved": 1.0,
+  "undercount_resolved": 0,
+  "overcount_resolved": 1,
+  "range_contains_truth_count": 2,
+  "range_contains_truth_rate": 0.5,
+  "range_metric_note": "range coverage is a calibration diagnostic, not a point-count accuracy",
+  "failures": 0,
+  "rows": [
+    {
+      "sample_id": "south_2100",
+      "camera": "south",
+      "time": 2100,
+      "role": "stable B overcount (4 vs truth 3); prior reports describe cab/trailer split, but B r1 box audit shows the extra 4th unit is a far/background truck",
+      "truth": 3,
+      "b_counts": [
+        4,
+        4,
+        4
+      ],
+      "count_point": null,
+      "count_min": 3,
+      "count_max": 8,
+      "resolved": false,
+      "exact_point": false,
+      "range_contains_truth": true,
+      "valid": true,
+      "failure": null,
+      "review_required": true,
+      "review_reasons": [
+        "composition_ambiguity_edges:5",
+        "model_unresolved:1"
+      ],
+      "relation_stats": {
+        "total": 8,
+        "same_top_surface": 0,
+        "separate_top_units": 3,
+        "composition_unknown": 5,
+        "ambiguous": 0,
+        "with_junction": 8,
+        "with_gap_px": 8
+      },
+      "tops": 8,
+      "top_units": 8,
+      "top_units_detail": [
+        {
+          "top_unit_id": "U1",
+          "top_ids": [
+            "T1"
+          ],
+          "kinds": [
+            "cab_roof"
+          ],
+          "top_states": [
+            "closed"
+          ],
+          "roof_bbox_overview": [
+            0.4295999999999999,
+            0.0728,
+            0.48239999999999994,
+            0.08960000000000001
+          ],
+          "locatable": true
+        },
+        {
+          "top_unit_id": "U2",
+          "top_ids": [
+            "T2"
+          ],
+          "kinds": [
+            "trailer_roof"
+          ],
+          "top_states": [
+            "closed"
+          ],
+          "roof_bbox_overview": [
+            0.3944,
+            0.09520000000000002,
+            0.48239999999999994,
+            0.11760000000000001
+          ],
+          "locatable": true
+        },
+        {
+          "top_unit_id": "U3",
+          "top_ids": [
+            "T3"
+          ],
+          "kinds": [
+            "trailer_roof"
+          ],
+          "top_states": [
+            "closed"
+          ],
+          "roof_bbox_overview": [
+            0.3504,
+            0.12320000000000002,
+            0.4648,
+            0.16240000000000002
+          ],
+          "locatable": true
+        },
+        {
+          "top_unit_id": "U4",
+          "top_ids": [
+            "T4"
+          ],
+          "kinds": [
+            "cab_roof"
+          ],
+          "top_states": [
+            "closed"
+          ],
+          "roof_bbox_overview": [
+            0.3504,
+            0.168,
+            0.44719999999999993,
+            0.20720000000000002
+          ],
+          "locatable": true
+        },
+        {
+          "top_unit_id": "U5",
+          "top_ids": [
+            "T5"
+          ],
+          "kinds": [
+            "trailer_roof"
+          ],
+          "top_states": [
+            "closed"
+          ],
+          "roof_bbox_overview": [
+            0.45599999999999996,
+            0.15680000000000002,
+            0.5791999999999999,
+            0.21840000000000004
+          ],
+          "locatable": true
+        },
+        {
+          "top_unit_id": "U6",
+          "top_ids": [
+            "T6"
+          ],
+          "kinds": [
+            "cab_roof"
+          ],
+          "top_states": [
+            "closed"
+          ],
+          "roof_bbox_overview": [
+            0.48239999999999994,
+            0.21280000000000002,
+            0.5791999999999999,
+            0.24640000000000004
+          ],
+          "locatable": true
+        },
+        {
+          "top_unit_id": "U7",
+          "top_ids": [
+            "T7"
+          ],
+          "kinds": [
+            "trailer_roof"
+          ],
+          "top_states": [
+            "closed"
+          ],
+          "roof_bbox_overview": [
+            0.47,
+            0.46,
+            0.67,
+            0.68
+          ],
+          "locatable": true
+        },
+        {
+          "top_unit_id": "U8",
+          "top_ids": [
+            "T8"
+          ],
+          "kinds": [
+            "cab_roof"
+          ],
+          "top_states": [
+            "closed"
+          ],
+          "roof_bbox_overview": [
+            0.49,
+            0.68,
+            0.67,
+            0.76
+          ],
+          "locatable": true
+        }
+      ],
+      "relation_detail": [
+        {
+          "a": "T1",
+          "b": "T2",
+          "relation": "composition_unknown",
+          "junction_bbox": [
+            0.4,
+            0.16,
+            0.47,
+            0.17
+          ],
+          "gap_px": 5,
+          "evidence": "红色驾驶室顶与红棕色货厢顶之间有清晰小间隙，顶面轮廓独立，分属不同顶面单元",
+          "confidence": 0.9
+        },
+        {
+          "a": "T2",
+          "b": "T3",
+          "relation": "separate_top_units",
+          "junction_bbox": [
+            0.36,
+            0.21,
+            0.47,
+            0.22
+          ],
+          "gap_px": 8,
+          "evidence": "两个红棕色封闭货厢顶之间有清晰纵向间隙，顶面轮廓独立，无连续连接",
+          "confidence": 0.95
+        },
+        {
+          "a": "T3",
+          "b": "T4",
+          "relation": "composition_unknown",
+          "junction_bbox": [
+            0.34,
+            0.29,
+            0.45,
+            0.3
+          ],
+          "gap_px": 6,
+          "evidence": "红棕色货厢顶与红色驾驶室顶之间有清晰小间隙，顶面轮廓独立",
+          "confidence": 0.9
+        },
+        {
+          "a": "T3",
+          "b": "T5",
+          "relation": "separate_top_units",
+          "junction_bbox": [
+            0.43,
+            0.28,
+            0.45,
+            0.35
+          ],
+          "gap_px": 15,
+          "evidence": "红棕色货厢顶与银灰色货厢顶之间有宽阔过道间隙，顶面轮廓完全独立",
+          "confidence": 0.95
+        },
+        {
+          "a": "T4",
+          "b": "T6",
+          "relation": "separate_top_units",
+          "junction_bbox": [
+            0.44,
+            0.35,
+            0.48,
+            0.4
+          ],
+          "gap_px": 20,
+          "evidence": "两个红色驾驶室顶之间有宽阔过道间隙，顶面轮廓完全独立，无连接",
+          "confidence": 0.95
+        },
+        {
+          "a": "T5",
+          "b": "T6",
+          "relation": "composition_unknown",
+          "junction_bbox": [
+            0.46,
+            0.38,
+            0.58,
+            0.39
+          ],
+          "gap_px": 4,
+          "evidence": "银灰色货厢顶与红色驾驶室顶之间有清晰小间隙，顶面轮廓独立",
+          "confidence": 0.9
+        },
+        {
+          "a": "T6",
+          "b": "T7",
+          "relation": "composition_unknown",
+          "junction_bbox": [
+            0.47,
+            0.44,
+            0.59,
+            0.46
+          ],
+          "gap_px": 10,
+          "evidence": "红色驾驶室顶与白色货厢顶之间有清晰纵向间隙，顶面轮廓独立",
+          "confidence": 0.9
+        },
+        {
+          "a": "T7",
+          "b": "T8",
+          "relation": "composition_unknown",
+          "junction_bbox": [
+            0.48,
+            0.67,
+            0.66,
+            0.68
+          ],
+          "gap_px": 3,
+          "evidence": "白色货厢顶与白色驾驶室顶之间有清晰小间隙，顶面轮廓独立",
+          "confidence": 0.9
+        }
+      ],
+      "ambiguous_groups": [
+        {
+          "unit_ids": [
+            "U1",
+            "U2"
+          ],
+          "size": 2
+        },
+        {
+          "unit_ids": [
+            "U3",
+            "U4"
+          ],
+          "size": 2
+        },
+        {
+          "unit_ids": [
+            "U5",
+            "U6",
+            "U7",
+            "U8"
+          ],
+          "size": 4
+        }
+      ],
+      "certain_unit_count": 0,
+      "schema_warnings": [],
+      "possible_duplicate_top_units": [],
+      "model_unit_consistent": false,
+      "unknown_composition_share": 0.625,
+      "latency_s": 211.153,
+      "usage": {
+        "completion_tokens": 15684,
+        "prompt_tokens": 3941,
+        "total_tokens": 19625,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 13975
+        }
+      },
+      "http_attempts": 1,
+      "parse_error": null
+    },
+    {
+      "sample_id": "south_300",
+      "camera": "south",
+      "time": 300,
+      "role": "B r1 overcount 5 vs truth 4; B box 5 is a trailer-only duplicate of the foreground trailer",
+      "truth": 4,
+      "b_counts": [
+        5,
+        4,
+        4
+      ],
+      "count_point": null,
+      "count_min": 2,
+      "count_max": 8,
+      "resolved": false,
+      "exact_point": false,
+      "range_contains_truth": true,
+      "valid": true,
+      "failure": null,
+      "review_required": true,
+      "review_reasons": [
+        "composition_ambiguity_edges:6",
+        "model_top_unit_hypotheses_inconsistent"
+      ],
+      "relation_stats": {
+        "total": 9,
+        "same_top_surface": 1,
+        "separate_top_units": 2,
+        "composition_unknown": 6,
+        "ambiguous": 0,
+        "with_junction": 9,
+        "with_gap_px": 9
+      },
+      "tops": 9,
+      "top_units": 8,
+      "top_units_detail": [
+        {
+          "top_unit_id": "U1",
+          "top_ids": [
+            "T1"
+          ],
+          "kinds": [
+            "cargo_roof"
+          ],
+          "top_states": [
+            "closed"
+          ],
+          "roof_bbox_overview": [
+            0.44719999999999993,
+            0.11760000000000001,
+            0.5351999999999999,
+            0.168
+          ],
+          "locatable": true
+        },
+        {
+          "top_unit_id": "U2",
+          "top_ids": [
+            "T2"
+          ],
+          "kinds": [
+            "cab_roof"
+          ],
+          "top_states": [
+            "closed"
+          ],
+          "roof_bbox_overview": [
+            0.44719999999999993,
+            0.168,
+            0.5351999999999999,
+            0.22400000000000003
+          ],
+          "locatable": true
+        },
+        {
+          "top_unit_id": "U3",
+          "top_ids": [
+            "T3"
+          ],
+          "kinds": [
+            "cargo_roof"
+          ],
+          "top_states": [
+            "closed"
+          ],
+          "roof_bbox_overview": [
+            0.35919999999999996,
+            0.10640000000000001,
+            0.44719999999999993,
+            0.15680000000000002
+          ],
+          "locatable": true
+        },
+        {
+          "top_unit_id": "U4",
+          "top_ids": [
+            "T4"
+          ],
+          "kinds": [
+            "cab_roof"
+          ],
+          "top_states": [
+            "closed"
+          ],
+          "roof_bbox_overview": [
+            0.35919999999999996,
+            0.15680000000000002,
+            0.44719999999999993,
+            0.23520000000000002
+          ],
+          "locatable": true
+        },
+        {
+          "top_unit_id": "U5",
+          "top_ids": [
+            "T5"
+          ],
+          "kinds": [
+            "trailer_roof"
+          ],
+          "top_states": [
+            "closed"
+          ],
+          "roof_bbox_overview": [
+            0.45599999999999996,
+            0.28,
+            0.5879999999999999,
+            0.392
+          ],
+          "locatable": true
+        },
+        {
+          "top_unit_id": "U6",
+          "top_ids": [
+            "T6"
+          ],
+          "kinds": [
+            "cab_roof"
+          ],
+          "top_states": [
+            "closed"
+          ],
+          "roof_bbox_overview": [
+            0.45599999999999996,
+            0.392,
+            0.5879999999999999,
+            0.49280000000000007
+          ],
+          "locatable": true
+        },
+        {
+          "top_unit_id": "U7",
+          "top_ids": [
+            "T7",
+            "T9"
+          ],
+          "kinds": [
+            "trailer_roof"
+          ],
+          "top_states": [
+            "closed"
+          ],
+          "roof_bbox_overview": [
+            0.48,
+            0.49280000000000007,
+            0.67,
+            0.72
+          ],
+          "locatable": true
+        },
+        {
+          "top_unit_id": "U8",
+          "top_ids": [
+            "T8"
+          ],
+          "kinds": [
+            "cab_roof"
+          ],
+          "top_states": [
+            "closed"
+          ],
+          "roof_bbox_overview": [
+            0.48,
+            0.71,
+            0.67,
+            0.93
+          ],
+          "locatable": true
+        }
+      ],
+      "relation_detail": [
+        {
+          "a": "T1",
+          "b": "T2",
+          "relation": "composition_unknown",
+          "junction_bbox": [
+            0.45,
+            0.17,
+            0.54,
+            0.19
+          ],
+          "gap_px": 20,
+          "evidence": "棕色货厢顶面与红色驾驶室顶面之间存在清晰的垂直间隙和层级差，顶面轮廓断开",
+          "confidence": 0.9
+        },
+        {
+          "a": "T3",
+          "b": "T4",
+          "relation": "composition_unknown",
+          "junction_bbox": [
+            0.36,
+            0.16,
+            0.45,
+            0.18
+          ],
+          "gap_px": 20,
+          "evidence": "灰色货厢顶面与红色驾驶室顶面之间存在清晰的垂直间隙和层级差，顶面轮廓断开",
+          "confidence": 0.9
+        },
+        {
+          "a": "T5",
+          "b": "T6",
+          "relation": "composition_unknown",
+          "junction_bbox": [
+            0.46,
+            0.39,
+            0.59,
+            0.41
+          ],
+          "gap_px": 25,
+          "evidence": "银灰色货厢顶面与红色驾驶室顶面之间存在清晰的垂直间隙和层级差，顶面轮廓断开",
+          "confidence": 0.9
+        },
+        {
+          "a": "T6",
+          "b": "T7",
+          "relation": "composition_unknown",
+          "junction_bbox": [
+            0.46,
+            0.49,
+            0.63,
+            0.51
+          ],
+          "gap_px": 20,
+          "evidence": "红色驾驶室顶面与白色货厢顶面之间存在清晰的垂直间隙和层级差，顶面轮廓断开",
+          "confidence": 0.9
+        },
+        {
+          "a": "T7",
+          "b": "T9",
+          "relation": "same_top_surface",
+          "junction_bbox": [
+            0.48,
+            0.55,
+            0.67,
+            0.57
+          ],
+          "gap_px": 0,
+          "evidence": "白色货厢顶面在图B下边缘与图A上边缘连续，无可见接缝或间隙，顶面轮廓、颜色一致",
+          "confidence": 1.0
+        },
+        {
+          "a": "T9",
+          "b": "T8",
+          "relation": "composition_unknown",
+          "junction_bbox": [
+            0.48,
+            0.71,
+            0.67,
+            0.73
+          ],
+          "gap_px": 15,
+          "evidence": "白色货厢顶面与白色驾驶室顶面之间存在清晰的垂直间隙和层级差，顶面轮廓断开",
+          "confidence": 0.9
+        },
+        {
+          "a": "T1",
+          "b": "T3",
+          "relation": "separate_top_units",
+          "junction_bbox": [
+            0.45,
+            0.11,
+            0.47,
+            0.17
+          ],
+          "gap_px": 30,
+          "evidence": "棕色货厢顶面与灰色货厢顶面之间存在清晰的横向间隙，顶面轮廓独立",
+          "confidence": 0.95
+        },
+        {
+          "a": "T2",
+          "b": "T4",
+          "relation": "separate_top_units",
+          "junction_bbox": [
+            0.45,
+            0.16,
+            0.47,
+            0.24
+          ],
+          "gap_px": 30,
+          "evidence": "右侧红色驾驶室顶面与左侧红色驾驶室顶面之间存在清晰的横向间隙，顶面轮廓独立",
+          "confidence": 0.95
+        },
+        {
+          "a": "T2",
+          "b": "T5",
+          "relation": "composition_unknown",
+          "junction_bbox": [
+            0.45,
+            0.25,
+            0.59,
+            0.27
+          ],
+          "gap_px": 40,
+          "evidence": "右侧红色驾驶室顶面与银灰色货厢顶面之间存在清晰的纵向间隙，顶面轮廓断开",
+          "confidence": 0.85
+        }
+      ],
+      "ambiguous_groups": [
+        {
+          "unit_ids": [
+            "U1",
+            "U2",
+            "U5",
+            "U6",
+            "U7",
+            "U8"
+          ],
+          "size": 6
+        },
+        {
+          "unit_ids": [
+            "U3",
+            "U4"
+          ],
+          "size": 2
+        }
+      ],
+      "certain_unit_count": 0,
+      "schema_warnings": [],
+      "possible_duplicate_top_units": [],
+      "model_unit_consistent": false,
+      "unknown_composition_share": 0.75,
+      "latency_s": 217.282,
+      "usage": {
+        "completion_tokens": 18102,
+        "prompt_tokens": 3941,
+        "total_tokens": 22043,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 16185
+        }
+      },
+      "http_attempts": 1,
+      "parse_error": null
+    },
+    {
+      "sample_id": "north_5",
+      "camera": "north",
+      "time": 5,
+      "role": "B unstable 5/4/3 vs truth 5; far adjacent cargo tops, gap-versus-merge target",
+      "truth": 5,
+      "b_counts": [
+        5,
+        4,
+        3
+      ],
+      "count_point": 6,
+      "count_min": 6,
+      "count_max": 6,
+      "resolved": true,
+      "exact_point": false,
+      "range_contains_truth": false,
+      "valid": true,
+      "failure": null,
+      "review_required": false,
+      "review_reasons": [],
+      "relation_stats": {
+        "total": 11,
+        "same_top_surface": 5,
+        "separate_top_units": 6,
+        "composition_unknown": 0,
+        "ambiguous": 0,
+        "with_junction": 11,
+        "with_gap_px": 11
+      },
+      "tops": 11,
+      "top_units": 6,
+      "top_units_detail": [
+        {
+          "top_unit_id": "U1",
+          "top_ids": [
+            "T1"
+          ],
+          "kinds": [
+            "open_top"
+          ],
+          "top_states": [
+            "open"
+          ],
+          "roof_bbox_overview": [
+            0.29,
+            0.5,
+            0.54,
+            0.73
+          ],
+          "locatable": true
+        },
+        {
+          "top_unit_id": "U2",
+          "top_ids": [
+            "T2",
+            "T7"
+          ],
+          "kinds": [
+            "cargo_roof"
+          ],
+          "top_states": [
+            "closed"
+          ],
+          "roof_bbox_overview": [
+            0.45,
+            0.07840000000000001,
+            0.56,
+            0.13
+          ],
+          "locatable": true
+        },
+        {
+          "top_unit_id": "U3",
+          "top_ids": [
+            "T3",
+            "T8"
+          ],
+          "kinds": [
+            "cargo_roof"
+          ],
+          "top_states": [
+            "closed"
+          ],
+          "roof_bbox_overview": [
+            0.4295999999999999,
+            0.15680000000000002,
+            0.54,
+            0.21
+          ],
+          "locatable": true
+        },
+        {
+          "top_unit_id": "U4",
+          "top_ids": [
+            "T4",
+            "T9"
+          ],
+          "kinds": [
+            "cargo_roof"
+          ],
+          "top_states": [
+            "closed"
+          ],
+          "roof_bbox_overview": [
+            0.39,
+            0.25,
+            0.54,
+            0.33
+          ],
+          "locatable": true
+        },
+        {
+          "top_unit_id": "U5",
+          "top_ids": [
+            "T10",
+            "T5"
+          ],
+          "kinds": [
+            "open_top"
+          ],
+          "top_states": [
+            "open"
+          ],
+          "roof_bbox_overview": [
+            0.39,
+            0.32480000000000003,
+            0.53,
+            0.45
+          ],
+          "locatable": true
+        },
+        {
+          "top_unit_id": "U6",
+          "top_ids": [
+            "T11",
+            "T6"
+          ],
+          "kinds": [
+            "cargo_roof"
+          ],
+          "top_states": [
+            "closed"
+          ],
+          "roof_bbox_overview": [
+            0.56,
+            0.11,
+            0.66,
+            0.17
+          ],
+          "locatable": true
+        }
+      ],
+      "relation_detail": [
+        {
+          "a": "T2",
+          "b": "T7",
+          "relation": "same_top_surface",
+          "junction_bbox": [
+            0.45,
+            0.09,
+            0.56,
+            0.13
+          ],
+          "gap_px": 0,
+          "evidence": "同一白色封闭顶面在overview和far视图中轮廓完全匹配，无接缝或间隙",
+          "confidence": 1.0
+        },
+        {
+          "a": "T3",
+          "b": "T8",
+          "relation": "same_top_surface",
+          "junction_bbox": [
+            0.43,
+            0.16,
+            0.54,
+            0.21
+          ],
+          "gap_px": 0,
+          "evidence": "同一深灰色封闭顶面在overview和far视图中轮廓完全匹配，无接缝或间隙",
+          "confidence": 1.0
+        },
+        {
+          "a": "T4",
+          "b": "T9",
+          "relation": "same_top_surface",
+          "junction_bbox": [
+            0.39,
+            0.25,
+            0.54,
+            0.33
+          ],
+          "gap_px": 0,
+          "evidence": "同一蓝色封闭顶面在overview和far视图中轮廓完全匹配，无接缝或间隙",
+          "confidence": 1.0
+        },
+        {
+          "a": "T5",
+          "b": "T10",
+          "relation": "same_top_surface",
+          "junction_bbox": [
+            0.39,
+            0.33,
+            0.53,
+            0.45
+          ],
+          "gap_px": 0,
+          "evidence": "同一敞口货厢顶部开口在overview和far视图中轮廓完全匹配，内部黄色货物轮廓一致",
+          "confidence": 1.0
+        },
+        {
+          "a": "T6",
+          "b": "T11",
+          "relation": "same_top_surface",
+          "junction_bbox": [
+            0.56,
+            0.11,
+            0.66,
+            0.17
+          ],
+          "gap_px": 0,
+          "evidence": "同一红棕色封闭顶面在overview和far视图中轮廓完全匹配，无接缝或间隙",
+          "confidence": 1.0
+        },
+        {
+          "a": "T2",
+          "b": "T3",
+          "relation": "separate_top_units",
+          "junction_bbox": [
+            0.43,
+            0.13,
+            0.56,
+            0.16
+          ],
+          "gap_px": 25,
+          "evidence": "白色顶面与深灰色顶面之间可见清晰的黑色间隙，顶部轮廓完全断开，无连续连接",
+          "confidence": 0.95
+        },
+        {
+          "a": "T3",
+          "b": "T4",
+          "relation": "separate_top_units",
+          "junction_bbox": [
+            0.39,
+            0.21,
+            0.54,
+            0.25
+          ],
+          "gap_px": 30,
+          "evidence": "深灰色顶面与蓝色顶面之间可见清晰的黑色间隙，顶部轮廓断开，无连续连接",
+          "confidence": 0.95
+        },
+        {
+          "a": "T4",
+          "b": "T5",
+          "relation": "separate_top_units",
+          "junction_bbox": [
+            0.39,
+            0.33,
+            0.54,
+            0.35
+          ],
+          "gap_px": 15,
+          "evidence": "蓝色封闭顶面与下方敞口货厢顶部开口之间可见清晰的层级差和间隙，顶部轮廓断开",
+          "confidence": 0.9
+        },
+        {
+          "a": "T2",
+          "b": "T6",
+          "relation": "separate_top_units",
+          "junction_bbox": [
+            0.55,
+            0.09,
+            0.57,
+            0.17
+          ],
+          "gap_px": 20,
+          "evidence": "白色顶面与右侧红棕色顶面之间可见通道空间的间隙，顶部轮廓完全分离",
+          "confidence": 0.95
+        },
+        {
+          "a": "T5",
+          "b": "T1",
+          "relation": "separate_top_units",
+          "junction_bbox": [
+            0.39,
+            0.45,
+            0.54,
+            0.5
+          ],
+          "gap_px": 40,
+          "evidence": "装黄色货物的敞口货厢顶部与近处红色敞口货厢顶部之间可见通道地面的间隙，顶部轮廓完全分离",
+          "confidence": 0.9
+        },
+        {
+          "a": "T6",
+          "b": "T3",
+          "relation": "separate_top_units",
+          "junction_bbox": [
+            0.54,
+            0.16,
+            0.56,
+            0.21
+          ],
+          "gap_px": 15,
+          "evidence": "红棕色顶面与深灰色顶面之间可见通道空间的间隙，顶部轮廓分离",
+          "confidence": 0.9
+        }
+      ],
+      "ambiguous_groups": [],
+      "certain_unit_count": 6,
+      "schema_warnings": [],
+      "possible_duplicate_top_units": [],
+      "model_unit_consistent": true,
+      "unknown_composition_share": 0.0,
+      "latency_s": 164.302,
+      "usage": {
+        "completion_tokens": 13186,
+        "prompt_tokens": 3941,
+        "total_tokens": 17127,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 10580
+        }
+      },
+      "http_attempts": 1,
+      "parse_error": null
+    },
+    {
+      "sample_id": "north_600",
+      "camera": "north",
+      "time": 600,
+      "role": "B stable 4/4/4 vs truth 4; far-cargo preservation control",
+      "truth": 4,
+      "b_counts": [
+        4,
+        4,
+        4
+      ],
+      "count_point": null,
+      "count_min": 1,
+      "count_max": 3,
+      "resolved": false,
+      "exact_point": false,
+      "range_contains_truth": false,
+      "valid": true,
+      "failure": null,
+      "review_required": true,
+      "review_reasons": [
+        "composition_ambiguity_edges:2",
+        "unlocatable_tops",
+        "unknown_or_occluded_top",
+        "model_unresolved:1",
+        "schema_warnings:2",
+        "model_top_unit_hypotheses_inconsistent"
+      ],
+      "relation_stats": {
+        "total": 7,
+        "same_top_surface": 3,
+        "separate_top_units": 1,
+        "composition_unknown": 2,
+        "ambiguous": 1,
+        "with_junction": 7,
+        "with_gap_px": 7
+      },
+      "tops": 8,
+      "top_units": 3,
+      "top_units_detail": [
+        {
+          "top_unit_id": "U1",
+          "top_ids": [
+            "T1",
+            "T2"
+          ],
+          "kinds": [
+            "trailer_roof"
+          ],
+          "top_states": [
+            "closed"
+          ],
+          "roof_bbox_overview": [
+            0.52,
+            0.32,
+            0.7111999999999998,
+            0.58
+          ],
+          "locatable": true
+        },
+        {
+          "top_unit_id": "U2",
+          "top_ids": [
+            "T3"
+          ],
+          "kinds": [
+            "trailer_roof"
+          ],
+          "top_states": [
+            "closed"
+          ],
+          "roof_bbox_overview": [
+            0.17,
+            0.61,
+            0.51,
+            0.95
+          ],
+          "locatable": true
+        },
+        {
+          "top_unit_id": "U3",
+          "top_ids": [
+            "T4"
+          ],
+          "kinds": [
+            "cab_roof"
+          ],
+          "top_states": [
+            "partial"
+          ],
+          "roof_bbox_overview": [
+            0.63,
+            0.76,
+            0.75,
+            0.96
+          ],
+          "locatable": true
+        }
+      ],
+      "relation_detail": [
+        {
+          "a": "T1",
+          "b": "T2",
+          "relation": "same_top_surface",
+          "junction_bbox": [
+            0.52,
+            0.32,
+            0.69,
+            0.58
+          ],
+          "gap_px": 0,
+          "evidence": "T1为图A概览中的红色货厢顶，T2为该顶面在图B放大视图中的呈现，二者为同一连续顶面，无接缝或间隙",
+          "confidence": 1.0
+        },
+        {
+          "a": "T1",
+          "b": "T3",
+          "relation": "separate_top_units",
+          "junction_bbox": [
+            0.45,
+            0.58,
+            0.65,
+            0.62
+          ],
+          "gap_px": 30,
+          "evidence": "红色货厢顶的近端边缘与白色货厢顶的远端边缘之间存在清晰的通道地面间隙，无顶面连接或重叠",
+          "confidence": 0.95
+        },
+        {
+          "a": "T3",
+          "b": "T4",
+          "relation": "composition_unknown",
+          "junction_bbox": [
+            0.51,
+            0.76,
+            0.63,
+            0.96
+          ],
+          "gap_px": 120,
+          "evidence": "白色货厢顶的右侧边缘与叉车顶部的左侧边缘之间存在清晰的通道地面间隙，无顶面连接",
+          "confidence": 0.9
+        },
+        {
+          "a": "T1",
+          "b": "T4",
+          "relation": "composition_unknown",
+          "junction_bbox": [
+            0.5,
+            0.58,
+            0.65,
+            0.76
+          ],
+          "gap_px": 200,
+          "evidence": "红色货厢顶的近端边缘与叉车顶部的远端边缘之间存在通道地面及白色货厢顶的间隔，无顶面连接",
+          "confidence": 0.9
+        },
+        {
+          "a": "T5",
+          "b": "T6",
+          "relation": "same_top_surface",
+          "junction_bbox": [
+            0.4,
+            0.25,
+            0.54,
+            0.33
+          ],
+          "gap_px": 0,
+          "evidence": "T5为图A中近处蓝色波纹顶的概览视图，T6为该顶面在图B中的放大视图，二者为同一顶面，但无法确认是否为货车顶部",
+          "confidence": 1.0
+        },
+        {
+          "a": "T7",
+          "b": "T8",
+          "relation": "same_top_surface",
+          "junction_bbox": [
+            0.43,
+            0.16,
+            0.54,
+            0.25
+          ],
+          "gap_px": 0,
+          "evidence": "T7为图A中远处蓝色波纹顶的概览视图，T8为该顶面在图B中的放大视图，二者为同一顶面，但无法确认是否为货车顶部",
+          "confidence": 1.0
+        },
+        {
+          "a": "T5",
+          "b": "T7",
+          "relation": "ambiguous",
+          "junction_bbox": [
+            0.42,
+            0.25,
+            0.54,
+            0.29
+          ],
+          "gap_px": 20,
+          "evidence": "两个蓝色波纹顶面之间存在清晰间隙，但无法确认是否为货车顶部，无法判定是否为独立车辆顶面",
+          "confidence": 0.5
+        }
+      ],
+      "ambiguous_groups": [
+        {
+          "unit_ids": [
+            "U1",
+            "U2",
+            "U3"
+          ],
+          "size": 3
+        }
+      ],
+      "certain_unit_count": 0,
+      "schema_warnings": [
+        "relation_2_cab_cargo_reinterpreted_as_composition_unknown",
+        "relation_3_cab_cargo_reinterpreted_as_composition_unknown"
+      ],
+      "possible_duplicate_top_units": [],
+      "model_unit_consistent": false,
+      "unknown_composition_share": 0.6666666666666666,
+      "latency_s": 131.736,
+      "usage": {
+        "completion_tokens": 10975,
+        "prompt_tokens": 3941,
+        "total_tokens": 14916,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 8783
+        }
+      },
+      "http_attempts": 1,
+      "parse_error": null
+    }
+  ],
+  "cost": {
+    "main_calls_requested": 4,
+    "http_attempts": 4,
+    "usage_totals": {
+      "prompt_tokens": 15764,
+      "completion_tokens": 57947,
+      "total_tokens": 73711,
+      "reasoning_tokens": 49523
+    },
+    "latency_total_s": 724.473,
+    "latency_mean_s": 181.118,
+    "latency_p95_s": 217.282,
+    "images_per_call": 2
+  },
+  "limits": [
+    "4-frame diagnostic subset, not a 20-frame regression and not a generalization estimate",
+    "truth file read only after all model calls; no truth or review annotation was sent to the model",
+    "roof-only evidence; lower-body connections, plates, tires, lights and body text were excluded by prompt",
+    "no complete roof/relation gold; top-unit correctness is audited qualitatively",
+    "a count range containing truth is not the same as a correct point count"
+  ]
+}

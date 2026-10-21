@@ -1,0 +1,359 @@
+{
+  "schema": "roof-relation-v2-raw",
+  "sample_id": "south_300",
+  "camera": "south",
+  "time": 300,
+  "model": "doubao-seed-2-1-lite-260915",
+  "temperature": 0,
+  "max_tokens": 12000,
+  "thinking_requested": null,
+  "prompt_sha256": "00a5f55a95043fd41e136cdf832f4769a627f16d46cc304ee379d78936a91745",
+  "inputs": [
+    {
+      "role": "overview",
+      "path": "inputs\\south_300_overview.jpg",
+      "sha256": "734506338ef7534c1e21d43c80bea867ab43dc3f12a3b483ceb5c77bd0b5154b"
+    },
+    {
+      "role": "far",
+      "path": "inputs\\south_300_far.jpg",
+      "sha256": "449f09fba811abb7fba03d0b602a45be18b683a3eb84d5d8e99e03917ce80c9c"
+    }
+  ],
+  "http_attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-21T22:31:13+08:00",
+      "status_code": 200,
+      "elapsed_s": 217.282,
+      "error_excerpt": null,
+      "response_sha256": "68a83593cab980c242a08525dcc81f66b4f53d44433926567e645855cc833bd4"
+    }
+  ],
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "{\"image_notes\": \"图B为图A黄色矩形区域的1.6倍放大细节，用于识别远景处的顶面接缝、间隙与轮廓；两图为同一展馆通道场景，所有观察到的顶面均为俯视视角下的封闭顶面，无敞口货厢。\", \"tops\": [{\"top_id\": \"T1\", \"view\": \"far\", \"roof_bbox\": [0.44, 0.21, 0.54, 0.30], \"roof_polygon\": [], \"kind\": \"cargo_roof\", \"top_state\": \"closed\", \"locatable\": true, \"visible_evidence\": \"可见封闭棕色矩形货厢顶面，边缘清晰，无可见开口\"}, {\"top_id\": \"T2\", \"view\": \"far\", \"roof_bbox\": [0.44, 0.30, 0.54, 0.40], \"roof_polygon\": [], \"kind\": \"cab_roof\", \"top_state\": \"closed\", \"locatable\": true, \"visible_evidence\": \"可见红色驾驶室顶部轮廓，边缘清晰，无开口\"}, {\"top_id\": \"T3\", \"view\": \"far\", \"roof_bbox\": [0.34, 0.19, 0.44, 0.28], \"roof_polygon\": [], \"kind\": \"cargo_roof\", \"top_state\": \"closed\", \"locatable\": true, \"visible_evidence\": \"可见封闭灰色矩形货厢顶面，边缘清晰，无可见开口\"}, {\"top_id\": \"T4\", \"view\": \"far\", \"roof_bbox\": [0.34, 0.28, 0.44, 0.42], \"roof_polygon\": [], \"kind\": \"cab_roof\", \"top_state\": \"closed\", \"locatable\": true, \"visible_evidence\": \"可见红色驾驶室顶部轮廓，边缘清晰，无开口\"}, {\"top_id\": \"T5\", \"view\": \"far\", \"roof_bbox\": [0.45, 0.50, 0.60, 0.70], \"roof_polygon\": [], \"kind\": \"trailer_roof\", \"top_state\": \"closed\", \"locatable\": true, \"visible_evidence\": \"可见封闭银灰色带竖向棱线的货厢顶面，边缘清晰，无可见开口\"}, {\"top_id\": \"T6\", \"view\": \"far\", \"roof_bbox\": [0.45, 0.70, 0.60, 0.88], \"roof_polygon\": [], \"kind\": \"cab_roof\", \"top_state\": \"closed\", \"locatable\": true, \"visible_evidence\": \"可见红色驾驶室顶部轮廓，边缘清晰，无开口\"}, {\"top_id\": \"T7\", \"view\": \"far\", \"roof_bbox\": [0.48, 0.88, 0.65, 1.0], \"roof_polygon\": [], \"kind\": \"trailer_roof\", \"top_state\": \"closed\", \"locatable\": true, \"visible_evidence\": \"可见白色封闭货厢顶面的上半部分，边缘清晰，无可见开口\"}, {\"top_id\": \"T8\", \"view\": \"overview\", \"roof_bbox\": [0.48, 0.71, 0.67, 0.93], \"roof_polygon\": [], \"kind\": \"cab_roof\", \"top_state\": \"closed\", \"locatable\": true, \"visible_evidence\": \"可见白色驾驶室顶部的导流罩轮廓，边缘清晰，无开口\"}, {\"top_id\": \"T9\", \"view\": \"overview\", \"roof_bbox\": [0.48, 0.50, 0.67, 0.72], \"roof_polygon\": [], \"kind\": \"trailer_roof\", \"top_state\": \"closed\", \"locatable\": true, \"visible_evidence\": \"可见白色封闭货厢顶面，表面平整，边缘清晰，无可见开口\"}], \"relations\": [{\"a\": \"T1\", \"b\": \"T2\", \"relation\": \"composition_unknown\", \"junction_bbox\": [0.45, 0.17, 0.54, 0.19], \"gap_px\": 20, \"evidence\": \"棕色货厢顶面与红色驾驶室顶面之间存在清晰的垂直间隙和层级差，顶面轮廓断开\", \"confidence\": 0.9}, {\"a\": \"T3\", \"b\": \"T4\", \"relation\": \"composition_unknown\", \"junction_bbox\": [0.36, 0.16, 0.45, 0.18], \"gap_px\": 20, \"evidence\": \"灰色货厢顶面与红色驾驶室顶面之间存在清晰的垂直间隙和层级差，顶面轮廓断开\", \"confidence\": 0.9}, {\"a\": \"T5\", \"b\": \"T6\", \"relation\": \"composition_unknown\", \"junction_bbox\": [0.46, 0.39, 0.59, 0.41], \"gap_px\": 25, \"evidence\": \"银灰色货厢顶面与红色驾驶室顶面之间存在清晰的垂直间隙和层级差，顶面轮廓断开\", \"confidence\": 0.9}, {\"a\": \"T6\", \"b\": \"T7\", \"relation\": \"composition_unknown\", \"junction_bbox\": [0.46, 0.49, 0.63, 0.51], \"gap_px\": 20, \"evidence\": \"红色驾驶室顶面与白色货厢顶面之间存在清晰的垂直间隙和层级差，顶面轮廓断开\", \"confidence\": 0.9}, {\"a\": \"T7\", \"b\": \"T9\", \"relation\": \"same_top_surface\", \"junction_bbox\": [0.48, 0.55, 0.67, 0.57], \"gap_px\": 0, \"evidence\": \"白色货厢顶面在图B下边缘与图A上边缘连续，无可见接缝或间隙，顶面轮廓、颜色一致\", \"confidence\": 1.0}, {\"a\": \"T9\", \"b\": \"T8\", \"relation\": \"composition_unknown\", \"junction_bbox\": [0.48, 0.71, 0.67, 0.73], \"gap_px\": 15, \"evidence\": \"白色货厢顶面与白色驾驶室顶面之间存在清晰的垂直间隙和层级差，顶面轮廓断开\", \"confidence\": 0.9}, {\"a\": \"T1\", \"b\": \"T3\", \"relation\": \"separate_top_units\", \"junction_bbox\": [0.45, 0.11, 0.47, 0.17], \"gap_px\": 30, \"evidence\": \"棕色货厢顶面与灰色货厢顶面之间存在清晰的横向间隙，顶面轮廓独立\", \"confidence\": 0.95}, {\"a\": \"T2\", \"b\": \"T4\", \"relation\": \"separate_top_units\", \"junction_bbox\": [0.45, 0.16, 0.47, 0.24], \"gap_px\": 30, \"evidence\": \"右侧红色驾驶室顶面与左侧红色驾驶室顶面之间存在清晰的横向间隙，顶面轮廓独立\", \"confidence\": 0.95}, {\"a\": \"T2\", \"b\": \"T5\", \"relation\": \"composition_unknown\", \"junction_bbox\": [0.45, 0.25, 0.59, 0.27], \"gap_px\": 40, \"evidence\": \"右侧红色驾驶室顶面与银灰色货厢顶面之间存在清晰的纵向间隙，顶面轮廓断开\", \"confidence\": 0.85}], \"top_unit_hypotheses\": [{\"top_unit_id\": \"U1\", \"top_ids\": [\"T7\", \"T9\"], \"why\": \"白色货厢顶面在图B下边缘与图A上边缘连续，无可见接缝或间隙，顶面轮廓、颜色、纹理一致，属于同一连续顶面\"}], \"scope_notes\": \"观察范围覆盖展馆通道从远端（图上部）到近端（图下部）的所有可见货车顶面；通道两侧为搭建中的展台钢结构，无其他货车顶面干扰；远景处的顶面经图B放大后边缘清晰，无严重遮挡导致的顶面分界不清。\", \"unresolved\": []}",
+          "reasoning_content": "\n我现在要处理用户的请求，我明确了查看范围，两张图的对应关系也理清了。\n\n我正按从远到近的顺序梳理所有可定位的顶面观察点，已找到最远端的棕色封闭货厢顶，它在远景视图中显示清晰，目前正在核对各观测点的坐标归属规则，确保输出内容符合要求。我已确认两张图的定义，将据此规范顶面 bounding box 的坐标归属。\n\n我确认了顶面观测点的标注规则，可见的可定位顶面都需标注所属视图，将按从远到近的顺序完成全量识别，目前已定位到最远端棕色封闭货厢顶在远景图中的对应区域。\n\n我已明确两张图的坐标映射规则，完成最远端棕色封闭货厢顶的信息标注，又定位到远景图中的红色封闭驾驶室顶，目前正按从远到近的顺序推进观测点梳理。\n\n我修正了此前的观测点排序判断偏差，确认货车车头朝向图的近侧（下方）、货厢位于远侧（上方），也理清了灰色货厢顶、红色驾驶室顶的前后排布逻辑。\n\n我修正了此前的方向判断偏差，确认最远端的红色车头为T1牵引头，其后方远侧的棕色货厢顶为T2，此前的方向判断确实存在错误。\n\n我已修正方向判断偏差，梳理出从远到近的观测点排序，最远端为通道白色门，接下来依次是棕色封闭货厢顶、红色封闭驾驶室顶。\n\n我已继续推进观测点梳理，按从远到近的顺序依次识别到灰色封闭货厢顶、红色封闭驾驶室顶、银灰色带竖条纹封闭挂车顶，各对应观测点的属性均已明确。\n\n我又识别到两个近侧观测点，分别为银灰色挂车顶近侧的红色驾驶室顶、图B最下方的白色封闭挂车顶，同时明确了驾驶室与对应货厢的远近排布逻辑。\n\n我已明确图B为图A对应区域的放大图，所有已识别的近侧观测点均属于图B范围，又定位到图A近侧的白色东风商用车顶为T8，其属性及可见特征均已明确。\n\n我已识别到T9为T8后方远侧的白色封闭货厢顶，明确其属性及可见特征，同时规范了顶面bounding box的识别规则，仅标注对应车辆顶部区域，已核对T1、T9的归一化坐标归属无误。\n\n经核对，T1在图B中的归一化坐标归属准确无误。\n\n我已完成T2的属性标注，确认其为红色封闭驾驶室顶，对应坐标、可见特征均符合规范。\n\n我已完成T3、T4的属性标注，二者均为封闭顶类，T3是灰色货厢顶，T4是左侧红色驾驶室顶，对应坐标、可见特征均符合规范。\n\n我修正了此前的观测点排序偏差，确认银灰色带竖条纹货厢顶（T5）位于第三个红色驾驶室顶（T6）的远侧上方，现已完成T5的属性标注，明确其为封闭货厢顶，对应坐标、可见特征均符合规范。\n\n我已完成T6、T7的属性标注，二者均为封闭顶类，T6是近侧的红色驾驶室顶，T7是图B最下方的白色货厢顶，对应坐标、可见特征均符合规范。\n\n我已识别到图A的T8观测点，为白色东风商用车驾驶室顶，对应坐标、可见特征均符合规范，同时明确了图A与图B的范围划分规则。\n\n我已完成T9的属性标注，确认其为白色封闭货厢顶，对应坐标、可见特征均符合规范，目前已启动顶面相邻关系梳理工作，首个相邻对T1与T2的上下相邻关系及 junction 坐标归属规则已明确。\n\n为完成T1与T2的junction坐标转换，我已明确图B到图A的坐标映射计算公式。\n\n我已按既定的坐标映射公式，完成T1与T2接缝的坐标转换，得出对应图A的bounding box结果。\n\n经核实，T1与T2为分离的不同车辆顶面，无法判定属于同一车辆，归属关系标注为composition_unknown，二者的间隙约为20像素。\n\n我已明确T1与T2的证据及置信度为0.9，同时确认T3与T4为上下相邻的不同顶面，T3位于远侧。\n\n我已完成T3与T4接缝的坐标转换，确认二者为不同车辆顶面，归属关系未知，间隙约20像素，证据及置信度均为0.9；同时明确T5为远侧银灰色带竖条纹货厢顶，T6为近侧红色驾驶室顶，二者上下相邻。\n\n我已完成T5与T6接缝的坐标转换，确认二者为不同车辆顶面，归属关系未知，间隙约25像素，证据及置信度均为0.9；同时明确T6为远侧红色驾驶室顶，T7为近侧白色货厢顶，二者上下相邻。\n\n我已完成T6与T7接缝的坐标转换，初步判断二者为不同车辆顶面、归属关系未知且存在间隙，随后修正此前对驾驶室朝向的判断偏差，明确红色驾驶室的近侧为车头方向，此前误将属于更前方车辆的货厢顶归到该驾驶室后方。\n\n我进一步核实确认，T6为红色驾驶室顶、T7为白色货厢顶，二者属于不同车辆的顶面，存在清晰间隙，此前对驾驶室朝向及所属车辆货厢位置的判断完全错误。\n\n我已明确通道纵向延伸方向，确认所有货车均朝向图的近侧行驶，顶面从远到近的排布顺序为货厢顶→驾驶室顶。\n\n结合已确认的货车顶面排布规则，我判断T1与T2、T3与T4、T5与T6均为同一辆车的货厢顶与驾驶室顶，二者为连接的不同顶面，存在间隙。\n\n我已确认T7、T8属于同一辆车的货厢与驾驶室顶面，二者均符合远货厢近驾驶室的排布逻辑。同时核实到T6与T7上下相邻，T7位于T6近侧，不符合货厢在驾驶室远侧的排布规则。\n\n我已核实T7与T8属于同一车辆的货厢与驾驶室顶面，同时确认T6与T7为上下相邻的不同车辆顶面，存在清晰间隙。\n\n我已明确本次相邻顶面的判定规则，仅可依据车顶、货厢顶面及顶部轮廓识别，不得使用车身结构等其他信息，此前的判断方法不符合要求。\n\n我已发现此前的相邻顶面判定违反规则要求，不能使用车辆结构、车身信息，仅能依据顶部证据判定，同时明确了三类顶面单元的关系定义。\n\n我已明确三类顶面关系的判定逻辑：先判断是否为同一连续顶面，再区分是否为不同顶面单元，最后对不同单元且为驾驶室顶与货厢顶的情况，归属关系均判定为composition_unknown。\n\n我已找到规则6的明确表述，补充明确：同为货厢顶、敞顶或集装箱顶的两个顶面，有清晰间隙或独立顶部轮廓即可判定为不同顶面单元；若分别为驾驶室顶与货厢顶，即使分离也必须判定为归属未知，严禁主观拆分或合并。\n\n我已摒弃此前的错误判定思路，严格按照规则要求仅依据顶面特征重新梳理所有顶面信息，目前已完成T1、T2、T3三个远侧顶面的属性标注，相关信息均已核对无误。\n\n我已完成T4、T5的属性标注，二者均符合规范，对应特征清晰可辨。\n\n我已完成T6、T7、T8三个远侧顶面的属性标注，相关信息均已核对无误，符合规范要求。\n\n我已完成T9的属性标注，随后发现T7与T9实为同一顶面。\n\n经核实，T7是白色货厢顶在图B的下部分，T9是同一货厢顶在图A的上部分，二者属于同一连续顶面，无接缝，关系判定为same_top_surface。\n\n我已确认T7与T9为同一连续顶面，关系判定为same_top_surface，现已完成T1与T2的关系判定，二者为不同顶面单元，归属关系未知。\n\n我已完成T1与T2接缝的坐标转换，确认二者间隙约20像素，证据及置信度均为0.9；同时完成T3与T4的关系判定，二者为不同顶面单元，归属关系未知。\n\n我已完成T3与T4接缝的坐标转换，确认二者间隙约20像素，证据及置信度均为0.9；同时完成T5与T6的关系判定，二者为不同顶面单元，归属关系未知。\n\n我已完成T5与T6接缝的坐标转换，确认二者间隙约25像素，证据及置信度均为0.9；同时完成T6与T7的关系判定，二者为不同顶面单元，归属关系未知。\n\n我已完成T6与T7接缝的坐标转换，确认二者间隙约20像素，证据及置信度均为0.9；同时核实确认T7与T9为同一连续顶面，关系判定为same_top_surface。\n\n我已明确T7与T9接缝的坐标、间隙及判定依据，证据置信度为1.0；同时完成T9与T8的关系判定，二者为不同顶面单元，归属关系未知。\n\n我已完成T9与T8接缝的坐标、间隙及判定依据核对，证据置信度为0.9；同时完成T1与T3的关系判定，二者同为货厢顶，左右相邻且有清晰间隙，判定为不同顶面单元。\n\n我已完成T1与T3接缝的坐标转换，确认二者为不同顶面单元，证据及置信度为0.95；同时完成T2与T4的关系判定，二者同为驾驶室顶，左右相邻有清晰间隙，判定为不同顶面单元。\n\n我已完成T2与T4接缝的坐标转换，确认二者为不同顶面单元，证据及置信度均为0.95；随后核查T4与T5的相邻关系，经计算二者中心线距离较远，且中间隔有其他顶面，不符合规则要求的相邻判定条件，予以跳过。\n\n我核查发现T2与T5中心线接近，属于纵向相邻的不同顶面单元，已完成二者接缝的坐标转换，确认间隙约40像素。\n\nT2与T5的关系已判定为归属未知，证据及置信度为0.85，我目前正在梳理连续顶面匹配项，已完成U1的匹配判定，对应白色货厢顶面跨两图连续无接缝。\n\n我已梳理完其余连续顶面匹配项，其余顶面均为独立单元，同时明确了图B为图A对应区域的放大细节、两图覆盖同一展馆通道等核心说明，目前已确认T1的货厢顶属性符合规范。\n\n已完成所有顶面的属性复核，确认T2至T9的类型均符合规范，所有顶面均为封闭状态，轮廓清晰可定位。\n\n我已核对确认所有顶面bounding box仅标注对应车顶、未包含车身，各顶面间的间隙数值也均符合规范，接下来我会将所有整理内容输出为无多余格式的严格JSON。\n\n我确认T7与T9为同一顶面需纳入匹配项，已核查所有判定均仅基于顶面特征，未使用车身等违规信息，完全符合规则要求。我正在整理JSON内容，已完成image_notes字段的编写。\n\n我正在按要求整理输出的无格式严格JSON内容，目前已经完成了T1至T9所有顶面的核心属性字段编写，覆盖了顶面ID、所属视图、 bounding box坐标、顶面类型、封闭状态、可定位性、可见判定依据等要求的信息项，所有属性均已核对无误，完全符合规范要求。\n\n我已完成所有顶面相邻关系的判定，整理出了包含关联双方、关系类型、接缝 bounding box、间隙数值、判定依据、置信度等信息的完整关系列表，所有判定均严格遵循仅依据顶面特征的规则，完全符合要求。目前我正在梳理顶面单元假设相关内容，已完成U1对应T7、T9为同一连续顶面的匹配判定，剩余假设项仍在整理中。\n\n我已完成U1匹配项的完整判定，同时梳理出本次观察的完整范围，确认无其他货车顶面干扰。\n\n我已核实T4与T5因中间隔有其他顶面不符合相邻判定条件无需纳入关系列表，同时复核确认T1与T3、T2与T4的相邻关系判定准确，所有顶面及接缝的bounding box坐标均满足x1<x2、y1<y2要求，置信度也均在0-1区间内，所有数值符合规范。\n\n间隙值均为非负，即将输出无格式JSON。\n",
+          "encrypted_content": "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",
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1792593073,
+    "id": "0217925928561343b5dce2a5bc21667aa7f64302f04be086cdc4b",
+    "model": "doubao-seed-2-1-lite-260915",
+    "service_tier": "default",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 18102,
+      "prompt_tokens": 3941,
+      "total_tokens": 22043,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 16185
+      }
+    }
+  },
+  "content": "{\"image_notes\": \"图B为图A黄色矩形区域的1.6倍放大细节，用于识别远景处的顶面接缝、间隙与轮廓；两图为同一展馆通道场景，所有观察到的顶面均为俯视视角下的封闭顶面，无敞口货厢。\", \"tops\": [{\"top_id\": \"T1\", \"view\": \"far\", \"roof_bbox\": [0.44, 0.21, 0.54, 0.30], \"roof_polygon\": [], \"kind\": \"cargo_roof\", \"top_state\": \"closed\", \"locatable\": true, \"visible_evidence\": \"可见封闭棕色矩形货厢顶面，边缘清晰，无可见开口\"}, {\"top_id\": \"T2\", \"view\": \"far\", \"roof_bbox\": [0.44, 0.30, 0.54, 0.40], \"roof_polygon\": [], \"kind\": \"cab_roof\", \"top_state\": \"closed\", \"locatable\": true, \"visible_evidence\": \"可见红色驾驶室顶部轮廓，边缘清晰，无开口\"}, {\"top_id\": \"T3\", \"view\": \"far\", \"roof_bbox\": [0.34, 0.19, 0.44, 0.28], \"roof_polygon\": [], \"kind\": \"cargo_roof\", \"top_state\": \"closed\", \"locatable\": true, \"visible_evidence\": \"可见封闭灰色矩形货厢顶面，边缘清晰，无可见开口\"}, {\"top_id\": \"T4\", \"view\": \"far\", \"roof_bbox\": [0.34, 0.28, 0.44, 0.42], \"roof_polygon\": [], \"kind\": \"cab_roof\", \"top_state\": \"closed\", \"locatable\": true, \"visible_evidence\": \"可见红色驾驶室顶部轮廓，边缘清晰，无开口\"}, {\"top_id\": \"T5\", \"view\": \"far\", \"roof_bbox\": [0.45, 0.50, 0.60, 0.70], \"roof_polygon\": [], \"kind\": \"trailer_roof\", \"top_state\": \"closed\", \"locatable\": true, \"visible_evidence\": \"可见封闭银灰色带竖向棱线的货厢顶面，边缘清晰，无可见开口\"}, {\"top_id\": \"T6\", \"view\": \"far\", \"roof_bbox\": [0.45, 0.70, 0.60, 0.88], \"roof_polygon\": [], \"kind\": \"cab_roof\", \"top_state\": \"closed\", \"locatable\": true, \"visible_evidence\": \"可见红色驾驶室顶部轮廓，边缘清晰，无开口\"}, {\"top_id\": \"T7\", \"view\": \"far\", \"roof_bbox\": [0.48, 0.88, 0.65, 1.0], \"roof_polygon\": [], \"kind\": \"trailer_roof\", \"top_state\": \"closed\", \"locatable\": true, \"visible_evidence\": \"可见白色封闭货厢顶面的上半部分，边缘清晰，无可见开口\"}, {\"top_id\": \"T8\", \"view\": \"overview\", \"roof_bbox\": [0.48, 0.71, 0.67, 0.93], \"roof_polygon\": [], \"kind\": \"cab_roof\", \"top_state\": \"closed\", \"locatable\": true, \"visible_evidence\": \"可见白色驾驶室顶部的导流罩轮廓，边缘清晰，无开口\"}, {\"top_id\": \"T9\", \"view\": \"overview\", \"roof_bbox\": [0.48, 0.50, 0.67, 0.72], \"roof_polygon\": [], \"kind\": \"trailer_roof\", \"top_state\": \"closed\", \"locatable\": true, \"visible_evidence\": \"可见白色封闭货厢顶面，表面平整，边缘清晰，无可见开口\"}], \"relations\": [{\"a\": \"T1\", \"b\": \"T2\", \"relation\": \"composition_unknown\", \"junction_bbox\": [0.45, 0.17, 0.54, 0.19], \"gap_px\": 20, \"evidence\": \"棕色货厢顶面与红色驾驶室顶面之间存在清晰的垂直间隙和层级差，顶面轮廓断开\", \"confidence\": 0.9}, {\"a\": \"T3\", \"b\": \"T4\", \"relation\": \"composition_unknown\", \"junction_bbox\": [0.36, 0.16, 0.45, 0.18], \"gap_px\": 20, \"evidence\": \"灰色货厢顶面与红色驾驶室顶面之间存在清晰的垂直间隙和层级差，顶面轮廓断开\", \"confidence\": 0.9}, {\"a\": \"T5\", \"b\": \"T6\", \"relation\": \"composition_unknown\", \"junction_bbox\": [0.46, 0.39, 0.59, 0.41], \"gap_px\": 25, \"evidence\": \"银灰色货厢顶面与红色驾驶室顶面之间存在清晰的垂直间隙和层级差，顶面轮廓断开\", \"confidence\": 0.9}, {\"a\": \"T6\", \"b\": \"T7\", \"relation\": \"composition_unknown\", \"junction_bbox\": [0.46, 0.49, 0.63, 0.51], \"gap_px\": 20, \"evidence\": \"红色驾驶室顶面与白色货厢顶面之间存在清晰的垂直间隙和层级差，顶面轮廓断开\", \"confidence\": 0.9}, {\"a\": \"T7\", \"b\": \"T9\", \"relation\": \"same_top_surface\", \"junction_bbox\": [0.48, 0.55, 0.67, 0.57], \"gap_px\": 0, \"evidence\": \"白色货厢顶面在图B下边缘与图A上边缘连续，无可见接缝或间隙，顶面轮廓、颜色一致\", \"confidence\": 1.0}, {\"a\": \"T9\", \"b\": \"T8\", \"relation\": \"composition_unknown\", \"junction_bbox\": [0.48, 0.71, 0.67, 0.73], \"gap_px\": 15, \"evidence\": \"白色货厢顶面与白色驾驶室顶面之间存在清晰的垂直间隙和层级差，顶面轮廓断开\", \"confidence\": 0.9}, {\"a\": \"T1\", \"b\": \"T3\", \"relation\": \"separate_top_units\", \"junction_bbox\": [0.45, 0.11, 0.47, 0.17], \"gap_px\": 30, \"evidence\": \"棕色货厢顶面与灰色货厢顶面之间存在清晰的横向间隙，顶面轮廓独立\", \"confidence\": 0.95}, {\"a\": \"T2\", \"b\": \"T4\", \"relation\": \"separate_top_units\", \"junction_bbox\": [0.45, 0.16, 0.47, 0.24], \"gap_px\": 30, \"evidence\": \"右侧红色驾驶室顶面与左侧红色驾驶室顶面之间存在清晰的横向间隙，顶面轮廓独立\", \"confidence\": 0.95}, {\"a\": \"T2\", \"b\": \"T5\", \"relation\": \"composition_unknown\", \"junction_bbox\": [0.45, 0.25, 0.59, 0.27], \"gap_px\": 40, \"evidence\": \"右侧红色驾驶室顶面与银灰色货厢顶面之间存在清晰的纵向间隙，顶面轮廓断开\", \"confidence\": 0.85}], \"top_unit_hypotheses\": [{\"top_unit_id\": \"U1\", \"top_ids\": [\"T7\", \"T9\"], \"why\": \"白色货厢顶面在图B下边缘与图A上边缘连续，无可见接缝或间隙，顶面轮廓、颜色、纹理一致，属于同一连续顶面\"}], \"scope_notes\": \"观察范围覆盖展馆通道从远端（图上部）到近端（图下部）的所有可见货车顶面；通道两侧为搭建中的展台钢结构，无其他货车顶面干扰；远景处的顶面经图B放大后边缘清晰，无严重遮挡导致的顶面分界不清。\", \"unresolved\": []}",
+  "parsed": {
+    "image_notes": "图B为图A黄色矩形区域的1.6倍放大细节，用于识别远景处的顶面接缝、间隙与轮廓；两图为同一展馆通道场景，所有观察到的顶面均为俯视视角下的封闭顶面，无敞口货厢。",
+    "tops": [
+      {
+        "top_id": "T1",
+        "view": "far",
+        "roof_bbox": [
+          0.44,
+          0.21,
+          0.54,
+          0.3
+        ],
+        "roof_polygon": [],
+        "kind": "cargo_roof",
+        "top_state": "closed",
+        "locatable": true,
+        "visible_evidence": "可见封闭棕色矩形货厢顶面，边缘清晰，无可见开口"
+      },
+      {
+        "top_id": "T2",
+        "view": "far",
+        "roof_bbox": [
+          0.44,
+          0.3,
+          0.54,
+          0.4
+        ],
+        "roof_polygon": [],
+        "kind": "cab_roof",
+        "top_state": "closed",
+        "locatable": true,
+        "visible_evidence": "可见红色驾驶室顶部轮廓，边缘清晰，无开口"
+      },
+      {
+        "top_id": "T3",
+        "view": "far",
+        "roof_bbox": [
+          0.34,
+          0.19,
+          0.44,
+          0.28
+        ],
+        "roof_polygon": [],
+        "kind": "cargo_roof",
+        "top_state": "closed",
+        "locatable": true,
+        "visible_evidence": "可见封闭灰色矩形货厢顶面，边缘清晰，无可见开口"
+      },
+      {
+        "top_id": "T4",
+        "view": "far",
+        "roof_bbox": [
+          0.34,
+          0.28,
+          0.44,
+          0.42
+        ],
+        "roof_polygon": [],
+        "kind": "cab_roof",
+        "top_state": "closed",
+        "locatable": true,
+        "visible_evidence": "可见红色驾驶室顶部轮廓，边缘清晰，无开口"
+      },
+      {
+        "top_id": "T5",
+        "view": "far",
+        "roof_bbox": [
+          0.45,
+          0.5,
+          0.6,
+          0.7
+        ],
+        "roof_polygon": [],
+        "kind": "trailer_roof",
+        "top_state": "closed",
+        "locatable": true,
+        "visible_evidence": "可见封闭银灰色带竖向棱线的货厢顶面，边缘清晰，无可见开口"
+      },
+      {
+        "top_id": "T6",
+        "view": "far",
+        "roof_bbox": [
+          0.45,
+          0.7,
+          0.6,
+          0.88
+        ],
+        "roof_polygon": [],
+        "kind": "cab_roof",
+        "top_state": "closed",
+        "locatable": true,
+        "visible_evidence": "可见红色驾驶室顶部轮廓，边缘清晰，无开口"
+      },
+      {
+        "top_id": "T7",
+        "view": "far",
+        "roof_bbox": [
+          0.48,
+          0.88,
+          0.65,
+          1.0
+        ],
+        "roof_polygon": [],
+        "kind": "trailer_roof",
+        "top_state": "closed",
+        "locatable": true,
+        "visible_evidence": "可见白色封闭货厢顶面的上半部分，边缘清晰，无可见开口"
+      },
+      {
+        "top_id": "T8",
+        "view": "overview",
+        "roof_bbox": [
+          0.48,
+          0.71,
+          0.67,
+          0.93
+        ],
+        "roof_polygon": [],
+        "kind": "cab_roof",
+        "top_state": "closed",
+        "locatable": true,
+        "visible_evidence": "可见白色驾驶室顶部的导流罩轮廓，边缘清晰，无开口"
+      },
+      {
+        "top_id": "T9",
+        "view": "overview",
+        "roof_bbox": [
+          0.48,
+          0.5,
+          0.67,
+          0.72
+        ],
+        "roof_polygon": [],
+        "kind": "trailer_roof",
+        "top_state": "closed",
+        "locatable": true,
+        "visible_evidence": "可见白色封闭货厢顶面，表面平整，边缘清晰，无可见开口"
+      }
+    ],
+    "relations": [
+      {
+        "a": "T1",
+        "b": "T2",
+        "relation": "composition_unknown",
+        "junction_bbox": [
+          0.45,
+          0.17,
+          0.54,
+          0.19
+        ],
+        "gap_px": 20,
+        "evidence": "棕色货厢顶面与红色驾驶室顶面之间存在清晰的垂直间隙和层级差，顶面轮廓断开",
+        "confidence": 0.9
+      },
+      {
+        "a": "T3",
+        "b": "T4",
+        "relation": "composition_unknown",
+        "junction_bbox": [
+          0.36,
+          0.16,
+          0.45,
+          0.18
+        ],
+        "gap_px": 20,
+        "evidence": "灰色货厢顶面与红色驾驶室顶面之间存在清晰的垂直间隙和层级差，顶面轮廓断开",
+        "confidence": 0.9
+      },
+      {
+        "a": "T5",
+        "b": "T6",
+        "relation": "composition_unknown",
+        "junction_bbox": [
+          0.46,
+          0.39,
+          0.59,
+          0.41
+        ],
+        "gap_px": 25,
+        "evidence": "银灰色货厢顶面与红色驾驶室顶面之间存在清晰的垂直间隙和层级差，顶面轮廓断开",
+        "confidence": 0.9
+      },
+      {
+        "a": "T6",
+        "b": "T7",
+        "relation": "composition_unknown",
+        "junction_bbox": [
+          0.46,
+          0.49,
+          0.63,
+          0.51
+        ],
+        "gap_px": 20,
+        "evidence": "红色驾驶室顶面与白色货厢顶面之间存在清晰的垂直间隙和层级差，顶面轮廓断开",
+        "confidence": 0.9
+      },
+      {
+        "a": "T7",
+        "b": "T9",
+        "relation": "same_top_surface",
+        "junction_bbox": [
+          0.48,
+          0.55,
+          0.67,
+          0.57
+        ],
+        "gap_px": 0,
+        "evidence": "白色货厢顶面在图B下边缘与图A上边缘连续，无可见接缝或间隙，顶面轮廓、颜色一致",
+        "confidence": 1.0
+      },
+      {
+        "a": "T9",
+        "b": "T8",
+        "relation": "composition_unknown",
+        "junction_bbox": [
+          0.48,
+          0.71,
+          0.67,
+          0.73
+        ],
+        "gap_px": 15,
+        "evidence": "白色货厢顶面与白色驾驶室顶面之间存在清晰的垂直间隙和层级差，顶面轮廓断开",
+        "confidence": 0.9
+      },
+      {
+        "a": "T1",
+        "b": "T3",
+        "relation": "separate_top_units",
+        "junction_bbox": [
+          0.45,
+          0.11,
+          0.47,
+          0.17
+        ],
+        "gap_px": 30,
+        "evidence": "棕色货厢顶面与灰色货厢顶面之间存在清晰的横向间隙，顶面轮廓独立",
+        "confidence": 0.95
+      },
+      {
+        "a": "T2",
+        "b": "T4",
+        "relation": "separate_top_units",
+        "junction_bbox": [
+          0.45,
+          0.16,
+          0.47,
+          0.24
+        ],
+        "gap_px": 30,
+        "evidence": "右侧红色驾驶室顶面与左侧红色驾驶室顶面之间存在清晰的横向间隙，顶面轮廓独立",
+        "confidence": 0.95
+      },
+      {
+        "a": "T2",
+        "b": "T5",
+        "relation": "composition_unknown",
+        "junction_bbox": [
+          0.45,
+          0.25,
+          0.59,
+          0.27
+        ],
+        "gap_px": 40,
+        "evidence": "右侧红色驾驶室顶面与银灰色货厢顶面之间存在清晰的纵向间隙，顶面轮廓断开",
+        "confidence": 0.85
+      }
+    ],
+    "top_unit_hypotheses": [
+      {
+        "top_unit_id": "U1",
+        "top_ids": [
+          "T7",
+          "T9"
+        ],
+        "why": "白色货厢顶面在图B下边缘与图A上边缘连续，无可见接缝或间隙，顶面轮廓、颜色、纹理一致，属于同一连续顶面"
+      }
+    ],
+    "scope_notes": "观察范围覆盖展馆通道从远端（图上部）到近端（图下部）的所有可见货车顶面；通道两侧为搭建中的展台钢结构，无其他货车顶面干扰；远景处的顶面经图B放大后边缘清晰，无严重遮挡导致的顶面分界不清。",
+    "unresolved": []
+  },
+  "parse_error": null,
+  "usage": {
+    "completion_tokens": 18102,
+    "prompt_tokens": 3941,
+    "total_tokens": 22043,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 16185
+    }
+  },
+  "latency_s": 217.282,
+  "failure": null
+}

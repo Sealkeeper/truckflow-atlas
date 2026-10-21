@@ -1,0 +1,191 @@
+{
+  "schema": "roof-relation-v2-evidence-manifest",
+  "created_at": "2026-10-21T22:47:00+08:00",
+  "scope": "Public route directory only. Hashes cover the frozen prompt, deterministic model inputs, raw responses, metrics, post-hoc analysis, visualizations, report, and reproduction notes. This manifest does not hash itself.",
+  "canonical_session_dir": "sessions/part_relation_v2",
+  "frozen_primary": {
+    "valid_count": 4,
+    "failure_count": 0,
+    "resolved_count": 1,
+    "exact_point_count": 0,
+    "range_contains_truth_count": 2,
+    "denominator": 4
+  },
+  "files": [
+    {
+      "path": "attempts.json",
+      "bytes": 1306,
+      "sha256": "3377cd49b4ff842302c4f4617ad7f289bd40b1146da0a065d9d001e75907c4ad"
+    },
+    {
+      "path": "frozen_inputs.json",
+      "bytes": 5882,
+      "sha256": "9e175dd2f147c8275fb0ad36ebc6477b94a7f39b60599156f09cbc902976ba8e"
+    },
+    {
+      "path": "inputs/north_5_far.jpg",
+      "bytes": 762778,
+      "sha256": "f9f434ea1f3059eda13ce651cad29bdcaaf22e767f11dfe8d09d221c91cd275b"
+    },
+    {
+      "path": "inputs/north_5_overview.jpg",
+      "bytes": 772458,
+      "sha256": "0df0dfa16580476ef93babc8a3f6bb42c444d70241e9bba0f56ee2d75f6dc8f7"
+    },
+    {
+      "path": "inputs/north_600_far.jpg",
+      "bytes": 753569,
+      "sha256": "c32a266afb8339b7a5f00d019f4e3921503f04a7836b7f350d3a6e40afe6eb56"
+    },
+    {
+      "path": "inputs/north_600_overview.jpg",
+      "bytes": 761404,
+      "sha256": "3a65f223ccc9fac1ee497157498c95f20fd19a221f04428ac5d8a3ce21f2168f"
+    },
+    {
+      "path": "inputs/south_2100_far.jpg",
+      "bytes": 799465,
+      "sha256": "18e499e51ce8e70a007e387ef1121843cad79474688429dc8e766278a87c5639"
+    },
+    {
+      "path": "inputs/south_2100_overview.jpg",
+      "bytes": 799344,
+      "sha256": "5546bd7eeec303fbef4b12edf9bcf006d20b66b4cc415dd367f13e63f554ba46"
+    },
+    {
+      "path": "inputs/south_300_far.jpg",
+      "bytes": 804055,
+      "sha256": "449f09fba811abb7fba03d0b602a45be18b683a3eb84d5d8e99e03917ce80c9c"
+    },
+    {
+      "path": "inputs/south_300_overview.jpg",
+      "bytes": 790577,
+      "sha256": "734506338ef7534c1e21d43c80bea867ab43dc3f12a3b483ceb5c77bd0b5154b"
+    },
+    {
+      "path": "metrics.json",
+      "bytes": 34186,
+      "sha256": "e20887f49c7645a12a69f2e5b6ac36f11f4efce592a4285563d87600bcf41cf2"
+    },
+    {
+      "path": "PLAN.md",
+      "bytes": 10761,
+      "sha256": "67e99f90f3a08341c98e4c2967d1794060f7f62e626766b63aa35efa4c0e5eb8"
+    },
+    {
+      "path": "posthoc_analysis.py",
+      "bytes": 10398,
+      "sha256": "b9edcf23a08922c6c2ca202eb1e8082610ab02270ff7530d66a4ce03b7e68108"
+    },
+    {
+      "path": "posthoc_metrics.json",
+      "bytes": 20811,
+      "sha256": "b37dc01fa93a630529e0da8aea83eb73d98a01cea81fe9707e393dc548c2292d"
+    },
+    {
+      "path": "prompt_roof_relation.txt",
+      "bytes": 4912,
+      "sha256": "00a5f55a95043fd41e136cdf832f4769a627f16d46cc304ee379d78936a91745"
+    },
+    {
+      "path": "raw/north_5.json",
+      "bytes": 51868,
+      "sha256": "2fbce560538ecfb66bf44e3f9a45d83f505712b8bd9b80c5bf68c188ce961fd2"
+    },
+    {
+      "path": "raw/north_600.json",
+      "bytes": 44523,
+      "sha256": "a8ed16f922a7e59473f94a1d5a0ac4eadd8e3238a8483a55792466b923e802c1"
+    },
+    {
+      "path": "raw/south_2100.json",
+      "bytes": 46889,
+      "sha256": "7d05f666c4ff16895e5f231af53850fc057dad4d045afafcdcc78fe70253f883"
+    },
+    {
+      "path": "raw/south_300.json",
+      "bytes": 52057,
+      "sha256": "d20a28acff4656c042c08e3533efa0f55fb4967aeed3e35ae8ebdcee59dfd214"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 12282,
+      "sha256": "d905cb3925c9931b7ad1105959a1dd6923673d958cb3d09c6ca8c13fe3f3ec08"
+    },
+    {
+      "path": "RUN_COMMANDS.md",
+      "bytes": 1159,
+      "sha256": "0a2db7c858540288cd514c75ab2cb20718e50b24a2adaeadcde0979d005fbaa6"
+    },
+    {
+      "path": "run_part_relation.py",
+      "bytes": 44713,
+      "sha256": "69569517642ca950d89500b9966430a6e36951cd17e8aa93649bef982a62d068"
+    },
+    {
+      "path": "viz/contact_sheet.jpg",
+      "bytes": 1218947,
+      "sha256": "239680a1550672c04f6cc765fdb9176a440187d3ceb262560c50eafb2a6a1a0b"
+    },
+    {
+      "path": "viz/north_5_roof_full.jpg",
+      "bytes": 635241,
+      "sha256": "b8cacc8e5bdae30771f249b9126275c7b1c0f35881896283f6fb7d5903f4d830"
+    },
+    {
+      "path": "viz/north_5_roof_overview.jpg",
+      "bytes": 857320,
+      "sha256": "3ddd1292052dfea9afa9a97eddf5d57fcbd281dda5ca342784fc5dc1922280ac"
+    },
+    {
+      "path": "viz/north_5_roof_vs_B.jpg",
+      "bytes": 528643,
+      "sha256": "213ef28ce22df546c316f795b129f603043969e7ec0169307abadfd17c1963a1"
+    },
+    {
+      "path": "viz/north_600_roof_full.jpg",
+      "bytes": 619978,
+      "sha256": "49383d0d79aa4237e03fb120991a9947854cbe53ecbf85dc5aec85627297efe5"
+    },
+    {
+      "path": "viz/north_600_roof_overview.jpg",
+      "bytes": 848678,
+      "sha256": "56a680a978de95bdc6d9e3eda559c0082c23420dd192775b6cabfcdb01b849bd"
+    },
+    {
+      "path": "viz/north_600_roof_vs_B.jpg",
+      "bytes": 518898,
+      "sha256": "166901bc623e123cf3f9f788fe8533f67bf68a6785d620cf682b32e769d730ae"
+    },
+    {
+      "path": "viz/south_2100_roof_full.jpg",
+      "bytes": 641625,
+      "sha256": "097b63d12b9e1013dfeb5cfdfdd7fb52d16490320e91dbac4487754937181f72"
+    },
+    {
+      "path": "viz/south_2100_roof_overview.jpg",
+      "bytes": 872904,
+      "sha256": "daf66bb48d4a35382e153ecc9b8d88d8d2207d0a53f6ef0b77935e48c554951f"
+    },
+    {
+      "path": "viz/south_2100_roof_vs_B.jpg",
+      "bytes": 544162,
+      "sha256": "6f3ac488ec40c9daa9a5a322f1e5cc1b66b521c8bf34f51f24558e362c1546b4"
+    },
+    {
+      "path": "viz/south_300_roof_full.jpg",
+      "bytes": 626774,
+      "sha256": "6d1821ca34b46b832e7a4f6871fdfb65d2b5af310552278930e835b9ed57501c"
+    },
+    {
+      "path": "viz/south_300_roof_overview.jpg",
+      "bytes": 872317,
+      "sha256": "1d2d689e21162486703e063a586e80e42ef2ed2f28c684b137697017578ff2ee"
+    },
+    {
+      "path": "viz/south_300_roof_vs_B.jpg",
+      "bytes": 539174,
+      "sha256": "1e661be699cab4cea24ddfa395dacb644740cfcdf2ed720f1bf3473b14d01a28"
+    }
+  ]
+}

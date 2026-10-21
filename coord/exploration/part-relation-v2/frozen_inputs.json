@@ -1,0 +1,197 @@
+{
+  "schema": "roof-relation-v2-input-freeze",
+  "created_at": "2026-10-21T22:22:33+08:00",
+  "mechanism": "roof-only top observations + top continuity/gap/uncertainty edges + deterministic top units and count range",
+  "model": "doubao-seed-2-1-lite-260915",
+  "temperature": 0,
+  "max_tokens": 12000,
+  "thinking": null,
+  "thinking_source": "official volcengine/volcengine-python-sdk types/shared_params/thinking.py Literal enabled|disabled|auto; this experiment omits the field because exact Lite support for this request shape was not independently verified; observed usage is reported instead",
+  "session_reasoning": "high per ROOF_ONLY_STEERING.md; current model unchanged",
+  "timeout_s": 300,
+  "workers": 1,
+  "budget": {
+    "main_calls": 4,
+    "images_per_call": 2,
+    "http_attempts_max": 5,
+    "transport_retry_max": 1,
+    "schema_retry": 0,
+    "same_image_reask": false
+  },
+  "prompt_file": "prompt_roof_relation.txt",
+  "prompt_sha256": "00a5f55a95043fd41e136cdf832f4769a627f16d46cc304ee379d78936a91745",
+  "far_crop": {
+    "x0": 0.06,
+    "y0": 0.0,
+    "x1": 0.94,
+    "y1": 0.56,
+    "scale": 1.6
+  },
+  "credential_policy": "read only ARK_API_KEY= and ARK_BASE_URL= from data-base README at request time; never log values",
+  "samples": [
+    {
+      "sample_id": "south_2100",
+      "camera": "south",
+      "time": 2100,
+      "role": "stable B overcount (4 vs truth 3); prior reports describe cab/trailer split, but B r1 box audit shows the extra 4th unit is a far/background truck",
+      "source_aisle": "coord\\exploration\\single-pass\\inputs\\aisle\\south_2100.jpg",
+      "source_aisle_sha256": "d6d067dc76bf0b7d24ca7993637c3fa88fa45a0e68aa602e98c6d7dd55ae6901",
+      "source_size": [
+        1040,
+        1920
+      ],
+      "overview": {
+        "path": "inputs\\south_2100_overview.jpg",
+        "sha256": "5546bd7eeec303fbef4b12edf9bcf006d20b66b4cc415dd367f13e63f554ba46",
+        "size": [
+          1040,
+          1920
+        ]
+      },
+      "far": {
+        "path": "inputs\\south_2100_far.jpg",
+        "sha256": "18e499e51ce8e70a007e387ef1121843cad79474688429dc8e766278a87c5639",
+        "size": [
+          1466,
+          1720
+        ],
+        "crop_overview_px": [
+          62,
+          0,
+          978,
+          1075
+        ],
+        "crop_overview_norm": [
+          0.06,
+          0.0,
+          0.94,
+          0.56
+        ],
+        "scale": 1.6
+      }
+    },
+    {
+      "sample_id": "south_300",
+      "camera": "south",
+      "time": 300,
+      "role": "B r1 overcount 5 vs truth 4; B box 5 is a trailer-only duplicate of the foreground trailer",
+      "source_aisle": "coord\\exploration\\single-pass\\inputs\\aisle\\south_300.jpg",
+      "source_aisle_sha256": "058c8b76e99edd8cf5a91286aeab311c0667062053a848c79fc7cd2382ac8cb4",
+      "source_size": [
+        1040,
+        1920
+      ],
+      "overview": {
+        "path": "inputs\\south_300_overview.jpg",
+        "sha256": "734506338ef7534c1e21d43c80bea867ab43dc3f12a3b483ceb5c77bd0b5154b",
+        "size": [
+          1040,
+          1920
+        ]
+      },
+      "far": {
+        "path": "inputs\\south_300_far.jpg",
+        "sha256": "449f09fba811abb7fba03d0b602a45be18b683a3eb84d5d8e99e03917ce80c9c",
+        "size": [
+          1466,
+          1720
+        ],
+        "crop_overview_px": [
+          62,
+          0,
+          978,
+          1075
+        ],
+        "crop_overview_norm": [
+          0.06,
+          0.0,
+          0.94,
+          0.56
+        ],
+        "scale": 1.6
+      }
+    },
+    {
+      "sample_id": "north_5",
+      "camera": "north",
+      "time": 5,
+      "role": "B unstable 5/4/3 vs truth 5; far adjacent cargo tops, gap-versus-merge target",
+      "source_aisle": "coord\\exploration\\single-pass\\inputs\\aisle\\north_5.jpg",
+      "source_aisle_sha256": "80362e5b92d7d64da310ca845711e25252ea3794cb30259483f052b010cefb3f",
+      "source_size": [
+        1040,
+        1920
+      ],
+      "overview": {
+        "path": "inputs\\north_5_overview.jpg",
+        "sha256": "0df0dfa16580476ef93babc8a3f6bb42c444d70241e9bba0f56ee2d75f6dc8f7",
+        "size": [
+          1040,
+          1920
+        ]
+      },
+      "far": {
+        "path": "inputs\\north_5_far.jpg",
+        "sha256": "f9f434ea1f3059eda13ce651cad29bdcaaf22e767f11dfe8d09d221c91cd275b",
+        "size": [
+          1466,
+          1720
+        ],
+        "crop_overview_px": [
+          62,
+          0,
+          978,
+          1075
+        ],
+        "crop_overview_norm": [
+          0.06,
+          0.0,
+          0.94,
+          0.56
+        ],
+        "scale": 1.6
+      }
+    },
+    {
+      "sample_id": "north_600",
+      "camera": "north",
+      "time": 600,
+      "role": "B stable 4/4/4 vs truth 4; far-cargo preservation control",
+      "source_aisle": "coord\\exploration\\single-pass\\inputs\\aisle\\north_600.jpg",
+      "source_aisle_sha256": "e5dead0bf6d26d76456b95191b84f06bc33762889da3adcce16f75f3eee3163f",
+      "source_size": [
+        1040,
+        1920
+      ],
+      "overview": {
+        "path": "inputs\\north_600_overview.jpg",
+        "sha256": "3a65f223ccc9fac1ee497157498c95f20fd19a221f04428ac5d8a3ce21f2168f",
+        "size": [
+          1040,
+          1920
+        ]
+      },
+      "far": {
+        "path": "inputs\\north_600_far.jpg",
+        "sha256": "c32a266afb8339b7a5f00d019f4e3921503f04a7836b7f350d3a6e40afe6eb56",
+        "size": [
+          1466,
+          1720
+        ],
+        "crop_overview_px": [
+          62,
+          0,
+          978,
+          1075
+        ],
+        "crop_overview_norm": [
+          0.06,
+          0.0,
+          0.94,
+          0.56
+        ],
+        "scale": 1.6
+      }
+    }
+  ]
+}

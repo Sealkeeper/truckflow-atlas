@@ -1,0 +1,886 @@
+{
+  "schema": "roof-relation-v2-posthoc-local-pairing",
+  "created_at": "2026-10-21",
+  "new_model_calls": 0,
+  "not_a_frozen_score": true,
+  "rule": "same_top_surface merge; one-to-one composition_unknown cab+cargo local pairing (vertical gap<=0.03, x-overlap>=0.3, gap_px<=30); evidence-labeled forklift excluded; visible unknown tops kept as upper-bound candidates",
+  "primary_frozen": {
+    "resolved_count": 1,
+    "exact_point_count": 0,
+    "range_contains_truth_count": 2,
+    "valid_count": 4
+  },
+  "posthoc": {
+    "point_exact_count": 1,
+    "range_contains_truth_count": 2,
+    "sample_count": 4
+  },
+  "rows": [
+    {
+      "sample_id": "south_2100",
+      "truth": 3,
+      "b_counts": [
+        4,
+        4,
+        4
+      ],
+      "top_observations": 8,
+      "same_top_units": 8,
+      "sensitivity": {
+        "tight": {
+          "accepted_local_pairs": [
+            {
+              "a": "T7",
+              "b": "T8",
+              "gap_px": 3,
+              "vertical_gap": 0.0,
+              "x_overlap": 1.0,
+              "root_a": "T7",
+              "root_b": "T8"
+            },
+            {
+              "a": "T5",
+              "b": "T6",
+              "gap_px": 4,
+              "vertical_gap": 0.0056,
+              "x_overlap": 1.0,
+              "root_a": "T5",
+              "root_b": "T6"
+            },
+            {
+              "a": "T1",
+              "b": "T2",
+              "gap_px": 5,
+              "vertical_gap": 0.0056,
+              "x_overlap": 1.0,
+              "root_a": "T1",
+              "root_b": "T2"
+            },
+            {
+              "a": "T3",
+              "b": "T4",
+              "gap_px": 6,
+              "vertical_gap": 0.0056,
+              "x_overlap": 1.0,
+              "root_a": "T3",
+              "root_b": "T4"
+            }
+          ],
+          "top_units": 4,
+          "confirmed_units": [
+            [
+              "T1",
+              "T2"
+            ],
+            [
+              "T3",
+              "T4"
+            ],
+            [
+              "T5",
+              "T6"
+            ],
+            [
+              "T7",
+              "T8"
+            ]
+          ],
+          "unresolved_units": [],
+          "non_truck_units_excluded": [],
+          "count_lower": 4,
+          "count_upper": 4,
+          "count_point": 4,
+          "point_exact": false,
+          "range_contains_truth": false
+        },
+        "main": {
+          "accepted_local_pairs": [
+            {
+              "a": "T7",
+              "b": "T8",
+              "gap_px": 3,
+              "vertical_gap": 0.0,
+              "x_overlap": 1.0,
+              "root_a": "T7",
+              "root_b": "T8"
+            },
+            {
+              "a": "T5",
+              "b": "T6",
+              "gap_px": 4,
+              "vertical_gap": 0.0056,
+              "x_overlap": 1.0,
+              "root_a": "T5",
+              "root_b": "T6"
+            },
+            {
+              "a": "T1",
+              "b": "T2",
+              "gap_px": 5,
+              "vertical_gap": 0.0056,
+              "x_overlap": 1.0,
+              "root_a": "T1",
+              "root_b": "T2"
+            },
+            {
+              "a": "T3",
+              "b": "T4",
+              "gap_px": 6,
+              "vertical_gap": 0.0056,
+              "x_overlap": 1.0,
+              "root_a": "T3",
+              "root_b": "T4"
+            }
+          ],
+          "top_units": 4,
+          "confirmed_units": [
+            [
+              "T1",
+              "T2"
+            ],
+            [
+              "T3",
+              "T4"
+            ],
+            [
+              "T5",
+              "T6"
+            ],
+            [
+              "T7",
+              "T8"
+            ]
+          ],
+          "unresolved_units": [],
+          "non_truck_units_excluded": [],
+          "count_lower": 4,
+          "count_upper": 4,
+          "count_point": 4,
+          "point_exact": false,
+          "range_contains_truth": false
+        },
+        "loose": {
+          "accepted_local_pairs": [
+            {
+              "a": "T7",
+              "b": "T8",
+              "gap_px": 3,
+              "vertical_gap": 0.0,
+              "x_overlap": 1.0,
+              "root_a": "T7",
+              "root_b": "T8"
+            },
+            {
+              "a": "T5",
+              "b": "T6",
+              "gap_px": 4,
+              "vertical_gap": 0.0056,
+              "x_overlap": 1.0,
+              "root_a": "T5",
+              "root_b": "T6"
+            },
+            {
+              "a": "T1",
+              "b": "T2",
+              "gap_px": 5,
+              "vertical_gap": 0.0056,
+              "x_overlap": 1.0,
+              "root_a": "T1",
+              "root_b": "T2"
+            },
+            {
+              "a": "T3",
+              "b": "T4",
+              "gap_px": 6,
+              "vertical_gap": 0.0056,
+              "x_overlap": 1.0,
+              "root_a": "T3",
+              "root_b": "T4"
+            }
+          ],
+          "top_units": 4,
+          "confirmed_units": [
+            [
+              "T1",
+              "T2"
+            ],
+            [
+              "T3",
+              "T4"
+            ],
+            [
+              "T5",
+              "T6"
+            ],
+            [
+              "T7",
+              "T8"
+            ]
+          ],
+          "unresolved_units": [],
+          "non_truck_units_excluded": [],
+          "count_lower": 4,
+          "count_upper": 4,
+          "count_point": 4,
+          "point_exact": false,
+          "range_contains_truth": false
+        }
+      },
+      "main": {
+        "accepted_local_pairs": [
+          {
+            "a": "T7",
+            "b": "T8",
+            "gap_px": 3,
+            "vertical_gap": 0.0,
+            "x_overlap": 1.0,
+            "root_a": "T7",
+            "root_b": "T8"
+          },
+          {
+            "a": "T5",
+            "b": "T6",
+            "gap_px": 4,
+            "vertical_gap": 0.0056,
+            "x_overlap": 1.0,
+            "root_a": "T5",
+            "root_b": "T6"
+          },
+          {
+            "a": "T1",
+            "b": "T2",
+            "gap_px": 5,
+            "vertical_gap": 0.0056,
+            "x_overlap": 1.0,
+            "root_a": "T1",
+            "root_b": "T2"
+          },
+          {
+            "a": "T3",
+            "b": "T4",
+            "gap_px": 6,
+            "vertical_gap": 0.0056,
+            "x_overlap": 1.0,
+            "root_a": "T3",
+            "root_b": "T4"
+          }
+        ],
+        "top_units": 4,
+        "confirmed_units": [
+          [
+            "T1",
+            "T2"
+          ],
+          [
+            "T3",
+            "T4"
+          ],
+          [
+            "T5",
+            "T6"
+          ],
+          [
+            "T7",
+            "T8"
+          ]
+        ],
+        "unresolved_units": [],
+        "non_truck_units_excluded": [],
+        "count_lower": 4,
+        "count_upper": 4,
+        "count_point": 4,
+        "point_exact": false,
+        "range_contains_truth": false
+      }
+    },
+    {
+      "sample_id": "south_300",
+      "truth": 4,
+      "b_counts": [
+        5,
+        4,
+        4
+      ],
+      "top_observations": 9,
+      "same_top_units": 8,
+      "sensitivity": {
+        "tight": {
+          "accepted_local_pairs": [
+            {
+              "a": "T9",
+              "b": "T8",
+              "gap_px": 15,
+              "vertical_gap": 0.01,
+              "x_overlap": 1.0,
+              "root_a": "T7",
+              "root_b": "T8"
+            },
+            {
+              "a": "T1",
+              "b": "T2",
+              "gap_px": 20,
+              "vertical_gap": 0.0,
+              "x_overlap": 1.0,
+              "root_a": "T1",
+              "root_b": "T2"
+            },
+            {
+              "a": "T3",
+              "b": "T4",
+              "gap_px": 20,
+              "vertical_gap": 0.0,
+              "x_overlap": 1.0,
+              "root_a": "T3",
+              "root_b": "T4"
+            },
+            {
+              "a": "T5",
+              "b": "T6",
+              "gap_px": 25,
+              "vertical_gap": 0.0,
+              "x_overlap": 1.0,
+              "root_a": "T5",
+              "root_b": "T6"
+            }
+          ],
+          "top_units": 4,
+          "confirmed_units": [
+            [
+              "T1",
+              "T2"
+            ],
+            [
+              "T3",
+              "T4"
+            ],
+            [
+              "T5",
+              "T6"
+            ],
+            [
+              "T7",
+              "T8",
+              "T9"
+            ]
+          ],
+          "unresolved_units": [],
+          "non_truck_units_excluded": [],
+          "count_lower": 4,
+          "count_upper": 4,
+          "count_point": 4,
+          "point_exact": true,
+          "range_contains_truth": true
+        },
+        "main": {
+          "accepted_local_pairs": [
+            {
+              "a": "T9",
+              "b": "T8",
+              "gap_px": 15,
+              "vertical_gap": 0.01,
+              "x_overlap": 1.0,
+              "root_a": "T7",
+              "root_b": "T8"
+            },
+            {
+              "a": "T1",
+              "b": "T2",
+              "gap_px": 20,
+              "vertical_gap": 0.0,
+              "x_overlap": 1.0,
+              "root_a": "T1",
+              "root_b": "T2"
+            },
+            {
+              "a": "T3",
+              "b": "T4",
+              "gap_px": 20,
+              "vertical_gap": 0.0,
+              "x_overlap": 1.0,
+              "root_a": "T3",
+              "root_b": "T4"
+            },
+            {
+              "a": "T5",
+              "b": "T6",
+              "gap_px": 25,
+              "vertical_gap": 0.0,
+              "x_overlap": 1.0,
+              "root_a": "T5",
+              "root_b": "T6"
+            }
+          ],
+          "top_units": 4,
+          "confirmed_units": [
+            [
+              "T1",
+              "T2"
+            ],
+            [
+              "T3",
+              "T4"
+            ],
+            [
+              "T5",
+              "T6"
+            ],
+            [
+              "T7",
+              "T8",
+              "T9"
+            ]
+          ],
+          "unresolved_units": [],
+          "non_truck_units_excluded": [],
+          "count_lower": 4,
+          "count_upper": 4,
+          "count_point": 4,
+          "point_exact": true,
+          "range_contains_truth": true
+        },
+        "loose": {
+          "accepted_local_pairs": [
+            {
+              "a": "T9",
+              "b": "T8",
+              "gap_px": 15,
+              "vertical_gap": 0.01,
+              "x_overlap": 1.0,
+              "root_a": "T7",
+              "root_b": "T8"
+            },
+            {
+              "a": "T1",
+              "b": "T2",
+              "gap_px": 20,
+              "vertical_gap": 0.0,
+              "x_overlap": 1.0,
+              "root_a": "T1",
+              "root_b": "T2"
+            },
+            {
+              "a": "T3",
+              "b": "T4",
+              "gap_px": 20,
+              "vertical_gap": 0.0,
+              "x_overlap": 1.0,
+              "root_a": "T3",
+              "root_b": "T4"
+            },
+            {
+              "a": "T5",
+              "b": "T6",
+              "gap_px": 25,
+              "vertical_gap": 0.0,
+              "x_overlap": 1.0,
+              "root_a": "T5",
+              "root_b": "T6"
+            }
+          ],
+          "top_units": 4,
+          "confirmed_units": [
+            [
+              "T1",
+              "T2"
+            ],
+            [
+              "T3",
+              "T4"
+            ],
+            [
+              "T5",
+              "T6"
+            ],
+            [
+              "T7",
+              "T8",
+              "T9"
+            ]
+          ],
+          "unresolved_units": [],
+          "non_truck_units_excluded": [],
+          "count_lower": 4,
+          "count_upper": 4,
+          "count_point": 4,
+          "point_exact": true,
+          "range_contains_truth": true
+        }
+      },
+      "main": {
+        "accepted_local_pairs": [
+          {
+            "a": "T9",
+            "b": "T8",
+            "gap_px": 15,
+            "vertical_gap": 0.01,
+            "x_overlap": 1.0,
+            "root_a": "T7",
+            "root_b": "T8"
+          },
+          {
+            "a": "T1",
+            "b": "T2",
+            "gap_px": 20,
+            "vertical_gap": 0.0,
+            "x_overlap": 1.0,
+            "root_a": "T1",
+            "root_b": "T2"
+          },
+          {
+            "a": "T3",
+            "b": "T4",
+            "gap_px": 20,
+            "vertical_gap": 0.0,
+            "x_overlap": 1.0,
+            "root_a": "T3",
+            "root_b": "T4"
+          },
+          {
+            "a": "T5",
+            "b": "T6",
+            "gap_px": 25,
+            "vertical_gap": 0.0,
+            "x_overlap": 1.0,
+            "root_a": "T5",
+            "root_b": "T6"
+          }
+        ],
+        "top_units": 4,
+        "confirmed_units": [
+          [
+            "T1",
+            "T2"
+          ],
+          [
+            "T3",
+            "T4"
+          ],
+          [
+            "T5",
+            "T6"
+          ],
+          [
+            "T7",
+            "T8",
+            "T9"
+          ]
+        ],
+        "unresolved_units": [],
+        "non_truck_units_excluded": [],
+        "count_lower": 4,
+        "count_upper": 4,
+        "count_point": 4,
+        "point_exact": true,
+        "range_contains_truth": true
+      }
+    },
+    {
+      "sample_id": "north_5",
+      "truth": 5,
+      "b_counts": [
+        5,
+        4,
+        3
+      ],
+      "top_observations": 11,
+      "same_top_units": 6,
+      "sensitivity": {
+        "tight": {
+          "accepted_local_pairs": [],
+          "top_units": 6,
+          "confirmed_units": [
+            [
+              "T1"
+            ],
+            [
+              "T2",
+              "T7"
+            ],
+            [
+              "T3",
+              "T8"
+            ],
+            [
+              "T4",
+              "T9"
+            ],
+            [
+              "T10",
+              "T5"
+            ],
+            [
+              "T11",
+              "T6"
+            ]
+          ],
+          "unresolved_units": [],
+          "non_truck_units_excluded": [],
+          "count_lower": 6,
+          "count_upper": 6,
+          "count_point": 6,
+          "point_exact": false,
+          "range_contains_truth": false
+        },
+        "main": {
+          "accepted_local_pairs": [],
+          "top_units": 6,
+          "confirmed_units": [
+            [
+              "T1"
+            ],
+            [
+              "T2",
+              "T7"
+            ],
+            [
+              "T3",
+              "T8"
+            ],
+            [
+              "T4",
+              "T9"
+            ],
+            [
+              "T10",
+              "T5"
+            ],
+            [
+              "T11",
+              "T6"
+            ]
+          ],
+          "unresolved_units": [],
+          "non_truck_units_excluded": [],
+          "count_lower": 6,
+          "count_upper": 6,
+          "count_point": 6,
+          "point_exact": false,
+          "range_contains_truth": false
+        },
+        "loose": {
+          "accepted_local_pairs": [],
+          "top_units": 6,
+          "confirmed_units": [
+            [
+              "T1"
+            ],
+            [
+              "T2",
+              "T7"
+            ],
+            [
+              "T3",
+              "T8"
+            ],
+            [
+              "T4",
+              "T9"
+            ],
+            [
+              "T10",
+              "T5"
+            ],
+            [
+              "T11",
+              "T6"
+            ]
+          ],
+          "unresolved_units": [],
+          "non_truck_units_excluded": [],
+          "count_lower": 6,
+          "count_upper": 6,
+          "count_point": 6,
+          "point_exact": false,
+          "range_contains_truth": false
+        }
+      },
+      "main": {
+        "accepted_local_pairs": [],
+        "top_units": 6,
+        "confirmed_units": [
+          [
+            "T1"
+          ],
+          [
+            "T2",
+            "T7"
+          ],
+          [
+            "T3",
+            "T8"
+          ],
+          [
+            "T4",
+            "T9"
+          ],
+          [
+            "T10",
+            "T5"
+          ],
+          [
+            "T11",
+            "T6"
+          ]
+        ],
+        "unresolved_units": [],
+        "non_truck_units_excluded": [],
+        "count_lower": 6,
+        "count_upper": 6,
+        "count_point": 6,
+        "point_exact": false,
+        "range_contains_truth": false
+      }
+    },
+    {
+      "sample_id": "north_600",
+      "truth": 4,
+      "b_counts": [
+        4,
+        4,
+        4
+      ],
+      "top_observations": 8,
+      "same_top_units": 5,
+      "sensitivity": {
+        "tight": {
+          "accepted_local_pairs": [],
+          "top_units": 5,
+          "confirmed_units": [
+            [
+              "T1",
+              "T2"
+            ],
+            [
+              "T3"
+            ]
+          ],
+          "unresolved_units": [
+            [
+              "T5",
+              "T6"
+            ],
+            [
+              "T7",
+              "T8"
+            ]
+          ],
+          "non_truck_units_excluded": [
+            [
+              "T4"
+            ]
+          ],
+          "count_lower": 2,
+          "count_upper": 4,
+          "count_point": null,
+          "point_exact": false,
+          "range_contains_truth": true
+        },
+        "main": {
+          "accepted_local_pairs": [],
+          "top_units": 5,
+          "confirmed_units": [
+            [
+              "T1",
+              "T2"
+            ],
+            [
+              "T3"
+            ]
+          ],
+          "unresolved_units": [
+            [
+              "T5",
+              "T6"
+            ],
+            [
+              "T7",
+              "T8"
+            ]
+          ],
+          "non_truck_units_excluded": [
+            [
+              "T4"
+            ]
+          ],
+          "count_lower": 2,
+          "count_upper": 4,
+          "count_point": null,
+          "point_exact": false,
+          "range_contains_truth": true
+        },
+        "loose": {
+          "accepted_local_pairs": [],
+          "top_units": 5,
+          "confirmed_units": [
+            [
+              "T1",
+              "T2"
+            ],
+            [
+              "T3"
+            ]
+          ],
+          "unresolved_units": [
+            [
+              "T5",
+              "T6"
+            ],
+            [
+              "T7",
+              "T8"
+            ]
+          ],
+          "non_truck_units_excluded": [
+            [
+              "T4"
+            ]
+          ],
+          "count_lower": 2,
+          "count_upper": 4,
+          "count_point": null,
+          "point_exact": false,
+          "range_contains_truth": true
+        }
+      },
+      "main": {
+        "accepted_local_pairs": [],
+        "top_units": 5,
+        "confirmed_units": [
+          [
+            "T1",
+            "T2"
+          ],
+          [
+            "T3"
+          ]
+        ],
+        "unresolved_units": [
+          [
+            "T5",
+            "T6"
+          ],
+          [
+            "T7",
+            "T8"
+          ]
+        ],
+        "non_truck_units_excluded": [
+          [
+            "T4"
+          ]
+        ],
+        "count_lower": 2,
+        "count_upper": 4,
+        "count_point": null,
+        "point_exact": false,
+        "range_contains_truth": true
+      }
+    }
+  ],
+  "limits": [
+    "post-hoc analysis of the same 4 raw responses; no new calls",
+    "thresholds are generic geometry settings, but the analysis was run after seeing the raw outputs",
+    "not a substitute for the frozen primary metrics or a 20-frame regression",
+    "no complete top/relation gold"
+  ]
+}

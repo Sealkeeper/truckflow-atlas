@@ -1,0 +1,42 @@
+{
+  "schema": "roof-relation-v2-attempts",
+  "written_at": "2026-10-21T22:36:09+08:00",
+  "attempts": [
+    {
+      "sample_id": "south_2100",
+      "attempt": 1,
+      "started_at": "2026-10-21T22:27:36+08:00",
+      "status_code": 200,
+      "elapsed_s": 211.153,
+      "error_excerpt": null,
+      "response_sha256": "ea43f86f4d23697730b3a9cd06623f9d986d71c8ad2fbd33d23fb9f036efcc35"
+    },
+    {
+      "sample_id": "south_300",
+      "attempt": 1,
+      "started_at": "2026-10-21T22:31:13+08:00",
+      "status_code": 200,
+      "elapsed_s": 217.282,
+      "error_excerpt": null,
+      "response_sha256": "68a83593cab980c242a08525dcc81f66b4f53d44433926567e645855cc833bd4"
+    },
+    {
+      "sample_id": "north_5",
+      "attempt": 1,
+      "started_at": "2026-10-21T22:33:57+08:00",
+      "status_code": 200,
+      "elapsed_s": 164.302,
+      "error_excerpt": null,
+      "response_sha256": "00db19bd98cae5f750c77ecbc60a4fa6e124af50bb29f8d7d4033badeb07c897"
+    },
+    {
+      "sample_id": "north_600",
+      "attempt": 1,
+      "started_at": "2026-10-21T22:36:09+08:00",
+      "status_code": 200,
+      "elapsed_s": 131.736,
+      "error_excerpt": null,
+      "response_sha256": "a0a4941f977b51928c2c4ffce7dd8876c2ce4567df0799dede211893b37fd0d0"
+    }
+  ]
+}
