@@ -1,0 +1,71 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\assets\\frames\\north_300.jpg",
+  "prompt_version": "truck-count-v1",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 22.65,
+      "usage": {
+        "completion_tokens": 1929,
+        "prompt_tokens": 1884,
+        "total_tokens": 3813,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1497
+        }
+      },
+      "parsed": {
+        "scan_order": "沿中间通道由远（画面上方）及近（画面下方）扫描，再扫描画面左右边缘区域，确认可见独立货车",
+        "counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "sequence": 1,
+            "bbox": [
+              0.42,
+              0.15,
+              0.5,
+              0.46
+            ],
+            "size": "large",
+            "visible": "partial",
+            "is_truck": true,
+            "identity_clues": "蓝色货厢，位于通道远端，车身部分可见",
+            "distinct_from_previous": "无（首辆）",
+            "evidence": "位于中间通道最远端，为独立车体，无与其他车辆连接",
+            "uncertain": false
+          },
+          {
+            "sequence": 2,
+            "bbox": [
+              0.34,
+              0.57,
+              0.49,
+              0.99
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "白色长货厢，位于通道近段，仅货厢可见，无牵引车头",
+            "distinct_from_previous": "与前一辆车辆位置间隔明显，货厢颜色为白色与前一辆蓝色不同，无连接结构",
+            "evidence": "位于中间通道近段，与前一辆车辆有清晰通道间隔，为独立停放的挂车",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "中间通道可见两辆独立货车，远端为蓝色货厢车，近段为白色长货厢挂车，均无完全遮挡，左右边缘无可见货车",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"scan_order\": \"沿中间通道由远（画面上方）及近（画面下方）扫描，再扫描画面左右边缘区域，确认可见独立货车\",\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.42, 0.15, 0.5, 0.46],\n      \"size\": \"large\",\n      \"visible\": \"partial\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色货厢，位于通道远端，车身部分可见\",\n      \"distinct_from_previous\": \"无（首辆）\",\n      \"evidence\": \"位于中间通道最远端，为独立车体，无与其他车辆连接\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.34, 0.57, 0.49, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色长货厢，位于通道近段，仅货厢可见，无牵引车头\",\n      \"distinct_from_previous\": \"与前一辆车辆位置间隔明显，货厢颜色为白色与前一辆蓝色不同，无连接结构\",\n      \"evidence\": \"位于中间通道近段，与前一辆车辆有清晰通道间隔，为独立停放的挂车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"中间通道可见两辆独立货车，远端为蓝色货厢车，近段为白色长货厢挂车，均无完全遮挡，左右边缘无可见货车\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_1200_grid_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 12.29,
+      "usage": {
+        "completion_tokens": 1395,
+        "prompt_tokens": 1776,
+        "total_tokens": 3171,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 977
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.15,
+              0.6,
+              0.52,
+              0.99
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "white corrugated cargo box, dark lower chassis, text markings on lower body",
+            "evidence": "fully visible truck with cab and cargo, located at the bottom of the frame",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.33,
+              0.35,
+              0.53,
+              0.63
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "red metal container, number markings on side, rectangular cargo structure",
+            "evidence": "fully visible red container truck positioned above the white truck",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.41,
+              0.14,
+              0.56,
+              0.31
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "cargo covered with blue tarp, dark truck body, upper position in frame",
+            "evidence": "fully visible truck with blue tarp-covered cargo at upper middle of the frame",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "All three trucks are fully visible within the frame, no partial occlusion or ambiguity in identification",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.15, 0.60, 0.52, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"white corrugated cargo box, dark lower chassis, text markings on lower body\",\n      \"evidence\": \"fully visible truck with cab and cargo, located at the bottom of the frame\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.33, 0.35, 0.53, 0.63],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"red metal container, number markings on side, rectangular cargo structure\",\n      \"evidence\": \"fully visible red container truck positioned above the white truck\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.41, 0.14, 0.56, 0.31],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"cargo covered with blue tarp, dark truck body, upper position in frame\",\n      \"evidence\": \"fully visible truck with blue tarp-covered cargo at upper middle of the frame\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All three trucks are fully visible within the frame, no partial occlusion or ambiguity in identification\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_1200_grid_aisle.jpg"
+    }
+  ]
+}

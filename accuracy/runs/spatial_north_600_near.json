@@ -1,0 +1,65 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_600_near.jpg",
+  "prompt_version": "truck-count-v1",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 6.85,
+      "usage": {
+        "completion_tokens": 701,
+        "prompt_tokens": 1794,
+        "total_tokens": 2495,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 392
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.3,
+              0.3,
+              0.63,
+              0.99
+            ],
+            "size": "large",
+            "visible": "partial_side",
+            "is_truck": true,
+            "identity_clues": "白色波纹长货厢，货厢朝向画面下方，车身可见部分为货厢主体",
+            "evidence": "画面中可见的大型货车货厢，符合重型货车特征",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.61,
+              0.0,
+              0.76,
+              0.25
+            ],
+            "size": "large",
+            "visible": "partial_top",
+            "is_truck": true,
+            "identity_clues": "红色货柜尾部，带有尾灯和编号标识，朝向画面下方",
+            "evidence": "画面中可见的大型货车尾部，符合重型货车特征",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "无明显遮挡导致的车辆判定歧义，两辆货车均清晰可见",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.30, 0.30, 0.63, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹长货厢，货厢朝向画面下方，车身可见部分为货厢主体\",\n      \"evidence\": \"画面中可见的大型货车货厢，符合重型货车特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.61, 0.0, 0.76, 0.25],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货柜尾部，带有尾灯和编号标识，朝向画面下方\",\n      \"evidence\": \"画面中可见的大型货车尾部，符合重型货车特征\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"无明显遮挡导致的车辆判定歧义，两辆货车均清晰可见\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

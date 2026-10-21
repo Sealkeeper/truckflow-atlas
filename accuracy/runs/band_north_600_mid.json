@@ -1,0 +1,67 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_600_band_mid.jpg",
+  "prompt_version": "truck-count-v1",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 17.5,
+      "usage": {
+        "completion_tokens": 1570,
+        "prompt_tokens": 1794,
+        "total_tokens": 3364,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1222
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 2,
+          "large": 1,
+          "medium": 0,
+          "small": 0,
+          "unknown": 1
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.52,
+              0.08,
+              0.77,
+              0.83
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色大型厢式货车，尾部有编号标识，朝向画面下方（倒车状态）",
+            "evidence": "画面中间偏右区域，完整可见，具备货车的厢式结构，属于重型货车",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.21,
+              0.9,
+              0.51,
+              0.99
+            ],
+            "size": "unknown",
+            "visible": "partial_top",
+            "is_truck": true,
+            "identity_clues": "白色车辆，仅顶部可见，位于画面底部中央",
+            "evidence": "画面底部中央，露出顶部，属于货车范畴，但仅局部可见",
+            "uncertain": true
+          }
+        ],
+        "scene_notes": "画面中可见2辆货车，1辆为完整的大型红色厢式货车，1辆仅露出顶部的白色货车，无其他被完全遮挡或画面外的车辆",
+        "uncertain_reasons": [
+          "白色货车仅露出顶部，无法确定其具体尺寸类型"
+        ]
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 1, \"medium\": 0, \"small\": 0, \"unknown\": 1},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.52, 0.08, 0.77, 0.83],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色大型厢式货车，尾部有编号标识，朝向画面下方（倒车状态）\",\n      \"evidence\": \"画面中间偏右区域，完整可见，具备货车的厢式结构，属于重型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.21, 0.90, 0.51, 0.99],\n      \"size\": \"unknown\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色车辆，仅顶部可见，位于画面底部中央\",\n      \"evidence\": \"画面底部中央，露出顶部，属于货车范畴，但仅局部可见\",\n      \"uncertain\": true\n    }\n  ],\n  \"scene_notes\": \"画面中可见2辆货车，1辆为完整的大型红色厢式货车，1辆仅露出顶部的白色货车，无其他被完全遮挡或画面外的车辆\",\n  \"uncertain_reasons\": [\"白色货车仅露出顶部，无法确定其具体尺寸类型\"]\n}"
+    }
+  ]
+}

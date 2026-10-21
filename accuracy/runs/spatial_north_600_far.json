@@ -1,0 +1,65 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_600_far.jpg",
+  "prompt_version": "truck-count-v1",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 10.09,
+      "usage": {
+        "completion_tokens": 991,
+        "prompt_tokens": 1794,
+        "total_tokens": 2785,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 676
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 2,
+          "large": 1,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.63,
+              0.54,
+              0.83,
+              0.99
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色货厢，尾部带有灯光，整体为大型货厢结构",
+            "evidence": "画面下方偏右位置，完整可见的红色大型货车，符合重卡特征",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.5,
+              0.42,
+              0.67,
+              0.79
+            ],
+            "size": "medium",
+            "visible": "partial_side",
+            "is_truck": true,
+            "identity_clues": "蓝色顶棚的货厢，旁有工人作业",
+            "evidence": "画面中间偏下位置，蓝色顶棚的中型货车，货厢部分可见",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面中共可见2辆货车，无完全遮挡或边界无法判定的车辆，均符合货车特征",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 1, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.63, 0.54, 0.83, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货厢，尾部带有灯光，整体为大型货厢结构\",\n      \"evidence\": \"画面下方偏右位置，完整可见的红色大型货车，符合重卡特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.50, 0.42, 0.67, 0.79],\n      \"size\": \"medium\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色顶棚的货厢，旁有工人作业\",\n      \"evidence\": \"画面中间偏下位置，蓝色顶棚的中型货车，货厢部分可见\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中共可见2辆货车，无完全遮挡或边界无法判定的车辆，均符合货车特征\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

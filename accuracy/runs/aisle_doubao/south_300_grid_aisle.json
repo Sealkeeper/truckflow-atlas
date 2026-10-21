@@ -1,0 +1,93 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\south_300_grid_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 13.01,
+      "usage": {
+        "completion_tokens": 1519,
+        "prompt_tokens": 1776,
+        "total_tokens": 3295,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 991
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 4,
+          "large": 2,
+          "medium": 2,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.46,
+              0.5,
+              0.67,
+              0.93
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "白色车头带有'东风商用车'字样，货厢为白色，车头有东风品牌标识",
+            "evidence": "画面下方可见完整的重型货车，符合货车定义",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.44,
+              0.29,
+              0.58,
+              0.52
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色车头，灰色长货厢，为半挂式货车",
+            "evidence": "白色货车后方可见完整的重型半挂货车，符合计数要求",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.34,
+              0.19,
+              0.44,
+              0.37
+            ],
+            "size": "medium",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色中型货车，车头为红色，货厢为深色",
+            "evidence": "中间通道可见完整的中型货车，无遮挡",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.42,
+              0.12,
+              0.51,
+              0.27
+            ],
+            "size": "medium",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色货车，货厢为棕色，位于通道最上方",
+            "evidence": "画面顶部可见完整的中型货车，符合计数口径",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "所有货车均位于中间通道内，无完全遮挡或画面外的车辆，边界车辆均完整可见",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 2, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.46, 0.50, 0.67, 0.93],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色车头带有'东风商用车'字样，货厢为白色，车头有东风品牌标识\",\n      \"evidence\": \"画面下方可见完整的重型货车，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.29, 0.58, 0.52],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，灰色长货厢，为半挂式货车\",\n      \"evidence\": \"白色货车后方可见完整的重型半挂货车，符合计数要求\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.34, 0.19, 0.44, 0.37],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色中型货车，车头为红色，货厢为深色\",\n      \"evidence\": \"中间通道可见完整的中型货车，无遮挡\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.42, 0.12, 0.51, 0.27],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货车，货厢为棕色，位于通道最上方\",\n      \"evidence\": \"画面顶部可见完整的中型货车，符合计数口径\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"所有货车均位于中间通道内，无完全遮挡或画面外的车辆，边界车辆均完整可见\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\south_300_grid_aisle.jpg"
+    }
+  ]
+}

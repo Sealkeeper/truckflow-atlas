@@ -1,0 +1,93 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\south_600_grid_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 16.72,
+      "usage": {
+        "completion_tokens": 1763,
+        "prompt_tokens": 1776,
+        "total_tokens": 3539,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1221
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 4,
+          "large": 2,
+          "medium": 2,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.45,
+              0.6,
+              0.65,
+              0.9
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "白色重型牵引车，车头印有‘东风商用车’字样，朝向画面下方（镜头方向），搭配白色厢式货厢",
+            "evidence": "位于画面近景中间通道，完整可见，符合重型货车特征",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.45,
+              0.3,
+              0.6,
+              0.55
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色重型牵引车，搭配灰色厢式货厢，位于白色车辆后方，朝向镜头",
+            "evidence": "完整可见，为半挂式货车，属于重型范畴",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.35,
+              0.25,
+              0.45,
+              0.38
+            ],
+            "size": "medium",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色中型货车，车头朝向镜头，位于半挂车后方",
+            "evidence": "完整可见，尺寸介于重卡与轻卡之间，属于中型货车",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.45,
+              0.15,
+              0.52,
+              0.28
+            ],
+            "size": "medium",
+            "visible": "partial",
+            "is_truck": true,
+            "identity_clues": "红色中型货车，仅车头部分可见，位于通道最远处",
+            "evidence": "画面远景处，仅露出车头，可判定为货车",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "所有可见货车均位于画面中间纵向通道，无完全遮挡情况，边界车辆清晰可辨",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 2, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.45, 0.6, 0.65, 0.9],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色重型牵引车，车头印有‘东风商用车’字样，朝向画面下方（镜头方向），搭配白色厢式货厢\",\n      \"evidence\": \"位于画面近景中间通道，完整可见，符合重型货车特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.3, 0.6, 0.55],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重型牵引车，搭配灰色厢式货厢，位于白色车辆后方，朝向镜头\",\n      \"evidence\": \"完整可见，为半挂式货车，属于重型范畴\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.35, 0.25, 0.45, 0.38],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色中型货车，车头朝向镜头，位于半挂车后方\",\n      \"evidence\": \"完整可见，尺寸介于重卡与轻卡之间，属于中型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.15, 0.52, 0.28],\n      \"size\": \"medium\",\n      \"visible\": \"partial\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色中型货车，仅车头部分可见，位于通道最远处\",\n      \"evidence\": \"画面远景处，仅露出车头，可判定为货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"所有可见货车均位于画面中间纵向通道，无完全遮挡情况，边界车辆清晰可辨\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\south_600_grid_aisle.jpg"
+    }
+  ]
+}

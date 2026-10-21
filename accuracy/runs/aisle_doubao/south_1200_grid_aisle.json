@@ -1,0 +1,107 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\south_1200_grid_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 16.1,
+      "usage": {
+        "completion_tokens": 1876,
+        "prompt_tokens": 1776,
+        "total_tokens": 3652,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1250
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 5,
+          "large": 3,
+          "medium": 2,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.46,
+              0.45,
+              0.67,
+              0.89
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "白色车头印有“东风商用车”字样，搭配白色厢式货厢，朝向画面下方",
+            "evidence": "通道内完整可见的重型货车，无遮挡",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.44,
+              0.27,
+              0.58,
+              0.5
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色车头，灰色厢式货厢，朝向画面下方",
+            "evidence": "白色货车后方的半挂货车，完整可见",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.34,
+              0.24,
+              0.44,
+              0.36
+            ],
+            "size": "medium",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色中型货车，车头有标识，朝向画面下方",
+            "evidence": "通道中间位置的红色货车，完整可见",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.43,
+              0.12,
+              0.52,
+              0.25
+            ],
+            "size": "medium",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色货车，位于通道最深处，朝向画面下方",
+            "evidence": "通道尽头的红色货车，完整可见",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.52,
+              0.85,
+              0.8,
+              0.99
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "红色货厢挂车，无可见车头，与相邻白色货车非同一辆",
+            "evidence": "单独清晰可见的挂车，符合计数口径",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "所有可见货车均在展会通道内，无完全遮挡的车辆，单独挂车已按规则计入",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 5, \"large\": 3, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.46, 0.45, 0.67, 0.89],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色车头印有“东风商用车”字样，搭配白色厢式货厢，朝向画面下方\",\n      \"evidence\": \"通道内完整可见的重型货车，无遮挡\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.27, 0.58, 0.50],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，灰色厢式货厢，朝向画面下方\",\n      \"evidence\": \"白色货车后方的半挂货车，完整可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.34, 0.24, 0.44, 0.36],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色中型货车，车头有标识，朝向画面下方\",\n      \"evidence\": \"通道中间位置的红色货车，完整可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.43, 0.12, 0.52, 0.25],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货车，位于通道最深处，朝向画面下方\",\n      \"evidence\": \"通道尽头的红色货车，完整可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.52, 0.85, 0.80, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货厢挂车，无可见车头，与相邻白色货车非同一辆\",\n      \"evidence\": \"单独清晰可见的挂车，符合计数口径\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"所有可见货车均在展会通道内，无完全遮挡的车辆，单独挂车已按规则计入\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\south_1200_grid_aisle.jpg"
+    }
+  ]
+}

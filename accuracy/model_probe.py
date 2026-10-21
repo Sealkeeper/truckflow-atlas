@@ -104,7 +104,7 @@ MODELS = {
 }
 
 
-def probe(name: str, image_path: Path, prompt: str, max_tokens: int) -> dict[str, Any]:
+def probe(name: str, image_path: Path, prompt: str, max_tokens: int, retries: int = 3) -> dict[str, Any]:
     cfg = MODELS[name]
     api_key = os.environ.get(cfg["key"], "")
     if not api_key:
@@ -125,41 +125,52 @@ def probe(name: str, image_path: Path, prompt: str, max_tokens: int) -> dict[str
         ],
     }
     started = time.perf_counter()
-    try:
-        response = requests.post(
-            cfg["base"].rstrip("/") + "/chat/completions",
-            headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
-            json=payload,
-            timeout=180,
-        )
-        latency = round(time.perf_counter() - started, 2)
-        response.raise_for_status()
-        body = response.json()
-        content = body["choices"][0]["message"]["content"]
-        if isinstance(content, list):
-            content = "".join(part.get("text", "") for part in content if isinstance(part, dict))
-        parsed = extract_json(content)
-        return {
-            "model": name,
-            "model_id": cfg["model"],
-            "ok": True,
-            "latency_s": latency,
-            "usage": body.get("usage"),
-            "parsed": parsed,
-            "raw_text": content,
-        }
-    except Exception as exc:  # keep raw failure as evidence
-        status = getattr(getattr(exc, "response", None), "status_code", None)
-        text = getattr(getattr(exc, "response", None), "text", "")
-        return {
-            "model": name,
-            "model_id": cfg["model"],
-            "ok": False,
-            "latency_s": round(time.perf_counter() - started, 2),
-            "status": status,
-            "error": f"{type(exc).__name__}: {exc}",
-            "response_text": text[:2000],
-        }
+    last_error: dict[str, Any] | None = None
+    for attempt in range(retries):
+        try:
+            response = requests.post(
+                cfg["base"].rstrip("/") + "/chat/completions",
+                headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+                json=payload,
+                timeout=180,
+            )
+            latency = round(time.perf_counter() - started, 2)
+            if response.status_code in {429, 500, 502, 503, 504} and attempt + 1 < retries:
+                time.sleep(2 ** attempt)
+                continue
+            response.raise_for_status()
+            body = response.json()
+            content = body["choices"][0]["message"]["content"]
+            if isinstance(content, list):
+                content = "".join(part.get("text", "") for part in content if isinstance(part, dict))
+            parsed = extract_json(content)
+            return {
+                "model": name,
+                "model_id": cfg["model"],
+                "attempts": attempt + 1,
+                "ok": True,
+                "latency_s": latency,
+                "usage": body.get("usage"),
+                "parsed": parsed,
+                "raw_text": content,
+            }
+        except Exception as exc:  # keep raw failure as evidence
+            status = getattr(getattr(exc, "response", None), "status_code", None)
+            text = getattr(getattr(exc, "response", None), "text", "")
+            last_error = {
+                "model": name,
+                "model_id": cfg["model"],
+                "attempts": attempt + 1,
+                "ok": False,
+                "latency_s": round(time.perf_counter() - started, 2),
+                "status": status,
+                "error": f"{type(exc).__name__}: {exc}",
+                "response_text": text[:2000],
+            }
+            if attempt + 1 < retries:
+                time.sleep(2 ** attempt)
+    assert last_error is not None
+    return last_error
 
 
 def main() -> None:

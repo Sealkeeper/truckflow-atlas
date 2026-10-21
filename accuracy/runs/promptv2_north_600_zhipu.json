@@ -1,0 +1,87 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\assets\\frames\\north_600.jpg",
+  "prompt_version": "truck-count-v1",
+  "runs": [
+    {
+      "model": "zhipu",
+      "model_id": "glm-4.5v",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 77.42,
+      "usage": {
+        "completion_tokens": 2695,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1951
+        },
+        "prompt_tokens": 2145,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4840
+      },
+      "parsed": {
+        "scan_order": "首先沿中央主通道由远及近扫描：1)通道远景深处识别到深色厢式货车；2)中景识别到红色集装箱半挂车；3)近景识别到白色长货厢。随后扫描左右边缘：左侧为CHANGHONG展位结构无独立货车；右侧为KONIKA展位桁架结构无独立货车。画面底部蓝色叉车按规则排除。",
+        "counts": {
+          "total": 3,
+          "large": 2,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "sequence": 1,
+            "bbox": [
+              0.447,
+              0.196,
+              0.49,
+              0.267
+            ],
+            "size": "medium",
+            "visible": "partial_top",
+            "is_truck": true,
+            "identity_clues": "深色(蓝/灰)封闭式货厢，位于CUORI展位后方通道深处，纵向停放",
+            "distinct_from_previous": "首辆车，无前序对比",
+            "evidence": "在通道远端呈现规整矩形轮廓，具有典型厢式货车外形特征，与周围展位结构分离且位于行车动线上",
+            "uncertain": false
+          },
+          {
+            "sequence": 2,
+            "bbox": [
+              0.489,
+              0.326,
+              0.556,
+              0.59
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色标准集装箱货厢，车尾朝向镜头，可见双开门及尾灯，周围有装卸工人",
+            "distinct_from_previous": "与序列1车辆颜色不同(红vs深色)、尺寸更大、位置明显靠前且居中，两者间有足够间距及人员活动空间",
+            "evidence": "画面中央最醒目的红色车体，具有完整集装箱半挂车特征，与上方深色货车非同一物体",
+            "uncertain": false
+          },
+          {
+            "sequence": 3,
+            "bbox": [
+              0.346,
+              0.622,
+              0.483,
+              0.998
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "白色波纹板长货厢(疑似40尺集装箱或厢式挂车)，纵向停放于前景左侧，无可见牵引车头",
+            "distinct_from_previous": "与序列2红色卡车颜色不同(白vs红)、位置更靠近镜头(前景)、朝向相同但独立停放，两者间有明确空隙",
+            "evidence": "占据画面下半部左侧的巨大白色矩形物体，表面有横向波纹纹理，符合货车货厢/挂车特征，与红色卡车为前后排列的两独立车体",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "展会撤展期间夜间场景，通道内光线充足；序列3(白色货厢)前端超出画面下边界；序列2(红色卡车)左侧有人员及散落物料；画面底部存在蓝色叉车(已按规则排除)；所有车辆均处于静止停放状态。",
+        "uncertain_reasons": []
+      },
+      "raw_text": "```json\n{\n  \"scan_order\": \"首先沿中央主通道由远及近扫描：1)通道远景深处识别到深色厢式货车；2)中景识别到红色集装箱半挂车；3)近景识别到白色长货厢。随后扫描左右边缘：左侧为CHANGHONG展位结构无独立货车；右侧为KONIKA展位桁架结构无独立货车。画面底部蓝色叉车按规则排除。\",\n  \"counts\": {\"total\": 3, \"large\": 2, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.447, 0.196, 0.490, 0.267],\n      \"size\": \"medium\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"深色(蓝/灰)封闭式货厢，位于CUORI展位后方通道深处，纵向停放\",\n      \"distinct_from_previous\": \"首辆车，无前序对比\",\n      \"evidence\": \"在通道远端呈现规整矩形轮廓，具有典型厢式货车外形特征，与周围展位结构分离且位于行车动线上\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.489, 0.326, 0.556, 0.590],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色标准集装箱货厢，车尾朝向镜头，可见双开门及尾灯，周围有装卸工人\",\n      \"distinct_from_previous\": \"与序列1车辆颜色不同(红vs深色)、尺寸更大、位置明显靠前且居中，两者间有足够间距及人员活动空间\",\n      \"evidence\": \"画面中央最醒目的红色车体，具有完整集装箱半挂车特征，与上方深色货车非同一物体\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 3,\n      \"bbox\": [0.346, 0.622, 0.483, 0.998],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹板长货厢(疑似40尺集装箱或厢式挂车)，纵向停放于前景左侧，无可见牵引车头\",\n      \"distinct_from_previous\": \"与序列2红色卡车颜色不同(白vs红)、位置更靠近镜头(前景)、朝向相同但独立停放，两者间有明确空隙\",\n      \"evidence\": \"占据画面下半部左侧的巨大白色矩形物体，表面有横向波纹纹理，符合货车货厢/挂车特征，与红色卡车为前后排列的两独立车体\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"展会撤展期间夜间场景，通道内光线充足；序列3(白色货厢)前端超出画面下边界；序列2(红色卡车)左侧有人员及散落物料；画面底部存在蓝色叉车(已按规则排除)；所有车辆均处于静止停放状态。\",\n  \"uncertain_reasons\": []\n}\n```"
+    }
+  ]
+}

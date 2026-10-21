@@ -1,0 +1,207 @@
+{
+  "images": [
+    "accuracy\\crops\\temporal\\south_590.jpg",
+    "assets\\frames\\south_600.jpg",
+    "accuracy\\crops\\temporal\\south_610.jpg"
+  ],
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "latency_s": 29.96,
+      "usage": {
+        "completion_tokens": 3411,
+        "prompt_tokens": 4343,
+        "total_tokens": 7754,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2413
+        }
+      },
+      "parsed": {
+        "visible_counts": [
+          {
+            "frame_index": 0,
+            "total": 5
+          },
+          {
+            "frame_index": 1,
+            "total": 5
+          },
+          {
+            "frame_index": 2,
+            "total": 5
+          }
+        ],
+        "unique_trucks": [
+          {
+            "track_id": "T1",
+            "size": "large",
+            "presence": [
+              true,
+              true,
+              true
+            ],
+            "bbox_by_frame": [
+              [
+                0.44,
+                0.66,
+                0.56,
+                0.89
+              ],
+              [
+                0.44,
+                0.66,
+                0.56,
+                0.89
+              ],
+              [
+                0.44,
+                0.74,
+                0.56,
+                0.94
+              ]
+            ],
+            "identity_clues": "White cab with '东风商用车' text, frontmost in right lane",
+            "uncertain": false,
+            "evidence": "Consistent white color and cab design, visible in all three frames with no identity change"
+          },
+          {
+            "track_id": "T2",
+            "size": "large",
+            "presence": [
+              true,
+              true,
+              true
+            ],
+            "bbox_by_frame": [
+              [
+                0.45,
+                0.31,
+                0.55,
+                0.51
+              ],
+              [
+                0.45,
+                0.31,
+                0.55,
+                0.51
+              ],
+              [
+                0.45,
+                0.31,
+                0.55,
+                0.51
+              ]
+            ],
+            "identity_clues": "Red cab with gray flat cargo area, behind T1",
+            "uncertain": false,
+            "evidence": "Same red cab and gray flatbed, positioned behind T1 in all frames"
+          },
+          {
+            "track_id": "T3",
+            "size": "large",
+            "presence": [
+              true,
+              true,
+              true
+            ],
+            "bbox_by_frame": [
+              [
+                0.42,
+                0.23,
+                0.48,
+                0.36
+              ],
+              [
+                0.42,
+                0.23,
+                0.48,
+                0.36
+              ],
+              [
+                0.42,
+                0.23,
+                0.48,
+                0.36
+              ]
+            ],
+            "identity_clues": "Red cab with blue tarp on cargo, behind T2",
+            "uncertain": false,
+            "evidence": "Red cab with blue tarp, located behind T2 across all frames"
+          },
+          {
+            "track_id": "T4",
+            "size": "large",
+            "presence": [
+              true,
+              true,
+              true
+            ],
+            "bbox_by_frame": [
+              [
+                0.41,
+                0.17,
+                0.47,
+                0.26
+              ],
+              [
+                0.41,
+                0.17,
+                0.47,
+                0.26
+              ],
+              [
+                0.41,
+                0.17,
+                0.47,
+                0.26
+              ]
+            ],
+            "identity_clues": "Red cab without tarp, behind T3",
+            "uncertain": false,
+            "evidence": "Red cab with no tarp, positioned behind T3 in all frames"
+          },
+          {
+            "track_id": "T5",
+            "size": "large",
+            "presence": [
+              true,
+              true,
+              true
+            ],
+            "bbox_by_frame": [
+              [
+                0.46,
+                0.11,
+                0.5,
+                0.19
+              ],
+              [
+                0.46,
+                0.11,
+                0.5,
+                0.19
+              ],
+              [
+                0.46,
+                0.11,
+                0.5,
+                0.19
+              ]
+            ],
+            "identity_clues": "Backmost red truck at the end of central lane",
+            "uncertain": false,
+            "evidence": "Visible at the far end of the lane in all three frames, consistent red color"
+          }
+        ],
+        "unique_total": 5,
+        "scene_notes": "All trucks aligned along central aisle, no significant occlusion affecting visibility across frames; all are heavy-duty large trucks",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"visible_counts\": [\n    {\"frame_index\": 0, \"total\": 5},\n    {\"frame_index\": 1, \"total\": 5},\n    {\"frame_index\": 2, \"total\": 5}\n  ],\n  \"unique_trucks\": [\n    {\n      \"track_id\": \"T1\",\n      \"size\": \"large\",\n      \"presence\": [true, true, true],\n      \"bbox_by_frame\": [\n        [0.44, 0.66, 0.56, 0.89],\n        [0.44, 0.66, 0.56, 0.89],\n        [0.44, 0.74, 0.56, 0.94]\n      ],\n      \"identity_clues\": \"White cab with '东风商用车' text, frontmost in right lane\",\n      \"uncertain\": false,\n      \"evidence\": \"Consistent white color and cab design, visible in all three frames with no identity change\"\n    },\n    {\n      \"track_id\": \"T2\",\n      \"size\": \"large\",\n      \"presence\": [true, true, true],\n      \"bbox_by_frame\": [\n        [0.45, 0.31, 0.55, 0.51],\n        [0.45, 0.31, 0.55, 0.51],\n        [0.45, 0.31, 0.55, 0.51]\n      ],\n      \"identity_clues\": \"Red cab with gray flat cargo area, behind T1\",\n      \"uncertain\": false,\n      \"evidence\": \"Same red cab and gray flatbed, positioned behind T1 in all frames\"\n    },\n    {\n      \"track_id\": \"T3\",\n      \"size\": \"large\",\n      \"presence\": [true, true, true],\n      \"bbox_by_frame\": [\n        [0.42, 0.23, 0.48, 0.36],\n        [0.42, 0.23, 0.48, 0.36],\n        [0.42, 0.23, 0.48, 0.36]\n      ],\n      \"identity_clues\": \"Red cab with blue tarp on cargo, behind T2\",\n      \"uncertain\": false,\n      \"evidence\": \"Red cab with blue tarp, located behind T2 across all frames\"\n    },\n    {\n      \"track_id\": \"T4\",\n      \"size\": \"large\",\n      \"presence\": [true, true, true],\n      \"bbox_by_frame\": [\n        [0.41, 0.17, 0.47, 0.26],\n        [0.41, 0.17, 0.47, 0.26],\n        [0.41, 0.17, 0.47, 0.26]\n      ],\n      \"identity_clues\": \"Red cab without tarp, behind T3\",\n      \"uncertain\": false,\n      \"evidence\": \"Red cab with no tarp, positioned behind T3 in all frames\"\n    },\n    {\n      \"track_id\": \"T5\",\n      \"size\": \"large\",\n      \"presence\": [true, true, true],\n      \"bbox_by_frame\": [\n        [0.46, 0.11, 0.5, 0.19],\n        [0.46, 0.11, 0.5, 0.19],\n        [0.46, 0.11, 0.5, 0.19]\n      ],\n      \"identity_clues\": \"Backmost red truck at the end of central lane\",\n      \"uncertain\": false,\n      \"evidence\": \"Visible at the far end of the lane in all three frames, consistent red color\"\n    }\n  ],\n  \"unique_total\": 5,\n  \"scene_notes\": \"All trucks aligned along central aisle, no significant occlusion affecting visibility across frames; all are heavy-duty large trucks\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

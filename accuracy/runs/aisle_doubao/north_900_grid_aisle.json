@@ -1,0 +1,79 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_900_grid_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 13.62,
+      "usage": {
+        "completion_tokens": 1415,
+        "prompt_tokens": 1776,
+        "total_tokens": 3191,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 984
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.17,
+              0.61,
+              0.54,
+              0.99
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "白色波纹金属货厢，深色车身，朝向画面上方",
+            "evidence": "位于画面下方偏左，货厢完整可见，为重型货车",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.32,
+              0.35,
+              0.53,
+              0.62
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "红色封闭货厢，车头被前方白色货车遮挡，为单独挂车",
+            "evidence": "位于画面中间偏左，货厢完整，无可见车头，符合单独挂车计数规则",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.43,
+              0.14,
+              0.56,
+              0.3
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "蓝色顶棚货车，货厢上有人员，朝向画面下方",
+            "evidence": "位于画面上方中间，整体可见，为重型货车",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面中共3辆可见货车，红色货厢为单独挂车，符合计数规则，无完全遮挡或无法确定的车辆",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.17, 0.61, 0.54, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹金属货厢，深色车身，朝向画面上方\",\n      \"evidence\": \"位于画面下方偏左，货厢完整可见，为重型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.32, 0.35, 0.53, 0.62],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色封闭货厢，车头被前方白色货车遮挡，为单独挂车\",\n      \"evidence\": \"位于画面中间偏左，货厢完整，无可见车头，符合单独挂车计数规则\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.43, 0.14, 0.56, 0.30],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色顶棚货车，货厢上有人员，朝向画面下方\",\n      \"evidence\": \"位于画面上方中间，整体可见，为重型货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中共3辆可见货车，红色货厢为单独挂车，符合计数规则，无完全遮挡或无法确定的车辆\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_900_grid_aisle.jpg"
+    }
+  ]
+}

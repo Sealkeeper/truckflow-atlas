@@ -1,0 +1,65 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_600_grid_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 8.34,
+      "usage": {
+        "completion_tokens": 844,
+        "prompt_tokens": 1776,
+        "total_tokens": 2620,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 535
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.51,
+              0.31,
+              0.68,
+              0.58
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色封闭式货厢，尾部带尾灯，朝向画面下方",
+            "evidence": "画面中间通道可见完整红色半挂货车货厢，符合重型货车特征",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.15,
+              0.61,
+              0.51,
+              0.99
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "白色波纹金属货厢，位于画面左下方，货厢完整",
+            "evidence": "画面左下方可见完整厢式货车货厢，符合大型货车特征",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面内共可见2辆货车，无被完全遮挡或无法判定的车辆",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.51, 0.31, 0.68, 0.58],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色封闭式货厢，尾部带尾灯，朝向画面下方\",\n      \"evidence\": \"画面中间通道可见完整红色半挂货车货厢，符合重型货车特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.15, 0.61, 0.51, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹金属货厢，位于画面左下方，货厢完整\",\n      \"evidence\": \"画面左下方可见完整厢式货车货厢，符合大型货车特征\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面内共可见2辆货车，无被完全遮挡或无法判定的车辆\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_600_grid_aisle.jpg"
+    }
+  ]
+}

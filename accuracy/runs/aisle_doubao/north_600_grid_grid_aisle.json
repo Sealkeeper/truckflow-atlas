@@ -1,0 +1,65 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_600_grid_grid_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 19.93,
+      "usage": {
+        "completion_tokens": 2367,
+        "prompt_tokens": 1776,
+        "total_tokens": 4143,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2043
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.51,
+              0.3,
+              0.69,
+              0.59
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色货厢半挂车，车尾朝向镜头，尾部有标识与灯光",
+            "evidence": "画面中间偏右位置，可见完整的红色货厢，符合货车定义",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.16,
+              0.6,
+              0.52,
+              0.99
+            ],
+            "size": "large",
+            "visible": "partial",
+            "is_truck": true,
+            "identity_clues": "白色长货厢货车，车头部分可见，货厢为白色长条形",
+            "evidence": "画面左侧下方，可见白色长货厢及部分车头，属于大型货车范畴",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面中仅可见2辆大型货车，叉车、人物、工程机械等不计入计数，无其他符合要求的车辆",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.51, 0.30, 0.69, 0.59],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货厢半挂车，车尾朝向镜头，尾部有标识与灯光\",\n      \"evidence\": \"画面中间偏右位置，可见完整的红色货厢，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.16, 0.60, 0.52, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"partial\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色长货厢货车，车头部分可见，货厢为白色长条形\",\n      \"evidence\": \"画面左侧下方，可见白色长货厢及部分车头，属于大型货车范畴\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中仅可见2辆大型货车，叉车、人物、工程机械等不计入计数，无其他符合要求的车辆\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_600_grid_grid_aisle.jpg"
+    }
+  ]
+}

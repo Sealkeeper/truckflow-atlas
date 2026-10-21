@@ -1,0 +1,79 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_5_grid_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 16.51,
+      "usage": {
+        "completion_tokens": 1659,
+        "prompt_tokens": 1776,
+        "total_tokens": 3435,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1231
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 2,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.27,
+              0.5,
+              0.55,
+              0.92
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red cargo truck, rear with text 'QL66002', rear doors visible",
+            "evidence": "Fully visible in lower central area, rear facing camera, large cargo truck",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.54,
+              0.11,
+              0.65,
+              0.26
+            ],
+            "size": "large",
+            "visible": "partial_top",
+            "is_truck": true,
+            "identity_clues": "Red container truck, front part visible",
+            "evidence": "Visible in upper middle area, red container, partial view",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.4,
+              0.25,
+              0.55,
+              0.46
+            ],
+            "size": "medium",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "Blue flatbed trailer, no visible cab",
+            "evidence": "Separate trailer unit located between lower red truck and upper red container",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "Three trucks are visible: two large (bottom red cargo truck, upper red container truck) and one medium blue flatbed trailer. No vehicles are fully obscured, all meet truck criteria.",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 2, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.27, 0.5, 0.55, 0.92],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cargo truck, rear with text 'QL66002', rear doors visible\",\n      \"evidence\": \"Fully visible in lower central area, rear facing camera, large cargo truck\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.54, 0.11, 0.65, 0.26],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red container truck, front part visible\",\n      \"evidence\": \"Visible in upper middle area, red container, partial view\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.4, 0.25, 0.55, 0.46],\n      \"size\": \"medium\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Blue flatbed trailer, no visible cab\",\n      \"evidence\": \"Separate trailer unit located between lower red truck and upper red container\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"Three trucks are visible: two large (bottom red cargo truck, upper red container truck) and one medium blue flatbed trailer. No vehicles are fully obscured, all meet truck criteria.\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_5_grid_aisle.jpg"
+    }
+  ]
+}

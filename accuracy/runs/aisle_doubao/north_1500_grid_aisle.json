@@ -1,0 +1,65 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_1500_grid_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 12.74,
+      "usage": {
+        "completion_tokens": 1309,
+        "prompt_tokens": 1776,
+        "total_tokens": 3085,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 990
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.33,
+              0.35,
+              0.53,
+              0.65
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red enclosed cargo box with text 'BL88 980' on lower section, positioned in central aisle between exhibition booths",
+            "evidence": "Clearly a heavy-duty truck cargo unit, no ambiguity in vehicle type",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.18,
+              0.6,
+              0.52,
+              0.99
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "White corrugated metal cargo top, dark lower chassis, located in front of the red truck",
+            "evidence": "Entire cargo area visible, confirmed as a large truck",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "Two large trucks visible in central aisle, no major occlusion affecting vehicle identification",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.33, 0.35, 0.53, 0.65],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red enclosed cargo box with text 'BL88 980' on lower section, positioned in central aisle between exhibition booths\",\n      \"evidence\": \"Clearly a heavy-duty truck cargo unit, no ambiguity in vehicle type\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.18, 0.60, 0.52, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White corrugated metal cargo top, dark lower chassis, located in front of the red truck\",\n      \"evidence\": \"Entire cargo area visible, confirmed as a large truck\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"Two large trucks visible in central aisle, no major occlusion affecting vehicle identification\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_1500_grid_aisle.jpg"
+    }
+  ]
+}

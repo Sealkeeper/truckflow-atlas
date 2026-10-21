@@ -1,0 +1,79 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_2400_grid_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 12.71,
+      "usage": {
+        "completion_tokens": 1343,
+        "prompt_tokens": 1776,
+        "total_tokens": 3119,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 922
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.33,
+              0.6,
+              0.65,
+              0.99
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Gray roof, red rear, box-type cargo truck, fully visible in lower central area",
+            "evidence": "Clearly identifiable as a large truck with complete body visible, no occlusion",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.4,
+              0.23,
+              0.56,
+              0.43
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red open-cargo truck, positioned between two other trucks in the middle of the frame",
+            "evidence": "Full body visible, distinct truck structure with open cargo area",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.41,
+              0.13,
+              0.58,
+              0.26
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Long red container truck, rear section with number plate visible, at the back of the scene",
+            "evidence": "Complete large container truck visible, no major occlusion",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "All three trucks are fully visible within the frame, no significant occlusion or ambiguity in identification",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.33, 0.60, 0.65, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Gray roof, red rear, box-type cargo truck, fully visible in lower central area\",\n      \"evidence\": \"Clearly identifiable as a large truck with complete body visible, no occlusion\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.40, 0.23, 0.56, 0.43],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red open-cargo truck, positioned between two other trucks in the middle of the frame\",\n      \"evidence\": \"Full body visible, distinct truck structure with open cargo area\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.41, 0.13, 0.58, 0.26],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Long red container truck, rear section with number plate visible, at the back of the scene\",\n      \"evidence\": \"Complete large container truck visible, no major occlusion\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All three trucks are fully visible within the frame, no significant occlusion or ambiguity in identification\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_2400_grid_aisle.jpg"
+    }
+  ]
+}

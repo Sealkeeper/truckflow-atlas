@@ -1,0 +1,87 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\assets\\frames\\north_600.jpg",
+  "prompt_version": "truck-count-v1",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 20.7,
+      "usage": {
+        "completion_tokens": 2277,
+        "prompt_tokens": 1884,
+        "total_tokens": 4161,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1666
+        }
+      },
+      "parsed": {
+        "scan_order": "先沿中间通道由远及近扫描，再扫描画面左右边缘区域",
+        "counts": {
+          "total": 3,
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "sequence": 1,
+            "bbox": [
+              0.43,
+              0.16,
+              0.5,
+              0.3
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "蓝色平顶货厢，位于通道最远端，朝向画面下方，独立停放",
+            "distinct_from_previous": "第一辆，无前置车辆",
+            "evidence": "画面中间通道最上方，蓝色货厢清晰可见，为独立车体",
+            "uncertain": false
+          },
+          {
+            "sequence": 2,
+            "bbox": [
+              0.47,
+              0.31,
+              0.56,
+              0.57
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色封闭货厢，尾门有反光标识，朝向画面下方，位于中间通道，在蓝色货车前方",
+            "distinct_from_previous": "与上一辆（蓝色顶货车）为不同独立车体，二者前后排列，货厢颜色外观不同，无连接关系",
+            "evidence": "中间通道，蓝色货车下方，红色货厢独立存在，无连接到蓝色货车的迹象",
+            "uncertain": false
+          },
+          {
+            "sequence": 3,
+            "bbox": [
+              0.34,
+              0.6,
+              0.48,
+              0.99
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "白色波纹状货厢，无牵引车头，朝向画面下方，位于中间通道，红色货车前方",
+            "distinct_from_previous": "与上一辆（红色货车）为不同独立车体，二者前后排列，红色货车为带车头的完整车辆，白色车辆为无车头的挂车，货厢类型不同，无连接关系",
+            "evidence": "中间通道，红色货车前方，白色货厢挂车独立停放，无牵引车头",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面中可见3辆独立货车，均在中间通道，左右边缘无符合条件的货车，叉车等工程机械不计入统计",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"scan_order\": \"先沿中间通道由远及近扫描，再扫描画面左右边缘区域\",\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"sequence\": 1,\n      \"bbox\": [0.43, 0.16, 0.50, 0.30],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色平顶货厢，位于通道最远端，朝向画面下方，独立停放\",\n      \"distinct_from_previous\": \"第一辆，无前置车辆\",\n      \"evidence\": \"画面中间通道最上方，蓝色货厢清晰可见，为独立车体\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 2,\n      \"bbox\": [0.47, 0.31, 0.56, 0.57],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色封闭货厢，尾门有反光标识，朝向画面下方，位于中间通道，在蓝色货车前方\",\n      \"distinct_from_previous\": \"与上一辆（蓝色顶货车）为不同独立车体，二者前后排列，货厢颜色外观不同，无连接关系\",\n      \"evidence\": \"中间通道，蓝色货车下方，红色货厢独立存在，无连接到蓝色货车的迹象\",\n      \"uncertain\": false\n    },\n    {\n      \"sequence\": 3,\n      \"bbox\": [0.34, 0.60, 0.48, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹状货厢，无牵引车头，朝向画面下方，位于中间通道，红色货车前方\",\n      \"distinct_from_previous\": \"与上一辆（红色货车）为不同独立车体，二者前后排列，红色货车为带车头的完整车辆，白色车辆为无车头的挂车，货厢类型不同，无连接关系\",\n      \"evidence\": \"中间通道，红色货车前方，白色货厢挂车独立停放，无牵引车头\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中可见3辆独立货车，均在中间通道，左右边缘无符合条件的货车，叉车等工程机械不计入统计\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

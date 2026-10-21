@@ -1,0 +1,65 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_1800_grid_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 9.92,
+      "usage": {
+        "completion_tokens": 881,
+        "prompt_tokens": 1776,
+        "total_tokens": 2657,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 562
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.41,
+              0.26,
+              0.54,
+              0.46
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色封闭式货厢，朝向画面上方，货厢结构完整",
+            "evidence": "画面中间偏上位置，清晰可见大型红色货车货厢，无遮挡",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.19,
+              0.63,
+              0.51,
+              0.99
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "白色波纹状长厢式货厢，位于画面下方，车身完整可见",
+            "evidence": "画面下方偏左，清晰可见大型白色厢式货车，车身无明显遮挡",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面内共可见2辆大型货车，均完整显示，无被完全遮挡或无法确定的车辆",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.41, 0.26, 0.54, 0.46],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色封闭式货厢，朝向画面上方，货厢结构完整\",\n      \"evidence\": \"画面中间偏上位置，清晰可见大型红色货车货厢，无遮挡\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.19, 0.63, 0.51, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹状长厢式货厢，位于画面下方，车身完整可见\",\n      \"evidence\": \"画面下方偏左，清晰可见大型白色厢式货车，车身无明显遮挡\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面内共可见2辆大型货车，均完整显示，无被完全遮挡或无法确定的车辆\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_1800_grid_aisle.jpg"
+    }
+  ]
+}

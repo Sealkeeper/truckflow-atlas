@@ -1,0 +1,93 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\south_2600_grid_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 12.29,
+      "usage": {
+        "completion_tokens": 1240,
+        "prompt_tokens": 1776,
+        "total_tokens": 3016,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 706
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 4,
+          "large": 4,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.31,
+              0.22,
+              0.44,
+              0.4
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "White cab with box cargo, front-facing, positioned in upper central lane",
+            "evidence": "Fully visible in upper middle area of the image, no significant occlusion",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.43,
+              0.21,
+              0.55,
+              0.32
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red cab, front-facing, behind the white truck in upper lane",
+            "evidence": "Fully visible behind the white truck in upper central lane",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.47,
+              0.36,
+              0.64,
+              0.67
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red cab with open cargo area, front-facing, in middle central lane",
+            "evidence": "Fully visible in middle lower central lane",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.5,
+              0.8,
+              0.81,
+              0.99
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "Red flat trailer, bottom edge of image, no attached cab visible",
+            "evidence": "Separate trailer visible at bottom of central lane, not connected to a visible cab",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "All trucks are located in the central lane of the exhibition hall; no vehicles are fully obscured, all visible parts confirm they are trucks",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 4, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.31, 0.22, 0.44, 0.40],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White cab with box cargo, front-facing, positioned in upper central lane\",\n      \"evidence\": \"Fully visible in upper middle area of the image, no significant occlusion\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.43, 0.21, 0.55, 0.32],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, front-facing, behind the white truck in upper lane\",\n      \"evidence\": \"Fully visible behind the white truck in upper central lane\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.47, 0.36, 0.64, 0.67],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab with open cargo area, front-facing, in middle central lane\",\n      \"evidence\": \"Fully visible in middle lower central lane\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.50, 0.80, 0.81, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red flat trailer, bottom edge of image, no attached cab visible\",\n      \"evidence\": \"Separate trailer visible at bottom of central lane, not connected to a visible cab\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All trucks are located in the central lane of the exhibition hall; no vehicles are fully obscured, all visible parts confirm they are trucks\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\south_2600_grid_aisle.jpg"
+    }
+  ]
+}

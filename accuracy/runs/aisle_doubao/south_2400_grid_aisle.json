@@ -1,0 +1,79 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\south_2400_grid_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 13.15,
+      "usage": {
+        "completion_tokens": 1060,
+        "prompt_tokens": 1776,
+        "total_tokens": 2836,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 645
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 1,
+          "medium": 2,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.37,
+              0.47,
+              0.64,
+              0.89
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red heavy truck cab with 'SITRAK' text, open right door, front lights illuminated",
+            "evidence": "Fully visible heavy truck in lower central aisle, no occlusion",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.31,
+              0.22,
+              0.44,
+              0.4
+            ],
+            "size": "medium",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "White box truck with front logo and text on top of cab",
+            "evidence": "Fully visible in middle left upper aisle, no occlusion",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.43,
+              0.21,
+              0.54,
+              0.33
+            ],
+            "size": "medium",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red truck cab with blue item on top, front logo",
+            "evidence": "Fully visible behind the white box truck in upper central aisle",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "All counted trucks are fully visible in the central aisle, no major occlusion or partial hidden status",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 1, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.37, 0.47, 0.64, 0.89],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red heavy truck cab with 'SITRAK' text, open right door, front lights illuminated\",\n      \"evidence\": \"Fully visible heavy truck in lower central aisle, no occlusion\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.31, 0.22, 0.44, 0.40],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White box truck with front logo and text on top of cab\",\n      \"evidence\": \"Fully visible in middle left upper aisle, no occlusion\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.43, 0.21, 0.54, 0.33],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red truck cab with blue item on top, front logo\",\n      \"evidence\": \"Fully visible behind the white box truck in upper central aisle\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All counted trucks are fully visible in the central aisle, no major occlusion or partial hidden status\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\south_2400_grid_aisle.jpg"
+    }
+  ]
+}

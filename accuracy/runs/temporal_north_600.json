@@ -1,0 +1,111 @@
+{
+  "images": [
+    "accuracy\\crops\\temporal\\north_590.jpg",
+    "assets\\frames\\north_600.jpg",
+    "accuracy\\crops\\temporal\\north_610.jpg"
+  ],
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "latency_s": 17.43,
+      "usage": {
+        "completion_tokens": 1853,
+        "prompt_tokens": 4343,
+        "total_tokens": 6196,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1400
+        }
+      },
+      "parsed": {
+        "visible_counts": [
+          {
+            "frame_index": 0,
+            "total": 2
+          },
+          {
+            "frame_index": 1,
+            "total": 2
+          },
+          {
+            "frame_index": 2,
+            "total": 2
+          }
+        ],
+        "unique_trucks": [
+          {
+            "track_id": "T1",
+            "size": "large",
+            "presence": [
+              true,
+              true,
+              true
+            ],
+            "bbox_by_frame": [
+              [
+                0.48,
+                0.3,
+                0.57,
+                0.56
+              ],
+              [
+                0.48,
+                0.31,
+                0.57,
+                0.58
+              ],
+              [
+                0.48,
+                0.33,
+                0.57,
+                0.59
+              ]
+            ],
+            "identity_clues": "Red cargo truck in the middle of the scene, moving slowly forward across frames, consistent red color and rectangular cargo structure",
+            "uncertain": false,
+            "evidence": "Visible in all three consecutive frames, same entity with no identity change"
+          },
+          {
+            "track_id": "T2",
+            "size": "large",
+            "presence": [
+              true,
+              true,
+              true
+            ],
+            "bbox_by_frame": [
+              [
+                0.34,
+                0.6,
+                0.49,
+                0.99
+              ],
+              [
+                0.34,
+                0.6,
+                0.49,
+                0.99
+              ],
+              [
+                0.34,
+                0.6,
+                0.49,
+                0.99
+              ]
+            ],
+            "identity_clues": "White corrugated container truck on the left side, stationary across frames, consistent white container structure",
+            "uncertain": false,
+            "evidence": "Visible in all three consecutive frames, same entity with no identity change"
+          }
+        ],
+        "unique_total": 2,
+        "scene_notes": "Both trucks are clearly visible in all three frames, no occlusion affecting their identity, no duplicate trucks counted",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"visible_counts\": [{\"frame_index\": 0, \"total\": 2}, {\"frame_index\": 1, \"total\": 2}, {\"frame_index\": 2, \"total\": 2}],\n  \"unique_trucks\": [\n    {\n      \"track_id\": \"T1\",\n      \"size\": \"large\",\n      \"presence\": [true, true, true],\n      \"bbox_by_frame\": [[0.48, 0.3, 0.57, 0.56], [0.48, 0.31, 0.57, 0.58], [0.48, 0.33, 0.57, 0.59]],\n      \"identity_clues\": \"Red cargo truck in the middle of the scene, moving slowly forward across frames, consistent red color and rectangular cargo structure\",\n      \"uncertain\": false,\n      \"evidence\": \"Visible in all three consecutive frames, same entity with no identity change\"\n    },\n    {\n      \"track_id\": \"T2\",\n      \"size\": \"large\",\n      \"presence\": [true, true, true],\n      \"bbox_by_frame\": [[0.34, 0.6, 0.49, 0.99], [0.34, 0.6, 0.49, 0.99], [0.34, 0.6, 0.49, 0.99]],\n      \"identity_clues\": \"White corrugated container truck on the left side, stationary across frames, consistent white container structure\",\n      \"uncertain\": false,\n      \"evidence\": \"Visible in all three consecutive frames, same entity with no identity change\"\n    }\n  ],\n  \"unique_total\": 2,\n  \"scene_notes\": \"Both trucks are clearly visible in all three frames, no occlusion affecting their identity, no duplicate trucks counted\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

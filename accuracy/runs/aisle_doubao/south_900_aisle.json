@@ -1,0 +1,107 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\south_900_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 17.17,
+      "usage": {
+        "completion_tokens": 2049,
+        "prompt_tokens": 1776,
+        "total_tokens": 3825,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1418
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 5,
+          "large": 3,
+          "medium": 2,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.47,
+              0.45,
+              0.69,
+              0.89
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "白色车头印有“东风商用车”字样，白色封闭货厢，朝向镜头",
+            "evidence": "位于画面中间偏下的通道，完整可见的重型厢式货车",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.44,
+              0.28,
+              0.58,
+              0.54
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色车头，灰色封闭货厢，朝向镜头",
+            "evidence": "位于白色东风商用车后方，完整可见的半挂货车",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.34,
+              0.23,
+              0.45,
+              0.36
+            ],
+            "size": "medium",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色车头，货厢顶部有蓝色物品，朝向镜头",
+            "evidence": "位于半挂货车后方，完整可见的中型货车",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.42,
+              0.12,
+              0.55,
+              0.25
+            ],
+            "size": "medium",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色车头，棕色货厢，朝向镜头",
+            "evidence": "位于通道最上方，完整可见的中型货车",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.51,
+              0.85,
+              0.79,
+              1.0
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "红色封闭货厢，无车头，单独放置",
+            "evidence": "位于画面底部，单独可见的半挂货厢",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面为展会撤换展现场，车辆沿中间通道纵向排列，底部有单独挂车，无完全遮挡的车辆",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 5, \"large\": 3, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.47, 0.45, 0.69, 0.89],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色车头印有“东风商用车”字样，白色封闭货厢，朝向镜头\",\n      \"evidence\": \"位于画面中间偏下的通道，完整可见的重型厢式货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.28, 0.58, 0.54],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，灰色封闭货厢，朝向镜头\",\n      \"evidence\": \"位于白色东风商用车后方，完整可见的半挂货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.34, 0.23, 0.45, 0.36],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，货厢顶部有蓝色物品，朝向镜头\",\n      \"evidence\": \"位于半挂货车后方，完整可见的中型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.42, 0.12, 0.55, 0.25],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，棕色货厢，朝向镜头\",\n      \"evidence\": \"位于通道最上方，完整可见的中型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.51, 0.85, 0.79, 1.0],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色封闭货厢，无车头，单独放置\",\n      \"evidence\": \"位于画面底部，单独可见的半挂货厢\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展会撤换展现场，车辆沿中间通道纵向排列，底部有单独挂车，无完全遮挡的车辆\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\south_900_aisle.jpg"
+    }
+  ]
+}

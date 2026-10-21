@@ -1,0 +1,65 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\north_600_band_top.jpg",
+  "prompt_version": "truck-count-v1",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 9.44,
+      "usage": {
+        "completion_tokens": 969,
+        "prompt_tokens": 1756,
+        "total_tokens": 2725,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 664
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.65,
+              0.85,
+              0.88,
+              0.99
+            ],
+            "size": "large",
+            "visible": "partial_top",
+            "is_truck": true,
+            "identity_clues": "Red-colored truck body, front section visible at bottom right of frame",
+            "evidence": "Visible as a truck with distinct body shape, no ambiguity in classification",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.5,
+              0.42,
+              0.69,
+              0.66
+            ],
+            "size": "large",
+            "visible": "partial_side",
+            "is_truck": true,
+            "identity_clues": "Container-style truck with number plate area visible, located in middle of frame",
+            "evidence": "Distinct truck structure with container, clearly identifiable as a freight vehicle",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "No significant occlusion for the two visible trucks, both are clearly within frame boundaries",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.65, 0.85, 0.88, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red-colored truck body, front section visible at bottom right of frame\",\n      \"evidence\": \"Visible as a truck with distinct body shape, no ambiguity in classification\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.5, 0.42, 0.69, 0.66],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Container-style truck with number plate area visible, located in middle of frame\",\n      \"evidence\": \"Distinct truck structure with container, clearly identifiable as a freight vehicle\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"No significant occlusion for the two visible trucks, both are clearly within frame boundaries\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}
