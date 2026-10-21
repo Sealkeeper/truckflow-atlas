@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>货车通道工作台 · 当前效果</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-a"></div>
+    <div class="ambient ambient-b"></div>
+
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="./index.html" aria-label="货车通道工作台首页">
+          <span class="brand-mark" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+          <span class="brand-copy">
+            <strong>TRUCKFLOW</strong>
+            <small>VISION OPS</small>
+          </span>
+        </a>
+        <div class="topbar-center">
+          <span class="system-dot"></span>
+          <span>双机位样例已就绪</span>
+          <span class="top-divider"></span>
+          <span>20 个采样时刻</span>
+        </div>
+        <div class="topbar-actions">
+          <span class="demo-pill">DEMO</span>
+          <span class="operator">
+            <span class="operator-avatar">广</span>
+            <span>广交会撤换展</span>
+          </span>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="page-title">
+          <div class="hero-copy">
+            <div class="eyebrow"><span>双机位 · 人工开发集</span><i></i><span>当前效果</span></div>
+            <h1 id="page-title">看清每辆车，校验通道负载</h1>
+            <p>同步查看北、南机位真实帧；计数有据，结论未核验处保持可见。</p>
+          </div>
+          <div class="hero-actions">
+            <button class="btn btn-ghost" id="evidenceButton" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v13H4zM8 9h8M8 13h5" /></svg>
+              计数口径
+            </button>
+            <button class="btn btn-primary" id="analysisButton" type="button">
+              进入分析视图
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
+            </button>
+          </div>
+        </section>
+
+        <section class="dashboard" aria-label="双机位工作台">
+          <div class="panel camera-workspace">
+            <div class="panel-heading">
+              <div>
+                <div class="title-row">
+                  <h2>多机位同步画面</h2>
+                  <span class="soft-badge">2 机位</span>
+                </div>
+                <p>当前帧对应人工计数；跨机位唯一车辆尚未去重。</p>
+              </div>
+              <div class="segmented" role="tablist" aria-label="画面模式">
+                <button class="segment is-active" data-view="original" role="tab" aria-selected="true">原画面</button>
+                <button class="segment" data-view="analysis" role="tab" aria-selected="false">分析画面</button>
+              </div>
+            </div>
+
+            <div class="camera-grid">
+              <article class="camera-card" data-camera="north">
+                <div class="camera-head">
+                  <div class="camera-name">
+                    <span class="camera-led"></span>
+                    <div>
+                      <strong>天花北</strong>
+                      <small>NORTH · 1280 × 960</small>
+                    </div>
+                  </div>
+                  <div class="camera-total">
+                    <strong data-count>3</strong><span>辆</span>
+                  </div>
+                </div>
+                <div class="frame">
+                  <img
+                    data-frame
+                    src="/assets/frames/north_1200.jpg"
+                    alt="天花北机位 00:20:00 真实画面"
+                    width="1280"
+                    height="960"
+                  />
+                  <div class="frame-vignette"></div>
+                  <div class="frame-topline">
+                    <span class="source-tag">真实帧</span>
+                    <span class="timecode" data-timecode>00:20:00</span>
+                  </div>
+                  <div class="frame-caption">
+                    <span data-camera-label>天花北 · 原始画面</span>
+                    <span class="frame-rule"></span>
+                    <span>框待后端返回</span>
+                  </div>
+                  <div class="analysis-empty" aria-hidden="true">
+                    <span class="scan-line"></span>
+                    <strong>车辆框待后端返回</strong>
+                    <small>当前不叠加推测框</small>
+                  </div>
+                </div>
+                <div class="camera-foot">
+                  <div class="type-stat"><span>大型</span><strong data-type="large">3</strong></div>
+                  <div class="type-stat"><span>中型</span><strong data-type="medium">0</strong></div>
+                  <div class="type-stat"><span>小型</span><strong data-type="small">0</strong></div>
+                  <div class="review-state" data-review-state>
+                    <span class="state-dot"></span>
+                    <span>人工计数已记录</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="camera-card" data-camera="south">
+                <div class="camera-head">
+                  <div class="camera-name">
+                    <span class="camera-led"></span>
+                    <div>
+                      <strong>天花南</strong>
+                      <small>SOUTH · 1280 × 960</small>
+                    </div>
+                  </div>
+                  <div class="camera-total">
+                    <strong data-count>5</strong><span>辆</span>
+                  </div>
+                </div>
+                <div class="frame">
+                  <img
+                    data-frame
+                    src="/assets/frames/south_1200.jpg"
+                    alt="天花南机位 00:20:00 真实画面"
+                    width="1280"
+                    height="960"
+                  />
+                  <div class="frame-vignette"></div>
+                  <div class="frame-topline">
+                    <span class="source-tag">真实帧</span>
+                    <span class="timecode" data-timecode>00:20:00</span>
+                  </div>
+                  <div class="frame-caption">
+                    <span data-camera-label>天花南 · 原始画面</span>
+                    <span class="frame-rule"></span>
+                    <span>框待后端返回</span>
+                  </div>
+                  <div class="analysis-empty" aria-hidden="true">
+                    <span class="scan-line"></span>
+                    <strong>车辆框待后端返回</strong>
+                    <small>当前不叠加推测框</small>
+                  </div>
+                </div>
+                <div class="camera-foot">
+                  <div class="type-stat"><span>大型</span><strong data-type="large">3</strong></div>
+                  <div class="type-stat"><span>中型</span><strong data-type="medium">2</strong></div>
+                  <div class="type-stat"><span>小型</span><strong data-type="small">0</strong></div>
+                  <div class="review-state is-review" data-review-state>
+                    <span class="state-dot"></span>
+                    <span>通道边界待复核</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="transport">
+              <button class="play-button" id="playButton" type="button" aria-label="播放样例时间轴">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 7 8 5-8 5z" /></svg>
+              </button>
+              <div class="transport-time">
+                <strong data-current-time>00:20:00</strong>
+                <span>/ 00:44:19</span>
+              </div>
+              <div class="track-wrap">
+                <input
+                  id="timeRange"
+                  class="time-range"
+                  type="range"
+                  min="0"
+                  max="9"
+                  step="1"
+                  value="4"
+                  aria-label="选择采样时刻"
+                />
+                <div class="track-labels">
+                  <span>00:00</span>
+                  <span>00:20</span>
+                  <span>00:43</span>
+                </div>
+              </div>
+              <div class="sample-readout">
+                <span>采样</span>
+                <strong><span data-sample-index>05</span>/10</strong>
+              </div>
+              <div class="speed-pill">1×</div>
+            </div>
+          </div>
+
+          <aside class="insights" aria-label="当前结果摘要">
+            <section class="panel snapshot-card">
+              <div class="section-kicker">当前时刻</div>
+              <div class="snapshot-title">
+                <div>
+                  <span>在画面车辆</span>
+                  <div class="dual-count"><strong data-north-count>3</strong><i>北</i><em>+</em><strong data-south-count>5</strong><i>南</i></div>
+                </div>
+                <span class="live-badge"><i></i>同步</span>
+              </div>
+              <div class="unique-pending">
+                <span>跨机位唯一总数</span>
+                <strong>待去重</strong>
+              </div>
+              <div class="mini-types">
+                <div><span>大型</span><strong data-total-type="large">6</strong></div>
+                <div><span>中型</span><strong data-total-type="medium">2</strong></div>
+                <div><span>小型</span><strong data-total-type="small">0</strong></div>
+              </div>
+              <p class="fine-print">“6 + 2”为逐机位人工计数相加，不代表 8 辆唯一车。</p>
+            </section>
+
+            <section class="panel load-card">
+              <div class="load-head">
+                <div>
+                  <div class="section-kicker">通道负载估算</div>
+                  <div class="load-value"><strong data-load-value>120</strong><span>%</span></div>
+                </div>
+                <span class="demo-corner">DEMO</span>
+              </div>
+              <div class="load-bar" aria-hidden="true"><span data-load-bar style="width: 100%"></span></div>
+              <div class="capacity-row" aria-label="演示额定容量">
+                <label>大型 <input id="capLarge" type="number" min="1" max="30" value="6" /></label>
+                <label>中型 <input id="capMedium" type="number" min="1" max="30" value="10" /></label>
+                <label>小型 <input id="capSmall" type="number" min="1" max="30" value="12" /></label>
+              </div>
+              <div class="formula">
+                <span>未去重叠加</span>
+                <code><b data-formula-large>6</b>/<span data-capacity-value="large">6</span> + <b data-formula-medium>2</b>/<span data-capacity-value="medium">10</span> + <b data-formula-small>0</b>/<span data-capacity-value="small">12</span></code>
+              </div>
+              <p class="fine-print">容量为演示参数，不是实测米制容量；跨机位重复尚未处理。</p>
+            </section>
+
+            <section class="panel evidence-card">
+              <div class="evidence-head">
+                <div>
+                  <div class="section-kicker">证据状态</div>
+                  <strong>人工开发集 v0</strong>
+                </div>
+                <span class="evidence-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7zM14 3v5h4M10 12h5M10 16h4" /></svg>
+                </span>
+              </div>
+              <div class="evidence-rows">
+                <div><span>帧来源</span><strong>真实视频抽样</strong></div>
+                <div><span>边界门禁</span><strong class="warn-text">南侧待确认</strong></div>
+                <div><span>模型框</span><strong>未接入</strong></div>
+              </div>
+            </section>
+          </aside>
+        </section>
+
+        <section class="panel timeline-panel" aria-label="采样时刻">
+          <div class="timeline-head">
+            <div>
+              <div class="title-row">
+                <h2>机位计数时间轴</h2>
+                <span class="soft-badge">逐机位 · 非唯一车</span>
+              </div>
+              <p>点击任一采样点切换双机位真实帧。</p>
+            </div>
+            <div class="legend">
+              <span><i class="north-line"></i>天花北</span>
+              <span><i class="south-line"></i>天花南</span>
+            </div>
+          </div>
+          <div class="timeline-body">
+            <svg class="count-chart" viewBox="0 0 920 88" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="northFill" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0" stop-color="#38d9c4" stop-opacity=".18" />
+                  <stop offset="1" stop-color="#38d9c4" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+              <path class="grid-line" d="M0 18H920M0 44H920M0 70H920" />
+              <path class="north-area" d="M0 42L102 42L204 29L306 42L408 42L510 55L612 55L714 55L816 42L920 55L920 88L0 88Z" />
+              <path class="south-path" d="M0 42L102 29L204 15L306 15L408 15L510 15L612 29L714 29L816 42L920 42" />
+              <path class="north-path" d="M0 42L102 42L204 29L306 42L408 42L510 55L612 55L714 55L816 42L920 55" />
+            </svg>
+            <div class="timeline-samples" id="timelineSamples"></div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="page-footer">
+        <span>数据：<code>data/gold/camera_counts_v0.json</code></span>
+        <span>页面版本 <code>debug-viewer@0.1.0</code></span>
+        <span>仅开发集演示，不是验收准确率</span>
+      </footer>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="./app.js"></script>
+  </body>
+</html>

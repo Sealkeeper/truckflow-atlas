@@ -1,0 +1,12 @@
+{
+  "name": "truckflow-debug-experience",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "capture": "node debug/capture.mjs",
+    "serve": "node debug/capture.mjs --serve-only"
+  },
+  "devDependencies": {
+    "playwright-core": "1.55.0"
+  }
+}
