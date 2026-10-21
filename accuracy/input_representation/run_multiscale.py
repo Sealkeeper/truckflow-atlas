@@ -80,6 +80,7 @@ def write_json(path: Path, payload: Any) -> None:
 
 def check_contract(
     manifest: dict[str, Any],
+    manifest_path: Path,
     prereg: dict[str, Any],
     prompt_path: Path,
     prompt: str,
@@ -94,11 +95,13 @@ def check_contract(
         raise SystemExit("prompt hash differs from pre-registration")
     if prereg.get("prompt", {}).get("text_sha256") != sha256_bytes(prompt.encode("utf-8")):
         raise SystemExit("prompt text hash differs from pre-registration")
-    if prereg.get("manifest_sha256") != sha256_file(DEFAULT_MANIFEST):
+    if prereg.get("inputs", {}).get("manifest_sha256") != sha256_file(manifest_path):
         raise SystemExit("manifest hash differs from pre-registration")
-    for key in ("model_id", "temperature", "max_tokens", "input_order"):
+    for key in ("model_id", "temperature", "max_tokens"):
         if key not in prereg.get("request", {}):
             raise SystemExit(f"missing pre-registered request field: {key}")
+    if prereg.get("input_order") != ["global", "detail"]:
+        raise SystemExit("missing or invalid pre-registered input_order")
 
 
 def validate_parsed(parsed: Any) -> tuple[list[str], dict[str, Any] | None]:
@@ -354,7 +357,7 @@ def run(args: argparse.Namespace) -> None:
     manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
     prereg = json.loads(args.preregistration.read_text(encoding="utf-8"))
     prompt = args.prompt.read_text(encoding="utf-8")
-    check_contract(manifest, prereg, args.prompt, prompt)
+    check_contract(manifest, args.manifest, prereg, args.prompt, prompt)
 
     model_id = prereg["request"]["model_id"]
     temperature = prereg["request"]["temperature"]
