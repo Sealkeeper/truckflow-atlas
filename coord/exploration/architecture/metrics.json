@@ -10,7 +10,8 @@
     "branch": "research/architecture-challenge",
     "code_commit": "9df7986d06c8e4ff487e92d7a741bea447ebf77d",
     "pr": "https://github.com/Sealkeeper/truckflow-atlas/pull/10",
-    "merged": false
+    "merged": false,
+    "report_commit": "610384e614e8c2839d43fd2f45721e91ce727fb0"
   },
   "frame_sets": {
     "five_frame_diagnostic": [

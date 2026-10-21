@@ -4,7 +4,9 @@
 
 负责人：`architecture_challenger`
 
-分支 / commit：`research/architecture-challenge` / `9df7986`
+分支：`research/architecture-challenge`
+
+运行代码 commit：`9df7986`；报告 commit：`610384e`
 
 PR：#10（公开，未合并）
 

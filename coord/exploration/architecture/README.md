@@ -4,7 +4,11 @@
 
 负责人：`architecture_challenger`
 
-分支 / 代码 commit：`research/architecture-challenge` / `9df7986`
+分支：`research/architecture-challenge`
+
+运行代码 commit：`9df7986`（本页指标与 raw run 的代码版本）
+
+报告 commit：`610384e`（20 帧结果、文档与失败分析）
 
 PR：[#10](https://github.com/Sealkeeper/truckflow-atlas/pull/10)（公开，未合并）
 
