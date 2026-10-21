@@ -1,0 +1,68 @@
+{
+  "schema": "truckflow-route-comparison-v1",
+  "rows": [
+    {
+      "route_id": "clean-aisle-doubao-v1",
+      "owner": "clean_eval",
+      "mechanism": "fixed aisle crop, one Doubao vision call per camera sample",
+      "branch": "accuracy/clean-baseline",
+      "commit": "f5eb47614494c4a8e4b8df6d5bcd426ac61207ec",
+      "status": "baseline",
+      "dataset_split": "dev",
+      "camera_count": {
+        "n_total": 20,
+        "valid_n": 20,
+        "failed": 0,
+        "missing": 0,
+        "exact": 16,
+        "mae": 0.25,
+        "exact_display": "16/20 (N=20; fail=0; miss=0)",
+        "mae_display": "0.25 (n=20)",
+        "warnings": []
+      },
+      "unique": {
+        "n_total": 10,
+        "valid_n": null,
+        "failed": null,
+        "missing": null,
+        "exact": null,
+        "mae": null,
+        "exact_display": "未测",
+        "mae_display": "未测",
+        "warnings": []
+      },
+      "overlap": {
+        "n_total": 10,
+        "valid_n": null,
+        "failed": null,
+        "missing": null,
+        "exact": null,
+        "mae": null,
+        "exact_display": "未测",
+        "mae_display": "未测",
+        "warnings": []
+      },
+      "release": {
+        "release_display": "未测",
+        "review_display": "未测",
+        "coverage": null,
+        "error_rate": null,
+        "review_rate": null
+      },
+      "review_display": "未测",
+      "cost": {
+        "calls": 20,
+        "images": 20,
+        "tokens": 67027,
+        "latency_mean": 15.864,
+        "latency_p95": 21.27
+      },
+      "identity_display": "未测",
+      "identity_status": "not measured",
+      "warnings": [
+        "workflow OK"
+      ],
+      "source": "coord/exploration/evaluation/clean-aisle-baseline-v1.summary.json"
+    }
+  ]
+}

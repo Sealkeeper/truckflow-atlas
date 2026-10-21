@@ -1,0 +1,117 @@
+{
+  "schema": "truckflow-route-summary-v1",
+  "route": {
+    "id": "clean-aisle-doubao-v1",
+    "owner": "clean_eval",
+    "mechanism": "fixed aisle crop, one Doubao vision call per camera sample",
+    "branch": "accuracy/clean-baseline",
+    "commit": "f5eb47614494c4a8e4b8df6d5bcd426ac61207ec",
+    "status": "baseline",
+    "pr": "https://github.com/Sealkeeper/truckflow-atlas/pull/9"
+  },
+  "published_on": "2026-10-21",
+  "dataset": {
+    "name": "user-final-review-v2-2026-10-21",
+    "split": "dev",
+    "n_camera_samples": 20,
+    "n_times": 10,
+    "truth_file": "accuracy/reviewed/user-final-review-v2-2026-10-21.json",
+    "truth_sha256": "735045af4055d2badae2c3bed1942c5a15c6a872ce548243cd52e6657fda971e",
+    "note": "All 20 camera frames were inspected during development. This is a regression baseline, not a blind result."
+  },
+  "camera_count": {
+    "n_total": 20,
+    "valid_n": 20,
+    "failed": 0,
+    "missing": 0,
+    "exact": 16,
+    "mae": 0.25,
+    "under": 4,
+    "over": 1,
+    "exact_rate_valid": 0.8,
+    "exact_rate_total": 0.8,
+    "metric_scope": "total visible truck count per camera; not vehicle ID, vehicle class, unique-set or overlap accuracy"
+  },
+  "unique": {
+    "n_total": 10,
+    "valid_n": null,
+    "failed": null,
+    "missing": null,
+    "exact": null,
+    "mae": null,
+    "status": "not measured",
+    "note": "This route emits per-camera counts only."
+  },
+  "overlap": {
+    "n_total": 10,
+    "valid_n": null,
+    "failed": null,
+    "missing": null,
+    "exact": null,
+    "mae": null,
+    "status": "not measured",
+    "note": "No overlap prediction is produced."
+  },
+  "release": {
+    "n_total": 20,
+    "auto_released": null,
+    "correct": null,
+    "errors": null,
+    "coverage": null,
+    "status": "not measured",
+    "note": "No review or auto-release policy is part of the raw baseline."
+  },
+  "review": {
+    "reviewed": null,
+    "review_rate": null,
+    "status": "not measured"
+  },
+  "identity": {
+    "status": "not measured",
+    "n_total": null,
+    "exact": null,
+    "note": "Count exactness does not imply vehicle ID or class accuracy."
+  },
+  "cost": {
+    "calls": 20,
+    "images": 20,
+    "tokens_total": 67027,
+    "latency_s_mean": 15.864,
+    "latency_s_p95": 21.27,
+    "concurrency": 1,
+    "peak_memory_mb": null,
+    "note": "20 successful calls after the south_1200 rerun; retry attempts are excluded from this run set."
+  },
+  "workflow_audit": {
+    "human_boxes_used_as_model_input": false,
+    "same_frame_annotations_exposed": false,
+    "future_frames_exposed": false,
+    "memory_retrieval_scope": "none",
+    "previous_count_carryover": false,
+    "carryover_has_new_evidence": null,
+    "failures_skipped": false,
+    "failure_counted_in_denominator": true
+  },
+  "manifest": {
+    "file": "clean-aisle-baseline-v1.manifest.json",
+    "sha256": "aa104c5fe03c1b23ced24e3a036b80d7779d77910fcc89ad3db7793bad0e3d5b",
+    "sample_count": 20
+  },
+  "raw_list": {
+    "file": "clean-aisle-baseline-v1.raw-list.json",
+    "sha256": "248850e4ddb68b8a23325a186391daae6595167c24866e3406da9ac9fb9a3a0a",
+    "count": 20
+  },
+  "evaluation": {
+    "file": "accuracy/reviewed/evaluation-clean-v1.json",
+    "sha256": "7f5aedd22da7de94fde7927c61e7621daf7069d9ad6a53da6900f04e2124e885",
+    "run_set_sha256": "44162e6dc763440d94152dbcac394e04506402c9830a8d2fba06025d998fe2e7"
+  },
+  "artifacts": {
+    "runs": "accuracy/runs/aisle_clean",
+    "evaluation": "accuracy/reviewed/evaluation-clean-v1.json",
+    "report": "accuracy/REPORT_clean_baseline_v1.md",
+    "evidence": "accuracy/evidence/clean_baseline/errors_contact.jpg",
+    "provenance": "accuracy/runs/aisle_clean/_provenance.json"
+  }
+}
