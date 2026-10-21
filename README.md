@@ -20,3 +20,22 @@
 4. 无法确认就标记 `review`，不能为了“数字好看”猜一个确定答案。
 5. 每个会话只写自己负责的目录，并在 `coord/<role>/STATUS.md` 公布接口、完成项、阻塞项。
 
+## 双机位工作台 v2
+
+仓库根目录的纯静态工作台可直接打开 `index.html`，推荐启动静态服务：
+
+```powershell
+python -m http.server 4173 --bind 127.0.0.1
+```
+
+打开 `http://127.0.0.1:4173/`。演示数据在 `data/demo_result.js`，容量默认值 8/6/4 明确标为“待用户确认”；南北数量只作为“画面内合计”，跨机位去重仍待复核。
+
+浏览器审计与截图：
+
+```powershell
+npm install
+npm run ui:check
+```
+
+验证要求本机安装 Google Chrome，并需要先启动 4173 静态服务。最新结果、截图和接口说明见 `coord/ui/STATUS.md`。
+

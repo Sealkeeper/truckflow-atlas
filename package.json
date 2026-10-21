@@ -4,7 +4,9 @@
   "version": "0.1.0",
   "scripts": {
     "capture": "node debug/capture.mjs",
-    "serve": "node debug/capture.mjs --serve-only"
+    "serve": "node debug/capture.mjs --serve-only",
+    "ui:serve": "python -m http.server 4173 --bind 127.0.0.1",
+    "ui:check": "node tools/ui-check.cjs"
   },
   "devDependencies": {
     "playwright-core": "1.55.0"
