@@ -1,0 +1,178 @@
+{
+  "sample_id": "south_5",
+  "camera": "south",
+  "time": 5,
+  "truth": 3,
+  "config": "C_adaptive",
+  "model": "doubao",
+  "prompt_version": "single-pass-adaptive-v1",
+  "prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\south_5.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\south_5.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 20.61,
+      "usage": {
+        "completion_tokens": 1939,
+        "prompt_tokens": 2334,
+        "total_tokens": 4273,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1373
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              470,
+              600,
+              730,
+              998
+            ],
+            "roof_color": "红色",
+            "cargo_color": "棕色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "tractor_trailer",
+            "readable_text": [
+              "一汽青岛"
+            ],
+            "visibility": "full",
+            "confidence": 1.0,
+            "evidence": "画面最下方中央的红色牵引车，与后方连接的棕色货厢为同一车辆，边界完整可见"
+          },
+          {
+            "bbox": [
+              450,
+              250,
+              590,
+              470
+            ],
+            "roof_color": "灰色",
+            "cargo_color": "灰色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "tractor_trailer",
+            "readable_text": [],
+            "visibility": "full",
+            "confidence": 1.0,
+            "evidence": "画面中间的红色牵引车，与上方连接的灰色货厢为同一车辆，边界完整可见"
+          },
+          {
+            "bbox": [
+              440,
+              150,
+              550,
+              250
+            ],
+            "roof_color": "棕色",
+            "cargo_color": "棕色",
+            "relation": "trailer_only",
+            "vehicle_type": "box_truck",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.9,
+            "evidence": "画面上部中央的棕色封闭货厢，车头部分被人群遮挡，为独立可辨车辆"
+          }
+        ],
+        "counts": {
+          "total": 3
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 3,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "已逐排检查画面上部、左右边缘及遮挡区域，确认3辆独立货车无漏计"
+        },
+        "scene_notes": "中央通道内有3辆独立货车，分布于画面下、中、上部，周围有施工人员，无边缘或遮挡导致的漏计"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [470, 600, 730, 998],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"棕色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"tractor_trailer\",\n      \"readable_text\": [\"一汽青岛\"],\n      \"visibility\": \"full\",\n      \"confidence\": 1.0,\n      \"evidence\": \"画面最下方中央的红色牵引车，与后方连接的棕色货厢为同一车辆，边界完整可见\"\n    },\n    {\n      \"bbox\": [450, 250, 590, 470],\n      \"roof_color\": \"灰色\",\n      \"cargo_color\": \"灰色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"tractor_trailer\",\n      \"readable_text\": [],\n      \"visibility\": \"full\",\n      \"confidence\": 1.0,\n      \"evidence\": \"画面中间的红色牵引车，与上方连接的灰色货厢为同一车辆，边界完整可见\"\n    },\n    {\n      \"bbox\": [440, 150, 550, 250],\n      \"roof_color\": \"棕色\",\n      \"cargo_color\": \"棕色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.9,\n      \"evidence\": \"画面上部中央的棕色封闭货厢，车头部分被人群遮挡，为独立可辨车辆\"\n    }\n  ],\n  \"counts\": {\"total\": 3},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 3,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"已逐排检查画面上部、左右边缘及遮挡区域，确认3辆独立货车无漏计\"\n  },\n  \"scene_notes\": \"中央通道内有3辆独立货车，分布于画面下、中、上部，周围有施工人员，无边缘或遮挡导致的漏计\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.47,
+        0.6,
+        0.73,
+        0.998
+      ],
+      "roof_color": "红色",
+      "cargo_color": "棕色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "tractor_trailer",
+      "readable_text": [
+        "一汽青岛"
+      ],
+      "visibility": "full",
+      "confidence": 1.0,
+      "evidence": "画面最下方中央的红色牵引车，与后方连接的棕色货厢为同一车辆，边界完整可见"
+    },
+    {
+      "bbox": [
+        0.45,
+        0.25,
+        0.59,
+        0.47
+      ],
+      "roof_color": "灰色",
+      "cargo_color": "灰色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "tractor_trailer",
+      "readable_text": [],
+      "visibility": "full",
+      "confidence": 1.0,
+      "evidence": "画面中间的红色牵引车，与上方连接的灰色货厢为同一车辆，边界完整可见"
+    },
+    {
+      "bbox": [
+        0.44,
+        0.15,
+        0.55,
+        0.25
+      ],
+      "roof_color": "棕色",
+      "cargo_color": "棕色",
+      "relation": "trailer_only",
+      "vehicle_type": "box_truck",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.9,
+      "evidence": "画面上部中央的棕色封闭货厢，车头部分被人群遮挡，为独立可辨车辆"
+    }
+  ],
+  "predicted_count": 3,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 3,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "已逐排检查画面上部、左右边缘及遮挡区域，确认3辆独立货车无漏计"
+  },
+  "latency_total_s": 20.61,
+  "tokens_total": 4273
+}

@@ -1,0 +1,150 @@
+{
+  "sample_id": "north_2100",
+  "camera": "north",
+  "time": 2100,
+  "truth": 2,
+  "config": "C_adaptive",
+  "model": "doubao",
+  "prompt_version": "single-pass-adaptive-v1",
+  "prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\north_2100.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\north_2100.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 16.25,
+      "usage": {
+        "completion_tokens": 1788,
+        "prompt_tokens": 2334,
+        "total_tokens": 4122,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1325
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              0.41,
+              0.25,
+              0.55,
+              0.45
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "rigid",
+            "vehicle_type": "rigid_truck",
+            "readable_text": [],
+            "visibility": "full",
+            "confidence": 0.9,
+            "evidence": "位于中央通道中上部，为独立高栏式货车，车体完整可辨"
+          },
+          {
+            "bbox": [
+              0.17,
+              0.62,
+              0.52,
+              0.99
+            ],
+            "roof_color": "白色",
+            "cargo_color": "深灰色",
+            "relation": "trailer_only",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "84AG1162"
+            ],
+            "visibility": "partial",
+            "confidence": 0.95,
+            "evidence": "位于画面左下方，为独立集装箱货厢，仅底部被画面边缘截断，无可见车头"
+          }
+        ],
+        "counts": {
+          "total": 2
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 2,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [
+            "画面最上方中央区域存在数个小型箱体，无法确认是否为独立货车，暂不计入"
+          ],
+          "notes": "已扫描画面上部远端、左右边缘及遮挡区域，未发现漏计的独立货车"
+        },
+        "scene_notes": "中央通道内有2辆独立货车，左侧为集装箱货厢，中部为高栏货车，远端小型箱体无法确认是否为货车"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [0.41, 0.25, 0.55, 0.45],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"rigid\",\n      \"vehicle_type\": \"rigid_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"full\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于中央通道中上部，为独立高栏式货车，车体完整可辨\"\n    },\n    {\n      \"bbox\": [0.17, 0.62, 0.52, 0.99],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"深灰色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"84AG1162\"],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于画面左下方，为独立集装箱货厢，仅底部被画面边缘截断，无可见车头\"\n    }\n  ],\n  \"counts\": {\"total\": 2},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 2,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [\"画面最上方中央区域存在数个小型箱体，无法确认是否为独立货车，暂不计入\"],\n    \"notes\": \"已扫描画面上部远端、左右边缘及遮挡区域，未发现漏计的独立货车\"\n  },\n  \"scene_notes\": \"中央通道内有2辆独立货车，左侧为集装箱货厢，中部为高栏货车，远端小型箱体无法确认是否为货车\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.41,
+        0.25,
+        0.55,
+        0.45
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "rigid",
+      "vehicle_type": "rigid_truck",
+      "readable_text": [],
+      "visibility": "full",
+      "confidence": 0.9,
+      "evidence": "位于中央通道中上部，为独立高栏式货车，车体完整可辨"
+    },
+    {
+      "bbox": [
+        0.17,
+        0.62,
+        0.52,
+        0.99
+      ],
+      "roof_color": "白色",
+      "cargo_color": "深灰色",
+      "relation": "trailer_only",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "84AG1162"
+      ],
+      "visibility": "partial",
+      "confidence": 0.95,
+      "evidence": "位于画面左下方，为独立集装箱货厢，仅底部被画面边缘截断，无可见车头"
+    }
+  ],
+  "predicted_count": 2,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 2,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [
+      "画面最上方中央区域存在数个小型箱体，无法确认是否为独立货车，暂不计入"
+    ],
+    "notes": "已扫描画面上部远端、左右边缘及遮挡区域，未发现漏计的独立货车"
+  },
+  "latency_total_s": 16.25,
+  "tokens_total": 4122
+}

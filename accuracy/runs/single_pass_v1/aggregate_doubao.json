@@ -1,0 +1,2079 @@
+{
+  "model": "doubao",
+  "truth": "accuracy\\reviewed\\user-final-review-v2-2026-10-21.json",
+  "runs_per_config": 3,
+  "configs": {
+    "A_full": {
+      "runs": [
+        {
+          "run": "r1",
+          "config": "A_full",
+          "samples": 20,
+          "graded": 20,
+          "failures": 0,
+          "exact": 14,
+          "exact_rate_pct": 70.0,
+          "mae": 0.4,
+          "undercount": 6,
+          "overcount": 2,
+          "avg_calls_per_frame": 1.0,
+          "p95_calls_per_frame": 1,
+          "max_calls_per_frame": 1,
+          "far_trigger_rate_pct": 0.0,
+          "far_triggered": 0,
+          "avg_frame_latency_s": 21.24,
+          "avg_call_latency_s": 21.24,
+          "p95_call_latency_s": 29.45,
+          "tokens_total": 100028,
+          "avg_tokens_per_frame": 5001.4
+        },
+        {
+          "run": "r2",
+          "config": "A_full",
+          "samples": 20,
+          "graded": 20,
+          "failures": 0,
+          "exact": 13,
+          "exact_rate_pct": 65.0,
+          "mae": 0.45,
+          "undercount": 7,
+          "overcount": 2,
+          "avg_calls_per_frame": 1.0,
+          "p95_calls_per_frame": 1,
+          "max_calls_per_frame": 1,
+          "far_trigger_rate_pct": 0.0,
+          "far_triggered": 0,
+          "avg_frame_latency_s": 21.84,
+          "avg_call_latency_s": 21.84,
+          "p95_call_latency_s": 31.75,
+          "tokens_total": 95634,
+          "avg_tokens_per_frame": 4781.7
+        },
+        {
+          "run": "r3",
+          "config": "A_full",
+          "samples": 20,
+          "graded": 20,
+          "failures": 0,
+          "exact": 15,
+          "exact_rate_pct": 75.0,
+          "mae": 0.3,
+          "undercount": 4,
+          "overcount": 2,
+          "avg_calls_per_frame": 1.0,
+          "p95_calls_per_frame": 1,
+          "max_calls_per_frame": 1,
+          "far_trigger_rate_pct": 0.0,
+          "far_triggered": 0,
+          "avg_frame_latency_s": 21.98,
+          "avg_call_latency_s": 21.98,
+          "p95_call_latency_s": 29.02,
+          "tokens_total": 97639,
+          "avg_tokens_per_frame": 4881.9
+        }
+      ],
+      "means": {
+        "exact": 14.0,
+        "exact_rate_pct": 70.0,
+        "mae": 0.383,
+        "undercount": 5.667,
+        "overcount": 2.0,
+        "avg_calls_per_frame": 1.0,
+        "avg_frame_latency_s": 21.687,
+        "avg_call_latency_s": 21.687,
+        "avg_tokens_per_frame": 4888.333,
+        "tokens_total": 97767.0
+      },
+      "per_frame": {
+        "north_1200": {
+          "truth": 3,
+          "predictions": [
+            3,
+            3,
+            3
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "north_1500": {
+          "truth": 2,
+          "predictions": [
+            2,
+            2,
+            2
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "north_1800": {
+          "truth": 2,
+          "predictions": [
+            2,
+            2,
+            2
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "north_2100": {
+          "truth": 2,
+          "predictions": [
+            2,
+            2,
+            2
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "north_2400": {
+          "truth": 3,
+          "predictions": [
+            3,
+            2,
+            3
+          ],
+          "errors": [
+            0,
+            -1,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "north_2600": {
+          "truth": 2,
+          "predictions": [
+            2,
+            2,
+            2
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            true,
+            false,
+            false
+          ]
+        },
+        "north_300": {
+          "truth": 3,
+          "predictions": [
+            2,
+            2,
+            2
+          ],
+          "errors": [
+            -1,
+            -1,
+            -1
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "north_5": {
+          "truth": 5,
+          "predictions": [
+            3,
+            3,
+            3
+          ],
+          "errors": [
+            -2,
+            -2,
+            -2
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "north_600": {
+          "truth": 4,
+          "predictions": [
+            2,
+            2,
+            3
+          ],
+          "errors": [
+            -2,
+            -2,
+            -1
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "north_900": {
+          "truth": 3,
+          "predictions": [
+            3,
+            3,
+            3
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_1200": {
+          "truth": 5,
+          "predictions": [
+            5,
+            5,
+            5
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_1500": {
+          "truth": 5,
+          "predictions": [
+            4,
+            5,
+            5
+          ],
+          "errors": [
+            -1,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_1800": {
+          "truth": 4,
+          "predictions": [
+            4,
+            4,
+            4
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_2100": {
+          "truth": 3,
+          "predictions": [
+            4,
+            4,
+            4
+          ],
+          "errors": [
+            1,
+            1,
+            1
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_2400": {
+          "truth": 3,
+          "predictions": [
+            3,
+            3,
+            3
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_2600": {
+          "truth": 4,
+          "predictions": [
+            4,
+            4,
+            4
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_300": {
+          "truth": 4,
+          "predictions": [
+            5,
+            5,
+            4
+          ],
+          "errors": [
+            1,
+            1,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_5": {
+          "truth": 3,
+          "predictions": [
+            3,
+            3,
+            3
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_600": {
+          "truth": 4,
+          "predictions": [
+            4,
+            4,
+            4
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_900": {
+          "truth": 5,
+          "predictions": [
+            5,
+            4,
+            6
+          ],
+          "errors": [
+            0,
+            -1,
+            1
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "trigger_audit": {
+        "frames": 60,
+        "possible_miss_true": 1,
+        "undercount_frames": 12,
+        "undercount_frames_flagged": 0,
+        "triggered_frames": 0,
+        "trigger_rows": []
+      },
+      "aux_self_check_gate": {
+        "note": "post-hoc only: possible_miss=true means review; false means auto-release; not a pre-registered production policy",
+        "frames": 60,
+        "error_frames": 18,
+        "review_frames": 1,
+        "review_rate_pct": 1.67,
+        "auto_release_frames": 59,
+        "false_release_frames": 18,
+        "false_release_rate_pct": 30.51,
+        "error_frames_caught_by_review": 0,
+        "error_frame_coverage_pct": 0.0
+      }
+    },
+    "B_aisle": {
+      "runs": [
+        {
+          "run": "r1",
+          "config": "B_aisle",
+          "samples": 20,
+          "graded": 20,
+          "failures": 0,
+          "exact": 18,
+          "exact_rate_pct": 90.0,
+          "mae": 0.1,
+          "undercount": 0,
+          "overcount": 2,
+          "avg_calls_per_frame": 1.0,
+          "p95_calls_per_frame": 1,
+          "max_calls_per_frame": 1,
+          "far_trigger_rate_pct": 0.0,
+          "far_triggered": 0,
+          "avg_frame_latency_s": 19.64,
+          "avg_call_latency_s": 19.64,
+          "p95_call_latency_s": 30.85,
+          "tokens_total": 94168,
+          "avg_tokens_per_frame": 4708.4
+        },
+        {
+          "run": "r2",
+          "config": "B_aisle",
+          "samples": 20,
+          "graded": 20,
+          "failures": 0,
+          "exact": 18,
+          "exact_rate_pct": 90.0,
+          "mae": 0.1,
+          "undercount": 1,
+          "overcount": 1,
+          "avg_calls_per_frame": 1.0,
+          "p95_calls_per_frame": 1,
+          "max_calls_per_frame": 1,
+          "far_trigger_rate_pct": 0.0,
+          "far_triggered": 0,
+          "avg_frame_latency_s": 20.53,
+          "avg_call_latency_s": 20.53,
+          "p95_call_latency_s": 25.81,
+          "tokens_total": 95705,
+          "avg_tokens_per_frame": 4785.2
+        },
+        {
+          "run": "r3",
+          "config": "B_aisle",
+          "samples": 20,
+          "graded": 20,
+          "failures": 0,
+          "exact": 18,
+          "exact_rate_pct": 90.0,
+          "mae": 0.15,
+          "undercount": 2,
+          "overcount": 1,
+          "avg_calls_per_frame": 1.0,
+          "p95_calls_per_frame": 1,
+          "max_calls_per_frame": 1,
+          "far_trigger_rate_pct": 0.0,
+          "far_triggered": 0,
+          "avg_frame_latency_s": 19.63,
+          "avg_call_latency_s": 19.63,
+          "p95_call_latency_s": 30.13,
+          "tokens_total": 90325,
+          "avg_tokens_per_frame": 4516.2
+        }
+      ],
+      "means": {
+        "exact": 18.0,
+        "exact_rate_pct": 90.0,
+        "mae": 0.117,
+        "undercount": 1.0,
+        "overcount": 1.333,
+        "avg_calls_per_frame": 1.0,
+        "avg_frame_latency_s": 19.933,
+        "avg_call_latency_s": 19.933,
+        "avg_tokens_per_frame": 4669.933,
+        "tokens_total": 93399.333
+      },
+      "per_frame": {
+        "north_1200": {
+          "truth": 3,
+          "predictions": [
+            3,
+            3,
+            3
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "north_1500": {
+          "truth": 2,
+          "predictions": [
+            2,
+            2,
+            2
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "north_1800": {
+          "truth": 2,
+          "predictions": [
+            2,
+            2,
+            2
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            true,
+            true,
+            false
+          ]
+        },
+        "north_2100": {
+          "truth": 2,
+          "predictions": [
+            2,
+            2,
+            2
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "north_2400": {
+          "truth": 3,
+          "predictions": [
+            3,
+            3,
+            3
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "north_2600": {
+          "truth": 2,
+          "predictions": [
+            2,
+            2,
+            2
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            true,
+            false
+          ]
+        },
+        "north_300": {
+          "truth": 3,
+          "predictions": [
+            3,
+            3,
+            3
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "north_5": {
+          "truth": 5,
+          "predictions": [
+            5,
+            4,
+            3
+          ],
+          "errors": [
+            0,
+            -1,
+            -2
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "north_600": {
+          "truth": 4,
+          "predictions": [
+            4,
+            4,
+            4
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            true,
+            true
+          ]
+        },
+        "north_900": {
+          "truth": 3,
+          "predictions": [
+            3,
+            3,
+            3
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_1200": {
+          "truth": 5,
+          "predictions": [
+            5,
+            5,
+            5
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_1500": {
+          "truth": 5,
+          "predictions": [
+            5,
+            5,
+            5
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_1800": {
+          "truth": 4,
+          "predictions": [
+            4,
+            4,
+            4
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_2100": {
+          "truth": 3,
+          "predictions": [
+            4,
+            4,
+            4
+          ],
+          "errors": [
+            1,
+            1,
+            1
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_2400": {
+          "truth": 3,
+          "predictions": [
+            3,
+            3,
+            3
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            true,
+            false,
+            false
+          ]
+        },
+        "south_2600": {
+          "truth": 4,
+          "predictions": [
+            4,
+            4,
+            4
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_300": {
+          "truth": 4,
+          "predictions": [
+            5,
+            4,
+            4
+          ],
+          "errors": [
+            1,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_5": {
+          "truth": 3,
+          "predictions": [
+            3,
+            3,
+            3
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_600": {
+          "truth": 4,
+          "predictions": [
+            4,
+            4,
+            4
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_900": {
+          "truth": 5,
+          "predictions": [
+            5,
+            5,
+            5
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "trigger_audit": {
+        "frames": 60,
+        "possible_miss_true": 6,
+        "undercount_frames": 2,
+        "undercount_frames_flagged": 0,
+        "triggered_frames": 0,
+        "trigger_rows": []
+      },
+      "aux_self_check_gate": {
+        "note": "post-hoc only: possible_miss=true means review; false means auto-release; not a pre-registered production policy",
+        "frames": 60,
+        "error_frames": 6,
+        "review_frames": 6,
+        "review_rate_pct": 10.0,
+        "auto_release_frames": 54,
+        "false_release_frames": 6,
+        "false_release_rate_pct": 11.11,
+        "error_frames_caught_by_review": 0,
+        "error_frame_coverage_pct": 0.0
+      }
+    },
+    "C_adaptive": {
+      "runs": [
+        {
+          "run": "r1",
+          "config": "C_adaptive",
+          "samples": 20,
+          "graded": 20,
+          "failures": 0,
+          "exact": 16,
+          "exact_rate_pct": 80.0,
+          "mae": 0.25,
+          "undercount": 3,
+          "overcount": 2,
+          "avg_calls_per_frame": 1.0,
+          "p95_calls_per_frame": 1,
+          "max_calls_per_frame": 1,
+          "far_trigger_rate_pct": 0.0,
+          "far_triggered": 0,
+          "avg_frame_latency_s": 21.76,
+          "avg_call_latency_s": 21.76,
+          "p95_call_latency_s": 37.33,
+          "tokens_total": 93322,
+          "avg_tokens_per_frame": 4666.1
+        },
+        {
+          "run": "r2",
+          "config": "C_adaptive",
+          "samples": 20,
+          "graded": 20,
+          "failures": 0,
+          "exact": 16,
+          "exact_rate_pct": 80.0,
+          "mae": 0.2,
+          "undercount": 1,
+          "overcount": 3,
+          "avg_calls_per_frame": 1.15,
+          "p95_calls_per_frame": 2,
+          "max_calls_per_frame": 2,
+          "far_trigger_rate_pct": 15.0,
+          "far_triggered": 3,
+          "avg_frame_latency_s": 23.04,
+          "avg_call_latency_s": 20.04,
+          "p95_call_latency_s": 26.36,
+          "tokens_total": 107190,
+          "avg_tokens_per_frame": 5359.5
+        },
+        {
+          "run": "r3",
+          "config": "C_adaptive",
+          "samples": 20,
+          "graded": 20,
+          "failures": 0,
+          "exact": 17,
+          "exact_rate_pct": 85.0,
+          "mae": 0.2,
+          "undercount": 1,
+          "overcount": 3,
+          "avg_calls_per_frame": 1.05,
+          "p95_calls_per_frame": 1,
+          "max_calls_per_frame": 2,
+          "far_trigger_rate_pct": 5.0,
+          "far_triggered": 1,
+          "avg_frame_latency_s": 22.41,
+          "avg_call_latency_s": 21.34,
+          "p95_call_latency_s": 27.05,
+          "tokens_total": 98063,
+          "avg_tokens_per_frame": 4903.1
+        }
+      ],
+      "means": {
+        "exact": 16.333,
+        "exact_rate_pct": 81.667,
+        "mae": 0.217,
+        "undercount": 1.667,
+        "overcount": 2.667,
+        "avg_calls_per_frame": 1.067,
+        "avg_frame_latency_s": 22.403,
+        "avg_call_latency_s": 21.047,
+        "avg_tokens_per_frame": 4976.233,
+        "tokens_total": 99525.0
+      },
+      "per_frame": {
+        "north_1200": {
+          "truth": 3,
+          "predictions": [
+            3,
+            3,
+            3
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "north_1500": {
+          "truth": 2,
+          "predictions": [
+            2,
+            2,
+            2
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "north_1800": {
+          "truth": 2,
+          "predictions": [
+            2,
+            2,
+            2
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            2,
+            1
+          ],
+          "triggered": [
+            false,
+            true,
+            false
+          ],
+          "possible_miss": [
+            false,
+            true,
+            false
+          ]
+        },
+        "north_2100": {
+          "truth": 2,
+          "predictions": [
+            2,
+            2,
+            2
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "north_2400": {
+          "truth": 3,
+          "predictions": [
+            3,
+            3,
+            3
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "north_2600": {
+          "truth": 2,
+          "predictions": [
+            2,
+            2,
+            4
+          ],
+          "errors": [
+            0,
+            0,
+            2
+          ],
+          "calls": [
+            1,
+            1,
+            2
+          ],
+          "triggered": [
+            false,
+            false,
+            true
+          ],
+          "possible_miss": [
+            false,
+            false,
+            true
+          ]
+        },
+        "north_300": {
+          "truth": 3,
+          "predictions": [
+            3,
+            3,
+            3
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "north_5": {
+          "truth": 5,
+          "predictions": [
+            3,
+            4,
+            4
+          ],
+          "errors": [
+            -2,
+            -1,
+            -1
+          ],
+          "calls": [
+            1,
+            2,
+            1
+          ],
+          "triggered": [
+            false,
+            true,
+            false
+          ],
+          "possible_miss": [
+            false,
+            true,
+            false
+          ]
+        },
+        "north_600": {
+          "truth": 4,
+          "predictions": [
+            3,
+            4,
+            4
+          ],
+          "errors": [
+            -1,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "north_900": {
+          "truth": 3,
+          "predictions": [
+            3,
+            3,
+            3
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_1200": {
+          "truth": 5,
+          "predictions": [
+            5,
+            6,
+            5
+          ],
+          "errors": [
+            0,
+            1,
+            0
+          ],
+          "calls": [
+            1,
+            2,
+            1
+          ],
+          "triggered": [
+            false,
+            true,
+            false
+          ],
+          "possible_miss": [
+            false,
+            true,
+            false
+          ]
+        },
+        "south_1500": {
+          "truth": 5,
+          "predictions": [
+            5,
+            5,
+            5
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_1800": {
+          "truth": 4,
+          "predictions": [
+            4,
+            5,
+            4
+          ],
+          "errors": [
+            0,
+            1,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_2100": {
+          "truth": 3,
+          "predictions": [
+            4,
+            4,
+            4
+          ],
+          "errors": [
+            1,
+            1,
+            1
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_2400": {
+          "truth": 3,
+          "predictions": [
+            4,
+            3,
+            3
+          ],
+          "errors": [
+            1,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_2600": {
+          "truth": 4,
+          "predictions": [
+            4,
+            4,
+            4
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_300": {
+          "truth": 4,
+          "predictions": [
+            4,
+            4,
+            4
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_5": {
+          "truth": 3,
+          "predictions": [
+            3,
+            3,
+            3
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_600": {
+          "truth": 4,
+          "predictions": [
+            4,
+            4,
+            4
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        },
+        "south_900": {
+          "truth": 5,
+          "predictions": [
+            5,
+            5,
+            5
+          ],
+          "errors": [
+            0,
+            0,
+            0
+          ],
+          "calls": [
+            1,
+            1,
+            1
+          ],
+          "triggered": [
+            false,
+            false,
+            false
+          ],
+          "possible_miss": [
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "trigger_audit": {
+        "frames": 60,
+        "possible_miss_true": 4,
+        "undercount_frames": 4,
+        "undercount_frames_flagged": 1,
+        "triggered_frames": 4,
+        "trigger_rows": [
+          {
+            "run": "r2",
+            "key": "north_1800",
+            "truth": 2,
+            "predicted": 2,
+            "error": 0,
+            "far_added": 0,
+            "added": []
+          },
+          {
+            "run": "r2",
+            "key": "north_5",
+            "truth": 5,
+            "predicted": 4,
+            "error": -1,
+            "far_added": 1,
+            "added": [
+              {
+                "roof_color": "灰色",
+                "vehicle_type": "trailer_only",
+                "bbox": [
+                  0.43,
+                  0.1196,
+                  0.53,
+                  0.2116
+                ]
+              }
+            ]
+          },
+          {
+            "run": "r2",
+            "key": "south_1200",
+            "truth": 5,
+            "predicted": 6,
+            "error": 1,
+            "far_added": 1,
+            "added": [
+              {
+                "roof_color": "红色",
+                "vehicle_type": "box_truck",
+                "bbox": [
+                  0.35,
+                  0.138,
+                  0.45,
+                  0.207
+                ]
+              }
+            ]
+          },
+          {
+            "run": "r3",
+            "key": "north_2600",
+            "truth": 2,
+            "predicted": 4,
+            "error": 2,
+            "far_added": 2,
+            "added": [
+              {
+                "roof_color": "unclear",
+                "vehicle_type": "trailer_only",
+                "bbox": [
+                  0.56,
+                  0.115,
+                  0.61,
+                  0.1748
+                ]
+              },
+              {
+                "roof_color": "unclear",
+                "vehicle_type": "trailer_only",
+                "bbox": [
+                  0.62,
+                  0.115,
+                  0.66,
+                  0.1748
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "aux_self_check_gate": {
+        "note": "post-hoc only: possible_miss=true means review; false means auto-release; not a pre-registered production policy",
+        "frames": 60,
+        "error_frames": 11,
+        "review_frames": 4,
+        "review_rate_pct": 6.67,
+        "auto_release_frames": 56,
+        "false_release_frames": 8,
+        "false_release_rate_pct": 14.29,
+        "error_frames_caught_by_review": 3,
+        "error_frame_coverage_pct": 27.27
+      }
+    }
+  }
+}

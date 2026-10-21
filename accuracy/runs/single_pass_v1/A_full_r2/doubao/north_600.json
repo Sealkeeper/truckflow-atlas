@@ -1,0 +1,162 @@
+{
+  "sample_id": "north_600",
+  "camera": "north",
+  "time": 600,
+  "truth": 4,
+  "config": "A_full",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "18b6c680e78863458b69f67d2ddbb47f9607308e603c5a95e95e612b34c53684",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\full\\north_600.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\full\\north_600.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 31.75,
+      "usage": {
+        "completion_tokens": 3536,
+        "prompt_tokens": 2345,
+        "total_tokens": 5881,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3028
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              482,
+              318,
+              573,
+              582
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "tractor_trailer",
+            "readable_text": [
+              "24 55 280"
+            ],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于中央南北向通道，左右为展台，完整的牵引车与直接连接的货厢，边界清晰，符合统计范围"
+          },
+          {
+            "bbox": [
+              348,
+              618,
+              483,
+              992
+            ],
+            "roof_color": "白色",
+            "cargo_color": "灰色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [
+              "MAC1162"
+            ],
+            "visibility": "full",
+            "confidence": 0.9,
+            "evidence": "位于中央通道左侧，独立货厢，无可见车头，边界清晰，符合统计范围"
+          }
+        ],
+        "counts": {
+          "total": 2
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 2,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [
+            {
+              "region": "中央通道上部远端",
+              "appearance": "两个蓝色箱体上下排列，位于红色货车上方",
+              "reason": "无法确认是否为独立移动货车车体，可能是展会临时结构"
+            }
+          ],
+          "notes": "本次扫描覆盖中央通道全部区域，远端两个蓝色箱体因无法确认属性未计入"
+        },
+        "scene_notes": "中央通道内有红色牵引车挂车组合、白色独立货厢，远端两个蓝色箱体无法确认是否为移动货车，不计入统计"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [482, 318, 573, 582],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"tractor_trailer\",\n      \"readable_text\": [\"24 55 280\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于中央南北向通道，左右为展台，完整的牵引车与直接连接的货厢，边界清晰，符合统计范围\"\n    },\n    {\n      \"bbox\": [348, 618, 483, 992],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"灰色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [\"MAC1162\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于中央通道左侧，独立货厢，无可见车头，边界清晰，符合统计范围\"\n    }\n  ],\n  \"counts\": {\"total\": 2},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 2,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [\n      {\n        \"region\": \"中央通道上部远端\",\n        \"appearance\": \"两个蓝色箱体上下排列，位于红色货车上方\",\n        \"reason\": \"无法确认是否为独立移动货车车体，可能是展会临时结构\"\n      }\n    ],\n    \"notes\": \"本次扫描覆盖中央通道全部区域，远端两个蓝色箱体因无法确认属性未计入\"\n  },\n  \"scene_notes\": \"中央通道内有红色牵引车挂车组合、白色独立货厢，远端两个蓝色箱体无法确认是否为移动货车，不计入统计\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.482,
+        0.318,
+        0.573,
+        0.582
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "tractor_trailer",
+      "readable_text": [
+        "24 55 280"
+      ],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于中央南北向通道，左右为展台，完整的牵引车与直接连接的货厢，边界清晰，符合统计范围"
+    },
+    {
+      "bbox": [
+        0.348,
+        0.618,
+        0.483,
+        0.992
+      ],
+      "roof_color": "白色",
+      "cargo_color": "灰色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [
+        "MAC1162"
+      ],
+      "visibility": "full",
+      "confidence": 0.9,
+      "evidence": "位于中央通道左侧，独立货厢，无可见车头，边界清晰，符合统计范围"
+    }
+  ],
+  "predicted_count": 2,
+  "error": -2,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 2,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [
+      {
+        "region": "中央通道上部远端",
+        "appearance": "两个蓝色箱体上下排列，位于红色货车上方",
+        "reason": "无法确认是否为独立移动货车车体，可能是展会临时结构"
+      }
+    ],
+    "notes": "本次扫描覆盖中央通道全部区域，远端两个蓝色箱体因无法确认属性未计入"
+  },
+  "latency_total_s": 31.75,
+  "tokens_total": 5881
+}

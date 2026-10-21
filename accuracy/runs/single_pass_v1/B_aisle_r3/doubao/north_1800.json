@@ -1,0 +1,146 @@
+{
+  "sample_id": "north_1800",
+  "camera": "north",
+  "time": 1800,
+  "truth": 2,
+  "config": "B_aisle",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\north_1800.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\north_1800.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 15.52,
+      "usage": {
+        "completion_tokens": 1721,
+        "prompt_tokens": 2334,
+        "total_tokens": 4055,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1261
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              410,
+              245,
+              555,
+              450
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [],
+            "visibility": "full",
+            "confidence": 1.0,
+            "evidence": "位于画面中央通道，为独立红色货厢，无连接车头，完整可见，符合独立货车计数标准"
+          },
+          {
+            "bbox": [
+              180,
+              620,
+              500,
+              980
+            ],
+            "roof_color": "白色",
+            "cargo_color": "灰色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "粤A·CT162"
+            ],
+            "visibility": "partial",
+            "confidence": 1.0,
+            "evidence": "位于画面左下角，白色波纹车顶的集装箱货车，部分底部被画面下边缘截断，箱体可见文字，牵引车与货厢连接，符合计数标准"
+          }
+        ],
+        "counts": {
+          "total": 2
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 0,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "本次扫描覆盖画面所有区域，左右边缘、上部远端均已检查，无漏计风险"
+        },
+        "scene_notes": "画面中央通道有2辆独立货车，1辆红色独立货厢，1辆左下角白色集装箱货车，其余为展台、人员和设备，无其他符合标准的货车"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [410, 245, 555, 450],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [],\n      \"visibility\": \"full\",\n      \"confidence\": 1.0,\n      \"evidence\": \"位于画面中央通道，为独立红色货厢，无连接车头，完整可见，符合独立货车计数标准\"\n    },\n    {\n      \"bbox\": [180, 620, 500, 980],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"灰色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"粤A·CT162\"],\n      \"visibility\": \"partial\",\n      \"confidence\": 1.0,\n      \"evidence\": \"位于画面左下角，白色波纹车顶的集装箱货车，部分底部被画面下边缘截断，箱体可见文字，牵引车与货厢连接，符合计数标准\"\n    }\n  ],\n  \"counts\": {\"total\": 2},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 0,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"本次扫描覆盖画面所有区域，左右边缘、上部远端均已检查，无漏计风险\"\n  },\n  \"scene_notes\": \"画面中央通道有2辆独立货车，1辆红色独立货厢，1辆左下角白色集装箱货车，其余为展台、人员和设备，无其他符合标准的货车\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.41,
+        0.245,
+        0.555,
+        0.45
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [],
+      "visibility": "full",
+      "confidence": 1.0,
+      "evidence": "位于画面中央通道，为独立红色货厢，无连接车头，完整可见，符合独立货车计数标准"
+    },
+    {
+      "bbox": [
+        0.18,
+        0.62,
+        0.5,
+        0.98
+      ],
+      "roof_color": "白色",
+      "cargo_color": "灰色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "粤A·CT162"
+      ],
+      "visibility": "partial",
+      "confidence": 1.0,
+      "evidence": "位于画面左下角，白色波纹车顶的集装箱货车，部分底部被画面下边缘截断，箱体可见文字，牵引车与货厢连接，符合计数标准"
+    }
+  ],
+  "predicted_count": 2,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 0,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "本次扫描覆盖画面所有区域，左右边缘、上部远端均已检查，无漏计风险"
+  },
+  "latency_total_s": 15.52,
+  "tokens_total": 4055
+}

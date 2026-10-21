@@ -1,0 +1,184 @@
+{
+  "sample_id": "north_1200",
+  "camera": "north",
+  "time": 1200,
+  "truth": 3,
+  "config": "B_aisle",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\north_1200.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\north_1200.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 15.49,
+      "usage": {
+        "completion_tokens": 1855,
+        "prompt_tokens": 2334,
+        "total_tokens": 4189,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1283
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              430,
+              153,
+              558,
+              316
+            ],
+            "roof_color": "蓝色",
+            "cargo_color": "深色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.9,
+            "evidence": "位于画面上方中央通道远端，为独立可辨的货厢结构，无可见车头，属于独立货车"
+          },
+          {
+            "bbox": [
+              326,
+              358,
+              539,
+              626
+            ],
+            "roof_color": "白色",
+            "cargo_color": "红色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "BL88",
+              "980"
+            ],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于中央通道中间，红色货厢下方连接白色车头，为完整的牵引车加货厢组合"
+          },
+          {
+            "bbox": [
+              168,
+              609,
+              536,
+              998
+            ],
+            "roof_color": "白色",
+            "cargo_color": "灰色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "tractor_trailer",
+            "readable_text": [
+              "粤A CT182"
+            ],
+            "visibility": "full",
+            "confidence": 0.9,
+            "evidence": "位于画面最下方，白色波纹车顶的挂车与车头连接，为完整的货车组合"
+          }
+        ],
+        "counts": {
+          "total": 3
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 1,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "本次扫描覆盖了画面所有区域，远端、左右边缘、遮挡处均无漏计风险"
+        },
+        "scene_notes": "画面中共有3辆独立货车，无叉车、轿车等非目标物体干扰，所有货车均清晰可辨"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [430, 153, 558, 316],\n      \"roof_color\": \"蓝色\",\n      \"cargo_color\": \"深色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于画面上方中央通道远端，为独立可辨的货厢结构，无可见车头，属于独立货车\"\n    },\n    {\n      \"bbox\": [326, 358, 539, 626],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"BL88\", \"980\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于中央通道中间，红色货厢下方连接白色车头，为完整的牵引车加货厢组合\"\n    },\n    {\n      \"bbox\": [168, 609, 536, 998],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"灰色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"tractor_trailer\",\n      \"readable_text\": [\"粤A CT182\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于画面最下方，白色波纹车顶的挂车与车头连接，为完整的货车组合\"\n    }\n  ],\n  \"counts\": {\"total\": 3},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 1,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"本次扫描覆盖了画面所有区域，远端、左右边缘、遮挡处均无漏计风险\"\n  },\n  \"scene_notes\": \"画面中共有3辆独立货车，无叉车、轿车等非目标物体干扰，所有货车均清晰可辨\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.43,
+        0.153,
+        0.558,
+        0.316
+      ],
+      "roof_color": "蓝色",
+      "cargo_color": "深色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.9,
+      "evidence": "位于画面上方中央通道远端，为独立可辨的货厢结构，无可见车头，属于独立货车"
+    },
+    {
+      "bbox": [
+        0.326,
+        0.358,
+        0.539,
+        0.626
+      ],
+      "roof_color": "白色",
+      "cargo_color": "红色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "BL88",
+        "980"
+      ],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于中央通道中间，红色货厢下方连接白色车头，为完整的牵引车加货厢组合"
+    },
+    {
+      "bbox": [
+        0.168,
+        0.609,
+        0.536,
+        0.998
+      ],
+      "roof_color": "白色",
+      "cargo_color": "灰色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "tractor_trailer",
+      "readable_text": [
+        "粤A CT182"
+      ],
+      "visibility": "full",
+      "confidence": 0.9,
+      "evidence": "位于画面最下方，白色波纹车顶的挂车与车头连接，为完整的货车组合"
+    }
+  ],
+  "predicted_count": 3,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 1,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "本次扫描覆盖了画面所有区域，远端、左右边缘、遮挡处均无漏计风险"
+  },
+  "latency_total_s": 15.49,
+  "tokens_total": 4189
+}

@@ -1,0 +1,152 @@
+{
+  "sample_id": "north_1500",
+  "camera": "north",
+  "time": 1500,
+  "truth": 2,
+  "config": "A_full",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "18b6c680e78863458b69f67d2ddbb47f9607308e603c5a95e95e612b34c53684",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\full\\north_1500.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\full\\north_1500.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 18.0,
+      "usage": {
+        "completion_tokens": 1972,
+        "prompt_tokens": 2345,
+        "total_tokens": 4317,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1498
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              345,
+              610,
+              485,
+              998
+            ],
+            "roof_color": "白色",
+            "cargo_color": "灰色",
+            "relation": "trailer_only",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "31AC1162"
+            ],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于画面中央通道下半部分，独立停放的白色厢式挂车，无可见车头，完全处于统计范围内，符合计数标准"
+          },
+          {
+            "bbox": [
+              405,
+              355,
+              490,
+              625
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [
+              "BL86",
+              "580"
+            ],
+            "visibility": "partial",
+            "confidence": 0.9,
+            "evidence": "位于中央通道中部，独立的红色高栏货厢，无可见车头，底部被下方白色挂车遮挡，属于统计范围内的独立车体"
+          }
+        ],
+        "counts": {
+          "total": 2
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 0,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "已检查画面上部远端无符合条件的车辆，左右边缘未发现被截断的独立货车，遮挡区域已确认是独立车体"
+        },
+        "scene_notes": "中央南北向通道内共2辆独立货车，白色厢式挂车完整可见，红色高栏货厢部分被下方挂车遮挡，均在统计范围内"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [345, 610, 485, 998],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"灰色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"31AC1162\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于画面中央通道下半部分，独立停放的白色厢式挂车，无可见车头，完全处于统计范围内，符合计数标准\"\n    },\n    {\n      \"bbox\": [405, 355, 490, 625],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [\"BL86\", \"580\"],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于中央通道中部，独立的红色高栏货厢，无可见车头，底部被下方白色挂车遮挡，属于统计范围内的独立车体\"\n    }\n  ],\n  \"counts\": {\"total\": 2},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 0,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"已检查画面上部远端无符合条件的车辆，左右边缘未发现被截断的独立货车，遮挡区域已确认是独立车体\"\n  },\n  \"scene_notes\": \"中央南北向通道内共2辆独立货车，白色厢式挂车完整可见，红色高栏货厢部分被下方挂车遮挡，均在统计范围内\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.345,
+        0.61,
+        0.485,
+        0.998
+      ],
+      "roof_color": "白色",
+      "cargo_color": "灰色",
+      "relation": "trailer_only",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "31AC1162"
+      ],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于画面中央通道下半部分，独立停放的白色厢式挂车，无可见车头，完全处于统计范围内，符合计数标准"
+    },
+    {
+      "bbox": [
+        0.405,
+        0.355,
+        0.49,
+        0.625
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [
+        "BL86",
+        "580"
+      ],
+      "visibility": "partial",
+      "confidence": 0.9,
+      "evidence": "位于中央通道中部，独立的红色高栏货厢，无可见车头，底部被下方白色挂车遮挡，属于统计范围内的独立车体"
+    }
+  ],
+  "predicted_count": 2,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 0,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "已检查画面上部远端无符合条件的车辆，左右边缘未发现被截断的独立货车，遮挡区域已确认是独立车体"
+  },
+  "latency_total_s": 18.0,
+  "tokens_total": 4317
+}

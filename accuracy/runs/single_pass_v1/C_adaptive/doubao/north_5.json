@@ -1,0 +1,176 @@
+{
+  "sample_id": "north_5",
+  "camera": "north",
+  "time": 5,
+  "truth": 5,
+  "config": "C_adaptive",
+  "model": "doubao",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\north_5.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\north_5.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 19.47,
+      "usage": {
+        "completion_tokens": 2235,
+        "prompt_tokens": 2334,
+        "total_tokens": 4569,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1641
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              280,
+              500,
+              530,
+              890
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "tractor_trailer",
+            "readable_text": [
+              "粤L66002"
+            ],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "画面中央下方，完整的红色半挂货车，车尾车牌清晰可见，无明显遮挡"
+          },
+          {
+            "bbox": [
+              400,
+              250,
+              540,
+              450
+            ],
+            "roof_color": "蓝色",
+            "cargo_color": "深灰色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.9,
+            "evidence": "中央通道中部，独立的蓝色顶棚货厢，无车头，两侧被展台结构部分遮挡"
+          },
+          {
+            "bbox": [
+              560,
+              110,
+              670,
+              240
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "box_truck",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.85,
+            "evidence": "画面上部中央，红色厢式货车，车头朝向画面深处，部分被人群遮挡，远端可辨"
+          }
+        ],
+        "counts": {
+          "total": 3
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 3,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "本次扫描覆盖中央通道全部区域，远端上部、中部、下部的独立货车均已检查，左右边缘无被遗漏的车体，遮挡处的车辆均已确认"
+        },
+        "scene_notes": "展会撤展现场，中央通道内有3辆独立货车，分别位于下部、中部、上部，部分车辆被人群或展台结构遮挡，无其他可疑漏计的车辆"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [280, 500, 530, 890],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"tractor_trailer\",\n      \"readable_text\": [\"粤L66002\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"画面中央下方，完整的红色半挂货车，车尾车牌清晰可见，无明显遮挡\"\n    },\n    {\n      \"bbox\": [400, 250, 540, 450],\n      \"roof_color\": \"蓝色\",\n      \"cargo_color\": \"深灰色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.9,\n      \"evidence\": \"中央通道中部，独立的蓝色顶棚货厢，无车头，两侧被展台结构部分遮挡\"\n    },\n    {\n      \"bbox\": [560, 110, 670, 240],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.85,\n      \"evidence\": \"画面上部中央，红色厢式货车，车头朝向画面深处，部分被人群遮挡，远端可辨\"\n    }\n  ],\n  \"counts\": {\"total\": 3},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 3,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"本次扫描覆盖中央通道全部区域，远端上部、中部、下部的独立货车均已检查，左右边缘无被遗漏的车体，遮挡处的车辆均已确认\"\n  },\n  \"scene_notes\": \"展会撤展现场，中央通道内有3辆独立货车，分别位于下部、中部、上部，部分车辆被人群或展台结构遮挡，无其他可疑漏计的车辆\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.28,
+        0.5,
+        0.53,
+        0.89
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "tractor_trailer",
+      "readable_text": [
+        "粤L66002"
+      ],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "画面中央下方，完整的红色半挂货车，车尾车牌清晰可见，无明显遮挡"
+    },
+    {
+      "bbox": [
+        0.4,
+        0.25,
+        0.54,
+        0.45
+      ],
+      "roof_color": "蓝色",
+      "cargo_color": "深灰色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.9,
+      "evidence": "中央通道中部，独立的蓝色顶棚货厢，无车头，两侧被展台结构部分遮挡"
+    },
+    {
+      "bbox": [
+        0.56,
+        0.11,
+        0.67,
+        0.24
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "box_truck",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.85,
+      "evidence": "画面上部中央，红色厢式货车，车头朝向画面深处，部分被人群遮挡，远端可辨"
+    }
+  ],
+  "predicted_count": 3,
+  "error": -2,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 3,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "本次扫描覆盖中央通道全部区域，远端上部、中部、下部的独立货车均已检查，左右边缘无被遗漏的车体，遮挡处的车辆均已确认"
+  },
+  "latency_total_s": 19.47,
+  "tokens_total": 4569
+}

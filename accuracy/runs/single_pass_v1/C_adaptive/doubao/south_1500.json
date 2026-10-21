@@ -1,0 +1,242 @@
+{
+  "sample_id": "south_1500",
+  "camera": "south",
+  "time": 1500,
+  "truth": 5,
+  "config": "C_adaptive",
+  "model": "doubao",
+  "prompt_version": "single-pass-adaptive-v1",
+  "prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\south_1500.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\south_1500.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 26.49,
+      "usage": {
+        "completion_tokens": 3093,
+        "prompt_tokens": 2334,
+        "total_tokens": 5427,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2247
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              0.47,
+              0.3,
+              0.67,
+              0.58
+            ],
+            "roof_color": "白色",
+            "cargo_color": "白色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "tractor_trailer",
+            "readable_text": [
+              "东风商用车"
+            ],
+            "visibility": "full",
+            "confidence": 1.0,
+            "evidence": "画面下方中央，完整的牵引车与货厢连接，可明确识别为独立货车"
+          },
+          {
+            "bbox": [
+              0.45,
+              0.29,
+              0.58,
+              0.52
+            ],
+            "roof_color": "红色",
+            "cargo_color": "灰色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "tractor_trailer",
+            "readable_text": [],
+            "visibility": "full",
+            "confidence": 1.0,
+            "evidence": "中央通道中间，红色牵引车与灰色货厢连接，完整可见，为独立货车"
+          },
+          {
+            "bbox": [
+              0.35,
+              0.23,
+              0.45,
+              0.36
+            ],
+            "roof_color": "红色",
+            "cargo_color": "蓝色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "tractor_trailer",
+            "readable_text": [],
+            "visibility": "full",
+            "confidence": 1.0,
+            "evidence": "中央通道上部偏左，红色牵引车与带蓝色覆盖的货厢连接，完整可见，为独立货车"
+          },
+          {
+            "bbox": [
+              0.44,
+              0.12,
+              0.54,
+              0.25
+            ],
+            "roof_color": "红色",
+            "cargo_color": "棕色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "tractor_trailer",
+            "readable_text": [],
+            "visibility": "full",
+            "confidence": 1.0,
+            "evidence": "中央通道最上方，红色牵引车与棕色货厢连接，完整可见，为独立货车"
+          },
+          {
+            "bbox": [
+              0.53,
+              0.85,
+              0.78,
+              0.99
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.9,
+            "evidence": "画面右下角边缘，仅露出红色货厢部分，无可见车头，为独立的货厢挂车"
+          }
+        ],
+        "counts": {
+          "total": 5
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 4,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "本次扫描覆盖中央通道全部车辆及右边缘部分可见货厢，无边界漏检"
+        },
+        "scene_notes": "中央通道共5辆货车，其中4辆为完整牵引车带货厢，1辆为右边缘部分可见的货厢挂车，所有车辆均符合计数口径，无漏计"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [0.47, 0.30, 0.67, 0.58],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"白色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"tractor_trailer\",\n      \"readable_text\": [\"东风商用车\"],\n      \"visibility\": \"full\",\n      \"confidence\": 1.0,\n      \"evidence\": \"画面下方中央，完整的牵引车与货厢连接，可明确识别为独立货车\"\n    },\n    {\n      \"bbox\": [0.45, 0.29, 0.58, 0.52],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"灰色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"tractor_trailer\",\n      \"readable_text\": [],\n      \"visibility\": \"full\",\n      \"confidence\": 1.0,\n      \"evidence\": \"中央通道中间，红色牵引车与灰色货厢连接，完整可见，为独立货车\"\n    },\n    {\n      \"bbox\": [0.35, 0.23, 0.45, 0.36],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"蓝色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"tractor_trailer\",\n      \"readable_text\": [],\n      \"visibility\": \"full\",\n      \"confidence\": 1.0,\n      \"evidence\": \"中央通道上部偏左，红色牵引车与带蓝色覆盖的货厢连接，完整可见，为独立货车\"\n    },\n    {\n      \"bbox\": [0.44, 0.12, 0.54, 0.25],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"棕色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"tractor_trailer\",\n      \"readable_text\": [],\n      \"visibility\": \"full\",\n      \"confidence\": 1.0,\n      \"evidence\": \"中央通道最上方，红色牵引车与棕色货厢连接，完整可见，为独立货车\"\n    },\n    {\n      \"bbox\": [0.53, 0.85, 0.78, 0.99],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.9,\n      \"evidence\": \"画面右下角边缘，仅露出红色货厢部分，无可见车头，为独立的货厢挂车\"\n    }\n  ],\n  \"counts\": {\"total\": 5},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 4,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"本次扫描覆盖中央通道全部车辆及右边缘部分可见货厢，无边界漏检\"\n  },\n  \"scene_notes\": \"中央通道共5辆货车，其中4辆为完整牵引车带货厢，1辆为右边缘部分可见的货厢挂车，所有车辆均符合计数口径，无漏计\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.47,
+        0.3,
+        0.67,
+        0.58
+      ],
+      "roof_color": "白色",
+      "cargo_color": "白色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "tractor_trailer",
+      "readable_text": [
+        "东风商用车"
+      ],
+      "visibility": "full",
+      "confidence": 1.0,
+      "evidence": "画面下方中央，完整的牵引车与货厢连接，可明确识别为独立货车"
+    },
+    {
+      "bbox": [
+        0.45,
+        0.29,
+        0.58,
+        0.52
+      ],
+      "roof_color": "红色",
+      "cargo_color": "灰色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "tractor_trailer",
+      "readable_text": [],
+      "visibility": "full",
+      "confidence": 1.0,
+      "evidence": "中央通道中间，红色牵引车与灰色货厢连接，完整可见，为独立货车"
+    },
+    {
+      "bbox": [
+        0.35,
+        0.23,
+        0.45,
+        0.36
+      ],
+      "roof_color": "红色",
+      "cargo_color": "蓝色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "tractor_trailer",
+      "readable_text": [],
+      "visibility": "full",
+      "confidence": 1.0,
+      "evidence": "中央通道上部偏左，红色牵引车与带蓝色覆盖的货厢连接，完整可见，为独立货车"
+    },
+    {
+      "bbox": [
+        0.44,
+        0.12,
+        0.54,
+        0.25
+      ],
+      "roof_color": "红色",
+      "cargo_color": "棕色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "tractor_trailer",
+      "readable_text": [],
+      "visibility": "full",
+      "confidence": 1.0,
+      "evidence": "中央通道最上方，红色牵引车与棕色货厢连接，完整可见，为独立货车"
+    },
+    {
+      "bbox": [
+        0.53,
+        0.85,
+        0.78,
+        0.99
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.9,
+      "evidence": "画面右下角边缘，仅露出红色货厢部分，无可见车头，为独立的货厢挂车"
+    }
+  ],
+  "predicted_count": 5,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 4,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "本次扫描覆盖中央通道全部车辆及右边缘部分可见货厢，无边界漏检"
+  },
+  "latency_total_s": 26.49,
+  "tokens_total": 5427
+}

@@ -1,0 +1,184 @@
+{
+  "sample_id": "north_900",
+  "camera": "north",
+  "time": 900,
+  "truth": 3,
+  "config": "A_full",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "18b6c680e78863458b69f67d2ddbb47f9607308e603c5a95e95e612b34c53684",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\full\\north_900.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\full\\north_900.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 17.32,
+      "usage": {
+        "completion_tokens": 2099,
+        "prompt_tokens": 2345,
+        "total_tokens": 4444,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1506
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              442,
+              153,
+              508,
+              312
+            ],
+            "roof_color": "蓝色",
+            "cargo_color": "深色",
+            "relation": "trailer_only",
+            "vehicle_type": "box_truck",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.8,
+            "evidence": "位于画面中央南北通道上部、门洞下方，为独立封闭货厢，部分被周围人员遮挡，符合统计范围"
+          },
+          {
+            "bbox": [
+              412,
+              362,
+              498,
+              628
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "trailer_only",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "BL56",
+              "580"
+            ],
+            "visibility": "full",
+            "confidence": 0.9,
+            "evidence": "位于中央通道中部，为独立红色货厢，可见完整尾门标识，符合统计范围"
+          },
+          {
+            "bbox": [
+              352,
+              622,
+              488,
+              998
+            ],
+            "roof_color": "白色",
+            "cargo_color": "灰色",
+            "relation": "trailer_only",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "MAC1152"
+            ],
+            "visibility": "full",
+            "confidence": 0.9,
+            "evidence": "位于中央通道下部，为独立白色波纹货厢，可见底部标识文字，符合统计范围"
+          }
+        ],
+        "counts": {
+          "total": 3
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 1,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "本次扫描覆盖中央通道全段，远端、边缘、遮挡区域均已检查，未发现漏计风险"
+        },
+        "scene_notes": "中央南北通道内共3辆独立货厢式货车，均无牵引车连接；远端车辆部分被人群遮挡，中部车辆被左侧展台轻微遮挡，下部车辆可见度良好，两侧展台及边缘车辆不计入统计"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [442, 153, 508, 312],\n      \"roof_color\": \"蓝色\",\n      \"cargo_color\": \"深色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.8,\n      \"evidence\": \"位于画面中央南北通道上部、门洞下方，为独立封闭货厢，部分被周围人员遮挡，符合统计范围\"\n    },\n    {\n      \"bbox\": [412, 362, 498, 628],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"BL56\", \"580\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于中央通道中部，为独立红色货厢，可见完整尾门标识，符合统计范围\"\n    },\n    {\n      \"bbox\": [352, 622, 488, 998],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"灰色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"MAC1152\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于中央通道下部，为独立白色波纹货厢，可见底部标识文字，符合统计范围\"\n    }\n  ],\n  \"counts\": {\"total\": 3},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 1,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"本次扫描覆盖中央通道全段，远端、边缘、遮挡区域均已检查，未发现漏计风险\"\n  },\n  \"scene_notes\": \"中央南北通道内共3辆独立货厢式货车，均无牵引车连接；远端车辆部分被人群遮挡，中部车辆被左侧展台轻微遮挡，下部车辆可见度良好，两侧展台及边缘车辆不计入统计\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.442,
+        0.153,
+        0.508,
+        0.312
+      ],
+      "roof_color": "蓝色",
+      "cargo_color": "深色",
+      "relation": "trailer_only",
+      "vehicle_type": "box_truck",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.8,
+      "evidence": "位于画面中央南北通道上部、门洞下方，为独立封闭货厢，部分被周围人员遮挡，符合统计范围"
+    },
+    {
+      "bbox": [
+        0.412,
+        0.362,
+        0.498,
+        0.628
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "trailer_only",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "BL56",
+        "580"
+      ],
+      "visibility": "full",
+      "confidence": 0.9,
+      "evidence": "位于中央通道中部，为独立红色货厢，可见完整尾门标识，符合统计范围"
+    },
+    {
+      "bbox": [
+        0.352,
+        0.622,
+        0.488,
+        0.998
+      ],
+      "roof_color": "白色",
+      "cargo_color": "灰色",
+      "relation": "trailer_only",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "MAC1152"
+      ],
+      "visibility": "full",
+      "confidence": 0.9,
+      "evidence": "位于中央通道下部，为独立白色波纹货厢，可见底部标识文字，符合统计范围"
+    }
+  ],
+  "predicted_count": 3,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 1,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "本次扫描覆盖中央通道全段，远端、边缘、遮挡区域均已检查，未发现漏计风险"
+  },
+  "latency_total_s": 17.32,
+  "tokens_total": 4444
+}

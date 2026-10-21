@@ -1,0 +1,226 @@
+{
+  "sample_id": "north_600",
+  "camera": "north",
+  "time": 600,
+  "truth": 4,
+  "config": "B_aisle",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\north_600.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\north_600.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 31.68,
+      "usage": {
+        "completion_tokens": 3194,
+        "prompt_tokens": 2334,
+        "total_tokens": 5528,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2492
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              142,
+              612,
+              518,
+              997
+            ],
+            "roof_color": "白色",
+            "cargo_color": "深灰色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [
+              "粤A C1764"
+            ],
+            "visibility": "full",
+            "confidence": 0.9,
+            "evidence": "位于画面左下方，完整可见的独立集装箱货厢，无车头，为单独货厢"
+          },
+          {
+            "bbox": [
+              522,
+              313,
+              683,
+              576
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "tractor_trailer",
+            "readable_text": [
+              "BL66 580"
+            ],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于中央通道，可见牵引车与挂车连接，完整可见的货车"
+          },
+          {
+            "bbox": [
+              403,
+              252,
+              536,
+              347
+            ],
+            "roof_color": "蓝色",
+            "cargo_color": "深色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [
+              "JT62649"
+            ],
+            "visibility": "partial",
+            "confidence": 0.8,
+            "evidence": "位于红色货车上方，被展台结构遮挡部分，为独立货厢"
+          },
+          {
+            "bbox": [
+              438,
+              172,
+              528,
+              248
+            ],
+            "roof_color": "灰色",
+            "cargo_color": "深色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [
+              "JT62649"
+            ],
+            "visibility": "partial",
+            "confidence": 0.7,
+            "evidence": "位于画面上部远端通道，仅可见部分箱体，为独立货厢"
+          }
+        ],
+        "counts": {
+          "total": 4
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 4,
+          "far_adjacency_verified": false,
+          "possible_miss": true,
+          "miss_risk_regions": [
+            "far_top"
+          ],
+          "uncertain_items": [],
+          "notes": "远端上部货厢相邻关系未逐一确认，存在漏计风险"
+        },
+        "scene_notes": "中央通道为撤换展区域，多辆货车分布其中，部分被展台遮挡，左侧边缘有完整货厢，右侧无边缘货车，排除叉车、人物及展台结构"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [142, 612, 518, 997],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"深灰色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [\"粤A C1764\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于画面左下方，完整可见的独立集装箱货厢，无车头，为单独货厢\"\n    },\n    {\n      \"bbox\": [522, 313, 683, 576],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"tractor_trailer\",\n      \"readable_text\": [\"BL66 580\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于中央通道，可见牵引车与挂车连接，完整可见的货车\"\n    },\n    {\n      \"bbox\": [403, 252, 536, 347],\n      \"roof_color\": \"蓝色\",\n      \"cargo_color\": \"深色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [\"JT62649\"],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.8,\n      \"evidence\": \"位于红色货车上方，被展台结构遮挡部分，为独立货厢\"\n    },\n    {\n      \"bbox\": [438, 172, 528, 248],\n      \"roof_color\": \"灰色\",\n      \"cargo_color\": \"深色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [\"JT62649\"],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.7,\n      \"evidence\": \"位于画面上部远端通道，仅可见部分箱体，为独立货厢\"\n    }\n  ],\n  \"counts\": {\"total\": 4},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 4,\n    \"far_adjacency_verified\": false,\n    \"possible_miss\": true,\n    \"miss_risk_regions\": [\"far_top\"],\n    \"uncertain_items\": [],\n    \"notes\": \"远端上部货厢相邻关系未逐一确认，存在漏计风险\"\n  },\n  \"scene_notes\": \"中央通道为撤换展区域，多辆货车分布其中，部分被展台遮挡，左侧边缘有完整货厢，右侧无边缘货车，排除叉车、人物及展台结构\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.142,
+        0.612,
+        0.518,
+        0.997
+      ],
+      "roof_color": "白色",
+      "cargo_color": "深灰色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [
+        "粤A C1764"
+      ],
+      "visibility": "full",
+      "confidence": 0.9,
+      "evidence": "位于画面左下方，完整可见的独立集装箱货厢，无车头，为单独货厢"
+    },
+    {
+      "bbox": [
+        0.522,
+        0.313,
+        0.683,
+        0.576
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "tractor_trailer",
+      "readable_text": [
+        "BL66 580"
+      ],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于中央通道，可见牵引车与挂车连接，完整可见的货车"
+    },
+    {
+      "bbox": [
+        0.403,
+        0.252,
+        0.536,
+        0.347
+      ],
+      "roof_color": "蓝色",
+      "cargo_color": "深色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [
+        "JT62649"
+      ],
+      "visibility": "partial",
+      "confidence": 0.8,
+      "evidence": "位于红色货车上方，被展台结构遮挡部分，为独立货厢"
+    },
+    {
+      "bbox": [
+        0.438,
+        0.172,
+        0.528,
+        0.248
+      ],
+      "roof_color": "灰色",
+      "cargo_color": "深色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [
+        "JT62649"
+      ],
+      "visibility": "partial",
+      "confidence": 0.7,
+      "evidence": "位于画面上部远端通道，仅可见部分箱体，为独立货厢"
+    }
+  ],
+  "predicted_count": 4,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 4,
+    "far_adjacency_verified": false,
+    "possible_miss": true,
+    "miss_risk_regions": [
+      "far_top"
+    ],
+    "uncertain_items": [],
+    "notes": "远端上部货厢相邻关系未逐一确认，存在漏计风险"
+  },
+  "latency_total_s": 31.68,
+  "tokens_total": 5528
+}

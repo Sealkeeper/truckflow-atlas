@@ -1,0 +1,182 @@
+{
+  "sample_id": "south_2400",
+  "camera": "south",
+  "time": 2400,
+  "truth": 3,
+  "config": "A_full",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "18b6c680e78863458b69f67d2ddbb47f9607308e603c5a95e95e612b34c53684",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\full\\south_2400.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\full\\south_2400.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 18.29,
+      "usage": {
+        "completion_tokens": 2292,
+        "prompt_tokens": 2345,
+        "total_tokens": 4637,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1731
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              445,
+              202,
+              494,
+              319
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "box_truck",
+            "readable_text": [],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于画面中央南北向通道上部，独立可辨的红色箱式货车，边界清晰，未被遮挡"
+          },
+          {
+            "bbox": [
+              392,
+              212,
+              454,
+              407
+            ],
+            "roof_color": "白色",
+            "cargo_color": "白色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "东风商用车"
+            ],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于中央通道中部，白色箱式货车，独立完整，边界清晰"
+          },
+          {
+            "bbox": [
+              422,
+              462,
+              537,
+              884
+            ],
+            "roof_color": "红色",
+            "cargo_color": "灰色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "tractor_trailer",
+            "readable_text": [
+              "中国重汽"
+            ],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于中央通道下部，红色牵引车连接灰色货厢，独立可辨，未被遮挡"
+          }
+        ],
+        "counts": {
+          "total": 3
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 1,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "远端通道上部车辆已检查，左右边缘无被截断的货车，无遮挡漏计"
+        },
+        "scene_notes": "中央南北向通道内共3辆符合计数标准的货车，均未被立柱遮挡，无漏计风险"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [445, 202, 494, 319],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于画面中央南北向通道上部，独立可辨的红色箱式货车，边界清晰，未被遮挡\"\n    },\n    {\n      \"bbox\": [392, 212, 454, 407],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"白色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"东风商用车\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于中央通道中部，白色箱式货车，独立完整，边界清晰\"\n    },\n    {\n      \"bbox\": [422, 462, 537, 884],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"灰色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"tractor_trailer\",\n      \"readable_text\": [\"中国重汽\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于中央通道下部，红色牵引车连接灰色货厢，独立可辨，未被遮挡\"\n    }\n  ],\n  \"counts\": {\"total\": 3},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 1,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"远端通道上部车辆已检查，左右边缘无被截断的货车，无遮挡漏计\"\n  },\n  \"scene_notes\": \"中央南北向通道内共3辆符合计数标准的货车，均未被立柱遮挡，无漏计风险\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.445,
+        0.202,
+        0.494,
+        0.319
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "box_truck",
+      "readable_text": [],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于画面中央南北向通道上部，独立可辨的红色箱式货车，边界清晰，未被遮挡"
+    },
+    {
+      "bbox": [
+        0.392,
+        0.212,
+        0.454,
+        0.407
+      ],
+      "roof_color": "白色",
+      "cargo_color": "白色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "东风商用车"
+      ],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于中央通道中部，白色箱式货车，独立完整，边界清晰"
+    },
+    {
+      "bbox": [
+        0.422,
+        0.462,
+        0.537,
+        0.884
+      ],
+      "roof_color": "红色",
+      "cargo_color": "灰色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "tractor_trailer",
+      "readable_text": [
+        "中国重汽"
+      ],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于中央通道下部，红色牵引车连接灰色货厢，独立可辨，未被遮挡"
+    }
+  ],
+  "predicted_count": 3,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 1,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "远端通道上部车辆已检查，左右边缘无被截断的货车，无遮挡漏计"
+  },
+  "latency_total_s": 18.29,
+  "tokens_total": 4637
+}

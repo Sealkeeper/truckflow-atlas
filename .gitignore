@@ -14,4 +14,7 @@ accuracy/runs/timeline_v1/probe_*.json
 Thumbs.db
 review/_review-*.json
 review/review-modal-audit.json
+accuracy/crops/single_pass_v1/full/
+accuracy/crops/single_pass_v1/aisle/
+accuracy/crops/single_pass_v1/far/
 

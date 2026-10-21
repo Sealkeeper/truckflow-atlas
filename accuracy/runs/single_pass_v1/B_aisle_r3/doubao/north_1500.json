@@ -1,0 +1,150 @@
+{
+  "sample_id": "north_1500",
+  "camera": "north",
+  "time": 1500,
+  "truth": 2,
+  "config": "B_aisle",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\north_1500.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\north_1500.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 14.56,
+      "usage": {
+        "completion_tokens": 1661,
+        "prompt_tokens": 2334,
+        "total_tokens": 3995,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1202
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              175,
+              615,
+              525,
+              998
+            ],
+            "roof_color": "白色",
+            "cargo_color": "白色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "粤A C1162"
+            ],
+            "visibility": "partial",
+            "confidence": 0.95,
+            "evidence": "位于画面下方中央偏左，可见白色波纹车顶、部分车头及货厢，为独立厢式货车"
+          },
+          {
+            "bbox": [
+              330,
+              360,
+              530,
+              630
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [
+              "BL88 980"
+            ],
+            "visibility": "full",
+            "confidence": 0.9,
+            "evidence": "位于白色厢式货车上方，为独立红色货厢，无可见车头"
+          }
+        ],
+        "counts": {
+          "total": 2
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 0,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "远端区域无货车，左右边缘无被切割的货车，无遮挡导致的漏计"
+        },
+        "scene_notes": "本次统计共2辆货车，分别为带白色波纹货厢的厢式货车（部分可见底部）和独立红色货厢，未计入非货车类物体（如展台、人物、设备等）"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [175, 615, 525, 998],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"白色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"粤A C1162\"],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于画面下方中央偏左，可见白色波纹车顶、部分车头及货厢，为独立厢式货车\"\n    },\n    {\n      \"bbox\": [330, 360, 530, 630],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [\"BL88 980\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于白色厢式货车上方，为独立红色货厢，无可见车头\"\n    }\n  ],\n  \"counts\": {\"total\": 2},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 0,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"远端区域无货车，左右边缘无被切割的货车，无遮挡导致的漏计\"\n  },\n  \"scene_notes\": \"本次统计共2辆货车，分别为带白色波纹货厢的厢式货车（部分可见底部）和独立红色货厢，未计入非货车类物体（如展台、人物、设备等）\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.175,
+        0.615,
+        0.525,
+        0.998
+      ],
+      "roof_color": "白色",
+      "cargo_color": "白色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "粤A C1162"
+      ],
+      "visibility": "partial",
+      "confidence": 0.95,
+      "evidence": "位于画面下方中央偏左，可见白色波纹车顶、部分车头及货厢，为独立厢式货车"
+    },
+    {
+      "bbox": [
+        0.33,
+        0.36,
+        0.53,
+        0.63
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [
+        "BL88 980"
+      ],
+      "visibility": "full",
+      "confidence": 0.9,
+      "evidence": "位于白色厢式货车上方，为独立红色货厢，无可见车头"
+    }
+  ],
+  "predicted_count": 2,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 0,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "远端区域无货车，左右边缘无被切割的货车，无遮挡导致的漏计"
+  },
+  "latency_total_s": 14.56,
+  "tokens_total": 3995
+}

@@ -1,0 +1,182 @@
+{
+  "sample_id": "south_2400",
+  "camera": "south",
+  "time": 2400,
+  "truth": 3,
+  "config": "A_full",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "18b6c680e78863458b69f67d2ddbb47f9607308e603c5a95e95e612b34c53684",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\full\\south_2400.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\full\\south_2400.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 16.15,
+      "usage": {
+        "completion_tokens": 1669,
+        "prompt_tokens": 2345,
+        "total_tokens": 4014,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1077
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              420,
+              455,
+              548,
+              888
+            ],
+            "roof_color": "红色",
+            "cargo_color": "灰色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "tractor_trailer",
+            "readable_text": [
+              "中国重汽"
+            ],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于画面中央通道最下方，车头朝向镜头，挂车与牵引车直接连接，完全处于中央通道范围内"
+          },
+          {
+            "bbox": [
+              392,
+              212,
+              458,
+              418
+            ],
+            "roof_color": "白色",
+            "cargo_color": "白色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "东风商用车"
+            ],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于中央通道中间，红色重卡正上方，车头朝向镜头，货厢与车头连接，完全处于中央通道范围内"
+          },
+          {
+            "bbox": [
+              448,
+              202,
+              498,
+              328
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "tractor_trailer",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.85,
+            "evidence": "位于中央通道最上方靠近顶部门洞处，车头朝向镜头，货厢部分被遮挡，属于中央通道内的独立货车"
+          }
+        ],
+        "counts": {
+          "total": 3
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 3,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "中央通道内的所有车辆均已逐排检查，远端、边缘、遮挡区域无未确认的候选车辆"
+        },
+        "scene_notes": "画面中央南北通道内共3辆符合计数范围的货车，无其他符合条件的车辆，两侧展台及边缘露出的车辆不计入"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [420, 455, 548, 888],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"灰色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"tractor_trailer\",\n      \"readable_text\": [\"中国重汽\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于画面中央通道最下方，车头朝向镜头，挂车与牵引车直接连接，完全处于中央通道范围内\"\n    },\n    {\n      \"bbox\": [392, 212, 458, 418],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"白色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"东风商用车\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于中央通道中间，红色重卡正上方，车头朝向镜头，货厢与车头连接，完全处于中央通道范围内\"\n    },\n    {\n      \"bbox\": [448, 202, 498, 328],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"tractor_trailer\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.85,\n      \"evidence\": \"位于中央通道最上方靠近顶部门洞处，车头朝向镜头，货厢部分被遮挡，属于中央通道内的独立货车\"\n    }\n  ],\n  \"counts\": {\"total\": 3},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 3,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"中央通道内的所有车辆均已逐排检查，远端、边缘、遮挡区域无未确认的候选车辆\"\n  },\n  \"scene_notes\": \"画面中央南北通道内共3辆符合计数范围的货车，无其他符合条件的车辆，两侧展台及边缘露出的车辆不计入\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.42,
+        0.455,
+        0.548,
+        0.888
+      ],
+      "roof_color": "红色",
+      "cargo_color": "灰色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "tractor_trailer",
+      "readable_text": [
+        "中国重汽"
+      ],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于画面中央通道最下方，车头朝向镜头，挂车与牵引车直接连接，完全处于中央通道范围内"
+    },
+    {
+      "bbox": [
+        0.392,
+        0.212,
+        0.458,
+        0.418
+      ],
+      "roof_color": "白色",
+      "cargo_color": "白色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "东风商用车"
+      ],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于中央通道中间，红色重卡正上方，车头朝向镜头，货厢与车头连接，完全处于中央通道范围内"
+    },
+    {
+      "bbox": [
+        0.448,
+        0.202,
+        0.498,
+        0.328
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "tractor_trailer",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.85,
+      "evidence": "位于中央通道最上方靠近顶部门洞处，车头朝向镜头，货厢部分被遮挡，属于中央通道内的独立货车"
+    }
+  ],
+  "predicted_count": 3,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 3,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "中央通道内的所有车辆均已逐排检查，远端、边缘、遮挡区域无未确认的候选车辆"
+  },
+  "latency_total_s": 16.15,
+  "tokens_total": 4014
+}

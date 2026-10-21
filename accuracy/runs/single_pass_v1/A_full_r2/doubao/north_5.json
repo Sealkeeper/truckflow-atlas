@@ -1,0 +1,178 @@
+{
+  "sample_id": "north_5",
+  "camera": "north",
+  "time": 5,
+  "truth": 5,
+  "config": "A_full",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "18b6c680e78863458b69f67d2ddbb47f9607308e603c5a95e95e612b34c53684",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\full\\north_5.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\full\\north_5.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 27.9,
+      "usage": {
+        "completion_tokens": 3172,
+        "prompt_tokens": 2345,
+        "total_tokens": 5517,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2556
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              0.39,
+              0.48,
+              0.49,
+              0.89
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "tractor_trailer",
+            "readable_text": [
+              "L66002"
+            ],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于中央南北通道下部，车尾朝向画面下方，完整可见，为牵引车与挂车连接的独立货车，车尾可见车牌文字L66002"
+          },
+          {
+            "bbox": [
+              0.44,
+              0.25,
+              0.5,
+              0.45
+            ],
+            "roof_color": "蓝色",
+            "cargo_color": "蓝色",
+            "relation": "rigid",
+            "vehicle_type": "box_truck",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.85,
+            "evidence": "位于中央南北通道中部，部分被周围货物遮挡，为独立箱式货车，符合统计范围要求"
+          },
+          {
+            "bbox": [
+              0.5,
+              0.11,
+              0.55,
+              0.24
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "rigid",
+            "vehicle_type": "box_truck",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.8,
+            "evidence": "位于中央南北通道最上端靠近门洞处，为独立红色货车，可见车体轮廓，属于统计范围"
+          }
+        ],
+        "counts": {
+          "total": 3
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 1,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "本次扫描覆盖中央南北通道的下部、中部、上部区域，左右边缘及远端区域均已检查，无漏计风险"
+        },
+        "scene_notes": "中央南北通道内共3辆符合要求的货车，分别为下部的红色牵引车挂车、中部的蓝色箱式货车、上部的红色箱式货车，中部货车部分被货物遮挡，上部为远端小目标"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [0.39, 0.48, 0.49, 0.89],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"tractor_trailer\",\n      \"readable_text\": [\"L66002\"],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于中央南北通道下部，车尾朝向画面下方，完整可见，为牵引车与挂车连接的独立货车，车尾可见车牌文字L66002\"\n    },\n    {\n      \"bbox\": [0.44, 0.25, 0.50, 0.45],\n      \"roof_color\": \"蓝色\",\n      \"cargo_color\": \"蓝色\",\n      \"relation\": \"rigid\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.85,\n      \"evidence\": \"位于中央南北通道中部，部分被周围货物遮挡，为独立箱式货车，符合统计范围要求\"\n    },\n    {\n      \"bbox\": [0.50, 0.11, 0.55, 0.24],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"rigid\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.80,\n      \"evidence\": \"位于中央南北通道最上端靠近门洞处，为独立红色货车，可见车体轮廓，属于统计范围\"\n    }\n  ],\n  \"counts\": {\"total\": 3},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 1,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"本次扫描覆盖中央南北通道的下部、中部、上部区域，左右边缘及远端区域均已检查，无漏计风险\"\n  },\n  \"scene_notes\": \"中央南北通道内共3辆符合要求的货车，分别为下部的红色牵引车挂车、中部的蓝色箱式货车、上部的红色箱式货车，中部货车部分被货物遮挡，上部为远端小目标\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.39,
+        0.48,
+        0.49,
+        0.89
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "tractor_trailer",
+      "readable_text": [
+        "L66002"
+      ],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于中央南北通道下部，车尾朝向画面下方，完整可见，为牵引车与挂车连接的独立货车，车尾可见车牌文字L66002"
+    },
+    {
+      "bbox": [
+        0.44,
+        0.25,
+        0.5,
+        0.45
+      ],
+      "roof_color": "蓝色",
+      "cargo_color": "蓝色",
+      "relation": "rigid",
+      "vehicle_type": "box_truck",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.85,
+      "evidence": "位于中央南北通道中部，部分被周围货物遮挡，为独立箱式货车，符合统计范围要求"
+    },
+    {
+      "bbox": [
+        0.5,
+        0.11,
+        0.55,
+        0.24
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "rigid",
+      "vehicle_type": "box_truck",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.8,
+      "evidence": "位于中央南北通道最上端靠近门洞处，为独立红色货车，可见车体轮廓，属于统计范围"
+    }
+  ],
+  "predicted_count": 3,
+  "error": -2,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 1,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "本次扫描覆盖中央南北通道的下部、中部、上部区域，左右边缘及远端区域均已检查，无漏计风险"
+  },
+  "latency_total_s": 27.9,
+  "tokens_total": 5517
+}

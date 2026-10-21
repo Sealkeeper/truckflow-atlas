@@ -1,0 +1,162 @@
+{
+  "sample_id": "north_1800",
+  "camera": "north",
+  "time": 1800,
+  "truth": 2,
+  "config": "B_aisle",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "52352ddb245a9bd98c20f5ca71e301d9aca5569366375635a130c42487baf2ab",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\aisle\\north_1800.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\aisle\\north_1800.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 21.69,
+      "usage": {
+        "completion_tokens": 2648,
+        "prompt_tokens": 2334,
+        "total_tokens": 4982,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2148
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              400,
+              250,
+              555,
+              455
+            ],
+            "roof_color": "unclear",
+            "cargo_color": "红色",
+            "relation": "trailer_only",
+            "vehicle_type": "box_truck",
+            "readable_text": [],
+            "visibility": "partial",
+            "confidence": 0.9,
+            "evidence": "位于中央通道中上部，为独立红色货厢，可辨为货车车体，车头被遮挡无法确认"
+          },
+          {
+            "bbox": [
+              170,
+              625,
+              515,
+              999
+            ],
+            "roof_color": "白色",
+            "cargo_color": "深色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "box_truck",
+            "readable_text": [
+              "粤A CT162"
+            ],
+            "visibility": "partial",
+            "confidence": 0.95,
+            "evidence": "位于画面左下方，白色波纹状货厢顶，可见部分车头，货厢与车头连接为完整货车，左侧被展台遮挡"
+          }
+        ],
+        "counts": {
+          "total": 2
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 3,
+          "far_adjacency_verified": false,
+          "possible_miss": true,
+          "miss_risk_regions": [
+            "far_top"
+          ],
+          "uncertain_items": [
+            {
+              "region": "far_top",
+              "appearance": "小型箱体状物体，被人群遮挡",
+              "reason": "无法确认是否为独立货车车体"
+            }
+          ],
+          "notes": "本次扫描覆盖中央通道及左右边缘，上部远端有疑似货车箱体但无法确认"
+        },
+        "scene_notes": "中央通道有两辆可辨货车，左侧货车部分被展台遮挡，上部远端存在疑似货车的小型物体，无法明确是否为独立货车"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [400, 250, 555, 455],\n      \"roof_color\": \"unclear\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于中央通道中上部，为独立红色货厢，可辨为货车车体，车头被遮挡无法确认\"\n    },\n    {\n      \"bbox\": [170, 625, 515, 999],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"深色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [\"粤A CT162\"],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于画面左下方，白色波纹状货厢顶，可见部分车头，货厢与车头连接为完整货车，左侧被展台遮挡\"\n    }\n  ],\n  \"counts\": {\"total\": 2},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 3,\n    \"far_adjacency_verified\": false,\n    \"possible_miss\": true,\n    \"miss_risk_regions\": [\"far_top\"],\n    \"uncertain_items\": [\n      {\n        \"region\": \"far_top\",\n        \"appearance\": \"小型箱体状物体，被人群遮挡\",\n        \"reason\": \"无法确认是否为独立货车车体\"\n      }\n    ],\n    \"notes\": \"本次扫描覆盖中央通道及左右边缘，上部远端有疑似货车箱体但无法确认\"\n  },\n  \"scene_notes\": \"中央通道有两辆可辨货车，左侧货车部分被展台遮挡，上部远端存在疑似货车的小型物体，无法明确是否为独立货车\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.4,
+        0.25,
+        0.555,
+        0.455
+      ],
+      "roof_color": "unclear",
+      "cargo_color": "红色",
+      "relation": "trailer_only",
+      "vehicle_type": "box_truck",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.9,
+      "evidence": "位于中央通道中上部，为独立红色货厢，可辨为货车车体，车头被遮挡无法确认"
+    },
+    {
+      "bbox": [
+        0.17,
+        0.625,
+        0.515,
+        0.999
+      ],
+      "roof_color": "白色",
+      "cargo_color": "深色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "box_truck",
+      "readable_text": [
+        "粤A CT162"
+      ],
+      "visibility": "partial",
+      "confidence": 0.95,
+      "evidence": "位于画面左下方，白色波纹状货厢顶，可见部分车头，货厢与车头连接为完整货车，左侧被展台遮挡"
+    }
+  ],
+  "predicted_count": 2,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 3,
+    "far_adjacency_verified": false,
+    "possible_miss": true,
+    "miss_risk_regions": [
+      "far_top"
+    ],
+    "uncertain_items": [
+      {
+        "region": "far_top",
+        "appearance": "小型箱体状物体，被人群遮挡",
+        "reason": "无法确认是否为独立货车车体"
+      }
+    ],
+    "notes": "本次扫描覆盖中央通道及左右边缘，上部远端有疑似货车箱体但无法确认"
+  },
+  "latency_total_s": 21.69,
+  "tokens_total": 4982
+}

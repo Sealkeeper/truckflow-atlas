@@ -1,0 +1,146 @@
+{
+  "sample_id": "north_1800",
+  "camera": "north",
+  "time": 1800,
+  "truth": 2,
+  "config": "A_full",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "18b6c680e78863458b69f67d2ddbb47f9607308e603c5a95e95e612b34c53684",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\full\\north_1800.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\full\\north_1800.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 23.71,
+      "usage": {
+        "completion_tokens": 2751,
+        "prompt_tokens": 2345,
+        "total_tokens": 5096,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2268
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              0.43,
+              0.24,
+              0.51,
+              0.46
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [],
+            "visibility": "full",
+            "confidence": 0.9,
+            "evidence": "位于中央南北通道中上部，独立可辨的红色货厢，无连接车头，属于统计范围内的车辆"
+          },
+          {
+            "bbox": [
+              0.34,
+              0.61,
+              0.49,
+              0.99
+            ],
+            "roof_color": "白色",
+            "cargo_color": "白色",
+            "relation": "trailer_only",
+            "vehicle_type": "trailer_only",
+            "readable_text": [
+              "鄂A..."
+            ],
+            "visibility": "partial",
+            "confidence": 0.95,
+            "evidence": "位于中央南北通道下部，独立可辨的白色货厢，无连接车头，底部被画面底边截断，属于统计范围内的车辆"
+          }
+        ],
+        "counts": {
+          "total": 2
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 0,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "本次扫描覆盖中央南北通道全部范围，上部远端门洞区域仅有人物，无符合统计的车辆，左右边缘的展台车辆未计入，无遮挡导致的漏计风险"
+        },
+        "scene_notes": "中央南北通道内共2辆独立货厢，均无连接车头，白色货厢底部被画面底边截断，远端门洞处无符合统计的车辆，两侧展台的车辆不计入统计"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [0.43, 0.24, 0.51, 0.46],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [],\n      \"visibility\": \"full\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于中央南北通道中上部，独立可辨的红色货厢，无连接车头，属于统计范围内的车辆\"\n    },\n    {\n      \"bbox\": [0.34, 0.61, 0.49, 0.99],\n      \"roof_color\": \"白色\",\n      \"cargo_color\": \"白色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [\"鄂A...\"],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于中央南北通道下部，独立可辨的白色货厢，无连接车头，底部被画面底边截断，属于统计范围内的车辆\"\n    }\n  ],\n  \"counts\": {\"total\": 2},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 0,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"本次扫描覆盖中央南北通道全部范围，上部远端门洞区域仅有人物，无符合统计的车辆，左右边缘的展台车辆未计入，无遮挡导致的漏计风险\"\n  },\n  \"scene_notes\": \"中央南北通道内共2辆独立货厢，均无连接车头，白色货厢底部被画面底边截断，远端门洞处无符合统计的车辆，两侧展台的车辆不计入统计\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.43,
+        0.24,
+        0.51,
+        0.46
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [],
+      "visibility": "full",
+      "confidence": 0.9,
+      "evidence": "位于中央南北通道中上部，独立可辨的红色货厢，无连接车头，属于统计范围内的车辆"
+    },
+    {
+      "bbox": [
+        0.34,
+        0.61,
+        0.49,
+        0.99
+      ],
+      "roof_color": "白色",
+      "cargo_color": "白色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [
+        "鄂A..."
+      ],
+      "visibility": "partial",
+      "confidence": 0.95,
+      "evidence": "位于中央南北通道下部，独立可辨的白色货厢，无连接车头，底部被画面底边截断，属于统计范围内的车辆"
+    }
+  ],
+  "predicted_count": 2,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 0,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "本次扫描覆盖中央南北通道全部范围，上部远端门洞区域仅有人物，无符合统计的车辆，左右边缘的展台车辆未计入，无遮挡导致的漏计风险"
+  },
+  "latency_total_s": 23.71,
+  "tokens_total": 5096
+}

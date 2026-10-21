@@ -1,0 +1,174 @@
+{
+  "sample_id": "north_2400",
+  "camera": "north",
+  "time": 2400,
+  "truth": 3,
+  "config": "A_full",
+  "model": "doubao",
+  "prompt_version": "single-pass-v1",
+  "prompt_sha256": "18b6c680e78863458b69f67d2ddbb47f9607308e603c5a95e95e612b34c53684",
+  "images": [
+    "accuracy\\crops\\single_pass_v1\\full\\north_2400.jpg"
+  ],
+  "calls": [
+    {
+      "kind": "primary",
+      "image": "accuracy\\crops\\single_pass_v1\\full\\north_2400.jpg",
+      "ok": true,
+      "parse_ok": true,
+      "parse_error": null,
+      "latency_s": 20.44,
+      "usage": {
+        "completion_tokens": 2286,
+        "prompt_tokens": 2345,
+        "total_tokens": 4631,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1717
+        }
+      },
+      "parsed": {
+        "vehicles": [
+          {
+            "bbox": [
+              422,
+              618,
+              558,
+              997
+            ],
+            "roof_color": "灰色",
+            "cargo_color": "红色",
+            "relation": "trailer_only",
+            "vehicle_type": "box_truck",
+            "readable_text": [],
+            "visibility": "full",
+            "confidence": 0.95,
+            "evidence": "位于中央通道下部，为独立货厢，无可见车头，边界清晰，符合计数要求"
+          },
+          {
+            "bbox": [
+              436,
+              248,
+              512,
+              447
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "rigid",
+            "vehicle_type": "rigid_truck",
+            "readable_text": [],
+            "visibility": "full",
+            "confidence": 0.9,
+            "evidence": "位于中央通道中部，为完整红色货车，货厢封闭，车体大部分可见，符合计数要求"
+          },
+          {
+            "bbox": [
+              441,
+              149,
+              523,
+              269
+            ],
+            "roof_color": "红色",
+            "cargo_color": "红色",
+            "relation": "cab_trailer_connected",
+            "vehicle_type": "tractor_trailer",
+            "readable_text": [],
+            "visibility": "full",
+            "confidence": 0.85,
+            "evidence": "位于中央通道上部靠近门洞处，为牵引车与货厢连接的组合，边界清晰，符合计数要求"
+          }
+        ],
+        "counts": {
+          "total": 3
+        },
+        "coverage": {
+          "far_scanned": true,
+          "edge_scanned": true,
+          "occlusion_scanned": true,
+          "far_objects_checked": 3,
+          "far_adjacency_verified": true,
+          "possible_miss": false,
+          "miss_risk_regions": [],
+          "uncertain_items": [],
+          "notes": "已逐排检查中央通道上部远端车辆，左右边缘无被截断的车体，遮挡处均确认可见，远端相邻车辆边界清晰无合并"
+        },
+        "scene_notes": "中央南北通道内共3辆符合要求的货车，周围有施工人员，通道外车辆、展台结构等未计入"
+      },
+      "raw_text": "{\n  \"vehicles\": [\n    {\n      \"bbox\": [422, 618, 558, 997],\n      \"roof_color\": \"灰色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"box_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"full\",\n      \"confidence\": 0.95,\n      \"evidence\": \"位于中央通道下部，为独立货厢，无可见车头，边界清晰，符合计数要求\"\n    },\n    {\n      \"bbox\": [436, 248, 512, 447],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"rigid\",\n      \"vehicle_type\": \"rigid_truck\",\n      \"readable_text\": [],\n      \"visibility\": \"full\",\n      \"confidence\": 0.9,\n      \"evidence\": \"位于中央通道中部，为完整红色货车，货厢封闭，车体大部分可见，符合计数要求\"\n    },\n    {\n      \"bbox\": [441, 149, 523, 269],\n      \"roof_color\": \"红色\",\n      \"cargo_color\": \"红色\",\n      \"relation\": \"cab_trailer_connected\",\n      \"vehicle_type\": \"tractor_trailer\",\n      \"readable_text\": [],\n      \"visibility\": \"full\",\n      \"confidence\": 0.85,\n      \"evidence\": \"位于中央通道上部靠近门洞处，为牵引车与货厢连接的组合，边界清晰，符合计数要求\"\n    }\n  ],\n  \"counts\": {\"total\": 3},\n  \"coverage\": {\n    \"far_scanned\": true,\n    \"edge_scanned\": true,\n    \"occlusion_scanned\": true,\n    \"far_objects_checked\": 3,\n    \"far_adjacency_verified\": true,\n    \"possible_miss\": false,\n    \"miss_risk_regions\": [],\n    \"uncertain_items\": [],\n    \"notes\": \"已逐排检查中央通道上部远端车辆，左右边缘无被截断的车体，遮挡处均确认可见，远端相邻车辆边界清晰无合并\"\n  },\n  \"scene_notes\": \"中央南北通道内共3辆符合要求的货车，周围有施工人员，通道外车辆、展台结构等未计入\"\n}",
+      "http_requests": 1
+    }
+  ],
+  "call_count": 1,
+  "http_requests": 1,
+  "triggered_far": false,
+  "far_added": [],
+  "vehicles": [
+    {
+      "bbox": [
+        0.422,
+        0.618,
+        0.558,
+        0.997
+      ],
+      "roof_color": "灰色",
+      "cargo_color": "红色",
+      "relation": "trailer_only",
+      "vehicle_type": "box_truck",
+      "readable_text": [],
+      "visibility": "full",
+      "confidence": 0.95,
+      "evidence": "位于中央通道下部，为独立货厢，无可见车头，边界清晰，符合计数要求"
+    },
+    {
+      "bbox": [
+        0.436,
+        0.248,
+        0.512,
+        0.447
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "rigid",
+      "vehicle_type": "rigid_truck",
+      "readable_text": [],
+      "visibility": "full",
+      "confidence": 0.9,
+      "evidence": "位于中央通道中部，为完整红色货车，货厢封闭，车体大部分可见，符合计数要求"
+    },
+    {
+      "bbox": [
+        0.441,
+        0.149,
+        0.523,
+        0.269
+      ],
+      "roof_color": "红色",
+      "cargo_color": "红色",
+      "relation": "cab_trailer_connected",
+      "vehicle_type": "tractor_trailer",
+      "readable_text": [],
+      "visibility": "full",
+      "confidence": 0.85,
+      "evidence": "位于中央通道上部靠近门洞处，为牵引车与货厢连接的组合，边界清晰，符合计数要求"
+    }
+  ],
+  "predicted_count": 3,
+  "error": 0,
+  "failure": false,
+  "degraded": false,
+  "coverage": {
+    "far_scanned": true,
+    "edge_scanned": true,
+    "occlusion_scanned": true,
+    "far_objects_checked": 3,
+    "far_adjacency_verified": true,
+    "possible_miss": false,
+    "miss_risk_regions": [],
+    "uncertain_items": [],
+    "notes": "已逐排检查中央通道上部远端车辆，左右边缘无被截断的车体，遮挡处均确认可见，远端相邻车辆边界清晰无合并"
+  },
+  "latency_total_s": 20.44,
+  "tokens_total": 4631
+}

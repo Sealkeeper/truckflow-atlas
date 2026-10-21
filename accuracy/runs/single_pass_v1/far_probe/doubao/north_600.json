@@ -1,0 +1,140 @@
+{
+  "sample_id": "north_600",
+  "truth": 4,
+  "far_image": "accuracy\\crops\\single_pass_v1\\far\\north_600.jpg",
+  "far_vehicles": [
+    {
+      "vehicle_id": "V1",
+      "unit_ids": [
+        "U1"
+      ],
+      "bbox": [
+        0.37,
+        0.28,
+        0.54,
+        0.41
+      ],
+      "roof_color": "蓝色",
+      "cargo_color": "蓝色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.9,
+      "evidence": "为独立货厢，无可见车头，在裁剪内边界清晰，属于远端运输单元"
+    },
+    {
+      "vehicle_id": "V2",
+      "unit_ids": [
+        "U2"
+      ],
+      "bbox": [
+        0.39,
+        0.32,
+        0.55,
+        0.45
+      ],
+      "roof_color": "蓝色",
+      "cargo_color": "蓝色",
+      "relation": "trailer_only",
+      "vehicle_type": "trailer_only",
+      "readable_text": [],
+      "visibility": "partial",
+      "confidence": 0.9,
+      "evidence": "为独立货厢，无可见车头，在裁剪内边界清晰，属于远端运输单元"
+    }
+  ],
+  "far_count": 2,
+  "ok": true,
+  "parse_ok": true,
+  "parse_error": null,
+  "latency_s": 17.97,
+  "usage": {
+    "completion_tokens": 2249,
+    "prompt_tokens": 2096,
+    "total_tokens": 4345,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1665
+    }
+  },
+  "parsed": {
+    "units": [
+      {
+        "unit_id": "U1",
+        "kind": "cargo_box",
+        "bbox": [
+          0.37,
+          0.28,
+          0.54,
+          0.41
+        ],
+        "color": "蓝色",
+        "evidence": "位于裁剪中间区域，为独立矩形轮廓，带有蓝色波纹顶棚，与下方U2有明显分界，是独立运输单元"
+      },
+      {
+        "unit_id": "U2",
+        "kind": "cargo_box",
+        "bbox": [
+          0.39,
+          0.32,
+          0.55,
+          0.45
+        ],
+        "color": "蓝色",
+        "evidence": "位于U1下方，为独立矩形轮廓，带有蓝色波纹顶棚，与U1有清晰上下分界，是独立运输单元"
+      }
+    ],
+    "vehicles": [
+      {
+        "vehicle_id": "V1",
+        "unit_ids": [
+          "U1"
+        ],
+        "bbox": [
+          0.37,
+          0.28,
+          0.54,
+          0.41
+        ],
+        "roof_color": "蓝色",
+        "cargo_color": "蓝色",
+        "relation": "trailer_only",
+        "vehicle_type": "trailer_only",
+        "readable_text": [],
+        "visibility": "partial",
+        "confidence": 0.9,
+        "evidence": "为独立货厢，无可见车头，在裁剪内边界清晰，属于远端运输单元"
+      },
+      {
+        "vehicle_id": "V2",
+        "unit_ids": [
+          "U2"
+        ],
+        "bbox": [
+          0.39,
+          0.32,
+          0.55,
+          0.45
+        ],
+        "roof_color": "蓝色",
+        "cargo_color": "蓝色",
+        "relation": "trailer_only",
+        "vehicle_type": "trailer_only",
+        "readable_text": [],
+        "visibility": "partial",
+        "confidence": 0.9,
+        "evidence": "为独立货厢，无可见车头，在裁剪内边界清晰，属于远端运输单元"
+      }
+    ],
+    "counts": {
+      "total": 2
+    },
+    "uncertain_items": [],
+    "scene_notes": "裁剪为原通道y0到0.46区域，包含两个独立的蓝色波纹顶棚货厢运输单元，均为无车头的trailer_only类型，无遮挡导致的不确定项"
+  },
+  "raw_text": "{\n  \"units\": [\n    {\n      \"unit_id\": \"U1\",\n      \"kind\": \"cargo_box\",\n      \"bbox\": [0.37, 0.28, 0.54, 0.41],\n      \"color\": \"蓝色\",\n      \"evidence\": \"位于裁剪中间区域，为独立矩形轮廓，带有蓝色波纹顶棚，与下方U2有明显分界，是独立运输单元\"\n    },\n    {\n      \"unit_id\": \"U2\",\n      \"kind\": \"cargo_box\",\n      \"bbox\": [0.39, 0.32, 0.55, 0.45],\n      \"color\": \"蓝色\",\n      \"evidence\": \"位于U1下方，为独立矩形轮廓，带有蓝色波纹顶棚，与U1有清晰上下分界，是独立运输单元\"\n    }\n  ],\n  \"vehicles\": [\n    {\n      \"vehicle_id\": \"V1\",\n      \"unit_ids\": [\"U1\"],\n      \"bbox\": [0.37, 0.28, 0.54, 0.41],\n      \"roof_color\": \"蓝色\",\n      \"cargo_color\": \"蓝色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.9,\n      \"evidence\": \"为独立货厢，无可见车头，在裁剪内边界清晰，属于远端运输单元\"\n    },\n    {\n      \"vehicle_id\": \"V2\",\n      \"unit_ids\": [\"U2\"],\n      \"bbox\": [0.39, 0.32, 0.55, 0.45],\n      \"roof_color\": \"蓝色\",\n      \"cargo_color\": \"蓝色\",\n      \"relation\": \"trailer_only\",\n      \"vehicle_type\": \"trailer_only\",\n      \"readable_text\": [],\n      \"visibility\": \"partial\",\n      \"confidence\": 0.9,\n      \"evidence\": \"为独立货厢，无可见车头，在裁剪内边界清晰，属于远端运输单元\"\n    }\n  ],\n  \"counts\": {\"total\": 2},\n  \"uncertain_items\": [],\n  \"scene_notes\": \"裁剪为原通道y0到0.46区域，包含两个独立的蓝色波纹顶棚货厢运输单元，均为无车头的trailer_only类型，无遮挡导致的不确定项\"\n}",
+  "http_requests": 1
+}
