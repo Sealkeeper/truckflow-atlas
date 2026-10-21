@@ -9,6 +9,7 @@
 - 本轮已执行的 20 次双尺度调用是**无记忆的同帧输入消融**，不是记忆库收益。结果为 **14/20 exact、MAE 0.35**，修复 1 帧、回归 3 帧、漏 4、多 2，当前形式淘汰。
 - 组件装配实验在调用前冻结，但按中枢“已开始实验保留、不再追加付费调用”的要求 **未运行**；没有 8 帧分数，也不得引用任何预期结果。
 - 此前 L2 的 2 次补检是旧机制成本；本轮实际新增模型请求只有双尺度 20 次。
+- 零调用离线身份可行性审计已完成：10 项分层/元数据策略不变量通过，但人工身份字段、人工换挂事件和 prior-only/future 切分都为 0，身份实验**暂不具备验收条件**。
 
 ## 模型实际看到了什么
 
@@ -97,6 +98,13 @@
 - 复核耗时、复核精度、生产并发和供应商失败率；
 - 独立新时段泛化。
 
+离线审计的阻断项：
+
+- 0 个人工核验的 `cargo_id` / `tractor_id` / `vehicle_session_id`；
+- 0 个人工换挂事件；
+- 0 个与目标隔离的 prior-only 历史和 future target；
+- 8 个配对候选只提供局部同车 yes/no，不是三层身份真值。
+
 双尺度 20 个响应都满足 `counts.total == len(vehicles)`，没有视图分项相加字段；但模型自报去重不等于视觉证明。该实验仍有 2 个过计样本，不宣称双视图零重复。
 
 ## 证据入口
@@ -107,6 +115,8 @@
 - 统一评测：`summary/experiment_metrics.json`
 - 基线与旧记忆指标：`summary/baseline_and_memory_metrics.json`
 - 记忆缓存：`summary/memory_cache.json`
+- 离线身份可行性：`summary/OFFLINE_IDENTITY_FEASIBILITY.md`
+- 零调用审计：`summary/offline_identity_audit.json`
 - 详细实现：`research/vehicle_memory/ARCHITECTURE.md`
 - 完整报告：`research/vehicle_memory/REPORT.md`
 
@@ -119,6 +129,6 @@ python research\vehicle_memory\experiments\evaluate_experiments.py
 ## 下一步
 
 1. 不再重复“全局 + 固定远区”付费调用；交由输入尺度主路线处理其几何与模型适配。
-2. 记忆路线转为离线可行性：用已有完整帧建立与目标时刻隔离的历史库，验证换挂、同箱不同车、OCR 不清和身份冲突，不接触测试答案或未来帧。
-3. 先补齐人工 `cargo_id`、`tractor_id`、`vehicle_session_id` 真值，再报告身份 precision/recall；否则维持“未测”。
+2. 可行性审计已经完成，当前由数据真值阻塞；先补齐人工 `cargo_id`、`tractor_id`、`vehicle_session_id` 和换挂/OCR 冲突样本。
+3. 按 prior-only 建库、future target 评估的时间隔离协议做离线实验，再报告身份 precision/recall；此前维持“未测”。
 4. 只有在离线身份门禁有可复核 precision/recall 后，才设计新的在线身份调用或跨机位节省实验。

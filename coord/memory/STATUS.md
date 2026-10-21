@@ -33,6 +33,7 @@ PR：#13，https://github.com/Sealkeeper/truckflow-atlas/pull/13 ；保持打开
 - 双尺度无记忆消融：20/20 请求成功，14/20 exact、MAE 0.35、漏 4、多 2；修复 1、回归 3，当前形式淘汰。
 - 双尺度 20 个响应均满足 `counts.total == len(vehicles)`；模型自报跨图去重不等于逐车视觉审计，仍有 2 个过计。
 - `cargo_id`、`tractor_id`、`vehicle_session_id` 缺少完整人工真值，身份指标**未测**。
+- 零调用离线可行性审计：10 项分层/元数据策略不变量通过；人工身份字段 0、人工换挂事件 0、prior-only/future 切分 0，身份实验 `ready=false`。
 
 ## 证据入口
 
@@ -43,6 +44,8 @@ PR：#13，https://github.com/Sealkeeper/truckflow-atlas/pull/13 ；保持打开
 - 记忆缓存 schema：`research/vehicle_memory/MEMORY_CACHE_SCHEMA.json`
 - 实验预注册：`research/vehicle_memory/experiments/PREREGISTRATION.md`
 - 双尺度结果：`research/vehicle_memory/experiments/RESULT.md`
+- 离线身份可行性：`research/vehicle_memory/OFFLINE_IDENTITY_FEASIBILITY.md`
+- 零调用审计：`research/vehicle_memory/generated/offline_identity_audit.json`
 - 公共发布：`coord/exploration/vehicle-memory/`
 - 报告：`research/vehicle_memory/REPORT.md`
 - 真值：`accuracy/reviewed/user-final-review-v2-2026-10-21.json`
@@ -62,7 +65,7 @@ PR：#13，https://github.com/Sealkeeper/truckflow-atlas/pull/13 ；保持打开
 ## 下一步
 
 1. 停止重复“全局 + 固定远区”付费机制；输入尺度交给公共 `input-representation` 路线。
-2. 转为离线身份记忆可行性：换挂、同箱不同车、OCR 不清和冲突 supersedes。
-3. 验证 OCR/箱号 provenance，建立真正的 hard ID 和人工身份真值。
+2. 优先补齐人工 `cargo_id`、`tractor_id`、`vehicle_session_id` 真值与换挂/OCR 冲突样本。
+3. 按 prior-only 建库、future target 评估的隔离协议做离线实验。
 4. 扩充正负配对集，报告自动覆盖、precision、recall 和误合并业务影响。
 5. 记录复核队列的人工耗时和正确率。

@@ -215,6 +215,7 @@ precision 1.0 的分母只有 2 个明确 yes，不能解释成整体配对可�
 - 用户最终复核解决了相机内计数口径，但没有完整双人独立标注和第三人裁决记录。
 - 可读文字没有独立 OCR 验证；逐字保留是证据纪律，不是箱号真值。
 - 没有完整人工 `cargo_id`、`tractor_id`、`vehicle_session_id` 真值；身份识别准确率**未测**，schema/cache/TTL 不是身份指标。
+- 零调用可行性审计确认：66 个护照有 0 个 typed cargo/tractor 值和 0 个 confirmed 身份；数据没有人工换挂事件，也没有与目标隔离的 prior-only/future 切分，离线身份实验当前 `ready=false`。
 - 语义配对只有 8 个候选案例，正例自动覆盖为 0。
 - L2 只有 2 个定点样本，且一正一负。
 - 没有测量人工复核耗时、复核正确率、生产并发、供应商失败率和实际费用。
@@ -234,6 +235,8 @@ precision 1.0 的分母只有 2 个明确 yes，不能解释成整体配对可�
 - 重放指标：`research/vehicle_memory/generated/metrics.json`
 - 护照导出：`research/vehicle_memory/generated/passports.json`
 - 记忆缓存：`research/vehicle_memory/generated/memory_cache.json`
+- 离线身份可行性：`research/vehicle_memory/OFFLINE_IDENTITY_FEASIBILITY.md`
+- 零调用审计：`research/vehicle_memory/generated/offline_identity_audit.json`
 - 架构和 schema：`ARCHITECTURE.md`、`PASSPORT_SCHEMA.json`、`MEMORY_CACHE_SCHEMA.json`
 - 冻结实验配置：`research/vehicle_memory/experiments/PREREGISTRATION.md`
 

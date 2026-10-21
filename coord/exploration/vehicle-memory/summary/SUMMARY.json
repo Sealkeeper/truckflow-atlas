@@ -33,6 +33,18 @@
     "cross_camera_auto_released_frames": 0,
     "cross_camera_review_frames": 10
   },
+  "offline_identity_feasibility": {
+    "model_calls": 0,
+    "policy_checks_passed": 10,
+    "typed_cargo_id_values": 0,
+    "typed_tractor_id_values": 0,
+    "confirmed_passports": 0,
+    "human_identity_truth_fields": 0,
+    "human_trailer_swap_events": 0,
+    "prior_only_future_split_records": 0,
+    "experiment_ready": false,
+    "identity_metrics_status": "untested"
+  },
   "experiments": {
     "dualscale_v1": {
       "status": "completed_eliminated",
@@ -72,7 +84,7 @@
   },
   "validation": {
     "pre_call_json_files_parsed": 140,
-    "published_json_files_parsed": 190,
+    "post_result_json_parse_passed": true,
     "passport_schema_valid": true,
     "memory_cache_schema_valid": true,
     "memory_entries_total": 72,

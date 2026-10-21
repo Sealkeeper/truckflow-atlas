@@ -1,0 +1,65 @@
+{
+  "schema": "truckflow-offline-identity-audit-v1",
+  "scope": "zero-model-call data and policy audit",
+  "model_calls": 0,
+  "data_inventory": {
+    "times": 10,
+    "camera_frames": 20,
+    "provisional_passports": 66,
+    "confirmed_passports": 0,
+    "typed_cargo_id_values": 0,
+    "typed_tractor_id_values": 0,
+    "provisional_session_ids": 66,
+    "human_identity_truth_fields": [],
+    "human_trailer_swap_events": 0,
+    "prior_only_future_split_records": 0,
+    "user_red_box_images": 9,
+    "user_red_box_review_times": 6,
+    "cross_camera_pair_cases": 8,
+    "cross_camera_pair_positive_labels": 4,
+    "cross_camera_pair_negative_labels": 4,
+    "memory_entries": 72
+  },
+  "policy_checks": {
+    "passport_count_66": true,
+    "all_identity_layers_present": true,
+    "cargo_id_values_unverified": true,
+    "tractor_id_values_unverified": true,
+    "raw_text_not_promoted_to_cargo_or_tractor": true,
+    "session_ids_unique_per_observation": true,
+    "confirmed_identity_count_zero": true,
+    "all_passports_have_memory_metadata": true,
+    "all_cache_entries_have_memory_metadata": true,
+    "cross_camera_auto_release_zero": true
+  },
+  "measured_related_metrics": {
+    "count_baseline": {
+      "exact": 16,
+      "N": 20,
+      "mae": 0.25
+    },
+    "cross_camera_auto_release": {
+      "auto_released_frames": 0,
+      "review_frames": 10
+    },
+    "semantic_pair_cases": {
+      "exact": 3,
+      "N": 8,
+      "auto_yes": 0,
+      "review": 5
+    }
+  },
+  "identity_metrics": {
+    "status": "untested",
+    "reason": "Archived review provides counts, overlap counts, and sparse same-vehicle pair labels, but no complete human cargo_id, tractor_id, vehicle_session_id, or trailer-swap truth."
+  },
+  "offline_experiment_gate": {
+    "ready": false,
+    "blocking_evidence": [
+      "no human cargo_id / tractor_id / vehicle_session_id labels",
+      "no human-labelled trailer swap events",
+      "no independent prior-only history and future target split",
+      "pair labels cover only 8 candidate pairs and do not identify typed IDs"
+    ]
+  }
+}
