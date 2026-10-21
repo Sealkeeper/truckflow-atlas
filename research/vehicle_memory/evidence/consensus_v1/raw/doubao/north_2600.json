@@ -1,0 +1,96 @@
+{
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "attempts": 1,
+  "latency_s": 13.67,
+  "usage": {
+    "completion_tokens": 1230,
+    "prompt_tokens": 1776,
+    "total_tokens": 3006,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 896
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.31, 0.38, 0.52, 0.69],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色厢式货厢，车尾朝向镜头，车牌粤T73778\",\n      \"evidence\": \"画面中间通道处完整可见的大型厢式货车，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.15, 0.85, 0.49, 1.0],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色厢式货厢，仅露出顶部及部分货厢结构\",\n      \"evidence\": \"画面底部左侧可见的货车，仅显示上半部分，可确定为货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中共计2辆可见货车，1辆完整显示于通道中间，1辆仅显示顶部及部分货厢于画面底部，无其他清晰可见的货车\",\n  \"uncertain_reasons\": []\n}",
+  "reasoning_text": "\n我现在要处理用户的请求，清点画面里的货车。首先看图片，能看到的货车：第一辆是中间偏下的大厢式货车，车牌粤T73778，是大型的，完整可见？不对，还有左下角的另一辆货车，只露出顶部和部分货厢，也是大型的？等下仔细看：\n1. 第一辆：中间的，红色货厢，车尾朝镜头，车牌粤T73778，是大型货车，完整可见，属于large。\n2. 第二辆：画面底部偏左，红色货厢，只露出上半部分，是partial_top，属于large。\n还有吗？远处背景里有没有？看远处通道尽头有亮灯的，但是不确定是不是货车？不对，用户说只统计实际可见的，画面里清晰的是这两辆？\n等下再确认：\n- 中间的货车：bbox大概是x0=0.31, y0=0.38, x1=0.52, y1=0.69，是完整的厢式货车，large，visible是full，identity是红色货厢，车尾，粤T73778。\n- 底部的货车：bbox大概是x0=0.15, y0=0.85, x1=0.49, y1=1.0，是partial_top，红色货厢，large，visible是partial_top。\n那total是2，large是2，medium和small是0，unknown是0。\n然后scene_notes：画面中有两辆可见货车，一辆完整显示在通道中间，一辆仅显示顶部和部分货厢在画面底部，无其他清晰可见的货车。\nuncertain_reasons是空的，因为都确定是货车。\n现在整理成严格的JSON格式，注意每个字段都正确。\n等下，有没有第三辆？远处的那两个亮灯的，是不是货车？看图片顶部中间，通道尽头有两个亮的，但是被遮挡了吗？用户说不要猜测画面外或被完全遮挡的，所以不算。所以只有两辆。\n再检查计数口径：\n1. 都是厢式货车，属于large。\n2. 都是单独的，没有车头挂车分开的情况。\n3. 排除了人、手推车等。\n4. 都是画面内可见的。\n5. 底部的那辆是partial_top，确定是货车，所以计入。\n6. 都是large。\n所以最终的JSON应该是：\n{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.31, 0.38, 0.52, 0.69],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色厢式货厢，车尾朝向镜头，车牌粤T73778\",\n      \"evidence\": \"画面中间通道处完整可见的大型厢式货车，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.15, 0.85, 0.49, 1.0],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色厢式货厢，仅露出顶部及部分货厢结构\",\n      \"evidence\": \"画面底部左侧可见的货车，仅显示上半部分，可确定为货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中共计2辆可见货车，1辆完整显示于通道中间，1辆仅显示顶部及部分货厢于画面底部，无其他清晰可见的货车\",\n  \"uncertain_reasons\": []\n}\n对，这样就对了。",
+  "raw_body": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.31, 0.38, 0.52, 0.69],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色厢式货厢，车尾朝向镜头，车牌粤T73778\",\n      \"evidence\": \"画面中间通道处完整可见的大型厢式货车，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.15, 0.85, 0.49, 1.0],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色厢式货厢，仅露出顶部及部分货厢结构\",\n      \"evidence\": \"画面底部左侧可见的货车，仅显示上半部分，可确定为货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中共计2辆可见货车，1辆完整显示于通道中间，1辆仅显示顶部及部分货厢于画面底部，无其他清晰可见的货车\",\n  \"uncertain_reasons\": []\n}",
+          "reasoning_content": "\n我现在要处理用户的请求，清点画面里的货车。首先看图片，能看到的货车：第一辆是中间偏下的大厢式货车，车牌粤T73778，是大型的，完整可见？不对，还有左下角的另一辆货车，只露出顶部和部分货厢，也是大型的？等下仔细看：\n1. 第一辆：中间的，红色货厢，车尾朝镜头，车牌粤T73778，是大型货车，完整可见，属于large。\n2. 第二辆：画面底部偏左，红色货厢，只露出上半部分，是partial_top，属于large。\n还有吗？远处背景里有没有？看远处通道尽头有亮灯的，但是不确定是不是货车？不对，用户说只统计实际可见的，画面里清晰的是这两辆？\n等下再确认：\n- 中间的货车：bbox大概是x0=0.31, y0=0.38, x1=0.52, y1=0.69，是完整的厢式货车，large，visible是full，identity是红色货厢，车尾，粤T73778。\n- 底部的货车：bbox大概是x0=0.15, y0=0.85, x1=0.49, y1=1.0，是partial_top，红色货厢，large，visible是partial_top。\n那total是2，large是2，medium和small是0，unknown是0。\n然后scene_notes：画面中有两辆可见货车，一辆完整显示在通道中间，一辆仅显示顶部和部分货厢在画面底部，无其他清晰可见的货车。\nuncertain_reasons是空的，因为都确定是货车。\n现在整理成严格的JSON格式，注意每个字段都正确。\n等下，有没有第三辆？远处的那两个亮灯的，是不是货车？看图片顶部中间，通道尽头有两个亮的，但是被遮挡了吗？用户说不要猜测画面外或被完全遮挡的，所以不算。所以只有两辆。\n再检查计数口径：\n1. 都是厢式货车，属于large。\n2. 都是单独的，没有车头挂车分开的情况。\n3. 排除了人、手推车等。\n4. 都是画面内可见的。\n5. 底部的那辆是partial_top，确定是货车，所以计入。\n6. 都是large。\n所以最终的JSON应该是：\n{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.31, 0.38, 0.52, 0.69],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色厢式货厢，车尾朝向镜头，车牌粤T73778\",\n      \"evidence\": \"画面中间通道处完整可见的大型厢式货车，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.15, 0.85, 0.49, 1.0],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色厢式货厢，仅露出顶部及部分货厢结构\",\n      \"evidence\": \"画面底部左侧可见的货车，仅显示上半部分，可确定为货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中共计2辆可见货车，1辆完整显示于通道中间，1辆仅显示顶部及部分货厢于画面底部，无其他清晰可见的货车\",\n  \"uncertain_reasons\": []\n}\n对，这样就对了。",
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1792586117,
+    "id": "0217925861036015bd48b85bf91977229be01b0f043f8c3e405da",
+    "model": "doubao-seed-2-0-mini-260428",
+    "service_tier": "default",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 1230,
+      "prompt_tokens": 1776,
+      "total_tokens": 3006,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 896
+      }
+    }
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 2,
+      "large": 2,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.31,
+          0.38,
+          0.52,
+          0.69
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色厢式货厢，车尾朝向镜头，车牌粤T73778",
+        "evidence": "画面中间通道处完整可见的大型厢式货车，符合货车定义",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.15,
+          0.85,
+          0.49,
+          1.0
+        ],
+        "size": "large",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "红色厢式货厢，仅露出顶部及部分货厢结构",
+        "evidence": "画面底部左侧可见的货车，仅显示上半部分，可确定为货车",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面中共计2辆可见货车，1辆完整显示于通道中间，1辆仅显示顶部及部分货厢于画面底部，无其他清晰可见的货车",
+    "uncertain_reasons": []
+  },
+  "sample_id": "north_2600",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\north_2600_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:35:17+0800"
+}

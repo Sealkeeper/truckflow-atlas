@@ -1,0 +1,110 @@
+{
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "attempts": 1,
+  "latency_s": 20.72,
+  "usage": {
+    "completion_tokens": 1817,
+    "prompt_tokens": 1776,
+    "total_tokens": 3593,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1377
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 2, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.15, 0.6, 0.54, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White flatbed truck, front oriented toward the bottom of the image, lower portion of the frame\",\n      \"evidence\": \"Clear full view of a truck with a flat cargo bed, no occlusion\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.31, 0.35, 0.55, 0.63],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red enclosed cargo truck, rear oriented toward the top of the image, between the white flatbed and blue-roofed truck\",\n      \"evidence\": \"Full view of a red enclosed truck, no occlusion\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.41, 0.14, 0.57, 0.27],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Blue-roofed truck, rear oriented toward the top of the image, in the background near the far end of the aisle\",\n      \"evidence\": \"Full view of a truck with a blue roof, no occlusion\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All counted trucks are fully visible within the frame, no partial or occluded vehicles included\",\n  \"uncertain_reasons\": []\n}",
+  "reasoning_text": "Okay, let's tackle this problem step by step. First, I need to count all visible trucks in the image. Let's look at the image:\n\n1. First, there's a red cargo truck in the middle, right? Its bbox would be around [0.33, 0.37, 0.54, 0.65] maybe? That's a large truck, full visible? Wait no, wait below it, there's a white flatbed truck: [0.17, 0.62, 0.52, 0.99], that's another large truck, full visible. Then there's a blue-roofed truck in the back, near the top middle: [0.44, 1.5? No wait, the top part, the blue-roofed truck is [0.43, 1.5? No, looking at the image, the blue truck is at the top center, its bbox is [0.42, 0.16, 0.56, 0.30], that's a medium or large? Wait let's list each:\n\nWait let's count:\n1. The white flatbed truck at the bottom: that's a large truck, fully visible (from y=0.62 to 0.99, x 0.17 to 0.52). Correct, that's a truck.\n2. The red enclosed cargo truck above it: [0.33, 0.37, 0.54, 0.65], that's another large truck, full visible.\n3. The blue-roofed truck in the middle background: [0.43, 0.16, 0.56, 0.29], that's a truck, medium? Let's see, is there a fourth? Wait wait, any others? Let's check: the right side, no, the structures are booths. Wait wait, wait the red truck, white truck, blue truck: that's three? Wait wait no, wait the white truck's front is at the bottom, the red truck is behind it, then the blue truck further back. Wait let's confirm each:\n\nWait first vehicle: white flatbed, large, full visible, is truck. Second: red enclosed cargo, large, full visible, truck. Third: blue-roofed truck, medium, full visible, truck. Wait is that all? Let's check again. The image: left side, the two trucks (white and red), then the back blue truck. Any others? Let's see, no other trucks. Wait wait, wait the blue truck: yes, it's a truck, with people around it. So total count is 3, all large? Wait no, blue truck is maybe medium? Wait let's assign sizes:\n\nWait the white truck is a large (long, full length visible). Red truck is large (long cargo). Blue truck: looks like a medium, shorter. Wait but let's make sure. Now, let's structure each entry.\n\nWait wait, let's get the bboxes right:\n\n1. White truck: bbox [0.16, 0.61, 0.53, 0.99], size large, visible full, is_truck true, identity: white flatbed, front facing down (towards bottom of image), evidence: clearly a truck with flat cargo bed, visible from bottom to middle.\n2. Red truck: bbox [0.32, 0.36, 0.55, 0.64], size large, visible full, is_truck true, identity: red enclosed cargo, rear facing (towards top of image), evidence: red container, visible between white truck and blue truck.\n3. Blue truck: bbox [0.42, 0.15, 0.57, 0.28], size medium, visible full, is_truck true, identity: blue roof, dark body, rear facing, evidence: at the top middle, people around it.\n\nWait that's three total. So counts: total=3, large=2, medium=1, small=0, unknown=0.\n\nScene notes: All trucks are fully visible, no occlusion issues. Uncertain reasons: none.\n\nWait wait, is that correct? Let me check again. The image: yes, three trucks. Let's confirm: the bottom white one, middle red, top blue. Any others? No, the rest are booths, people, etc. So that's three.\n\nNow, let's format this into the required JSON. Let's make sure each field is correct.\n\nWait the bbox coordinates are normalized, so x0,y0,x1,y1 between 0 and 1. Let's adjust:\n\nFor white truck: x0=0.15, y0=0.6, x1=0.54, y1=0.99. Correct.\nRed truck: x0=0.31, y0=0.35, x1=0.55, y1=0.63. Correct.\nBlue truck: x0=0.41, y0=0.14, x1=0.57, y1=0.27. Correct.\n\nEach entry's visible is \"full\" because all are fully visible. Uncertain is false. Identity clues: for white: white flatbed truck, lower part of image, front oriented downward. Red: red enclosed cargo truck, between white and blue, rear oriented upward. Blue: blue-roofed truck, background, rear oriented upward.\n\nEvidence: each is clearly a truck, no ambiguity.\n\nScene notes: No partially visible or occluded trucks in the frame; all counted vehicles are fully within the image bounds.\n\nUncertain reasons: empty array.\n\nWait wait, wait a second: is the blue truck a separate vehicle? Yes, because it's a distinct truck, not part of the red or white. So total 3. That's right.\n\nWait let me make sure I didn't miss any. Let's look again: the image has three trucks. Yep. So the counts would be total=3, large=2, medium=1, others 0.\n\nOkay, now build the JSON properly, no extra stuff, strictly as per the format.",
+  "raw_body": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "{\n  \"counts\": {\"total\": 3, \"large\": 2, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.15, 0.6, 0.54, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White flatbed truck, front oriented toward the bottom of the image, lower portion of the frame\",\n      \"evidence\": \"Clear full view of a truck with a flat cargo bed, no occlusion\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.31, 0.35, 0.55, 0.63],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red enclosed cargo truck, rear oriented toward the top of the image, between the white flatbed and blue-roofed truck\",\n      \"evidence\": \"Full view of a red enclosed truck, no occlusion\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.41, 0.14, 0.57, 0.27],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Blue-roofed truck, rear oriented toward the top of the image, in the background near the far end of the aisle\",\n      \"evidence\": \"Full view of a truck with a blue roof, no occlusion\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All counted trucks are fully visible within the frame, no partial or occluded vehicles included\",\n  \"uncertain_reasons\": []\n}",
+          "reasoning_content": "Okay, let's tackle this problem step by step. First, I need to count all visible trucks in the image. Let's look at the image:\n\n1. First, there's a red cargo truck in the middle, right? Its bbox would be around [0.33, 0.37, 0.54, 0.65] maybe? That's a large truck, full visible? Wait no, wait below it, there's a white flatbed truck: [0.17, 0.62, 0.52, 0.99], that's another large truck, full visible. Then there's a blue-roofed truck in the back, near the top middle: [0.44, 1.5? No wait, the top part, the blue-roofed truck is [0.43, 1.5? No, looking at the image, the blue truck is at the top center, its bbox is [0.42, 0.16, 0.56, 0.30], that's a medium or large? Wait let's list each:\n\nWait let's count:\n1. The white flatbed truck at the bottom: that's a large truck, fully visible (from y=0.62 to 0.99, x 0.17 to 0.52). Correct, that's a truck.\n2. The red enclosed cargo truck above it: [0.33, 0.37, 0.54, 0.65], that's another large truck, full visible.\n3. The blue-roofed truck in the middle background: [0.43, 0.16, 0.56, 0.29], that's a truck, medium? Let's see, is there a fourth? Wait wait, any others? Let's check: the right side, no, the structures are booths. Wait wait, wait the red truck, white truck, blue truck: that's three? Wait wait no, wait the white truck's front is at the bottom, the red truck is behind it, then the blue truck further back. Wait let's confirm each:\n\nWait first vehicle: white flatbed, large, full visible, is truck. Second: red enclosed cargo, large, full visible, truck. Third: blue-roofed truck, medium, full visible, truck. Wait is that all? Let's check again. The image: left side, the two trucks (white and red), then the back blue truck. Any others? Let's see, no other trucks. Wait wait, wait the blue truck: yes, it's a truck, with people around it. So total count is 3, all large? Wait no, blue truck is maybe medium? Wait let's assign sizes:\n\nWait the white truck is a large (long, full length visible). Red truck is large (long cargo). Blue truck: looks like a medium, shorter. Wait but let's make sure. Now, let's structure each entry.\n\nWait wait, let's get the bboxes right:\n\n1. White truck: bbox [0.16, 0.61, 0.53, 0.99], size large, visible full, is_truck true, identity: white flatbed, front facing down (towards bottom of image), evidence: clearly a truck with flat cargo bed, visible from bottom to middle.\n2. Red truck: bbox [0.32, 0.36, 0.55, 0.64], size large, visible full, is_truck true, identity: red enclosed cargo, rear facing (towards top of image), evidence: red container, visible between white truck and blue truck.\n3. Blue truck: bbox [0.42, 0.15, 0.57, 0.28], size medium, visible full, is_truck true, identity: blue roof, dark body, rear facing, evidence: at the top middle, people around it.\n\nWait that's three total. So counts: total=3, large=2, medium=1, small=0, unknown=0.\n\nScene notes: All trucks are fully visible, no occlusion issues. Uncertain reasons: none.\n\nWait wait, is that correct? Let me check again. The image: yes, three trucks. Let's confirm: the bottom white one, middle red, top blue. Any others? No, the rest are booths, people, etc. So that's three.\n\nNow, let's format this into the required JSON. Let's make sure each field is correct.\n\nWait the bbox coordinates are normalized, so x0,y0,x1,y1 between 0 and 1. Let's adjust:\n\nFor white truck: x0=0.15, y0=0.6, x1=0.54, y1=0.99. Correct.\nRed truck: x0=0.31, y0=0.35, x1=0.55, y1=0.63. Correct.\nBlue truck: x0=0.41, y0=0.14, x1=0.57, y1=0.27. Correct.\n\nEach entry's visible is \"full\" because all are fully visible. Uncertain is false. Identity clues: for white: white flatbed truck, lower part of image, front oriented downward. Red: red enclosed cargo truck, between white and blue, rear oriented upward. Blue: blue-roofed truck, background, rear oriented upward.\n\nEvidence: each is clearly a truck, no ambiguity.\n\nScene notes: No partially visible or occluded trucks in the frame; all counted vehicles are fully within the image bounds.\n\nUncertain reasons: empty array.\n\nWait wait, wait a second: is the blue truck a separate vehicle? Yes, because it's a distinct truck, not part of the red or white. So total 3. That's right.\n\nWait let me make sure I didn't miss any. Let's look again: the image has three trucks. Yep. So the counts would be total=3, large=2, medium=1, others 0.\n\nOkay, now build the JSON properly, no extra stuff, strictly as per the format.",
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1792586137,
+    "id": "0217925861171899180a659d9e591342a6e4188502fc830b0c6f4",
+    "model": "doubao-seed-2-0-mini-260428",
+    "service_tier": "default",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 1817,
+      "prompt_tokens": 1776,
+      "total_tokens": 3593,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1377
+      }
+    }
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 2,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.15,
+          0.6,
+          0.54,
+          0.99
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "White flatbed truck, front oriented toward the bottom of the image, lower portion of the frame",
+        "evidence": "Clear full view of a truck with a flat cargo bed, no occlusion",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.31,
+          0.35,
+          0.55,
+          0.63
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Red enclosed cargo truck, rear oriented toward the top of the image, between the white flatbed and blue-roofed truck",
+        "evidence": "Full view of a red enclosed truck, no occlusion",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.41,
+          0.14,
+          0.57,
+          0.27
+        ],
+        "size": "medium",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "Blue-roofed truck, rear oriented toward the top of the image, in the background near the far end of the aisle",
+        "evidence": "Full view of a truck with a blue roof, no occlusion",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "All counted trucks are fully visible within the frame, no partial or occluded vehicles included",
+    "uncertain_reasons": []
+  },
+  "sample_id": "north_900",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\north_900_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:35:38+0800"
+}

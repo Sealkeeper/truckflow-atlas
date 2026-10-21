@@ -1,0 +1,45 @@
+{
+  "case": "t1200_red_vs_red_cab",
+  "north_candidate": [
+    "north_1200",
+    "N7"
+  ],
+  "south_candidate": [
+    "south_1200",
+    "S5"
+  ],
+  "gold_answer": "no",
+  "image": "assets\\sheets\\pair_t1200_red_vs_red_cab.jpg",
+  "prompt": "左格是北机位候选，右格是南机位同一时刻候选；两机位存在重叠，但视角不同。\n问题只有一项：它们是否同一物理车辆？\n\n判定规则：\n1. 至少两个语义特征一致才可判 yes，例如货厢颜色和结构、车头颜色和形状、文字/标识、车顶特征。\n2. 同色不是充分证据；红车与另一辆红车可能不同。\n3. 车头与货厢属于同一车时不要拆开；但两格裁片可能只显示局部。\n4. 视角、尺度变化导致无法确认时必须 answer=uncertain，不能猜。\n\n只输出严格 JSON：\n{\"answer\":\"yes|no|uncertain\",\"shared_features\":[\"至少两个\"],\"conflicting_features\":[\"\"],\"reason\":\"\",\"review\":true}",
+  "run": {
+    "model": "aibox",
+    "model_id": "glm-5.3-flash",
+    "ok": true,
+    "latency_s": 26.497,
+    "request_id": "e6660f91691e4ab09091f7f0204a7a33",
+    "usage": {
+      "prompt_tokens": 1042,
+      "total_tokens": 1156,
+      "completion_tokens": 114,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "image_tokens": 855
+      },
+      "reasoning_tokens": 25
+    },
+    "parsed": {
+      "answer": "uncertain",
+      "shared_features": [
+        "红色车身",
+        "重型货车结构"
+      ],
+      "conflicting_features": [
+        "北格显示货厢尾部，南格显示车头正面，无共同可见标识",
+        "无法比对文字/车牌/车顶特征"
+      ],
+      "reason": "两格分别只显示车辆的不同端（尾部 vs 车头），无重叠可验证的标识或特征，仅红色不足以判定同一车辆。",
+      "review": true
+    },
+    "raw_text": "{\"answer\":\"uncertain\",\"shared_features\":[\"红色车身\",\"重型货车结构\"],\"conflicting_features\":[\"北格显示货厢尾部，南格显示车头正面，无共同可见标识\",\"无法比对文字/车牌/车顶特征\"],\"reason\":\"两格分别只显示车辆的不同端（尾部 vs 车头），无重叠可验证的标识或特征，仅红色不足以判定同一车辆。\",\"review\":true}"
+  }
+}

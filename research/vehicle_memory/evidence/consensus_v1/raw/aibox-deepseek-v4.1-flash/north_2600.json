@@ -1,0 +1,132 @@
+{
+  "model": "aibox-deepseek-v4.1-flash",
+  "model_id": "deepseek-v4.1-flash",
+  "attempts": 1,
+  "latency_s": 2.74,
+  "usage": {
+    "prompt_tokens": 1459,
+    "total_tokens": 1890,
+    "completion_tokens": 431,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": {
+        "image": 1011
+      }
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "{\n  \"counts\": {\n    \"total\": 3,\n    \"large\": 2,\n    \"medium\": 0,\n    \"small\": 1,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [\n        0.31,\n        0.38,\n        0.52,\n        0.7\n      ],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色长货厢，尾部车牌/编号包含T73778，朝向画面下方\",\n      \"evidence\": \"画面中央通道内最显眼的红色长货厢货车，整车可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.15,\n        0.85,\n        0.48,\n        1.0\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货厢顶部，顶部有深色覆盖物，朝向画面下方\",\n      \"evidence\": \"画面底部边缘，仅露出红色货厢顶部，根据尺寸和形状判定为大型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.56,\n        0.12,\n        0.65,\n        0.16\n      ],\n      \"size\": \"small\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"远处通道尽头，亮着车灯，体型较小\",\n      \"evidence\": \"画面正上方通道尽头处，可见车辆轮廓和车灯，根据比例判定为轻型货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面底部边缘的红色货车仅露出顶部，但特征明显可判定为大型货车。远处通道尽头的车辆较小且模糊，但根据车灯和轮廓判定为轻型货车。\",\n  \"uncertain_reasons\": []\n}",
+  "reasoning_text": null,
+  "raw_body": {
+    "id": "chatcmpl-9708a4e1511961a7",
+    "object": "chat.completion",
+    "created": 1792586157,
+    "model": "deepseek-v4.1-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"counts\": {\n    \"total\": 3,\n    \"large\": 2,\n    \"medium\": 0,\n    \"small\": 1,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [\n        0.31,\n        0.38,\n        0.52,\n        0.7\n      ],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色长货厢，尾部车牌/编号包含T73778，朝向画面下方\",\n      \"evidence\": \"画面中央通道内最显眼的红色长货厢货车，整车可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.15,\n        0.85,\n        0.48,\n        1.0\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货厢顶部，顶部有深色覆盖物，朝向画面下方\",\n      \"evidence\": \"画面底部边缘，仅露出红色货厢顶部，根据尺寸和形状判定为大型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.56,\n        0.12,\n        0.65,\n        0.16\n      ],\n      \"size\": \"small\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"远处通道尽头，亮着车灯，体型较小\",\n      \"evidence\": \"画面正上方通道尽头处，可见车辆轮廓和车灯，根据比例判定为轻型货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面底部边缘的红色货车仅露出顶部，但特征明显可判定为大型货车。远处通道尽头的车辆较小且模糊，但根据车灯和轮廓判定为轻型货车。\",\n  \"uncertain_reasons\": []\n}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "reasoning": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null,
+        "routed_experts": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev20904+g179dd0fa9-tp8-ep-4471a5ba",
+    "usage": {
+      "prompt_tokens": 1459,
+      "total_tokens": 1890,
+      "completion_tokens": 431,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": {
+          "image": 1011
+        }
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 2,
+      "medium": 0,
+      "small": 1,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.31,
+          0.38,
+          0.52,
+          0.7
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色长货厢，尾部车牌/编号包含T73778，朝向画面下方",
+        "evidence": "画面中央通道内最显眼的红色长货厢货车，整车可见",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.15,
+          0.85,
+          0.48,
+          1.0
+        ],
+        "size": "large",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "红色货厢顶部，顶部有深色覆盖物，朝向画面下方",
+        "evidence": "画面底部边缘，仅露出红色货厢顶部，根据尺寸和形状判定为大型货车",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.56,
+          0.12,
+          0.65,
+          0.16
+        ],
+        "size": "small",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "远处通道尽头，亮着车灯，体型较小",
+        "evidence": "画面正上方通道尽头处，可见车辆轮廓和车灯，根据比例判定为轻型货车",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面底部边缘的红色货车仅露出顶部，但特征明显可判定为大型货车。远处通道尽头的车辆较小且模糊，但根据车灯和轮廓判定为轻型货车。",
+    "uncertain_reasons": []
+  },
+  "sample_id": "north_2600",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\north_2600_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:36:00+0800"
+}

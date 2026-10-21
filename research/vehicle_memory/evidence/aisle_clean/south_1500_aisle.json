@@ -1,0 +1,107 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\south_1500_aisle.jpg",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 44.47,
+      "usage": {
+        "completion_tokens": 2301,
+        "prompt_tokens": 1776,
+        "total_tokens": 4077,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1641
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 5,
+          "large": 3,
+          "medium": 2,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.46,
+              0.45,
+              0.68,
+              0.87
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "白色车头，带有“东风商用车”字样，封闭货厢，朝向画面观察者",
+            "evidence": "画面中下方通道内完整可见的重型货车，车头品牌标识清晰",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.44,
+              0.28,
+              0.58,
+              0.5
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色车头，灰色封闭货厢，半挂式结构，朝向画面观察者",
+            "evidence": "位于白色东风货车后方，车头与货厢完整可见，为同一辆货车",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.35,
+              0.22,
+              0.44,
+              0.35
+            ],
+            "size": "medium",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色车身，封闭货厢，朝向画面观察者",
+            "evidence": "位于半挂货车后方，尺寸小于大型货车，完整可见",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.43,
+              0.12,
+              0.53,
+              0.25
+            ],
+            "size": "medium",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色车身，封闭货厢，朝向画面观察者",
+            "evidence": "位于画面最上方通道，完整可见，尺寸与第三辆中型货车相近",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.51,
+              0.85,
+              0.79,
+              0.99
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "红色空货厢挂车，无连接车头，位于画面最底部",
+            "evidence": "单独清晰可见的挂车，符合计数口径中单独挂车计入的规则",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面为展会撤换展现场通道，可见5辆货车，无完全遮挡的车辆，所有可见车辆均符合计数要求",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 5, \"large\": 3, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.46, 0.45, 0.68, 0.87],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色车头，带有“东风商用车”字样，封闭货厢，朝向画面观察者\",\n      \"evidence\": \"画面中下方通道内完整可见的重型货车，车头品牌标识清晰\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.28, 0.58, 0.50],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，灰色封闭货厢，半挂式结构，朝向画面观察者\",\n      \"evidence\": \"位于白色东风货车后方，车头与货厢完整可见，为同一辆货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.35, 0.22, 0.44, 0.35],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车身，封闭货厢，朝向画面观察者\",\n      \"evidence\": \"位于半挂货车后方，尺寸小于大型货车，完整可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.43, 0.12, 0.53, 0.25],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车身，封闭货厢，朝向画面观察者\",\n      \"evidence\": \"位于画面最上方通道，完整可见，尺寸与第三辆中型货车相近\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.51, 0.85, 0.79, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色空货厢挂车，无连接车头，位于画面最底部\",\n      \"evidence\": \"单独清晰可见的挂车，符合计数口径中单独挂车计入的规则\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展会撤换展现场通道，可见5辆货车，无完全遮挡的车辆，所有可见车辆均符合计数要求\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\accuracy\\crops\\south_1500_aisle.jpg"
+    }
+  ]
+}

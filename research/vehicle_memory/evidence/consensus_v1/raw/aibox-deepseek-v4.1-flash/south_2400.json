@@ -1,0 +1,132 @@
+{
+  "model": "aibox-deepseek-v4.1-flash",
+  "model_id": "deepseek-v4.1-flash",
+  "attempts": 1,
+  "latency_s": 5.8,
+  "usage": {
+    "prompt_tokens": 1459,
+    "total_tokens": 1858,
+    "completion_tokens": 399,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": {
+        "image": 1011
+      }
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.38, 0.46, 0.65, 0.88],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，银色长货厢，车门开启，车牌可见\",\n      \"evidence\": \"画面中央偏下，红色牵引车带长货厢，朝向画面下方\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.31, 0.21, 0.44, 0.41],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色车头，白色厢式货厢，车头有黑色文字\",\n      \"evidence\": \"画面中上方偏左，白色厢式货车，朝向画面下方\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.43, 0.19, 0.54, 0.32],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，红色货厢，车头有白色文字\",\n      \"evidence\": \"画面中上方，红色货车，朝向画面下方，位于白色货车后方\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中可见三辆大型货车，均位于通道内。中央红色货车车门开启，周围有人员活动。上方两辆货车部分被结构遮挡但整体可辨。\",\n  \"uncertain_reasons\": []\n}",
+  "reasoning_text": null,
+  "raw_body": {
+    "id": "chatcmpl-aeaf879acadee51e",
+    "object": "chat.completion",
+    "created": 1792586168,
+    "model": "deepseek-v4.1-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.38, 0.46, 0.65, 0.88],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，银色长货厢，车门开启，车牌可见\",\n      \"evidence\": \"画面中央偏下，红色牵引车带长货厢，朝向画面下方\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.31, 0.21, 0.44, 0.41],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色车头，白色厢式货厢，车头有黑色文字\",\n      \"evidence\": \"画面中上方偏左，白色厢式货车，朝向画面下方\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.43, 0.19, 0.54, 0.32],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，红色货厢，车头有白色文字\",\n      \"evidence\": \"画面中上方，红色货车，朝向画面下方，位于白色货车后方\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中可见三辆大型货车，均位于通道内。中央红色货车车门开启，周围有人员活动。上方两辆货车部分被结构遮挡但整体可辨。\",\n  \"uncertain_reasons\": []\n}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "reasoning": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null,
+        "routed_experts": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev20904+g179dd0fa9-tp8-ep-4471a5ba",
+    "usage": {
+      "prompt_tokens": 1459,
+      "total_tokens": 1858,
+      "completion_tokens": 399,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": {
+          "image": 1011
+        }
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 3,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.38,
+          0.46,
+          0.65,
+          0.88
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色车头，银色长货厢，车门开启，车牌可见",
+        "evidence": "画面中央偏下，红色牵引车带长货厢，朝向画面下方",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.31,
+          0.21,
+          0.44,
+          0.41
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "白色车头，白色厢式货厢，车头有黑色文字",
+        "evidence": "画面中上方偏左，白色厢式货车，朝向画面下方",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.43,
+          0.19,
+          0.54,
+          0.32
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色车头，红色货厢，车头有白色文字",
+        "evidence": "画面中上方，红色货车，朝向画面下方，位于白色货车后方",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面中可见三辆大型货车，均位于通道内。中央红色货车车门开启，周围有人员活动。上方两辆货车部分被结构遮挡但整体可辨。",
+    "uncertain_reasons": []
+  },
+  "sample_id": "south_2400",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\south_2400_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:36:11+0800"
+}

@@ -1,0 +1,146 @@
+{
+  "model": "aibox-glm-5.3-flash",
+  "model_id": "glm-5.3-flash",
+  "attempts": 1,
+  "latency_s": 3.33,
+  "usage": {
+    "prompt_tokens": 1459,
+    "total_tokens": 1971,
+    "completion_tokens": 512,
+    "prompt_tokens_details": {
+      "cached_tokens": 1408,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": {
+        "image": 1011
+      }
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "{\n  \"counts\": {\n    \"total\": 4,\n    \"large\": 4,\n    \"medium\": 0,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [0.46, 0.49, 0.68, 0.93],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色车头，白色长货厢，车头有'东风商用车'字样，朝下\",\n      \"evidence\": \"画面下方最显眼的白色半挂车，车头与货厢完整可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.29, 0.59, 0.50],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，灰色长货厢，朝下\",\n      \"evidence\": \"位于白色货车后方，红色车头与灰色货厢清晰可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.35, 0.19, 0.45, 0.36],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，深色货厢，朝下\",\n      \"evidence\": \"位于灰色货厢货车后方，红色车头与深色货厢可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.12, 0.52, 0.25],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，深色货厢，朝下\",\n      \"evidence\": \"位于画面最上方通道内，部分被遮挡，但可辨认出是红色货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展会撤换展现场，通道内有四辆大型货车排队。最上方车辆部分被遮挡，但特征明显。通道两侧有展台结构和人员，未计入。\",\n  \"uncertain_reasons\": []\n}",
+  "reasoning_text": null,
+  "raw_body": {
+    "id": "chatcmpl-b6ee556a71f9d70e",
+    "object": "chat.completion",
+    "created": 1792586183,
+    "model": "deepseek-v4.1-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"counts\": {\n    \"total\": 4,\n    \"large\": 4,\n    \"medium\": 0,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [0.46, 0.49, 0.68, 0.93],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色车头，白色长货厢，车头有'东风商用车'字样，朝下\",\n      \"evidence\": \"画面下方最显眼的白色半挂车，车头与货厢完整可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.29, 0.59, 0.50],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，灰色长货厢，朝下\",\n      \"evidence\": \"位于白色货车后方，红色车头与灰色货厢清晰可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.35, 0.19, 0.45, 0.36],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，深色货厢，朝下\",\n      \"evidence\": \"位于灰色货厢货车后方，红色车头与深色货厢可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.12, 0.52, 0.25],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，深色货厢，朝下\",\n      \"evidence\": \"位于画面最上方通道内，部分被遮挡，但可辨认出是红色货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展会撤换展现场，通道内有四辆大型货车排队。最上方车辆部分被遮挡，但特征明显。通道两侧有展台结构和人员，未计入。\",\n  \"uncertain_reasons\": []\n}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "reasoning": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null,
+        "routed_experts": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev20904+g179dd0fa9-tp8-ep-4471a5ba",
+    "usage": {
+      "prompt_tokens": 1459,
+      "total_tokens": 1971,
+      "completion_tokens": 512,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": {
+          "image": 1011
+        }
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 4,
+      "large": 4,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.46,
+          0.49,
+          0.68,
+          0.93
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "白色车头，白色长货厢，车头有'东风商用车'字样，朝下",
+        "evidence": "画面下方最显眼的白色半挂车，车头与货厢完整可见",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.45,
+          0.29,
+          0.59,
+          0.5
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色车头，灰色长货厢，朝下",
+        "evidence": "位于白色货车后方，红色车头与灰色货厢清晰可见",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.35,
+          0.19,
+          0.45,
+          0.36
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色车头，深色货厢，朝下",
+        "evidence": "位于灰色货厢货车后方，红色车头与深色货厢可见",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.44,
+          0.12,
+          0.52,
+          0.25
+        ],
+        "size": "large",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "红色车头，深色货厢，朝下",
+        "evidence": "位于画面最上方通道内，部分被遮挡，但可辨认出是红色货车",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面为展会撤换展现场，通道内有四辆大型货车排队。最上方车辆部分被遮挡，但特征明显。通道两侧有展台结构和人员，未计入。",
+    "uncertain_reasons": []
+  },
+  "sample_id": "south_300",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\south_300_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:36:26+0800"
+}

@@ -1,0 +1,43 @@
+{
+  "case": "t1200_white_positive",
+  "north_candidate": [
+    "north_1200",
+    "N8"
+  ],
+  "south_candidate": [
+    "south_1200",
+    "S7"
+  ],
+  "gold_answer": "yes",
+  "image": "assets\\sheets\\pair_t1200_white_positive.jpg",
+  "prompt": "左格是北机位候选，右格是南机位同一时刻候选；两机位存在重叠，但视角不同。\n问题只有一项：它们是否同一物理车辆？\n\n判定规则：\n1. 至少两个语义特征一致才可判 yes，例如货厢颜色和结构、车头颜色和形状、文字/标识、车顶特征。\n2. 同色不是充分证据；红车与另一辆红车可能不同。\n3. 车头与货厢属于同一车时不要拆开；但两格裁片可能只显示局部。\n4. 视角、尺度变化导致无法确认时必须 answer=uncertain，不能猜。\n\n只输出严格 JSON：\n{\"answer\":\"yes|no|uncertain\",\"shared_features\":[\"至少两个\"],\"conflicting_features\":[\"\"],\"reason\":\"\",\"review\":true}",
+  "run": {
+    "model": "doubao",
+    "model_id": "ep-20260828174616-dthpx",
+    "ok": true,
+    "latency_s": 11.002,
+    "request_id": "021792575789744a7468c13ae862cf181a1dbcac0db1f8248d24f",
+    "usage": {
+      "completion_tokens": 919,
+      "prompt_tokens": 1474,
+      "total_tokens": 2393,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 840
+      }
+    },
+    "parsed": {
+      "answer": "yes",
+      "shared_features": [
+        "货厢颜色为白色",
+        "车辆类型为厢式货车"
+      ],
+      "conflicting_features": [],
+      "reason": "左图显示的车辆货厢顶部为白色，右图显示的车辆货厢及车头为白色，且两者均为厢式货车，存在至少两个语义特征一致，符合同一车辆的判定规则",
+      "review": true
+    },
+    "raw_text": "{\"answer\":\"yes\",\"shared_features\":[\"货厢颜色为白色\",\"车辆类型为厢式货车\"],\"conflicting_features\":[],\"reason\":\"左图显示的车辆货厢顶部为白色，右图显示的车辆货厢及车头为白色，且两者均为厢式货车，存在至少两个语义特征一致，符合同一车辆的判定规则\",\"review\":true}"
+  }
+}

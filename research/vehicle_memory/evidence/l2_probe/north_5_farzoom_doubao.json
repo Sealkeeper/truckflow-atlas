@@ -1,0 +1,106 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\vehicle_memory\\research\\vehicle_memory\\evidence\\l2_probe\\north_5_farzoom.jpg",
+  "prompt_version": "truck-count-v1",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 22.12,
+      "usage": {
+        "completion_tokens": 2922,
+        "prompt_tokens": 1737,
+        "total_tokens": 4659,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2376
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 4
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.4,
+              0.16,
+              0.52,
+              0.38
+            ],
+            "vehicle_type": "trailer_only",
+            "roof_color": "white",
+            "roof_texture": "",
+            "cargo_color": "dark",
+            "cargo_type": "",
+            "cab_color": "",
+            "readable_text": "",
+            "size": "large",
+            "evidence": "独立货厢，白色顶",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.53,
+              0.22,
+              0.64,
+              0.55
+            ],
+            "vehicle_type": "rigid_truck",
+            "roof_color": "brown",
+            "roof_texture": "",
+            "cargo_color": "brown",
+            "cargo_type": "",
+            "cab_color": "red",
+            "readable_text": "",
+            "size": "large",
+            "evidence": "带车头的货车，红棕色货厢",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.38,
+              0.36,
+              0.5,
+              0.59
+            ],
+            "vehicle_type": "trailer_only",
+            "roof_color": "gray",
+            "roof_texture": "",
+            "cargo_color": "black",
+            "cargo_type": "",
+            "cab_color": "",
+            "readable_text": "",
+            "size": "large",
+            "evidence": "独立货厢，灰色顶黑色箱体",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.36,
+              0.58,
+              0.5,
+              0.81
+            ],
+            "vehicle_type": "trailer_only",
+            "roof_color": "blue",
+            "roof_texture": "",
+            "cargo_color": "dark",
+            "cargo_type": "",
+            "cab_color": "",
+            "readable_text": "",
+            "size": "large",
+            "evidence": "独立货厢，蓝色顶",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 4},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.40, 0.16, 0.52, 0.38],\n      \"vehicle_type\": \"trailer_only\",\n      \"roof_color\": \"white\",\n      \"roof_texture\": \"\",\n      \"cargo_color\": \"dark\",\n      \"cargo_type\": \"\",\n      \"cab_color\": \"\",\n      \"readable_text\": \"\",\n      \"size\": \"large\",\n      \"evidence\": \"独立货厢，白色顶\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.53, 0.22, 0.64, 0.55],\n      \"vehicle_type\": \"rigid_truck\",\n      \"roof_color\": \"brown\",\n      \"roof_texture\": \"\",\n      \"cargo_color\": \"brown\",\n      \"cargo_type\": \"\",\n      \"cab_color\": \"red\",\n      \"readable_text\": \"\",\n      \"size\": \"large\",\n      \"evidence\": \"带车头的货车，红棕色货厢\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.38, 0.36, 0.50, 0.59],\n      \"vehicle_type\": \"trailer_only\",\n      \"roof_color\": \"gray\",\n      \"roof_texture\": \"\",\n      \"cargo_color\": \"black\",\n      \"cargo_type\": \"\",\n      \"cab_color\": \"\",\n      \"readable_text\": \"\",\n      \"size\": \"large\",\n      \"evidence\": \"独立货厢，灰色顶黑色箱体\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.36, 0.58, 0.50, 0.81],\n      \"vehicle_type\": \"trailer_only\",\n      \"roof_color\": \"blue\",\n      \"roof_texture\": \"\",\n      \"cargo_color\": \"dark\",\n      \"cargo_type\": \"\",\n      \"cab_color\": \"\",\n      \"readable_text\": \"\",\n      \"size\": \"large\",\n      \"evidence\": \"独立货厢，蓝色顶\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

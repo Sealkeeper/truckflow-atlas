@@ -1,0 +1,132 @@
+{
+  "model": "aibox-glm-5.3-flash",
+  "model_id": "glm-5.3-flash",
+  "attempts": 1,
+  "latency_s": 5.56,
+  "usage": {
+    "prompt_tokens": 1459,
+    "total_tokens": 1911,
+    "completion_tokens": 452,
+    "prompt_tokens_details": {
+      "cached_tokens": 1408,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": {
+        "image": 1011
+      }
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "{\n  \"counts\": {\n    \"total\": 3,\n    \"large\": 3,\n    \"medium\": 0,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [0.34, 0.63, 0.63, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"银灰色波纹顶部长货厢，红色底架，车头朝上，左侧车门开启\",\n      \"evidence\": \"画面正下方占据大面积的银灰色长货厢，仅见顶部及部分侧面，属于半挂车货厢\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.40, 0.25, 0.55, 0.45],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色波纹货厢，车头朝上，尾部可见\",\n      \"evidence\": \"画面中上部通道内，位于银灰色货厢前方，红色长货厢半挂车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.42, 0.14, 0.60, 0.28],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色波纹货厢，车头朝上，尾部可见\",\n      \"evidence\": \"画面中上部通道内，位于第二辆红色货车前方，另一辆红色长货厢半挂车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展会撤换展现场，通道内有三辆大型货车排队停放。最下方车辆仅见货厢顶部，中间和上方两辆为红色货厢半挂车。两侧为展位结构，地面有散落垃圾和工作人员。\",\n  \"uncertain_reasons\": []\n}",
+  "reasoning_text": null,
+  "raw_body": {
+    "id": "chatcmpl-8cd8ec40599908d7",
+    "object": "chat.completion",
+    "created": 1792586175,
+    "model": "deepseek-v4.1-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"counts\": {\n    \"total\": 3,\n    \"large\": 3,\n    \"medium\": 0,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [0.34, 0.63, 0.63, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"银灰色波纹顶部长货厢，红色底架，车头朝上，左侧车门开启\",\n      \"evidence\": \"画面正下方占据大面积的银灰色长货厢，仅见顶部及部分侧面，属于半挂车货厢\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.40, 0.25, 0.55, 0.45],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色波纹货厢，车头朝上，尾部可见\",\n      \"evidence\": \"画面中上部通道内，位于银灰色货厢前方，红色长货厢半挂车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.42, 0.14, 0.60, 0.28],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色波纹货厢，车头朝上，尾部可见\",\n      \"evidence\": \"画面中上部通道内，位于第二辆红色货车前方，另一辆红色长货厢半挂车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展会撤换展现场，通道内有三辆大型货车排队停放。最下方车辆仅见货厢顶部，中间和上方两辆为红色货厢半挂车。两侧为展位结构，地面有散落垃圾和工作人员。\",\n  \"uncertain_reasons\": []\n}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "reasoning": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null,
+        "routed_experts": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev20904+g179dd0fa9-tp8-ep-4471a5ba",
+    "usage": {
+      "prompt_tokens": 1459,
+      "total_tokens": 1911,
+      "completion_tokens": 452,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": {
+          "image": 1011
+        }
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 3,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.34,
+          0.63,
+          0.63,
+          0.99
+        ],
+        "size": "large",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "银灰色波纹顶部长货厢，红色底架，车头朝上，左侧车门开启",
+        "evidence": "画面正下方占据大面积的银灰色长货厢，仅见顶部及部分侧面，属于半挂车货厢",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.4,
+          0.25,
+          0.55,
+          0.45
+        ],
+        "size": "large",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "红色波纹货厢，车头朝上，尾部可见",
+        "evidence": "画面中上部通道内，位于银灰色货厢前方，红色长货厢半挂车",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.42,
+          0.14,
+          0.6,
+          0.28
+        ],
+        "size": "large",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "红色波纹货厢，车头朝上，尾部可见",
+        "evidence": "画面中上部通道内，位于第二辆红色货车前方，另一辆红色长货厢半挂车",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面为展会撤换展现场，通道内有三辆大型货车排队停放。最下方车辆仅见货厢顶部，中间和上方两辆为红色货厢半挂车。两侧为展位结构，地面有散落垃圾和工作人员。",
+    "uncertain_reasons": []
+  },
+  "sample_id": "north_2400",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\north_2400_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:36:20+0800"
+}

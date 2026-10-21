@@ -1,0 +1,373 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://truckflow.local/schemas/vehicle-passport-v1.json",
+  "title": "TruckFlow Vehicle Passport Export",
+  "description": "A replayable export of semantic vehicle-passport facets. Identity is not derived from a detector, tracker, or cross-camera box geometry.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "identity_method",
+    "traditional_detection_or_tracking_used",
+    "passports"
+  ],
+  "properties": {
+    "schema": {
+      "const": "truckflow-passports-v1"
+    },
+    "identity_method": {
+      "const": "semantic_passport_only"
+    },
+    "traditional_detection_or_tracking_used": {
+      "const": false
+    },
+    "passports": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/passport"
+      }
+    }
+  },
+  "$defs": {
+    "seen": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "video_time_s",
+        "frame_key"
+      ],
+      "properties": {
+        "video_time_s": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "frame_key": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "bbox_observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "frame_key",
+        "camera",
+        "bbox_normalized",
+        "visible"
+      ],
+      "properties": {
+        "frame_key": {
+          "type": "string",
+          "minLength": 1
+        },
+        "camera": {
+          "type": "string",
+          "minLength": 1
+        },
+        "bbox_normalized": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "prefixItems": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          ],
+          "items": false
+        },
+        "visible": {
+          "type": "string"
+        }
+      }
+    },
+    "visual": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "roof_color",
+        "roof_texture",
+        "cargo_color",
+        "cargo_type",
+        "cab_color"
+      ],
+      "properties": {
+        "roof_color": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "roof_texture": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "cargo_color": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "cargo_type": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "cab_color": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "readable_text": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "verbatim",
+        "tokens",
+        "verified",
+        "policy"
+      ],
+      "properties": {
+        "verbatim": {
+          "type": "string"
+        },
+        "tokens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "verified": {
+          "type": "boolean"
+        },
+        "policy": {
+          "const": "verbatim only; missing or uncertain text is never reconstructed"
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source",
+        "model",
+        "model_id",
+        "raw_identity_clues",
+        "raw_evidence",
+        "uncertain_flag",
+        "paid_calls",
+        "total_tokens",
+        "latency_s"
+      ],
+      "properties": {
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "model_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "raw_identity_clues": {
+          "type": "string"
+        },
+        "raw_evidence": {
+          "type": "string"
+        },
+        "uncertain_flag": {
+          "type": "boolean"
+        },
+        "paid_calls": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "total_tokens": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "latency_s": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        }
+      }
+    },
+    "merge_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "from_passport_ids",
+        "to_passport_id",
+        "reason",
+        "evidence",
+        "decided_at"
+      ],
+      "properties": {
+        "from_passport_ids": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "to_passport_id": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "decided_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "passport": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "passport_id",
+        "first_seen",
+        "last_seen",
+        "cameras",
+        "bbox_history",
+        "visual",
+        "readable_text",
+        "dimension_class",
+        "evidence_crops",
+        "confidence",
+        "status",
+        "provenance",
+        "merge_history",
+        "notes"
+      ],
+      "properties": {
+        "passport_id": {
+          "type": "string",
+          "pattern": "^vp_[0-9a-f]{12}$"
+        },
+        "first_seen": {
+          "$ref": "#/$defs/seen"
+        },
+        "last_seen": {
+          "$ref": "#/$defs/seen"
+        },
+        "cameras": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "bbox_history": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/bbox_observation"
+          }
+        },
+        "visual": {
+          "$ref": "#/$defs/visual"
+        },
+        "readable_text": {
+          "$ref": "#/$defs/readable_text"
+        },
+        "dimension_class": {
+          "enum": [
+            "large",
+            "medium",
+            "small",
+            "unknown"
+          ]
+        },
+        "evidence_crops": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "status": {
+          "description": "provisional means a single observation facet; confirmed requires validated identity evidence; merged and split retain an audit history.",
+          "enum": [
+            "confirmed",
+            "provisional",
+            "merged",
+            "split"
+          ]
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        },
+        "merge_history": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/merge_record"
+          }
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

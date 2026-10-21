@@ -1,0 +1,118 @@
+{
+  "model": "aibox-deepseek-v4.1-flash",
+  "model_id": "deepseek-v4.1-flash",
+  "attempts": 1,
+  "latency_s": 7.17,
+  "usage": {
+    "prompt_tokens": 1459,
+    "total_tokens": 1795,
+    "completion_tokens": 336,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": {
+        "image": 1011
+      }
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "```json\n{\n  \"counts\": {\n    \"total\": 2,\n    \"large\": 2,\n    \"medium\": 0,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [\n        0.18,\n        0.63,\n        0.52,\n        0.99\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹顶货厢，底部可见编号，朝向画面下方\",\n      \"evidence\": \"画面中下方偏左，白色长货厢，仅可见顶部及部分侧面\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.33,\n        0.36,\n        0.53,\n        0.64\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色集装箱货厢，底部有白色编号，朝向画面下方\",\n      \"evidence\": \"画面中央偏左，红色长货厢，紧邻白色货厢上方\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中仅有两辆大型货车（一红一白货厢）在通道中，其余均为人物、展台结构或工程机械。两车首尾相接，均只露出货厢部分，车头被遮挡或不在画面内。\",\n  \"uncertain_reasons\": []\n}\n```",
+  "reasoning_text": null,
+  "raw_body": {
+    "id": "chatcmpl-b403198c6a60586c",
+    "object": "chat.completion",
+    "created": 1792586151,
+    "model": "deepseek-v4.1-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"counts\": {\n    \"total\": 2,\n    \"large\": 2,\n    \"medium\": 0,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [\n        0.18,\n        0.63,\n        0.52,\n        0.99\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹顶货厢，底部可见编号，朝向画面下方\",\n      \"evidence\": \"画面中下方偏左，白色长货厢，仅可见顶部及部分侧面\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.33,\n        0.36,\n        0.53,\n        0.64\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色集装箱货厢，底部有白色编号，朝向画面下方\",\n      \"evidence\": \"画面中央偏左，红色长货厢，紧邻白色货厢上方\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中仅有两辆大型货车（一红一白货厢）在通道中，其余均为人物、展台结构或工程机械。两车首尾相接，均只露出货厢部分，车头被遮挡或不在画面内。\",\n  \"uncertain_reasons\": []\n}\n```",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "reasoning": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null,
+        "routed_experts": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev20904+g179dd0fa9-tp8-ep-4471a5ba",
+    "usage": {
+      "prompt_tokens": 1459,
+      "total_tokens": 1795,
+      "completion_tokens": 336,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": {
+          "image": 1011
+        }
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 2,
+      "large": 2,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.18,
+          0.63,
+          0.52,
+          0.99
+        ],
+        "size": "large",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "白色波纹顶货厢，底部可见编号，朝向画面下方",
+        "evidence": "画面中下方偏左，白色长货厢，仅可见顶部及部分侧面",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.33,
+          0.36,
+          0.53,
+          0.64
+        ],
+        "size": "large",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "红色集装箱货厢，底部有白色编号，朝向画面下方",
+        "evidence": "画面中央偏左，红色长货厢，紧邻白色货厢上方",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面中仅有两辆大型货车（一红一白货厢）在通道中，其余均为人物、展台结构或工程机械。两车首尾相接，均只露出货厢部分，车头被遮挡或不在画面内。",
+    "uncertain_reasons": []
+  },
+  "sample_id": "north_1500",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\north_1500_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:35:57+0800"
+}

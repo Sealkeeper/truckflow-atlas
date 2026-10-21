@@ -1,0 +1,88 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\vehicle_memory\\research\\vehicle_memory\\evidence\\l2_probe\\north_600_farpair.jpg",
+  "prompt_version": "truck-count-v1",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "attempts": 1,
+      "ok": true,
+      "latency_s": 19.84,
+      "usage": {
+        "completion_tokens": 2538,
+        "prompt_tokens": 1726,
+        "total_tokens": 4264,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2104
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 3
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.35,
+              0.36,
+              0.48,
+              0.58
+            ],
+            "vehicle_type": "trailer_only",
+            "roof_color": "dark",
+            "roof_texture": "flat",
+            "cargo_color": "",
+            "cargo_type": "container",
+            "cab_color": "",
+            "readable_text": "粤T62619",
+            "size": "medium",
+            "evidence": "independent container with visible chassis and text",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.32,
+              0.58,
+              0.47,
+              0.85
+            ],
+            "vehicle_type": "trailer_only",
+            "roof_color": "blue",
+            "roof_texture": "flat",
+            "cargo_color": "",
+            "cargo_type": "container",
+            "cab_color": "",
+            "readable_text": "",
+            "size": "medium",
+            "evidence": "independent blue-roofed container unit",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.45,
+              0.75,
+              0.6,
+              0.99
+            ],
+            "vehicle_type": "rigid_truck",
+            "roof_color": "",
+            "roof_texture": "",
+            "cargo_color": "red",
+            "cargo_type": "cargo box",
+            "cab_color": "",
+            "readable_text": "",
+            "size": "large",
+            "evidence": "rear section of a truck with red cargo area",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.35, 0.36, 0.48, 0.58],\n      \"vehicle_type\": \"trailer_only\",\n      \"roof_color\": \"dark\",\n      \"roof_texture\": \"flat\",\n      \"cargo_color\": \"\",\n      \"cargo_type\": \"container\",\n      \"cab_color\": \"\",\n      \"readable_text\": \"粤T62619\",\n      \"size\": \"medium\",\n      \"evidence\": \"independent container with visible chassis and text\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.32, 0.58, 0.47, 0.85],\n      \"vehicle_type\": \"trailer_only\",\n      \"roof_color\": \"blue\",\n      \"roof_texture\": \"flat\",\n      \"cargo_color\": \"\",\n      \"cargo_type\": \"container\",\n      \"cab_color\": \"\",\n      \"readable_text\": \"\",\n      \"size\": \"medium\",\n      \"evidence\": \"independent blue-roofed container unit\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.75, 0.6, 0.99],\n      \"vehicle_type\": \"rigid_truck\",\n      \"roof_color\": \"\",\n      \"roof_texture\": \"\",\n      \"cargo_color\": \"red\",\n      \"cargo_type\": \"cargo box\",\n      \"cab_color\": \"\",\n      \"readable_text\": \"\",\n      \"size\": \"large\",\n      \"evidence\": \"rear section of a truck with red cargo area\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

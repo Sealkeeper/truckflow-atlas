@@ -1,0 +1,110 @@
+{
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "attempts": 1,
+  "latency_s": 13.46,
+  "usage": {
+    "completion_tokens": 1459,
+    "prompt_tokens": 1776,
+    "total_tokens": 3235,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1046
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.46, 0.60, 0.74, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色半挂货车，车头有'一汽青岛'字样，货厢为栏板式\",\n      \"evidence\": \"画面下方通道内完整可见的大型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.25, 0.58, 0.47],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色厢式货车，车头为红色，货厢顶部为灰色\",\n      \"evidence\": \"画面中间通道内完整可见的大型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.14, 0.54, 0.25],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"棕色货车，货厢带有红色标识\",\n      \"evidence\": \"画面上方通道内完整可见的大型货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中共有3辆完整可见的大型货车，均位于展会通道内，无被遮挡或边界截断导致的不确定车辆\",\n  \"uncertain_reasons\": []\n}",
+  "reasoning_text": "\n我现在要处理用户的请求，就是清点这张展会撤展现场的货车，严格按照要求来。首先看画面里的货车：\n1. 最下方的红色半挂车，车头是一汽青岛的，货厢是长的，这个是large，可见是full，因为整个都在画面里，是货车。\n2. 中间的红色厢式货车，车头加货厢，完整的，large，full可见。\n3. 最上方的棕色（或者红棕色）的货车，在中间红色的后面，也是完整的，large，full可见。\n等下，数一下：三个？不对，仔细看：\n第一个（最下）：[0.47, 0.6, 0.75, 0.99]，这个是半挂，large，visible是full，identity是红色，货厢是栏板半挂，车头有一汽青岛字样。\n第二个（中间）：[0.45, 0.25, 0.59, 0.47]，红色厢式货车，完整，large，full，identity红色车头，灰色货厢顶。\n第三个（最上）：[0.45, 0.14, 0.55, 0.25]，棕色货车，完整，large，full，identity棕色，货厢有红色字样。\n那total是3，large是3，medium和small是0，unknown是0。\n然后scene_notes：画面中三辆完整可见的大型货车，均在通道内，无遮挡导致的不确定车辆。\nuncertain_reasons是空的。\n现在要把这些整理成严格的JSON格式，不能有多余的。\n等下再确认每个的bbox：\n第一辆（最下）：x0大概0.46，y00.6，x10.74，y10.99，对，因为从货厢到车头都在。\n第二辆（中间红的）：x00.45，y00.25，x10.58，y10.47，没错，车头和货厢都在。\n第三辆（最上棕的）：x00.44，y00.14，x10.54，y10.25，对，在中间红车的后面。\n然后每个的size都是large，visible都是full，is_truck都是true，identity_clues分别写对应的，evidence就是画面中可见的货车，uncertain都是false。\n现在组织成正确的JSON结构，注意所有的引号都是双引号，数组正确。\n等下，有没有可能我数错？再看画面：三个货车，没错，没有其他的，人物、叉车这些都不算。那counts的total是3，large是3，其他0。\n现在写出来：\n首先counts部分：\"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0}\n然后vehicles数组，三个元素：\n第一个：\n{\n\"bbox\": [0.46, 0.60, 0.74, 0.99],\n\"size\": \"large\",\n\"visible\": \"full\",\n\"is_truck\": true,\n\"identity_clues\": \"红色半挂货车，车头有'一汽青岛'字样，货厢为栏板式\",\n\"evidence\": \"画面下方通道内完整可见的大型货车\",\n\"uncertain\": false\n}\n第二个：\n{\n\"bbox\": [0.45, 0.25, 0.58, 0.47],\n\"size\": \"large\",\n\"visible\": \"full\",\n\"is_truck\": true,\n\"identity_clues\": \"红色厢式货车，车头为红色，货厢顶部为灰色\",\n\"evidence\": \"画面中间通道内完整可见的大型货车\",\n\"uncertain\": false\n}\n第三个：\n{\n\"bbox\": [0.44, 0.14, 0.54, 0.25],\n\"size\": \"large\",\n\"visible\": \"full\",\n\"is_truck\": true,\n\"identity_clues\": \"棕色货车，货厢带有红色标识\",\n\"evidence\": \"画面上方通道内完整可见的大型货车\",\n\"uncertain\": false\n}\n然后scene_notes：\"画面中共有3辆完整可见的大型货车，均位于展会通道内，无被遮挡或边界截断导致的不确定车辆\"\nuncertain_reasons：[]\n现在把这些整合成正确的JSON，注意没有多余的逗号，格式正确。",
+  "raw_body": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.46, 0.60, 0.74, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色半挂货车，车头有'一汽青岛'字样，货厢为栏板式\",\n      \"evidence\": \"画面下方通道内完整可见的大型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.25, 0.58, 0.47],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色厢式货车，车头为红色，货厢顶部为灰色\",\n      \"evidence\": \"画面中间通道内完整可见的大型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.14, 0.54, 0.25],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"棕色货车，货厢带有红色标识\",\n      \"evidence\": \"画面上方通道内完整可见的大型货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中共有3辆完整可见的大型货车，均位于展会通道内，无被遮挡或边界截断导致的不确定车辆\",\n  \"uncertain_reasons\": []\n}",
+          "reasoning_content": "\n我现在要处理用户的请求，就是清点这张展会撤展现场的货车，严格按照要求来。首先看画面里的货车：\n1. 最下方的红色半挂车，车头是一汽青岛的，货厢是长的，这个是large，可见是full，因为整个都在画面里，是货车。\n2. 中间的红色厢式货车，车头加货厢，完整的，large，full可见。\n3. 最上方的棕色（或者红棕色）的货车，在中间红色的后面，也是完整的，large，full可见。\n等下，数一下：三个？不对，仔细看：\n第一个（最下）：[0.47, 0.6, 0.75, 0.99]，这个是半挂，large，visible是full，identity是红色，货厢是栏板半挂，车头有一汽青岛字样。\n第二个（中间）：[0.45, 0.25, 0.59, 0.47]，红色厢式货车，完整，large，full，identity红色车头，灰色货厢顶。\n第三个（最上）：[0.45, 0.14, 0.55, 0.25]，棕色货车，完整，large，full，identity棕色，货厢有红色字样。\n那total是3，large是3，medium和small是0，unknown是0。\n然后scene_notes：画面中三辆完整可见的大型货车，均在通道内，无遮挡导致的不确定车辆。\nuncertain_reasons是空的。\n现在要把这些整理成严格的JSON格式，不能有多余的。\n等下再确认每个的bbox：\n第一辆（最下）：x0大概0.46，y00.6，x10.74，y10.99，对，因为从货厢到车头都在。\n第二辆（中间红的）：x00.45，y00.25，x10.58，y10.47，没错，车头和货厢都在。\n第三辆（最上棕的）：x00.44，y00.14，x10.54，y10.25，对，在中间红车的后面。\n然后每个的size都是large，visible都是full，is_truck都是true，identity_clues分别写对应的，evidence就是画面中可见的货车，uncertain都是false。\n现在组织成正确的JSON结构，注意所有的引号都是双引号，数组正确。\n等下，有没有可能我数错？再看画面：三个货车，没错，没有其他的，人物、叉车这些都不算。那counts的total是3，large是3，其他0。\n现在写出来：\n首先counts部分：\"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0}\n然后vehicles数组，三个元素：\n第一个：\n{\n\"bbox\": [0.46, 0.60, 0.74, 0.99],\n\"size\": \"large\",\n\"visible\": \"full\",\n\"is_truck\": true,\n\"identity_clues\": \"红色半挂货车，车头有'一汽青岛'字样，货厢为栏板式\",\n\"evidence\": \"画面下方通道内完整可见的大型货车\",\n\"uncertain\": false\n}\n第二个：\n{\n\"bbox\": [0.45, 0.25, 0.58, 0.47],\n\"size\": \"large\",\n\"visible\": \"full\",\n\"is_truck\": true,\n\"identity_clues\": \"红色厢式货车，车头为红色，货厢顶部为灰色\",\n\"evidence\": \"画面中间通道内完整可见的大型货车\",\n\"uncertain\": false\n}\n第三个：\n{\n\"bbox\": [0.44, 0.14, 0.54, 0.25],\n\"size\": \"large\",\n\"visible\": \"full\",\n\"is_truck\": true,\n\"identity_clues\": \"棕色货车，货厢带有红色标识\",\n\"evidence\": \"画面上方通道内完整可见的大型货车\",\n\"uncertain\": false\n}\n然后scene_notes：\"画面中共有3辆完整可见的大型货车，均位于展会通道内，无被遮挡或边界截断导致的不确定车辆\"\nuncertain_reasons：[]\n现在把这些整合成正确的JSON，注意没有多余的逗号，格式正确。",
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1792586154,
+    "id": "0217925861407553ea4fa82759f0cae4f2ffa723d4f9dd6517e0d",
+    "model": "doubao-seed-2-0-mini-260428",
+    "service_tier": "default",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 1459,
+      "prompt_tokens": 1776,
+      "total_tokens": 3235,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1046
+      }
+    }
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 3,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.46,
+          0.6,
+          0.74,
+          0.99
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色半挂货车，车头有'一汽青岛'字样，货厢为栏板式",
+        "evidence": "画面下方通道内完整可见的大型货车",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.45,
+          0.25,
+          0.58,
+          0.47
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色厢式货车，车头为红色，货厢顶部为灰色",
+        "evidence": "画面中间通道内完整可见的大型货车",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.44,
+          0.14,
+          0.54,
+          0.25
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "棕色货车，货厢带有红色标识",
+        "evidence": "画面上方通道内完整可见的大型货车",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面中共有3辆完整可见的大型货车，均位于展会通道内，无被遮挡或边界截断导致的不确定车辆",
+    "uncertain_reasons": []
+  },
+  "sample_id": "south_5",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\south_5_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:35:54+0800"
+}

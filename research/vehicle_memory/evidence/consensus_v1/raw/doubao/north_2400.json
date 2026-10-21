@@ -1,0 +1,110 @@
+{
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "attempts": 1,
+  "latency_s": 12.1,
+  "usage": {
+    "completion_tokens": 1134,
+    "prompt_tokens": 1776,
+    "total_tokens": 2910,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 709
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.33, 0.62, 0.64, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"灰色厢式货厢，红色车尾，左侧车门打开，朝向画面下方\",\n      \"evidence\": \"画面下方中间位置，完整可见的厢式货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.40, 0.25, 0.55, 0.45],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色半挂车货厢，货厢门打开，带有黄色反光标识，朝向镜头\",\n      \"evidence\": \"画面中间位置，完整可见的半挂车货厢\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.42, 0.14, 0.61, 0.27],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色封闭货厢，带有编号“粤T73778”，朝向画面深处\",\n      \"evidence\": \"画面后方中间位置，完整可见的封闭货厢货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面内共3辆可见大型货车，无被完全遮挡或无法确定的车辆\",\n  \"uncertain_reasons\": []\n}",
+  "reasoning_text": "用户现在需要清点画面里的货车，首先看图片，有三辆？不对，仔细看：第一辆是最前面的，灰色货厢的，在下方，是large？然后中间的红色半挂车，货厢是打开的，还有后面的红色货厢的挂车？不对，看：\n\n1. 最下方的货车：灰色货厢，红色车尾，是完整的，large，visible full，is_truck true。\n2. 中间的红色半挂车（货厢，打开的，朝向镜头？），是large，visible full？\n3. 更后面的红色货厢的挂车，在中间那辆的后方，也是large？不对，还有没有？哦，还有远处的那辆红色货厢的车，在更里面，是第三辆？不对，数一下：\n\n看画面里的货车：\n- 第一辆：<bbox>339 625 635 998</bbox>，是厢式货车，large，visible full，is_truck。\n- 第二辆：<bbox>400 255 550 455</bbox>，红色半挂车货厢，large，visible full，is_truck。\n- 第三辆：<bbox>425 150 610 275</bbox>，红色货厢的挂车，在第二辆的后方，large，visible full，is_truck。\n\n那总共有3辆？都是large？那counts的total是3，large是3，medium和small是0，unknown是0。\n\n然后每个车辆的信息：\n\n第一个：bbox [0.33, 0.62, 0.64, 0.99]，size large，visible full，is_truck true，identity_clues：灰色货厢，红色车尾，车门打开在左侧，朝向画面下方。evidence：画面下方中间，完整可见的厢式货车。uncertain false。\n\n第二个：bbox [0.40, 0.25, 0.55, 0.45]，size large，visible full，is_truck true，identity_clues：红色半挂车货厢，门打开，朝向镜头，有黄色反光标识。evidence：画面中间，红色半挂车货厢，完整可见。uncertain false。\n\n第三个：bbox [0.42, 0.15, 610, 275？不对，坐标归一化，x从0到1，y0到1。第三个的bbox是[0.42, 0.14, 0.61, 0.27]，对，是后面的红色货厢，完整可见，large，visible full，is_truck true，identity_clues：红色封闭货厢，朝向画面深处，有编号“粤T73778”。evidence：画面后方中间，红色封闭货厢货车，完整可见。uncertain false。\n\n然后scene_notes：画面内共3辆可见货车，均为大型货车，无遮挡导致的歧义车辆。uncertain_reasons是空的。\n\n现在整理成严格的JSON格式，注意所有字段正确。",
+  "raw_body": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.33, 0.62, 0.64, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"灰色厢式货厢，红色车尾，左侧车门打开，朝向画面下方\",\n      \"evidence\": \"画面下方中间位置，完整可见的厢式货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.40, 0.25, 0.55, 0.45],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色半挂车货厢，货厢门打开，带有黄色反光标识，朝向镜头\",\n      \"evidence\": \"画面中间位置，完整可见的半挂车货厢\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.42, 0.14, 0.61, 0.27],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色封闭货厢，带有编号“粤T73778”，朝向画面深处\",\n      \"evidence\": \"画面后方中间位置，完整可见的封闭货厢货车\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面内共3辆可见大型货车，无被完全遮挡或无法确定的车辆\",\n  \"uncertain_reasons\": []\n}",
+          "reasoning_content": "用户现在需要清点画面里的货车，首先看图片，有三辆？不对，仔细看：第一辆是最前面的，灰色货厢的，在下方，是large？然后中间的红色半挂车，货厢是打开的，还有后面的红色货厢的挂车？不对，看：\n\n1. 最下方的货车：灰色货厢，红色车尾，是完整的，large，visible full，is_truck true。\n2. 中间的红色半挂车（货厢，打开的，朝向镜头？），是large，visible full？\n3. 更后面的红色货厢的挂车，在中间那辆的后方，也是large？不对，还有没有？哦，还有远处的那辆红色货厢的车，在更里面，是第三辆？不对，数一下：\n\n看画面里的货车：\n- 第一辆：<bbox>339 625 635 998</bbox>，是厢式货车，large，visible full，is_truck。\n- 第二辆：<bbox>400 255 550 455</bbox>，红色半挂车货厢，large，visible full，is_truck。\n- 第三辆：<bbox>425 150 610 275</bbox>，红色货厢的挂车，在第二辆的后方，large，visible full，is_truck。\n\n那总共有3辆？都是large？那counts的total是3，large是3，medium和small是0，unknown是0。\n\n然后每个车辆的信息：\n\n第一个：bbox [0.33, 0.62, 0.64, 0.99]，size large，visible full，is_truck true，identity_clues：灰色货厢，红色车尾，车门打开在左侧，朝向画面下方。evidence：画面下方中间，完整可见的厢式货车。uncertain false。\n\n第二个：bbox [0.40, 0.25, 0.55, 0.45]，size large，visible full，is_truck true，identity_clues：红色半挂车货厢，门打开，朝向镜头，有黄色反光标识。evidence：画面中间，红色半挂车货厢，完整可见。uncertain false。\n\n第三个：bbox [0.42, 0.15, 610, 275？不对，坐标归一化，x从0到1，y0到1。第三个的bbox是[0.42, 0.14, 0.61, 0.27]，对，是后面的红色货厢，完整可见，large，visible full，is_truck true，identity_clues：红色封闭货厢，朝向画面深处，有编号“粤T73778”。evidence：画面后方中间，红色封闭货厢货车，完整可见。uncertain false。\n\n然后scene_notes：画面内共3辆可见货车，均为大型货车，无遮挡导致的歧义车辆。uncertain_reasons是空的。\n\n现在整理成严格的JSON格式，注意所有字段正确。",
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1792586115,
+    "id": "0217925861035234b8de4e4bcc885b4197a5e365ab4902cc1aae8",
+    "model": "doubao-seed-2-0-mini-260428",
+    "service_tier": "default",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 1134,
+      "prompt_tokens": 1776,
+      "total_tokens": 2910,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 709
+      }
+    }
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 3,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.33,
+          0.62,
+          0.64,
+          0.99
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "灰色厢式货厢，红色车尾，左侧车门打开，朝向画面下方",
+        "evidence": "画面下方中间位置，完整可见的厢式货车",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.4,
+          0.25,
+          0.55,
+          0.45
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色半挂车货厢，货厢门打开，带有黄色反光标识，朝向镜头",
+        "evidence": "画面中间位置，完整可见的半挂车货厢",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.42,
+          0.14,
+          0.61,
+          0.27
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色封闭货厢，带有编号“粤T73778”，朝向画面深处",
+        "evidence": "画面后方中间位置，完整可见的封闭货厢货车",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面内共3辆可见大型货车，无被完全遮挡或无法确定的车辆",
+    "uncertain_reasons": []
+  },
+  "sample_id": "north_2400",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\north_2400_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:35:15+0800"
+}
