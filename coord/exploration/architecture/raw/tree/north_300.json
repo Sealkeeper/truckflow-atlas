@@ -1,0 +1,2764 @@
+{
+  "architecture": "tree",
+  "camera": "north",
+  "time": 300,
+  "frame": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+  "gold": {
+    "camera": "north",
+    "time": 300,
+    "total": 3,
+    "large": 3,
+    "medium": 0,
+    "small": 0,
+    "review": false
+  },
+  "root_regions": [
+    {
+      "region_id": "R1",
+      "bbox": [
+        0.34,
+        0.58,
+        0.49,
+        0.99
+      ],
+      "lane_description": "中间纵向主通道近端，近端位于画面底部边缘，远端延伸至画面中部偏下位置",
+      "occupancy": "occupied",
+      "rough_truck_count": 1,
+      "why": "可见完整的白色波纹金属货厢，货厢侧面有部分结构，符合货车货厢特征，周围有工作人员活动",
+      "search_hint": "放大后重点检查货厢侧面的标识、车门结构，以及货厢与地面的接触细节"
+    },
+    {
+      "region_id": "R2",
+      "bbox": [
+        0.42,
+        0.25,
+        0.5,
+        0.47
+      ],
+      "lane_description": "中间纵向主通道中段，近端在R1的正上方，远端延伸至画面中部位置",
+      "occupancy": "occupied",
+      "rough_truck_count": 1,
+      "why": "可见蓝色的封闭货厢顶部，货厢下方有装卸平台结构，符合货车特征，周围有多名工作人员",
+      "search_hint": "放大后重点检查货厢侧面的轮廓、是否有车头部分，以及周围的装卸设备细节"
+    },
+    {
+      "region_id": "R3",
+      "bbox": [
+        0.44,
+        0.15,
+        0.5,
+        0.25
+      ],
+      "lane_description": "中间纵向主通道远端，近端在R2的正上方，远端延伸至画面顶部边缘的装卸口区域",
+      "occupancy": "uncertain",
+      "rough_truck_count": 1,
+      "why": "可见多个排列的集装箱状结构，属于货车货厢的可能形态，位于通道远端装卸口附近",
+      "search_hint": "放大后重点检查这些集装箱的连接方式、是否有车头露出，以及装卸口的作业细节"
+    }
+  ],
+  "root_fallback": false,
+  "nodes": [
+    {
+      "node_id": "R1",
+      "parent": null,
+      "depth": 0,
+      "proposal": "model_root",
+      "core_bbox": [
+        0.34,
+        0.58,
+        0.49,
+        0.99
+      ],
+      "crop_bbox": [
+        0.28500000000000003,
+        0.5249999999999999,
+        0.545,
+        1.0
+      ],
+      "crop": {
+        "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+        "bbox": [
+          0.28500000000000003,
+          0.5249999999999999,
+          0.545,
+          1.0
+        ],
+        "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\node_R1.jpg",
+        "size": [
+          1022,
+          1400
+        ]
+      },
+      "model_counts": {
+        "total": 1,
+        "large": 1,
+        "medium": 0,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox_local": [
+            0.26,
+            0.11,
+            0.78,
+            0.99
+          ],
+          "bbox_global": [
+            0.3526,
+            0.57375,
+            0.4878,
+            0.99525
+          ],
+          "center_global": [
+            0.4202,
+            0.7845
+          ],
+          "size": "large",
+          "visible": "partial_top|trailer_only",
+          "cargo_color": "dark gray (rear), white (top)",
+          "identity_clues": "Container rear with alphanumeric markings, two yellow latches on doors",
+          "evidence": "Central area of the image shows a freight container mounted on a truck, rear doors and top surface are clearly visible",
+          "uncertain": false,
+          "node_id": "R1",
+          "depth": 0,
+          "provenance": {
+            "node": "R1",
+            "depth": 0,
+            "path": "R1",
+            "stage": "first_look"
+          },
+          "merged_provenance": [
+            {
+              "node": "R1",
+              "depth": 0,
+              "path": "R1",
+              "stage": "first_look"
+            },
+            {
+              "node": "R1_S1",
+              "depth": 1,
+              "path": "R1/R1_S1",
+              "stage": "first_look"
+            }
+          ],
+          "type_review": {
+            "size_before": "large",
+            "size_after": "large",
+            "confidence": 0.95,
+            "body_kind": "trailer_only",
+            "has_trailer": false,
+            "accepted": true,
+            "reason": "黄色边框内为通道内的白色集装箱货厢，属于运输挂车，仅可见货厢部分，无牵引车，货厢长度较长，符合大型货车挂车特征",
+            "crop": {
+              "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+              "bbox": [
+                0.3406,
+                0.56175,
+                0.4998,
+                1.0
+              ],
+              "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\type_01.jpg",
+              "size": [
+                436,
+                900
+              ]
+            }
+          }
+        }
+      ],
+      "suspect_subregions": [
+        {
+          "bbox": [
+            0.5,
+            0.11,
+            0.75,
+            0.16
+          ],
+          "why": "Partial view of the truck's cab, details are unclear",
+          "target": "truck cab"
+        }
+      ],
+      "scene_notes": "Only one truck with a freight container is present in the cropped region; no other vehicles are visible.",
+      "retried": false,
+      "children": [
+        "R1_S1"
+      ]
+    },
+    {
+      "node_id": "R2",
+      "parent": null,
+      "depth": 0,
+      "proposal": "model_root",
+      "core_bbox": [
+        0.42,
+        0.25,
+        0.5,
+        0.47
+      ],
+      "crop_bbox": [
+        0.365,
+        0.195,
+        0.555,
+        0.525
+      ],
+      "crop": {
+        "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+        "bbox": [
+          0.365,
+          0.195,
+          0.555,
+          0.525
+        ],
+        "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\node_R2.jpg",
+        "size": [
+          1073,
+          1400
+        ]
+      },
+      "model_counts": {
+        "total": 2,
+        "large": 1,
+        "medium": 1,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox_local": [
+            0.35,
+            0.15,
+            0.69,
+            0.89
+          ],
+          "bbox_global": [
+            0.4315,
+            0.2445,
+            0.4961,
+            0.4887
+          ],
+          "center_global": [
+            0.4638,
+            0.36660000000000004
+          ],
+          "size": "large",
+          "visible": "partial_rear",
+          "cargo_color": "blue and dark gray",
+          "identity_clues": "open rear cargo area, blue roof",
+          "evidence": "located in the center of the image, large truck with open rear, blue top",
+          "uncertain": false,
+          "node_id": "R2",
+          "depth": 0,
+          "provenance": {
+            "node": "R2",
+            "depth": 0,
+            "path": "R2",
+            "stage": "first_look"
+          },
+          "type_review": {
+            "size_before": "large",
+            "size_after": "large",
+            "confidence": 0.9,
+            "body_kind": "trailer_only",
+            "has_trailer": false,
+            "accepted": true,
+            "reason": "候选框内可见蓝色集装箱货厢，为运输挂车，属于货车范畴，符合计数要求",
+            "crop": {
+              "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+              "bbox": [
+                0.4195,
+                0.23249999999999998,
+                0.5081,
+                0.5007
+              ],
+              "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\type_02.jpg",
+              "size": [
+                394,
+                900
+              ]
+            }
+          }
+        }
+      ],
+      "suspect_subregions": [
+        {
+          "bbox": [
+            0.4,
+            0.0,
+            0.65,
+            0.18
+          ],
+          "why": "unclear if it is a container vehicle or a sign/advertisement",
+          "target": "possible container vehicle"
+        }
+      ],
+      "scene_notes": "The image is a work area with construction workers, two potential truck trailers, and no other counted vehicles.",
+      "retried": false,
+      "children": [
+        "R2_S1"
+      ]
+    },
+    {
+      "node_id": "R3",
+      "parent": null,
+      "depth": 0,
+      "proposal": "model_root",
+      "core_bbox": [
+        0.44,
+        0.15,
+        0.5,
+        0.25
+      ],
+      "crop_bbox": [
+        0.385,
+        0.095,
+        0.555,
+        0.305
+      ],
+      "crop": {
+        "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+        "bbox": [
+          0.385,
+          0.095,
+          0.555,
+          0.305
+        ],
+        "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\node_R3.jpg",
+        "size": [
+          1400,
+          1303
+        ]
+      },
+      "model_counts": {
+        "total": 2,
+        "large": 2,
+        "medium": 0,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox_local": [
+            0.35,
+            0.3,
+            0.65,
+            0.78
+          ],
+          "bbox_global": [
+            0.4445,
+            0.158,
+            0.49550000000000005,
+            0.25880000000000003
+          ],
+          "center_global": [
+            0.47000000000000003,
+            0.20840000000000003
+          ],
+          "size": "large",
+          "visible": "trailer_only",
+          "cargo_color": "gray",
+          "identity_clues": "带黑色数字标识的集装箱货厢",
+          "evidence": "画面中间位置的独立集装箱货厢，无牵引车遮挡，符合货车定义",
+          "uncertain": false,
+          "node_id": "R3",
+          "depth": 0,
+          "provenance": {
+            "node": "R3",
+            "depth": 0,
+            "path": "R3",
+            "stage": "first_look"
+          },
+          "merged_provenance": [
+            {
+              "node": "R3",
+              "depth": 0,
+              "path": "R3",
+              "stage": "first_look"
+            },
+            {
+              "node": "R2_S1",
+              "depth": 1,
+              "path": "R2/R2_S1",
+              "stage": "first_look"
+            }
+          ],
+          "type_review": {
+            "size_before": "large",
+            "size_after": "large",
+            "confidence": 0.9,
+            "body_kind": "trailer_only",
+            "has_trailer": false,
+            "accepted": true,
+            "reason": "候选框内可见货车的运输挂车货厢，属于通道内的运输挂车，符合货车计数标准，可明确识别为货车相关目标",
+            "crop": {
+              "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+              "bbox": [
+                0.4325,
+                0.146,
+                0.5075000000000001,
+                0.27080000000000004
+              ],
+              "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\type_03.jpg",
+              "size": [
+                720,
+                900
+              ]
+            }
+          }
+        }
+      ],
+      "suspect_subregions": [],
+      "scene_notes": "本区域可见2个独立的集装箱货厢，上下排列，中间存在明确间隙，均为运输货车，无其他符合要求的车辆",
+      "retried": false,
+      "children": []
+    },
+    {
+      "node_id": "R1_S1",
+      "parent": "R1",
+      "depth": 1,
+      "proposal": "model_suspect",
+      "core_bbox": [
+        0.405,
+        0.5672499999999999,
+        0.49000000000000005,
+        0.611
+      ],
+      "crop_bbox": [
+        0.35000000000000003,
+        0.5122499999999999,
+        0.545,
+        0.666
+      ],
+      "crop": {
+        "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+        "bbox": [
+          0.35000000000000003,
+          0.5122499999999999,
+          0.545,
+          0.666
+        ],
+        "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\node_R1_S1.jpg",
+        "size": [
+          1400,
+          823
+        ]
+      },
+      "model_counts": {
+        "total": 1,
+        "large": 1,
+        "medium": 0,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox_local": [
+            0.2,
+            0.4,
+            0.7,
+            1.0
+          ],
+          "bbox_global": [
+            0.389,
+            0.57375,
+            0.48650000000000004,
+            0.666
+          ],
+          "center_global": [
+            0.43775000000000003,
+            0.619875
+          ],
+          "size": "large",
+          "visible": "partial_top",
+          "cargo_color": "白色",
+          "identity_clues": "白色带横向条纹的货厢，上方有驾驶室的黑色矩形区域",
+          "evidence": "画面中间偏下的白色大型货厢及上方的驾驶室结构，属于货车的典型结构",
+          "uncertain": false,
+          "node_id": "R1_S1",
+          "depth": 1,
+          "provenance": {
+            "node": "R1_S1",
+            "depth": 1,
+            "path": "R1/R1_S1",
+            "stage": "first_look"
+          }
+        }
+      ],
+      "suspect_subregions": [],
+      "scene_notes": "该图像为俯视视角的监控画面，仅可见1辆白色货车的部分结构，无其他符合要求的货车",
+      "retried": false,
+      "children": []
+    },
+    {
+      "node_id": "R2_S1",
+      "parent": "R2",
+      "depth": 1,
+      "proposal": "model_suspect",
+      "core_bbox": [
+        0.431,
+        0.185,
+        0.49850000000000005,
+        0.2644
+      ],
+      "crop_bbox": [
+        0.376,
+        0.13,
+        0.5535000000000001,
+        0.3194
+      ],
+      "crop": {
+        "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+        "bbox": [
+          0.376,
+          0.13,
+          0.5535000000000001,
+          0.3194
+        ],
+        "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\node_R2_S1.jpg",
+        "size": [
+          1400,
+          1122
+        ]
+      },
+      "model_counts": {
+        "total": 2,
+        "large": 2,
+        "medium": 0,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox_local": [
+            0.41,
+            0.18,
+            0.66,
+            0.65
+          ],
+          "bbox_global": [
+            0.44877500000000003,
+            0.16409200000000002,
+            0.4931500000000001,
+            0.25311
+          ],
+          "center_global": [
+            0.47096250000000006,
+            0.208601
+          ],
+          "size": "large",
+          "visible": "full",
+          "cargo_color": "gray and beige",
+          "identity_clues": "带编号的集装箱货厢",
+          "evidence": "画面中间偏上的带字货厢，符合集装箱货车特征",
+          "uncertain": false,
+          "node_id": "R2_S1",
+          "depth": 1,
+          "provenance": {
+            "node": "R2_S1",
+            "depth": 1,
+            "path": "R2/R2_S1",
+            "stage": "first_look"
+          }
+        }
+      ],
+      "suspect_subregions": [
+        {
+          "bbox": [
+            0.0,
+            0.0,
+            0.35,
+            0.75
+          ],
+          "why": "被楼梯结构遮挡，细节模糊，疑似存在货车",
+          "target": "货车"
+        }
+      ],
+      "scene_notes": "画面中仅统计到2辆大型集装箱货车，人物、建筑、展台类结构不计入计数",
+      "retried": false,
+      "children": [
+        "R2_S1_S1"
+      ]
+    },
+    {
+      "node_id": "R2_S1_S1",
+      "parent": "R2_S1",
+      "depth": 2,
+      "proposal": "model_suspect",
+      "core_bbox": [
+        0.366,
+        0.12000000000000001,
+        0.44812500000000005,
+        0.28205
+      ],
+      "crop_bbox": [
+        0.311,
+        0.065,
+        0.503125,
+        0.33705
+      ],
+      "crop": {
+        "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+        "bbox": [
+          0.311,
+          0.065,
+          0.503125,
+          0.33705
+        ],
+        "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\node_R2_S1_S1.jpg",
+        "size": [
+          1315,
+          1400
+        ]
+      },
+      "model_counts": {
+        "total": 3,
+        "large": 1,
+        "medium": 2,
+        "small": 0,
+        "unknown": 0
+      },
+      "vehicles": [
+        {
+          "bbox_local": [
+            0.0,
+            0.2,
+            0.68,
+            0.85
+          ],
+          "bbox_global": [
+            0.311,
+            0.11941000000000002,
+            0.44164500000000007,
+            0.2962425
+          ],
+          "center_global": [
+            0.3763225,
+            0.20782625000000002
+          ],
+          "size": "large",
+          "visible": "partial_side",
+          "cargo_color": "深灰色",
+          "identity_clues": "带有“ORI卓为”字样的货厢",
+          "evidence": "画面左侧区域可见的带文字标识的货车货厢",
+          "uncertain": false,
+          "node_id": "R2_S1_S1",
+          "depth": 2,
+          "provenance": {
+            "node": "R2_S1_S1",
+            "depth": 2,
+            "path": "R2/R2_S1/R2_S1_S1",
+            "stage": "first_look"
+          },
+          "type_review": {
+            "size_before": "large",
+            "size_after": "large",
+            "confidence": 0.85,
+            "body_kind": "trailer_only",
+            "has_trailer": false,
+            "accepted": true,
+            "reason": "候选框内可见带有'卓力'字样标识的货车货厢，属于通道内的运输挂车，货厢长度较长，符合大型货车特征",
+            "crop": {
+              "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+              "bbox": [
+                0.299,
+                0.10741000000000002,
+                0.4536450000000001,
+                0.30824250000000003
+              ],
+              "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\type_04.jpg",
+              "size": [
+                900,
+                877
+              ]
+            }
+          }
+        }
+      ],
+      "suspect_subregions": [],
+      "scene_notes": "画面中可见3个独立的货车货厢/集装箱，左侧1个带文字标识，右侧上下各1个，上下两节货厢间有明确间隙，分别计数，无其他疑似车辆区域",
+      "retried": false,
+      "children": []
+    }
+  ],
+  "candidates_before_supersede": [
+    {
+      "bbox_local": [
+        0.26,
+        0.11,
+        0.78,
+        0.99
+      ],
+      "bbox_global": [
+        0.3526,
+        0.57375,
+        0.4878,
+        0.99525
+      ],
+      "center_global": [
+        0.4202,
+        0.7845
+      ],
+      "size": "large",
+      "visible": "partial_top|trailer_only",
+      "cargo_color": "dark gray (rear), white (top)",
+      "identity_clues": "Container rear with alphanumeric markings, two yellow latches on doors",
+      "evidence": "Central area of the image shows a freight container mounted on a truck, rear doors and top surface are clearly visible",
+      "uncertain": false,
+      "node_id": "R1",
+      "depth": 0,
+      "provenance": {
+        "node": "R1",
+        "depth": 0,
+        "path": "R1",
+        "stage": "first_look"
+      },
+      "merged_provenance": [
+        {
+          "node": "R1",
+          "depth": 0,
+          "path": "R1",
+          "stage": "first_look"
+        },
+        {
+          "node": "R1_S1",
+          "depth": 1,
+          "path": "R1/R1_S1",
+          "stage": "first_look"
+        }
+      ],
+      "type_review": {
+        "size_before": "large",
+        "size_after": "large",
+        "confidence": 0.95,
+        "body_kind": "trailer_only",
+        "has_trailer": false,
+        "accepted": true,
+        "reason": "黄色边框内为通道内的白色集装箱货厢，属于运输挂车，仅可见货厢部分，无牵引车，货厢长度较长，符合大型货车挂车特征",
+        "crop": {
+          "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+          "bbox": [
+            0.3406,
+            0.56175,
+            0.4998,
+            1.0
+          ],
+          "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\type_01.jpg",
+          "size": [
+            436,
+            900
+          ]
+        }
+      }
+    },
+    {
+      "bbox_local": [
+        0.35,
+        0.15,
+        0.69,
+        0.89
+      ],
+      "bbox_global": [
+        0.4315,
+        0.2445,
+        0.4961,
+        0.4887
+      ],
+      "center_global": [
+        0.4638,
+        0.36660000000000004
+      ],
+      "size": "large",
+      "visible": "partial_rear",
+      "cargo_color": "blue and dark gray",
+      "identity_clues": "open rear cargo area, blue roof",
+      "evidence": "located in the center of the image, large truck with open rear, blue top",
+      "uncertain": false,
+      "node_id": "R2",
+      "depth": 0,
+      "provenance": {
+        "node": "R2",
+        "depth": 0,
+        "path": "R2",
+        "stage": "first_look"
+      },
+      "type_review": {
+        "size_before": "large",
+        "size_after": "large",
+        "confidence": 0.9,
+        "body_kind": "trailer_only",
+        "has_trailer": false,
+        "accepted": true,
+        "reason": "候选框内可见蓝色集装箱货厢，为运输挂车，属于货车范畴，符合计数要求",
+        "crop": {
+          "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+          "bbox": [
+            0.4195,
+            0.23249999999999998,
+            0.5081,
+            0.5007
+          ],
+          "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\type_02.jpg",
+          "size": [
+            394,
+            900
+          ]
+        }
+      }
+    },
+    {
+      "bbox_local": [
+        0.35,
+        0.3,
+        0.65,
+        0.78
+      ],
+      "bbox_global": [
+        0.4445,
+        0.158,
+        0.49550000000000005,
+        0.25880000000000003
+      ],
+      "center_global": [
+        0.47000000000000003,
+        0.20840000000000003
+      ],
+      "size": "large",
+      "visible": "trailer_only",
+      "cargo_color": "gray",
+      "identity_clues": "带黑色数字标识的集装箱货厢",
+      "evidence": "画面中间位置的独立集装箱货厢，无牵引车遮挡，符合货车定义",
+      "uncertain": false,
+      "node_id": "R3",
+      "depth": 0,
+      "provenance": {
+        "node": "R3",
+        "depth": 0,
+        "path": "R3",
+        "stage": "first_look"
+      },
+      "merged_provenance": [
+        {
+          "node": "R3",
+          "depth": 0,
+          "path": "R3",
+          "stage": "first_look"
+        },
+        {
+          "node": "R2_S1",
+          "depth": 1,
+          "path": "R2/R2_S1",
+          "stage": "first_look"
+        }
+      ],
+      "type_review": {
+        "size_before": "large",
+        "size_after": "large",
+        "confidence": 0.9,
+        "body_kind": "trailer_only",
+        "has_trailer": false,
+        "accepted": true,
+        "reason": "候选框内可见货车的运输挂车货厢，属于通道内的运输挂车，符合货车计数标准，可明确识别为货车相关目标",
+        "crop": {
+          "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+          "bbox": [
+            0.4325,
+            0.146,
+            0.5075000000000001,
+            0.27080000000000004
+          ],
+          "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\type_03.jpg",
+          "size": [
+            720,
+            900
+          ]
+        }
+      }
+    },
+    {
+      "bbox_local": [
+        0.2,
+        0.4,
+        0.7,
+        1.0
+      ],
+      "bbox_global": [
+        0.389,
+        0.57375,
+        0.48650000000000004,
+        0.666
+      ],
+      "center_global": [
+        0.43775000000000003,
+        0.619875
+      ],
+      "size": "large",
+      "visible": "partial_top",
+      "cargo_color": "白色",
+      "identity_clues": "白色带横向条纹的货厢，上方有驾驶室的黑色矩形区域",
+      "evidence": "画面中间偏下的白色大型货厢及上方的驾驶室结构，属于货车的典型结构",
+      "uncertain": false,
+      "node_id": "R1_S1",
+      "depth": 1,
+      "provenance": {
+        "node": "R1_S1",
+        "depth": 1,
+        "path": "R1/R1_S1",
+        "stage": "first_look"
+      }
+    },
+    {
+      "bbox_local": [
+        0.41,
+        0.18,
+        0.66,
+        0.65
+      ],
+      "bbox_global": [
+        0.44877500000000003,
+        0.16409200000000002,
+        0.4931500000000001,
+        0.25311
+      ],
+      "center_global": [
+        0.47096250000000006,
+        0.208601
+      ],
+      "size": "large",
+      "visible": "full",
+      "cargo_color": "gray and beige",
+      "identity_clues": "带编号的集装箱货厢",
+      "evidence": "画面中间偏上的带字货厢，符合集装箱货车特征",
+      "uncertain": false,
+      "node_id": "R2_S1",
+      "depth": 1,
+      "provenance": {
+        "node": "R2_S1",
+        "depth": 1,
+        "path": "R2/R2_S1",
+        "stage": "first_look"
+      }
+    },
+    {
+      "bbox_local": [
+        0.0,
+        0.2,
+        0.68,
+        0.85
+      ],
+      "bbox_global": [
+        0.311,
+        0.11941000000000002,
+        0.44164500000000007,
+        0.2962425
+      ],
+      "center_global": [
+        0.3763225,
+        0.20782625000000002
+      ],
+      "size": "large",
+      "visible": "partial_side",
+      "cargo_color": "深灰色",
+      "identity_clues": "带有“ORI卓为”字样的货厢",
+      "evidence": "画面左侧区域可见的带文字标识的货车货厢",
+      "uncertain": false,
+      "node_id": "R2_S1_S1",
+      "depth": 2,
+      "provenance": {
+        "node": "R2_S1_S1",
+        "depth": 2,
+        "path": "R2/R2_S1/R2_S1_S1",
+        "stage": "first_look"
+      },
+      "type_review": {
+        "size_before": "large",
+        "size_after": "large",
+        "confidence": 0.85,
+        "body_kind": "trailer_only",
+        "has_trailer": false,
+        "accepted": true,
+        "reason": "候选框内可见带有'卓力'字样标识的货车货厢，属于通道内的运输挂车，货厢长度较长，符合大型货车特征",
+        "crop": {
+          "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+          "bbox": [
+            0.299,
+            0.10741000000000002,
+            0.4536450000000001,
+            0.30824250000000003
+          ],
+          "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\type_04.jpg",
+          "size": [
+            900,
+            877
+          ]
+        }
+      }
+    }
+  ],
+  "candidates_after_supersede": [
+    {
+      "bbox_local": [
+        0.26,
+        0.11,
+        0.78,
+        0.99
+      ],
+      "bbox_global": [
+        0.3526,
+        0.57375,
+        0.4878,
+        0.99525
+      ],
+      "center_global": [
+        0.4202,
+        0.7845
+      ],
+      "size": "large",
+      "visible": "partial_top|trailer_only",
+      "cargo_color": "dark gray (rear), white (top)",
+      "identity_clues": "Container rear with alphanumeric markings, two yellow latches on doors",
+      "evidence": "Central area of the image shows a freight container mounted on a truck, rear doors and top surface are clearly visible",
+      "uncertain": false,
+      "node_id": "R1",
+      "depth": 0,
+      "provenance": {
+        "node": "R1",
+        "depth": 0,
+        "path": "R1",
+        "stage": "first_look"
+      },
+      "merged_provenance": [
+        {
+          "node": "R1",
+          "depth": 0,
+          "path": "R1",
+          "stage": "first_look"
+        },
+        {
+          "node": "R1_S1",
+          "depth": 1,
+          "path": "R1/R1_S1",
+          "stage": "first_look"
+        }
+      ],
+      "type_review": {
+        "size_before": "large",
+        "size_after": "large",
+        "confidence": 0.95,
+        "body_kind": "trailer_only",
+        "has_trailer": false,
+        "accepted": true,
+        "reason": "黄色边框内为通道内的白色集装箱货厢，属于运输挂车，仅可见货厢部分，无牵引车，货厢长度较长，符合大型货车挂车特征",
+        "crop": {
+          "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+          "bbox": [
+            0.3406,
+            0.56175,
+            0.4998,
+            1.0
+          ],
+          "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\type_01.jpg",
+          "size": [
+            436,
+            900
+          ]
+        }
+      }
+    },
+    {
+      "bbox_local": [
+        0.35,
+        0.15,
+        0.69,
+        0.89
+      ],
+      "bbox_global": [
+        0.4315,
+        0.2445,
+        0.4961,
+        0.4887
+      ],
+      "center_global": [
+        0.4638,
+        0.36660000000000004
+      ],
+      "size": "large",
+      "visible": "partial_rear",
+      "cargo_color": "blue and dark gray",
+      "identity_clues": "open rear cargo area, blue roof",
+      "evidence": "located in the center of the image, large truck with open rear, blue top",
+      "uncertain": false,
+      "node_id": "R2",
+      "depth": 0,
+      "provenance": {
+        "node": "R2",
+        "depth": 0,
+        "path": "R2",
+        "stage": "first_look"
+      },
+      "type_review": {
+        "size_before": "large",
+        "size_after": "large",
+        "confidence": 0.9,
+        "body_kind": "trailer_only",
+        "has_trailer": false,
+        "accepted": true,
+        "reason": "候选框内可见蓝色集装箱货厢，为运输挂车，属于货车范畴，符合计数要求",
+        "crop": {
+          "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+          "bbox": [
+            0.4195,
+            0.23249999999999998,
+            0.5081,
+            0.5007
+          ],
+          "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\type_02.jpg",
+          "size": [
+            394,
+            900
+          ]
+        }
+      }
+    },
+    {
+      "bbox_local": [
+        0.35,
+        0.3,
+        0.65,
+        0.78
+      ],
+      "bbox_global": [
+        0.4445,
+        0.158,
+        0.49550000000000005,
+        0.25880000000000003
+      ],
+      "center_global": [
+        0.47000000000000003,
+        0.20840000000000003
+      ],
+      "size": "large",
+      "visible": "trailer_only",
+      "cargo_color": "gray",
+      "identity_clues": "带黑色数字标识的集装箱货厢",
+      "evidence": "画面中间位置的独立集装箱货厢，无牵引车遮挡，符合货车定义",
+      "uncertain": false,
+      "node_id": "R3",
+      "depth": 0,
+      "provenance": {
+        "node": "R3",
+        "depth": 0,
+        "path": "R3",
+        "stage": "first_look"
+      },
+      "merged_provenance": [
+        {
+          "node": "R3",
+          "depth": 0,
+          "path": "R3",
+          "stage": "first_look"
+        },
+        {
+          "node": "R2_S1",
+          "depth": 1,
+          "path": "R2/R2_S1",
+          "stage": "first_look"
+        }
+      ],
+      "type_review": {
+        "size_before": "large",
+        "size_after": "large",
+        "confidence": 0.9,
+        "body_kind": "trailer_only",
+        "has_trailer": false,
+        "accepted": true,
+        "reason": "候选框内可见货车的运输挂车货厢，属于通道内的运输挂车，符合货车计数标准，可明确识别为货车相关目标",
+        "crop": {
+          "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+          "bbox": [
+            0.4325,
+            0.146,
+            0.5075000000000001,
+            0.27080000000000004
+          ],
+          "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\type_03.jpg",
+          "size": [
+            720,
+            900
+          ]
+        }
+      }
+    },
+    {
+      "bbox_local": [
+        0.2,
+        0.4,
+        0.7,
+        1.0
+      ],
+      "bbox_global": [
+        0.389,
+        0.57375,
+        0.48650000000000004,
+        0.666
+      ],
+      "center_global": [
+        0.43775000000000003,
+        0.619875
+      ],
+      "size": "large",
+      "visible": "partial_top",
+      "cargo_color": "白色",
+      "identity_clues": "白色带横向条纹的货厢，上方有驾驶室的黑色矩形区域",
+      "evidence": "画面中间偏下的白色大型货厢及上方的驾驶室结构，属于货车的典型结构",
+      "uncertain": false,
+      "node_id": "R1_S1",
+      "depth": 1,
+      "provenance": {
+        "node": "R1_S1",
+        "depth": 1,
+        "path": "R1/R1_S1",
+        "stage": "first_look"
+      }
+    },
+    {
+      "bbox_local": [
+        0.41,
+        0.18,
+        0.66,
+        0.65
+      ],
+      "bbox_global": [
+        0.44877500000000003,
+        0.16409200000000002,
+        0.4931500000000001,
+        0.25311
+      ],
+      "center_global": [
+        0.47096250000000006,
+        0.208601
+      ],
+      "size": "large",
+      "visible": "full",
+      "cargo_color": "gray and beige",
+      "identity_clues": "带编号的集装箱货厢",
+      "evidence": "画面中间偏上的带字货厢，符合集装箱货车特征",
+      "uncertain": false,
+      "node_id": "R2_S1",
+      "depth": 1,
+      "provenance": {
+        "node": "R2_S1",
+        "depth": 1,
+        "path": "R2/R2_S1",
+        "stage": "first_look"
+      }
+    },
+    {
+      "bbox_local": [
+        0.0,
+        0.2,
+        0.68,
+        0.85
+      ],
+      "bbox_global": [
+        0.311,
+        0.11941000000000002,
+        0.44164500000000007,
+        0.2962425
+      ],
+      "center_global": [
+        0.3763225,
+        0.20782625000000002
+      ],
+      "size": "large",
+      "visible": "partial_side",
+      "cargo_color": "深灰色",
+      "identity_clues": "带有“ORI卓为”字样的货厢",
+      "evidence": "画面左侧区域可见的带文字标识的货车货厢",
+      "uncertain": false,
+      "node_id": "R2_S1_S1",
+      "depth": 2,
+      "provenance": {
+        "node": "R2_S1_S1",
+        "depth": 2,
+        "path": "R2/R2_S1/R2_S1_S1",
+        "stage": "first_look"
+      },
+      "type_review": {
+        "size_before": "large",
+        "size_after": "large",
+        "confidence": 0.85,
+        "body_kind": "trailer_only",
+        "has_trailer": false,
+        "accepted": true,
+        "reason": "候选框内可见带有'卓力'字样标识的货车货厢，属于通道内的运输挂车，货厢长度较长，符合大型货车特征",
+        "crop": {
+          "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+          "bbox": [
+            0.299,
+            0.10741000000000002,
+            0.4536450000000001,
+            0.30824250000000003
+          ],
+          "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\type_04.jpg",
+          "size": [
+            900,
+            877
+          ]
+        }
+      }
+    }
+  ],
+  "adjudications": [
+    {
+      "round": 0,
+      "a": 2,
+      "b": 4,
+      "geometry_score": 1.0,
+      "same_vehicle": true,
+      "confidence": 0.95,
+      "reason": "A与B的放大图中货厢的颜色、纹理特征一致，在左图通道内属于同一辆货车的不同局部区域，位置连续，符合同一车辆的判定依据",
+      "decision_source": "model",
+      "pair_image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\pair_r0_02_04.jpg",
+      "provenance_a": {
+        "node": "R3",
+        "depth": 0,
+        "path": "R3",
+        "stage": "first_look"
+      },
+      "provenance_b": {
+        "node": "R2_S1",
+        "depth": 1,
+        "path": "R2/R2_S1",
+        "stage": "first_look"
+      }
+    },
+    {
+      "round": 0,
+      "a": 0,
+      "b": 3,
+      "geometry_score": 0.9621,
+      "same_vehicle": true,
+      "confidence": 0.95,
+      "reason": "左图中黄色框A为完整的货车，青色框B为该货车的顶部区域；右侧放大图显示A是货车带编号的侧面，B是货车白色的顶部，二者属于同一辆货车的不同部分，位置连续，外观匹配",
+      "decision_source": "model",
+      "pair_image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\pair_r0_00_03.jpg",
+      "provenance_a": {
+        "node": "R1",
+        "depth": 0,
+        "path": "R1",
+        "stage": "first_look"
+      },
+      "provenance_b": {
+        "node": "R1_S1",
+        "depth": 1,
+        "path": "R1/R1_S1",
+        "stage": "first_look"
+      }
+    },
+    {
+      "round": 0,
+      "a": 1,
+      "b": 2,
+      "geometry_score": 0.25,
+      "same_vehicle": false,
+      "confidence": 0.95,
+      "reason": "左图中A、B处于通道队列的不同位置，A在靠后位置，B在靠前位置，车身不连续；右侧放大图中A的货厢为深色带蓝色顶部，B的目标区域外观与A不匹配，属于两辆不同的货车",
+      "decision_source": "model",
+      "pair_image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\pair_r0_01_02.jpg",
+      "provenance_a": {
+        "node": "R2",
+        "depth": 0,
+        "path": "R2",
+        "stage": "first_look"
+      },
+      "provenance_b": {
+        "node": "R3",
+        "depth": 0,
+        "path": "R3",
+        "stage": "first_look"
+      }
+    }
+  ],
+  "final_vehicles_pre_type": [
+    {
+      "bbox_local": [
+        0.26,
+        0.11,
+        0.78,
+        0.99
+      ],
+      "bbox_global": [
+        0.3526,
+        0.57375,
+        0.4878,
+        0.99525
+      ],
+      "center_global": [
+        0.4202,
+        0.7845
+      ],
+      "size": "large",
+      "visible": "partial_top|trailer_only",
+      "cargo_color": "dark gray (rear), white (top)",
+      "identity_clues": "Container rear with alphanumeric markings, two yellow latches on doors",
+      "evidence": "Central area of the image shows a freight container mounted on a truck, rear doors and top surface are clearly visible",
+      "uncertain": false,
+      "node_id": "R1",
+      "depth": 0,
+      "provenance": {
+        "node": "R1",
+        "depth": 0,
+        "path": "R1",
+        "stage": "first_look"
+      },
+      "merged_provenance": [
+        {
+          "node": "R1",
+          "depth": 0,
+          "path": "R1",
+          "stage": "first_look"
+        },
+        {
+          "node": "R1_S1",
+          "depth": 1,
+          "path": "R1/R1_S1",
+          "stage": "first_look"
+        }
+      ],
+      "type_review": {
+        "size_before": "large",
+        "size_after": "large",
+        "confidence": 0.95,
+        "body_kind": "trailer_only",
+        "has_trailer": false,
+        "accepted": true,
+        "reason": "黄色边框内为通道内的白色集装箱货厢，属于运输挂车，仅可见货厢部分，无牵引车，货厢长度较长，符合大型货车挂车特征",
+        "crop": {
+          "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+          "bbox": [
+            0.3406,
+            0.56175,
+            0.4998,
+            1.0
+          ],
+          "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\type_01.jpg",
+          "size": [
+            436,
+            900
+          ]
+        }
+      }
+    },
+    {
+      "bbox_local": [
+        0.35,
+        0.15,
+        0.69,
+        0.89
+      ],
+      "bbox_global": [
+        0.4315,
+        0.2445,
+        0.4961,
+        0.4887
+      ],
+      "center_global": [
+        0.4638,
+        0.36660000000000004
+      ],
+      "size": "large",
+      "visible": "partial_rear",
+      "cargo_color": "blue and dark gray",
+      "identity_clues": "open rear cargo area, blue roof",
+      "evidence": "located in the center of the image, large truck with open rear, blue top",
+      "uncertain": false,
+      "node_id": "R2",
+      "depth": 0,
+      "provenance": {
+        "node": "R2",
+        "depth": 0,
+        "path": "R2",
+        "stage": "first_look"
+      },
+      "type_review": {
+        "size_before": "large",
+        "size_after": "large",
+        "confidence": 0.9,
+        "body_kind": "trailer_only",
+        "has_trailer": false,
+        "accepted": true,
+        "reason": "候选框内可见蓝色集装箱货厢，为运输挂车，属于货车范畴，符合计数要求",
+        "crop": {
+          "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+          "bbox": [
+            0.4195,
+            0.23249999999999998,
+            0.5081,
+            0.5007
+          ],
+          "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\type_02.jpg",
+          "size": [
+            394,
+            900
+          ]
+        }
+      }
+    },
+    {
+      "bbox_local": [
+        0.35,
+        0.3,
+        0.65,
+        0.78
+      ],
+      "bbox_global": [
+        0.4445,
+        0.158,
+        0.49550000000000005,
+        0.25880000000000003
+      ],
+      "center_global": [
+        0.47000000000000003,
+        0.20840000000000003
+      ],
+      "size": "large",
+      "visible": "trailer_only",
+      "cargo_color": "gray",
+      "identity_clues": "带黑色数字标识的集装箱货厢",
+      "evidence": "画面中间位置的独立集装箱货厢，无牵引车遮挡，符合货车定义",
+      "uncertain": false,
+      "node_id": "R3",
+      "depth": 0,
+      "provenance": {
+        "node": "R3",
+        "depth": 0,
+        "path": "R3",
+        "stage": "first_look"
+      },
+      "merged_provenance": [
+        {
+          "node": "R3",
+          "depth": 0,
+          "path": "R3",
+          "stage": "first_look"
+        },
+        {
+          "node": "R2_S1",
+          "depth": 1,
+          "path": "R2/R2_S1",
+          "stage": "first_look"
+        }
+      ],
+      "type_review": {
+        "size_before": "large",
+        "size_after": "large",
+        "confidence": 0.9,
+        "body_kind": "trailer_only",
+        "has_trailer": false,
+        "accepted": true,
+        "reason": "候选框内可见货车的运输挂车货厢，属于通道内的运输挂车，符合货车计数标准，可明确识别为货车相关目标",
+        "crop": {
+          "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+          "bbox": [
+            0.4325,
+            0.146,
+            0.5075000000000001,
+            0.27080000000000004
+          ],
+          "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\type_03.jpg",
+          "size": [
+            720,
+            900
+          ]
+        }
+      }
+    },
+    {
+      "bbox_local": [
+        0.0,
+        0.2,
+        0.68,
+        0.85
+      ],
+      "bbox_global": [
+        0.311,
+        0.11941000000000002,
+        0.44164500000000007,
+        0.2962425
+      ],
+      "center_global": [
+        0.3763225,
+        0.20782625000000002
+      ],
+      "size": "large",
+      "visible": "partial_side",
+      "cargo_color": "深灰色",
+      "identity_clues": "带有“ORI卓为”字样的货厢",
+      "evidence": "画面左侧区域可见的带文字标识的货车货厢",
+      "uncertain": false,
+      "node_id": "R2_S1_S1",
+      "depth": 2,
+      "provenance": {
+        "node": "R2_S1_S1",
+        "depth": 2,
+        "path": "R2/R2_S1/R2_S1_S1",
+        "stage": "first_look"
+      },
+      "type_review": {
+        "size_before": "large",
+        "size_after": "large",
+        "confidence": 0.85,
+        "body_kind": "trailer_only",
+        "has_trailer": false,
+        "accepted": true,
+        "reason": "候选框内可见带有'卓力'字样标识的货车货厢，属于通道内的运输挂车，货厢长度较长，符合大型货车特征",
+        "crop": {
+          "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+          "bbox": [
+            0.299,
+            0.10741000000000002,
+            0.4536450000000001,
+            0.30824250000000003
+          ],
+          "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\type_04.jpg",
+          "size": [
+            900,
+            877
+          ]
+        }
+      }
+    }
+  ],
+  "final_vehicles": [
+    {
+      "bbox_local": [
+        0.26,
+        0.11,
+        0.78,
+        0.99
+      ],
+      "bbox_global": [
+        0.3526,
+        0.57375,
+        0.4878,
+        0.99525
+      ],
+      "center_global": [
+        0.4202,
+        0.7845
+      ],
+      "size": "large",
+      "visible": "partial_top|trailer_only",
+      "cargo_color": "dark gray (rear), white (top)",
+      "identity_clues": "Container rear with alphanumeric markings, two yellow latches on doors",
+      "evidence": "Central area of the image shows a freight container mounted on a truck, rear doors and top surface are clearly visible",
+      "uncertain": false,
+      "node_id": "R1",
+      "depth": 0,
+      "provenance": {
+        "node": "R1",
+        "depth": 0,
+        "path": "R1",
+        "stage": "first_look"
+      },
+      "merged_provenance": [
+        {
+          "node": "R1",
+          "depth": 0,
+          "path": "R1",
+          "stage": "first_look"
+        },
+        {
+          "node": "R1_S1",
+          "depth": 1,
+          "path": "R1/R1_S1",
+          "stage": "first_look"
+        }
+      ],
+      "type_review": {
+        "size_before": "large",
+        "size_after": "large",
+        "confidence": 0.95,
+        "body_kind": "trailer_only",
+        "has_trailer": false,
+        "accepted": true,
+        "reason": "黄色边框内为通道内的白色集装箱货厢，属于运输挂车，仅可见货厢部分，无牵引车，货厢长度较长，符合大型货车挂车特征",
+        "crop": {
+          "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+          "bbox": [
+            0.3406,
+            0.56175,
+            0.4998,
+            1.0
+          ],
+          "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\type_01.jpg",
+          "size": [
+            436,
+            900
+          ]
+        }
+      }
+    },
+    {
+      "bbox_local": [
+        0.35,
+        0.15,
+        0.69,
+        0.89
+      ],
+      "bbox_global": [
+        0.4315,
+        0.2445,
+        0.4961,
+        0.4887
+      ],
+      "center_global": [
+        0.4638,
+        0.36660000000000004
+      ],
+      "size": "large",
+      "visible": "partial_rear",
+      "cargo_color": "blue and dark gray",
+      "identity_clues": "open rear cargo area, blue roof",
+      "evidence": "located in the center of the image, large truck with open rear, blue top",
+      "uncertain": false,
+      "node_id": "R2",
+      "depth": 0,
+      "provenance": {
+        "node": "R2",
+        "depth": 0,
+        "path": "R2",
+        "stage": "first_look"
+      },
+      "type_review": {
+        "size_before": "large",
+        "size_after": "large",
+        "confidence": 0.9,
+        "body_kind": "trailer_only",
+        "has_trailer": false,
+        "accepted": true,
+        "reason": "候选框内可见蓝色集装箱货厢，为运输挂车，属于货车范畴，符合计数要求",
+        "crop": {
+          "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+          "bbox": [
+            0.4195,
+            0.23249999999999998,
+            0.5081,
+            0.5007
+          ],
+          "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\type_02.jpg",
+          "size": [
+            394,
+            900
+          ]
+        }
+      }
+    },
+    {
+      "bbox_local": [
+        0.35,
+        0.3,
+        0.65,
+        0.78
+      ],
+      "bbox_global": [
+        0.4445,
+        0.158,
+        0.49550000000000005,
+        0.25880000000000003
+      ],
+      "center_global": [
+        0.47000000000000003,
+        0.20840000000000003
+      ],
+      "size": "large",
+      "visible": "trailer_only",
+      "cargo_color": "gray",
+      "identity_clues": "带黑色数字标识的集装箱货厢",
+      "evidence": "画面中间位置的独立集装箱货厢，无牵引车遮挡，符合货车定义",
+      "uncertain": false,
+      "node_id": "R3",
+      "depth": 0,
+      "provenance": {
+        "node": "R3",
+        "depth": 0,
+        "path": "R3",
+        "stage": "first_look"
+      },
+      "merged_provenance": [
+        {
+          "node": "R3",
+          "depth": 0,
+          "path": "R3",
+          "stage": "first_look"
+        },
+        {
+          "node": "R2_S1",
+          "depth": 1,
+          "path": "R2/R2_S1",
+          "stage": "first_look"
+        }
+      ],
+      "type_review": {
+        "size_before": "large",
+        "size_after": "large",
+        "confidence": 0.9,
+        "body_kind": "trailer_only",
+        "has_trailer": false,
+        "accepted": true,
+        "reason": "候选框内可见货车的运输挂车货厢，属于通道内的运输挂车，符合货车计数标准，可明确识别为货车相关目标",
+        "crop": {
+          "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+          "bbox": [
+            0.4325,
+            0.146,
+            0.5075000000000001,
+            0.27080000000000004
+          ],
+          "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\type_03.jpg",
+          "size": [
+            720,
+            900
+          ]
+        }
+      }
+    },
+    {
+      "bbox_local": [
+        0.0,
+        0.2,
+        0.68,
+        0.85
+      ],
+      "bbox_global": [
+        0.311,
+        0.11941000000000002,
+        0.44164500000000007,
+        0.2962425
+      ],
+      "center_global": [
+        0.3763225,
+        0.20782625000000002
+      ],
+      "size": "large",
+      "visible": "partial_side",
+      "cargo_color": "深灰色",
+      "identity_clues": "带有“ORI卓为”字样的货厢",
+      "evidence": "画面左侧区域可见的带文字标识的货车货厢",
+      "uncertain": false,
+      "node_id": "R2_S1_S1",
+      "depth": 2,
+      "provenance": {
+        "node": "R2_S1_S1",
+        "depth": 2,
+        "path": "R2/R2_S1/R2_S1_S1",
+        "stage": "first_look"
+      },
+      "type_review": {
+        "size_before": "large",
+        "size_after": "large",
+        "confidence": 0.85,
+        "body_kind": "trailer_only",
+        "has_trailer": false,
+        "accepted": true,
+        "reason": "候选框内可见带有'卓力'字样标识的货车货厢，属于通道内的运输挂车，货厢长度较长，符合大型货车特征",
+        "crop": {
+          "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg",
+          "bbox": [
+            0.299,
+            0.10741000000000002,
+            0.4536450000000001,
+            0.30824250000000003
+          ],
+          "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\type_04.jpg",
+          "size": [
+            900,
+            877
+          ]
+        }
+      }
+    }
+  ],
+  "final_vehicles_rejected_by_type_review": [],
+  "counts_pre_type": {
+    "total": 4,
+    "large": 4,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "counts": {
+    "total": 4,
+    "large": 4,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "metrics_pre_type": {
+    "gold": {
+      "total": 3,
+      "large": 3,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "predicted": {
+      "total": 4,
+      "large": 4,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "count_error": 1,
+    "miss": 0,
+    "extra": 1,
+    "class_l1": 1,
+    "type_swaps_lower_bound": 0,
+    "unknown": 0,
+    "exact": false
+  },
+  "metrics": {
+    "gold": {
+      "total": 3,
+      "large": 3,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "predicted": {
+      "total": 4,
+      "large": 4,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "count_error": 1,
+    "miss": 0,
+    "extra": 1,
+    "class_l1": 1,
+    "type_swaps_lower_bound": 0,
+    "unknown": 0,
+    "exact": false
+  },
+  "calls": [
+    {
+      "stage": "root_regions",
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "prompt": "你是货车识别的“区域提案器”。先不要给总数，也不要只盯着最大的那辆车。\n\n请把整张画面中所有“可能有货车”的连续区域找出来：排队车道、停放带、远处装卸口、被展台/立柱/其他车辆遮挡的缺口、画面边缘只露出货厢或车顶的位置。\n\n要求：\n1. 至少覆盖画面里所有可见的车道段，不要只给一个走廊中段。\n2. 远处的集装箱队列、只看到货厢没有车头的位置，也要作为候选区域。\n3. 每个区域必须有 bbox、通道描述、粗略占用情况、为什么怀疑这里有车、以及下一轮放大时应重点看什么。\n4. 最多 6 个区域，按从近到远排序。\n5. bbox 使用整帧的 0-1 归一化坐标（不是像素）：左上 [0,0]，右下 [1,1]。\n\n只输出严格 JSON：\n{\n  \"regions\": [\n    {\n      \"region_id\": \"R1\",\n      \"bbox\": [0.0, 0.0, 0.0, 0.0],\n      \"lane_description\": \"这是哪条车道/停放带，近端和远端在哪里\",\n      \"occupancy\": \"occupied|empty|uncertain\",\n      \"rough_truck_count\": 0,\n      \"why\": \"为什么认为这里有货车\",\n      \"search_hint\": \"放大后重点检查什么\"\n    }\n  ],\n  \"scene_notes\": \"画面拓扑与遮挡说明\"\n}",
+      "images": [
+        "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\north_300.jpg"
+      ],
+      "requested_max_tokens": 1400,
+      "temperature": 0,
+      "ok": true,
+      "latency_s": 22.86,
+      "usage": {
+        "completion_tokens": 2724,
+        "prompt_tokens": 1663,
+        "total_tokens": 4387,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2176
+        }
+      },
+      "raw_text": "{\n  \"regions\": [\n    {\n      \"region_id\": \"R1\",\n      \"bbox\": [0.34, 0.58, 0.49, 0.99],\n      \"lane_description\": \"中间纵向主通道近端，近端位于画面底部边缘，远端延伸至画面中部偏下位置\",\n      \"occupancy\": \"occupied\",\n      \"rough_truck_count\": 1,\n      \"why\": \"可见完整的白色波纹金属货厢，货厢侧面有部分结构，符合货车货厢特征，周围有工作人员活动\",\n      \"search_hint\": \"放大后重点检查货厢侧面的标识、车门结构，以及货厢与地面的接触细节\"\n    },\n    {\n      \"region_id\": \"R2\",\n      \"bbox\": [0.42, 0.25, 0.50, 0.47],\n      \"lane_description\": \"中间纵向主通道中段，近端在R1的正上方，远端延伸至画面中部位置\",\n      \"occupancy\": \"occupied\",\n      \"rough_truck_count\": 1,\n      \"why\": \"可见蓝色的封闭货厢顶部，货厢下方有装卸平台结构，符合货车特征，周围有多名工作人员\",\n      \"search_hint\": \"放大后重点检查货厢侧面的轮廓、是否有车头部分，以及周围的装卸设备细节\"\n    },\n    {\n      \"region_id\": \"R3\",\n      \"bbox\": [0.44, 0.15, 0.50, 0.25],\n      \"lane_description\": \"中间纵向主通道远端，近端在R2的正上方，远端延伸至画面顶部边缘的装卸口区域\",\n      \"occupancy\": \"uncertain\",\n      \"rough_truck_count\": 1,\n      \"why\": \"可见多个排列的集装箱状结构，属于货车货厢的可能形态，位于通道远端装卸口附近\",\n      \"search_hint\": \"放大后重点检查这些集装箱的连接方式、是否有车头露出，以及装卸口的作业细节\"\n    }\n  ],\n  \"scene_notes\": \"画面为展会搭建/拆除现场，中间纵向主通道为货车通行、停放区域，两侧为各品牌展台（如KONKA、CHANGHONG、GUORI等），远端为装卸作业口，地面散落施工杂物，人员为展会作业人员\"\n}",
+      "reasoning_text": "\n我现在要处理用户的请求，生成符合要求的JSON。首先，得先找出画面里所有可能有货车的区域，按从近到远排，最多6个，每个要有bbox、车道描述、占用情况、原因、搜索提示。\n\n首先看画面，从近到远：\n1. 最近的那个白色货厢的货车，在画面下方中间偏左，bbox大概是[0.34, 0.58, 0.49, 0.99]，车道的话是中间的主通道近端，近端在画面底部，远端到中间。占用是occupied，因为明显是货厢。为什么？能看到完整的白色波纹货厢，还有部分车头在右侧。搜索提示是看货厢的细节，有没有车门，周围的人。\n2. 然后是它后面的那个蓝色顶的货车，在中间通道，bbox[0.42, 0.25, 0.50, 0.47]，车道是中间主通道中段，近端在白色货车上方，远端到中间。占用occupied，因为有蓝色的货厢顶，还有装卸的结构。为什么？蓝色的封闭货厢，周围有人员活动，像是装卸。搜索提示是看货厢的侧面，有没有标识，周围的设备。\n3. 然后是远处的集装箱队列，在画面上方中间，bbox[0.44, 0.15, 0.50, 0.25]，车道是中间主通道远端，近端在蓝色货车上方，远端到画面顶部。占用uncertain？不对，是集装箱，可能是货车的货厢。为什么？能看到多个集装箱状的结构，排列在通道远端。搜索提示是看这些集装箱的连接，有没有车头部分。\n4. 还有没有？比如画面左侧边缘？不对，再看，右侧有没有？哦，还有，画面左侧下方，有没有？不对，再数，要至少覆盖所有可见车道段。还有，比如中间通道的各个段，还有远处的装卸口。\n等下，用户要求至少覆盖所有可见的车道段，不要只给一个走廊中段。那中间的主通道是从近到远的，还有左右两侧的？不对，看画面，左右是展台，中间是通道，还有没有其他？\n哦，还有，画面右侧的展台下方？不对，再仔细看：\nR1：最近的白色货厢，bbox[0.35, 0.59, 0.48, 0.98]，lane_description：中间主通道近端，近端位于画面底部边缘，远端延伸至画面中部偏下。occupancy：occupied，rough_truck_count：1，why：可见完整的白色波纹金属货厢，货厢侧面有部分结构，符合货车货厢特征，周围有人员活动。search_hint：放大后检查货厢侧面的标识、车门结构，以及货厢与地面的接触细节。\nR2：中间通道中段的蓝色顶货车，bbox[0.43, 0.26, 0.49, 0.46]，lane_description：中间主通道中段，近端在R1的正上方，远端延伸至画面中部。occupancy：occupied，rough_truck_count：1，why：可见蓝色的封闭货厢顶部，货厢下方有装卸平台结构，符合货车特征，周围有工作人员。search_hint：放大后检查货厢侧面的轮廓，是否有车头部分，以及周围的装卸设备。\nR3：中间通道远端的集装箱区域，bbox[0.45, 0.16, 0.49, 0.24]，lane_description：中间主通道远端，近端在R2的正上方，远端延伸至画面顶部边缘。occupancy：uncertain，rough_truck_count：1（候选），why：可见多个排列的集装箱状结构，属于货车货厢的可能，位于通道远端装卸口附近。search_hint：放大后检查这些集装箱的连接方式，是否有车头露出，以及装卸口的细节。\nR4：有没有其他？比如画面左侧的边缘？不对，再看，画面右侧有没有？哦，不对，用户说最多6个，按从近到远，那再找，比如，有没有被展台遮挡的？比如，左侧展台下方，有没有露出货厢？不对，左侧是CHANGHONG的展台，下方是木质结构，没有。右侧是KONKA的展台，下方是金属结构，也没有。还有，画面上方远处，有没有其他？比如，左上角的区域，有没有？左上角是GUORI的展台，没有。那还有，中间通道的两侧？不对，再看，还有，那个R1的旁边？不，R1是中间的。\n等下，scene_notes要说明画面拓扑：这是展会搭建/拆除现场，中间为纵向主通道，两侧为展台结构，通道内有货车停放，远端为装卸口区域，地面有散落杂物，人员活动频繁。\n现在整理成严格的JSON，注意bbox是归一化的，每个字段都要对。\n等下，再检查每个区域的要求：\n1. 至少覆盖所有可见车道段：中间主通道的近、中、远都覆盖了，对。\n2. 远处的集装箱队列：R3就是。\n3. 每个区域的bbox，lane_description，occupancy，why，search_hint。\n4. 按从近到远，R1最近，R2中间，R3最远，还有没有？比如，有没有第四个？哦，可能我漏了，比如，画面右侧的通道？不对，右侧是展台，没有通道。或者，左侧的通道？左侧也是展台。那三个就够？不对，用户说最多6个，至少？不，要求是至少覆盖所有可见车道段，那中间主通道的三个段，对。\n等下，再确认R1的bbox：[0.34, 0.58, 0.49, 0.99]，对，x从0.34到0.49，y从0.58到0.99，是中间下方的白色货车。\nR2的bbox：[0.42, 0.25, 0.50, 0.47]，x0.42到0.50，y0.25到0.47，中间的蓝色顶货车。\nR3的bbox：[0.44, 0.15, 0.50, 0.25]，x0.44到0.50，y0.15到0.25，上方的集装箱。\n那现在，把这些整理成JSON，注意格式正确，没有多余的逗号，字段都正确。\n还有，scene_notes：画面为展会现场，中间纵向主通道为货车通行/停放区域，两侧为各品牌展台（如KONKA、CHANGHONG、GUORI等），远端为装卸作业口，地面有施工杂物，人员为展会搭建/拆除工作人员。\n现在，写出来：\n{\n  \"regions\": [\n    {\n      \"region_id\": \"R1\",\n      \"bbox\": [0.34, 0.58, 0.49, 0.99],\n      \"lane_description\": \"中间纵向主通道近端，近端位于画面底部边缘，远端延伸至画面中部偏下位置\",\n      \"occupancy\": \"occupied\",\n      \"rough_truck_count\": 1,\n      \"why\": \"可见完整的白色波纹金属货厢，货厢侧面有部分结构，符合货车货厢特征，周围有工作人员活动\",\n      \"search_hint\": \"放大后重点检查货厢侧面的标识、车门结构，以及货厢与地面的接触细节\"\n    },\n    {\n      \"region_id\": \"R2\",\n      \"bbox\": [0.42, 0.25, 0.50, 0.47],\n      \"lane_description\": \"中间纵向主通道中段，近端在R1的正上方，远端延伸至画面中部位置\",\n      \"occupancy\": \"occupied\",\n      \"rough_truck_count\": 1,\n      \"why\": \"可见蓝色的封闭货厢顶部，货厢下方有装卸平台结构，符合货车特征，周围有多名工作人员\",\n      \"search_hint\": \"放大后重点检查货厢侧面的轮廓、是否有车头部分，以及周围的装卸设备细节\"\n    },\n    {\n      \"region_id\": \"R3\",\n      \"bbox\": [0.44, 0.15, 0.50, 0.25],\n      \"lane_description\": \"中间纵向主通道远端，近端在R2的正上方，远端延伸至画面顶部边缘的装卸口区域\",\n      \"occupancy\": \"uncertain\",\n      \"rough_truck_count\": 1,\n      \"why\": \"可见多个排列的集装箱状结构，属于货车货厢的可能形态，位于通道远端装卸口附近\",\n      \"search_hint\": \"放大后重点检查这些集装箱的连接方式、是否有车头露出，以及装卸口的作业细节\"\n    }\n  ],\n  \"scene_notes\": \"画面为展会搭建/拆除现场，中间纵向主通道为货车通行、停放区域，两侧为各品牌展台（如KONKA、CHANGHONG、GUORI等），远端为装卸作业口，地面散落施工杂物，人员为展会作业人员\"\n}\n对，这个符合要求，按从近到远，覆盖了中间主通道的近中远端，有集装箱区域，每个区域的bbox是归一化的，字段都正确，没有总数，只给区域，符合用户的要求。",
+      "finish_reason": "stop",
+      "parsed": {
+        "regions": [
+          {
+            "region_id": "R1",
+            "bbox": [
+              0.34,
+              0.58,
+              0.49,
+              0.99
+            ],
+            "lane_description": "中间纵向主通道近端，近端位于画面底部边缘，远端延伸至画面中部偏下位置",
+            "occupancy": "occupied",
+            "rough_truck_count": 1,
+            "why": "可见完整的白色波纹金属货厢，货厢侧面有部分结构，符合货车货厢特征，周围有工作人员活动",
+            "search_hint": "放大后重点检查货厢侧面的标识、车门结构，以及货厢与地面的接触细节"
+          },
+          {
+            "region_id": "R2",
+            "bbox": [
+              0.42,
+              0.25,
+              0.5,
+              0.47
+            ],
+            "lane_description": "中间纵向主通道中段，近端在R1的正上方，远端延伸至画面中部位置",
+            "occupancy": "occupied",
+            "rough_truck_count": 1,
+            "why": "可见蓝色的封闭货厢顶部，货厢下方有装卸平台结构，符合货车特征，周围有多名工作人员",
+            "search_hint": "放大后重点检查货厢侧面的轮廓、是否有车头部分，以及周围的装卸设备细节"
+          },
+          {
+            "region_id": "R3",
+            "bbox": [
+              0.44,
+              0.15,
+              0.5,
+              0.25
+            ],
+            "lane_description": "中间纵向主通道远端，近端在R2的正上方，远端延伸至画面顶部边缘的装卸口区域",
+            "occupancy": "uncertain",
+            "rough_truck_count": 1,
+            "why": "可见多个排列的集装箱状结构，属于货车货厢的可能形态，位于通道远端装卸口附近",
+            "search_hint": "放大后重点检查这些集装箱的连接方式、是否有车头露出，以及装卸口的作业细节"
+          }
+        ],
+        "scene_notes": "画面为展会搭建/拆除现场，中间纵向主通道为货车通行、停放区域，两侧为各品牌展台（如KONKA、CHANGHONG、GUORI等），远端为装卸作业口，地面散落施工杂物，人员为展会作业人员"
+      }
+    },
+    {
+      "stage": "region:R1:d0",
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "prompt": "这是一个候选货车区域的放大裁剪（区域 R1，树深度 0）。\n请清点画面里所有可见货车，包括被画面边缘截到、被展台/柱子挡住、只露出货厢或车顶的车。\n\n- 牵引车+挂车算一辆；只看到独立的运输挂车/集装箱货厢也算一辆。\n- 展台、建筑、货架、叉车、轿车、面包车、人物不计。\n- 蓝色/灰色集装箱挂车要特别检查，不要当成展台；但蓝色招牌、广告牌、展台墙板不是货厢。\n- 上下排列、颜色或纹理不同的两节货厢，如果中间有明确间隙或属于不同底盘，分别计数。\n- bbox 使用当前裁剪的 0-1 归一化坐标：左上 [0,0]，右下 [1,1]。\n\n如果区域内还有看不清、被遮挡、太远或疑似漏检的子区域，列出最多 3 个 suspect_subregions（坐标用当前裁剪的归一化坐标）。\n\n只输出严格 JSON：\n{\n  \"counts\": {\"total\": 0, \"large\": 0, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.0, 0.0, 0.0, 0.0],\n      \"center\": [0.0, 0.0],\n      \"size\": \"large|medium|small|unknown\",\n      \"visible\": \"full|partial_top|partial_side|trailer_only\",\n      \"is_truck\": true,\n      \"cargo_color\": \"颜色\",\n      \"heading\": \"朝向镜头|背向镜头|横向|不确定\",\n      \"identity_clues\": \"复核线索\",\n      \"evidence\": \"定位与理由\",\n      \"uncertain\": false\n    }\n  ],\n  \"suspect_subregions\": [{\"bbox\": [0.0, 0.0, 0.0, 0.0], \"why\": \"...\", \"target\": \"...\"}],\n  \"scene_notes\": \"...\"\n}",
+      "images": [
+        "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\node_R1.jpg"
+      ],
+      "requested_max_tokens": 1700,
+      "temperature": 0,
+      "ok": true,
+      "latency_s": 11.18,
+      "usage": {
+        "completion_tokens": 1141,
+        "prompt_tokens": 1805,
+        "total_tokens": 2946,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 828
+        }
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 1, \"large\": 1, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.26, 0.11, 0.78, 0.99],\n      \"center\": [0.52, 0.55],\n      \"size\": \"large\",\n      \"visible\": \"partial_top|trailer_only\",\n      \"is_truck\": true,\n      \"cargo_color\": \"dark gray (rear), white (top)\",\n      \"heading\": \"背向镜头\",\n      \"identity_clues\": \"Container rear with alphanumeric markings, two yellow latches on doors\",\n      \"evidence\": \"Central area of the image shows a freight container mounted on a truck, rear doors and top surface are clearly visible\",\n      \"uncertain\": false\n    }\n  ],\n  \"suspect_subregions\": [\n    {\"bbox\": [0.5, 0.11, 0.75, 0.16], \"why\": \"Partial view of the truck's cab, details are unclear\", \"target\": \"truck cab\"}\n  ],\n  \"scene_notes\": \"Only one truck with a freight container is present in the cropped region; no other vehicles are visible.\"\n}",
+      "reasoning_text": "Okay, let's tackle this step by step. First, look at the image. There's one truck here, right? The container is visible, the back of the container has some text, the top is white. Let's confirm: the vehicle is a truck with a container, so count total is 1. Now, the bbox for that truck: let's see, from x ~0.25 to ~0.78, y ~0.11 to ~0.99. Center would be (0.515, 0.55). Size is large, since it's a big container. Visible: partial top and back, plus the trailer. Heading: back to the camera, right? Because we see the rear of the container. Cargo color: the rear is dark gray/black, top is white. Identity clues: container with markings, rear doors. Evidence: the vehicle is in the middle of the image, container is clearly a transport trailer. Now suspect subregions: are there any unclear parts? Maybe the top left near the yellow helmet? Wait no, the suspect subregions would be areas that are unclear. Let's see, maybe the area around the top of the truck's cab, or the left side near the structure? Wait no, let's check. Wait the image: the truck is the only one. So counts: total=1, large=1, others 0. Then vehicles array has one entry. Suspect subregions: maybe none? Wait no, wait the problem says if there are any, list up to 3. Wait let's see, the area [0.35, 0.28, 0.4, 0.38] is near the yellow helmet, maybe part of the truck? Or [0.75, 0.18, 0.81, 0.28] which is the side mirror of the cab. Wait but is that a suspect? Let's make sure. Scene notes: the image is an overhead view of a truck with a container, no other vehicles present. Wait let's structure the JSON correctly. Let's make sure all fields are right. Let's start:\n\ncounts: total is 1, large=1, others 0. The vehicle: bbox [0.26, 0.11, 0.78, 0.99], center is ((0.26+0.78)/2, (0.11+0.99)/2) = (0.52, 0.55). Size is large, visible: partial_top and trailer_only (since we see the top of the container and the rear, cab is partially visible at top). Is_truck: true. Cargo color: rear is dark gray, top is white. Heading:背向镜头 (back to camera). Identity clues: container rear with alphanumeric markings, two yellow latches on doors. Evidence: the object is a freight container mounted on a truck chassis, visible in the central area of the image. Uncertain: false. Then suspect_subregions: maybe none? Wait wait, is there any other vehicle? No, only this one. Wait let's check again. The image: yes, only one truck. So suspect_subregions can be empty array? Wait no, maybe if there's an unclear part. Wait the top part of the cab is partially cut off, so maybe [0.5, 0.11, 0.75, 0.16] as a suspect, why: partial view of truck cab, target: truck cab. That's one. Any others? Maybe not. So let's put that. Scene notes: The image shows a single truck with a freight container, no other vehicles are present in the cropped region. Wait let's make sure the JSON is valid, no trailing commas. Let's write it properly.",
+      "finish_reason": "stop",
+      "parsed": {
+        "counts": {
+          "total": 1,
+          "large": 1,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.26,
+              0.11,
+              0.78,
+              0.99
+            ],
+            "center": [
+              0.52,
+              0.55
+            ],
+            "size": "large",
+            "visible": "partial_top|trailer_only",
+            "is_truck": true,
+            "cargo_color": "dark gray (rear), white (top)",
+            "heading": "背向镜头",
+            "identity_clues": "Container rear with alphanumeric markings, two yellow latches on doors",
+            "evidence": "Central area of the image shows a freight container mounted on a truck, rear doors and top surface are clearly visible",
+            "uncertain": false
+          }
+        ],
+        "suspect_subregions": [
+          {
+            "bbox": [
+              0.5,
+              0.11,
+              0.75,
+              0.16
+            ],
+            "why": "Partial view of the truck's cab, details are unclear",
+            "target": "truck cab"
+          }
+        ],
+        "scene_notes": "Only one truck with a freight container is present in the cropped region; no other vehicles are visible."
+      }
+    },
+    {
+      "stage": "region:R2:d0",
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "prompt": "这是一个候选货车区域的放大裁剪（区域 R2，树深度 0）。\n请清点画面里所有可见货车，包括被画面边缘截到、被展台/柱子挡住、只露出货厢或车顶的车。\n\n- 牵引车+挂车算一辆；只看到独立的运输挂车/集装箱货厢也算一辆。\n- 展台、建筑、货架、叉车、轿车、面包车、人物不计。\n- 蓝色/灰色集装箱挂车要特别检查，不要当成展台；但蓝色招牌、广告牌、展台墙板不是货厢。\n- 上下排列、颜色或纹理不同的两节货厢，如果中间有明确间隙或属于不同底盘，分别计数。\n- bbox 使用当前裁剪的 0-1 归一化坐标：左上 [0,0]，右下 [1,1]。\n\n如果区域内还有看不清、被遮挡、太远或疑似漏检的子区域，列出最多 3 个 suspect_subregions（坐标用当前裁剪的归一化坐标）。\n\n只输出严格 JSON：\n{\n  \"counts\": {\"total\": 0, \"large\": 0, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.0, 0.0, 0.0, 0.0],\n      \"center\": [0.0, 0.0],\n      \"size\": \"large|medium|small|unknown\",\n      \"visible\": \"full|partial_top|partial_side|trailer_only\",\n      \"is_truck\": true,\n      \"cargo_color\": \"颜色\",\n      \"heading\": \"朝向镜头|背向镜头|横向|不确定\",\n      \"identity_clues\": \"复核线索\",\n      \"evidence\": \"定位与理由\",\n      \"uncertain\": false\n    }\n  ],\n  \"suspect_subregions\": [{\"bbox\": [0.0, 0.0, 0.0, 0.0], \"why\": \"...\", \"target\": \"...\"}],\n  \"scene_notes\": \"...\"\n}",
+      "images": [
+        "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\node_R2.jpg"
+      ],
+      "requested_max_tokens": 1700,
+      "temperature": 0,
+      "ok": true,
+      "latency_s": 27.35,
+      "usage": {
+        "completion_tokens": 3276,
+        "prompt_tokens": 1774,
+        "total_tokens": 5050,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2843
+        }
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 1, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.35, 0.15, 0.69, 0.89],\n      \"center\": [0.52, 0.52],\n      \"size\": \"large\",\n      \"visible\": \"partial_rear\",\n      \"is_truck\": true,\n      \"cargo_color\": \"blue and dark gray\",\n      \"heading\": \"背向镜头\",\n      \"identity_clues\": \"open rear cargo area, blue roof\",\n      \"evidence\": \"located in the center of the image, large truck with open rear, blue top\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.4, 0.0, 0.65, 0.18],\n      \"center\": [0.525, 0.09],\n      \"size\": \"medium\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"cargo_color\": \"gray with black text\",\n      \"heading\": \"不确定\",\n      \"identity_clues\": \"container-like structure with number text\",\n      \"evidence\": \"separate structure above the lower truck, matches container appearance\",\n      \"uncertain\": true\n    }\n  ],\n  \"suspect_subregions\": [\n    {\"bbox\": [0.4, 0.0, 0.65, 0.18], \"why\": \"unclear if it is a container vehicle or a sign/advertisement\", \"target\": \"possible container vehicle\"}\n  ],\n  \"scene_notes\": \"The image is a work area with construction workers, two potential truck trailers, and no other counted vehicles.\"\n}",
+      "reasoning_text": "Okay, let's tackle this problem step by step. First, I need to count all visible trucks in the given image. Let's look at the image: there's a large truck with a blue roof (the cargo area) in the middle. Wait, also, there's another part above it? Wait no, let's check the rules. The image shows a truck (trailer) with blue top, and another container-like structure above it? Wait no, let's see: the main truck here is the one with the blue cargo cover, its rear is facing us, right? Then above it, there's a structure with numbers, maybe another container? Wait no, wait the problem says \"上下排列、颜色或纹理不同的两节货厢，如果中间有明确间隙或属于不同底盘，分别计数。\" Let's check: the lower one is the truck with blue roof, its rear is open, that's one. Then above it, there's a structure with text like \"JT62010\" etc., is that another separate vehicle? Wait no, wait the image: let's look again. The lower vehicle: bbox from ~0.37 to ~0.67 in x, ~0.17 to ~0.88 in y. That's a truck trailer, rear facing, blue roof. Then above it, there's a structure (maybe another container) at ~0.4 to ~0.65 x, ~0.0 to ~0.2 y, with numbers. Is that a separate vehicle? Wait, but let's confirm. Wait the problem says \"牵引车+挂车算一辆；只看到独立的运输挂车/集装箱货厢也算一辆。\" So let's count: first, the lower truck (the one with blue cargo area, rear open) is one. Then the upper container-like thing, is that a separate vehicle? Wait, looking at the image, the upper structure is above the blue truck, maybe part of another vehicle? Wait no, maybe I'm wrong. Wait let's check the image again: the blue-roofed truck is in the middle, its rear is at the bottom of that structure. Then above it, there's a metal structure with numbers, maybe a container on top of something? No, wait the image is a bit blurry. Wait another thing: are there any other vehicles? Let's see the left side: there's a cart, but that's not a truck. The people are workers, so not counted. So first, let's see: the main truck is the blue-roofed one, that's one. Then is there another? Wait the upper part: the structure with \"JT62010\"—is that a separate container (vehicle)? Let's see, if it's a separate unit, then that's a second. Wait but wait, the problem says \"上下排列、颜色或纹理不同的两节货厢，如果中间有明确间隙或属于不同底盘，分别计数。\" So if those two are separate, then two. Wait but let's check the bboxes. Let's first list the vehicles:\n\nFirst vehicle: the lower one, blue roof, rear facing. Bbox approx [0.36, 0.16, 0.68, 0.89]. Size: large, since it's a big truck. Visible: partial rear (trailer only, since we see the back of the cargo area). Heading: back to us (背向镜头). Cargo color: blue (roof) and dark (rear doors). Identity clues: open rear cargo area, blue top. Evidence: middle of image, large truck with blue roof, rear open.\n\nSecond vehicle: upper structure, with numbers, bbox approx [0.4, 0.0, 0.65, 0.18]. Is that a separate vehicle? Let's see, it's above the first, has text, looks like a container. So that's another one, size: medium? Or large? Wait maybe. Wait but wait, is that part of the same truck? No, because there's a gap between the blue roof and the upper structure. So two vehicles? Wait but wait, let's check again. Wait the image: the upper structure is a container, maybe on a chassis, so that's a separate trailer. So total counts: 2? Wait but wait, let's make sure. Are there any other vehicles? No, the rest are people, carts, buildings.\n\nWait but wait, the problem says \"只看到独立的运输挂车/集装箱货厢也算一辆。\" So yes, those two are separate. Now, suspect subregions: are there any unclear areas? Maybe the left side, near the stairs, is there a vehicle? No, that's a building. Or the upper left, maybe a partial vehicle? No, the upper left has a person on stairs. So maybe no suspect subregions? Wait but let's see. Wait the image is blurry, so maybe the upper structure is not a vehicle? Wait maybe I misread. Let's re-examine: the blue-roofed thing is a truck trailer, correct. The thing above it: is that a sign or a container? The text looks like \"JT62010\" which is a container number, so that's a container, which is a vehicle (trailer). So yes, two.\n\nWait but wait, let's check the counts: total should be 2, large: 1 (the lower big truck), medium:1 (the upper container). Unknown:0, small:0.\n\nWait but let's confirm the bboxes. Let's set the first vehicle (lower): bbox [0.35, 0.15, 0.69, 0.9], center at (0.52, 0.52), size large, visible: partial rear (trailer only), is_truck: true, cargo color: blue (top) and dark gray (rear), heading:背向镜头 (back to camera), identity clues: open rear cargo area, blue roof, evidence: located in the center of the image, large truck with open rear, blue top.\n\nSecond vehicle (upper): bbox [0.4, 0.0, 0.65, 0.18], center (0.525, 0.09), size medium, visible: partial top (since we see the upper part), is_truck: true, cargo color: gray (with text), heading:不确定 (since we see the top, direction unclear), identity clues: has container number text \"JT62010\", evidence: above the lower truck, separate structure with container number, so separate vehicle.\n\nWait but is that correct? Or is the upper part part of the same truck? No, because there's a gap between the blue roof and the upper structure, so they are separate.\n\nNow, suspect subregions: maybe none, because both are clear enough? Wait but maybe the upper one is not a vehicle, but a sign. Hmm, that's a possibility. So maybe I should mark that as a suspect? Let's see: the upper region, bbox [0.4,0,0.65,0.2], why: unclear if it's a vehicle or a sign, target: possible container/vehicle.\n\nWait but let's think again. The problem says \"蓝色/灰色集装箱挂车要特别检查，不要当成展台；但蓝色招牌、广告牌、展台墙板不是货厢。\" So the upper structure has text, looks like a container, so it's a vehicle. But maybe it's a sign. So that's a suspect.\n\nWait but let's proceed. Let's structure the JSON properly.\n\nWait wait, another thing: the problem says \"候选货车区域的放大裁剪（区域 R2，树深度 0）\" so the entire image is the area. So total vehicles: 2? Let's confirm again. The lower truck: yes, that's one. The upper container: yes, that's two. Any others? No.\n\nWait but wait, the left side: there's a cart, but that's not a truck. The people are workers, so no. So counts: total=2, large=1, medium=1, small=0, unknown=0.\n\nNow, the vehicles array: first vehicle: lower one, second: upper one.\n\nWait but let's check the heading: the lower truck's rear is facing us, so heading is back to camera (背向镜头). The upper one: we see the top, so heading is uncertain.\n\nCargo color: lower one: blue (roof) and dark (rear doors). Upper one: gray (with black text).\n\nIdentity clues: lower: open rear cargo area, blue roof. Upper: container number \"JT62010\".\n\nEvidence: lower: center of image, large truck with open rear, blue top. Upper: above lower truck, separate structure with container number, so separate vehicle.\n\nUncertain: false for both?\n\nThen suspect subregions: maybe none, but wait, is there any unclear area? Let's see, the left side near the stairs, maybe a partial vehicle? No, that's a person. So maybe no suspect subregions.\n\nScene notes: the image is a construction/port area with workers, two visible truck trailers (one large, one medium).\n\nWait but wait, let's make sure about the upper vehicle. Is it a separate vehicle? Let's see, the lower truck's height: from y=0.15 to y=0.9, the upper structure is y=0 to 0.18, so overlapping a bit, but is it on a separate chassis? The image is blurry, so maybe it's part of the same truck? No, because the lower truck's roof is blue, the upper is gray with text, so different, so separate.\n\nOkay, now let's write the JSON correctly, making sure all fields are filled. Wait but the problem says \"只输出严格 JSON\" so no extra text. Let's check the example structure.\n\nWait wait, maybe I made a mistake in counting. Let's look again: the image has one main truck (the blue-roofed one), and another container above it, so two. That's correct.\n\nWait another check: the rules say \"牵引车+挂车算一辆；只看到独立的运输挂车/集装箱货厢也算一辆。\" So yes, two.\n\nOkay, let's draft the JSON:\n\n{\n  \"counts\": {\"total\": 2, \"large\": 1, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.35, 0.15, 0.69, 0.89],\n      \"center\": [0.52, 0.52],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"cargo_color\": \"blue and dark gray\",\n      \"heading\": \"背向镜头\",\n      \"identity_clues\": \"open rear cargo area, blue roof\",\n      \"evidence\": \"located in the center of the image, large truck with open rear, blue top\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.4, 0.0, 0.65, 0.18],\n      \"center\": [0.525, 0.09],\n      \"size\": \"medium\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"cargo_color\": \"gray with black text\",\n      \"heading\": \"不确定\",\n      \"identity_clues\": \"container number 'JT62010'\",\n      \"evidence\": \"above the lower truck, separate structure with container number, considered as a separate trailer\",\n      \"uncertain\": false\n    }\n  ],\n  \"suspect_subregions\": [],\n  \"scene_notes\": \"The image shows a work area with construction workers, two visible truck trailers (one large, one medium) and no other vehicles.\"\n}\n\nWait but wait, is the upper one really a vehicle? Maybe it's a sign, so maybe that's a suspect. Let's add a suspect subregion for that:\n\n\"suspect_subregions\": [{\"bbox\": [0.4, 0.0, 0.65, 0.18], \"why\": \"unclear if it is a container vehicle or a sign/advertisement\", \"target\": \"possible container vehicle\"}]\n\nThat makes sense, because the text could be a sign, not a container number. So that's a suspect.\n\nAlso, check the visible field for the lower vehicle: it's partial rear, so maybe \"partial_rear\" instead of partial_side. Oh right, the lower vehicle's rear is facing us, so visible is partial_rear.\n\nYes, that's better. So adjust that: \"visible\": \"partial_rear\" for the first vehicle.\n\nOkay, that should be it. Let's make sure all fields are correct, no extra commas, valid JSON.",
+      "finish_reason": "stop",
+      "parsed": {
+        "counts": {
+          "total": 2,
+          "large": 1,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.35,
+              0.15,
+              0.69,
+              0.89
+            ],
+            "center": [
+              0.52,
+              0.52
+            ],
+            "size": "large",
+            "visible": "partial_rear",
+            "is_truck": true,
+            "cargo_color": "blue and dark gray",
+            "heading": "背向镜头",
+            "identity_clues": "open rear cargo area, blue roof",
+            "evidence": "located in the center of the image, large truck with open rear, blue top",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.4,
+              0.0,
+              0.65,
+              0.18
+            ],
+            "center": [
+              0.525,
+              0.09
+            ],
+            "size": "medium",
+            "visible": "partial_top",
+            "is_truck": true,
+            "cargo_color": "gray with black text",
+            "heading": "不确定",
+            "identity_clues": "container-like structure with number text",
+            "evidence": "separate structure above the lower truck, matches container appearance",
+            "uncertain": true
+          }
+        ],
+        "suspect_subregions": [
+          {
+            "bbox": [
+              0.4,
+              0.0,
+              0.65,
+              0.18
+            ],
+            "why": "unclear if it is a container vehicle or a sign/advertisement",
+            "target": "possible container vehicle"
+          }
+        ],
+        "scene_notes": "The image is a work area with construction workers, two potential truck trailers, and no other counted vehicles."
+      }
+    },
+    {
+      "stage": "region:R3:d0",
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "prompt": "这是一个候选货车区域的放大裁剪（区域 R3，树深度 0）。\n请清点画面里所有可见货车，包括被画面边缘截到、被展台/柱子挡住、只露出货厢或车顶的车。\n\n- 牵引车+挂车算一辆；只看到独立的运输挂车/集装箱货厢也算一辆。\n- 展台、建筑、货架、叉车、轿车、面包车、人物不计。\n- 蓝色/灰色集装箱挂车要特别检查，不要当成展台；但蓝色招牌、广告牌、展台墙板不是货厢。\n- 上下排列、颜色或纹理不同的两节货厢，如果中间有明确间隙或属于不同底盘，分别计数。\n- bbox 使用当前裁剪的 0-1 归一化坐标：左上 [0,0]，右下 [1,1]。\n\n如果区域内还有看不清、被遮挡、太远或疑似漏检的子区域，列出最多 3 个 suspect_subregions（坐标用当前裁剪的归一化坐标）。\n\n只输出严格 JSON：\n{\n  \"counts\": {\"total\": 0, \"large\": 0, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.0, 0.0, 0.0, 0.0],\n      \"center\": [0.0, 0.0],\n      \"size\": \"large|medium|small|unknown\",\n      \"visible\": \"full|partial_top|partial_side|trailer_only\",\n      \"is_truck\": true,\n      \"cargo_color\": \"颜色\",\n      \"heading\": \"朝向镜头|背向镜头|横向|不确定\",\n      \"identity_clues\": \"复核线索\",\n      \"evidence\": \"定位与理由\",\n      \"uncertain\": false\n    }\n  ],\n  \"suspect_subregions\": [{\"bbox\": [0.0, 0.0, 0.0, 0.0], \"why\": \"...\", \"target\": \"...\"}],\n  \"scene_notes\": \"...\"\n}",
+      "images": [
+        "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\node_R3.jpg"
+      ],
+      "requested_max_tokens": 1700,
+      "temperature": 0,
+      "ok": true,
+      "latency_s": 18.27,
+      "usage": {
+        "completion_tokens": 2224,
+        "prompt_tokens": 1761,
+        "total_tokens": 3985,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1838
+        }
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.35, 0.30, 0.65, 0.78],\n      \"center\": [0.50, 0.54],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"cargo_color\": \"gray\",\n      \"heading\": \"朝向镜头\",\n      \"identity_clues\": \"带黑色数字标识的集装箱货厢\",\n      \"evidence\": \"画面中间位置的独立集装箱货厢，无牵引车遮挡，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.32, 0.75, 0.62, 0.99],\n      \"center\": [0.47, 0.87],\n      \"size\": \"large\",\n      \"visible\": \"partial_bottom\",\n      \"is_truck\": true,\n      \"cargo_color\": \"blue\",\n      \"heading\": \"朝向镜头\",\n      \"identity_clues\": \"蓝色集装箱货厢\",\n      \"evidence\": \"画面下方位置的独立集装箱货厢，底部被画面边缘截断，符合货车定义\",\n      \"uncertain\": false\n    }\n  ],\n  \"suspect_subregions\": [],\n  \"scene_notes\": \"本区域可见2个独立的集装箱货厢，上下排列，中间存在明确间隙，均为运输货车，无其他符合要求的车辆\"\n}",
+      "reasoning_text": "\n用户现在需要处理这个货车计数的任务，首先看图片里的货车，首先中间有一个集装箱货厢对吧？先找：首先，画面中间偏下的位置，有一个灰色的集装箱，上面有数字，然后下面还有蓝色的？不对，看，中间那个，首先第一个，bbox应该是[0.37, 0.32, 0.64, 0.77]，这个是一个集装箱货厢，也就是trailer_only？然后下面还有蓝色的那个，[0.32, 0.75, 0.62, 0.99]，这个是另一个？不对，要确认，上下两节如果有间隙的话算两个？然后还有没有其他的？左边有没有？左边的是建筑和楼梯，不是货车。右边的是人物，没有。那现在数：首先，中间的灰色集装箱（带数字的）是一个，下面的蓝色货厢是第二个？不对，再看，题目说牵引车+挂车算一辆，独立的挂车也算。那现在看，画面里的可见货车：第一个，中间的灰色集装箱，bbox大概0.36到0.65，y从0.3到0.78，这个是一个，visible是partial？不对，是完整的货厢？然后下面的蓝色的，y从0.32？不对，看图片，中间那个灰色的是在蓝色的上面，中间有没有间隙？有，所以是两个？不对，再仔细看，用户给的图：中间偏下，有两个上下的货厢？不对，那个灰色的上面有数字，写的是1062010？然后下面的蓝色的，是另一个？那现在counts的total是2？然后large？不对，size怎么分？哦，可能我看错了，再看，有没有其他的？左边的是建筑，不是。那现在，vehicles数组里的两个？不对，等下，题目说“被展台/柱子挡住的也算”，但这里的是货厢，不是展台。那现在，第一个货车：bbox [0.35, 0.31, 0.64, 0.76]，center是(0.495, 0.535)，size是large？visible是trailer_only，因为只看到货厢，is_truck是true，cargo_color是灰色，heading是朝向镜头？不对，货厢的正面朝向我们？对，因为有数字在正面，所以heading是朝向镜头，identity_clues是带数字的集装箱货厢，evidence是中间位置的灰色集装箱，uncertain是false。然后第二个货车：bbox [0.32, 0.74, 0.61, 0.99]，center是(0.465, 0.865)，size是large，visible是partial？不对，是只看到货厢的顶部？不对，蓝色的那个是货厢，在下方，所以visible是partial_top？或者trailer_only？cargo_color是蓝色，heading是朝向镜头，identity_clues是蓝色货厢，evidence是中间下方的蓝色货厢，uncertain false。那现在counts的total是2，large是2，其他medium small unknown是0。然后suspect_subregions有没有？比如有没有看不清的？比如上方的那个，有没有被挡住的？比如左上角的建筑旁边，有没有？不对，题目说最多3个，这里有没有？比如，可能没有？不对，再看，画面里有没有其他的？比如右边的人物旁边，有没有？没有。那scene_notes是“画面中可见两个独立的集装箱货厢，上下排列，中间有间隙，均为运输货车，无其他可见货车”。不对，等下，我是不是错了？再看，那个中间的灰色的，是不是展台？题目说“蓝色/灰色集装箱挂车要特别检查，不要当成展台；但蓝色招牌、广告牌、展台墙板不是货厢”，所以那个带数字的是集装箱，不是展台，对。那现在整理成JSON。等下，再确认：vehicles里的两个，对吗？那现在写：\n\n首先counts：total是2，large是2，其他都是0。然后vehicles数组两个元素。然后suspect_subregions是空的？或者有没有？比如，上方的那个，有没有被遮挡的货车？比如画面上方中间，有个蓝色的灯，旁边的，有没有？那个是人物，不是货车。所以suspect_subregions是空数组。scene_notes是“本区域可见2个独立的集装箱货厢，属于运输货车，上下分布，中间存在间隙，无其他符合要求的车辆”。\n\n等下，再检查bbox的坐标，归一化的，左上是(0,0)，右下(1,1)。第一个货车（灰色）的bbox：x从0.35到0.65，y从0.3到0.78，对。第二个（蓝色）：x0.32到0.62，y0.75到0.99，对。center分别是(0.5, 0.54)和(0.47, 0.87)。size都是large，因为是大的货厢。visible：第一个是trailer_only，第二个是partial？不对，第二个的底部是画面边缘，所以是partial_bottom？哦，对，因为被画面底部截到了，所以visible是partial_bottom。heading都是朝向镜头，因为货厢的正面朝向我们，有数字。identity_clues：第一个是“带黑色数字标识的灰色集装箱货厢”，第二个是“蓝色集装箱货厢”。evidence：第一个“位于画面中间，为独立集装箱货厢，符合货车定义”，第二个“位于画面下方，为独立集装箱货厢，符合货车定义”。uncertain都是false。\n\n那现在整理成严格的JSON，注意不要有多余的逗号，数组最后一个元素不要逗号。对了，还要注意，题目说“牵引车+挂车算一辆；只看到独立的运输挂车/集装箱货厢也算一辆”，所以这两个都是独立的挂车，所以各算一辆，total是2。\n\n那现在写出来：\n\n{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.35, 0.30, 0.65, 0.78],\n      \"center\": [0.50, 0.54],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"cargo_color\": \"gray\",\n      \"heading\": \"朝向镜头\",\n      \"identity_clues\": \"带黑色数字标识的集装箱货厢\",\n      \"evidence\": \"画面中间位置的独立集装箱货厢，无牵引车遮挡，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.32, 0.75, 0.62, 0.99],\n      \"center\": [0.47, 0.87],\n      \"size\": \"large\",\n      \"visible\": \"partial_bottom\",\n      \"is_truck\": true,\n      \"cargo_color\": \"blue\",\n      \"heading\": \"朝向镜头\",\n      \"identity_clues\": \"蓝色集装箱货厢\",\n      \"evidence\": \"画面下方位置的独立集装箱货厢，底部被画面边缘截断，符合货车定义\",\n      \"uncertain\": false\n    }\n  ],\n  \"suspect_subregions\": [],\n  \"scene_notes\": \"本区域可见2个独立的集装箱货厢，上下排列，中间存在明确间隙，均为运输货车，无其他符合要求的车辆\"\n}\n\n等下，有没有问题？再检查，有没有把展台当成货车？那个灰色的带数字的，确实是集装箱，不是展台，对，因为有数字，是货厢。蓝色的那个也是货厢，对。左边的是建筑，不是。右边的是人物，不是。所以counts是2，对。suspect_subregions是空的，因为没有看不清的区域。scene_notes也对。",
+      "finish_reason": "stop",
+      "parsed": {
+        "counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.35,
+              0.3,
+              0.65,
+              0.78
+            ],
+            "center": [
+              0.5,
+              0.54
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "cargo_color": "gray",
+            "heading": "朝向镜头",
+            "identity_clues": "带黑色数字标识的集装箱货厢",
+            "evidence": "画面中间位置的独立集装箱货厢，无牵引车遮挡，符合货车定义",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.32,
+              0.75,
+              0.62,
+              0.99
+            ],
+            "center": [
+              0.47,
+              0.87
+            ],
+            "size": "large",
+            "visible": "partial_bottom",
+            "is_truck": true,
+            "cargo_color": "blue",
+            "heading": "朝向镜头",
+            "identity_clues": "蓝色集装箱货厢",
+            "evidence": "画面下方位置的独立集装箱货厢，底部被画面边缘截断，符合货车定义",
+            "uncertain": false
+          }
+        ],
+        "suspect_subregions": [],
+        "scene_notes": "本区域可见2个独立的集装箱货厢，上下排列，中间存在明确间隙，均为运输货车，无其他符合要求的车辆"
+      }
+    },
+    {
+      "stage": "region:R1_S1:d1",
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "prompt": "这是一个候选货车区域的放大裁剪（区域 R1_S1，树深度 1）。\n请清点画面里所有可见货车，包括被画面边缘截到、被展台/柱子挡住、只露出货厢或车顶的车。\n\n- 牵引车+挂车算一辆；只看到独立的运输挂车/集装箱货厢也算一辆。\n- 展台、建筑、货架、叉车、轿车、面包车、人物不计。\n- 蓝色/灰色集装箱挂车要特别检查，不要当成展台；但蓝色招牌、广告牌、展台墙板不是货厢。\n- 上下排列、颜色或纹理不同的两节货厢，如果中间有明确间隙或属于不同底盘，分别计数。\n- bbox 使用当前裁剪的 0-1 归一化坐标：左上 [0,0]，右下 [1,1]。\n\n如果区域内还有看不清、被遮挡、太远或疑似漏检的子区域，列出最多 3 个 suspect_subregions（坐标用当前裁剪的归一化坐标）。\n\n只输出严格 JSON：\n{\n  \"counts\": {\"total\": 0, \"large\": 0, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.0, 0.0, 0.0, 0.0],\n      \"center\": [0.0, 0.0],\n      \"size\": \"large|medium|small|unknown\",\n      \"visible\": \"full|partial_top|partial_side|trailer_only\",\n      \"is_truck\": true,\n      \"cargo_color\": \"颜色\",\n      \"heading\": \"朝向镜头|背向镜头|横向|不确定\",\n      \"identity_clues\": \"复核线索\",\n      \"evidence\": \"定位与理由\",\n      \"uncertain\": false\n    }\n  ],\n  \"suspect_subregions\": [{\"bbox\": [0.0, 0.0, 0.0, 0.0], \"why\": \"...\", \"target\": \"...\"}],\n  \"scene_notes\": \"...\"\n}",
+      "images": [
+        "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\node_R1_S1.jpg"
+      ],
+      "requested_max_tokens": 1700,
+      "temperature": 0,
+      "ok": true,
+      "latency_s": 10.62,
+      "usage": {
+        "completion_tokens": 1078,
+        "prompt_tokens": 1774,
+        "total_tokens": 2852,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 834
+        }
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 1, \"large\": 1, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.2, 0.4, 0.7, 1.0],\n      \"center\": [0.45, 0.7],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"cargo_color\": \"白色\",\n      \"heading\": \"背向镜头\",\n      \"identity_clues\": \"白色带横向条纹的货厢，上方有驾驶室的黑色矩形区域\",\n      \"evidence\": \"画面中间偏下的白色大型货厢及上方的驾驶室结构，属于货车的典型结构\",\n      \"uncertain\": false\n    }\n  ],\n  \"suspect_subregions\": [],\n  \"scene_notes\": \"该图像为俯视视角的监控画面，仅可见1辆白色货车的部分结构，无其他符合要求的货车\"\n}",
+      "reasoning_text": "\n我现在要处理用户的请求，先看图片，里面有一个货车的部分，是白色的货厢，还有上面的部分？不对，仔细看，画面里的货车，那个白色的带条纹的是货厢，还有上面的驾驶室部分？不对，先数：首先，可见的货车，这里有一个，是白色的货厢（带横向条纹），还有上面的部分，应该是一辆牵引车加挂车？不对，看裁剪图，中间偏下的白色大的是货厢，上面的白色带黑色矩形的是驾驶室？那这是一辆完整的？不对，再看，有没有其他？没有。然后counts里total是1，large？因为货厢很大。然后vehicles的bbox，归一化的话，那个白色货厢大概是x从0.2到0.7，y从0.5到1？不对，看坐标，左上是0,0，右下1,1。那那个大的白色货厢（带条纹）的bbox应该是[0.21, 0.52, 0.70, 0.99]，上面的驾驶室部分是[0.32, 0.42, 0.67, 0.58]，所以整体是一辆货车，因为牵引车加挂车算一辆。然后size是large，visible是partial？不对，看，这个货车是从上方拍的，货厢的大部分可见，驾驶室部分也可见，朝向是背向镜头？因为是从上方往下拍，车头朝向远离镜头的方向？然后cargo_color是白色，heading是背向镜头。identity_clues是白色带横向条纹的货厢，上方有驾驶室部分。evidence是画面中间偏下的白色大型货厢及上方的驾驶室结构，属于货车。然后suspect_subregions，有没有？比如左上角的一些碎片？不对，用户说最多3个，这里可能没有，或者有没有看不清的？比如左上角的一些物体，可能不是，所以suspect_subregions是空？然后scene_notes是画面为俯视视角，可见一辆白色货车的货厢及部分驾驶室，无其他货车。\n\n等下，再确认规则：牵引车+挂车算一辆，独立的挂车也算。这里的白色货厢和上面的部分是同一辆，所以counts total是1，large是1，其他medium、small、unknown是0。然后vehicles里的那个，bbox应该是整个货车的范围，从x0.2到0.7，y0.4到1？对，因为驾驶室在y0.4到0.6，货厢在y0.5到1，所以合并的话是[0.2, 0.4, 0.7, 1.0]，center是(0.45, 0.7)，size large，visible是partial_top？因为是俯视，看到顶部，所以visible是partial_top？heading是背向镜头，因为车头在下方？不对，俯视的话，货车的尾部朝向镜头？哦，可能我搞反了，背向镜头是车头远离，那如果是俯视，看到的是货厢的顶部，那车头应该在画面下方，所以朝向是背向镜头？对。cargo_color是白色，identity_clues是白色带横向条纹的货厢，上方有驾驶室的黑色矩形区域，evidence是该区域为货车的货厢及驾驶室部分，属于运输车辆，符合货车定义。uncertain是false。\n\n然后suspect_subregions，有没有？比如画面左上角的一些物体，可能是碎片，不是货车，所以没有，所以是空数组。scene_notes：该图像为俯视视角的监控画面，仅可见1辆白色货车的部分结构，无其他符合要求的货车。\n\n现在整理成严格的JSON，注意所有字段都正确，没有多余，符合要求。",
+      "finish_reason": "stop",
+      "parsed": {
+        "counts": {
+          "total": 1,
+          "large": 1,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.2,
+              0.4,
+              0.7,
+              1.0
+            ],
+            "center": [
+              0.45,
+              0.7
+            ],
+            "size": "large",
+            "visible": "partial_top",
+            "is_truck": true,
+            "cargo_color": "白色",
+            "heading": "背向镜头",
+            "identity_clues": "白色带横向条纹的货厢，上方有驾驶室的黑色矩形区域",
+            "evidence": "画面中间偏下的白色大型货厢及上方的驾驶室结构，属于货车的典型结构",
+            "uncertain": false
+          }
+        ],
+        "suspect_subregions": [],
+        "scene_notes": "该图像为俯视视角的监控画面，仅可见1辆白色货车的部分结构，无其他符合要求的货车"
+      }
+    },
+    {
+      "stage": "region:R2_S1:d1",
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "prompt": "这是一个候选货车区域的放大裁剪（区域 R2_S1，树深度 1）。\n请清点画面里所有可见货车，包括被画面边缘截到、被展台/柱子挡住、只露出货厢或车顶的车。\n\n- 牵引车+挂车算一辆；只看到独立的运输挂车/集装箱货厢也算一辆。\n- 展台、建筑、货架、叉车、轿车、面包车、人物不计。\n- 蓝色/灰色集装箱挂车要特别检查，不要当成展台；但蓝色招牌、广告牌、展台墙板不是货厢。\n- 上下排列、颜色或纹理不同的两节货厢，如果中间有明确间隙或属于不同底盘，分别计数。\n- bbox 使用当前裁剪的 0-1 归一化坐标：左上 [0,0]，右下 [1,1]。\n\n如果区域内还有看不清、被遮挡、太远或疑似漏检的子区域，列出最多 3 个 suspect_subregions（坐标用当前裁剪的归一化坐标）。\n\n只输出严格 JSON：\n{\n  \"counts\": {\"total\": 0, \"large\": 0, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.0, 0.0, 0.0, 0.0],\n      \"center\": [0.0, 0.0],\n      \"size\": \"large|medium|small|unknown\",\n      \"visible\": \"full|partial_top|partial_side|trailer_only\",\n      \"is_truck\": true,\n      \"cargo_color\": \"颜色\",\n      \"heading\": \"朝向镜头|背向镜头|横向|不确定\",\n      \"identity_clues\": \"复核线索\",\n      \"evidence\": \"定位与理由\",\n      \"uncertain\": false\n    }\n  ],\n  \"suspect_subregions\": [{\"bbox\": [0.0, 0.0, 0.0, 0.0], \"why\": \"...\", \"target\": \"...\"}],\n  \"scene_notes\": \"...\"\n}",
+      "images": [
+        "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\node_R2_S1.jpg"
+      ],
+      "requested_max_tokens": 1700,
+      "temperature": 0,
+      "ok": true,
+      "latency_s": 14.74,
+      "usage": {
+        "completion_tokens": 1774,
+        "prompt_tokens": 1785,
+        "total_tokens": 3559,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1351
+        }
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.41, 0.18, 0.66, 0.65],\n      \"center\": [0.535, 0.415],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"cargo_color\": \"gray and beige\",\n      \"heading\": \"朝向镜头\",\n      \"identity_clues\": \"带编号的集装箱货厢\",\n      \"evidence\": \"画面中间偏上的带字货厢，符合集装箱货车特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.345, 0.64, 0.645, 0.995],\n      \"center\": [0.495, 0.8175],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"cargo_color\": \"blue\",\n      \"heading\": \"横向\",\n      \"identity_clues\": \"蓝色集装箱货厢\",\n      \"evidence\": \"画面下方的蓝色独立集装箱挂车\",\n      \"uncertain\": false\n    }\n  ],\n  \"suspect_subregions\": [\n    {\"bbox\": [0.0, 0.0, 0.35, 0.75], \"why\": \"被楼梯结构遮挡，细节模糊，疑似存在货车\", \"target\": \"货车\"}\n  ],\n  \"scene_notes\": \"画面中仅统计到2辆大型集装箱货车，人物、建筑、展台类结构不计入计数\"\n}",
+      "reasoning_text": "\n用户现在需要处理这个货车计数的任务，首先看图片里的货车。首先，中间有两个？不对，看：中间偏上的那个，有货厢，上面的是灰色的，下面的是蓝色的？不对，仔细看，中间的那个，第一个（上）是带字的货厢，第二个（下）是蓝色的货厢？不对，再看，左边的楼梯旁边有没有？不对，题目说牵引车+挂车算一辆，独立的也算。然后看，画面里的：第一个，中间偏上的，那个带字的货厢，是一个？然后下面的蓝色的是另一个？不对，等下，看坐标。首先，先数：\n\n首先，中间区域，有两个？不对，看，<bbox>410 180 660 655</bbox> 这个是一个，然后<bbox>345 640 645 995</bbox> 这个是第二个？对，这两个都是独立的货厢，属于货车的。那counts的total是2？然后size的话，都是large？因为是大的货厢。然后vehicles数组里的两个。\n\n然后suspect_subregions，有没有看不清的？比如左上角？不对，左边的楼梯旁边，有没有被挡住的？或者右上角？不对，看，画面里的，有没有其他的？比如右上角的人物旁边？不对，题目说人物不计。那suspect_subregions可能没有？或者有没有？\n\n等下，再仔细看图片：中间偏上的那个货厢，上面的部分是灰色，有字，下面是米色带字，是一个？然后下面的蓝色的是另一个，对，两个。那counts的total是2，large是2，其他medium small unknown是0。\n\n然后vehicles的两个：\n\n第一个：bbox [0.41, 0.18, 0.66, 0.65]，center是(0.535, 0.415)，size large，visible是partial？不对，是整个货厢，可见的是大部分，朝向镜头？不对，货厢的字是对着镜头的，所以朝向镜头？cargo_color是灰色（上）和米色（下）？不对，整体的话，上半部分灰色，下半部分米色，所以cargo_color是灰/米？heading是朝向镜头，identity_clues是有货厢编号，evidence是中间区域的带字货厢，uncertain false。\n\n第二个：bbox [0.345, 0.64, 0.645, 0.995]，center (0.495, 0.8175)，size large，visible是partial？因为只看到货厢的侧面？不对，是蓝色的货厢，朝向镜头？不对，蓝色的那个是侧面？heading是横向？cargo_color是蓝色，identity_clues是蓝色集装箱货厢，evidence是下方的蓝色货厢，uncertain false。\n\n然后suspect_subregions，有没有？比如左上角的区域，有没有被挡住的货车？<bbox>0.0, 0.0, 0.35, 0.75</bbox>，why是可能有被楼梯遮挡的货车，target是货车。或者有没有其他？\n\n等下，再确认：题目说“蓝色/灰色集装箱挂车要特别检查，不要当成展台”，中间的两个都是集装箱，所以是货车。那counts total是2，large是2。\n\n然后scene_notes：画面中有两个可见的集装箱货车货厢，均为大型，无其他符合要求的车辆。\n\n现在整理成严格的JSON，注意格式正确，没有多余的逗号。\n\n等下，再检查：有没有漏？左边的楼梯旁边，有没有货车？看图片，左边的楼梯是金属结构，旁边的是人物，没有货车。右边的是人物，所以只有中间两个。\n\n那现在写：\n\n{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.41, 0.18, 0.66, 0.65],\n      \"center\": [0.535, 0.415],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"cargo_color\": \"gray and beige\",\n      \"heading\": \"朝向镜头\",\n      \"identity_clues\": \"带有货厢编号的集装箱货厢\",\n      \"evidence\": \"画面中间偏上的带字货厢，符合集装箱货车特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.345, 0.64, 0.645, 0.995],\n      \"center\": [0.495, 0.8175],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"cargo_color\": \"blue\",\n      \"heading\": \"横向\",\n      \"identity_clues\": \"蓝色集装箱货厢\",\n      \"evidence\": \"画面下方的蓝色货厢，为独立集装箱挂车\",\n      \"uncertain\": false\n    }\n  ],\n  \"suspect_subregions\": [\n    {\"bbox\": [0.0, 0.0, 0.35, 0.75], \"why\": \"可能存在被楼梯结构遮挡的货车，细节不清\", \"target\": \"货车\"}\n  ],\n  \"scene_notes\": \"画面中可见2辆大型集装箱货车，无其他符合要求的车辆，人物、建筑结构不计入\"\n}\n\n对，这样应该是对的。再检查格式，确保是正确的JSON，没有语法错误。比如所有的引号都是双引号，数组的逗号正确，最后一个元素没有逗号。",
+      "finish_reason": "stop",
+      "parsed": {
+        "counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.41,
+              0.18,
+              0.66,
+              0.65
+            ],
+            "center": [
+              0.535,
+              0.415
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "cargo_color": "gray and beige",
+            "heading": "朝向镜头",
+            "identity_clues": "带编号的集装箱货厢",
+            "evidence": "画面中间偏上的带字货厢，符合集装箱货车特征",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.345,
+              0.64,
+              0.645,
+              0.995
+            ],
+            "center": [
+              0.495,
+              0.8175
+            ],
+            "size": "large",
+            "visible": "partial_side",
+            "is_truck": true,
+            "cargo_color": "blue",
+            "heading": "横向",
+            "identity_clues": "蓝色集装箱货厢",
+            "evidence": "画面下方的蓝色独立集装箱挂车",
+            "uncertain": false
+          }
+        ],
+        "suspect_subregions": [
+          {
+            "bbox": [
+              0.0,
+              0.0,
+              0.35,
+              0.75
+            ],
+            "why": "被楼梯结构遮挡，细节模糊，疑似存在货车",
+            "target": "货车"
+          }
+        ],
+        "scene_notes": "画面中仅统计到2辆大型集装箱货车，人物、建筑、展台类结构不计入计数"
+      }
+    },
+    {
+      "stage": "region:R2_S1_S1:d2",
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "prompt": "这是一个候选货车区域的放大裁剪（区域 R2_S1_S1，树深度 2）。\n请清点画面里所有可见货车，包括被画面边缘截到、被展台/柱子挡住、只露出货厢或车顶的车。\n\n- 牵引车+挂车算一辆；只看到独立的运输挂车/集装箱货厢也算一辆。\n- 展台、建筑、货架、叉车、轿车、面包车、人物不计。\n- 蓝色/灰色集装箱挂车要特别检查，不要当成展台；但蓝色招牌、广告牌、展台墙板不是货厢。\n- 上下排列、颜色或纹理不同的两节货厢，如果中间有明确间隙或属于不同底盘，分别计数。\n- bbox 使用当前裁剪的 0-1 归一化坐标：左上 [0,0]，右下 [1,1]。\n\n如果区域内还有看不清、被遮挡、太远或疑似漏检的子区域，列出最多 3 个 suspect_subregions（坐标用当前裁剪的归一化坐标）。\n\n只输出严格 JSON：\n{\n  \"counts\": {\"total\": 0, \"large\": 0, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.0, 0.0, 0.0, 0.0],\n      \"center\": [0.0, 0.0],\n      \"size\": \"large|medium|small|unknown\",\n      \"visible\": \"full|partial_top|partial_side|trailer_only\",\n      \"is_truck\": true,\n      \"cargo_color\": \"颜色\",\n      \"heading\": \"朝向镜头|背向镜头|横向|不确定\",\n      \"identity_clues\": \"复核线索\",\n      \"evidence\": \"定位与理由\",\n      \"uncertain\": false\n    }\n  ],\n  \"suspect_subregions\": [],\n  \"scene_notes\": \"...\"\n}",
+      "images": [
+        "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\node_R2_S1_S1.jpg"
+      ],
+      "requested_max_tokens": 1700,
+      "temperature": 0,
+      "ok": true,
+      "latency_s": 14.58,
+      "usage": {
+        "completion_tokens": 1640,
+        "prompt_tokens": 1768,
+        "total_tokens": 3408,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1117
+        }
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 1, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.0, 0.2, 0.68, 0.85],\n      \"center\": [0.34, 0.525],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"cargo_color\": \"深灰色\",\n      \"heading\": \"不确定\",\n      \"identity_clues\": \"带有“ORI卓为”字样的货厢\",\n      \"evidence\": \"画面左侧区域可见的带文字标识的货车货厢\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.71, 0.35, 0.95, 0.69],\n      \"center\": [0.83, 0.52],\n      \"size\": \"medium\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"cargo_color\": \"灰色\",\n      \"heading\": \"不确定\",\n      \"identity_clues\": \"灰色集装箱货厢\",\n      \"evidence\": \"画面右侧上方的独立灰色集装箱货厢\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.64, 0.68, 0.96, 0.998],\n      \"center\": [0.8, 0.839],\n      \"size\": \"medium\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"cargo_color\": \"蓝色\",\n      \"heading\": \"不确定\",\n      \"identity_clues\": \"蓝色集装箱货厢\",\n      \"evidence\": \"画面右侧下方的独立蓝色集装箱货厢\",\n      \"uncertain\": false\n    }\n  ],\n  \"suspect_subregions\": [],\n  \"scene_notes\": \"画面中可见3个独立的货车货厢/集装箱，左侧1个带文字标识，右侧上下各1个，上下两节货厢间有明确间隙，分别计数，无其他疑似车辆区域\"\n}",
+      "reasoning_text": "用户现在需要处理这个图片，数里面的货车。首先看图片，有几个？首先，左下角有个带“ORI卓为”的，然后右边有两个蓝色的货厢？不对，仔细看：第一个，<bbox>0 245 685 850</bbox>，这个是一个货车，货厢部分，带文字的。然后右边，<bbox>645 685 950 995</bbox>，这是一个蓝色的集装箱货厢，算一个。还有<bbox>715 365 950 700</bbox>，这个是灰色的货厢？不对，看，右边上下两个，上面那个是灰色的，下面是蓝色的？那这两个是分开的，因为中间有间隙？那总共有三个？不对，再看：\n\n1. 左侧的货车：bbox是[0, 0.2, 680, 0.85]，这个是带“ORI卓为”的，属于货车，货厢，颜色深色，朝向？不确定，visible是partial？不，这个是完整的货厢部分？\n2. 右侧上方的货厢：bbox[710, 0.35, 945, 695]，灰色，trailer_only。\n3. 右侧下方的货厢：bbox[640, 680, 955, 998]，蓝色，trailer_only。\n\n那总共有3辆？然后看counts，total是3，large？medium？small？不对，再确认规则：牵引车+挂车算一辆，独立的挂车算一辆。那这三个都是独立的货厢？那vehicles里三个。然后suspect_subregions有没有？比如有没有看不清的？比如上方的那个区域，<bbox>750 180 900 370</bbox>，那里有个人，还有个蓝色的灯，可能有没有车？不对，那个是人物，不算。再看，有没有其他？比如左上角的，没有。那scene_notes：画面中可见3个独立的集装箱货厢/货车货厢，分别位于左侧、右侧上方、右侧下方，符合计数规则。\n\n现在整理成JSON，要严格按照格式。首先counts的total是3，large？假设左侧的是large，右侧两个是medium？或者看大小，左侧的那个比较大，所以large=1，medium=2，small=0，unknown=0。然后vehicles数组三个元素：\n\n第一个：bbox [0.0, 0.2, 0.68, 0.85]，center [0.34, 0.525]，size large，visible partial？不，这个货厢大部分可见，visible是full？不对，被画面边缘截了吗？左边是画面边缘，所以partial_left？不过规则里visible选项是full|partial_top|partial_side|trailer_only。这个是货车的货厢，属于truck，cargo_color是深色（黑色/深灰），heading不确定，identity_clues是带有“ORI卓为”字样，evidence是左侧区域可见的带文字的货厢，属于货车，uncertain false。\n\n第二个：bbox [0.71, 0.35, 0.95, 0.69]，center [0.83, 0.52]，size medium，visible trailer_only，is_truck true，cargo_color灰色，heading不确定，identity_clues是灰色货厢，evidence是右侧上方的灰色集装箱货厢，uncertain false。\n\n第三个：bbox [0.64, 0.68, 0.96, 0.998]，center [0.8, 0.839]，size medium，visible trailer_only，is_truck true，cargo_color蓝色，heading不确定，identity_clues是蓝色集装箱货厢，evidence是右侧下方的蓝色集装箱货厢，uncertain false。\n\nsuspect_subregions：有没有？比如<bbox>0.0, 0.0, 0.1, 0.2]，左上角的区域，可能有部分车？不过不确定，或者<bbox>0.75, 0.15, 0.9, 0.35]，那里有个蓝色的灯，可能有没有车？不过最多3个，这里可能没有，所以suspect_subregions是空数组？\n\nscene_notes：画面中可见3个独立的货车货厢/集装箱，左侧1个带文字标识，右侧上下各1个，符合计数规则，无其他疑似车辆区域。\n\n现在检查是否符合规则：展台、建筑不算，人物不算，蓝色/灰色集装箱算，上下两节有间隙分别计数，对，右侧两个是上下排列，中间有间隙，所以分别算，左侧一个，总共3个。\n\n那现在写JSON，注意所有坐标都是归一化的，0-1。",
+      "finish_reason": "stop",
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 1,
+          "medium": 2,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.0,
+              0.2,
+              0.68,
+              0.85
+            ],
+            "center": [
+              0.34,
+              0.525
+            ],
+            "size": "large",
+            "visible": "partial_side",
+            "is_truck": true,
+            "cargo_color": "深灰色",
+            "heading": "不确定",
+            "identity_clues": "带有“ORI卓为”字样的货厢",
+            "evidence": "画面左侧区域可见的带文字标识的货车货厢",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.71,
+              0.35,
+              0.95,
+              0.69
+            ],
+            "center": [
+              0.83,
+              0.52
+            ],
+            "size": "medium",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "cargo_color": "灰色",
+            "heading": "不确定",
+            "identity_clues": "灰色集装箱货厢",
+            "evidence": "画面右侧上方的独立灰色集装箱货厢",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.64,
+              0.68,
+              0.96,
+              0.998
+            ],
+            "center": [
+              0.8,
+              0.839
+            ],
+            "size": "medium",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "cargo_color": "蓝色",
+            "heading": "不确定",
+            "identity_clues": "蓝色集装箱货厢",
+            "evidence": "画面右侧下方的独立蓝色集装箱货厢",
+            "uncertain": false
+          }
+        ],
+        "suspect_subregions": [],
+        "scene_notes": "画面中可见3个独立的货车货厢/集装箱，左侧1个带文字标识，右侧上下各1个，上下两节货厢间有明确间隙，分别计数，无其他疑似车辆区域"
+      }
+    },
+    {
+      "stage": "adjudicate:r0:2-4",
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "prompt": "这张图左边是整帧上下文，黄框标为 A、青框标为 B；右边是 A、B 的目标框内放大。放大图只保留各自候选框附近，框外相邻车辆不是比较对象。\n\n请判断 A 与 B 是否指向同一辆物理货车。\n\n判据：\n- 货厢/集装箱颜色与纹理、车头特征、朝向、在通道中的队列位置。\n- 如果 A 是 B 的车头、车顶、货厢局部或同一车被框了两次，应判为同一辆。\n- 如果一个框只覆盖同一辆车的上半部、另一个框覆盖下半部，但颜色、宽度和车道位置连续，应判为同一辆。\n- 一个框同时包含目标车和上方相邻车时，以两个框重叠的那辆车为准，不要把相邻车当成差异证据。\n- 结合左图看两个框在队列中的前后关系；右侧放大只用于看外观细节。\n- 如果颜色/纹理明显不同，或两车在队列中一前一后、车身不连续，判为不同。\n- 只根据可见外观判断；不要因为两个框在画面上重叠就自动判同一辆。\n\n只输出严格 JSON：\n{\n  \"same_vehicle\": true,\n  \"confidence\": 0.0,\n  \"reason\": \"具体外观/位置证据\",\n  \"if_different\": \"两辆分别是什么\"\n}",
+      "images": [
+        "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\pair_r0_02_04.jpg"
+      ],
+      "requested_max_tokens": 600,
+      "temperature": 0,
+      "ok": true,
+      "latency_s": 6.35,
+      "usage": {
+        "completion_tokens": 372,
+        "prompt_tokens": 1640,
+        "total_tokens": 2012,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 294
+        }
+      },
+      "raw_text": "{\n  \"same_vehicle\": true,\n  \"confidence\": 0.95,\n  \"reason\": \"A与B的放大图中货厢的颜色、纹理特征一致，在左图通道内属于同一辆货车的不同局部区域，位置连续，符合同一车辆的判定依据\",\n  \"if_different\": \"\"\n}",
+      "reasoning_text": "用户现在需要判断A和B是不是同一辆货车。首先看左图，黄框A和青框B，放大后A的放大图和B的放大图，还有左图里的位置，A的框在更前面？不对，看左图，通道里的货车，A的黄框和B的青框，它们的外观，放大后的细节，还有位置，应该是同一辆？不对，仔细看，左图里，A的框是上方的那个，B是下方？不，看左图，通道里，远处的货车，A的黄框和B的青框，其实是同一辆车的不同部分？不对，看放大图，A的放大图和B的放大图，看起来是同一个货厢的部分，颜色纹理一致，位置上，在队列里，A和B的框是同一辆车的上下部分？不对，左图里，那个通道里的蓝色货车，A的黄框和B的青框，都是这个货车的不同区域，所以应该是同一辆。那confidence应该高，比如0.95？理由是：A和B的放大图中货厢的颜色、纹理一致，在左图通道中属于同一辆货车的不同局部区域，位置连续，符合同一车辆的特征。然后if_different是空的，因为是同一辆。现在整理成JSON。",
+      "finish_reason": "stop",
+      "parsed": {
+        "same_vehicle": true,
+        "confidence": 0.95,
+        "reason": "A与B的放大图中货厢的颜色、纹理特征一致，在左图通道内属于同一辆货车的不同局部区域，位置连续，符合同一车辆的判定依据",
+        "if_different": ""
+      }
+    },
+    {
+      "stage": "adjudicate:r0:0-3",
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "prompt": "这张图左边是整帧上下文，黄框标为 A、青框标为 B；右边是 A、B 的目标框内放大。放大图只保留各自候选框附近，框外相邻车辆不是比较对象。\n\n请判断 A 与 B 是否指向同一辆物理货车。\n\n判据：\n- 货厢/集装箱颜色与纹理、车头特征、朝向、在通道中的队列位置。\n- 如果 A 是 B 的车头、车顶、货厢局部或同一车被框了两次，应判为同一辆。\n- 如果一个框只覆盖同一辆车的上半部、另一个框覆盖下半部，但颜色、宽度和车道位置连续，应判为同一辆。\n- 一个框同时包含目标车和上方相邻车时，以两个框重叠的那辆车为准，不要把相邻车当成差异证据。\n- 结合左图看两个框在队列中的前后关系；右侧放大只用于看外观细节。\n- 如果颜色/纹理明显不同，或两车在队列中一前一后、车身不连续，判为不同。\n- 只根据可见外观判断；不要因为两个框在画面上重叠就自动判同一辆。\n\n只输出严格 JSON：\n{\n  \"same_vehicle\": true,\n  \"confidence\": 0.0,\n  \"reason\": \"具体外观/位置证据\",\n  \"if_different\": \"两辆分别是什么\"\n}",
+      "images": [
+        "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\pair_r0_00_03.jpg"
+      ],
+      "requested_max_tokens": 600,
+      "temperature": 0,
+      "ok": true,
+      "latency_s": 5.94,
+      "usage": {
+        "completion_tokens": 535,
+        "prompt_tokens": 1640,
+        "total_tokens": 2175,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 431
+        }
+      },
+      "raw_text": "{\n  \"same_vehicle\": true,\n  \"confidence\": 0.95,\n  \"reason\": \"左图中黄色框A为完整的货车，青色框B为该货车的顶部区域；右侧放大图显示A是货车带编号的侧面，B是货车白色的顶部，二者属于同一辆货车的不同部分，位置连续，外观匹配\",\n  \"if_different\": \"无，A和B指向同一辆物理货车\"\n}",
+      "reasoning_text": "用户现在需要判断A和B是不是同一辆货车。首先看左图，黄框A是一个长的货车，青框B在A的上方，是同一辆货车的顶部部分？不对，看右图，A的放大是整个货车的侧面（带编号的那个），B的放大是货车的顶部。然后看左图里，A框和B框的位置，B在A的上方，是同一辆车的不同部分？不对，仔细看：左图中，黄色框A是一个完整的货车（从底部到顶部的部分），青色框B是在A框的上方，属于同一辆货车的顶部区域。然后看外观，右图A的放大是货车的侧面（有编号，深色的部分），B的放大是货车的白色顶部，颜色和纹理，还有位置，在左图里，B是A的上方，同一辆车的不同部分，所以应该是同一辆。那confidence应该是高的，比如0.9？理由是：左图中A框为完整货车，B框为该货车的顶部区域，右图放大可见A是货车侧面（带编号），B是货车白色顶部，二者属于同一辆货车的不同部分，位置连续，外观匹配。if_different的话，因为是同一辆，所以应该写“无，二者为同一辆货车”？不对，再仔细看：左图里，A的黄框是一个长的货车，B的青框在A的上方，是同一辆车的顶部，所以确实是同一辆。那整理成JSON：\n\n首先same_vehicle是true，confidence比如0.95，理由是“左图中黄色框A为完整的货车，青色框B为该货车的顶部区域；右侧放大图显示A是货车带编号的侧面，B是货车白色的顶部，二者属于同一辆货车的不同部分，位置连续，外观匹配”，if_different是“无，A和B指向同一辆物理货车”。",
+      "finish_reason": "stop",
+      "parsed": {
+        "same_vehicle": true,
+        "confidence": 0.95,
+        "reason": "左图中黄色框A为完整的货车，青色框B为该货车的顶部区域；右侧放大图显示A是货车带编号的侧面，B是货车白色的顶部，二者属于同一辆货车的不同部分，位置连续，外观匹配",
+        "if_different": "无，A和B指向同一辆物理货车"
+      }
+    },
+    {
+      "stage": "adjudicate:r0:1-2",
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "prompt": "这张图左边是整帧上下文，黄框标为 A、青框标为 B；右边是 A、B 的目标框内放大。放大图只保留各自候选框附近，框外相邻车辆不是比较对象。\n\n请判断 A 与 B 是否指向同一辆物理货车。\n\n判据：\n- 货厢/集装箱颜色与纹理、车头特征、朝向、在通道中的队列位置。\n- 如果 A 是 B 的车头、车顶、货厢局部或同一车被框了两次，应判为同一辆。\n- 如果一个框只覆盖同一辆车的上半部、另一个框覆盖下半部，但颜色、宽度和车道位置连续，应判为同一辆。\n- 一个框同时包含目标车和上方相邻车时，以两个框重叠的那辆车为准，不要把相邻车当成差异证据。\n- 结合左图看两个框在队列中的前后关系；右侧放大只用于看外观细节。\n- 如果颜色/纹理明显不同，或两车在队列中一前一后、车身不连续，判为不同。\n- 只根据可见外观判断；不要因为两个框在画面上重叠就自动判同一辆。\n\n只输出严格 JSON：\n{\n  \"same_vehicle\": true,\n  \"confidence\": 0.0,\n  \"reason\": \"具体外观/位置证据\",\n  \"if_different\": \"两辆分别是什么\"\n}",
+      "images": [
+        "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\pair_r0_01_02.jpg"
+      ],
+      "requested_max_tokens": 600,
+      "temperature": 0,
+      "ok": true,
+      "latency_s": 8.18,
+      "usage": {
+        "completion_tokens": 773,
+        "prompt_tokens": 1640,
+        "total_tokens": 2413,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 661
+        }
+      },
+      "raw_text": "{\n  \"same_vehicle\": false,\n  \"confidence\": 0.95,\n  \"reason\": \"左图中A、B处于通道队列的不同位置，A在靠后位置，B在靠前位置，车身不连续；右侧放大图中A的货厢为深色带蓝色顶部，B的目标区域外观与A不匹配，属于两辆不同的货车\",\n  \"if_different\": \"A是通道中靠后的货车，B是通道中靠前的货车\"\n}",
+      "reasoning_text": "\n用户现在需要判断A和B是不是同一辆货车，首先看左图，黄框A是下方的那个货车，青框B是上方的那个，在通道里一前一后对吧？然后看右边的放大图，A的放大是深色的货厢，顶部是蓝色的？不对，A的放大图是那个竖的，顶部蓝色，下面深色；B的放大图是小的，顶部也是蓝色？不对，看左图，A框的车是在通道中间偏下，B框的车在A的正上方，也就是队列里B在A前面？不对，时间是22点多，通道里的车，A的框是下方的大货车，B是上方的小的，两个是前后不同的车对吧？然后看外观，A的放大图是完整的货厢部分，B的是小的，而且位置上A在B后面，是两辆不同的车？不对，等下仔细看：左图里，黄框A的车，是那个长的，在通道中间，从下往上数，第一个货车是A，第二个在它上方是B，所以是两辆，一前一后，颜色的话，A的货厢是深色，顶部蓝色，B的那个小的，顶部也是蓝色？不对，不对，看放大图，A的放大图是<point>876 285</point>，那个是货车的侧面，顶部蓝色，下面深色；B的放大图是<point>878 685</point>，那个是货车的顶部？不对，B的框在左图是<point>261 215</point>，是上方的那个小的，所以B是前面的车，A是后面的，两个是不同的车，对吧？所以same_vehicle是false，confidence应该是高，比如0.9？理由是：左图中A和B在通道队列里一前一后，位置不连续，右侧放大图A的货厢为深色带蓝色顶部，B的目标区域为另一辆车的局部，外观不匹配，是两辆不同的货车。然后if_different是“A为通道中靠后的货车，B为通道中靠前的货车”。\n\n等下再确认判据：如果两车在队列中一前一后，车身不连续，判不同。对，左图里A的框是下方的大货车，B是上方的小的，中间是分开的，所以是两辆。那整理成JSON：\n\n{\n  \"same_vehicle\": false,\n  \"confidence\": 0.95,\n  \"reason\": \"左图中A、B位于通道队列的不同位置，A在靠后位置，B在靠前位置，车身不连续；右侧放大图中A的货厢为深色带蓝色顶部，B的目标区域外观与A不匹配，属于两辆不同的货车\",\n  \"if_different\": \"A是通道中靠后的货车，B是通道中靠前的货车\"\n}\n\n对，这样就对了。",
+      "finish_reason": "stop",
+      "parsed": {
+        "same_vehicle": false,
+        "confidence": 0.95,
+        "reason": "左图中A、B处于通道队列的不同位置，A在靠后位置，B在靠前位置，车身不连续；右侧放大图中A的货厢为深色带蓝色顶部，B的目标区域外观与A不匹配，属于两辆不同的货车",
+        "if_different": "A是通道中靠后的货车，B是通道中靠前的货车"
+      }
+    },
+    {
+      "stage": "type_review:1",
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "prompt": "这是一辆已确认货车候选的放大裁剪。黄色边框是候选框。请只复核候选框内的目标车辆，不要重新数画面里有多少辆车。\n\n计数口径（必须遵守）：\n1. 牵引车 + 半挂/集装箱挂车 = 1 辆；车头与货厢不得拆成两辆。\n2. 只看到货厢/集装箱，但能看出它属于通道内的货车（有底盘、支腿、鞍座、与前后车成队列，或明显是运输挂车）时，算 1 辆，visible 标为 trailer_only。蓝色、灰色、白色的集装箱货厢都要检查。\n3. 展台、建筑、墙体、货架、装饰物、叉车、轿车、面包车、手推车、工程机械、人物都不计入。\n4. 只统计本图实际可见的车辆；完全被挡住或只在画面外的不要猜。\n5. 车头或货厢只露出局部、但仍能确定是货车时计入，并在 visible 中说明；无法确定时 uncertain=true。\n6. 车型：large=重卡/半挂/长货厢；medium=两轴或三轴中卡/中型厢车；small=轻卡/小型厢式货车。只看到货厢时按货厢长度相对通道宽度、车顶长宽比估计；不确定就写 unknown，不要硬分。\n7. 不要把同一辆车的车头框和货厢框分别输出。bbox 要框住整辆可见车辆的联合外接框。\n\n重点：\n- 框内可能同时露出上/下/侧边相邻车辆的局部货厢；相邻车辆不属于目标，不能当作目标的挂车。\n- 先找目标的驾驶室/挡风玻璃/格栅。若框内主体是车头，并且没有与它连续相连的长货厢，body_kind 必须是 cab_only，size 必须是 medium；画面上方别人的货厢不能改变这一点。\n- 用整车轮廓、车顶长宽比、轴数、货厢长度与通道宽度的比例判断 large/medium/small。\n- 只看到货厢时按货厢长度和车顶比例判断；证据不足就输出 unknown。\n- 不要因为车看起来大就一律判 large；两轴/三轴中卡应为 medium。\n- 只有牵引车头、没有挂车或长货厢的，按 medium；牵引车 + 长集装箱/长货厢才按 large。\n- 蓝色招牌、展台墙板、广告牌不是货厢。\n\n只输出严格 JSON：\n{\n  \"is_truck\": true,\n  \"size\": \"large|medium|small|unknown\",\n  \"body_kind\": \"cab_only|tractor_with_trailer|rigid_truck|trailer_only|unknown\",\n  \"has_trailer\": false,\n  \"confidence\": 0.0,\n  \"reason\": \"车型判断依据\",\n  \"needs_review\": false\n}",
+      "images": [
+        "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\type_01.jpg"
+      ],
+      "requested_max_tokens": 500,
+      "temperature": 0,
+      "ok": true,
+      "latency_s": 10.1,
+      "usage": {
+        "completion_tokens": 1031,
+        "prompt_tokens": 1947,
+        "total_tokens": 2978,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 929
+        }
+      },
+      "raw_text": "{\n  \"is_truck\": true,\n  \"size\": \"large\",\n  \"body_kind\": \"trailer_only\",\n  \"has_trailer\": false,\n  \"confidence\": 0.95,\n  \"reason\": \"黄色边框内为通道内的白色集装箱货厢，属于运输挂车，仅可见货厢部分，无牵引车，货厢长度较长，符合大型货车挂车特征\",\n  \"needs_review\": false\n}",
+      "reasoning_text": "用户现在需要处理这个货车候选的复核，首先看图片里的黄色边框内的目标，是一个集装箱挂车，属于货车，首先is_truck是true。然后size，这个集装箱看起来比较长，属于large？不对，先看body_kind，这里只看到货厢，是trailer_only？不对，看计数口径，只看到货厢但属于通道内的货车，有底盘之类的，所以body_kind是trailer_only？然后has_trailer，这里是trailer_only，所以has_trailer？不对，has_trailer是指牵引车有没有挂车？不，看定义，trailer_only的话，has_trailer应该是？不对，先理清楚：\n\n首先，目标是黄色框内的，是一个集装箱的货厢，属于货车，只看到货厢，所以is_truck=true。size：这个货厢的长度，看起来是大型集装箱，所以size是large？body_kind：trailer_only，因为只看到货厢，是挂车。has_trailer：这里是trailer_only，所以has_trailer？不对，has_trailer的定义，看计数口径1是牵引车+挂车算1辆，这里如果是trailer_only，那has_trailer应该是？不对，看字段：has_trailer是指牵引车是否有挂车？但这里是trailer_only，也就是只有挂车，没有看到牵引车，所以has_trailer？不对，再看reason：黄色框内是一个白色的集装箱货厢，属于通道内的运输挂车，只可见货厢部分，符合trailer_only的情况，货厢长度较长，属于大型，所以size是large，is_truck=true，body_kind=trailer_only，has_trailer？不对，trailer_only的话，has_trailer应该是false？不，不对，trailer是挂车，所以如果是trailer_only，那这个是挂车，没有牵引车，所以has_trailer？哦，字段has_trailer是指该车辆（如果是牵引车的话）是否有挂车，而如果是trailer_only，那这个是挂车，所以has_trailer应该是？不对，看问题里的字段，再仔细看：\n\n现在看图片，黄色框内的目标，是一个长的白色集装箱，底部有深色的部分，应该是挂车，所以：\n\nis_truck: true，因为是货车的挂车。size: large，因为货厢很长，属于大型。body_kind: trailer_only，因为只看到货厢，没有看到牵引车。has_trailer: false？不对，trailer本身是挂车，所以如果是trailer_only，那这个是挂车，不是牵引车，所以has_trailer不适用？不对，再看reason：“黄色边框内为一白色集装箱货厢，属于通道内的运输挂车，仅可见货厢部分，无牵引车可见，货厢长度较长，判定为大型货车挂车”。confidence应该是0.9吧，因为明显是货车的集装箱。needs_review是false。\n\n现在整理成JSON：\n\n{\n  \"is_truck\": true,\n  \"size\": \"large\",\n  \"body_kind\": \"trailer_only\",\n  \"has_trailer\": false,\n  \"confidence\": 0.95,\n  \"reason\": \"黄色边框内为通道内的白色集装箱货厢，属于运输挂车，仅可见货厢部分，无牵引车，货厢长度较长，符合大型货车挂车特征\",\n  \"needs_review\": false\n}\n\n对吗？再检查计数口径：2. 只看到货厢/集装箱，但能看出它属于通道内的货车（有底盘、支腿、鞍座、与前后车成队列，或明显是运输挂车）时，算1辆，visible标为trailer_only。是的，这个符合。size的话，集装箱是大型的，所以large。body_kind是trailer_only，has_trailer：因为这个是挂车，不是牵引车，所以has_trailer是false？或者是不是？不对，has_trailer的定义，看字段说明，has_trailer应该是指该车辆是否带有挂车，对于trailer_only来说，它本身是挂车，所以has_trailer应该是false，因为它没有挂车，它自己是挂车。对的。confidence很高，因为明显是货车的集装箱，所以0.95。needs_review是false。",
+      "finish_reason": "stop",
+      "parsed": {
+        "is_truck": true,
+        "size": "large",
+        "body_kind": "trailer_only",
+        "has_trailer": false,
+        "confidence": 0.95,
+        "reason": "黄色边框内为通道内的白色集装箱货厢，属于运输挂车，仅可见货厢部分，无牵引车，货厢长度较长，符合大型货车挂车特征",
+        "needs_review": false
+      }
+    },
+    {
+      "stage": "type_review:2",
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "prompt": "这是一辆已确认货车候选的放大裁剪。黄色边框是候选框。请只复核候选框内的目标车辆，不要重新数画面里有多少辆车。\n\n计数口径（必须遵守）：\n1. 牵引车 + 半挂/集装箱挂车 = 1 辆；车头与货厢不得拆成两辆。\n2. 只看到货厢/集装箱，但能看出它属于通道内的货车（有底盘、支腿、鞍座、与前后车成队列，或明显是运输挂车）时，算 1 辆，visible 标为 trailer_only。蓝色、灰色、白色的集装箱货厢都要检查。\n3. 展台、建筑、墙体、货架、装饰物、叉车、轿车、面包车、手推车、工程机械、人物都不计入。\n4. 只统计本图实际可见的车辆；完全被挡住或只在画面外的不要猜。\n5. 车头或货厢只露出局部、但仍能确定是货车时计入，并在 visible 中说明；无法确定时 uncertain=true。\n6. 车型：large=重卡/半挂/长货厢；medium=两轴或三轴中卡/中型厢车；small=轻卡/小型厢式货车。只看到货厢时按货厢长度相对通道宽度、车顶长宽比估计；不确定就写 unknown，不要硬分。\n7. 不要把同一辆车的车头框和货厢框分别输出。bbox 要框住整辆可见车辆的联合外接框。\n\n重点：\n- 框内可能同时露出上/下/侧边相邻车辆的局部货厢；相邻车辆不属于目标，不能当作目标的挂车。\n- 先找目标的驾驶室/挡风玻璃/格栅。若框内主体是车头，并且没有与它连续相连的长货厢，body_kind 必须是 cab_only，size 必须是 medium；画面上方别人的货厢不能改变这一点。\n- 用整车轮廓、车顶长宽比、轴数、货厢长度与通道宽度的比例判断 large/medium/small。\n- 只看到货厢时按货厢长度和车顶比例判断；证据不足就输出 unknown。\n- 不要因为车看起来大就一律判 large；两轴/三轴中卡应为 medium。\n- 只有牵引车头、没有挂车或长货厢的，按 medium；牵引车 + 长集装箱/长货厢才按 large。\n- 蓝色招牌、展台墙板、广告牌不是货厢。\n\n只输出严格 JSON：\n{\n  \"is_truck\": true,\n  \"size\": \"large|medium|small|unknown\",\n  \"body_kind\": \"cab_only|tractor_with_trailer|rigid_truck|trailer_only|unknown\",\n  \"has_trailer\": false,\n  \"confidence\": 0.0,\n  \"reason\": \"车型判断依据\",\n  \"needs_review\": false\n}",
+      "images": [
+        "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\type_02.jpg"
+      ],
+      "requested_max_tokens": 500,
+      "temperature": 0,
+      "ok": true,
+      "latency_s": 5.98,
+      "usage": {
+        "completion_tokens": 649,
+        "prompt_tokens": 1968,
+        "total_tokens": 2617,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 563
+        }
+      },
+      "raw_text": "{\n  \"is_truck\": true,\n  \"size\": \"large\",\n  \"body_kind\": \"trailer_only\",\n  \"has_trailer\": false,\n  \"confidence\": 0.9,\n  \"reason\": \"候选框内可见蓝色集装箱货厢，为运输挂车，属于货车范畴，符合计数要求\",\n  \"needs_review\": false\n}",
+      "reasoning_text": "\n我现在要处理用户的请求，首先看图片里的候选框，是货车的货厢部分，蓝色的货厢，能看到是挂车类的？不对，先仔细看：候选框里的是货车的货厢，属于trailer_only？然后is_truck是true，size的话，货厢看起来比较长，应该是large？body_kind是trailer_only，has_trailer是false？不对，trailer_only的话has_trailer？等下看计数口径：\n首先，候选框里的目标是蓝色的货厢，是运输挂车，所以body_kind是trailer_only，is_truck是true，size的话，货厢长度，相对通道宽度，应该是large？confidence的话，因为能确定是货车的货厢，所以比如0.9？reason是“候选框内可见蓝色集装箱货厢，属于运输挂车，符合货车计数口径”，needs_review是false。\n等下再核对规则：\n1. 牵引车+挂车是1辆，这里只看到货厢，属于trailer_only，所以body_kind是trailer_only。\nsize：货厢是长的，属于large？对，因为是半挂的货厢，所以size是large。\nhas_trailer：trailer_only的话，has_trailer？不对，has_trailer是指牵引车有没有挂车？trailer_only的话，本身是挂车，所以has_trailer应该是false？或者看规则里的has_trailer字段，规则里的has_trailer应该是指该车辆是否带有挂车？如果是trailer_only，那它是挂车，本身没有带挂车，所以has_trailer是false。\nconfidence：0.9，因为能明确是货车的货厢，不是其他东西。\nreason：“候选框内可见蓝色集装箱货厢，为运输挂车，属于货车范畴，符合计数要求”。\n然后整理成严格的JSON，注意格式正确，没有多余内容。\n等下再检查有没有错误：\n- 有没有把人物算进去？没有，候选框里的是货车的货厢，人物在旁边，不计入。\n- 是不是只看候选框内的？是的，候选框是黄色边框，里面的主体是蓝色货厢，是货车的一部分，属于trailer_only。\n- size：large，因为货厢较长，属于大型的。\n- body_kind：trailer_only，因为只看到货厢，属于运输挂车。\n- is_truck：true。\n- confidence：0.9。\n- needs_review：false。\n对，这样就对了。",
+      "finish_reason": "stop",
+      "parsed": {
+        "is_truck": true,
+        "size": "large",
+        "body_kind": "trailer_only",
+        "has_trailer": false,
+        "confidence": 0.9,
+        "reason": "候选框内可见蓝色集装箱货厢，为运输挂车，属于货车范畴，符合计数要求",
+        "needs_review": false
+      }
+    },
+    {
+      "stage": "type_review:3",
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "prompt": "这是一辆已确认货车候选的放大裁剪。黄色边框是候选框。请只复核候选框内的目标车辆，不要重新数画面里有多少辆车。\n\n计数口径（必须遵守）：\n1. 牵引车 + 半挂/集装箱挂车 = 1 辆；车头与货厢不得拆成两辆。\n2. 只看到货厢/集装箱，但能看出它属于通道内的货车（有底盘、支腿、鞍座、与前后车成队列，或明显是运输挂车）时，算 1 辆，visible 标为 trailer_only。蓝色、灰色、白色的集装箱货厢都要检查。\n3. 展台、建筑、墙体、货架、装饰物、叉车、轿车、面包车、手推车、工程机械、人物都不计入。\n4. 只统计本图实际可见的车辆；完全被挡住或只在画面外的不要猜。\n5. 车头或货厢只露出局部、但仍能确定是货车时计入，并在 visible 中说明；无法确定时 uncertain=true。\n6. 车型：large=重卡/半挂/长货厢；medium=两轴或三轴中卡/中型厢车；small=轻卡/小型厢式货车。只看到货厢时按货厢长度相对通道宽度、车顶长宽比估计；不确定就写 unknown，不要硬分。\n7. 不要把同一辆车的车头框和货厢框分别输出。bbox 要框住整辆可见车辆的联合外接框。\n\n重点：\n- 框内可能同时露出上/下/侧边相邻车辆的局部货厢；相邻车辆不属于目标，不能当作目标的挂车。\n- 先找目标的驾驶室/挡风玻璃/格栅。若框内主体是车头，并且没有与它连续相连的长货厢，body_kind 必须是 cab_only，size 必须是 medium；画面上方别人的货厢不能改变这一点。\n- 用整车轮廓、车顶长宽比、轴数、货厢长度与通道宽度的比例判断 large/medium/small。\n- 只看到货厢时按货厢长度和车顶比例判断；证据不足就输出 unknown。\n- 不要因为车看起来大就一律判 large；两轴/三轴中卡应为 medium。\n- 只有牵引车头、没有挂车或长货厢的，按 medium；牵引车 + 长集装箱/长货厢才按 large。\n- 蓝色招牌、展台墙板、广告牌不是货厢。\n\n只输出严格 JSON：\n{\n  \"is_truck\": true,\n  \"size\": \"large|medium|small|unknown\",\n  \"body_kind\": \"cab_only|tractor_with_trailer|rigid_truck|trailer_only|unknown\",\n  \"has_trailer\": false,\n  \"confidence\": 0.0,\n  \"reason\": \"车型判断依据\",\n  \"needs_review\": false\n}",
+      "images": [
+        "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\type_03.jpg"
+      ],
+      "requested_max_tokens": 500,
+      "temperature": 0,
+      "ok": true,
+      "latency_s": 12.94,
+      "usage": {
+        "completion_tokens": 1208,
+        "prompt_tokens": 1952,
+        "total_tokens": 3160,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1112
+        }
+      },
+      "raw_text": "{\n  \"is_truck\": true,\n  \"size\": \"large\",\n  \"body_kind\": \"trailer_only\",\n  \"has_trailer\": false,\n  \"confidence\": 0.9,\n  \"reason\": \"候选框内可见货车的运输挂车货厢，属于通道内的运输挂车，符合货车计数标准，可明确识别为货车相关目标\",\n  \"needs_review\": false\n}",
+      "reasoning_text": "\n我现在要处理用户的请求，首先看图片里的候选框，里面的是货车的货厢部分对吧？首先，先确定：\n1. is_truck：是，因为是货车的货厢，属于运输挂车，所以是true。\n2. size：看货厢的长度，相对通道的话，这个货厢看起来比较长？不对，等下，看描述，只看到货厢的话，按货厢长度和车顶比例，这里的货厢（那个带数字的），还有上面的部分，应该是trailer_only？\n然后body_kind：因为只看到货厢，属于通道内的货车挂车，所以body_kind是trailer_only。\nhas_trailer：因为是trailer_only，所以has_trailer是true？不对，等下看计数口径：\n计数口径2：只看到货厢/集装箱，能看出属于通道内的货车（有底盘、支腿、鞍座、队列等），算1辆，visible标为trailer_only。\n然后size：这个货厢的长度，看起来是比较长的，所以size是large？\nconfidence：因为能确定是货车的挂车，所以confidence高，比如0.9？\nreason：候选框内可见货车的集装箱/货厢部分，属于运输挂车，符合货车计数标准。\nneeds_review：false。\n等下再理清楚每个字段：\nis_truck：true，因为是货车的挂车，属于货车。\nsize：large，因为货厢长度较长，属于大型挂车。\nbody_kind：trailer_only，因为只看到货厢部分，没有看到牵引车。\nhas_trailer：这里，trailer本身是挂车，那has_trailer？不对，看字段定义，has_trailer应该是指牵引车是否有挂车？不对，看计数口径1是牵引车+挂车算1辆，那如果是trailer_only的话，has_trailer应该是？不对，再看用户给的字段：\n看输出的字段：\n\"has_trailer\": false？不对，等下，trailer_only是只看到挂车，那这个挂车本身是被牵引的，那has_trailer应该是true？不对，可能我理解错，再看用户的计数口径：\n再看用户的要求，现在看图片里的候选框，里面的是货车的货厢，也就是挂车部分，没有看到牵引车，所以：\nis_truck: true，因为是货车的挂车，属于货车范畴。\nsize: large，因为货厢的长度，从图里看，这个货厢比较长，属于大型的。\nbody_kind: trailer_only，因为只看到货厢，没有看到牵引车。\nhas_trailer: 这里，trailer是挂车，那对于这个车来说，它是挂车，所以has_trailer？不对，可能has_trailer是指该车辆是否带有挂车，那如果是trailer_only，它本身是挂车，所以has_trailer应该是false？不对，不对，再看用户的计数口径1：牵引车+挂车=1辆，所以如果是单独的挂车，那它是trailer_only，属于货车的一种（运输挂车），所以has_trailer的话，应该是？哦，可能我搞错了，再看用户给的字段说明，比如body_kind的选项：cab_only, tractor_with_trailer, rigid_truck, trailer_only, unknown。那trailer_only的话，has_trailer应该是false？不对，trailer是被牵引的，所以它自己没有挂车，所以has_trailer是false？\n然后confidence：0.9，因为能明确看到是货车的货厢，属于运输挂车。\nreason：候选框内可见属于货车的运输挂车货厢，符合计数标准，无遮挡，可确定为货车。\nneeds_review: false。\n等下再确认，有没有其他问题，比如有没有把其他东西算进去，候选框里的是货车的货厢，对吧？是的，所以：\n现在整理成严格的JSON：\n{\n  \"is_truck\": true,\n  \"size\": \"large\",\n  \"body_kind\": \"trailer_only\",\n  \"has_trailer\": false,\n  \"confidence\": 0.9,\n  \"reason\": \"候选框内可见货车的运输挂车货厢，属于通道内的运输挂车，符合货车计数标准，可明确识别为货车相关目标\",\n  \"needs_review\": false\n}\n对吗？再检查每个字段：\nis_truck：true，正确，因为是货车的挂车。\nsize：large，因为货厢长度较长，属于大型，正确。\nbody_kind：trailer_only，正确，因为只看到货厢，没有牵引车。\nhas_trailer：false，因为这个是挂车本身，不是牵引车带挂车，所以它自己没有挂车，正确。\nconfidence：0.9，合理，因为清晰可见是货车货厢。\nreason：正确，说明依据。\nneeds_review：false，正确，不需要复核。\n有没有违反什么规则？比如，没有把相邻的算进去，候选框内的就是这个货厢，所以正确。",
+      "finish_reason": "stop",
+      "parsed": {
+        "is_truck": true,
+        "size": "large",
+        "body_kind": "trailer_only",
+        "has_trailer": false,
+        "confidence": 0.9,
+        "reason": "候选框内可见货车的运输挂车货厢，属于通道内的运输挂车，符合货车计数标准，可明确识别为货车相关目标",
+        "needs_review": false
+      }
+    },
+    {
+      "stage": "type_review:4",
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "prompt": "这是一辆已确认货车候选的放大裁剪。黄色边框是候选框。请只复核候选框内的目标车辆，不要重新数画面里有多少辆车。\n\n计数口径（必须遵守）：\n1. 牵引车 + 半挂/集装箱挂车 = 1 辆；车头与货厢不得拆成两辆。\n2. 只看到货厢/集装箱，但能看出它属于通道内的货车（有底盘、支腿、鞍座、与前后车成队列，或明显是运输挂车）时，算 1 辆，visible 标为 trailer_only。蓝色、灰色、白色的集装箱货厢都要检查。\n3. 展台、建筑、墙体、货架、装饰物、叉车、轿车、面包车、手推车、工程机械、人物都不计入。\n4. 只统计本图实际可见的车辆；完全被挡住或只在画面外的不要猜。\n5. 车头或货厢只露出局部、但仍能确定是货车时计入，并在 visible 中说明；无法确定时 uncertain=true。\n6. 车型：large=重卡/半挂/长货厢；medium=两轴或三轴中卡/中型厢车；small=轻卡/小型厢式货车。只看到货厢时按货厢长度相对通道宽度、车顶长宽比估计；不确定就写 unknown，不要硬分。\n7. 不要把同一辆车的车头框和货厢框分别输出。bbox 要框住整辆可见车辆的联合外接框。\n\n重点：\n- 框内可能同时露出上/下/侧边相邻车辆的局部货厢；相邻车辆不属于目标，不能当作目标的挂车。\n- 先找目标的驾驶室/挡风玻璃/格栅。若框内主体是车头，并且没有与它连续相连的长货厢，body_kind 必须是 cab_only，size 必须是 medium；画面上方别人的货厢不能改变这一点。\n- 用整车轮廓、车顶长宽比、轴数、货厢长度与通道宽度的比例判断 large/medium/small。\n- 只看到货厢时按货厢长度和车顶比例判断；证据不足就输出 unknown。\n- 不要因为车看起来大就一律判 large；两轴/三轴中卡应为 medium。\n- 只有牵引车头、没有挂车或长货厢的，按 medium；牵引车 + 长集装箱/长货厢才按 large。\n- 蓝色招牌、展台墙板、广告牌不是货厢。\n\n只输出严格 JSON：\n{\n  \"is_truck\": true,\n  \"size\": \"large|medium|small|unknown\",\n  \"body_kind\": \"cab_only|tractor_with_trailer|rigid_truck|trailer_only|unknown\",\n  \"has_trailer\": false,\n  \"confidence\": 0.0,\n  \"reason\": \"车型判断依据\",\n  \"needs_review\": false\n}",
+      "images": [
+        "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\tree\\north_300\\type_04.jpg"
+      ],
+      "requested_max_tokens": 500,
+      "temperature": 0,
+      "ok": true,
+      "latency_s": 11.31,
+      "usage": {
+        "completion_tokens": 1174,
+        "prompt_tokens": 1932,
+        "total_tokens": 3106,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1075
+        }
+      },
+      "raw_text": "{\n  \"is_truck\": true,\n  \"size\": \"large\",\n  \"body_kind\": \"trailer_only\",\n  \"has_trailer\": false,\n  \"confidence\": 0.85,\n  \"reason\": \"候选框内可见带有'卓力'字样标识的货车货厢，属于通道内的运输挂车，货厢长度较长，符合大型货车特征\",\n  \"needs_review\": false\n}",
+      "reasoning_text": "\n我现在要处理用户的请求，先仔细看图片里的候选框内容。首先，候选框里的是货车的部分，有“UORI卓力”的字样，看起来是牵引车加挂车？不对，先看可见的：首先，能看到的是货车的货厢部分？不对，看规则，首先is_truck是true吗？然后看body_kind，这里能看到的是类似半挂的？不对，仔细看，图里的候选框内，有货车的结构，有类似货厢的部分，还有梯子之类的，不过根据文字“UORI卓力”，卓力是做起重设备？不对，不对，看规则，首先，目标是货车，候选框里的是货车的一部分，能看到的是，有货厢的结构，还有，有没有车头？不对，图里的候选框里，下方有“UORI卓力”的字样，应该是货车的标识，然后看，body_kind：这里能看到的是，有货厢，还有，是不是牵引车加挂车？不对，再看规则：首先，is_truck=true，因为是货车。size：看货厢的长度，相对的，应该是large？不对，或者看，有没有trailer？has_trailer：如果是牵引车加挂车就是true。confidence：因为能看到明显的货车结构，标识，所以confidence高，比如0.9？reason：候选框内可见带有“UORI卓力”标识的货车，包含货厢结构，属于半挂类货车，符合大型货车特征。needs_review：false？不对，等下，再仔细看，图里的候选框，是不是只看到货厢？不对，看规则里的trailer_only的情况：只看到货厢，属于通道内的货车，有底盘之类的，算1辆。那body_kind是trailer_only？不对，再看，有没有车头？图里的右侧有个人，还有梯子，中间的结构，下方的“UORI卓力”是白色字体在深色背景上，应该是货车的货厢侧面的标识。那size：货厢看起来比较长，所以是large？has_trailer：如果是trailer_only的话，has_trailer是false？不对，has_trailer的定义：牵引车加挂车的话has_trailer是true，trailer_only的话，has_trailer是false？不对，看规则里的has_trailer字段：应该是指是否有挂车（即是否是牵引车带挂车）。那现在，候选框里的是货厢，属于trailer_only，那is_truck=true，size=large，body_kind=trailer_only，has_trailer=false，confidence=0.85，reason=\"候选框内可见带有标识的货车货厢，属于通道内的运输挂车，货厢长度较长，判定为大型货车\"，needs_review=false？不对，等下，有没有可能我错了？再看规则：只看到货厢，能看出是通道内的货车，有底盘之类的，算trailer_only。那再确认：is_truck是true，因为是货车的货厢，属于挂车，所以body_kind是trailer_only，size是large，has_trailer是false（因为trailer本身是挂车，没有牵引车），confidence：0.8，因为能看到明显的货车货厢结构，标识，reason：\"候选框内可见带有'卓力'字样标识的货车货厢，属于通道内的运输挂车，货厢长度较长，符合大型货车特征\"，needs_review=false。对吗？再检查规则：不要把广告牌当货厢，这里的“UORI卓力”是在货厢侧面，不是广告牌，因为是在货车的结构上。然后，有没有其他车辆？规则说只复核候选框内的，不要管其他。那现在整理成严格的JSON：\n\n等下，再看body_kind的选项：cab_only（只有车头），tractor_with_trailer（牵引车带挂车），rigid_truck（整体式货车，车头货厢一体），trailer_only（只有挂车），unknown。现在候选框里的是货厢，没有看到车头，所以body_kind是trailer_only。size：货厢看起来比较长，所以是large。has_trailer：因为是trailer_only，所以has_trailer是false？不对，has_trailer的定义，规则里的计数口径1是牵引车+挂车=1辆，has_trailer应该是指是否存在挂车（即是否是牵引车带挂车），如果是trailer_only，那has_trailer是false，因为它本身是挂车，没有牵引车。confidence：0.8，因为能确定是货车货厢，reason：\"候选框内可见带有'卓力'字样标识的货车货厢，属于通道内的运输挂车，货厢长度较长，判定为大型货车\"，needs_review=false，is_truck=true。对，这样应该对。",
+      "finish_reason": "stop",
+      "parsed": {
+        "is_truck": true,
+        "size": "large",
+        "body_kind": "trailer_only",
+        "has_trailer": false,
+        "confidence": 0.85,
+        "reason": "候选框内可见带有'卓力'字样标识的货车货厢，属于通道内的运输挂车，货厢长度较长，符合大型货车特征",
+        "needs_review": false
+      }
+    }
+  ],
+  "cost": {
+    "calls": 14,
+    "failed_calls": 0,
+    "latency_s": 180.4,
+    "prompt_tokens": 25049,
+    "completion_tokens": 19599,
+    "total_tokens": 44648
+  },
+  "wall_s": 181.08
+}

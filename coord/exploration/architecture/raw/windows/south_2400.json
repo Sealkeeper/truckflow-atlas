@@ -1,0 +1,1249 @@
+{
+  "architecture": "windows",
+  "camera": "south",
+  "time": 2400,
+  "frame": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\south_2400.jpg",
+  "gold": {
+    "camera": "south",
+    "time": 2400,
+    "total": 3,
+    "large": 2,
+    "medium": 1,
+    "small": 0,
+    "review": true
+  },
+  "windows": [
+    {
+      "window": "far_b",
+      "core": [
+        0.0,
+        0.4
+      ],
+      "crop": {
+        "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\south_2400.jpg",
+        "bbox": [
+          0.39,
+          0.14,
+          0.57,
+          0.42
+        ],
+        "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\windows\\south_2400\\window_far_b.jpg",
+        "size": [
+          1374,
+          1600
+        ]
+      },
+      "model_counts": {
+        "total": 2,
+        "large": 2,
+        "medium": 0,
+        "small": 0,
+        "unknown": 0
+      },
+      "model_vehicle_list_length": 2,
+      "accepted": 2,
+      "rejected_edge": 0,
+      "retried": false,
+      "call_ok": true,
+      "scene_notes": null
+    },
+    {
+      "window": "mid",
+      "core": [
+        0.4,
+        0.62
+      ],
+      "crop": {
+        "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\south_2400.jpg",
+        "bbox": [
+          0.32,
+          0.26,
+          0.66,
+          0.68
+        ],
+        "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\windows\\south_2400\\window_mid.jpg",
+        "size": [
+          1600,
+          1482
+        ]
+      },
+      "model_counts": {
+        "total": 3,
+        "large": 1,
+        "medium": 2,
+        "small": 0,
+        "unknown": 0
+      },
+      "model_vehicle_list_length": 3,
+      "accepted": 1,
+      "rejected_edge": 2,
+      "retried": false,
+      "call_ok": true,
+      "scene_notes": "红色牵引车头仅部分可见，灰色挂车仅露出顶部，无其他遮挡歧义"
+    },
+    {
+      "window": "near",
+      "core": [
+        0.62,
+        0.85
+      ],
+      "crop": {
+        "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\south_2400.jpg",
+        "bbox": [
+          0.29,
+          0.5,
+          0.73,
+          0.9
+        ],
+        "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\windows\\south_2400\\window_near.jpg",
+        "size": [
+          1600,
+          1091
+        ]
+      },
+      "model_counts": {
+        "total": 1,
+        "large": 1,
+        "medium": 0,
+        "small": 0,
+        "unknown": 0
+      },
+      "model_vehicle_list_length": 1,
+      "accepted": 1,
+      "rejected_edge": 0,
+      "retried": false,
+      "call_ok": true,
+      "scene_notes": "Only one large truck is present; no other transport vehicles meet the counting criteria, the top of the truck's cargo box is partially cut off by the image boundary"
+    },
+    {
+      "window": "bottom",
+      "core": [
+        0.85,
+        1.0
+      ],
+      "crop": {
+        "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\south_2400.jpg",
+        "bbox": [
+          0.26,
+          0.78,
+          1.0,
+          1.0
+        ],
+        "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\windows\\south_2400\\window_bottom.jpg",
+        "size": [
+          1600,
+          356
+        ]
+      },
+      "model_counts": {
+        "total": 1,
+        "large": 0,
+        "medium": 1,
+        "small": 0,
+        "unknown": 0
+      },
+      "model_vehicle_list_length": 1,
+      "accepted": 1,
+      "rejected_edge": 0,
+      "retried": false,
+      "call_ok": true,
+      "scene_notes": "No other vehicles are visible in the frame; the counted truck is only its cab with no attached trailer."
+    }
+  ],
+  "candidates": [
+    {
+      "bbox_local": [
+        0.06,
+        0.26,
+        0.34,
+        0.95
+      ],
+      "bbox_global": [
+        0.4008,
+        0.2128,
+        0.4512,
+        0.40599999999999997
+      ],
+      "center_global": [
+        0.426,
+        0.3094
+      ],
+      "size": "large",
+      "visible": "full",
+      "cargo_color": "白色",
+      "identity_clues": "与右侧红色货车边界清晰，颜色不同，无连接",
+      "evidence": "完整的白色牵引车及货厢，为独立车辆",
+      "uncertain": false,
+      "provenance": {
+        "window": "far_b",
+        "stage": "window"
+      },
+      "type_review": {
+        "size_before": "large",
+        "size_after": "large",
+        "confidence": 0.98,
+        "body_kind": "tractor_with_trailer",
+        "has_trailer": true,
+        "accepted": true,
+        "reason": "候选框内为完整的半挂货车，包含牵引车及相连的货厢，属于大型重卡，符合货车计数口径",
+        "crop": {
+          "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\south_2400.jpg",
+          "bbox": [
+            0.3888,
+            0.20079999999999998,
+            0.4632,
+            0.418
+          ],
+          "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\windows\\south_2400\\type_01.jpg",
+          "size": [
+            411,
+            900
+          ]
+        }
+      }
+    },
+    {
+      "bbox_local": [
+        0.35,
+        0.1,
+        0.55,
+        0.63
+      ],
+      "bbox_global": [
+        0.45299999999999996,
+        0.168,
+        0.489,
+        0.3164
+      ],
+      "center_global": [
+        0.471,
+        0.24220000000000003
+      ],
+      "size": "large",
+      "visible": "full",
+      "cargo_color": "红色",
+      "identity_clues": "与左侧白色货车有明显间隔，颜色不同，为独立车辆",
+      "evidence": "完整的红色牵引车及货厢，为独立车辆",
+      "uncertain": false,
+      "provenance": {
+        "window": "far_b",
+        "stage": "window"
+      },
+      "type_review": {
+        "size_before": "large",
+        "size_after": "large",
+        "confidence": 0.9,
+        "body_kind": "tractor_with_trailer",
+        "has_trailer": true,
+        "accepted": true,
+        "reason": "黄色候选框内可见货车完整的驾驶室（含车头格栅、挡风玻璃等特征）及后方相连的货厢，属于牵引车带挂车的组合，为大型重卡",
+        "crop": {
+          "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\south_2400.jpg",
+          "bbox": [
+            0.44099999999999995,
+            0.156,
+            0.501,
+            0.3284
+          ],
+          "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\windows\\south_2400\\type_02.jpg",
+          "size": [
+            420,
+            900
+          ]
+        }
+      }
+    },
+    {
+      "bbox_local": [
+        0.328,
+        0.49,
+        0.565,
+        0.995
+      ],
+      "bbox_global": [
+        0.422,
+        0.4658,
+        0.5412,
+        0.89
+      ],
+      "center_global": [
+        0.48160000000000003,
+        0.6779
+      ],
+      "size": "large",
+      "visible": "trailer_only",
+      "cargo_color": "灰色",
+      "identity_clues": "灰色长货厢挂车，底部露出红色车头部分，为同一车辆",
+      "evidence": "画面下方中间的灰色长条形货厢，仅露出顶部，属于带长货厢的独立运输挂车",
+      "uncertain": false,
+      "provenance": {
+        "window": "mid",
+        "stage": "window"
+      },
+      "merged_provenance": [
+        {
+          "window": "mid",
+          "stage": "window"
+        },
+        {
+          "window": "near",
+          "stage": "window"
+        },
+        {
+          "window": "bottom",
+          "stage": "window"
+        }
+      ],
+      "type_review": {
+        "size_before": "large",
+        "size_after": "large",
+        "confidence": 0.98,
+        "body_kind": "tractor_with_trailer",
+        "has_trailer": true,
+        "accepted": true,
+        "reason": "候选框内可见红色货车，包含完整驾驶室及与其连续连接的长条形集装箱货厢，属于牵引车带挂车的大型货车，符合货车计数要求",
+        "crop": {
+          "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\south_2400.jpg",
+          "bbox": [
+            0.41,
+            0.4538,
+            0.5532,
+            0.902
+          ],
+          "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\windows\\south_2400\\type_03.jpg",
+          "size": [
+            383,
+            900
+          ]
+        }
+      }
+    },
+    {
+      "bbox_local": [
+        0.3,
+        0.0,
+        0.53,
+        0.95
+      ],
+      "bbox_global": [
+        0.422,
+        0.5,
+        0.5232,
+        0.88
+      ],
+      "center_global": [
+        0.4726,
+        0.69
+      ],
+      "size": "large",
+      "visible": "partial_top",
+      "cargo_color": "gray (cargo box), red (cab)",
+      "identity_clues": "SINOTRUK logo on cab front, 'QITRAK' text on cab, connected long cargo box",
+      "evidence": "Heavy-duty semi-trailer truck, cab fully visible, cargo box top cropped by image upper edge, located in the center of the scene",
+      "uncertain": false,
+      "provenance": {
+        "window": "near",
+        "stage": "window"
+      }
+    },
+    {
+      "bbox_local": [
+        0.22,
+        0.0,
+        0.38,
+        0.5
+      ],
+      "bbox_global": [
+        0.4228,
+        0.78,
+        0.5412,
+        0.89
+      ],
+      "center_global": [
+        0.482,
+        0.835
+      ],
+      "size": "medium",
+      "visible": "partial_front",
+      "cargo_color": "red",
+      "identity_clues": "Red heavy truck cab with 'DITRAK' text on front grille",
+      "evidence": "The red truck cab is visible in the upper left-middle area of the image; no attached trailer is present in this frame, so it is classified as a medium-sized tractor unit.",
+      "uncertain": false,
+      "provenance": {
+        "window": "bottom",
+        "stage": "window"
+      }
+    }
+  ],
+  "adjudications": [
+    {
+      "round": 0,
+      "a": 2,
+      "b": 3,
+      "geometry_score": 0.8388,
+      "same_vehicle": true,
+      "confidence": 0.95,
+      "reason": "左侧整帧画面中，黄框A为红色货车的货厢局部区域，青框B为该红色货车的整体区域（包含车头与货厢），两者车身颜色、特征一致，属于同一辆货车的不同局部框选",
+      "decision_source": "model",
+      "pair_image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\windows\\south_2400\\pair_r0_02_03.jpg",
+      "provenance_a": {
+        "window": "mid",
+        "stage": "window"
+      },
+      "provenance_b": {
+        "window": "near",
+        "stage": "window"
+      }
+    },
+    {
+      "round": 1,
+      "a": 2,
+      "b": 4,
+      "geometry_score": 0.7709,
+      "same_vehicle": true,
+      "confidence": 0.99,
+      "reason": "左图中A框为红色货车的整体（包含货厢与车头），B框为该货车的车头局部；右侧放大图中，A的车头区域与B的车头外观特征一致，货厢颜色纹理匹配，且二者为同一辆货车的不同框选部分，符合同一车辆的判定标准",
+      "decision_source": "model",
+      "pair_image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\windows\\south_2400\\pair_r1_02_04.jpg",
+      "provenance_a": {
+        "window": "mid",
+        "stage": "window"
+      },
+      "provenance_b": {
+        "window": "bottom",
+        "stage": "window"
+      }
+    }
+  ],
+  "final_vehicles_pre_type": [
+    {
+      "bbox_local": [
+        0.06,
+        0.26,
+        0.34,
+        0.95
+      ],
+      "bbox_global": [
+        0.4008,
+        0.2128,
+        0.4512,
+        0.40599999999999997
+      ],
+      "center_global": [
+        0.426,
+        0.3094
+      ],
+      "size": "large",
+      "visible": "full",
+      "cargo_color": "白色",
+      "identity_clues": "与右侧红色货车边界清晰，颜色不同，无连接",
+      "evidence": "完整的白色牵引车及货厢，为独立车辆",
+      "uncertain": false,
+      "provenance": {
+        "window": "far_b",
+        "stage": "window"
+      },
+      "type_review": {
+        "size_before": "large",
+        "size_after": "large",
+        "confidence": 0.98,
+        "body_kind": "tractor_with_trailer",
+        "has_trailer": true,
+        "accepted": true,
+        "reason": "候选框内为完整的半挂货车，包含牵引车及相连的货厢，属于大型重卡，符合货车计数口径",
+        "crop": {
+          "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\south_2400.jpg",
+          "bbox": [
+            0.3888,
+            0.20079999999999998,
+            0.4632,
+            0.418
+          ],
+          "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\windows\\south_2400\\type_01.jpg",
+          "size": [
+            411,
+            900
+          ]
+        }
+      }
+    },
+    {
+      "bbox_local": [
+        0.35,
+        0.1,
+        0.55,
+        0.63
+      ],
+      "bbox_global": [
+        0.45299999999999996,
+        0.168,
+        0.489,
+        0.3164
+      ],
+      "center_global": [
+        0.471,
+        0.24220000000000003
+      ],
+      "size": "large",
+      "visible": "full",
+      "cargo_color": "红色",
+      "identity_clues": "与左侧白色货车有明显间隔，颜色不同，为独立车辆",
+      "evidence": "完整的红色牵引车及货厢，为独立车辆",
+      "uncertain": false,
+      "provenance": {
+        "window": "far_b",
+        "stage": "window"
+      },
+      "type_review": {
+        "size_before": "large",
+        "size_after": "large",
+        "confidence": 0.9,
+        "body_kind": "tractor_with_trailer",
+        "has_trailer": true,
+        "accepted": true,
+        "reason": "黄色候选框内可见货车完整的驾驶室（含车头格栅、挡风玻璃等特征）及后方相连的货厢，属于牵引车带挂车的组合，为大型重卡",
+        "crop": {
+          "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\south_2400.jpg",
+          "bbox": [
+            0.44099999999999995,
+            0.156,
+            0.501,
+            0.3284
+          ],
+          "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\windows\\south_2400\\type_02.jpg",
+          "size": [
+            420,
+            900
+          ]
+        }
+      }
+    },
+    {
+      "bbox_local": [
+        0.328,
+        0.49,
+        0.565,
+        0.995
+      ],
+      "bbox_global": [
+        0.422,
+        0.4658,
+        0.5412,
+        0.89
+      ],
+      "center_global": [
+        0.48160000000000003,
+        0.6779
+      ],
+      "size": "large",
+      "visible": "trailer_only",
+      "cargo_color": "灰色",
+      "identity_clues": "灰色长货厢挂车，底部露出红色车头部分，为同一车辆",
+      "evidence": "画面下方中间的灰色长条形货厢，仅露出顶部，属于带长货厢的独立运输挂车",
+      "uncertain": false,
+      "provenance": {
+        "window": "mid",
+        "stage": "window"
+      },
+      "merged_provenance": [
+        {
+          "window": "mid",
+          "stage": "window"
+        },
+        {
+          "window": "near",
+          "stage": "window"
+        },
+        {
+          "window": "bottom",
+          "stage": "window"
+        }
+      ],
+      "type_review": {
+        "size_before": "large",
+        "size_after": "large",
+        "confidence": 0.98,
+        "body_kind": "tractor_with_trailer",
+        "has_trailer": true,
+        "accepted": true,
+        "reason": "候选框内可见红色货车，包含完整驾驶室及与其连续连接的长条形集装箱货厢，属于牵引车带挂车的大型货车，符合货车计数要求",
+        "crop": {
+          "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\south_2400.jpg",
+          "bbox": [
+            0.41,
+            0.4538,
+            0.5532,
+            0.902
+          ],
+          "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\windows\\south_2400\\type_03.jpg",
+          "size": [
+            383,
+            900
+          ]
+        }
+      }
+    }
+  ],
+  "final_vehicles": [
+    {
+      "bbox_local": [
+        0.06,
+        0.26,
+        0.34,
+        0.95
+      ],
+      "bbox_global": [
+        0.4008,
+        0.2128,
+        0.4512,
+        0.40599999999999997
+      ],
+      "center_global": [
+        0.426,
+        0.3094
+      ],
+      "size": "large",
+      "visible": "full",
+      "cargo_color": "白色",
+      "identity_clues": "与右侧红色货车边界清晰，颜色不同，无连接",
+      "evidence": "完整的白色牵引车及货厢，为独立车辆",
+      "uncertain": false,
+      "provenance": {
+        "window": "far_b",
+        "stage": "window"
+      },
+      "type_review": {
+        "size_before": "large",
+        "size_after": "large",
+        "confidence": 0.98,
+        "body_kind": "tractor_with_trailer",
+        "has_trailer": true,
+        "accepted": true,
+        "reason": "候选框内为完整的半挂货车，包含牵引车及相连的货厢，属于大型重卡，符合货车计数口径",
+        "crop": {
+          "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\south_2400.jpg",
+          "bbox": [
+            0.3888,
+            0.20079999999999998,
+            0.4632,
+            0.418
+          ],
+          "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\windows\\south_2400\\type_01.jpg",
+          "size": [
+            411,
+            900
+          ]
+        }
+      }
+    },
+    {
+      "bbox_local": [
+        0.35,
+        0.1,
+        0.55,
+        0.63
+      ],
+      "bbox_global": [
+        0.45299999999999996,
+        0.168,
+        0.489,
+        0.3164
+      ],
+      "center_global": [
+        0.471,
+        0.24220000000000003
+      ],
+      "size": "large",
+      "visible": "full",
+      "cargo_color": "红色",
+      "identity_clues": "与左侧白色货车有明显间隔，颜色不同，为独立车辆",
+      "evidence": "完整的红色牵引车及货厢，为独立车辆",
+      "uncertain": false,
+      "provenance": {
+        "window": "far_b",
+        "stage": "window"
+      },
+      "type_review": {
+        "size_before": "large",
+        "size_after": "large",
+        "confidence": 0.9,
+        "body_kind": "tractor_with_trailer",
+        "has_trailer": true,
+        "accepted": true,
+        "reason": "黄色候选框内可见货车完整的驾驶室（含车头格栅、挡风玻璃等特征）及后方相连的货厢，属于牵引车带挂车的组合，为大型重卡",
+        "crop": {
+          "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\south_2400.jpg",
+          "bbox": [
+            0.44099999999999995,
+            0.156,
+            0.501,
+            0.3284
+          ],
+          "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\windows\\south_2400\\type_02.jpg",
+          "size": [
+            420,
+            900
+          ]
+        }
+      }
+    },
+    {
+      "bbox_local": [
+        0.328,
+        0.49,
+        0.565,
+        0.995
+      ],
+      "bbox_global": [
+        0.422,
+        0.4658,
+        0.5412,
+        0.89
+      ],
+      "center_global": [
+        0.48160000000000003,
+        0.6779
+      ],
+      "size": "large",
+      "visible": "trailer_only",
+      "cargo_color": "灰色",
+      "identity_clues": "灰色长货厢挂车，底部露出红色车头部分，为同一车辆",
+      "evidence": "画面下方中间的灰色长条形货厢，仅露出顶部，属于带长货厢的独立运输挂车",
+      "uncertain": false,
+      "provenance": {
+        "window": "mid",
+        "stage": "window"
+      },
+      "merged_provenance": [
+        {
+          "window": "mid",
+          "stage": "window"
+        },
+        {
+          "window": "near",
+          "stage": "window"
+        },
+        {
+          "window": "bottom",
+          "stage": "window"
+        }
+      ],
+      "type_review": {
+        "size_before": "large",
+        "size_after": "large",
+        "confidence": 0.98,
+        "body_kind": "tractor_with_trailer",
+        "has_trailer": true,
+        "accepted": true,
+        "reason": "候选框内可见红色货车，包含完整驾驶室及与其连续连接的长条形集装箱货厢，属于牵引车带挂车的大型货车，符合货车计数要求",
+        "crop": {
+          "source": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\assets\\frames\\south_2400.jpg",
+          "bbox": [
+            0.41,
+            0.4538,
+            0.5532,
+            0.902
+          ],
+          "out": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\windows\\south_2400\\type_03.jpg",
+          "size": [
+            383,
+            900
+          ]
+        }
+      }
+    }
+  ],
+  "final_vehicles_rejected_by_type_review": [],
+  "counts_pre_type": {
+    "total": 3,
+    "large": 3,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "counts": {
+    "total": 3,
+    "large": 3,
+    "medium": 0,
+    "small": 0,
+    "unknown": 0
+  },
+  "metrics_pre_type": {
+    "gold": {
+      "total": 3,
+      "large": 2,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "predicted": {
+      "total": 3,
+      "large": 3,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "count_error": 0,
+    "miss": 0,
+    "extra": 0,
+    "class_l1": 2,
+    "type_swaps_lower_bound": 1,
+    "unknown": 0,
+    "exact": false
+  },
+  "metrics": {
+    "gold": {
+      "total": 3,
+      "large": 2,
+      "medium": 1,
+      "small": 0,
+      "unknown": 0
+    },
+    "predicted": {
+      "total": 3,
+      "large": 3,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "count_error": 0,
+    "miss": 0,
+    "extra": 0,
+    "class_l1": 2,
+    "type_swaps_lower_bound": 1,
+    "unknown": 0,
+    "exact": false
+  },
+  "calls": [
+    {
+      "stage": "window:far_b",
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "prompt": "这是一段通道左侧的纵向局部，画面中可能有多辆上下排列的货车或多节集装箱挂车。\n\n请逐辆/逐节清点，不要因为它们是同一颜色、同一队列或看起来连在一起，就把两辆/两节合并。\n\n判据：\n- 两节货厢之间是否有横向缝隙、不同高度的顶面、不同的后门/侧板纹理、不同编号、不同的底盘或支腿。\n- 只要两个箱体/车体的边界清楚、颜色/纹理/编号不同，就分别计数。\n- 牵引车+货厢算一辆；只看到独立运输挂车/货厢也算一辆。\n- 展台、建筑、广告牌、货架、叉车、人物不计。\n- bbox 使用当前裁剪的 0-1 归一化坐标（不是像素）。\n\n只输出 JSON：\n{\"counts\":{\"total\":0,\"large\":0,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0,0,0,0],\"size\":\"large|medium|small|unknown\",\"visible\":\"full|partial_top|partial_side|trailer_only\",\"cargo_color\":\"\",\"distinct_from_above\":\"与上一节的区别\",\"evidence\":\"\"}],\"notes\":\"\"}",
+      "images": [
+        "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\windows\\south_2400\\window_far_b.jpg"
+      ],
+      "requested_max_tokens": 1800,
+      "temperature": 0,
+      "ok": true,
+      "latency_s": 11.34,
+      "usage": {
+        "completion_tokens": 1077,
+        "prompt_tokens": 1591,
+        "total_tokens": 2668,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 903
+        }
+      },
+      "raw_text": "{\"counts\":{\"total\":2,\"large\":2,\"medium\":0,\"small\":0,\"unknown\":0},\"vehicles\":[{\"bbox\":[0.06,0.26,0.34,0.95],\"size\":\"large\",\"visible\":\"full\",\"cargo_color\":\"白色\",\"distinct_from_above\":\"与右侧红色货车边界清晰，颜色不同，无连接\",\"evidence\":\"完整的白色牵引车及货厢，为独立车辆\"},{\"bbox\":[0.35,0.1,0.55,0.63],\"size\":\"large\",\"visible\":\"full\",\"cargo_color\":\"红色\",\"distinct_from_above\":\"与左侧白色货车有明显间隔，颜色不同，为独立车辆\",\"evidence\":\"完整的红色牵引车及货厢，为独立车辆\"}],\"notes\":\"\"}",
+      "reasoning_text": "\n用户现在需要处理这个图片里的货车计数，首先先看图片里的车辆。首先，左边白色的那个，是一辆完整的牵引车加货厢对吧？然后中间红色的那个，也是一辆牵引车加货厢？不对，等下，看裁剪的图，首先数车辆：第一辆，白色的，在左下方，是完整的，对吧？然后中间红色的，在白色的右边，也是一辆完整的？不对，有没有其他的？再看，有没有上下排列的？题目说通道左侧纵向局部，上下排列的货车。哦，不对，看图片，白色的是一辆，红色的是第二辆？等下，再仔细看：白色的那个，车头是白色，货厢也是白色，是一辆完整的货车，bbox大概是[0.05, 275/1600？不对，归一化坐标，整个图是0到1，所以白色货车的bbox大概是[0.07, 0.27, 0.34, 0.96]，对吧？然后红色的那辆，在中间，bbox是[0.35, 0.1, 0.56, 0.64]，对吧？那这是两辆？不对，有没有更多？再看，有没有其他的？哦，题目说不要合并，那这两个是分开的，对吗？然后看大小，都是large？因为是大货车。那counts的total是2，large是2，其他medium small unknown都是0。然后vehicles数组里两个元素。然后distinct_from_above，第一个白色的，和上面的？不对，第一个白色的是最下面的，第二个红色的在它右边，所以第一个的distinct_from_above是“右侧为红色货车，自身为白色，边界清晰”，第二个红色的，和左边白色的区别是颜色不同，位置不同，对吧？然后evidence，第一个的evidence是“白色牵引车加货厢，边界清晰，无合并”，第二个是“红色牵引车加货厢，边界清晰，与左侧白色货车有明显间隔”。然后visible都是full？不对，白色的是full，红色的也是full？不对，看红色的顶部，有没有被截断？图里红色的顶部在图的上方，是partial？不对，整个红色货车的车头和货厢都在图里吗？看，红色的车头在中间，货厢在上面，都在图里，所以visible是full？不对，再仔细看，图的上方还有其他的，但这两个是独立的。等下，有没有可能我漏了？再看，有没有第三辆？图里左边还有没有？左边白色的是一辆，中间红色的是第二辆，对吗？那total是2，large是2。然后notes是空的。现在整理成JSON格式，要符合要求。\n\n等下，再确认判据：牵引车+货厢算一辆，所以白色的是一辆，红色的是一辆，共2辆，都是large，因为是大货车。那vehicles数组里两个元素。第一个bbox：[0.06, 0.26, 0.34, 0.95]，size是large，visible是full，cargo_color是白色，distinct_from_above是“与右侧红色货车边界清晰，颜色不同，无连接”，evidence是“完整的白色牵引车及货厢，独立存在”。第二个bbox：[0.35, 0.1, 0.55, 0.63]，size是large，visible是full，cargo_color是红色，distinct_from_above是“与左侧白色货车有明显间隔，颜色不同，为独立车辆”，evidence是“完整的红色牵引车及货厢，独立存在”。然后counts的total是2，large是2，其他都是0。对吗？\n\n有没有错？再看，有没有把其他的算进去？比如人物、广告牌都不算，对的，题目说展台、建筑、广告牌、货架、叉车、人物不计，所以那两个货车是对的。那现在写JSON，注意格式正确，没有多余的东西。",
+      "finish_reason": "stop",
+      "parsed": {
+        "counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.06,
+              0.26,
+              0.34,
+              0.95
+            ],
+            "size": "large",
+            "visible": "full",
+            "cargo_color": "白色",
+            "distinct_from_above": "与右侧红色货车边界清晰，颜色不同，无连接",
+            "evidence": "完整的白色牵引车及货厢，为独立车辆"
+          },
+          {
+            "bbox": [
+              0.35,
+              0.1,
+              0.55,
+              0.63
+            ],
+            "size": "large",
+            "visible": "full",
+            "cargo_color": "红色",
+            "distinct_from_above": "与左侧白色货车有明显间隔，颜色不同，为独立车辆",
+            "evidence": "完整的红色牵引车及货厢，为独立车辆"
+          }
+        ],
+        "notes": ""
+      }
+    },
+    {
+      "stage": "window:mid",
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "prompt": "这是一段货车通道的局部放大（mid 段，来自同一台监控相机的一帧）。\n请清点画面里所有可见货车，包括被画面上下边缘截到、只露出货厢或车顶的车。\n\n- 牵引车+挂车算一辆；只看到独立的运输挂车/集装箱货厢也算一辆。\n- 展台、建筑、货架、叉车、轿车、面包车、人物不计。\n- 蓝色/灰色的集装箱挂车要特别检查，不要当成展台；但蓝色招牌、广告牌、展台墙板也不是货厢，必须有立体货厢轮廓、底盘/支脚或与车头相连才算。\n- 只有牵引车头、没有挂车或长货厢的，车型按 medium；带长货厢的半挂/重卡才是 large。\n- 上下排列、颜色或纹理不同的两节货厢，如果中间有明确间隙或属于不同底盘，分别计数；同一辆车头与其货厢只算一辆。\n- bbox 使用当前裁剪的 0-1 归一化坐标（不是像素）：左上 [0,0]，右下 [1,1]。\n\n只输出严格 JSON：\n{\n  \"counts\": {\"total\": 0, \"large\": 0, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.0, 0.0, 0.0, 0.0],\n      \"size\": \"large|medium|small|unknown\",\n      \"visible\": \"full|partial_top|partial_side|trailer_only\",\n      \"cargo_color\": \"颜色\",\n      \"identity_clues\": \"可用于合并的线索\",\n      \"evidence\": \"定位与理由\"\n    }\n  ],\n  \"notes\": \"遮挡与歧义\"\n}",
+      "images": [
+        "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\windows\\south_2400\\window_mid.jpg"
+      ],
+      "requested_max_tokens": 1800,
+      "temperature": 0,
+      "ok": true,
+      "latency_s": 14.34,
+      "usage": {
+        "completion_tokens": 1756,
+        "prompt_tokens": 1699,
+        "total_tokens": 3455,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1343
+        }
+      },
+      "raw_text": "{\n  \"counts\": {\n    \"total\": 3,\n    \"large\": 1,\n    \"medium\": 2,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [0.235, 0.005, 0.382, 0.358],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"cargo_color\": \"白色\",\n      \"identity_clues\": \"白色东风牵引车头，无连接挂车\",\n      \"evidence\": \"画面中上部偏左的完整白色卡车车头，未显示挂车部分\"\n    },\n    {\n      \"bbox\": [0.39, 0.0, 0.505, 0.132],\n      \"size\": \"medium\",\n      \"visible\": \"partial_top\",\n      \"cargo_color\": \"红色\",\n      \"identity_clues\": \"红色牵引车头，仅露出上部结构\",\n      \"evidence\": \"白色卡车后方的红色卡车车头，仅显示部分车头轮廓\"\n    },\n    {\n      \"bbox\": [0.328, 0.49, 0.565, 0.995],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"cargo_color\": \"灰色\",\n      \"identity_clues\": \"灰色长货厢挂车，底部露出红色车头部分，为同一车辆\",\n      \"evidence\": \"画面下方中间的灰色长条形货厢，仅露出顶部，属于带长货厢的独立运输挂车\"\n    }\n  ],\n  \"notes\": \"红色牵引车头仅部分可见，灰色挂车仅露出顶部，无其他遮挡歧义\"\n}",
+      "reasoning_text": "\n用户现在需要清点监控里的货车，首先看画面里的：\n第一个，白色的牵引车，带车头，后面有没有挂车？不对，看画面，白色的那个是完整的车头，后面有没有货厢？不对，再看，还有红色的车头在它后面，然后下方有个灰色的货厢（挂车），只露出顶部和部分，还有红色的车头在最下方？不对，仔细数：\n1. 白色重卡牵引车：[0.23,0,0.39,0.35]，这个是完整的车头，没有看到挂车？不对，它的车头是白色，前面有东风的标，属于medium？不对，规则里说只有牵引车头没有挂车或长货厢的是medium，带长货厢的半挂是large。\n2. 红色重卡牵引车：[0.38,0,0.51,1.2]？不对，画面里上方中间的红色车头，是完整的，没有挂车？不对，它的位置在白色车头后面，所以是medium？\n3. 下方的灰色货厢（挂车）：[0.32,0.49,0.57,0.99]，这个是trailer_only，货厢是灰色，属于large？因为是独立的运输挂车，有长货厢。\n4. 最下方露出的红色部分，是那个灰色货厢的车头？不对，看bbox，灰色货厢底部有红色，可能是车头的一部分，所以那个灰色货厢和下方的红色车头是同一辆，所以算一辆。\n等下，重新数：\n现在看画面里的货车：\n- 第一辆：白色牵引车头，位置[0.24,0.01,0.38,0.36]，可见是full，没有挂车，所以size medium，cargo_color？不对，牵引车头的颜色是白色，identity_clues是白色东风车头，evidence是画面上方中间偏左的白色卡车。\n- 第二辆：红色牵引车头，位置[0.39,0.0,0.5,0.13]，可见是partial（只露出车头部分），没有挂车，size medium，cargo_color红色，identity_clues是红色卡车头，evidence是白色车头后方的红色卡车。\n- 第三辆：灰色挂车（货厢），位置[0.33,0.49,0.56,0.99]，可见是partial_top（只露出顶部），是trailer_only，size large，cargo_color灰色，identity_clues是灰色长货厢，evidence是画面下方中间的灰色货厢，底部有红色车头部分，属于同一辆。\n那total是3？不对，等下，规则里说牵引车+挂车算一辆，同一车头和货厢算一辆。那第三辆的灰色货厢和下方的红色车头是不是同一辆？看画面，灰色货厢的底部是红色，应该是车头的一部分，所以那是一辆，所以：\n1. 白色车头（无挂车）：medium，partial？不，它的车头是full可见，从顶部到前脸，所以visible是full。\n2. 红色车头（无挂车）：partial，只露出车头，在白色车头后面。\n3. 灰色货厢（带下方红色车头，同一辆）：large，trailer_only，因为只露出货厢顶部和部分车头。\n那total是3，large是1，medium是2，small是0，unknown是0。\n然后notes：没有遮挡歧义？不对，红色车头只露出部分，灰色货厢只露出顶部，白色车头完整。\n现在整理成严格的JSON，注意bbox是归一化的，比如白色车头的bbox是[0.235, 0.005, 0.382, 0.358]，红色车头是[0.39, 0.0, 0.505, 0.132]，灰色货厢是[0.328, 0.49, 0.565, 0.995]。\n然后每个的字段：\n第一个：\nbbox: [0.235, 0.005, 0.382, 0.358]\nsize: \"medium\"\nvisible: \"full\"\ncargo_color: \"白色\"\nidentity_clues: \"白色东风牵引车头，无挂车\"\nevidence: \"画面中上部偏左的完整白色卡车车头，无连接的挂车\"\n第二个：\nbbox: [0.39, 0.0, 0.505, 0.132]\nsize: \"medium\"\nvisible: \"partial_top\"\ncargo_color: \"红色\"\nidentity_clues: \"红色牵引车头，仅露出上部\"\nevidence: \"白色卡车后方的红色卡车车头，仅显示部分车头\"\n第三个：\nbbox: [0.328, 0.49, 0.565, 0.995]\nsize: \"large\"\nvisible: \"trailer_only\"\ncargo_color: \"灰色\"\nidentity_clues: \"灰色长货厢挂车，底部露出红色车头部分，为同一车辆\"\nevidence: \"画面下方中间的灰色长条形货厢，仅露出顶部，属于独立运输挂车，带长货厢\"\n然后counts的total是3，large是1，medium是2，small是0，unknown是0。\nnotes: \"红色牵引车头仅部分可见，灰色挂车仅露出顶部，无其他歧义\"\n现在检查有没有符合规则：\n- 牵引车+挂车算一辆，灰色货厢和下方红色车头是同一辆，所以算一辆，正确。\n- 只露出车头的是medium，正确，因为没有挂车或长货厢。\n- 独立的长货厢是large，正确。\n- 不计人物、展台等，正确。\n现在输出严格JSON，注意引号都是双引号，没有多余逗号。",
+      "finish_reason": "stop",
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 1,
+          "medium": 2,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.235,
+              0.005,
+              0.382,
+              0.358
+            ],
+            "size": "medium",
+            "visible": "full",
+            "cargo_color": "白色",
+            "identity_clues": "白色东风牵引车头，无连接挂车",
+            "evidence": "画面中上部偏左的完整白色卡车车头，未显示挂车部分"
+          },
+          {
+            "bbox": [
+              0.39,
+              0.0,
+              0.505,
+              0.132
+            ],
+            "size": "medium",
+            "visible": "partial_top",
+            "cargo_color": "红色",
+            "identity_clues": "红色牵引车头，仅露出上部结构",
+            "evidence": "白色卡车后方的红色卡车车头，仅显示部分车头轮廓"
+          },
+          {
+            "bbox": [
+              0.328,
+              0.49,
+              0.565,
+              0.995
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "cargo_color": "灰色",
+            "identity_clues": "灰色长货厢挂车，底部露出红色车头部分，为同一车辆",
+            "evidence": "画面下方中间的灰色长条形货厢，仅露出顶部，属于带长货厢的独立运输挂车"
+          }
+        ],
+        "notes": "红色牵引车头仅部分可见，灰色挂车仅露出顶部，无其他遮挡歧义"
+      }
+    },
+    {
+      "stage": "window:near",
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "prompt": "这是一段货车通道的局部放大（near 段，来自同一台监控相机的一帧）。\n请清点画面里所有可见货车，包括被画面上下边缘截到、只露出货厢或车顶的车。\n\n- 牵引车+挂车算一辆；只看到独立的运输挂车/集装箱货厢也算一辆。\n- 展台、建筑、货架、叉车、轿车、面包车、人物不计。\n- 蓝色/灰色的集装箱挂车要特别检查，不要当成展台；但蓝色招牌、广告牌、展台墙板也不是货厢，必须有立体货厢轮廓、底盘/支脚或与车头相连才算。\n- 只有牵引车头、没有挂车或长货厢的，车型按 medium；带长货厢的半挂/重卡才是 large。\n- 上下排列、颜色或纹理不同的两节货厢，如果中间有明确间隙或属于不同底盘，分别计数；同一辆车头与其货厢只算一辆。\n- bbox 使用当前裁剪的 0-1 归一化坐标（不是像素）：左上 [0,0]，右下 [1,1]。\n\n只输出严格 JSON：\n{\n  \"counts\": {\"total\": 0, \"large\": 0, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.0, 0.0, 0.0, 0.0],\n      \"size\": \"large|medium|small|unknown\",\n      \"visible\": \"full|partial_top|partial_side|trailer_only\",\n      \"cargo_color\": \"颜色\",\n      \"identity_clues\": \"可用于合并的线索\",\n      \"evidence\": \"定位与理由\"\n    }\n  ],\n  \"notes\": \"遮挡与歧义\"\n}",
+      "images": [
+        "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\windows\\south_2400\\window_near.jpg"
+      ],
+      "requested_max_tokens": 1800,
+      "temperature": 0,
+      "ok": true,
+      "latency_s": 9.19,
+      "usage": {
+        "completion_tokens": 875,
+        "prompt_tokens": 1731,
+        "total_tokens": 2606,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 649
+        }
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 1, \"large\": 1, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.30, 0.0, 0.53, 0.95],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"cargo_color\": \"gray (cargo box), red (cab)\",\n      \"identity_clues\": \"SINOTRUK logo on cab front, 'QITRAK' text on cab, connected long cargo box\",\n      \"evidence\": \"Heavy-duty semi-trailer truck, cab fully visible, cargo box top cropped by image upper edge, located in the center of the scene\"\n    }\n  ],\n  \"notes\": \"Only one large truck is present; no other transport vehicles meet the counting criteria, the top of the truck's cargo box is partially cut off by the image boundary\"\n}",
+      "reasoning_text": "Okay, let's look at the image. There's one large truck here, right? The red one with the cab and the long cargo box. Let's confirm: it's a semi-trailer, so large size. The bbox would be from like x=0.31 to 0.52, y=0 to 0.95. Wait, let's check the rules. The count total is 1, large is 1, others 0. Are there any other vehicles? No, only that one truck. Let's structure the JSON correctly.\n\nWait, let's make sure. The truck is a large one, has a cab and a long cargo, so size large. Visible is full? Wait, the top of the cargo is at the top edge of the image, so partial top? Wait no, the image's top edge cuts the cargo's top, so the cargo is partially visible from top, cab is full. Wait, let's see: the bbox for the truck is [0.305, 0, 0.53, 0.95]. The cargo color: the cab is red, the cargo is gray. Identity clues: it's a SINOTRUK (howo) truck, the text on the cab. Evidence: the truck is a large heavy-duty truck, present in the center of the image, cab is fully visible, cargo is partially visible (top cut off). Are there any other vehicles? No, so total counts: total=1, large=1, others 0. Notes: no other vehicles, only one large truck, top of cargo is cropped by image edge.\n\nWait let's write the JSON properly. Let's make sure all fields are correct. Let's check the rules again: count total is number of vehicles. The only vehicle here is that large truck. So:\n\n{\n  \"counts\": {\"total\": 1, \"large\": 1, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.30, 0.0, 0.53, 0.95],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"cargo_color\": \"gray (cargo), red (cab)\",\n      \"identity_clues\": \"SINOTRUK logo on cab, 'QITRAK' text on front\",\n      \"evidence\": \"A heavy-duty truck with cab and long cargo box, located in the center of the image; top of cargo is cropped by the image's upper edge, cab is fully visible\"\n    }\n  ],\n  \"notes\": \"Only one large truck present; no other vehicles meet the criteria, cargo top is partially cut off by the image boundary\"\n}\n\nWait that makes sense. Let's confirm no other vehicles. The image has no other trucks, right? The other things are booths, people, boxes. Yep, that's correct.",
+      "finish_reason": "stop",
+      "parsed": {
+        "counts": {
+          "total": 1,
+          "large": 1,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.3,
+              0.0,
+              0.53,
+              0.95
+            ],
+            "size": "large",
+            "visible": "partial_top",
+            "cargo_color": "gray (cargo box), red (cab)",
+            "identity_clues": "SINOTRUK logo on cab front, 'QITRAK' text on cab, connected long cargo box",
+            "evidence": "Heavy-duty semi-trailer truck, cab fully visible, cargo box top cropped by image upper edge, located in the center of the scene"
+          }
+        ],
+        "notes": "Only one large truck is present; no other transport vehicles meet the counting criteria, the top of the truck's cargo box is partially cut off by the image boundary"
+      }
+    },
+    {
+      "stage": "window:bottom",
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "prompt": "这是一段货车通道的局部放大（bottom 段，来自同一台监控相机的一帧）。\n请清点画面里所有可见货车，包括被画面上下边缘截到、只露出货厢或车顶的车。\n\n- 牵引车+挂车算一辆；只看到独立的运输挂车/集装箱货厢也算一辆。\n- 展台、建筑、货架、叉车、轿车、面包车、人物不计。\n- 蓝色/灰色的集装箱挂车要特别检查，不要当成展台；但蓝色招牌、广告牌、展台墙板也不是货厢，必须有立体货厢轮廓、底盘/支脚或与车头相连才算。\n- 只有牵引车头、没有挂车或长货厢的，车型按 medium；带长货厢的半挂/重卡才是 large。\n- 上下排列、颜色或纹理不同的两节货厢，如果中间有明确间隙或属于不同底盘，分别计数；同一辆车头与其货厢只算一辆。\n- bbox 使用当前裁剪的 0-1 归一化坐标（不是像素）：左上 [0,0]，右下 [1,1]。\n\n只输出严格 JSON：\n{\n  \"counts\": {\"total\": 0, \"large\": 0, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.0, 0.0, 0.0, 0.0],\n      \"size\": \"large|medium|small|unknown\",\n      \"visible\": \"full|partial_top|partial_side|trailer_only\",\n      \"cargo_color\": \"颜色\",\n      \"identity_clues\": \"可用于合并的线索\",\n      \"evidence\": \"定位与理由\"\n    }\n  ],\n  \"notes\": \"遮挡与歧义\"\n}",
+      "images": [
+        "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\windows\\south_2400\\window_bottom.jpg"
+      ],
+      "requested_max_tokens": 1800,
+      "temperature": 0,
+      "ok": true,
+      "latency_s": 8.59,
+      "usage": {
+        "completion_tokens": 915,
+        "prompt_tokens": 1733,
+        "total_tokens": 2648,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 712
+        }
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 1, \"large\": 0, \"medium\": 1, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.22, 0.0, 0.38, 0.5],\n      \"size\": \"medium\",\n      \"visible\": \"partial_front\",\n      \"cargo_color\": \"red\",\n      \"identity_clues\": \"Red heavy truck cab with 'DITRAK' text on front grille\",\n      \"evidence\": \"The red truck cab is visible in the upper left-middle area of the image; no attached trailer is present in this frame, so it is classified as a medium-sized tractor unit.\"\n    }\n  ],\n  \"notes\": \"No other vehicles are visible in the frame; the counted truck is only its cab with no attached trailer.\"\n}",
+      "reasoning_text": "Okay, let's look at the image. There's one red truck (the DITRAK) here. It's a heavy truck with a cab, and does it have a trailer? Wait, in the image, we only see the front part of the red truck, right? Wait no, wait the question says count all可见货车. Let's check: the red truck is a heavy-duty truck, the cab is visible, is there a trailer? Wait in the image, the truck is a single unit? Wait no, wait the size: large is semi with long货厢, medium is牵引车头 no挂车. Wait let's see: the red truck here is a牵引车 (cab only, no trailer visible in this frame). Wait wait, looking at the image, the red truck's cab is there, no trailer shown. So that's medium? Wait wait no, wait let's confirm. The counts: total should be 1. Large: 0, medium:1, small:0, unknown:0. Then the vehicle's bbox: let's get the coordinates. The red truck is from x ~0.23 to ~0.39, y ~0 to ~0.5. So bbox [0.23, 0.0, 0.39, 0.5]. Size is medium, because it's a牵引车头 without a visible long货厢. Visible is partial front (since only the cab is visible, the lower part? Wait no, the image shows the front of the cab, so visible is partial front? Wait cargo color: red. Identity clues: red DITRAK truck cab. Evidence: the red truck cab is visible in the left-middle area of the image. Wait wait, is there any other vehicle? No, only that one. Let's make sure. The other things are boxes, people, structures. So total is 1, medium is 1, others 0. Then notes: none, no ambiguity. Wait wait wait, wait the truck: is it a large? Wait no, large is带长货厢的半挂/重卡. If it's just the cab, no trailer, then medium. Correct. Let's structure the JSON properly. Let's check the requirements again. So the counts: total 1, large 0, medium1, small0, unknown0. The vehicles array has one entry. Let's write the bbox correctly. The red truck's position: left is ~0.22, top 0, right ~0.38, bottom ~0.5. So [0.22, 0.0, 0.38, 0.5]. Size: medium, because it's a tractor unit without a trailer (no long cargo box visible). Visible: partial front (since only the front part of the cab is visible, the lower part is on the ground, so partial front). Cargo color: red. Identity clues: red heavy truck cab with \"DITRAK\" text on front. Evidence: The red truck cab is clearly visible in the upper left-middle of the image, no attached trailer is present in this frame. Notes: no issues. Wait wait, is that right? Let me confirm again. The image: yes, only one truck, the red one, only the cab, no trailer. So that's medium. So the JSON should be as follows.",
+      "finish_reason": "stop",
+      "parsed": {
+        "counts": {
+          "total": 1,
+          "large": 0,
+          "medium": 1,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.22,
+              0.0,
+              0.38,
+              0.5
+            ],
+            "size": "medium",
+            "visible": "partial_front",
+            "cargo_color": "red",
+            "identity_clues": "Red heavy truck cab with 'DITRAK' text on front grille",
+            "evidence": "The red truck cab is visible in the upper left-middle area of the image; no attached trailer is present in this frame, so it is classified as a medium-sized tractor unit."
+          }
+        ],
+        "notes": "No other vehicles are visible in the frame; the counted truck is only its cab with no attached trailer."
+      }
+    },
+    {
+      "stage": "adjudicate:r0:2-3",
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "prompt": "这张图左边是整帧上下文，黄框标为 A、青框标为 B；右边是 A、B 的目标框内放大。放大图只保留各自候选框附近，框外相邻车辆不是比较对象。\n\n请判断 A 与 B 是否指向同一辆物理货车。\n\n判据：\n- 货厢/集装箱颜色与纹理、车头特征、朝向、在通道中的队列位置。\n- 如果 A 是 B 的车头、车顶、货厢局部或同一车被框了两次，应判为同一辆。\n- 如果一个框只覆盖同一辆车的上半部、另一个框覆盖下半部，但颜色、宽度和车道位置连续，应判为同一辆。\n- 一个框同时包含目标车和上方相邻车时，以两个框重叠的那辆车为准，不要把相邻车当成差异证据。\n- 结合左图看两个框在队列中的前后关系；右侧放大只用于看外观细节。\n- 如果颜色/纹理明显不同，或两车在队列中一前一后、车身不连续，判为不同。\n- 只根据可见外观判断；不要因为两个框在画面上重叠就自动判同一辆。\n\n只输出严格 JSON：\n{\n  \"same_vehicle\": true,\n  \"confidence\": 0.0,\n  \"reason\": \"具体外观/位置证据\",\n  \"if_different\": \"两辆分别是什么\"\n}",
+      "images": [
+        "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\windows\\south_2400\\pair_r0_02_03.jpg"
+      ],
+      "requested_max_tokens": 600,
+      "temperature": 0,
+      "ok": true,
+      "latency_s": 7.64,
+      "usage": {
+        "completion_tokens": 717,
+        "prompt_tokens": 1640,
+        "total_tokens": 2357,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 615
+        }
+      },
+      "raw_text": "{\n  \"same_vehicle\": true,\n  \"confidence\": 0.95,\n  \"reason\": \"左侧整帧画面中，黄框A为红色货车的货厢局部区域，青框B为该红色货车的整体区域（包含车头与货厢），两者车身颜色、特征一致，属于同一辆货车的不同局部框选\",\n  \"if_different\": \"两者为同一辆红色货车，无不同车辆\"\n}",
+      "reasoning_text": "\n用户现在需要判断A和B是不是同一辆货车，首先看左边的图，黄框A是红货车的货厢部分，青框B是整个红货车，包括车头和货厢对吧？然后右边的放大图，A的放大是货厢顶部，B的放大是整个车头加货厢，颜色都是红色的货车，位置在通道里，A是B的上半部分（货厢），B是整个车，所以是同一辆。那confidence应该很高，比如0.95？理由就是A框是B框所指货车的货厢部分，B框包含了该货车的车头和货厢，两者颜色、车身特征一致，属于同一辆货车的不同局部框选。然后if_different的话，因为是同一辆，所以应该写“无，两者为同一辆货车”？不对，看要求，if_different是如果不同的话写两辆分别是什么，相同的话就写同一辆？等下看判据，A是B的局部，所以是同一辆。那整理成JSON：\n首先same_vehicle是true，confidence比如0.95，理由是“左侧整帧中，黄框A为红色货车的货厢局部，青框B为该红色货车的整体（含车头和货厢），两者车身颜色、特征一致，属于同一辆货车的不同局部框选”，if_different的话，因为是同一辆，所以写“两者为同一辆红色货车，无不同车辆”？不对，再仔细看，左边的图，A的框在B的框里面，对吧？黄框A在青框B的上方，都是那辆红车，所以确实是同一辆。那现在组织成正确的JSON格式，注意转义？不对，正常的JSON，字符串里的引号要转义吗？不，在JSON里，字符串用双引号，内部的双引号要转义，或者用单引号？不对，JSON的字符串必须用双引号，内部的双引号要加反斜杠。等下，正确的结构：\n{\n  \"same_vehicle\": true,\n  \"confidence\": 0.95,\n  \"reason\": \"左侧整帧画面中，黄框A为红色货车的货厢局部区域，青框B为该红色货车的整体区域（包含车头与货厢），两者车身颜色、特征一致，属于同一辆货车的不同局部框选\",\n  \"if_different\": \"两者为同一辆红色货车，无不同车辆\"\n}\n对，这样就对了。再检查判据，A是B的局部，所以判同一，没错。confidence给0.95，因为很明显是同一辆，没有歧义。理由也符合要求，if_different因为是同一辆，所以说明是同一辆。",
+      "finish_reason": "stop",
+      "parsed": {
+        "same_vehicle": true,
+        "confidence": 0.95,
+        "reason": "左侧整帧画面中，黄框A为红色货车的货厢局部区域，青框B为该红色货车的整体区域（包含车头与货厢），两者车身颜色、特征一致，属于同一辆货车的不同局部框选",
+        "if_different": "两者为同一辆红色货车，无不同车辆"
+      }
+    },
+    {
+      "stage": "adjudicate:r1:2-4",
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "prompt": "这张图左边是整帧上下文，黄框标为 A、青框标为 B；右边是 A、B 的目标框内放大。放大图只保留各自候选框附近，框外相邻车辆不是比较对象。\n\n请判断 A 与 B 是否指向同一辆物理货车。\n\n判据：\n- 货厢/集装箱颜色与纹理、车头特征、朝向、在通道中的队列位置。\n- 如果 A 是 B 的车头、车顶、货厢局部或同一车被框了两次，应判为同一辆。\n- 如果一个框只覆盖同一辆车的上半部、另一个框覆盖下半部，但颜色、宽度和车道位置连续，应判为同一辆。\n- 一个框同时包含目标车和上方相邻车时，以两个框重叠的那辆车为准，不要把相邻车当成差异证据。\n- 结合左图看两个框在队列中的前后关系；右侧放大只用于看外观细节。\n- 如果颜色/纹理明显不同，或两车在队列中一前一后、车身不连续，判为不同。\n- 只根据可见外观判断；不要因为两个框在画面上重叠就自动判同一辆。\n\n只输出严格 JSON：\n{\n  \"same_vehicle\": true,\n  \"confidence\": 0.0,\n  \"reason\": \"具体外观/位置证据\",\n  \"if_different\": \"两辆分别是什么\"\n}",
+      "images": [
+        "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\windows\\south_2400\\pair_r1_02_04.jpg"
+      ],
+      "requested_max_tokens": 600,
+      "temperature": 0,
+      "ok": true,
+      "latency_s": 7.49,
+      "usage": {
+        "completion_tokens": 744,
+        "prompt_tokens": 1640,
+        "total_tokens": 2384,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 626
+        }
+      },
+      "raw_text": "{\n  \"same_vehicle\": true,\n  \"confidence\": 0.99,\n  \"reason\": \"左图中A框为红色货车的整体（包含货厢与车头），B框为该货车的车头局部；右侧放大图中，A的车头区域与B的车头外观特征一致，货厢颜色纹理匹配，且二者为同一辆货车的不同框选部分，符合同一车辆的判定标准\",\n  \"if_different\": \"无，二者为同一辆红色货运卡车\"\n}",
+      "reasoning_text": "用户现在需要判断A和B是不是同一辆货车。首先看左图，黄框A是整个红色货车，包括货厢和车头，青框B是这个货车的车头部分。然后看右边的放大图，A的放大是整个车的上半部分（货厢+车头），B的放大是车头部分，车头的特征是一样的，都是红色的重卡，货厢是灰色的，位置在通道里，A框是整个车，B框是它的车头，所以是同一辆。那confidence应该很高，比如0.99？理由就是：左图中A框为红色货车的整体（含货厢和车头），B框为该货车的车头部分；右侧放大图中，A的车头与B的车头外观特征一致，货厢颜色纹理匹配，且在通道中是同一辆货车的不同框选部分，符合同一车辆的判据。if_different的话因为是同一辆，所以应该空？不对，看要求，if_different是如果不同的话写两辆是什么，这里是同一辆，所以if_different可以写“无，为同一辆货车”？不对，再仔细看。\n\n首先，左图里，黄色框A是那个红色货车，从货厢到车头，青色框B是这个红色货车的车头部分，所以A是整个车，B是它的车头，所以是同一辆。所以same_vehicle是true，confidence比如0.99，理由是“左图中A框为红色货车的整体（包含货厢与车头），B框为该货车的车头局部；右侧放大图中，A的车头区域与B的车头外观特征一致，货厢颜色纹理匹配，且二者为同一辆货车的不同框选部分，符合同一车辆的判定标准”，if_different因为是同一辆，所以写“无，二者为同一辆红色货运卡车”？不对，再整理成严格的JSON。\n\n等下，再确认：右边A的放大图是整个车（货厢+车头），B的放大是车头，左图里A的框是整个车，B的框是A的车头部分，所以确实是同一辆。所以confidence应该很高，比如0.99，理由正确。那最终的JSON应该是：\n\n{\n  \"same_vehicle\": true,\n  \"confidence\": 0.99,\n  \"reason\": \"左图中A框为红色货车的整体（含货厢和车头），B框为该货车的车头局部；右侧放大图中，A的车头与B的车头外观特征一致，货厢颜色纹理匹配，且二者为同一辆货车的不同框选部分，符合同一车辆的判定条件\",\n  \"if_different\": \"无，二者为同一辆红色货运卡车\"\n}\n\n对，这样就对了。",
+      "finish_reason": "stop",
+      "parsed": {
+        "same_vehicle": true,
+        "confidence": 0.99,
+        "reason": "左图中A框为红色货车的整体（包含货厢与车头），B框为该货车的车头局部；右侧放大图中，A的车头区域与B的车头外观特征一致，货厢颜色纹理匹配，且二者为同一辆货车的不同框选部分，符合同一车辆的判定标准",
+        "if_different": "无，二者为同一辆红色货运卡车"
+      }
+    },
+    {
+      "stage": "type_review:1",
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "prompt": "这是一辆已确认货车候选的放大裁剪。黄色边框是候选框。请只复核候选框内的目标车辆，不要重新数画面里有多少辆车。\n\n计数口径（必须遵守）：\n1. 牵引车 + 半挂/集装箱挂车 = 1 辆；车头与货厢不得拆成两辆。\n2. 只看到货厢/集装箱，但能看出它属于通道内的货车（有底盘、支腿、鞍座、与前后车成队列，或明显是运输挂车）时，算 1 辆，visible 标为 trailer_only。蓝色、灰色、白色的集装箱货厢都要检查。\n3. 展台、建筑、墙体、货架、装饰物、叉车、轿车、面包车、手推车、工程机械、人物都不计入。\n4. 只统计本图实际可见的车辆；完全被挡住或只在画面外的不要猜。\n5. 车头或货厢只露出局部、但仍能确定是货车时计入，并在 visible 中说明；无法确定时 uncertain=true。\n6. 车型：large=重卡/半挂/长货厢；medium=两轴或三轴中卡/中型厢车；small=轻卡/小型厢式货车。只看到货厢时按货厢长度相对通道宽度、车顶长宽比估计；不确定就写 unknown，不要硬分。\n7. 不要把同一辆车的车头框和货厢框分别输出。bbox 要框住整辆可见车辆的联合外接框。\n\n重点：\n- 框内可能同时露出上/下/侧边相邻车辆的局部货厢；相邻车辆不属于目标，不能当作目标的挂车。\n- 先找目标的驾驶室/挡风玻璃/格栅。若框内主体是车头，并且没有与它连续相连的长货厢，body_kind 必须是 cab_only，size 必须是 medium；画面上方别人的货厢不能改变这一点。\n- 用整车轮廓、车顶长宽比、轴数、货厢长度与通道宽度的比例判断 large/medium/small。\n- 只看到货厢时按货厢长度和车顶比例判断；证据不足就输出 unknown。\n- 不要因为车看起来大就一律判 large；两轴/三轴中卡应为 medium。\n- 只有牵引车头、没有挂车或长货厢的，按 medium；牵引车 + 长集装箱/长货厢才按 large。\n- 蓝色招牌、展台墙板、广告牌不是货厢。\n\n只输出严格 JSON：\n{\n  \"is_truck\": true,\n  \"size\": \"large|medium|small|unknown\",\n  \"body_kind\": \"cab_only|tractor_with_trailer|rigid_truck|trailer_only|unknown\",\n  \"has_trailer\": false,\n  \"confidence\": 0.0,\n  \"reason\": \"车型判断依据\",\n  \"needs_review\": false\n}",
+      "images": [
+        "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\windows\\south_2400\\type_01.jpg"
+      ],
+      "requested_max_tokens": 500,
+      "temperature": 0,
+      "ok": true,
+      "latency_s": 4.07,
+      "usage": {
+        "completion_tokens": 395,
+        "prompt_tokens": 1944,
+        "total_tokens": 2339,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 299
+        }
+      },
+      "raw_text": "{\n  \"is_truck\": true,\n  \"size\": \"large\",\n  \"body_kind\": \"tractor_with_trailer\",\n  \"has_trailer\": true,\n  \"confidence\": 0.98,\n  \"reason\": \"候选框内为完整的半挂货车，包含牵引车及相连的货厢，属于大型重卡，符合货车计数口径\",\n  \"needs_review\": false\n}",
+      "reasoning_text": "\n用户现在需要处理这个货车的判断，首先看图片里的候选框，是一辆白色的货车，有车头和货厢对吧？首先，is_truck肯定是true。然后size，这个是重卡，半挂那种，所以是large？body_kind的话，是tractor_with_trailer，因为有车头和货厢连在一起。has_trailer是true。confidence的话，应该很高，比如0.95？理由的话，就是候选框内是完整的半挂货车，包含牵引车和挂车，属于大型重卡。needs_review是false。\n\n等下再仔细看，图片里的车，车头是东风的，后面有货厢，所以是牵引车加挂车，所以body_kind是tractor_with_trailer，size是large，has_trailer是true，is_truck是true，confidence很高，理由就是目标为完整的半挂货车，包含牵引车与挂车，属于大型重卡，符合货车计数要求。needs_review是false。\n\n现在整理成严格的JSON格式，注意各个字段的取值正确。比如size是large，body_kind是tractor_with_trailer，has_trailer是true，confidence比如0.98，reason就是“候选框内为完整的半挂货车，包含牵引车及相连的货厢，属于大型重卡，符合计数口径”，needs_review是false。",
+      "finish_reason": "stop",
+      "parsed": {
+        "is_truck": true,
+        "size": "large",
+        "body_kind": "tractor_with_trailer",
+        "has_trailer": true,
+        "confidence": 0.98,
+        "reason": "候选框内为完整的半挂货车，包含牵引车及相连的货厢，属于大型重卡，符合货车计数口径",
+        "needs_review": false
+      }
+    },
+    {
+      "stage": "type_review:2",
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "prompt": "这是一辆已确认货车候选的放大裁剪。黄色边框是候选框。请只复核候选框内的目标车辆，不要重新数画面里有多少辆车。\n\n计数口径（必须遵守）：\n1. 牵引车 + 半挂/集装箱挂车 = 1 辆；车头与货厢不得拆成两辆。\n2. 只看到货厢/集装箱，但能看出它属于通道内的货车（有底盘、支腿、鞍座、与前后车成队列，或明显是运输挂车）时，算 1 辆，visible 标为 trailer_only。蓝色、灰色、白色的集装箱货厢都要检查。\n3. 展台、建筑、墙体、货架、装饰物、叉车、轿车、面包车、手推车、工程机械、人物都不计入。\n4. 只统计本图实际可见的车辆；完全被挡住或只在画面外的不要猜。\n5. 车头或货厢只露出局部、但仍能确定是货车时计入，并在 visible 中说明；无法确定时 uncertain=true。\n6. 车型：large=重卡/半挂/长货厢；medium=两轴或三轴中卡/中型厢车；small=轻卡/小型厢式货车。只看到货厢时按货厢长度相对通道宽度、车顶长宽比估计；不确定就写 unknown，不要硬分。\n7. 不要把同一辆车的车头框和货厢框分别输出。bbox 要框住整辆可见车辆的联合外接框。\n\n重点：\n- 框内可能同时露出上/下/侧边相邻车辆的局部货厢；相邻车辆不属于目标，不能当作目标的挂车。\n- 先找目标的驾驶室/挡风玻璃/格栅。若框内主体是车头，并且没有与它连续相连的长货厢，body_kind 必须是 cab_only，size 必须是 medium；画面上方别人的货厢不能改变这一点。\n- 用整车轮廓、车顶长宽比、轴数、货厢长度与通道宽度的比例判断 large/medium/small。\n- 只看到货厢时按货厢长度和车顶比例判断；证据不足就输出 unknown。\n- 不要因为车看起来大就一律判 large；两轴/三轴中卡应为 medium。\n- 只有牵引车头、没有挂车或长货厢的，按 medium；牵引车 + 长集装箱/长货厢才按 large。\n- 蓝色招牌、展台墙板、广告牌不是货厢。\n\n只输出严格 JSON：\n{\n  \"is_truck\": true,\n  \"size\": \"large|medium|small|unknown\",\n  \"body_kind\": \"cab_only|tractor_with_trailer|rigid_truck|trailer_only|unknown\",\n  \"has_trailer\": false,\n  \"confidence\": 0.0,\n  \"reason\": \"车型判断依据\",\n  \"needs_review\": false\n}",
+      "images": [
+        "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\windows\\south_2400\\type_02.jpg"
+      ],
+      "requested_max_tokens": 500,
+      "temperature": 0,
+      "ok": true,
+      "latency_s": 4.6,
+      "usage": {
+        "completion_tokens": 448,
+        "prompt_tokens": 1920,
+        "total_tokens": 2368,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 343
+        }
+      },
+      "raw_text": "{\n  \"is_truck\": true,\n  \"size\": \"large\",\n  \"body_kind\": \"tractor_with_trailer\",\n  \"has_trailer\": true,\n  \"confidence\": 0.9,\n  \"reason\": \"黄色候选框内可见货车完整的驾驶室（含车头格栅、挡风玻璃等特征）及后方相连的货厢，属于牵引车带挂车的组合，为大型重卡\",\n  \"needs_review\": false\n}",
+      "reasoning_text": "\n用户现在需要处理这个货车候选的复核，首先看图片里的目标，黄色框里的是一辆重卡的车头加后面的货厢？不对，先仔细看：首先，is_truck是true对吧？然后size，这个是大型的重卡，因为是牵引车加挂车？不对，看body_kind，首先，能看到车头（驾驶室格栅这些），然后后面连着货厢，所以是tractor_with_trailer？然后has_trailer是true？confidence的话，因为能看到完整的车头和部分货厢，所以置信度高，比如0.9？然后reason：黄色边框内可见货车的驾驶室（带格栅、挡风玻璃等）及相连的货厢，属于牵引车带挂车的组合，为大型重卡。然后needs_review是false？等下再核对规则：\n首先，计数口径1：牵引车+半挂是1辆，所以is_truck=true。size：large，因为是重卡。body_kind：tractor_with_trailer，has_trailer=true。confidence：0.9，因为能明确看到车头和货厢的连接部分。reason：候选框内可见完整的货车驾驶室（含车头格栅、挡风玻璃等特征）及后方相连的货厢，符合牵引车带挂车的组合，属于大型货车。needs_review=false。\n等下有没有问题？再看规则，重点里说如果框内主体是车头，没有连续长货厢才是cab_only，这里明显有货厢在后面，所以是tractor_with_trailer。对的。那输出的JSON要严格符合格式。",
+      "finish_reason": "stop",
+      "parsed": {
+        "is_truck": true,
+        "size": "large",
+        "body_kind": "tractor_with_trailer",
+        "has_trailer": true,
+        "confidence": 0.9,
+        "reason": "黄色候选框内可见货车完整的驾驶室（含车头格栅、挡风玻璃等特征）及后方相连的货厢，属于牵引车带挂车的组合，为大型重卡",
+        "needs_review": false
+      }
+    },
+    {
+      "stage": "type_review:3",
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "prompt": "这是一辆已确认货车候选的放大裁剪。黄色边框是候选框。请只复核候选框内的目标车辆，不要重新数画面里有多少辆车。\n\n计数口径（必须遵守）：\n1. 牵引车 + 半挂/集装箱挂车 = 1 辆；车头与货厢不得拆成两辆。\n2. 只看到货厢/集装箱，但能看出它属于通道内的货车（有底盘、支腿、鞍座、与前后车成队列，或明显是运输挂车）时，算 1 辆，visible 标为 trailer_only。蓝色、灰色、白色的集装箱货厢都要检查。\n3. 展台、建筑、墙体、货架、装饰物、叉车、轿车、面包车、手推车、工程机械、人物都不计入。\n4. 只统计本图实际可见的车辆；完全被挡住或只在画面外的不要猜。\n5. 车头或货厢只露出局部、但仍能确定是货车时计入，并在 visible 中说明；无法确定时 uncertain=true。\n6. 车型：large=重卡/半挂/长货厢；medium=两轴或三轴中卡/中型厢车；small=轻卡/小型厢式货车。只看到货厢时按货厢长度相对通道宽度、车顶长宽比估计；不确定就写 unknown，不要硬分。\n7. 不要把同一辆车的车头框和货厢框分别输出。bbox 要框住整辆可见车辆的联合外接框。\n\n重点：\n- 框内可能同时露出上/下/侧边相邻车辆的局部货厢；相邻车辆不属于目标，不能当作目标的挂车。\n- 先找目标的驾驶室/挡风玻璃/格栅。若框内主体是车头，并且没有与它连续相连的长货厢，body_kind 必须是 cab_only，size 必须是 medium；画面上方别人的货厢不能改变这一点。\n- 用整车轮廓、车顶长宽比、轴数、货厢长度与通道宽度的比例判断 large/medium/small。\n- 只看到货厢时按货厢长度和车顶比例判断；证据不足就输出 unknown。\n- 不要因为车看起来大就一律判 large；两轴/三轴中卡应为 medium。\n- 只有牵引车头、没有挂车或长货厢的，按 medium；牵引车 + 长集装箱/长货厢才按 large。\n- 蓝色招牌、展台墙板、广告牌不是货厢。\n\n只输出严格 JSON：\n{\n  \"is_truck\": true,\n  \"size\": \"large|medium|small|unknown\",\n  \"body_kind\": \"cab_only|tractor_with_trailer|rigid_truck|trailer_only|unknown\",\n  \"has_trailer\": false,\n  \"confidence\": 0.0,\n  \"reason\": \"车型判断依据\",\n  \"needs_review\": false\n}",
+      "images": [
+        "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\architecture_challenger\\research\\architecture_challenge\\evidence\\windows\\south_2400\\type_03.jpg"
+      ],
+      "requested_max_tokens": 500,
+      "temperature": 0,
+      "ok": true,
+      "latency_s": 5.47,
+      "usage": {
+        "completion_tokens": 533,
+        "prompt_tokens": 1937,
+        "total_tokens": 2470,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 431
+        }
+      },
+      "raw_text": "{\n  \"is_truck\": true,\n  \"size\": \"large\",\n  \"body_kind\": \"tractor_with_trailer\",\n  \"has_trailer\": true,\n  \"confidence\": 0.98,\n  \"reason\": \"候选框内可见红色货车，包含完整驾驶室及与其连续连接的长条形集装箱货厢，属于牵引车带挂车的大型货车，符合货车计数要求\",\n  \"needs_review\": false\n}",
+      "reasoning_text": "\n我现在要处理用户的请求，先仔细看图片里的目标车辆。首先，候选框里的是红色的重卡，有车头和后面的集装箱货厢，是连在一起的，所以是牵引车加挂车，也就是tractor_with_trailer。然后size，这个是重卡，所以large。is_truck是true，has_trailer是true，confidence应该很高，比如0.95？理由的话，就是图中可见红色重卡，包含驾驶室和连续的集装箱货厢，属于牵引车带挂车的大型货车。然后needs_review是false对吧？\n\n等下再核对计数口径：1.牵引车+半挂/集装箱挂车算1辆，对的，这里是车头加后面的长货厢，所以body_kind是tractor_with_trailer，size是large，has_trailer是true，is_truck是true。理由要写清楚：候选框内可见红色货车，包含完整驾驶室及与其连续连接的长条形集装箱货厢，属于牵引车带挂车的大型货车，符合货车定义。confidence给0.98吧，因为很明显。needs_review是false，因为判断明确。\n\n现在整理成严格的JSON格式，注意所有字段都要对，没有多余的。比如：\n{\n  \"is_truck\": true,\n  \"size\": \"large\",\n  \"body_kind\": \"tractor_with_trailer\",\n  \"has_trailer\": true,\n  \"confidence\": 0.98,\n  \"reason\": \"候选框内可见红色货车，包含完整驾驶室及与其连续连接的长条形集装箱货厢，属于牵引车带挂车的大型货车，符合货车计数要求\",\n  \"needs_review\": false\n}\n\n对，检查有没有符合所有规则：没有把车头和货厢分开，是整辆，body_kind正确，size是large因为是重卡带长货厢，has_trailer是true，confidence很高，理由正确，needs_review是false。",
+      "finish_reason": "stop",
+      "parsed": {
+        "is_truck": true,
+        "size": "large",
+        "body_kind": "tractor_with_trailer",
+        "has_trailer": true,
+        "confidence": 0.98,
+        "reason": "候选框内可见红色货车，包含完整驾驶室及与其连续连接的长条形集装箱货厢，属于牵引车带挂车的大型货车，符合货车计数要求",
+        "needs_review": false
+      }
+    }
+  ],
+  "cost": {
+    "calls": 9,
+    "failed_calls": 0,
+    "latency_s": 72.73,
+    "prompt_tokens": 15835,
+    "completion_tokens": 7460,
+    "total_tokens": 23295
+  },
+  "wall_s": 73.5
+}
