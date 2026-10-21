@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>卡车识别 · 实时调试台</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./lab.css" />
+  </head>
+  <body>
+    <div class="glow glow-a"></div>
+    <div class="glow glow-b"></div>
+
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="brand-text">
+          <strong>TRUCKFLOW</strong>
+          <small>实时调试台 · LAB</small>
+        </span>
+      </div>
+      <div class="topbar-meta">
+        <span class="pulse"></span>
+        <span>真实实验产物</span>
+        <span class="divider"></span>
+        <span id="generatedAt">加载中</span>
+      </div>
+      <div class="topbar-tags">
+        <span class="tag tag-warn">人工开发集 v0</span>
+        <span class="tag">双机位 · 20 帧</span>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="metrics" aria-label="当前模型实测指标">
+        <article class="metric metric-main">
+          <span class="metric-label">完全正确</span>
+          <div class="metric-value"><strong id="metricExact">–</strong><span id="metricExactRate"></span></div>
+          <span class="metric-foot" id="metricGraded">–</span>
+        </article>
+        <article class="metric">
+          <span class="metric-label">平均绝对误差</span>
+          <div class="metric-value"><strong id="metricMae">–</strong><span>辆/帧</span></div>
+          <span class="metric-foot">越低越好，0 为完全一致</span>
+        </article>
+        <article class="metric">
+          <span class="metric-label">漏计 / 多计</span>
+          <div class="metric-value"><span class="split">漏</span><strong id="metricMissing">–</strong><span class="split">多</span><strong id="metricExtra">–</strong></div>
+          <span class="metric-foot">按帧计数差值累计</span>
+        </article>
+        <article class="metric">
+          <span class="metric-label">接口失败</span>
+          <div class="metric-value"><strong id="metricFailed">–</strong><span>帧</span></div>
+          <span class="metric-foot">失败不计入准确率分母</span>
+        </article>
+        <div class="metric-model">
+          <span class="metric-label">当前查看</span>
+          <strong id="modelTitle">–</strong>
+          <span id="modelDetail">–</span>
+        </div>
+      </section>
+
+      <section class="lab">
+        <aside class="rail">
+          <div class="rail-block">
+            <div class="rail-head"><span>模型实验</span><span id="modelCount">4</span></div>
+            <div class="model-list" id="modelList" role="tablist" aria-label="模型实验"></div>
+          </div>
+          <div class="rail-block rail-samples">
+            <div class="rail-head"><span>样本</span><span id="sampleCount">20</span></div>
+            <div class="sample-grid" id="sampleGrid"></div>
+            <div class="legend-row">
+              <span><i class="dot dot-ok"></i>完全正确</span>
+              <span><i class="dot dot-miss"></i>漏计</span>
+              <span><i class="dot dot-extra"></i>多计</span>
+              <span><i class="dot dot-fail"></i>失败</span>
+            </div>
+            <div class="finding">
+              <span class="finding-label">本轮关键发现</span>
+              <p id="findingText">–</p>
+            </div>
+          </div>
+        </aside>
+
+        <section class="stage" aria-live="polite">
+          <div class="stage-head">
+            <div class="stage-title">
+              <span id="stageCamera" class="camera-tag">天花北</span>
+              <h1 id="stageTime">00:10:00</h1>
+              <span class="stage-key" id="stageKey">north_600</span>
+            </div>
+            <div class="stage-mode">
+              <span class="mode-chip" id="boxSource">真实候选框</span>
+              <span class="mode-chip mode-muted" id="promptChip">prompt v1</span>
+            </div>
+          </div>
+
+          <div class="frame" id="frame">
+            <img id="frameImage" src="/assets/frames/north_600.jpg" alt="天花北 00:10:00 真实画面" />
+            <div class="frame-grid" aria-hidden="true"></div>
+            <div class="box-layer" id="boxLayer"></div>
+            <div class="frame-caption">
+              <span>1280 × 960 · 原始帧</span>
+              <span id="frameCaptionBoxes">–</span>
+            </div>
+          </div>
+
+          <div class="verdict" id="verdict">
+            <div class="verdict-cell">
+              <span>模型预测</span>
+              <strong id="predCount">–</strong>
+            </div>
+            <div class="verdict-cell">
+              <span>人工计数</span>
+              <strong id="goldCount">–</strong>
+            </div>
+            <div class="verdict-cell verdict-delta" id="deltaCell">
+              <span>差值</span>
+              <strong id="deltaValue">–</strong>
+            </div>
+            <div class="verdict-note" id="verdictNote">–</div>
+          </div>
+
+          <div class="detail-grid">
+            <article class="detail-card">
+              <h2>本帧判读</h2>
+              <p id="sceneNotes">–</p>
+              <div class="box-list" id="boxList"></div>
+            </article>
+            <article class="detail-card">
+              <h2>同帧对照</h2>
+              <div class="compare" id="compare"></div>
+              <p class="detail-foot" id="compareFoot">–</p>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <footer class="footer">
+        <span>数据源：<code>data/gold/camera_counts_v0.json</code> · <code>accuracy/runs/*</code></span>
+        <span>框来自模型原始返回；未返回框的样本只报计数，不补画。</span>
+      </footer>
+    </main>
+
+    <script src="./lab.js" type="module"></script>
+  </body>
+</html>
