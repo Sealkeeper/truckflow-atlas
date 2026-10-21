@@ -1,0 +1,97 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\all-sessions-can-see\\assets\\frames\\north_1200.jpg",
+  "prompt_version": "truck-count-v1",
+  "runs": [
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 13.56,
+      "usage": {
+        "completion_tokens": 1517,
+        "prompt_tokens": 1773,
+        "total_tokens": 3290,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1089
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.4,
+              0.35,
+              0.49,
+              0.65
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red metal enclosed cargo box, rear-facing, with markings on lower rear",
+            "evidence": "Fully visible in central aisle, distinct as a truck cargo unit",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.35,
+              0.62,
+              0.48,
+              0.99
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "White corrugated metal cargo top, gray lower section, rear-facing",
+            "evidence": "Fully visible below the red truck, in left aisle area",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.43,
+              0.15,
+              0.49,
+              0.3
+            ],
+            "size": "large",
+            "visible": "partial_top",
+            "is_truck": true,
+            "identity_clues": "Blue covered cargo top, rear-facing, upper portion only visible",
+            "evidence": "Located at far end of central aisle, partially obscured by the red truck in front",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "All trucks are positioned in the central and left aisles of the exhibition hall; the blue truck is partially hidden behind the red cargo truck",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.40, 0.35, 0.49, 0.65],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red metal enclosed cargo box, rear-facing, with markings on lower rear\",\n      \"evidence\": \"Fully visible in central aisle, distinct as a truck cargo unit\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.35, 0.62, 0.48, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White corrugated metal cargo top, gray lower section, rear-facing\",\n      \"evidence\": \"Fully visible below the red truck, in left aisle area\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.43, 0.15, 0.49, 0.30],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Blue covered cargo top, rear-facing, upper portion only visible\",\n      \"evidence\": \"Located at far end of central aisle, partially obscured by the red truck in front\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All trucks are positioned in the central and left aisles of the exhibition hall; the blue truck is partially hidden behind the red cargo truck\",\n  \"uncertain_reasons\": []\n}"
+    },
+    {
+      "model": "zhipu",
+      "model_id": "glm-4.7",
+      "ok": false,
+      "latency_s": 0.46,
+      "status": 400,
+      "error": "HTTPError: 400 Client Error: Bad Request for url: https://open.bigmodel.cn/api/paas/v4/chat/completions",
+      "response_text": "{\"error\":{\"code\":\"1210\",\"message\":\"messages.content.type 参数非法，取值范围 ['text']\"}}"
+    },
+    {
+      "model": "aibox",
+      "model_id": "glm-5.3",
+      "ok": false,
+      "latency_s": 0.19,
+      "status": 503,
+      "error": "HTTPError: 503 Server Error: Service Unavailable for url: https://aibox.richaibox.com:2078/v1/chat/completions",
+      "response_text": "{\"error\":{\"code\":\"model_not_found\",\"message\":\"No available channel for model glm-5.3 under group default (distributor) (request id: 202610210836534164468898268d9d6XvO0JZmt)\",\"type\":\"new_api_error\"}}"
+    }
+  ]
+}

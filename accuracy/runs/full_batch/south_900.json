@@ -1,0 +1,117 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\assets\\frames\\south_900.jpg",
+  "runs": [
+    {
+      "model": "aibox",
+      "model_id": "glm-5.3",
+      "ok": false,
+      "latency_s": 0.22,
+      "status": 503,
+      "error": "HTTPError: 503 Server Error: Service Unavailable for url: https://aibox.richaibox.com:2078/v1/chat/completions",
+      "response_text": "{\"error\":{\"code\":\"model_not_found\",\"message\":\"No available channel for model glm-5.3 under group default (distributor) (request id: 202610210852155130947408268d9d6FQKpIdvJ)\",\"type\":\"new_api_error\"}}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\assets\\frames\\south_900.jpg"
+    },
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 17.9,
+      "usage": {
+        "completion_tokens": 2206,
+        "prompt_tokens": 1773,
+        "total_tokens": 3979,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1584
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 5,
+          "large": 3,
+          "medium": 2,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.45,
+              0.65,
+              0.57,
+              0.89
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "White cab with '东风商用车' text, white cargo box, facing downward",
+            "evidence": "Full visible heavy truck in central aisle, meets truck definition",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.45,
+              0.3,
+              0.52,
+              0.55
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red cab, gray long semi-trailer, facing downward",
+            "evidence": "Full visible heavy truck with semi-trailer in central aisle",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.41,
+              0.25,
+              0.46,
+              0.36
+            ],
+            "size": "medium",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red cab, no visible trailer, facing downward",
+            "evidence": "Full visible medium truck cab in central aisle",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.44,
+              0.13,
+              0.49,
+              0.25
+            ],
+            "size": "medium",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red cab, topmost in central aisle, facing downward",
+            "evidence": "Full visible medium truck cab at far end of central aisle",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.47,
+              0.87,
+              0.59,
+              0.99
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "Red empty semi-trailer, no attached cab",
+            "evidence": "Separate visible trailer in bottom right, not attached to any adjacent cab",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "All trucks located in central aisle between exhibition booths; no vehicles are fully obscured, separate trailer counted per rules",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 5, \"large\": 3, \"medium\": 2, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.45, 0.65, 0.57, 0.89],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White cab with '东风商用车' text, white cargo box, facing downward\",\n      \"evidence\": \"Full visible heavy truck in central aisle, meets truck definition\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.30, 0.52, 0.55],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, gray long semi-trailer, facing downward\",\n      \"evidence\": \"Full visible heavy truck with semi-trailer in central aisle\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.41, 0.25, 0.46, 0.36],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, no visible trailer, facing downward\",\n      \"evidence\": \"Full visible medium truck cab in central aisle\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.13, 0.49, 0.25],\n      \"size\": \"medium\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, topmost in central aisle, facing downward\",\n      \"evidence\": \"Full visible medium truck cab at far end of central aisle\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.47, 0.87, 0.59, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red empty semi-trailer, no attached cab\",\n      \"evidence\": \"Separate visible trailer in bottom right, not attached to any adjacent cab\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All trucks located in central aisle between exhibition booths; no vehicles are fully obscured, separate trailer counted per rules\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\assets\\frames\\south_900.jpg"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\all-sessions-can-see\\assets\\frames\\north_1200.jpg",
+  "prompt_version": "truck-count-v1",
+  "runs": [
+    {
+      "model": "zhipu",
+      "model_id": "glm-4.5v",
+      "ok": true,
+      "latency_s": 37.32,
+      "usage": {
+        "completion_tokens": 1903,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1402
+        },
+        "prompt_tokens": 2034,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 3937
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.413,
+              0.369,
+              0.487,
+              0.618
+            ],
+            "size": "large",
+            "visible": "partial_side",
+            "is_truck": true,
+            "identity_clues": "红色封闭式货厢，纵向停放于中央通道左侧",
+            "evidence": "画面中部清晰可见的红色长方体厢体，尺寸符合重型厢式货车或集装箱半挂车特征，旁有工作人员活动",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.349,
+              0.623,
+              0.482,
+              0.999
+            ],
+            "size": "large",
+            "visible": "partial_top",
+            "is_truck": true,
+            "identity_clues": "白色/银色波纹板货厢，位于红色货车前方（近景），车头朝向画面下方",
+            "evidence": "前景占据画面下半部中央的大型白色厢式货车，可见完整车厢顶部及部分侧面，与红色货车形成前后队列",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.458,
+              0.164,
+              0.494,
+              0.319
+            ],
+            "size": "large",
+            "visible": "partial_side",
+            "is_truck": true,
+            "identity_clues": "深色（蓝/灰色）货厢或集装箱，位于通道最远处，CUORI展位右侧",
+            "evidence": "通道远景处可见的深色长方体物体，高宽比符合货车货厢特征，处于展区深处装卸位置",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "三辆货车均沿中央通道纵向排列，呈一列纵队分布；红色与白色货车间距较近，远处深色货车距镜头较远且视角略偏；画面边缘及展位内部未见其他货车；存在多根立柱遮挡部分视野但未完全遮蔽任何车辆。",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.413, 0.369, 0.487, 0.618],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色封闭式货厢，纵向停放于中央通道左侧\",\n      \"evidence\": \"画面中部清晰可见的红色长方体厢体，尺寸符合重型厢式货车或集装箱半挂车特征，旁有工作人员活动\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.349, 0.623, 0.482, 0.999],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色/银色波纹板货厢，位于红色货车前方（近景），车头朝向画面下方\",\n      \"evidence\": \"前景占据画面下半部中央的大型白色厢式货车，可见完整车厢顶部及部分侧面，与红色货车形成前后队列\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.458, 0.164, 0.494, 0.319],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"深色（蓝/灰色）货厢或集装箱，位于通道最远处，CUORI展位右侧\",\n      \"evidence\": \"通道远景处可见的深色长方体物体，高宽比符合货车货厢特征，处于展区深处装卸位置\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"三辆货车均沿中央通道纵向排列，呈一列纵队分布；红色与白色货车间距较近，远处深色货车距镜头较远且视角略偏；画面边缘及展位内部未见其他货车；存在多根立柱遮挡部分视野但未完全遮蔽任何车辆。\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}

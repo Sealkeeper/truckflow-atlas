@@ -1,0 +1,25 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\assets\\frames\\south_2600.jpg",
+  "runs": [
+    {
+      "model": "aibox",
+      "model_id": "glm-5.3",
+      "ok": false,
+      "latency_s": 1.34,
+      "status": 503,
+      "error": "HTTPError: 503 Server Error: Service Unavailable for url: https://aibox.richaibox.com:2078/v1/chat/completions",
+      "response_text": "{\"error\":{\"code\":\"model_not_found\",\"message\":\"No available channel for model glm-5.3 under group default (distributor) (request id: 202610210851488737285208268d9d6Bt2SeVk3)\",\"type\":\"new_api_error\"}}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\assets\\frames\\south_2600.jpg"
+    },
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": false,
+      "latency_s": 153.64,
+      "status": null,
+      "error": "ProxyError: HTTPSConnectionPool(host='ark.cn-beijing.volces.com', port=443): Max retries exceeded with url: /api/v3/chat/completions (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))",
+      "response_text": "",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\assets\\frames\\south_2600.jpg"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\all-sessions-can-see\\assets\\frames\\north_1200.jpg",
+  "prompt_version": "truck-count-v1",
+  "runs": [
+    {
+      "model": "aibox",
+      "model_id": "qwen3.6-35b-fp8",
+      "ok": true,
+      "latency_s": 22.8,
+      "usage": {
+        "prompt_tokens": 1663,
+        "total_tokens": 4662,
+        "completion_tokens": 2999,
+        "prompt_tokens_details": null
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              342,
+              613,
+              485,
+              998
+            ],
+            "size": "large",
+            "visible": "partial_side",
+            "is_truck": true,
+            "identity_clues": "白色长货厢，顶部有棱纹，位于画面左下方",
+            "evidence": "画面左下方可见白色大型厢式货车车厢侧面及顶部，车头未在画面内",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              408,
+              356,
+              490,
+              626
+            ],
+            "size": "large",
+            "visible": "partial_side",
+            "is_truck": true,
+            "identity_clues": "红色集装箱，侧面有白色文字",
+            "evidence": "画面中部通道左侧可见红色集装箱挂车，位于白色货车前方",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              453,
+              158,
+              498,
+              313
+            ],
+            "size": "large",
+            "visible": "partial_side",
+            "is_truck": true,
+            "identity_clues": "深灰色/黑色集装箱",
+            "evidence": "画面上方通道左侧可见深色集装箱挂车，位于红色集装箱前方",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面显示展会撤展现场，通道左侧停放着三辆大型货车/挂车，呈纵向排列。右侧为展位结构，无车辆。",
+        "uncertain_reasons": []
+      },
+      "raw_text": "\n\n```json\n{\n  \"counts\": {\n    \"total\": 3,\n    \"large\": 3,\n    \"medium\": 0,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [342, 613, 485, 998],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色长货厢，顶部有棱纹，位于画面左下方\",\n      \"evidence\": \"画面左下方可见白色大型厢式货车车厢侧面及顶部，车头未在画面内\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [408, 356, 490, 626],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色集装箱，侧面有白色文字\",\n      \"evidence\": \"画面中部通道左侧可见红色集装箱挂车，位于白色货车前方\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [453, 158, 498, 313],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"深灰色/黑色集装箱\",\n      \"evidence\": \"画面上方通道左侧可见深色集装箱挂车，位于红色集装箱前方\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面显示展会撤展现场，通道左侧停放着三辆大型货车/挂车，呈纵向排列。右侧为展位结构，无车辆。\",\n  \"uncertain_reasons\": []\n}\n```"
+    }
+  ]
+}

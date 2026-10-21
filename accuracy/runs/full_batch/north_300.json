@@ -1,0 +1,75 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\assets\\frames\\north_300.jpg",
+  "runs": [
+    {
+      "model": "aibox",
+      "model_id": "glm-5.3",
+      "ok": false,
+      "latency_s": 0.31,
+      "status": 503,
+      "error": "HTTPError: 503 Server Error: Service Unavailable for url: https://aibox.richaibox.com:2078/v1/chat/completions",
+      "response_text": "{\"error\":{\"code\":\"model_not_found\",\"message\":\"No available channel for model glm-5.3 under group default (distributor) (request id: 202610210851083424630678268d9d6U3I22p0P)\",\"type\":\"new_api_error\"}}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\assets\\frames\\north_300.jpg"
+    },
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 12.01,
+      "usage": {
+        "completion_tokens": 1350,
+        "prompt_tokens": 1773,
+        "total_tokens": 3123,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1030
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 2,
+          "large": 2,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.34,
+              0.57,
+              0.49,
+              0.99
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "White corrugated cargo body, gray rear section, positioned in lower central aisle",
+            "evidence": "Fully visible large box truck in the lower middle area of the scene",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.42,
+              0.15,
+              0.5,
+              0.46
+            ],
+            "size": "large",
+            "visible": "trailer_only",
+            "is_truck": true,
+            "identity_clues": "Blue flat roof, dark rectangular trailer body, located in upper central aisle, separate from adjacent truck",
+            "evidence": "Separate trailer visible in upper central aisle, not attached to the lower truck",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "Both vehicles are clearly visible with no significant occlusion in the frame. No ambiguous or partially hidden trucks.",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.34, 0.57, 0.49, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White corrugated cargo body, gray rear section, positioned in lower central aisle\",\n      \"evidence\": \"Fully visible large box truck in the lower middle area of the scene\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.42, 0.15, 0.50, 0.46],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Blue flat roof, dark rectangular trailer body, located in upper central aisle, separate from adjacent truck\",\n      \"evidence\": \"Separate trailer visible in upper central aisle, not attached to the lower truck\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"Both vehicles are clearly visible with no significant occlusion in the frame. No ambiguous or partially hidden trucks.\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\assets\\frames\\north_300.jpg"
+    }
+  ]
+}

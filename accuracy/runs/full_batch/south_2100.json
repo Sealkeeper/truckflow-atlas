@@ -1,0 +1,103 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\assets\\frames\\south_2100.jpg",
+  "runs": [
+    {
+      "model": "aibox",
+      "model_id": "glm-5.3",
+      "ok": false,
+      "latency_s": 0.26,
+      "status": 503,
+      "error": "HTTPError: 503 Server Error: Service Unavailable for url: https://aibox.richaibox.com:2078/v1/chat/completions",
+      "response_text": "{\"error\":{\"code\":\"model_not_found\",\"message\":\"No available channel for model glm-5.3 under group default (distributor) (request id: 202610210851450136240028268d9d6VPmoAylZ)\",\"type\":\"new_api_error\"}}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\assets\\frames\\south_2100.jpg"
+    },
+    {
+      "model": "doubao",
+      "model_id": "ep-20260828174616-dthpx",
+      "ok": true,
+      "latency_s": 14.96,
+      "usage": {
+        "completion_tokens": 1758,
+        "prompt_tokens": 1773,
+        "total_tokens": 3531,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1239
+        }
+      },
+      "parsed": {
+        "counts": {
+          "total": 4,
+          "large": 4,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.45,
+              0.6,
+              0.56,
+              0.88
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "White cab with '东风商用车' text, front-facing heavy truck",
+            "evidence": "Clearly visible at bottom center of the image, full vehicle shown",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.45,
+              0.3,
+              0.52,
+              0.5
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red cab with gray covered cargo area, front-facing semi-truck",
+            "evidence": "Located above the white truck, full vehicle visible",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.4,
+              0.2,
+              0.46,
+              0.4
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "Red cab with brown flat cargo area, front-facing heavy truck",
+            "evidence": "Above the gray cargo truck, full vehicle visible",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.42,
+              0.15,
+              0.47,
+              0.25
+            ],
+            "size": "large",
+            "visible": "partial_top",
+            "is_truck": true,
+            "identity_clues": "Red cab, front-facing, partially visible in upper central alley",
+            "evidence": "Partially shown behind the brown cargo truck, upper portion visible",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "All trucks are in the central aisle; only the fourth truck is partially visible, no other obscured or ambiguous vehicles",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 4, \"large\": 4, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.45, 0.60, 0.56, 0.88],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"White cab with '东风商用车' text, front-facing heavy truck\",\n      \"evidence\": \"Clearly visible at bottom center of the image, full vehicle shown\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.30, 0.52, 0.50],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab with gray covered cargo area, front-facing semi-truck\",\n      \"evidence\": \"Located above the white truck, full vehicle visible\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.40, 0.20, 0.46, 0.40],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab with brown flat cargo area, front-facing heavy truck\",\n      \"evidence\": \"Above the gray cargo truck, full vehicle visible\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.42, 0.15, 0.47, 0.25],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"Red cab, front-facing, partially visible in upper central alley\",\n      \"evidence\": \"Partially shown behind the brown cargo truck, upper portion visible\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"All trucks are in the central aisle; only the fourth truck is partially visible, no other obscured or ambiguous vehicles\",\n  \"uncertain_reasons\": []\n}",
+      "image": "D:\\File\\PROJECT\\codex\\codex-货车\\codexcodex-货车\\assets\\frames\\south_2100.jpg"
+    }
+  ]
+}

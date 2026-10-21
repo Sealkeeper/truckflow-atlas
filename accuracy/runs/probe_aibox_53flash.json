@@ -1,0 +1,78 @@
+{
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\all-sessions-can-see\\assets\\frames\\north_1200.jpg",
+  "prompt_version": "truck-count-v1",
+  "runs": [
+    {
+      "model": "aibox",
+      "model_id": "glm-5.3-flash",
+      "ok": true,
+      "latency_s": 7.92,
+      "usage": {
+        "prompt_tokens": 2067,
+        "total_tokens": 2606,
+        "completion_tokens": 539,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "image_tokens": 1610
+        },
+        "reasoning_tokens": 69
+      },
+      "parsed": {
+        "counts": {
+          "total": 3,
+          "large": 3,
+          "medium": 0,
+          "small": 0,
+          "unknown": 0
+        },
+        "vehicles": [
+          {
+            "bbox": [
+              0.44,
+              0.14,
+              0.52,
+              0.31
+            ],
+            "size": "large",
+            "visible": "partial_top",
+            "is_truck": true,
+            "identity_clues": "深色/蓝色厢式货车，位于通道远端，车头朝向镜头方向",
+            "evidence": "通道尽头可见一辆深色厢式货车的车头与货厢前部，被距离和展位遮挡仅露出上半部",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.4,
+              0.36,
+              0.5,
+              0.63
+            ],
+            "size": "large",
+            "visible": "full",
+            "is_truck": true,
+            "identity_clues": "红色集装箱式货厢，白色车头，车头朝下（朝镜头方向），货厢上有白色字符",
+            "evidence": "画面中央通道上停放的红色长货厢货车，整车轮廓清晰可见",
+            "uncertain": false
+          },
+          {
+            "bbox": [
+              0.35,
+              0.62,
+              0.48,
+              0.96
+            ],
+            "size": "large",
+            "visible": "partial_bottom",
+            "is_truck": true,
+            "identity_clues": "白色波纹厢式货厢，位于红色货车正下方/前方，车头朝画面下方",
+            "evidence": "画面下方通道上的白色长厢式货车，货厢大部分可见，车头部分接近画面底部边缘",
+            "uncertain": false
+          }
+        ],
+        "scene_notes": "画面为展馆撤展期俯拍，中央通道有三辆货车依次停放：远端深色货车、中部红色集装箱货车、近处白色厢式货车。红色货车与白色货车前后相邻但明显为两辆不同车辆。其余区域为展位搭建结构和人员，未见其他车辆。",
+        "uncertain_reasons": []
+      },
+      "raw_text": "{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.44, 0.14, 0.52, 0.31],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"深色/蓝色厢式货车，位于通道远端，车头朝向镜头方向\",\n      \"evidence\": \"通道尽头可见一辆深色厢式货车的车头与货厢前部，被距离和展位遮挡仅露出上半部\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.40, 0.36, 0.50, 0.63],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色集装箱式货厢，白色车头，车头朝下（朝镜头方向），货厢上有白色字符\",\n      \"evidence\": \"画面中央通道上停放的红色长货厢货车，整车轮廓清晰可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.35, 0.62, 0.48, 0.96],\n      \"size\": \"large\",\n      \"visible\": \"partial_bottom\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹厢式货厢，位于红色货车正下方/前方，车头朝画面下方\",\n      \"evidence\": \"画面下方通道上的白色长厢式货车，货厢大部分可见，车头部分接近画面底部边缘\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展馆撤展期俯拍，中央通道有三辆货车依次停放：远端深色货车、中部红色集装箱货车、近处白色厢式货车。红色货车与白色货车前后相邻但明显为两辆不同车辆。其余区域为展位搭建结构和人员，未见其他车辆。\",\n  \"uncertain_reasons\": []\n}"
+    }
+  ]
+}
