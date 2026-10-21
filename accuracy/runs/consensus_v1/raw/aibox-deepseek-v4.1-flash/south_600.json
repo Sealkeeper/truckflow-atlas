@@ -1,0 +1,160 @@
+{
+  "model": "aibox-deepseek-v4.1-flash",
+  "model_id": "deepseek-v4.1-flash",
+  "attempts": 1,
+  "latency_s": 3.44,
+  "usage": {
+    "prompt_tokens": 1459,
+    "total_tokens": 2049,
+    "completion_tokens": 590,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": {
+        "image": 1011
+      }
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "{\n  \"counts\": {\n    \"total\": 5,\n    \"large\": 5,\n    \"medium\": 0,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [0.45, 0.12, 0.55, 0.25],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，位于通道最远端\",\n      \"evidence\": \"画面最上方通道尽头可见红色重型卡车车头局部\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.35, 0.24, 0.45, 0.36],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，车顶有蓝色物品\",\n      \"evidence\": \"通道中上部，红色重型卡车，车头朝向镜头\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.28, 0.59, 0.46],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，灰色长货厢\",\n      \"evidence\": \"通道中部，红色车头牵引灰色长货厢，车头朝向镜头\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.47, 0.46, 0.69, 0.88],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色车头，白色长货厢，车头有'东风商用车'字样\",\n      \"evidence\": \"通道中下部，白色重型半挂车，车头朝向镜头\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.29, 0.66, 0.38, 0.81],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"深色车头，车顶有橙色警示灯，车头朝向镜头\",\n      \"evidence\": \"通道左下侧，部分被遮挡的深色重型卡车车头\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展会撤换展现场，通道两侧有大型展台结构。可见5辆重型货车在通道内排队或行驶。最上方车辆仅露出局部。\",\n  \"uncertain_reasons\": []\n}",
+  "reasoning_text": null,
+  "raw_body": {
+    "id": "chatcmpl-bf9552ac86d2eaed",
+    "object": "chat.completion",
+    "created": 1792586172,
+    "model": "deepseek-v4.1-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"counts\": {\n    \"total\": 5,\n    \"large\": 5,\n    \"medium\": 0,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [0.45, 0.12, 0.55, 0.25],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，位于通道最远端\",\n      \"evidence\": \"画面最上方通道尽头可见红色重型卡车车头局部\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.35, 0.24, 0.45, 0.36],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，车顶有蓝色物品\",\n      \"evidence\": \"通道中上部，红色重型卡车，车头朝向镜头\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.45, 0.28, 0.59, 0.46],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色车头，灰色长货厢\",\n      \"evidence\": \"通道中部，红色车头牵引灰色长货厢，车头朝向镜头\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.47, 0.46, 0.69, 0.88],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色车头，白色长货厢，车头有'东风商用车'字样\",\n      \"evidence\": \"通道中下部，白色重型半挂车，车头朝向镜头\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.29, 0.66, 0.38, 0.81],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"深色车头，车顶有橙色警示灯，车头朝向镜头\",\n      \"evidence\": \"通道左下侧，部分被遮挡的深色重型卡车车头\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展会撤换展现场，通道两侧有大型展台结构。可见5辆重型货车在通道内排队或行驶。最上方车辆仅露出局部。\",\n  \"uncertain_reasons\": []\n}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "reasoning": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null,
+        "routed_experts": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev20904+g179dd0fa9-tp8-ep-4471a5ba",
+    "usage": {
+      "prompt_tokens": 1459,
+      "total_tokens": 2049,
+      "completion_tokens": 590,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": {
+          "image": 1011
+        }
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 5,
+      "large": 5,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.45,
+          0.12,
+          0.55,
+          0.25
+        ],
+        "size": "large",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "红色车头，位于通道最远端",
+        "evidence": "画面最上方通道尽头可见红色重型卡车车头局部",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.35,
+          0.24,
+          0.45,
+          0.36
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色车头，车顶有蓝色物品",
+        "evidence": "通道中上部，红色重型卡车，车头朝向镜头",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.45,
+          0.28,
+          0.59,
+          0.46
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色车头，灰色长货厢",
+        "evidence": "通道中部，红色车头牵引灰色长货厢，车头朝向镜头",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.47,
+          0.46,
+          0.69,
+          0.88
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "白色车头，白色长货厢，车头有'东风商用车'字样",
+        "evidence": "通道中下部，白色重型半挂车，车头朝向镜头",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.29,
+          0.66,
+          0.38,
+          0.81
+        ],
+        "size": "large",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "深色车头，车顶有橙色警示灯，车头朝向镜头",
+        "evidence": "通道左下侧，部分被遮挡的深色重型卡车车头",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面为展会撤换展现场，通道两侧有大型展台结构。可见5辆重型货车在通道内排队或行驶。最上方车辆仅露出局部。",
+    "uncertain_reasons": []
+  },
+  "sample_id": "south_600",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\south_600_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:36:15+0800"
+}

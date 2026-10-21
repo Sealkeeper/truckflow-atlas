@@ -1,0 +1,14 @@
+{
+  "model": "aibox-deepseek-v4.1-flash",
+  "model_id": "deepseek-v4.1-flash",
+  "attempts": 1,
+  "ok": false,
+  "latency_s": 60.15,
+  "status": 504,
+  "error": "HTTPError: 504 Server Error: Gateway Time-out for url: https://aibox.richaibox.com:2078/v1/chat/completions",
+  "response_text": "<html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
+  "sample_id": "north_300",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\north_300_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:32:02+0800"
+}

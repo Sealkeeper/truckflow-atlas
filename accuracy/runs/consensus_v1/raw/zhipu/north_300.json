@@ -1,0 +1,78 @@
+{
+  "model": "zhipu",
+  "model_id": "glm-4.5v",
+  "attempts": 1,
+  "ok": true,
+  "latency_s": 50.87,
+  "usage": {
+    "completion_tokens": 1835,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1341
+    },
+    "prompt_tokens": 2898,
+    "prompt_tokens_details": {
+      "cached_tokens": 3
+    },
+    "total_tokens": 4733
+  },
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 3,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.202,
+          0.584,
+          0.548,
+          1.0
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "白色波纹金属板货厢，长条形厢式结构，位于画面下方中央通道，纵向停放",
+        "evidence": "画面最近处清晰可见的白色长货厢，具有典型重型厢式货车或集装箱半挂车的尺寸比例与外观特征",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.402,
+          0.252,
+          0.542,
+          0.465
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "深褐色/黑色货厢，顶部覆盖蓝色防水布或硬质顶盖，位于白色货车前方",
+        "evidence": "位于中央通道中部，具有大型货车货厢的方正外形，顶部蓝色覆盖物明显，与前后车辆保持安全间距",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.435,
+          0.163,
+          0.542,
+          0.27
+        ],
+        "size": "large",
+        "visible": "partial",
+        "is_truck": true,
+        "identity_clues": "深色货厢，位于蓝色顶棚货车后方远处，外形方正",
+        "evidence": "在通道纵深处可见第三辆大型货车的货厢主体，虽距离较远但轮廓清晰可辨为独立货车，与前车有明显间隔",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "三辆大型货车呈纵向队列停放在展会中央通道内，间距均匀；周围为展位搭建结构与作业人员；拍摄角度为高角度俯拍，视野开阔无严重遮挡；未发现中型或轻型货车",
+    "uncertain_reasons": []
+  },
+  "raw_text": "```json\n{\n  \"counts\": {\"total\": 3, \"large\": 3, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.202, 0.584, 0.548, 1.000],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹金属板货厢，长条形厢式结构，位于画面下方中央通道，纵向停放\",\n      \"evidence\": \"画面最近处清晰可见的白色长货厢，具有典型重型厢式货车或集装箱半挂车的尺寸比例与外观特征\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.402, 0.252, 0.542, 0.465],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"深褐色/黑色货厢，顶部覆盖蓝色防水布或硬质顶盖，位于白色货车前方\",\n      \"evidence\": \"位于中央通道中部，具有大型货车货厢的方正外形，顶部蓝色覆盖物明显，与前后车辆保持安全间距\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.435, 0.163, 0.542, 0.270],\n      \"size\": \"large\",\n      \"visible\": \"partial\",\n      \"is_truck\": true,\n      \"identity_clues\": \"深色货厢，位于蓝色顶棚货车后方远处，外形方正\",\n      \"evidence\": \"在通道纵深处可见第三辆大型货车的货厢主体，虽距离较远但轮廓清晰可辨为独立货车，与前车有明显间隔\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"三辆大型货车呈纵向队列停放在展会中央通道内，间距均匀；周围为展位搭建结构与作业人员；拍摄角度为高角度俯拍，视野开阔无严重遮挡；未发现中型或轻型货车\",\n  \"uncertain_reasons\": []\n}\n```",
+  "sample_id": "north_300",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\north_300_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:29:52+0800"
+}

@@ -1,0 +1,132 @@
+{
+  "model": "aibox-deepseek-v4.1-flash",
+  "model_id": "deepseek-v4.1-flash",
+  "attempts": 1,
+  "latency_s": 4.9,
+  "usage": {
+    "prompt_tokens": 1459,
+    "total_tokens": 1889,
+    "completion_tokens": 430,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": {
+        "image": 1011
+      }
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "{\n  \"counts\": {\n    \"total\": 3,\n    \"large\": 2,\n    \"medium\": 0,\n    \"small\": 1,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [0.18, 0.62, 0.53, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹顶长货厢，尾部可见，朝向画面下方\",\n      \"evidence\": \"画面下方中央偏左，占据大面积的长条形白色货厢，为半挂车或大型厢式货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.40, 0.25, 0.55, 0.46],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色集装箱式货厢，尾部有反光条，朝向画面下方\",\n      \"evidence\": \"画面中央通道内，红色长货厢，为重型半挂车或大型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.57, 0.57, 0.72],\n      \"size\": \"small\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"黑色叉车，带有门架和货叉\",\n      \"evidence\": \"白色长货厢右侧，正在作业的叉车，属于轻型货车/工程机械类，按口径计入 small\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中可见三辆符合货车定义的车辆：下方白色长货厢、中央红色货厢、以及右侧作业的叉车。其余为人物、手推车及展会结构。\",\n  \"uncertain_reasons\": []\n}",
+  "reasoning_text": null,
+  "raw_body": {
+    "id": "chatcmpl-b885eafb67e93ae7",
+    "object": "chat.completion",
+    "created": 1792586154,
+    "model": "deepseek-v4.1-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"counts\": {\n    \"total\": 3,\n    \"large\": 2,\n    \"medium\": 0,\n    \"small\": 1,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [0.18, 0.62, 0.53, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹顶长货厢，尾部可见，朝向画面下方\",\n      \"evidence\": \"画面下方中央偏左，占据大面积的长条形白色货厢，为半挂车或大型厢式货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.40, 0.25, 0.55, 0.46],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色集装箱式货厢，尾部有反光条，朝向画面下方\",\n      \"evidence\": \"画面中央通道内，红色长货厢，为重型半挂车或大型货车\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.57, 0.57, 0.72],\n      \"size\": \"small\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"黑色叉车，带有门架和货叉\",\n      \"evidence\": \"白色长货厢右侧，正在作业的叉车，属于轻型货车/工程机械类，按口径计入 small\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面中可见三辆符合货车定义的车辆：下方白色长货厢、中央红色货厢、以及右侧作业的叉车。其余为人物、手推车及展会结构。\",\n  \"uncertain_reasons\": []\n}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "reasoning": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null,
+        "routed_experts": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev20904+g179dd0fa9-tp8-ep-4471a5ba",
+    "usage": {
+      "prompt_tokens": 1459,
+      "total_tokens": 1889,
+      "completion_tokens": 430,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": {
+          "image": 1011
+        }
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 3,
+      "large": 2,
+      "medium": 0,
+      "small": 1,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.18,
+          0.62,
+          0.53,
+          0.99
+        ],
+        "size": "large",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "白色波纹顶长货厢，尾部可见，朝向画面下方",
+        "evidence": "画面下方中央偏左，占据大面积的长条形白色货厢，为半挂车或大型厢式货车",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.4,
+          0.25,
+          0.55,
+          0.46
+        ],
+        "size": "large",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "红色集装箱式货厢，尾部有反光条，朝向画面下方",
+        "evidence": "画面中央通道内，红色长货厢，为重型半挂车或大型货车",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.44,
+          0.57,
+          0.57,
+          0.72
+        ],
+        "size": "small",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "黑色叉车，带有门架和货叉",
+        "evidence": "白色长货厢右侧，正在作业的叉车，属于轻型货车/工程机械类，按口径计入 small",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面中可见三辆符合货车定义的车辆：下方白色长货厢、中央红色货厢、以及右侧作业的叉车。其余为人物、手推车及展会结构。",
+    "uncertain_reasons": []
+  },
+  "sample_id": "north_1800",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\north_1800_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:35:59+0800"
+}

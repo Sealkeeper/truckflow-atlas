@@ -1,0 +1,96 @@
+{
+  "model": "doubao",
+  "model_id": "ep-20260828174616-dthpx",
+  "attempts": 1,
+  "latency_s": 19.47,
+  "usage": {
+    "completion_tokens": 1833,
+    "prompt_tokens": 1776,
+    "total_tokens": 3609,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1496
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.18, 0.61, 0.52, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹状厢式货厢，车身带有模糊字符，朝向画面上方，位于画面下方左侧区域\",\n      \"evidence\": \"画面中可见完整的大型厢式货车，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.34, 0.36, 0.53, 0.63],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色封闭货厢，侧面有白色数字标识，位于白色厢式货车上方，为单独挂车结构\",\n      \"evidence\": \"画面中可见单独的大型货厢，属于货车范畴，与下方白色厢式车非同一车辆\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面内可见两辆大型货车，无遮挡或歧义导致的不确定情况，均为实际可见车辆\",\n  \"uncertain_reasons\": []\n}",
+  "reasoning_text": "\n我现在要处理用户的请求，就是清点图里的货车，按照要求输出JSON。首先看图片，能看到两辆货车对吧？第一辆是红色的货厢，在中间偏上，是大型的，应该是半挂的货厢？不对，还有下面那辆白色厢式的，也是大型的？等下仔细看：\n\n首先，第一辆：红色的货厢，位置大概是x0≈0.34，y0≈0.36，x1≈0.53，y1≈0.63，这个是单独的货厢？不对，下面那辆白色的，x0≈0.18，y0≈0.62，x1≈0.52，y1≈0.99，这个是完整的厢式货车，大型的。然后红色的那个货厢，是单独的吗？看，红色货厢下面有白色的车头部分？不对，红色货厢的底部是白色的，可能是车头？不对，白色的那辆是在红色货厢的下方，红色货厢在白色的上面，是分开的？不对，看图片：中间通道左边，有两个货车，一个是红色的高栏货厢（或者厢式？红色的，上面有数字），下面是白色的厢式货车，这两个是不同的？不对，等下数：\n\n1. 白色厢式货车：完整可见，从底部到中间，是大型（large），visible是full，identity是白色厢式，朝向是向上（因为车头在下方？不对，看位置，白色的车是在画面下方，货厢是白色的，朝向是上方，也就是车头在画面外下方？不对，不管，看外形，是大型厢式货车，完整可见。\n2. 红色货厢：在白色货车的上方，是单独的货厢？还是和下面的白色是同一辆？不对，红色货厢的底部有白色的部分，可能是车头？不对，白色的那辆是在红色货厢的正下方，是另一辆？不对，仔细看：红色货厢的坐标是[0.35, 0.37, 0.52, 0.62]，白色的是[0.19, 0.61, 0.51, 0.99]，这两个是不同的车辆，都是大型的？\n\n等下，用户的计数口径：同一辆车的车头和货厢算一辆，单独的挂车/货厢如果和相邻车头不是同一辆也算一辆。那红色的那个货厢，有没有对应的车头？看，红色货厢下面是白色的车顶？不对，白色的车是在红色货厢的下方，是另一辆，所以红色货厢是单独的挂车？那这样就是两辆大型货车？\n\n然后再确认：有没有其他货车？画面里左边的展位旁边，有没有？没有，右边是展位，人物，所以只有两辆？\n\n等下再看：白色的那辆，是完整的厢式货车，large，visible full。红色的那辆，是单独的货厢，trailer_only，large，因为货厢很长，属于大型。\n\n那counts的total是2，large是2，medium和small是0，unknown是0。\n\n然后vehicles数组里两个元素：\n\n第一个：白色厢式，bbox [0.18, 0.61, 0.52, 0.99]，size large，visible full，is_truck true，identity_clues：白色波纹状厢式货厢，车身有模糊字符，朝向画面上方，位于画面下方左侧区域。evidence：画面中可见完整的大型厢式货车，符合货车定义。uncertain false。\n\n第二个：红色货厢，bbox [0.34, 0.36, 0.53, 0.63]，size large，visible trailer_only，is_truck true，identity_clues：红色封闭货厢，侧面有白色数字标识，位于白色厢式货车上方，为单独的挂车结构。evidence：画面中可见单独的大型货厢，属于货车范畴，与下方白色厢式车非同一车辆。uncertain false。\n\nscene_notes：画面中可见两辆大型货车，无遮挡导致的歧义，均为实际可见车辆。\n\nuncertain_reasons：空数组。\n\n等下，有没有可能红色货厢和白色是同一辆？不对，因为白色的在红色的正下方，红色的货厢的底部是白色的，那如果是同一辆的话，货厢应该在车头上面，那白色的是车头？不对，白色的是厢式，货厢是白色的，那红色的货厢是另一辆，停在白色的前面？不对，位置是红色在上方，白色在下方，通道是纵向的，所以车辆是纵向停放，车头朝里（画面上方），所以红色的货厢是一辆，白色的厢式是另一辆，都是大型。\n\n对，这样总共有2辆，都是large。\n\n现在整理成严格的JSON，不要有多余的。\n\n等下再检查计数口径：小汽车、面包车等不计，人物不计，所以这两个都是货车，符合。\n\n那最终的JSON应该是：\n\n{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.18, 0.61, 0.52, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹状厢式货厢，车身带有模糊字符，朝向画面上方，位于画面下方左侧区域\",\n      \"evidence\": \"画面中可见完整的大型厢式货车，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.34, 0.36, 0.53, 0.63],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色封闭货厢，侧面有白色数字标识，位于白色厢式货车上方，为单独挂车结构\",\n      \"evidence\": \"画面中可见单独的大型货厢，属于货车范畴，与下方白色厢式车非同一车辆\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面内可见两辆大型货车，无遮挡或歧义导致的不确定情况，均为实际可见车辆\",\n  \"uncertain_reasons\": []\n}\n\n对，这样应该是对的。",
+  "raw_body": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.18, 0.61, 0.52, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹状厢式货厢，车身带有模糊字符，朝向画面上方，位于画面下方左侧区域\",\n      \"evidence\": \"画面中可见完整的大型厢式货车，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.34, 0.36, 0.53, 0.63],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色封闭货厢，侧面有白色数字标识，位于白色厢式货车上方，为单独挂车结构\",\n      \"evidence\": \"画面中可见单独的大型货厢，属于货车范畴，与下方白色厢式车非同一车辆\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面内可见两辆大型货车，无遮挡或歧义导致的不确定情况，均为实际可见车辆\",\n  \"uncertain_reasons\": []\n}",
+          "reasoning_content": "\n我现在要处理用户的请求，就是清点图里的货车，按照要求输出JSON。首先看图片，能看到两辆货车对吧？第一辆是红色的货厢，在中间偏上，是大型的，应该是半挂的货厢？不对，还有下面那辆白色厢式的，也是大型的？等下仔细看：\n\n首先，第一辆：红色的货厢，位置大概是x0≈0.34，y0≈0.36，x1≈0.53，y1≈0.63，这个是单独的货厢？不对，下面那辆白色的，x0≈0.18，y0≈0.62，x1≈0.52，y1≈0.99，这个是完整的厢式货车，大型的。然后红色的那个货厢，是单独的吗？看，红色货厢下面有白色的车头部分？不对，红色货厢的底部是白色的，可能是车头？不对，白色的那辆是在红色货厢的下方，红色货厢在白色的上面，是分开的？不对，看图片：中间通道左边，有两个货车，一个是红色的高栏货厢（或者厢式？红色的，上面有数字），下面是白色的厢式货车，这两个是不同的？不对，等下数：\n\n1. 白色厢式货车：完整可见，从底部到中间，是大型（large），visible是full，identity是白色厢式，朝向是向上（因为车头在下方？不对，看位置，白色的车是在画面下方，货厢是白色的，朝向是上方，也就是车头在画面外下方？不对，不管，看外形，是大型厢式货车，完整可见。\n2. 红色货厢：在白色货车的上方，是单独的货厢？还是和下面的白色是同一辆？不对，红色货厢的底部有白色的部分，可能是车头？不对，白色的那辆是在红色货厢的正下方，是另一辆？不对，仔细看：红色货厢的坐标是[0.35, 0.37, 0.52, 0.62]，白色的是[0.19, 0.61, 0.51, 0.99]，这两个是不同的车辆，都是大型的？\n\n等下，用户的计数口径：同一辆车的车头和货厢算一辆，单独的挂车/货厢如果和相邻车头不是同一辆也算一辆。那红色的那个货厢，有没有对应的车头？看，红色货厢下面是白色的车顶？不对，白色的车是在红色货厢的下方，是另一辆，所以红色货厢是单独的挂车？那这样就是两辆大型货车？\n\n然后再确认：有没有其他货车？画面里左边的展位旁边，有没有？没有，右边是展位，人物，所以只有两辆？\n\n等下再看：白色的那辆，是完整的厢式货车，large，visible full。红色的那辆，是单独的货厢，trailer_only，large，因为货厢很长，属于大型。\n\n那counts的total是2，large是2，medium和small是0，unknown是0。\n\n然后vehicles数组里两个元素：\n\n第一个：白色厢式，bbox [0.18, 0.61, 0.52, 0.99]，size large，visible full，is_truck true，identity_clues：白色波纹状厢式货厢，车身有模糊字符，朝向画面上方，位于画面下方左侧区域。evidence：画面中可见完整的大型厢式货车，符合货车定义。uncertain false。\n\n第二个：红色货厢，bbox [0.34, 0.36, 0.53, 0.63]，size large，visible trailer_only，is_truck true，identity_clues：红色封闭货厢，侧面有白色数字标识，位于白色厢式货车上方，为单独的挂车结构。evidence：画面中可见单独的大型货厢，属于货车范畴，与下方白色厢式车非同一车辆。uncertain false。\n\nscene_notes：画面中可见两辆大型货车，无遮挡导致的歧义，均为实际可见车辆。\n\nuncertain_reasons：空数组。\n\n等下，有没有可能红色货厢和白色是同一辆？不对，因为白色的在红色的正下方，红色的货厢的底部是白色的，那如果是同一辆的话，货厢应该在车头上面，那白色的是车头？不对，白色的是厢式，货厢是白色的，那红色的货厢是另一辆，停在白色的前面？不对，位置是红色在上方，白色在下方，通道是纵向的，所以车辆是纵向停放，车头朝里（画面上方），所以红色的货厢是一辆，白色的厢式是另一辆，都是大型。\n\n对，这样总共有2辆，都是large。\n\n现在整理成严格的JSON，不要有多余的。\n\n等下再检查计数口径：小汽车、面包车等不计，人物不计，所以这两个都是货车，符合。\n\n那最终的JSON应该是：\n\n{\n  \"counts\": {\"total\": 2, \"large\": 2, \"medium\": 0, \"small\": 0, \"unknown\": 0},\n  \"vehicles\": [\n    {\n      \"bbox\": [0.18, 0.61, 0.52, 0.99],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色波纹状厢式货厢，车身带有模糊字符，朝向画面上方，位于画面下方左侧区域\",\n      \"evidence\": \"画面中可见完整的大型厢式货车，符合货车定义\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.34, 0.36, 0.53, 0.63],\n      \"size\": \"large\",\n      \"visible\": \"trailer_only\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色封闭货厢，侧面有白色数字标识，位于白色厢式货车上方，为单独挂车结构\",\n      \"evidence\": \"画面中可见单独的大型货厢，属于货车范畴，与下方白色厢式车非同一车辆\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面内可见两辆大型货车，无遮挡或歧义导致的不确定情况，均为实际可见车辆\",\n  \"uncertain_reasons\": []\n}\n\n对，这样应该是对的。",
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1792586122,
+    "id": "0217925861036026cfe2b229f965c4fa1752fa8f08fea79fd394d",
+    "model": "doubao-seed-2-0-mini-260428",
+    "service_tier": "default",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 1833,
+      "prompt_tokens": 1776,
+      "total_tokens": 3609,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1496
+      }
+    }
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 2,
+      "large": 2,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.18,
+          0.61,
+          0.52,
+          0.99
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "白色波纹状厢式货厢，车身带有模糊字符，朝向画面上方，位于画面下方左侧区域",
+        "evidence": "画面中可见完整的大型厢式货车，符合货车定义",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.34,
+          0.36,
+          0.53,
+          0.63
+        ],
+        "size": "large",
+        "visible": "trailer_only",
+        "is_truck": true,
+        "identity_clues": "红色封闭货厢，侧面有白色数字标识，位于白色厢式货车上方，为单独挂车结构",
+        "evidence": "画面中可见单独的大型货厢，属于货车范畴，与下方白色厢式车非同一车辆",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面内可见两辆大型货车，无遮挡或歧义导致的不确定情况，均为实际可见车辆",
+    "uncertain_reasons": []
+  },
+  "sample_id": "north_1500",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\north_1500_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:35:23+0800"
+}

@@ -1,0 +1,146 @@
+{
+  "model": "aibox-glm-5.3-flash",
+  "model_id": "glm-5.3-flash",
+  "attempts": 1,
+  "latency_s": 3.94,
+  "usage": {
+    "prompt_tokens": 1459,
+    "total_tokens": 1969,
+    "completion_tokens": 510,
+    "prompt_tokens_details": {
+      "cached_tokens": 1408,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": {
+        "image": 1011
+      }
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "{\n  \"counts\": {\n    \"total\": 4,\n    \"large\": 4,\n    \"medium\": 0,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [0.31, 0.21, 0.44, 0.42],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色厢式货车，车头朝前，车厢顶部有黑色文字\",\n      \"evidence\": \"画面中上部偏左，白色车头与白色货厢完整可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.19, 0.54, 0.33],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重型卡车车头，后方连接红色货厢，车头朝前\",\n      \"evidence\": \"白色货车右后方，红色车头及部分货厢可见，被前方车辆部分遮挡\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.48, 0.36, 0.64, 0.68],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重型卡车，红色高栏货厢，车头朝前\",\n      \"evidence\": \"画面中央通道，红色车头与红色货厢完整可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.53, 0.81, 0.81, 1.0],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货厢顶部，无车头可见\",\n      \"evidence\": \"画面底部中央偏右，仅露出红色货厢顶部，判断为挂车或货车货厢\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展会撤换展现场，通道内有散落垃圾和工作人员。可见4辆大型货车，其中底部红色货厢仅露出局部。\",\n  \"uncertain_reasons\": []\n}",
+  "reasoning_text": null,
+  "raw_body": {
+    "id": "chatcmpl-bf44d8bd572cfcd8",
+    "object": "chat.completion",
+    "created": 1792586183,
+    "model": "deepseek-v4.1-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"counts\": {\n    \"total\": 4,\n    \"large\": 4,\n    \"medium\": 0,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [0.31, 0.21, 0.44, 0.42],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色厢式货车，车头朝前，车厢顶部有黑色文字\",\n      \"evidence\": \"画面中上部偏左，白色车头与白色货厢完整可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.44, 0.19, 0.54, 0.33],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重型卡车车头，后方连接红色货厢，车头朝前\",\n      \"evidence\": \"白色货车右后方，红色车头及部分货厢可见，被前方车辆部分遮挡\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.48, 0.36, 0.64, 0.68],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色重型卡车，红色高栏货厢，车头朝前\",\n      \"evidence\": \"画面中央通道，红色车头与红色货厢完整可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [0.53, 0.81, 0.81, 1.0],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货厢顶部，无车头可见\",\n      \"evidence\": \"画面底部中央偏右，仅露出红色货厢顶部，判断为挂车或货车货厢\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展会撤换展现场，通道内有散落垃圾和工作人员。可见4辆大型货车，其中底部红色货厢仅露出局部。\",\n  \"uncertain_reasons\": []\n}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "reasoning": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null,
+        "routed_experts": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev20904+g179dd0fa9-tp8-ep-4471a5ba",
+    "usage": {
+      "prompt_tokens": 1459,
+      "total_tokens": 1969,
+      "completion_tokens": 510,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": {
+          "image": 1011
+        }
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 4,
+      "large": 4,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.31,
+          0.21,
+          0.44,
+          0.42
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "白色厢式货车，车头朝前，车厢顶部有黑色文字",
+        "evidence": "画面中上部偏左，白色车头与白色货厢完整可见",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.44,
+          0.19,
+          0.54,
+          0.33
+        ],
+        "size": "large",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "红色重型卡车车头，后方连接红色货厢，车头朝前",
+        "evidence": "白色货车右后方，红色车头及部分货厢可见，被前方车辆部分遮挡",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.48,
+          0.36,
+          0.64,
+          0.68
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色重型卡车，红色高栏货厢，车头朝前",
+        "evidence": "画面中央通道，红色车头与红色货厢完整可见",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.53,
+          0.81,
+          0.81,
+          1.0
+        ],
+        "size": "large",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "红色货厢顶部，无车头可见",
+        "evidence": "画面底部中央偏右，仅露出红色货厢顶部，判断为挂车或货车货厢",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面为展会撤换展现场，通道内有散落垃圾和工作人员。可见4辆大型货车，其中底部红色货厢仅露出局部。",
+    "uncertain_reasons": []
+  },
+  "sample_id": "south_2600",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\south_2600_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:36:26+0800"
+}

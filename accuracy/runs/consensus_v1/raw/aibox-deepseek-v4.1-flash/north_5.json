@@ -1,0 +1,146 @@
+{
+  "model": "aibox-deepseek-v4.1-flash",
+  "model_id": "deepseek-v4.1-flash",
+  "attempts": 1,
+  "latency_s": 7.24,
+  "usage": {
+    "prompt_tokens": 1459,
+    "total_tokens": 2011,
+    "completion_tokens": 552,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": {
+        "image": 1011
+      }
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "raw_text": "{\n  \"counts\": {\n    \"total\": 4,\n    \"large\": 4,\n    \"medium\": 0,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [\n        0.28,\n        0.5,\n        0.53,\n        0.9\n      ],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色长货厢，尾部车牌/编号 L66002，朝上（向画面深处）\",\n      \"evidence\": \"画面中下部最显眼的红色半挂/厢式货车，整车可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.56,\n        0.11,\n        0.66,\n        0.24\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货厢，深色车头，朝下（向画面近处）\",\n      \"evidence\": \"画面中上部通道内，仅见车头及货厢前部，被上方结构部分遮挡\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.44,\n        0.09,\n        0.56,\n        0.18\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色/浅色货厢，深色车头，朝下\",\n      \"evidence\": \"画面左上部通道内，位于红色货车后方，仅见车头顶部及部分货厢\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.41,\n        0.25,\n        0.53,\n        0.45\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色长货厢，侧面可见，朝上\",\n      \"evidence\": \"画面左侧中部，蓝色货厢侧面清晰，车头被遮挡或不在画面内\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展会撤换展通道，可见多辆大型货车排队。左侧蓝色货厢仅见侧面，上方两辆货车仅见局部，均按规则计入。通道内人员、叉车等未计入。\",\n  \"uncertain_reasons\": []\n}",
+  "reasoning_text": null,
+  "raw_body": {
+    "id": "chatcmpl-9cdfc0f04d02a017",
+    "object": "chat.completion",
+    "created": 1792586160,
+    "model": "deepseek-v4.1-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"counts\": {\n    \"total\": 4,\n    \"large\": 4,\n    \"medium\": 0,\n    \"small\": 0,\n    \"unknown\": 0\n  },\n  \"vehicles\": [\n    {\n      \"bbox\": [\n        0.28,\n        0.5,\n        0.53,\n        0.9\n      ],\n      \"size\": \"large\",\n      \"visible\": \"full\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色长货厢，尾部车牌/编号 L66002，朝上（向画面深处）\",\n      \"evidence\": \"画面中下部最显眼的红色半挂/厢式货车，整车可见\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.56,\n        0.11,\n        0.66,\n        0.24\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"红色货厢，深色车头，朝下（向画面近处）\",\n      \"evidence\": \"画面中上部通道内，仅见车头及货厢前部，被上方结构部分遮挡\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.44,\n        0.09,\n        0.56,\n        0.18\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_top\",\n      \"is_truck\": true,\n      \"identity_clues\": \"白色/浅色货厢，深色车头，朝下\",\n      \"evidence\": \"画面左上部通道内，位于红色货车后方，仅见车头顶部及部分货厢\",\n      \"uncertain\": false\n    },\n    {\n      \"bbox\": [\n        0.41,\n        0.25,\n        0.53,\n        0.45\n      ],\n      \"size\": \"large\",\n      \"visible\": \"partial_side\",\n      \"is_truck\": true,\n      \"identity_clues\": \"蓝色长货厢，侧面可见，朝上\",\n      \"evidence\": \"画面左侧中部，蓝色货厢侧面清晰，车头被遮挡或不在画面内\",\n      \"uncertain\": false\n    }\n  ],\n  \"scene_notes\": \"画面为展会撤换展通道，可见多辆大型货车排队。左侧蓝色货厢仅见侧面，上方两辆货车仅见局部，均按规则计入。通道内人员、叉车等未计入。\",\n  \"uncertain_reasons\": []\n}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "reasoning": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null,
+        "routed_experts": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev20904+g179dd0fa9-tp8-ep-4471a5ba",
+    "usage": {
+      "prompt_tokens": 1459,
+      "total_tokens": 2011,
+      "completion_tokens": 552,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": {
+          "image": 1011
+        }
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+  },
+  "ok": true,
+  "parsed": {
+    "counts": {
+      "total": 4,
+      "large": 4,
+      "medium": 0,
+      "small": 0,
+      "unknown": 0
+    },
+    "vehicles": [
+      {
+        "bbox": [
+          0.28,
+          0.5,
+          0.53,
+          0.9
+        ],
+        "size": "large",
+        "visible": "full",
+        "is_truck": true,
+        "identity_clues": "红色长货厢，尾部车牌/编号 L66002，朝上（向画面深处）",
+        "evidence": "画面中下部最显眼的红色半挂/厢式货车，整车可见",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.56,
+          0.11,
+          0.66,
+          0.24
+        ],
+        "size": "large",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "红色货厢，深色车头，朝下（向画面近处）",
+        "evidence": "画面中上部通道内，仅见车头及货厢前部，被上方结构部分遮挡",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.44,
+          0.09,
+          0.56,
+          0.18
+        ],
+        "size": "large",
+        "visible": "partial_top",
+        "is_truck": true,
+        "identity_clues": "白色/浅色货厢，深色车头，朝下",
+        "evidence": "画面左上部通道内，位于红色货车后方，仅见车头顶部及部分货厢",
+        "uncertain": false
+      },
+      {
+        "bbox": [
+          0.41,
+          0.25,
+          0.53,
+          0.45
+        ],
+        "size": "large",
+        "visible": "partial_side",
+        "is_truck": true,
+        "identity_clues": "蓝色长货厢，侧面可见，朝上",
+        "evidence": "画面左侧中部，蓝色货厢侧面清晰，车头被遮挡或不在画面内",
+        "uncertain": false
+      }
+    ],
+    "scene_notes": "画面为展会撤换展通道，可见多辆大型货车排队。左侧蓝色货厢仅见侧面，上方两辆货车仅见局部，均按规则计入。通道内人员、叉车等未计入。",
+    "uncertain_reasons": []
+  },
+  "sample_id": "north_5",
+  "image": "D:\\File\\PROJECT\\codex\\codex-货车\\sessions\\consensus_sprint\\accuracy\\crops\\north_5_aisle.jpg",
+  "prompt_version": "truck-count-v1",
+  "started_at": "2026-10-21T20:36:06+0800"
+}
