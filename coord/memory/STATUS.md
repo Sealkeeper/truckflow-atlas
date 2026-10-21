@@ -17,7 +17,7 @@ PR：#13，https://github.com/Sealkeeper/truckflow-atlas/pull/13 ；保持打开
 - 修正跨机位释放：双机位有观测且没有已验证配对时一律 review。
 - 将身份拆为 `cargo_id`、`tractor_id`、`vehicle_session_id`；未分类文字不得进入任一硬身份层。
 - 新增 `generated/memory_cache.json` 和 `MEMORY_CACHE_SCHEMA.json`，每条记忆带来源、观测/创建时间、版本、TTL、过期时间、状态、冲突和 supersedes。
-- 冻结 `dualscale_v1`（20 次）和 `component_assembly_v1`（8 次）的输入、提示词和配置；本轮预算 28/40。
+- 冻结 `dualscale_v1`（20 次）和 `component_assembly_v1`（8 次）的输入、提示词和配置；冻结预算 28/40，实际执行 20，组件装配未启动。
 
 ## 已验证结果
 
