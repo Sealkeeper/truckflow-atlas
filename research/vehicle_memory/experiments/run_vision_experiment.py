@@ -96,7 +96,7 @@ def resolve_model() -> dict[str, str]:
 def images_for(config: dict[str, Any], sample: str) -> list[Path]:
     experiment_id = config["experiment_id"]
     if experiment_id == "dualscale_v1":
-        manifest = read_json(REPO_ROOT / config["input_manifest"])
+        manifest = read_json(VM_ROOT / config["input_manifest"])
         row = next(item for item in manifest["samples"] if item["sample_id"] == sample)
         primary = REPO_ROOT / row["primary"]
         secondary = REPO_ROOT / row["secondary"]
@@ -211,6 +211,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("config", type=Path)
     parser.add_argument("--force", action="store_true")
+    parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
 
     load_env(REPO_ROOT / ".env")
@@ -228,10 +229,39 @@ def main() -> None:
     if any(path.exists() for path in existing) and not args.force:
         raise RuntimeError(f"refusing to overwrite existing evidence in {out_dir}")
 
-    prompt_path = REPO_ROOT / config["prompt_file"]
+    prompt_path = VM_ROOT / config["prompt_file"]
     prompt = prompt_path.read_text(encoding="utf-8")
     prompt_hash = sha256(prompt_path)
     config_hash = sha256(config_path)
+    if args.check:
+        checked = []
+        for sample in samples:
+            images = images_for(config, sample)
+            checked.append(
+                {
+                    "sample_id": sample,
+                    "images": [
+                        str(path.relative_to(REPO_ROOT)).replace("\\", "/")
+                        for path in images
+                    ],
+                    "input_sha256": [sha256(path) for path in images],
+                }
+            )
+        print(
+            json.dumps(
+                {
+                    "status": "ok",
+                    "experiment_id": experiment_id,
+                    "samples": len(checked),
+                    "prompt_sha256": prompt_hash,
+                    "config_sha256": config_hash,
+                    "inputs": checked,
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
+        return
     frozen_commit = git_value("rev-parse", "HEAD")
     worktree_status = git_value("status", "--porcelain")
     if worktree_status:
