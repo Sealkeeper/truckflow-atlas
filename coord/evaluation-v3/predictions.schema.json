@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://truckflow.local/schemas/predictions-v3.json",
+  "title": "TruckFlow predictions v3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "dataset_id", "moments"],
+  "properties": {
+    "schema": {"const": "truckflow-predictions-v3"},
+    "dataset_id": {"type": "string", "minLength": 1},
+    "run_id": {"type": "string"},
+    "moments": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/moment"}
+    }
+  },
+  "$defs": {
+    "bbox": {
+      "type": "array",
+      "prefixItems": [
+        {"type": "number", "minimum": 0, "maximum": 1},
+        {"type": "number", "minimum": 0, "maximum": 1},
+        {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+        {"type": "number", "exclusiveMinimum": 0, "maximum": 1}
+      ],
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "camera": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "count", "objects_complete", "vehicles"],
+      "properties": {
+        "status": {"enum": ["ok", "abstain", "invalid"]},
+        "count": {"type": ["integer", "null"], "minimum": 0},
+        "objects_complete": {"type": "boolean"},
+        "vehicles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "bbox"],
+            "properties": {
+              "id": {"type": "string", "minLength": 1},
+              "bbox": {"$ref": "#/$defs/bbox"},
+              "score": {"type": "number"},
+              "occlusion": {"enum": ["none", "partial", "severe", "unknown"]}
+            }
+          }
+        }
+      }
+    },
+    "moment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["moment_id", "decision", "cameras", "overlap_edges", "cross_camera_pairs", "quantities"],
+      "properties": {
+        "moment_id": {"type": "string", "minLength": 1},
+        "decision": {"enum": ["auto", "review", "abstain", "invalid"]},
+        "cameras": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["south", "north"],
+          "properties": {
+            "south": {"$ref": "#/$defs/camera"},
+            "north": {"$ref": "#/$defs/camera"}
+          }
+        },
+        "overlap_edges": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "prefixItems": [{"type": "string"}, {"type": "string"}],
+            "minItems": 2,
+            "maxItems": 2
+          }
+        },
+        "cross_camera_pairs": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "prefixItems": [{"type": "string"}, {"type": "string"}],
+            "minItems": 2,
+            "maxItems": 2
+          }
+        },
+        "quantities": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["south", "north", "overlap", "unique"],
+          "properties": {
+            "south": {"type": ["integer", "null"], "minimum": 0},
+            "north": {"type": ["integer", "null"], "minimum": 0},
+            "overlap": {"type": ["integer", "null"], "minimum": 0},
+            "unique": {"type": ["integer", "null"], "minimum": 0}
+          }
+        }
+      }
+    }
+  }
+}
+

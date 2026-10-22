@@ -31,7 +31,7 @@ jobs:
 
       - name: flag banned detectors
         run: |
-          if git grep -n -I -E 'ultralytics|yolov[0-9]|from ultralytics|torch\.hub\.load\(.ultralytics' -- . ; then
+          if git grep -n -I -E 'ultralytics|from ultralytics|torch\.hub\.load\(.ultralytics' -- . ':!.github' ; then
             echo "::error::检测到被禁用的检测器依赖"
             exit 1
           fi

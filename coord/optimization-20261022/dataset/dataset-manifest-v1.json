@@ -1,0 +1,339 @@
+{
+  "schema": "truckflow-dataset-manifest-v1",
+  "dataset_id": "truckflow-30img-20261022",
+  "role": "development/regression (human-reviewed; not a generalisation proof)",
+  "moment_count": 15,
+  "image_count": 30,
+  "moments": [
+    {
+      "moment_id": "t0005",
+      "time_s": 5,
+      "label": "00:05",
+      "origin": "assets/frames",
+      "cameras": {
+        "south": {
+          "path": "assets/frames/south_5.jpg",
+          "sha256": "05fbf1dd60bdee2ac86e60fb05e81e06a252f2bc6a661120b40c136e99f3b174",
+          "width": 1280,
+          "height": 960,
+          "bytes": 524625
+        },
+        "north": {
+          "path": "assets/frames/north_5.jpg",
+          "sha256": "aba361d1b6b3bc83ff0813cefa3772ab0379d66435e0f1fdd82a17ba79bf5866",
+          "width": 1280,
+          "height": 960,
+          "bytes": 520576
+        }
+      }
+    },
+    {
+      "moment_id": "t0300",
+      "time_s": 300,
+      "label": "05:00",
+      "origin": "assets/frames",
+      "cameras": {
+        "south": {
+          "path": "assets/frames/south_300.jpg",
+          "sha256": "6744ad54937839fa76db357ca6b6e3a3ac9cb953981df27c95817d5007ae6c8f",
+          "width": 1280,
+          "height": 960,
+          "bytes": 515311
+        },
+        "north": {
+          "path": "assets/frames/north_300.jpg",
+          "sha256": "3132b760e662f0fde7f73b99f8d30513b7916c14483b4b95a8699259d59d8f2e",
+          "width": 1280,
+          "height": 960,
+          "bytes": 496993
+        }
+      }
+    },
+    {
+      "moment_id": "t0600",
+      "time_s": 600,
+      "label": "10:00",
+      "origin": "assets/frames",
+      "cameras": {
+        "south": {
+          "path": "assets/frames/south_600.jpg",
+          "sha256": "7ff985fa5daeef57a41e7e6e7d09183a3a04d385cf04b5c9d28d9d7eefa5c694",
+          "width": 1280,
+          "height": 960,
+          "bytes": 523635
+        },
+        "north": {
+          "path": "assets/frames/north_600.jpg",
+          "sha256": "45413698ea1a381cfc03c9fcf1837448ef32b80286594d4905984c9ba8a4eeaf",
+          "width": 1280,
+          "height": 960,
+          "bytes": 506441
+        }
+      }
+    },
+    {
+      "moment_id": "t0900",
+      "time_s": 900,
+      "label": "15:00",
+      "origin": "assets/frames",
+      "cameras": {
+        "south": {
+          "path": "assets/frames/south_900.jpg",
+          "sha256": "c86b8ba1407127bb0ae2b0a487ea5d020513c2c1f48226ac149462a66bb6f07c",
+          "width": 1280,
+          "height": 960,
+          "bytes": 523435
+        },
+        "north": {
+          "path": "assets/frames/north_900.jpg",
+          "sha256": "9ec7a3bfd929668aae80efbb721eddbbe8d96a50f2bfd9dc187b7aba3b0acc98",
+          "width": 1280,
+          "height": 960,
+          "bytes": 503736
+        }
+      }
+    },
+    {
+      "moment_id": "t1200",
+      "time_s": 1200,
+      "label": "20:00",
+      "origin": "assets/frames",
+      "cameras": {
+        "south": {
+          "path": "assets/frames/south_1200.jpg",
+          "sha256": "aff6dbb883f84ab293856fcab97926763493813f2764ede7b934466c50cb3465",
+          "width": 1280,
+          "height": 960,
+          "bytes": 523242
+        },
+        "north": {
+          "path": "assets/frames/north_1200.jpg",
+          "sha256": "e0e65ed4d8f6149be6b07f09191211a49d09e2d1c3dad285ad999a4c0b1132ed",
+          "width": 1280,
+          "height": 960,
+          "bytes": 500048
+        }
+      }
+    },
+    {
+      "moment_id": "t1500",
+      "time_s": 1500,
+      "label": "25:00",
+      "origin": "assets/frames",
+      "cameras": {
+        "south": {
+          "path": "assets/frames/south_1500.jpg",
+          "sha256": "6a67e533424b3b882bccbf90fc79c0af12184235398b961a519844c0b0919049",
+          "width": 1280,
+          "height": 960,
+          "bytes": 526081
+        },
+        "north": {
+          "path": "assets/frames/north_1500.jpg",
+          "sha256": "d816efbe3418ca6902153e71cf1200f08b03d6c5d192e2f7fd5e6e836ee0cd13",
+          "width": 1280,
+          "height": 960,
+          "bytes": 501031
+        }
+      }
+    },
+    {
+      "moment_id": "t1800",
+      "time_s": 1800,
+      "label": "30:00",
+      "origin": "assets/frames",
+      "cameras": {
+        "south": {
+          "path": "assets/frames/south_1800.jpg",
+          "sha256": "2d574e3e63f4efad033d73fc83c6dbe9c7947f7000f812573aaa8492f91a4d17",
+          "width": 1280,
+          "height": 960,
+          "bytes": 527315
+        },
+        "north": {
+          "path": "assets/frames/north_1800.jpg",
+          "sha256": "9af3f7dc80dfb8e620d972f1c032c5f4bea07a93f80275e0fed2c5557ed3ed45",
+          "width": 1280,
+          "height": 960,
+          "bytes": 502325
+        }
+      }
+    },
+    {
+      "moment_id": "t2100",
+      "time_s": 2100,
+      "label": "35:00",
+      "origin": "assets/frames",
+      "cameras": {
+        "south": {
+          "path": "assets/frames/south_2100.jpg",
+          "sha256": "f15fc0084ddf467f4ef522be9f51692ece8cdc1664949cf0dac6c846f3abf2a5",
+          "width": 1280,
+          "height": 960,
+          "bytes": 528088
+        },
+        "north": {
+          "path": "assets/frames/north_2100.jpg",
+          "sha256": "74f09d714c028fabd6084bbc6e7f5b00d0ab6196b90c267684fb50021376726d",
+          "width": 1280,
+          "height": 960,
+          "bytes": 506433
+        }
+      }
+    },
+    {
+      "moment_id": "t2400",
+      "time_s": 2400,
+      "label": "40:00",
+      "origin": "assets/frames",
+      "cameras": {
+        "south": {
+          "path": "assets/frames/south_2400.jpg",
+          "sha256": "890cc70bd578d01b1a0a7e5a07dc0d36b22b783ff247f6317b939abc1feebeb2",
+          "width": 1280,
+          "height": 960,
+          "bytes": 535139
+        },
+        "north": {
+          "path": "assets/frames/north_2400.jpg",
+          "sha256": "42950932ebe813c1668123146b8415fba52b8d0b9124c48e7e2f1709d213ce8a",
+          "width": 1280,
+          "height": 960,
+          "bytes": 514365
+        }
+      }
+    },
+    {
+      "moment_id": "t2600",
+      "time_s": 2600,
+      "label": "43:20",
+      "origin": "assets/frames",
+      "cameras": {
+        "south": {
+          "path": "assets/frames/south_2600.jpg",
+          "sha256": "3c1988272698c39245ec7eab91f1ce85c60d0938001b8dc0c331dce904113456",
+          "width": 1280,
+          "height": 960,
+          "bytes": 529963
+        },
+        "north": {
+          "path": "assets/frames/north_2600.jpg",
+          "sha256": "69c436c3f59975f8bafb174bc0e2c6f7b30edf060f8fedf3374383099d0a2a16",
+          "width": 1280,
+          "height": 960,
+          "bytes": 513088
+        }
+      }
+    },
+    {
+      "moment_id": "t0177",
+      "time_s": 177,
+      "label": "02:57",
+      "origin": "round2-independent",
+      "cameras": {
+        "south": {
+          "path": "coord/exploration/round2-research/independent-v1/raw/south_177.png",
+          "sha256": "911136075852aa5d4de9fdd9ac1ca992fea930cad54b916605f879c6d70f3b0e",
+          "width": 1280,
+          "height": 960,
+          "bytes": 2105080
+        },
+        "north": {
+          "path": "coord/exploration/round2-research/independent-v1/raw/north_177.png",
+          "sha256": "2bb0c59d49764c752052e735d59f1122f84f3dc51929ef97670cc0eb2f9d0bfd",
+          "width": 1280,
+          "height": 960,
+          "bytes": 2052520
+        }
+      }
+    },
+    {
+      "moment_id": "t0470",
+      "time_s": 470,
+      "label": "07:50",
+      "origin": "round2-independent",
+      "cameras": {
+        "south": {
+          "path": "coord/exploration/round2-research/independent-v1/raw/south_470.png",
+          "sha256": "3b0c77702fc277d5e577ad2647c7206d6f195e9835be5848fcc18eebb1102290",
+          "width": 1280,
+          "height": 960,
+          "bytes": 2021374
+        },
+        "north": {
+          "path": "coord/exploration/round2-research/independent-v1/raw/north_470.png",
+          "sha256": "ff89dd93e37a5ebcaa625c0ec4d1f0d94c2fd9a685cb336e64d6b4aa3e1b4529",
+          "width": 1280,
+          "height": 960,
+          "bytes": 1949791
+        }
+      }
+    },
+    {
+      "moment_id": "t0562",
+      "time_s": 562,
+      "label": "09:22",
+      "origin": "round2-independent",
+      "cameras": {
+        "south": {
+          "path": "coord/exploration/round2-research/independent-v1/raw/south_562.png",
+          "sha256": "8578f42ada8a109aacce97c0ea5fe03eb1dfff7c12aea884e1dd2841076a808d",
+          "width": 1280,
+          "height": 960,
+          "bytes": 2073002
+        },
+        "north": {
+          "path": "coord/exploration/round2-research/independent-v1/raw/north_562.png",
+          "sha256": "e1e4638e5c1796faba085000eb31ca369f3736346c11d2cfb0912e1dd06506f4",
+          "width": 1280,
+          "height": 960,
+          "bytes": 2000042
+        }
+      }
+    },
+    {
+      "moment_id": "t1021",
+      "time_s": 1021,
+      "label": "17:01",
+      "origin": "round2-independent",
+      "cameras": {
+        "south": {
+          "path": "coord/exploration/round2-research/independent-v1/raw/south_1021.png",
+          "sha256": "280df673b40950dadb639bf78459190f22e2190471f9d45a788b0659d672ee8c",
+          "width": 1280,
+          "height": 960,
+          "bytes": 2056978
+        },
+        "north": {
+          "path": "coord/exploration/round2-research/independent-v1/raw/north_1021.png",
+          "sha256": "62623eeca0fd926975cd589c026eb66c910f4086a58efb9044b76e8ff2f99fb3",
+          "width": 1280,
+          "height": 960,
+          "bytes": 1984330
+        }
+      }
+    },
+    {
+      "moment_id": "t1113",
+      "time_s": 1113,
+      "label": "18:33",
+      "origin": "round2-independent",
+      "cameras": {
+        "south": {
+          "path": "coord/exploration/round2-research/independent-v1/raw/south_1113.png",
+          "sha256": "87be8303bdda6b6852265c681467a075cc6e5535a6c653af0f9c832395960215",
+          "width": 1280,
+          "height": 960,
+          "bytes": 2079807
+        },
+        "north": {
+          "path": "coord/exploration/round2-research/independent-v1/raw/north_1113.png",
+          "sha256": "68caf961ffb1c9122a7d960f9fce6effb36825a0eae332eee5a436c7d357b1f8",
+          "width": 1280,
+          "height": 960,
+          "bytes": 2000466
+        }
+      }
+    }
+  ]
+}

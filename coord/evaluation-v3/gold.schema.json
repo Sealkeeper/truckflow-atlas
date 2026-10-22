@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://truckflow.local/schemas/gold-v3.json",
+  "title": "TruckFlow gold v3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "dataset_id", "split", "moments"],
+  "properties": {
+    "schema": {"const": "truckflow-gold-v3"},
+    "dataset_id": {"type": "string", "minLength": 1},
+    "split": {"enum": ["development", "regression", "blind"]},
+    "created_at": {"type": "string"},
+    "definition": {"type": "string"},
+    "moments": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/moment"}
+    }
+  },
+  "$defs": {
+    "bbox": {
+      "type": "array",
+      "prefixItems": [
+        {"type": "number", "minimum": 0, "maximum": 1},
+        {"type": "number", "minimum": 0, "maximum": 1},
+        {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+        {"type": "number", "exclusiveMinimum": 0, "maximum": 1}
+      ],
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "vehicle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "bbox", "occlusion", "truncation"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "bbox": {"$ref": "#/$defs/bbox"},
+        "polygon": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "array",
+            "prefixItems": [{"type": "number"}, {"type": "number"}],
+            "minItems": 2,
+            "maxItems": 2
+          }
+        },
+        "occlusion": {"enum": ["none", "partial", "severe", "unknown"]},
+        "truncation": {"enum": ["none", "edge", "unknown"]},
+        "part_of_vehicle": {"type": ["string", "null"]},
+        "notes": {"type": "string"}
+      }
+    },
+    "camera": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["image", "sha256", "width", "height", "eligible", "vehicles"],
+      "properties": {
+        "image": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "width": {"type": "integer", "minimum": 1},
+        "height": {"type": "integer", "minimum": 1},
+        "eligible": {"type": "boolean"},
+        "vehicles": {"type": "array", "items": {"$ref": "#/$defs/vehicle"}}
+      }
+    },
+    "moment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "moment_id",
+        "time_s",
+        "cameras",
+        "overlap_edges",
+        "cross_camera_pairs",
+        "quantities",
+        "truth_complete"
+      ],
+      "properties": {
+        "moment_id": {"type": "string", "minLength": 1},
+        "time_s": {"type": "number", "minimum": 0},
+        "cameras": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["south", "north"],
+          "properties": {
+            "south": {"$ref": "#/$defs/camera"},
+            "north": {"$ref": "#/$defs/camera"}
+          }
+        },
+        "overlap_edges": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "prefixItems": [{"type": "string"}, {"type": "string"}],
+            "minItems": 2,
+            "maxItems": 2
+          }
+        },
+        "cross_camera_pairs": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "prefixItems": [{"type": "string"}, {"type": "string"}],
+            "minItems": 2,
+            "maxItems": 2
+          }
+        },
+        "quantities": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["south", "north", "overlap", "unique"],
+          "properties": {
+            "south": {"type": ["integer", "null"], "minimum": 0},
+            "north": {"type": ["integer", "null"], "minimum": 0},
+            "overlap": {"type": ["integer", "null"], "minimum": 0},
+            "unique": {"type": ["integer", "null"], "minimum": 0}
+          }
+        },
+        "truth_complete": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["quantity", "identity"],
+          "properties": {
+            "quantity": {"type": "boolean"},
+            "identity": {"type": "boolean"}
+          }
+        },
+        "annotator": {"type": "string"},
+        "adjudicator": {"type": "string"},
+        "notes": {"type": "string"}
+      }
+    }
+  }
+}
+

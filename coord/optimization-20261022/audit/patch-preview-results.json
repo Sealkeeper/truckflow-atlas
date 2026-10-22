@@ -1,0 +1,1339 @@
+[
+  {
+    "case_id": "A00-perfect",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 1,
+      "denominator": 1,
+      "rate": 1.0,
+      "diagnostics": {
+        "south_exact_rate": 1.0,
+        "north_exact_rate": 1.0,
+        "overlap_exact_rate": 1.0,
+        "three_field_mean_rate": 1.0,
+        "mae": {
+          "south": 0.0,
+          "north": 0.0,
+          "overlap": 0.0
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 1,
+      "denominator": 1,
+      "rate": 1.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_merge_rate": 0.0
+        },
+        "cross_camera_pairs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_merge_rate": 0.0
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A01-overlap-duplicate",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 1,
+      "denominator": 1,
+      "rate": 1.0,
+      "diagnostics": {
+        "south_exact_rate": 1.0,
+        "north_exact_rate": 1.0,
+        "overlap_exact_rate": 1.0,
+        "three_field_mean_rate": 1.0,
+        "mae": {
+          "south": 0.0,
+          "north": 0.0,
+          "overlap": 0.0
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        },
+        "cross_camera_pairs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_merge_rate": 0.0
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A02-overlap-mirror",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 1,
+      "denominator": 1,
+      "rate": 1.0,
+      "diagnostics": {
+        "south_exact_rate": 1.0,
+        "north_exact_rate": 1.0,
+        "overlap_exact_rate": 1.0,
+        "three_field_mean_rate": 1.0,
+        "mae": {
+          "south": 0.0,
+          "north": 0.0,
+          "overlap": 0.0
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        },
+        "cross_camera_pairs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_merge_rate": 0.0
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A03-overlap-self-loop",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 1,
+      "denominator": 1,
+      "rate": 1.0,
+      "diagnostics": {
+        "south_exact_rate": 1.0,
+        "north_exact_rate": 1.0,
+        "overlap_exact_rate": 1.0,
+        "three_field_mean_rate": 1.0,
+        "mae": {
+          "south": 0.0,
+          "north": 0.0,
+          "overlap": 0.0
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        },
+        "cross_camera_pairs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_merge_rate": 0.0
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A04-cross-duplicate",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 1,
+      "denominator": 1,
+      "rate": 1.0,
+      "diagnostics": {
+        "south_exact_rate": 1.0,
+        "north_exact_rate": 1.0,
+        "overlap_exact_rate": 1.0,
+        "three_field_mean_rate": 1.0,
+        "mae": {
+          "south": 0.0,
+          "north": 0.0,
+          "overlap": 0.0
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_merge_rate": 0.0
+        },
+        "cross_camera_pairs": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A05-cross-multi",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 1,
+      "denominator": 1,
+      "rate": 1.0,
+      "diagnostics": {
+        "south_exact_rate": 1.0,
+        "north_exact_rate": 1.0,
+        "overlap_exact_rate": 1.0,
+        "three_field_mean_rate": 1.0,
+        "mae": {
+          "south": 0.0,
+          "north": 0.0,
+          "overlap": 0.0
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_merge_rate": 0.0
+        },
+        "cross_camera_pairs": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A06-cross-wrong-camera",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 1,
+      "denominator": 1,
+      "rate": 1.0,
+      "diagnostics": {
+        "south_exact_rate": 1.0,
+        "north_exact_rate": 1.0,
+        "overlap_exact_rate": 1.0,
+        "three_field_mean_rate": 1.0,
+        "mae": {
+          "south": 0.0,
+          "north": 0.0,
+          "overlap": 0.0
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_merge_rate": 0.0
+        },
+        "cross_camera_pairs": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A07-cross-unknown-id",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 1,
+      "denominator": 1,
+      "rate": 1.0,
+      "diagnostics": {
+        "south_exact_rate": 1.0,
+        "north_exact_rate": 1.0,
+        "overlap_exact_rate": 1.0,
+        "three_field_mean_rate": 1.0,
+        "mae": {
+          "south": 0.0,
+          "north": 0.0,
+          "overlap": 0.0
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_merge_rate": 0.0
+        },
+        "cross_camera_pairs": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A08-duplicate-id-intra",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "south_exact_rate": 1.0,
+        "north_exact_rate": 1.0,
+        "overlap_exact_rate": 1.0,
+        "three_field_mean_rate": 1.0,
+        "mae": {
+          "south": 0.0,
+          "north": 0.0,
+          "overlap": 0.0
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        },
+        "cross_camera_pairs": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A09-duplicate-id-cross",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 1,
+      "denominator": 1,
+      "rate": 1.0,
+      "diagnostics": {
+        "south_exact_rate": 1.0,
+        "north_exact_rate": 1.0,
+        "overlap_exact_rate": 1.0,
+        "three_field_mean_rate": 1.0,
+        "mae": {
+          "south": 0.0,
+          "north": 0.0,
+          "overlap": 0.0
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        },
+        "cross_camera_pairs": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A10-review",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "south_exact_rate": 1.0,
+        "north_exact_rate": 1.0,
+        "overlap_exact_rate": 1.0,
+        "three_field_mean_rate": 1.0,
+        "mae": {
+          "south": 0.0,
+          "north": 0.0,
+          "overlap": 0.0
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_merge_rate": 0.0
+        },
+        "cross_camera_pairs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_merge_rate": 0.0
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A11-abstain-moment",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "south_exact_rate": 1.0,
+        "north_exact_rate": 1.0,
+        "overlap_exact_rate": 1.0,
+        "three_field_mean_rate": 1.0,
+        "mae": {
+          "south": 0.0,
+          "north": 0.0,
+          "overlap": 0.0
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_merge_rate": 0.0
+        },
+        "cross_camera_pairs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_merge_rate": 0.0
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A12-invalid-moment",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "south_exact_rate": 1.0,
+        "north_exact_rate": 1.0,
+        "overlap_exact_rate": 1.0,
+        "three_field_mean_rate": 1.0,
+        "mae": {
+          "south": 0.0,
+          "north": 0.0,
+          "overlap": 0.0
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_merge_rate": 0.0
+        },
+        "cross_camera_pairs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_merge_rate": 0.0
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A13-missing-moment",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "south_exact_rate": 0.0,
+        "north_exact_rate": 0.0,
+        "overlap_exact_rate": 0.0,
+        "three_field_mean_rate": 0.0,
+        "mae": {
+          "south": null,
+          "north": null,
+          "overlap": null
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        },
+        "cross_camera_pairs": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A14-camera-abstain",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "south_exact_rate": 1.0,
+        "north_exact_rate": 1.0,
+        "overlap_exact_rate": 1.0,
+        "three_field_mean_rate": 1.0,
+        "mae": {
+          "south": 0.0,
+          "north": 0.0,
+          "overlap": 0.0
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        },
+        "cross_camera_pairs": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A14b-camera-missing",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "south_exact_rate": 1.0,
+        "north_exact_rate": 1.0,
+        "overlap_exact_rate": 1.0,
+        "three_field_mean_rate": 1.0,
+        "mae": {
+          "south": 0.0,
+          "north": 0.0,
+          "overlap": 0.0
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        },
+        "cross_camera_pairs": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A14c-camera-objects-incomplete",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 1,
+      "denominator": 1,
+      "rate": 1.0,
+      "diagnostics": {
+        "south_exact_rate": 1.0,
+        "north_exact_rate": 1.0,
+        "overlap_exact_rate": 1.0,
+        "three_field_mean_rate": 1.0,
+        "mae": {
+          "south": 0.0,
+          "north": 0.0,
+          "overlap": 0.0
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        },
+        "cross_camera_pairs": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A14d-camera-count-null",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "south_exact_rate": 1.0,
+        "north_exact_rate": 1.0,
+        "overlap_exact_rate": 1.0,
+        "three_field_mean_rate": 1.0,
+        "mae": {
+          "south": 0.0,
+          "north": 0.0,
+          "overlap": 0.0
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 1,
+      "denominator": 1,
+      "rate": 1.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_merge_rate": 0.0
+        },
+        "cross_camera_pairs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_merge_rate": 0.0
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A14e-camera-contradiction",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "south_exact_rate": 1.0,
+        "north_exact_rate": 1.0,
+        "overlap_exact_rate": 1.0,
+        "three_field_mean_rate": 1.0,
+        "mae": {
+          "south": 0.0,
+          "north": 0.0,
+          "overlap": 0.0
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        },
+        "cross_camera_pairs": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A15-camera-invalid",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "south_exact_rate": 1.0,
+        "north_exact_rate": 1.0,
+        "overlap_exact_rate": 1.0,
+        "three_field_mean_rate": 1.0,
+        "mae": {
+          "south": 0.0,
+          "north": 0.0,
+          "overlap": 0.0
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        },
+        "cross_camera_pairs": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A16-partial-truth",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null,
+      "diagnostics": {
+        "south_exact_rate": null,
+        "north_exact_rate": null,
+        "overlap_exact_rate": null,
+        "three_field_mean_rate": null,
+        "mae": {
+          "south": null,
+          "north": null,
+          "overlap": null
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 1,
+      "denominator": 1,
+      "rate": 1.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_merge_rate": 0.0
+        },
+        "cross_camera_pairs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_merge_rate": 0.0
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A17-both-partial-null",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null,
+      "diagnostics": {
+        "south_exact_rate": null,
+        "north_exact_rate": null,
+        "overlap_exact_rate": null,
+        "three_field_mean_rate": null,
+        "mae": {
+          "south": null,
+          "north": null,
+          "overlap": null
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "false_merge_rate": null
+        },
+        "cross_camera_pairs": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "false_merge_rate": null
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A18-bbox-nan",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 1,
+      "denominator": 1,
+      "rate": 1.0,
+      "diagnostics": {
+        "south_exact_rate": 1.0,
+        "north_exact_rate": 1.0,
+        "overlap_exact_rate": 1.0,
+        "three_field_mean_rate": 1.0,
+        "mae": {
+          "south": 0.0,
+          "north": 0.0,
+          "overlap": 0.0
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        },
+        "cross_camera_pairs": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A19-bbox-zero-area",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 1,
+      "denominator": 1,
+      "rate": 1.0,
+      "diagnostics": {
+        "south_exact_rate": 1.0,
+        "north_exact_rate": 1.0,
+        "overlap_exact_rate": 1.0,
+        "three_field_mean_rate": 1.0,
+        "mae": {
+          "south": 0.0,
+          "north": 0.0,
+          "overlap": 0.0
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        },
+        "cross_camera_pairs": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A20-iou-exactly-0.5",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 1,
+      "denominator": 1,
+      "rate": 1.0,
+      "diagnostics": {
+        "south_exact_rate": 1.0,
+        "north_exact_rate": 1.0,
+        "overlap_exact_rate": 1.0,
+        "three_field_mean_rate": 1.0,
+        "mae": {
+          "south": 0.0,
+          "north": 0.0,
+          "overlap": 0.0
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 1,
+      "denominator": 1,
+      "rate": 1.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "false_merge_rate": null
+        },
+        "cross_camera_pairs": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "false_merge_rate": null
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A21-bbox-tiny-oob",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 1,
+      "denominator": 1,
+      "rate": 1.0,
+      "diagnostics": {
+        "south_exact_rate": 1.0,
+        "north_exact_rate": 1.0,
+        "overlap_exact_rate": 1.0,
+        "three_field_mean_rate": 1.0,
+        "mae": {
+          "south": 0.0,
+          "north": 0.0,
+          "overlap": 0.0
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        },
+        "cross_camera_pairs": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": null
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A22-count-right-identity-wrong",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 1,
+      "denominator": 1,
+      "rate": 1.0,
+      "diagnostics": {
+        "south_exact_rate": 1.0,
+        "north_exact_rate": 1.0,
+        "overlap_exact_rate": 1.0,
+        "three_field_mean_rate": 1.0,
+        "mae": {
+          "south": 0.0,
+          "north": 0.0,
+          "overlap": 0.0
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_merge_rate": 0.0
+        },
+        "cross_camera_pairs": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": null,
+          "false_merge_rate": 1.0
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A23-delete-failed-moment",
+    "verdict": "PASS",
+    "quantity": {
+      "numerator": 1,
+      "denominator": 2,
+      "rate": 0.5,
+      "diagnostics": {
+        "south_exact_rate": 0.5,
+        "north_exact_rate": 0.5,
+        "overlap_exact_rate": 0.5,
+        "three_field_mean_rate": 0.5,
+        "mae": {
+          "south": 0.0,
+          "north": 0.0,
+          "overlap": 0.0
+        },
+        "note": "three_field_mean_rate is diagnostic and never a release gate"
+      }
+    },
+    "identity": {
+      "numerator": 1,
+      "denominator": 2,
+      "rate": 0.5,
+      "diagnostics": {
+        "same_image_overlap_edges": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "false_merge_rate": 0.0
+        },
+        "cross_camera_pairs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "false_merge_rate": 0.0
+        }
+      }
+    },
+    "exception": null
+  },
+  {
+    "case_id": "A24-duplicate-gold-moment-id",
+    "verdict": "PASS",
+    "quantity": null,
+    "identity": null,
+    "exception": "EvalError: duplicate gold moment_id: m1"
+  },
+  {
+    "case_id": "A25-duplicate-prediction-moment-id",
+    "verdict": "PASS",
+    "quantity": null,
+    "identity": null,
+    "exception": "EvalError: duplicate prediction moment_id: m1"
+  },
+  {
+    "case_id": "A26-duplicate-time-s",
+    "verdict": "PASS",
+    "quantity": null,
+    "identity": null,
+    "exception": "EvalError: m3: duplicate gold time_s 20 already used by m2"
+  }
+]

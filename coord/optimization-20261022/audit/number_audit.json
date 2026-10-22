@@ -1,0 +1,3438 @@
+{
+  "schema": "truckflow-number-audit-v1",
+  "inputs": {
+    "results_old10": {
+      "path": "coord\\optimization-20261022\\invention\\lane_queue\\results-old10.json",
+      "sha256": "7e13690b694e6931368bff19f0114d579ee9d5c8a598d073226e625b70a6fe05"
+    },
+    "truth": {
+      "path": "accuracy\\reviewed\\user-final-review-v2-2026-10-21.json",
+      "sha256": "c3fddc439da1574e74a6ceb7391297e1c65fedec109d3579da05cad05f34149d"
+    },
+    "self_consistency": {
+      "path": "coord\\optimization-20261022\\error-atlas\\self_consistency.json",
+      "sha256": "2f204bc98d5353bfd631bbf13b2ede198e84b89a4a502e6767a61a391ee78de2"
+    },
+    "ceiling_results": {
+      "path": "coord\\optimization-20261022\\tournament\\runs\\ceiling-decomp\\results.json",
+      "sha256": "c61981d655fafeb7daf937fa6cedf5cb1b8a1ace3a136b455d5891b11b89b90b"
+    },
+    "robustness_results": {
+      "path": "coord\\optimization-20261022\\tournament\\runs\\v3b-robust\\robustness.json",
+      "sha256": "5dc36d3883be81516b86f411a986c9bd0baa740217b3b78cc7c9fa3f9d7c5081"
+    }
+  },
+  "shipped": {
+    "denominator": 10,
+    "all_ok": 5,
+    "rows": [
+      {
+        "time": 5,
+        "pred": {
+          "south": 3,
+          "north": 5,
+          "overlap": 1,
+          "unique": 7
+        },
+        "truth": {
+          "south": 3,
+          "north": 5,
+          "overlap": 1,
+          "unique": 7
+        },
+        "ok": true,
+        "compare_quantity_all_ok": true
+      },
+      {
+        "time": 300,
+        "pred": {
+          "south": 4,
+          "north": 3,
+          "overlap": 1,
+          "unique": 6
+        },
+        "truth": {
+          "south": 4,
+          "north": 3,
+          "overlap": 1,
+          "unique": 6
+        },
+        "ok": true,
+        "compare_quantity_all_ok": true
+      },
+      {
+        "time": 600,
+        "pred": {
+          "south": 4,
+          "north": 4,
+          "overlap": 2,
+          "unique": 6
+        },
+        "truth": {
+          "south": 4,
+          "north": 4,
+          "overlap": 1,
+          "unique": 7
+        },
+        "ok": false,
+        "compare_quantity_all_ok": false
+      },
+      {
+        "time": 900,
+        "pred": {
+          "south": 5,
+          "north": 3,
+          "overlap": 2,
+          "unique": 6
+        },
+        "truth": {
+          "south": 5,
+          "north": 3,
+          "overlap": 2,
+          "unique": 6
+        },
+        "ok": true,
+        "compare_quantity_all_ok": true
+      },
+      {
+        "time": 1200,
+        "pred": {
+          "south": 5,
+          "north": 3,
+          "overlap": 2,
+          "unique": 6
+        },
+        "truth": {
+          "south": 5,
+          "north": 3,
+          "overlap": 2,
+          "unique": 6
+        },
+        "ok": true,
+        "compare_quantity_all_ok": true
+      },
+      {
+        "time": 1500,
+        "pred": {
+          "south": 5,
+          "north": 2,
+          "overlap": 2,
+          "unique": 5
+        },
+        "truth": {
+          "south": 5,
+          "north": 2,
+          "overlap": 2,
+          "unique": 5
+        },
+        "ok": true,
+        "compare_quantity_all_ok": true
+      },
+      {
+        "time": 1800,
+        "pred": {
+          "south": 4,
+          "north": 2,
+          "overlap": 2,
+          "unique": 4
+        },
+        "truth": {
+          "south": 4,
+          "north": 2,
+          "overlap": 1,
+          "unique": 5
+        },
+        "ok": false,
+        "compare_quantity_all_ok": false
+      },
+      {
+        "time": 2100,
+        "pred": {
+          "south": 4,
+          "north": 4,
+          "overlap": 2,
+          "unique": 6
+        },
+        "truth": {
+          "south": 3,
+          "north": 2,
+          "overlap": 1,
+          "unique": 4
+        },
+        "ok": false,
+        "compare_quantity_all_ok": false
+      },
+      {
+        "time": 2400,
+        "pred": {
+          "south": 3,
+          "north": 4,
+          "overlap": 2,
+          "unique": 5
+        },
+        "truth": {
+          "south": 3,
+          "north": 3,
+          "overlap": 1,
+          "unique": 5
+        },
+        "ok": false,
+        "compare_quantity_all_ok": false
+      },
+      {
+        "time": 2600,
+        "pred": {
+          "south": 4,
+          "north": 2,
+          "overlap": 0,
+          "unique": 6
+        },
+        "truth": {
+          "south": 4,
+          "north": 2,
+          "overlap": 2,
+          "unique": 4
+        },
+        "ok": false,
+        "compare_quantity_all_ok": false
+      }
+    ],
+    "failed": [
+      600,
+      1800,
+      2100,
+      2400,
+      2600
+    ],
+    "compare_flag_mismatch": [],
+    "unique_formula_bad": []
+  },
+  "shipped_by_field": {
+    "south": {
+      "correct": 9,
+      "denominator": 10
+    },
+    "north": {
+      "correct": 8,
+      "denominator": 10
+    },
+    "overlap": {
+      "correct": 5,
+      "denominator": 10
+    }
+  },
+  "pair_cap": {
+    "moments_checked": 10,
+    "violations": []
+  },
+  "pair_oracle": {
+    "denominator": 10,
+    "all_ok": 8,
+    "rows": [
+      {
+        "time": 5,
+        "pred": {
+          "south": 3,
+          "north": 5,
+          "overlap": 1
+        },
+        "truth": {
+          "south": 3,
+          "north": 5,
+          "overlap": 1,
+          "unique": 7
+        },
+        "ok": true
+      },
+      {
+        "time": 300,
+        "pred": {
+          "south": 4,
+          "north": 3,
+          "overlap": 1
+        },
+        "truth": {
+          "south": 4,
+          "north": 3,
+          "overlap": 1,
+          "unique": 6
+        },
+        "ok": true
+      },
+      {
+        "time": 600,
+        "pred": {
+          "south": 4,
+          "north": 4,
+          "overlap": 1
+        },
+        "truth": {
+          "south": 4,
+          "north": 4,
+          "overlap": 1,
+          "unique": 7
+        },
+        "ok": true
+      },
+      {
+        "time": 900,
+        "pred": {
+          "south": 5,
+          "north": 3,
+          "overlap": 2
+        },
+        "truth": {
+          "south": 5,
+          "north": 3,
+          "overlap": 2,
+          "unique": 6
+        },
+        "ok": true
+      },
+      {
+        "time": 1200,
+        "pred": {
+          "south": 5,
+          "north": 3,
+          "overlap": 2
+        },
+        "truth": {
+          "south": 5,
+          "north": 3,
+          "overlap": 2,
+          "unique": 6
+        },
+        "ok": true
+      },
+      {
+        "time": 1500,
+        "pred": {
+          "south": 5,
+          "north": 2,
+          "overlap": 2
+        },
+        "truth": {
+          "south": 5,
+          "north": 2,
+          "overlap": 2,
+          "unique": 5
+        },
+        "ok": true
+      },
+      {
+        "time": 1800,
+        "pred": {
+          "south": 4,
+          "north": 2,
+          "overlap": 1
+        },
+        "truth": {
+          "south": 4,
+          "north": 2,
+          "overlap": 1,
+          "unique": 5
+        },
+        "ok": true
+      },
+      {
+        "time": 2100,
+        "pred": {
+          "south": 4,
+          "north": 4,
+          "overlap": 1
+        },
+        "truth": {
+          "south": 3,
+          "north": 2,
+          "overlap": 1,
+          "unique": 4
+        },
+        "ok": false
+      },
+      {
+        "time": 2400,
+        "pred": {
+          "south": 3,
+          "north": 4,
+          "overlap": 1
+        },
+        "truth": {
+          "south": 3,
+          "north": 3,
+          "overlap": 1,
+          "unique": 5
+        },
+        "ok": false
+      },
+      {
+        "time": 2600,
+        "pred": {
+          "south": 4,
+          "north": 2,
+          "overlap": 2
+        },
+        "truth": {
+          "south": 4,
+          "north": 2,
+          "overlap": 2,
+          "unique": 4
+        },
+        "ok": true
+      }
+    ],
+    "failed": [
+      2100,
+      2400
+    ],
+    "queue_count_mismatch": []
+  },
+  "both_oracle": {
+    "denominator": 10,
+    "all_ok": 10,
+    "rows": [
+      {
+        "time": 5,
+        "pred": {
+          "south": 3,
+          "north": 5,
+          "overlap": 1,
+          "unique": 7
+        },
+        "truth": {
+          "south": 3,
+          "north": 5,
+          "overlap": 1,
+          "unique": 7
+        },
+        "ok": true
+      },
+      {
+        "time": 300,
+        "pred": {
+          "south": 4,
+          "north": 3,
+          "overlap": 1,
+          "unique": 6
+        },
+        "truth": {
+          "south": 4,
+          "north": 3,
+          "overlap": 1,
+          "unique": 6
+        },
+        "ok": true
+      },
+      {
+        "time": 600,
+        "pred": {
+          "south": 4,
+          "north": 4,
+          "overlap": 1,
+          "unique": 7
+        },
+        "truth": {
+          "south": 4,
+          "north": 4,
+          "overlap": 1,
+          "unique": 7
+        },
+        "ok": true
+      },
+      {
+        "time": 900,
+        "pred": {
+          "south": 5,
+          "north": 3,
+          "overlap": 2,
+          "unique": 6
+        },
+        "truth": {
+          "south": 5,
+          "north": 3,
+          "overlap": 2,
+          "unique": 6
+        },
+        "ok": true
+      },
+      {
+        "time": 1200,
+        "pred": {
+          "south": 5,
+          "north": 3,
+          "overlap": 2,
+          "unique": 6
+        },
+        "truth": {
+          "south": 5,
+          "north": 3,
+          "overlap": 2,
+          "unique": 6
+        },
+        "ok": true
+      },
+      {
+        "time": 1500,
+        "pred": {
+          "south": 5,
+          "north": 2,
+          "overlap": 2,
+          "unique": 5
+        },
+        "truth": {
+          "south": 5,
+          "north": 2,
+          "overlap": 2,
+          "unique": 5
+        },
+        "ok": true
+      },
+      {
+        "time": 1800,
+        "pred": {
+          "south": 4,
+          "north": 2,
+          "overlap": 1,
+          "unique": 5
+        },
+        "truth": {
+          "south": 4,
+          "north": 2,
+          "overlap": 1,
+          "unique": 5
+        },
+        "ok": true
+      },
+      {
+        "time": 2100,
+        "pred": {
+          "south": 3,
+          "north": 2,
+          "overlap": 1,
+          "unique": 4
+        },
+        "truth": {
+          "south": 3,
+          "north": 2,
+          "overlap": 1,
+          "unique": 4
+        },
+        "ok": true
+      },
+      {
+        "time": 2400,
+        "pred": {
+          "south": 3,
+          "north": 3,
+          "overlap": 1,
+          "unique": 5
+        },
+        "truth": {
+          "south": 3,
+          "north": 3,
+          "overlap": 1,
+          "unique": 5
+        },
+        "ok": true
+      },
+      {
+        "time": 2600,
+        "pred": {
+          "south": 4,
+          "north": 2,
+          "overlap": 2,
+          "unique": 4
+        },
+        "truth": {
+          "south": 4,
+          "north": 2,
+          "overlap": 2,
+          "unique": 4
+        },
+        "ok": true
+      }
+    ],
+    "truth_file_mismatch": []
+  },
+  "single_camera_oracle": {
+    "denominator": 10,
+    "all_ok": 7,
+    "rows": [
+      {
+        "time": 5,
+        "actual_counts": {
+          "south": 3,
+          "north": 5
+        },
+        "target_counts": {
+          "south": 3,
+          "north": 5
+        },
+        "gold_overlap": 1,
+        "subset_count": 1,
+        "best_overlap": 1,
+        "target_subsets": 1,
+        "ok": true,
+        "examples": [
+          {
+            "south": [
+              "sR1",
+              "sR2",
+              "sR3"
+            ],
+            "north": [
+              "nR1",
+              "nR2",
+              "nR3",
+              "nR5",
+              "nR4"
+            ],
+            "overlap": 1,
+            "pairs": [
+              [
+                "sR1",
+                "nR2"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "time": 300,
+        "actual_counts": {
+          "south": 4,
+          "north": 3
+        },
+        "target_counts": {
+          "south": 4,
+          "north": 3
+        },
+        "gold_overlap": 1,
+        "subset_count": 1,
+        "best_overlap": 1,
+        "target_subsets": 1,
+        "ok": true,
+        "examples": [
+          {
+            "south": [
+              "sR1",
+              "sR2",
+              "sR3",
+              "sR4"
+            ],
+            "north": [
+              "nR1",
+              "nR2",
+              "nR3"
+            ],
+            "overlap": 1,
+            "pairs": [
+              [
+                "sR3",
+                "nR1"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "time": 600,
+        "actual_counts": {
+          "south": 4,
+          "north": 4
+        },
+        "target_counts": {
+          "south": 4,
+          "north": 4
+        },
+        "gold_overlap": 1,
+        "subset_count": 1,
+        "best_overlap": 2,
+        "target_subsets": 0,
+        "ok": false,
+        "examples": []
+      },
+      {
+        "time": 900,
+        "actual_counts": {
+          "south": 5,
+          "north": 3
+        },
+        "target_counts": {
+          "south": 5,
+          "north": 3
+        },
+        "gold_overlap": 2,
+        "subset_count": 1,
+        "best_overlap": 2,
+        "target_subsets": 1,
+        "ok": true,
+        "examples": [
+          {
+            "south": [
+              "sR1",
+              "sR2",
+              "sR3",
+              "sR4",
+              "sR5"
+            ],
+            "north": [
+              "nR2",
+              "nR3",
+              "nR4"
+            ],
+            "overlap": 2,
+            "pairs": [
+              [
+                "sR2",
+                "nR3"
+              ],
+              [
+                "sR5",
+                "nR2"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "time": 1200,
+        "actual_counts": {
+          "south": 5,
+          "north": 3
+        },
+        "target_counts": {
+          "south": 5,
+          "north": 3
+        },
+        "gold_overlap": 2,
+        "subset_count": 1,
+        "best_overlap": 2,
+        "target_subsets": 1,
+        "ok": true,
+        "examples": [
+          {
+            "south": [
+              "sR9",
+              "sR7",
+              "sR5",
+              "sR3",
+              "sR1"
+            ],
+            "north": [
+              "nR1",
+              "nR2",
+              "nR3"
+            ],
+            "overlap": 2,
+            "pairs": [
+              [
+                "sR7",
+                "nR2"
+              ],
+              [
+                "sR1",
+                "nR1"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "time": 1500,
+        "actual_counts": {
+          "south": 5,
+          "north": 2
+        },
+        "target_counts": {
+          "south": 5,
+          "north": 2
+        },
+        "gold_overlap": 2,
+        "subset_count": 1,
+        "best_overlap": 2,
+        "target_subsets": 1,
+        "ok": true,
+        "examples": [
+          {
+            "south": [
+              "sR1",
+              "sR2",
+              "sR3",
+              "sR4",
+              "sR5"
+            ],
+            "north": [
+              "nR2",
+              "nR1"
+            ],
+            "overlap": 2,
+            "pairs": [
+              [
+                "sR2",
+                "nR1"
+              ],
+              [
+                "sR4",
+                "nR2"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "time": 1800,
+        "actual_counts": {
+          "south": 4,
+          "north": 2
+        },
+        "target_counts": {
+          "south": 4,
+          "north": 2
+        },
+        "gold_overlap": 1,
+        "subset_count": 1,
+        "best_overlap": 2,
+        "target_subsets": 0,
+        "ok": false,
+        "examples": []
+      },
+      {
+        "time": 2100,
+        "actual_counts": {
+          "south": 4,
+          "north": 4
+        },
+        "target_counts": {
+          "south": 3,
+          "north": 2
+        },
+        "gold_overlap": 1,
+        "subset_count": 24,
+        "best_overlap": 2,
+        "target_subsets": 15,
+        "ok": true,
+        "examples": [
+          {
+            "south": [
+              "sR1",
+              "sR2",
+              "sR3"
+            ],
+            "north": [
+              "nR2",
+              "nR3"
+            ],
+            "overlap": 1,
+            "pairs": [
+              [
+                "sR3",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "south": [
+              "sR1",
+              "sR2",
+              "sR3"
+            ],
+            "north": [
+              "nR2",
+              "nR4"
+            ],
+            "overlap": 1,
+            "pairs": [
+              [
+                "sR3",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "south": [
+              "sR1",
+              "sR2",
+              "sR3"
+            ],
+            "north": [
+              "nR1",
+              "nR3"
+            ],
+            "overlap": 1,
+            "pairs": [
+              [
+                "sR1",
+                "nR1"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "time": 2400,
+        "actual_counts": {
+          "south": 3,
+          "north": 4
+        },
+        "target_counts": {
+          "south": 3,
+          "north": 3
+        },
+        "gold_overlap": 1,
+        "subset_count": 4,
+        "best_overlap": 2,
+        "target_subsets": 2,
+        "ok": true,
+        "examples": [
+          {
+            "south": [
+              "sR1",
+              "sR2",
+              "sR3"
+            ],
+            "north": [
+              "nR1",
+              "nR3",
+              "nR4"
+            ],
+            "overlap": 1,
+            "pairs": [
+              [
+                "sR2",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "south": [
+              "sR1",
+              "sR2",
+              "sR3"
+            ],
+            "north": [
+              "nR2",
+              "nR3",
+              "nR4"
+            ],
+            "overlap": 1,
+            "pairs": [
+              [
+                "sR1",
+                "nR2"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "time": 2600,
+        "actual_counts": {
+          "south": 4,
+          "north": 2
+        },
+        "target_counts": {
+          "south": 4,
+          "north": 2
+        },
+        "gold_overlap": 2,
+        "subset_count": 1,
+        "best_overlap": 0,
+        "target_subsets": 0,
+        "ok": false,
+        "examples": []
+      }
+    ],
+    "failed": [
+      600,
+      1800,
+      2600
+    ],
+    "queue_replay_mismatch": [],
+    "pair_replay_mismatch": [],
+    "ceiling_mismatch": []
+  },
+  "v3b_merge": {
+    "joint": {
+      "V0": {
+        "before": 5,
+        "after": 5
+      },
+      "V3": {
+        "before": 5,
+        "after": 6
+      },
+      "V3b": {
+        "before": 6,
+        "after": 6
+      },
+      "V5": {
+        "before": 6,
+        "after": 7
+      }
+    },
+    "failed_after": {
+      "V3b": [
+        600,
+        2100,
+        2400,
+        2600
+      ],
+      "V5": [
+        600,
+        2400,
+        2600
+      ],
+      "V0": [
+        600,
+        1800,
+        2100,
+        2400,
+        2600
+      ]
+    },
+    "single_camera_exact": {
+      "before": 17,
+      "after": 19,
+      "denominator": 20,
+      "before_wrong": [
+        {
+          "time": 2100,
+          "view": "south",
+          "pred": 4,
+          "truth": 3,
+          "ok": false
+        },
+        {
+          "time": 2100,
+          "view": "north",
+          "pred": 4,
+          "truth": 2,
+          "ok": false
+        },
+        {
+          "time": 2400,
+          "view": "north",
+          "pred": 4,
+          "truth": 3,
+          "ok": false
+        }
+      ],
+      "after_wrong": [
+        {
+          "time": 2400,
+          "view": "north",
+          "pred": 4,
+          "truth": 3,
+          "ok": false
+        }
+      ]
+    },
+    "exclusions": {
+      "north_2100": [
+        "nR3",
+        "nR4"
+      ],
+      "south_2100": [
+        "sR4"
+      ]
+    },
+    "details": {
+      "base_v0": {
+        "all_ok": 5,
+        "failed": [
+          600,
+          1800,
+          2100,
+          2400,
+          2600
+        ],
+        "moments": [
+          {
+            "time": 5,
+            "pred": {
+              "south": 3,
+              "north": 5,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 3,
+              "north": 5,
+              "overlap": 1,
+              "unique": 7
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR1",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 300,
+            "pred": {
+              "south": 4,
+              "north": 3,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 4,
+              "north": 3,
+              "overlap": 1,
+              "unique": 6
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR3",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 600,
+            "pred": {
+              "south": 4,
+              "north": 4,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 4,
+              "north": 4,
+              "overlap": 1,
+              "unique": 7
+            },
+            "ok": false,
+            "pairs": [
+              [
+                "sR1",
+                "nR2"
+              ],
+              [
+                "sR3",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 900,
+            "pred": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2,
+              "unique": 6
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR2",
+                "nR3"
+              ],
+              [
+                "sR5",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 1200,
+            "pred": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2,
+              "unique": 6
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR7",
+                "nR2"
+              ],
+              [
+                "sR1",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 1500,
+            "pred": {
+              "south": 5,
+              "north": 2,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 5,
+              "north": 2,
+              "overlap": 2,
+              "unique": 5
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR2",
+                "nR1"
+              ],
+              [
+                "sR4",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 1800,
+            "pred": {
+              "south": 4,
+              "north": 2,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 4,
+              "north": 2,
+              "overlap": 1,
+              "unique": 5
+            },
+            "ok": false,
+            "pairs": [
+              [
+                "sR1",
+                "nR2"
+              ],
+              [
+                "sR3",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 2100,
+            "pred": {
+              "south": 4,
+              "north": 4,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 3,
+              "north": 2,
+              "overlap": 1,
+              "unique": 4
+            },
+            "ok": false,
+            "pairs": [
+              [
+                "sR1",
+                "nR1"
+              ],
+              [
+                "sR3",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 2400,
+            "pred": {
+              "south": 3,
+              "north": 4,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 3,
+              "north": 3,
+              "overlap": 1,
+              "unique": 5
+            },
+            "ok": false,
+            "pairs": [
+              [
+                "sR1",
+                "nR2"
+              ],
+              [
+                "sR2",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 2600,
+            "pred": {
+              "south": 4,
+              "north": 2,
+              "overlap": 0
+            },
+            "truth": {
+              "south": 4,
+              "north": 2,
+              "overlap": 2,
+              "unique": 4
+            },
+            "ok": false,
+            "pairs": []
+          }
+        ]
+      },
+      "base_v3": {
+        "all_ok": 5,
+        "failed": [
+          300,
+          600,
+          2100,
+          2400,
+          2600
+        ],
+        "moments": [
+          {
+            "time": 5,
+            "pred": {
+              "south": 3,
+              "north": 5,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 3,
+              "north": 5,
+              "overlap": 1,
+              "unique": 7
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR1",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 300,
+            "pred": {
+              "south": 4,
+              "north": 3,
+              "overlap": 0
+            },
+            "truth": {
+              "south": 4,
+              "north": 3,
+              "overlap": 1,
+              "unique": 6
+            },
+            "ok": false,
+            "pairs": []
+          },
+          {
+            "time": 600,
+            "pred": {
+              "south": 4,
+              "north": 4,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 4,
+              "north": 4,
+              "overlap": 1,
+              "unique": 7
+            },
+            "ok": false,
+            "pairs": [
+              [
+                "sR1",
+                "nR2"
+              ],
+              [
+                "sR3",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 900,
+            "pred": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2,
+              "unique": 6
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR2",
+                "nR3"
+              ],
+              [
+                "sR5",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 1200,
+            "pred": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2,
+              "unique": 6
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR7",
+                "nR2"
+              ],
+              [
+                "sR1",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 1500,
+            "pred": {
+              "south": 5,
+              "north": 2,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 5,
+              "north": 2,
+              "overlap": 2,
+              "unique": 5
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR2",
+                "nR1"
+              ],
+              [
+                "sR5",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 1800,
+            "pred": {
+              "south": 4,
+              "north": 2,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 4,
+              "north": 2,
+              "overlap": 1,
+              "unique": 5
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR3",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 2100,
+            "pred": {
+              "south": 4,
+              "north": 4,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 3,
+              "north": 2,
+              "overlap": 1,
+              "unique": 4
+            },
+            "ok": false,
+            "pairs": [
+              [
+                "sR3",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 2400,
+            "pred": {
+              "south": 3,
+              "north": 4,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 3,
+              "north": 3,
+              "overlap": 1,
+              "unique": 5
+            },
+            "ok": false,
+            "pairs": [
+              [
+                "sR2",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 2600,
+            "pred": {
+              "south": 4,
+              "north": 2,
+              "overlap": 0
+            },
+            "truth": {
+              "south": 4,
+              "north": 2,
+              "overlap": 2,
+              "unique": 4
+            },
+            "ok": false,
+            "pairs": []
+          }
+        ]
+      },
+      "base_v3b": {
+        "all_ok": 6,
+        "failed": [
+          600,
+          2100,
+          2400,
+          2600
+        ],
+        "moments": [
+          {
+            "time": 5,
+            "pred": {
+              "south": 3,
+              "north": 5,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 3,
+              "north": 5,
+              "overlap": 1,
+              "unique": 7
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR1",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 300,
+            "pred": {
+              "south": 4,
+              "north": 3,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 4,
+              "north": 3,
+              "overlap": 1,
+              "unique": 6
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR3",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 600,
+            "pred": {
+              "south": 4,
+              "north": 4,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 4,
+              "north": 4,
+              "overlap": 1,
+              "unique": 7
+            },
+            "ok": false,
+            "pairs": [
+              [
+                "sR1",
+                "nR2"
+              ],
+              [
+                "sR3",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 900,
+            "pred": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2,
+              "unique": 6
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR2",
+                "nR3"
+              ],
+              [
+                "sR5",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 1200,
+            "pred": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2,
+              "unique": 6
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR7",
+                "nR2"
+              ],
+              [
+                "sR1",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 1500,
+            "pred": {
+              "south": 5,
+              "north": 2,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 5,
+              "north": 2,
+              "overlap": 2,
+              "unique": 5
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR2",
+                "nR1"
+              ],
+              [
+                "sR5",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 1800,
+            "pred": {
+              "south": 4,
+              "north": 2,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 4,
+              "north": 2,
+              "overlap": 1,
+              "unique": 5
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR3",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 2100,
+            "pred": {
+              "south": 4,
+              "north": 4,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 3,
+              "north": 2,
+              "overlap": 1,
+              "unique": 4
+            },
+            "ok": false,
+            "pairs": [
+              [
+                "sR1",
+                "nR1"
+              ],
+              [
+                "sR3",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 2400,
+            "pred": {
+              "south": 3,
+              "north": 4,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 3,
+              "north": 3,
+              "overlap": 1,
+              "unique": 5
+            },
+            "ok": false,
+            "pairs": [
+              [
+                "sR1",
+                "nR2"
+              ],
+              [
+                "sR2",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 2600,
+            "pred": {
+              "south": 4,
+              "north": 2,
+              "overlap": 0
+            },
+            "truth": {
+              "south": 4,
+              "north": 2,
+              "overlap": 2,
+              "unique": 4
+            },
+            "ok": false,
+            "pairs": []
+          }
+        ]
+      },
+      "base_v5": {
+        "all_ok": 6,
+        "failed": [
+          600,
+          2100,
+          2400,
+          2600
+        ],
+        "moments": [
+          {
+            "time": 5,
+            "pred": {
+              "south": 3,
+              "north": 5,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 3,
+              "north": 5,
+              "overlap": 1,
+              "unique": 7
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR1",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 300,
+            "pred": {
+              "south": 4,
+              "north": 3,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 4,
+              "north": 3,
+              "overlap": 1,
+              "unique": 6
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR3",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 600,
+            "pred": {
+              "south": 4,
+              "north": 4,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 4,
+              "north": 4,
+              "overlap": 1,
+              "unique": 7
+            },
+            "ok": false,
+            "pairs": [
+              [
+                "sR1",
+                "nR2"
+              ],
+              [
+                "sR3",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 900,
+            "pred": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2,
+              "unique": 6
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR2",
+                "nR3"
+              ],
+              [
+                "sR5",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 1200,
+            "pred": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2,
+              "unique": 6
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR7",
+                "nR2"
+              ],
+              [
+                "sR1",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 1500,
+            "pred": {
+              "south": 5,
+              "north": 2,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 5,
+              "north": 2,
+              "overlap": 2,
+              "unique": 5
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR2",
+                "nR1"
+              ],
+              [
+                "sR5",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 1800,
+            "pred": {
+              "south": 4,
+              "north": 2,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 4,
+              "north": 2,
+              "overlap": 1,
+              "unique": 5
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR3",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 2100,
+            "pred": {
+              "south": 4,
+              "north": 4,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 3,
+              "north": 2,
+              "overlap": 1,
+              "unique": 4
+            },
+            "ok": false,
+            "pairs": [
+              [
+                "sR3",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 2400,
+            "pred": {
+              "south": 3,
+              "north": 4,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 3,
+              "north": 3,
+              "overlap": 1,
+              "unique": 5
+            },
+            "ok": false,
+            "pairs": [
+              [
+                "sR2",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 2600,
+            "pred": {
+              "south": 4,
+              "north": 2,
+              "overlap": 0
+            },
+            "truth": {
+              "south": 4,
+              "north": 2,
+              "overlap": 2,
+              "unique": 4
+            },
+            "ok": false,
+            "pairs": []
+          }
+        ]
+      },
+      "clean_v0": {
+        "all_ok": 5,
+        "failed": [
+          600,
+          1800,
+          2100,
+          2400,
+          2600
+        ],
+        "moments": [
+          {
+            "time": 5,
+            "pred": {
+              "south": 3,
+              "north": 5,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 3,
+              "north": 5,
+              "overlap": 1,
+              "unique": 7
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR1",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 300,
+            "pred": {
+              "south": 4,
+              "north": 3,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 4,
+              "north": 3,
+              "overlap": 1,
+              "unique": 6
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR3",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 600,
+            "pred": {
+              "south": 4,
+              "north": 4,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 4,
+              "north": 4,
+              "overlap": 1,
+              "unique": 7
+            },
+            "ok": false,
+            "pairs": [
+              [
+                "sR1",
+                "nR2"
+              ],
+              [
+                "sR3",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 900,
+            "pred": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2,
+              "unique": 6
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR2",
+                "nR3"
+              ],
+              [
+                "sR5",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 1200,
+            "pred": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2,
+              "unique": 6
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR7",
+                "nR2"
+              ],
+              [
+                "sR1",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 1500,
+            "pred": {
+              "south": 5,
+              "north": 2,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 5,
+              "north": 2,
+              "overlap": 2,
+              "unique": 5
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR2",
+                "nR1"
+              ],
+              [
+                "sR4",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 1800,
+            "pred": {
+              "south": 4,
+              "north": 2,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 4,
+              "north": 2,
+              "overlap": 1,
+              "unique": 5
+            },
+            "ok": false,
+            "pairs": [
+              [
+                "sR1",
+                "nR2"
+              ],
+              [
+                "sR3",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 2100,
+            "pred": {
+              "south": 3,
+              "north": 2,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 3,
+              "north": 2,
+              "overlap": 1,
+              "unique": 4
+            },
+            "ok": false,
+            "pairs": [
+              [
+                "sR1",
+                "nR1"
+              ],
+              [
+                "sR3",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 2400,
+            "pred": {
+              "south": 3,
+              "north": 4,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 3,
+              "north": 3,
+              "overlap": 1,
+              "unique": 5
+            },
+            "ok": false,
+            "pairs": [
+              [
+                "sR1",
+                "nR2"
+              ],
+              [
+                "sR2",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 2600,
+            "pred": {
+              "south": 4,
+              "north": 2,
+              "overlap": 0
+            },
+            "truth": {
+              "south": 4,
+              "north": 2,
+              "overlap": 2,
+              "unique": 4
+            },
+            "ok": false,
+            "pairs": []
+          }
+        ]
+      },
+      "clean_v3": {
+        "all_ok": 6,
+        "failed": [
+          300,
+          600,
+          2400,
+          2600
+        ],
+        "moments": [
+          {
+            "time": 5,
+            "pred": {
+              "south": 3,
+              "north": 5,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 3,
+              "north": 5,
+              "overlap": 1,
+              "unique": 7
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR1",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 300,
+            "pred": {
+              "south": 4,
+              "north": 3,
+              "overlap": 0
+            },
+            "truth": {
+              "south": 4,
+              "north": 3,
+              "overlap": 1,
+              "unique": 6
+            },
+            "ok": false,
+            "pairs": []
+          },
+          {
+            "time": 600,
+            "pred": {
+              "south": 4,
+              "north": 4,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 4,
+              "north": 4,
+              "overlap": 1,
+              "unique": 7
+            },
+            "ok": false,
+            "pairs": [
+              [
+                "sR1",
+                "nR2"
+              ],
+              [
+                "sR3",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 900,
+            "pred": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2,
+              "unique": 6
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR2",
+                "nR3"
+              ],
+              [
+                "sR5",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 1200,
+            "pred": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2,
+              "unique": 6
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR7",
+                "nR2"
+              ],
+              [
+                "sR1",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 1500,
+            "pred": {
+              "south": 5,
+              "north": 2,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 5,
+              "north": 2,
+              "overlap": 2,
+              "unique": 5
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR2",
+                "nR1"
+              ],
+              [
+                "sR5",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 1800,
+            "pred": {
+              "south": 4,
+              "north": 2,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 4,
+              "north": 2,
+              "overlap": 1,
+              "unique": 5
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR3",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 2100,
+            "pred": {
+              "south": 3,
+              "north": 2,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 3,
+              "north": 2,
+              "overlap": 1,
+              "unique": 4
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR3",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 2400,
+            "pred": {
+              "south": 3,
+              "north": 4,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 3,
+              "north": 3,
+              "overlap": 1,
+              "unique": 5
+            },
+            "ok": false,
+            "pairs": [
+              [
+                "sR2",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 2600,
+            "pred": {
+              "south": 4,
+              "north": 2,
+              "overlap": 0
+            },
+            "truth": {
+              "south": 4,
+              "north": 2,
+              "overlap": 2,
+              "unique": 4
+            },
+            "ok": false,
+            "pairs": []
+          }
+        ]
+      },
+      "clean_v3b": {
+        "all_ok": 6,
+        "failed": [
+          600,
+          2100,
+          2400,
+          2600
+        ],
+        "moments": [
+          {
+            "time": 5,
+            "pred": {
+              "south": 3,
+              "north": 5,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 3,
+              "north": 5,
+              "overlap": 1,
+              "unique": 7
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR1",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 300,
+            "pred": {
+              "south": 4,
+              "north": 3,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 4,
+              "north": 3,
+              "overlap": 1,
+              "unique": 6
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR3",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 600,
+            "pred": {
+              "south": 4,
+              "north": 4,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 4,
+              "north": 4,
+              "overlap": 1,
+              "unique": 7
+            },
+            "ok": false,
+            "pairs": [
+              [
+                "sR1",
+                "nR2"
+              ],
+              [
+                "sR3",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 900,
+            "pred": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2,
+              "unique": 6
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR2",
+                "nR3"
+              ],
+              [
+                "sR5",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 1200,
+            "pred": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2,
+              "unique": 6
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR7",
+                "nR2"
+              ],
+              [
+                "sR1",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 1500,
+            "pred": {
+              "south": 5,
+              "north": 2,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 5,
+              "north": 2,
+              "overlap": 2,
+              "unique": 5
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR2",
+                "nR1"
+              ],
+              [
+                "sR5",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 1800,
+            "pred": {
+              "south": 4,
+              "north": 2,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 4,
+              "north": 2,
+              "overlap": 1,
+              "unique": 5
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR3",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 2100,
+            "pred": {
+              "south": 3,
+              "north": 2,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 3,
+              "north": 2,
+              "overlap": 1,
+              "unique": 4
+            },
+            "ok": false,
+            "pairs": [
+              [
+                "sR1",
+                "nR1"
+              ],
+              [
+                "sR3",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 2400,
+            "pred": {
+              "south": 3,
+              "north": 4,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 3,
+              "north": 3,
+              "overlap": 1,
+              "unique": 5
+            },
+            "ok": false,
+            "pairs": [
+              [
+                "sR1",
+                "nR2"
+              ],
+              [
+                "sR2",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 2600,
+            "pred": {
+              "south": 4,
+              "north": 2,
+              "overlap": 0
+            },
+            "truth": {
+              "south": 4,
+              "north": 2,
+              "overlap": 2,
+              "unique": 4
+            },
+            "ok": false,
+            "pairs": []
+          }
+        ]
+      },
+      "clean_v5": {
+        "all_ok": 7,
+        "failed": [
+          600,
+          2400,
+          2600
+        ],
+        "moments": [
+          {
+            "time": 5,
+            "pred": {
+              "south": 3,
+              "north": 5,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 3,
+              "north": 5,
+              "overlap": 1,
+              "unique": 7
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR1",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 300,
+            "pred": {
+              "south": 4,
+              "north": 3,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 4,
+              "north": 3,
+              "overlap": 1,
+              "unique": 6
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR3",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 600,
+            "pred": {
+              "south": 4,
+              "north": 4,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 4,
+              "north": 4,
+              "overlap": 1,
+              "unique": 7
+            },
+            "ok": false,
+            "pairs": [
+              [
+                "sR1",
+                "nR2"
+              ],
+              [
+                "sR3",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 900,
+            "pred": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2,
+              "unique": 6
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR2",
+                "nR3"
+              ],
+              [
+                "sR5",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 1200,
+            "pred": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 5,
+              "north": 3,
+              "overlap": 2,
+              "unique": 6
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR7",
+                "nR2"
+              ],
+              [
+                "sR1",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 1500,
+            "pred": {
+              "south": 5,
+              "north": 2,
+              "overlap": 2
+            },
+            "truth": {
+              "south": 5,
+              "north": 2,
+              "overlap": 2,
+              "unique": 5
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR2",
+                "nR1"
+              ],
+              [
+                "sR5",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 1800,
+            "pred": {
+              "south": 4,
+              "north": 2,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 4,
+              "north": 2,
+              "overlap": 1,
+              "unique": 5
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR3",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 2100,
+            "pred": {
+              "south": 3,
+              "north": 2,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 3,
+              "north": 2,
+              "overlap": 1,
+              "unique": 4
+            },
+            "ok": true,
+            "pairs": [
+              [
+                "sR3",
+                "nR2"
+              ]
+            ]
+          },
+          {
+            "time": 2400,
+            "pred": {
+              "south": 3,
+              "north": 4,
+              "overlap": 1
+            },
+            "truth": {
+              "south": 3,
+              "north": 3,
+              "overlap": 1,
+              "unique": 5
+            },
+            "ok": false,
+            "pairs": [
+              [
+                "sR2",
+                "nR1"
+              ]
+            ]
+          },
+          {
+            "time": 2600,
+            "pred": {
+              "south": 4,
+              "north": 2,
+              "overlap": 0
+            },
+            "truth": {
+              "south": 4,
+              "north": 2,
+              "overlap": 2,
+              "unique": 4
+            },
+            "ok": false,
+            "pairs": []
+          }
+        ]
+      }
+    },
+    "robustness_mismatch": []
+  },
+  "self_consistency": {
+    "denominator": 20,
+    "exact_before": 17,
+    "exact_after": 19,
+    "frames_changed": 2,
+    "fixed": 2,
+    "broken": 0,
+    "changes": [
+      {
+        "frame": "north_2100",
+        "count": 4,
+        "after": 2,
+        "truth": 2,
+        "excluded": 2,
+        "ok": true
+      },
+      {
+        "frame": "south_2100",
+        "count": 4,
+        "after": 3,
+        "truth": 3,
+        "excluded": 1,
+        "ok": true
+      }
+    ],
+    "reported_counterfactual": {
+      "id": "C_drop_ever_excluded",
+      "rule": "count := count - (max number of instances the text explicitly excluded but the JSON counts)",
+      "frames_changed": 2,
+      "fixed": 2,
+      "broken": 0,
+      "exact_before": 17,
+      "exact_after": 19,
+      "changes": [
+        {
+          "frame": "north_2100",
+          "before": 4,
+          "after": 2,
+          "truth": 2,
+          "verdict": "fixed"
+        },
+        {
+          "frame": "south_2100",
+          "before": 4,
+          "after": 3,
+          "truth": 3,
+          "verdict": "fixed"
+        }
+      ]
+    }
+  },
+  "robustness_aggregate": {
+    "n_configs": 6561,
+    "histogram": {
+      "1": 553,
+      "2": 1472,
+      "3": 562,
+      "4": 2018,
+      "5": 1523,
+      "6": 433
+    },
+    "histogram_sum": 6561,
+    "stable_ge_6": 433,
+    "stable_ge_6_from_histogram": 433,
+    "reported_stable_ge_6": 433,
+    "note": "aggregate-only cross-check; the 6,561-row grid is replayed separately"
+  },
+  "ceiling_support": {
+    "cap_only_all_ok": 5,
+    "data_derived_s_all_ok": 5,
+    "strict_s_all_ok": 2,
+    "pixel_band_all_ok": 0,
+    "shipped_pairs_total": 16,
+    "data_derived_rejected_total": 0,
+    "strict_rejected_total": 12,
+    "pixel_rejected_total": 16
+  },
+  "robustness_support": {
+    "n_configs": 6561,
+    "stable_ge_6": 433,
+    "stable_ge_6_rate": 0.066,
+    "loo_rows": 16,
+    "loo_ge_6": 5,
+    "loo_v3b_gt_v0": 6,
+    "loo_v3b_lt_v0": 2,
+    "v3b_gt_v0": 1451,
+    "v3b_eq_v0": 4062,
+    "v3b_lt_v0": 1048,
+    "gt_eq_lt_sum": 6561,
+    "broke_baseline_moment": 1728,
+    "broke_baseline_rate": 0.2634,
+    "v0_eq_5_n": 1566,
+    "v0_eq_5_v3b_ge_6": 298,
+    "v0_eq_5_v3b_le_4": 406,
+    "v0_eq_5_v3b_le_3": 267,
+    "v0_eq_5_mean_v3b": 4.59,
+    "clean_v5_ge_7": 765,
+    "clean_v5_ge_7_rate": 0.1166,
+    "clean_v5_ge_6": 2568,
+    "clean_v5_ge_6_rate": 0.3914
+  },
+  "self_consistency_support": {
+    "frames": 20,
+    "sum_n_roofs": 81,
+    "sum_n_vehicles": 73,
+    "sum_n_uncertain": 1,
+    "structural_bad_frames": [],
+    "narrative_changed_frames": [
+      {
+        "frame": "north_2100",
+        "n_claim_changes": 7
+      },
+      {
+        "frame": "south_1200",
+        "n_claim_changes": 2
+      }
+    ],
+    "exclusion_frames": [
+      {
+        "frame": "north_2100",
+        "excluded_n_max": 2
+      },
+      {
+        "frame": "south_2100",
+        "excluded_n_max": 1
+      }
+    ],
+    "exclusion_instances": 3
+  },
+  "number_checks": {
+    "checked": 51,
+    "mismatches": [
+      {
+        "id": "v0_eq_5_v3b_le_4",
+        "source": "V3B_ROBUSTNESS.md:16",
+        "report": 267,
+        "audit": 406.0,
+        "match": false
+      }
+    ],
+    "rows": [
+      {
+        "id": "shipped_all_ok",
+        "source": "CEILING_DECOMPOSITION.md:12",
+        "report": 5,
+        "audit": 5.0,
+        "match": true
+      },
+      {
+        "id": "single_camera_oracle",
+        "source": "CEILING_DECOMPOSITION.md:13",
+        "report": 7,
+        "audit": 7.0,
+        "match": true
+      },
+      {
+        "id": "pair_oracle",
+        "source": "CEILING_DECOMPOSITION.md:14",
+        "report": 8,
+        "audit": 8.0,
+        "match": true
+      },
+      {
+        "id": "both_oracle",
+        "source": "CEILING_DECOMPOSITION.md:15",
+        "report": 10,
+        "audit": 10.0,
+        "match": true
+      },
+      {
+        "id": "pair_cap_all_ok",
+        "source": "CEILING_DECOMPOSITION.md:44",
+        "report": 5,
+        "audit": 5.0,
+        "match": true
+      },
+      {
+        "id": "data_derived_band_all_ok",
+        "source": "CEILING_DECOMPOSITION.md:45",
+        "report": 5,
+        "audit": 5.0,
+        "match": true
+      },
+      {
+        "id": "strict_band_all_ok",
+        "source": "CEILING_DECOMPOSITION.md:46",
+        "report": 2,
+        "audit": 2.0,
+        "match": true
+      },
+      {
+        "id": "pixel_band_all_ok",
+        "source": "CEILING_DECOMPOSITION.md:47",
+        "report": 0,
+        "audit": 0.0,
+        "match": true
+      },
+      {
+        "id": "shipped_pairs_total",
+        "source": "CEILING_DECOMPOSITION.md:55",
+        "report": 16,
+        "audit": 16.0,
+        "match": true
+      },
+      {
+        "id": "data_derived_rejected",
+        "source": "CEILING_DECOMPOSITION.md:53",
+        "report": 0,
+        "audit": 0.0,
+        "match": true
+      },
+      {
+        "id": "strict_rejected",
+        "source": "CEILING_DECOMPOSITION.md:47-55",
+        "report": 12,
+        "audit": 12.0,
+        "match": true
+      },
+      {
+        "id": "pixel_rejected",
+        "source": "CEILING_DECOMPOSITION.md:55",
+        "report": 16,
+        "audit": 16.0,
+        "match": true
+      },
+      {
+        "id": "factorial_configs",
+        "source": "V3B_ROBUSTNESS.md:11",
+        "report": 6561,
+        "audit": 6561.0,
+        "match": true
+      },
+      {
+        "id": "stable_ge_6",
+        "source": "V3B_ROBUSTNESS.md:12",
+        "report": 433,
+        "audit": 433.0,
+        "match": true
+      },
+      {
+        "id": "stable_ge_6_pct",
+        "source": "V3B_ROBUSTNESS.md:12",
+        "report": 6.6,
+        "audit": 6.6,
+        "match": true
+      },
+      {
+        "id": "loo_ge_6",
+        "source": "V3B_ROBUSTNESS.md:12",
+        "report": 5,
+        "audit": 5.0,
+        "match": true
+      },
+      {
+        "id": "loo_rows",
+        "source": "V3B_ROBUSTNESS.md:12",
+        "report": 16,
+        "audit": 16.0,
+        "match": true
+      },
+      {
+        "id": "v3b_gt_v0",
+        "source": "V3B_ROBUSTNESS.md:13",
+        "report": 1451,
+        "audit": 1451.0,
+        "match": true
+      },
+      {
+        "id": "v3b_eq_v0",
+        "source": "V3B_ROBUSTNESS.md:13",
+        "report": 4062,
+        "audit": 4062.0,
+        "match": true
+      },
+      {
+        "id": "v3b_lt_v0",
+        "source": "V3B_ROBUSTNESS.md:13",
+        "report": 1048,
+        "audit": 1048.0,
+        "match": true
+      },
+      {
+        "id": "broke_baseline",
+        "source": "V3B_ROBUSTNESS.md:14",
+        "report": 1728,
+        "audit": 1728.0,
+        "match": true
+      },
+      {
+        "id": "broke_baseline_pct",
+        "source": "V3B_ROBUSTNESS.md:14",
+        "report": 26.3,
+        "audit": 26.34,
+        "match": true
+      },
+      {
+        "id": "v0_eq_5_n",
+        "source": "V3B_ROBUSTNESS.md:15",
+        "report": 1566,
+        "audit": 1566.0,
+        "match": true
+      },
+      {
+        "id": "v0_eq_5_v3b_ge_6",
+        "source": "V3B_ROBUSTNESS.md:15",
+        "report": 298,
+        "audit": 298.0,
+        "match": true
+      },
+      {
+        "id": "v0_eq_5_v3b_ge_6_pct",
+        "source": "V3B_ROBUSTNESS.md:15",
+        "report": 19.0,
+        "audit": 19.029,
+        "match": true
+      },
+      {
+        "id": "v0_eq_5_v3b_le_4",
+        "source": "V3B_ROBUSTNESS.md:16",
+        "report": 267,
+        "audit": 406.0,
+        "match": false
+      },
+      {
+        "id": "v0_eq_5_v3b_le_3",
+        "source": "V3B_ROBUSTNESS.md:16 (alternative reading)",
+        "report": 267,
+        "audit": 267.0,
+        "match": true
+      },
+      {
+        "id": "v3b_before",
+        "source": "V3B_ROBUSTNESS.md:21",
+        "report": 6,
+        "audit": 6.0,
+        "match": true
+      },
+      {
+        "id": "v3b_after",
+        "source": "V3B_ROBUSTNESS.md:21",
+        "report": 6,
+        "audit": 6.0,
+        "match": true
+      },
+      {
+        "id": "v5_before",
+        "source": "V3B_ROBUSTNESS.md:25",
+        "report": 6,
+        "audit": 6.0,
+        "match": true
+      },
+      {
+        "id": "v5_after",
+        "source": "V3B_ROBUSTNESS.md:25",
+        "report": 7,
+        "audit": 7.0,
+        "match": true
+      },
+      {
+        "id": "single_camera_before",
+        "source": "V3B_ROBUSTNESS.md:18",
+        "report": 17,
+        "audit": 17.0,
+        "match": true
+      },
+      {
+        "id": "single_camera_after",
+        "source": "V3B_ROBUSTNESS.md:18",
+        "report": 19,
+        "audit": 19.0,
+        "match": true
+      },
+      {
+        "id": "single_camera_denominator",
+        "source": "V3B_ROBUSTNESS.md:18",
+        "report": 20,
+        "audit": 20.0,
+        "match": true
+      },
+      {
+        "id": "clean_v5_ge_7",
+        "source": "V3B_ROBUSTNESS.md:26",
+        "report": 765,
+        "audit": 765.0,
+        "match": true
+      },
+      {
+        "id": "clean_v5_ge_7_pct",
+        "source": "V3B_ROBUSTNESS.md:26",
+        "report": 11.7,
+        "audit": 11.66,
+        "match": true
+      },
+      {
+        "id": "clean_v5_ge_6_pct",
+        "source": "V3B_ROBUSTNESS.md:27",
+        "report": 39.1,
+        "audit": 39.14,
+        "match": true
+      },
+      {
+        "id": "clean_v0_ge_7",
+        "source": "V3B_ROBUSTNESS.md:27",
+        "report": 297,
+        "audit": 297.0,
+        "match": true
+      },
+      {
+        "id": "clean_v0_ge_7_pct",
+        "source": "V3B_ROBUSTNESS.md:27",
+        "report": 4.5,
+        "audit": 4.527,
+        "match": true
+      },
+      {
+        "id": "clean_v5_mean_delta",
+        "source": "V3B_ROBUSTNESS.md:27",
+        "report": 0.78,
+        "audit": 0.782,
+        "match": true
+      },
+      {
+        "id": "self_frames",
+        "source": "SELF_CONSISTENCY.md:4",
+        "report": 20,
+        "audit": 20.0,
+        "match": true
+      },
+      {
+        "id": "self_roofs",
+        "source": "SELF_CONSISTENCY.md:4",
+        "report": 81,
+        "audit": 81.0,
+        "match": true
+      },
+      {
+        "id": "self_vehicles",
+        "source": "SELF_CONSISTENCY.md:4",
+        "report": 73,
+        "audit": 73.0,
+        "match": true
+      },
+      {
+        "id": "self_uncertain",
+        "source": "SELF_CONSISTENCY.md:4",
+        "report": 1,
+        "audit": 1.0,
+        "match": true
+      },
+      {
+        "id": "self_structural_bad",
+        "source": "SELF_CONSISTENCY.md:12",
+        "report": 0,
+        "audit": 0.0,
+        "match": true
+      },
+      {
+        "id": "self_narrative_changed",
+        "source": "SELF_CONSISTENCY.md:14",
+        "report": 2,
+        "audit": 2.0,
+        "match": true
+      },
+      {
+        "id": "self_c_changed",
+        "source": "SELF_CONSISTENCY.md:17",
+        "report": 2,
+        "audit": 2.0,
+        "match": true
+      },
+      {
+        "id": "self_c_fixed",
+        "source": "SELF_CONSISTENCY.md:17",
+        "report": 2,
+        "audit": 2.0,
+        "match": true
+      },
+      {
+        "id": "self_c_broken",
+        "source": "SELF_CONSISTENCY.md:17",
+        "report": 0,
+        "audit": 0.0,
+        "match": true
+      },
+      {
+        "id": "self_c_before",
+        "source": "SELF_CONSISTENCY.md:17",
+        "report": 17,
+        "audit": 17.0,
+        "match": true
+      },
+      {
+        "id": "self_c_after",
+        "source": "SELF_CONSISTENCY.md:17",
+        "report": 19,
+        "audit": 19.0,
+        "match": true
+      }
+    ]
+  },
+  "hashes": {
+    "results_old10": "7E13690B694E6931368BFF19F0114D579EE9D5C8A598D073226E625B70A6FE05",
+    "truth": "C3FDDC439DA1574E74A6CEB7391297E1C65FEDEC109D3579DA05CAD05F34149D",
+    "self_consistency": "2F204BC98D5353BFD631BBF13B2EDE198E84B89A4A502E6767A61A391EE78DE2",
+    "ceiling_results": "C61981D655FAFEB7DAF937FA6CEDF5CB1B8A1ACE3A136B455D5891B11B89B90B",
+    "robustness_results": "5DC36D3883BE81516B86F411A986C9BD0BAA740217B3B78CC7C9FA3F9D7C5081"
+  }
+}
