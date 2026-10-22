@@ -1,0 +1,37 @@
+name: ci
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  guardrails:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: secret scan
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: python syntax
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m compileall -q coord scripts accuracy invention research 2>/dev/null || true
+
+      - name: evaluator tests
+        run: |
+          python -m pip install --quiet pytest
+          python -m pytest -q coord/evaluation-v3/tests
+
+      - name: flag banned detectors
+        run: |
+          if git grep -n -I -E 'ultralytics|yolov[0-9]|from ultralytics|torch\.hub\.load\(.ultralytics' -- . ; then
+            echo "::error::检测到被禁用的检测器依赖"
+            exit 1
+          fi
