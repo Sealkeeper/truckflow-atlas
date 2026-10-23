@@ -16,13 +16,13 @@
 
 唯一数按 `unique = south + north − overlap` 校验，不单独作为第三项。
 
-## 当前最好成绩（开发集）
+## 当前最好成绩
 
 | 口径 | 数量全对 | 重叠身份全对 |
 | --- | ---: | ---: |
 | **当前最好成绩（开发集）** | **12/15** | **11/15** |
 
-### 方案介绍
+### 此方案介绍
 
 - **分支**：`main`
 - **位置**：[`docs/results/2026-10-23-multimodel.md` §2「方案：实例对协议」](https://github.com/Sealkeeper/truckflow-atlas/blob/main/docs/results/2026-10-23-multimodel.md)；证据路径在 §6。
