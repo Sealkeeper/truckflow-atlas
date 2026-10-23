@@ -1,0 +1,161 @@
+{
+  "schema": "truckflow-multimodel-results-v1",
+  "as_of": "2026-10-23",
+  "label": "DEV_ONLY / UNBLINDED_VISUAL_IDENTITY",
+  "not_a_formal_baseline": true,
+  "formal_baseline": {
+    "quantity": "10/15",
+    "identity": "1/15",
+    "identity_positive_overlap": "0/14",
+    "blind_pool_b1": "NOT_COMPUTED",
+    "performance_joint_gate": "FAIL_INCOMPARABLE"
+  },
+  "best_result": {
+    "model_id": "doubao-seed-2-0-lite-260428",
+    "protocol_label": "CROSS_ROUND_SAME_PROTOCOL_HASH_VERIFIED",
+    "coverage": {
+      "moments_present": 15,
+      "moments_missing": 0
+    },
+    "metrics": {
+      "quantity_exact": {"numerator": 12, "denominator": 15},
+      "identity_exact_pair_set": {"numerator": 11, "denominator": 15},
+      "identity_positive_overlap_exact": {"numerator": 10, "denominator": 14}
+    },
+    "failed_moments": [
+      {"moment_id": "t0005", "quantity": "FAIL", "identity": "FAIL", "reason": "EXTRA_PAIR_sV3_nV5"},
+      {"moment_id": "t1113", "quantity": "FAIL", "identity": "FAIL", "reason": "UNMAPPED_ENDPOINT_nV3"},
+      {"moment_id": "t1500", "quantity": "PASS", "identity": "FAIL", "reason": "MISSING_sV1_nV1_EXTRA_sV4_nV1"},
+      {"moment_id": "t2600", "quantity": "FAIL", "identity": "FAIL", "reason": "MISSING_sV3_nV2"}
+    ],
+    "accuracy_claim": "DEVELOPMENT_ONLY_NO_100_PERCENT_CLAIM"
+  },
+  "protocol": {
+    "name": "Q198 v2 instance-pair",
+    "model_generates_bboxes": false,
+    "counting_source": "frozen raw + non-learned geometry",
+    "images_per_request": 4,
+    "image_order": [
+      "south_contact_sheet",
+      "south_panorama",
+      "north_contact_sheet",
+      "north_panorama"
+    ],
+    "candidate_pairs": "full south x north cross product per moment",
+    "model_output": "same / different / unknown + evidence string",
+    "temperature": 0,
+    "fixed_denominators": {"quantity": 15, "identity": 15, "identity_positive_overlap": 14},
+    "missing_outputs_count_as_failure": true,
+    "realtime_uses_detector": false
+  },
+  "models": [
+    {
+      "model_id": "doubao-seed-2-0-lite-260428",
+      "verdict": "SELECTED",
+      "evidence": "4/4 HTTP 200 and CONTRACT_PASS on the four tails",
+      "tokens_four_tails": 31639,
+      "latency_seconds_range": [33.531, 54.594],
+      "contract_pass": 4,
+      "contract_attempted": 4
+    },
+    {
+      "model_id": "doubao-seed-2-1-pro-260915",
+      "verdict": "OFFLINE_FALLBACK_TOO_SLOW",
+      "evidence": "300 s read timeout; 600 s rescue returned CONTRACT_PASS at 377.719 s",
+      "tokens_single_request": 16662,
+      "latency_seconds": 377.719,
+      "contract_pass": 1,
+      "contract_attempted": 2
+    },
+    {
+      "model_id": "doubao-seed-2-1-turbo-260628",
+      "verdict": "UNUSABLE_TRANSPORT",
+      "evidence": "ReadTimeout at 300 s and again at 602 s",
+      "tokens": null,
+      "contract_pass": 0,
+      "contract_attempted": 2
+    },
+    {
+      "model_id": "deepseek-v4-1-flash-economy-261017",
+      "verdict": "UNUSABLE_EMPTY_CONTENT",
+      "evidence": "4/4 HTTP 200 but completion_tokens=2500 all reasoning, content empty, invalid JSON",
+      "tokens_four_tails": 22140,
+      "contract_pass": 0,
+      "contract_attempted": 4
+    },
+    {
+      "model_id": "deepseek-v4-1-flash-261017",
+      "verdict": "UNUSABLE_EMPTY_CONTENT",
+      "evidence": "2500 and 6000 max_tokens both fully consumed by reasoning, content empty",
+      "tokens_four_tails": 22140,
+      "tokens_rescue": 9043,
+      "contract_pass": 0,
+      "contract_attempted": 5
+    },
+    {
+      "model_id": "doubao-seed-2-0-mini-260428",
+      "verdict": "QUOTA_429",
+      "evidence": "HTTP 429 SetLimitExceeded (model experience quota)",
+      "contract_attempted": 1
+    },
+    {
+      "model_id": "doubao-seed-2-1-lite-260915",
+      "verdict": "QUOTA_429",
+      "evidence": "HTTP 429 SetLimitExceeded (model experience quota)",
+      "contract_attempted": 1
+    },
+    {
+      "model_id": "doubao-seed-2-0-pro-260215",
+      "verdict": "NO_ENDPOINT",
+      "evidence": "HTTP 404 InvalidEndpointOrModel.NotFound",
+      "contract_attempted": 1
+    },
+    {
+      "model_id": "doubao-seed-2-0-code-preview-260215",
+      "verdict": "NOT_TESTED_NO_PRICE_BOUND"
+    },
+    {
+      "model_id": "doubao-seed-character-260628",
+      "verdict": "NOT_TESTED_NO_PRICE_BOUND"
+    },
+    {
+      "model_id": "glm-5-3-flash-260828",
+      "verdict": "NOT_TESTED_NO_PRICE_BOUND"
+    }
+  ],
+  "key_status": {
+    "account_blocked": false,
+    "global_abort": false,
+    "needs_new_key": false,
+    "model_level_quota_429": [
+      "doubao-seed-2-0-mini-260428",
+      "doubao-seed-2-1-lite-260915"
+    ]
+  },
+  "usage": {
+    "probes": {"attempts": 8, "completed": 5, "tokens": 6797, "rate_derived_cost_cny": "0.033246"},
+    "tail_matrix": {"attempts": 14, "http_200": 12, "tokens": 82716, "rate_derived_cost_cny": "0.353491"},
+    "rescue": {"attempts": 3, "tokens": 25705, "rate_derived_cost_cny": "0.413498"},
+    "total": {"attempts": 25, "completed": 19, "tokens": 108421, "rate_derived_cost_cny": "0.766989"},
+    "provider_returned_billing": "NOT_RETURNED",
+    "costs_are_rate_derived": true,
+    "caps": {"requests": 64, "actual_total_tokens": 500000, "cost_cny": "20"},
+    "caps_touched": false
+  },
+  "gates": {
+    "quantity_100_percent": false,
+    "identity_100_percent": false,
+    "throughput_3x": "NOT_MEASURED",
+    "tokens_per_frame_half": "PARTIAL_4_OF_15_NOT_EXTRAPOLATED",
+    "performance_joint_gate": "FAIL_INCOMPARABLE"
+  },
+  "evidence": {
+    "scorecard": "coord/optimization-20261022/sprint-20261023-multimodel/evaluation/scorecard-multimodel.json",
+    "evaluation_report": "coord/optimization-20261022/sprint-20261023-multimodel/evaluation/REPORT.md",
+    "tail_matrix": "coord/optimization-20261022/sprint-20261023-multimodel/vision/tail-matrix.json",
+    "rescue_matrix": "coord/optimization-20261022/sprint-20261023-multimodel/vision/q198-rescue-matrix.json",
+    "ledger": "coord/optimization-20261022/sprint-20261023-multimodel/vision/ledger.json",
+    "availability": "coord/optimization-20261022/sprint-20261023-multimodel/vision/availability.json",
+    "raw_responses": "coord/optimization-20261022/sprint-20261023-multimodel/vision/q198-responses/"
+  }
+}
