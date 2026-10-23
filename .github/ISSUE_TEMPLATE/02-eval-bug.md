@@ -8,7 +8,7 @@ labels: ["evaluator", "high-priority"]
 ## 最小复现
 
 ```json
-// gold 与 prediction 各给最小片段，能直接跑 run_audit / pytest
+// gold 与 prediction 各给最小片段，并附不覆盖原证据的 pytest 复现
 ```
 
 ## 期望 vs 实际
@@ -24,5 +24,6 @@ labels: ["evaluator", "high-priority"]
 
 ```bash
 python -m pytest -q coord/evaluation-v3/tests
-python coord/optimization-20261022/audit/run_audit.py
 ```
+
+`audit/run_audit.py` 会覆盖已有审计结果，不是默认只读复现入口；确需运行时使用独立工作副本并保留原证据。
