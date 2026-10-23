@@ -128,3 +128,41 @@ provider 未返回账单，以上费用全部是**按官方费率与实测 usage
 | Q198 `ticket.json` | `DB2AE5BDEF724E0A0EDDF5AED341140694CFEC867E630C6645307ED5C45396E6` |
 
 机器可读版本：[`2026-10-23-multimodel.json`](./2026-10-23-multimodel.json)。
+
+## 7. 证据级复核层（`DEV_ONLY_POSTHOC_EVIDENCE_V4`）
+
+在 §1 的单轮基线之上加了一层证据复核：只对候选对存在竞争的时刻追加一次请求，模型按线索族给出
+`same/different/abstain` 与冲突线索；只有「至少两个独立线索族一致、无冲突线索、且接受边构成合法一对一」
+才覆盖基线，否则整格回退。规则先冻结、后看结果。
+
+| 口径 | 数量 | 重叠身份 | 正重叠身份 |
+| --- | ---: | ---: | ---: |
+| 证据复核后合并（基座=基线） | **14 / 15** | **13 / 15** | 12 / 14 |
+| 同上，基座换成 v3 预测（对照） | 14 / 15 | 13 / 15 | 12 / 14 |
+| 单轮基线（无复核） | 12 / 15 | 11 / 15 | 10 / 14 |
+
+覆盖与实际结果：
+
+| 时刻 | 来源 | 状态 | 说明 |
+| --- | --- | --- | --- |
+| `t0005` | 复核 | 覆盖 | 数量转对，身份仍错（多留一条错边） |
+| `t0177` | 复核 | 回退 | 没有满足「两族一致」的边，按规则保留基线 |
+| `t0470` | 复核 | 覆盖 | 与基线一致 |
+| `t1113` | 复核 | 覆盖 | 首次传输失败（0 字节），重发一次后合同通过 |
+| `t2600` | 复核 | 覆盖 | 修好「重叠≥2 漏配」 |
+| `t1500` | 复核（gold-informed 补格） | 覆盖 | **反向**：把原本正确的数量判错 |
+| `t1200` / `t1800` | 未跑 | 回退 | 按基线保留 |
+
+必须一起读的三条：
+
+1. 这是**开发集、事后合并**口径，标签 `DEV_ONLY_POSTHOC_EVIDENCE_V4`；不是盲测，不是 100%，也不能当作可外推的泛化成绩。
+2. `t1500` 是按已知失败点事后补的一格（`SELECTION_PARTIALLY_GOLD_INFORMED`），不是无信息的选择规则；把它算进来后数量从 15 掉到 14，说明证据层会反向伤害计数。
+3. 证据层没有解决「外观接近的两辆车」判别，只是把部分时刻的判错换成判对；这条能力边界比分数更重要。
+
+证据与封条：
+
+- 评分结果：`coord/optimization-20261022/sprint-20261023-2100/fusion-v4-scoring/fusion-v4-scoring-results.json`（`1F966BA87BC3FB4AAE055AA49447ADFA9A50E722A887AA052C2C58A7BCA2BEB0`）
+- 评分器：`.../fusion-v4-scoring/score_fusion_v4.py`、`REPORT-fusion-v4-scoring.md`、`validation-fusion-v4-scoring.json`
+- 复核包：`.../instance-fusion-v4/`（5 时刻）与 `.../instance-fusion-v4b/`（3 时刻，仅 `t1500` 实跑）；两包 `validation.json` 均 PASS（revision=2）
+- 执行器：`.../vision/run_evidence_v4.py`（`0CB9EB0A363C3C7675556298C3FA945F83F9F0E28D8B8699AE23317FDBAB3202`）
+- 红队 GO：`.../redteam/Q195_FUSION_GO.json`（`1A13568A64BDDAA34632E9472B1AD8DA803DF4C9A035DB3D6F8D6225FC851B8A`）
