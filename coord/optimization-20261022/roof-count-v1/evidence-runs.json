@@ -1,0 +1,80 @@
+{
+  "schema": "truckflow-roof-count-evidence-v1",
+  "scheme_id": "roof-count-v1/full+far55/lite-260915/absorb-0.55-0.15-0.02",
+  "dataset": "coord/optimization-20261022/dataset/dataset-manifest-v1.json",
+  "truth": "coord/optimization-20261022/review_bridge/quantity-truth-15.json",
+  "metric": "exact per-camera count matches / 30 frames",
+  "provenance_note": "These two development runs predate the counting_scheme manifest field. Their manifests record counting_mode=roof, primary=doubao_lite, both model IDs, source hashes and frame hashes; their roof raw records carry prompt_version=roof-count-v1. New runs must also record the full scheme ID.",
+  "models": {
+    "primary": "doubao-seed-2-1-lite-260915",
+    "cross_check": "doubao-seed-2-0-mini-260428"
+  },
+  "columns": [
+    "time_s",
+    "north_pred",
+    "north_truth",
+    "south_pred",
+    "south_truth",
+    "north_lite",
+    "north_mini",
+    "south_lite",
+    "south_mini"
+  ],
+  "runs": [
+    {
+      "job_id": "job_20261024T124725_f6e0fa90",
+      "started_at": "2026-10-24T20:47:40+08:00",
+      "finished_at": "2026-10-24T20:53:40+08:00",
+      "job_terminal_status": "needs_review",
+      "note": "All 30 frame analyses completed. The job remained in the review queue by design. One lite call failed and the mini fallback supplied that frame's count.",
+      "manifest_sha256": "1E7148188DDD99AFAABEC1D07553E6BA0704AF53370406AD5946758B4BA5FF64",
+      "timeline_sha256": "827F9D5BB7957ABAAF4A4C36D3E0ADF1EA935E88BB0715EF7E6F264C916F591B",
+      "hits": 29,
+      "frames": 30,
+      "rows": [
+        [5, 5, 5, 3, 3, 5, 4, 3, 3],
+        [177, 3, 3, 3, 3, 3, 3, null, 3],
+        [300, 3, 3, 4, 4, 3, 3, 4, 4],
+        [470, 4, 4, 4, 4, 4, 3, 4, 4],
+        [562, 4, 4, 4, 4, 4, 3, 4, 4],
+        [600, 4, 4, 4, 4, 4, 4, 4, 4],
+        [900, 3, 3, 5, 5, 3, 3, 5, 5],
+        [1021, 3, 3, 5, 5, 3, 3, 5, 2],
+        [1113, 3, 3, 5, 5, 3, 3, 5, 5],
+        [1200, 3, 3, 5, 5, 3, 3, 5, 5],
+        [1500, 3, 2, 5, 5, 3, 2, 5, 4],
+        [1800, 2, 2, 4, 4, 2, 2, 4, 4],
+        [2100, 2, 2, 4, 4, 2, 2, 4, 4],
+        [2400, 3, 3, 3, 3, 3, 3, 3, 3],
+        [2600, 2, 2, 4, 4, 2, 2, 4, 4]
+      ]
+    },
+    {
+      "job_id": "job_20261024T130107_788a46eb",
+      "started_at": "2026-10-24T21:01:21+08:00",
+      "finished_at": "2026-10-24T21:07:26+08:00",
+      "job_terminal_status": "complete",
+      "manifest_sha256": "ABE3BC65C03819ABABBF9640CB4FE34BA3A6983092C4277C481C24FF367E51F6",
+      "timeline_sha256": "0E46877AECB0494FED0B5607ACAEA739B6CF81F6124381418CE8AF31527E8C93",
+      "hits": 28,
+      "frames": 30,
+      "rows": [
+        [5, 5, 5, 3, 3, 5, 4, 3, 3],
+        [177, 3, 3, 3, 3, 3, 3, 3, 3],
+        [300, 3, 3, 4, 4, 3, 3, 4, 5],
+        [470, 4, 4, 4, 4, 4, 3, 4, 1],
+        [562, 4, 4, 4, 4, 4, 3, 4, 4],
+        [600, 4, 4, 4, 4, 4, 4, 4, 4],
+        [900, 3, 3, 6, 5, 3, 3, 6, 5],
+        [1021, 2, 3, 5, 5, 2, 3, 5, 2],
+        [1113, 3, 3, 5, 5, 3, 3, 5, 5],
+        [1200, 3, 3, 5, 5, 3, 3, 5, 5],
+        [1500, 2, 2, 5, 5, 2, 2, 5, 5],
+        [1800, 2, 2, 4, 4, 2, 2, 4, 4],
+        [2100, 2, 2, 4, 4, 2, 2, 4, 5],
+        [2400, 3, 3, 3, 3, 3, 3, 3, 3],
+        [2600, 2, 2, 4, 4, 2, 2, 4, 4]
+      ]
+    }
+  ]
+}

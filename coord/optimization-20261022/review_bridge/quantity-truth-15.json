@@ -1,0 +1,26 @@
+{
+  "schema": "truckflow-current-review-v1",
+  "generated_at": "2026-10-23T00:37:42+08:00",
+  "authority": {
+    "status": "current_and_sole_valid_review",
+    "source": "review_bridge/current-review-20261023.json",
+    "source_sha256": "3002F229CE96E837977B949DDB6074414781BC18D4DCF7F712132FC8C3A215EC"
+  },
+  "samples": [
+    {"sample_key": "t5", "time": 5, "camera_counts": {"south": 3, "north": 5}, "overlap": 1, "unique_total": 7, "completed": true},
+    {"sample_key": "t177", "time": 177, "camera_counts": {"south": 3, "north": 3}, "overlap": 0, "unique_total": 6, "completed": true},
+    {"sample_key": "t300", "time": 300, "camera_counts": {"south": 4, "north": 3}, "overlap": 1, "unique_total": 6, "completed": true},
+    {"sample_key": "t470", "time": 470, "camera_counts": {"south": 4, "north": 4}, "overlap": 1, "unique_total": 7, "completed": true},
+    {"sample_key": "t562", "time": 562, "camera_counts": {"south": 4, "north": 4}, "overlap": 1, "unique_total": 7, "completed": true},
+    {"sample_key": "t600", "time": 600, "camera_counts": {"south": 4, "north": 4}, "overlap": 1, "unique_total": 7, "completed": true},
+    {"sample_key": "t900", "time": 900, "camera_counts": {"south": 5, "north": 3}, "overlap": 2, "unique_total": 6, "completed": true},
+    {"sample_key": "t1021", "time": 1021, "camera_counts": {"south": 5, "north": 3}, "overlap": 2, "unique_total": 6, "completed": true},
+    {"sample_key": "t1113", "time": 1113, "camera_counts": {"south": 5, "north": 3}, "overlap": 2, "unique_total": 6, "completed": true},
+    {"sample_key": "t1200", "time": 1200, "camera_counts": {"south": 5, "north": 3}, "overlap": 2, "unique_total": 6, "completed": true},
+    {"sample_key": "t1500", "time": 1500, "camera_counts": {"south": 5, "north": 2}, "overlap": 2, "unique_total": 5, "completed": true},
+    {"sample_key": "t1800", "time": 1800, "camera_counts": {"south": 4, "north": 2}, "overlap": 1, "unique_total": 5, "completed": true},
+    {"sample_key": "t2100", "time": 2100, "camera_counts": {"south": 4, "north": 2}, "overlap": 1, "unique_total": 5, "completed": true},
+    {"sample_key": "t2400", "time": 2400, "camera_counts": {"south": 3, "north": 3}, "overlap": 1, "unique_total": 5, "completed": true},
+    {"sample_key": "t2600", "time": 2600, "camera_counts": {"south": 4, "north": 2}, "overlap": 2, "unique_total": 4, "completed": true}
+  ]
+}
